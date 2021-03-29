@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -77,5 +76,5 @@ public class DOMQuad {
   public native DOMRect getBounds();
 
   @Nonnull
-  public native JsObject toJSON();
+  public native Object toJSON();
 }

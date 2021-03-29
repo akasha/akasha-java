@@ -1,6 +1,5 @@
 package akasha.crypto;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -27,7 +26,7 @@ public class CryptoKey {
       name = "algorithm"
   )
   @Nonnull
-  public native JsObject algorithm();
+  public native Object algorithm();
 
   @JsProperty(
       name = "extractable"
@@ -45,5 +44,5 @@ public class CryptoKey {
       name = "usages"
   )
   @Nonnull
-  public native JsObject usages();
+  public native Object usages();
 }

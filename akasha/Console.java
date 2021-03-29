@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -92,7 +91,7 @@ public final class Console {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
    * @see <a href="https://console.spec.whatwg.org/#dir">console.dir() - Console API</a>
    */
-  public static void dir(@DoNotAutobox @Nullable Object item, @Nullable JsObject options) {
+  public static void dir(@DoNotAutobox @Nullable Object item, @Nullable Object options) {
     namespace().dir(item, options);
   }
 

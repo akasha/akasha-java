@@ -1,6 +1,5 @@
 package akasha.crypto;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -32,7 +31,7 @@ public interface HmacImportParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  static HmacImportParams create(@Nonnull final String name, @Nonnull final JsObject hash) {
+  static HmacImportParams create(@Nonnull final String name, @Nonnull final Object hash) {
     return Js.<HmacImportParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash );
   }
 
@@ -59,13 +58,13 @@ public interface HmacImportParams extends Algorithm {
   }
 
   @JsOverlay
-  default void setHash(@Nonnull final JsObject hash) {
+  default void setHash(@Nonnull final Object hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
   @JsOverlay
   @Nonnull
-  default HmacImportParams hash(@Nonnull final JsObject hash) {
+  default HmacImportParams hash(@Nonnull final Object hash) {
     setHash( hash );
     return this;
   }

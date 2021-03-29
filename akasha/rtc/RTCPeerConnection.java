@@ -6,7 +6,6 @@ import akasha.EventListener;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.VoidFunction;
-import akasha.core.JsObject;
 import akasha.crypto.AlgorithmIdentifier;
 import akasha.lang.JsArray;
 import akasha.media.MediaStream;
@@ -510,8 +509,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">RTCPeerConnection.generateCertificate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Nonnull
-  public static native Promise<RTCCertificate> generateCertificate(
-      @Nonnull JsObject keygenAlgorithm);
+  public static native Promise<RTCCertificate> generateCertificate(@Nonnull Object keygenAlgorithm);
 
   /**
    * The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated.

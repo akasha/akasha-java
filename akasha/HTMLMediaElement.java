@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -379,7 +378,7 @@ public class HTMLMediaElement extends HTMLElement {
   public native void fastSeek(double time);
 
   @Nonnull
-  public native JsObject getStartDate();
+  public native Object getStartDate();
 
   /**
    * The HTMLMediaElement method load() resets the media element to its initial state and begins the process of selecting a media source and loading the media in preparation for playback to begin at the beginning.

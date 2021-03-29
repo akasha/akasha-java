@@ -2,7 +2,6 @@ package akasha.crypto;
 
 import akasha.core.ArrayBuffer;
 import akasha.core.BufferSource;
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
@@ -44,7 +43,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#SubtleCrypto-method-decrypt">SubtleCrypto.decrypt() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> decrypt(@Nonnull JsObject algorithm, @Nonnull CryptoKey key,
+  public native Promise<Any> decrypt(@Nonnull Object algorithm, @Nonnull CryptoKey key,
       @Nonnull BufferSource data);
 
   /**
@@ -74,7 +73,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveBits">SubtleCrypto.deriveBits() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<ArrayBuffer> deriveBits(@Nonnull JsObject algorithm,
+  public native Promise<ArrayBuffer> deriveBits(@Nonnull Object algorithm,
       @Nonnull CryptoKey baseKey, int length);
 
   /**
@@ -105,7 +104,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey">SubtleCrypto.deriveKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> deriveKey(@Nonnull JsObject algorithm, @Nonnull CryptoKey baseKey,
+  public native Promise<Any> deriveKey(@Nonnull Object algorithm, @Nonnull CryptoKey baseKey,
       @Nonnull AlgorithmIdentifier derivedKeyType, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -128,7 +127,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> deriveKey(@Nonnull AlgorithmIdentifier algorithm,
-      @Nonnull CryptoKey baseKey, @Nonnull JsObject derivedKeyType, boolean extractable,
+      @Nonnull CryptoKey baseKey, @Nonnull Object derivedKeyType, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -138,8 +137,8 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey">SubtleCrypto.deriveKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> deriveKey(@Nonnull JsObject algorithm, @Nonnull CryptoKey baseKey,
-      @Nonnull JsObject derivedKeyType, boolean extractable, @Nonnull JsArray<String> keyUsages);
+  public native Promise<Any> deriveKey(@Nonnull Object algorithm, @Nonnull CryptoKey baseKey,
+      @Nonnull Object derivedKeyType, boolean extractable, @Nonnull JsArray<String> keyUsages);
 
   /**
    * The deriveKey() method of the SubtleCrypto interface can be used to derive a secret key from a master key.
@@ -149,7 +148,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> deriveKey(@Nonnull String algorithm, @Nonnull CryptoKey baseKey,
-      @Nonnull JsObject derivedKeyType, boolean extractable, @Nonnull JsArray<String> keyUsages);
+      @Nonnull Object derivedKeyType, boolean extractable, @Nonnull JsArray<String> keyUsages);
 
   /**
    * The deriveKey() method of the SubtleCrypto interface can be used to derive a secret key from a master key.
@@ -169,7 +168,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey">SubtleCrypto.deriveKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> deriveKey(@Nonnull JsObject algorithm, @Nonnull CryptoKey baseKey,
+  public native Promise<Any> deriveKey(@Nonnull Object algorithm, @Nonnull CryptoKey baseKey,
       @Nonnull String derivedKeyType, boolean extractable, @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -200,7 +199,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey">SubtleCrypto.deriveKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> deriveKey(@Nonnull JsObject algorithm, @Nonnull CryptoKey baseKey,
+  public native Promise<Any> deriveKey(@Nonnull Object algorithm, @Nonnull CryptoKey baseKey,
       @Nonnull AlgorithmIdentifier derivedKeyType, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -223,7 +222,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> deriveKey(@Nonnull AlgorithmIdentifier algorithm,
-      @Nonnull CryptoKey baseKey, @Nonnull JsObject derivedKeyType, boolean extractable,
+      @Nonnull CryptoKey baseKey, @Nonnull Object derivedKeyType, boolean extractable,
       @Nonnull String[] keyUsages);
 
   /**
@@ -233,8 +232,8 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey">SubtleCrypto.deriveKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> deriveKey(@Nonnull JsObject algorithm, @Nonnull CryptoKey baseKey,
-      @Nonnull JsObject derivedKeyType, boolean extractable, @Nonnull String[] keyUsages);
+  public native Promise<Any> deriveKey(@Nonnull Object algorithm, @Nonnull CryptoKey baseKey,
+      @Nonnull Object derivedKeyType, boolean extractable, @Nonnull String[] keyUsages);
 
   /**
    * The deriveKey() method of the SubtleCrypto interface can be used to derive a secret key from a master key.
@@ -244,7 +243,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> deriveKey(@Nonnull String algorithm, @Nonnull CryptoKey baseKey,
-      @Nonnull JsObject derivedKeyType, boolean extractable, @Nonnull String[] keyUsages);
+      @Nonnull Object derivedKeyType, boolean extractable, @Nonnull String[] keyUsages);
 
   /**
    * The deriveKey() method of the SubtleCrypto interface can be used to derive a secret key from a master key.
@@ -264,7 +263,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey">SubtleCrypto.deriveKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> deriveKey(@Nonnull JsObject algorithm, @Nonnull CryptoKey baseKey,
+  public native Promise<Any> deriveKey(@Nonnull Object algorithm, @Nonnull CryptoKey baseKey,
       @Nonnull String derivedKeyType, boolean extractable, @Nonnull String[] keyUsages);
 
   /**
@@ -294,7 +293,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-digest">SubtleCrypto.digest() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> digest(@Nonnull JsObject algorithm, @Nonnull BufferSource data);
+  public native Promise<Any> digest(@Nonnull Object algorithm, @Nonnull BufferSource data);
 
   /**
    * The digest() method of the SubtleCrypto interface generates a digest of the given data. A digest is a short fixed-length value derived from some variable-length input. Cryptographic digests should exhibit collision-resistance, meaning that it's hard to come up with two different inputs that have the same digest value.
@@ -322,7 +321,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#SubtleCrypto-method-encrypt">SubtleCrypto.encrypt() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> encrypt(@Nonnull JsObject algorithm, @Nonnull CryptoKey key,
+  public native Promise<Any> encrypt(@Nonnull Object algorithm, @Nonnull CryptoKey key,
       @Nonnull BufferSource data);
 
   /**
@@ -361,7 +360,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-generateKey">SubtleCrypto.generateKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> generateKey(@Nonnull JsObject algorithm, boolean extractable,
+  public native Promise<Any> generateKey(@Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -391,7 +390,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-generateKey">SubtleCrypto.generateKey() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> generateKey(@Nonnull JsObject algorithm, boolean extractable,
+  public native Promise<Any> generateKey(@Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
   /**
@@ -434,7 +433,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
-      @Nonnull BufferSource keyData, @Nonnull JsObject algorithm, boolean extractable,
+      @Nonnull BufferSource keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -445,7 +444,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
-      @Nonnull JsonWebKey keyData, @Nonnull JsObject algorithm, boolean extractable,
+      @Nonnull JsonWebKey keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -500,7 +499,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
-      @Nonnull BufferSource keyData, @Nonnull JsObject algorithm, boolean extractable,
+      @Nonnull BufferSource keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
   /**
@@ -511,7 +510,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(@KeyFormat @Nonnull String format,
-      @Nonnull JsonWebKey keyData, @Nonnull JsObject algorithm, boolean extractable,
+      @Nonnull JsonWebKey keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
   /**
@@ -553,7 +552,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-sign">SubtleCrypto.sign() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> sign(@Nonnull JsObject algorithm, @Nonnull CryptoKey key,
+  public native Promise<Any> sign(@Nonnull Object algorithm, @Nonnull CryptoKey key,
       @Nonnull BufferSource data);
 
   /**
@@ -588,7 +587,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull JsObject unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
+      @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -612,7 +611,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull JsObject unwrappedKeyAlgorithm,
+      @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -624,8 +623,8 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull JsObject unwrapAlgorithm, @Nonnull JsObject unwrappedKeyAlgorithm,
-      boolean extractable, @Nonnull JsArray<String> keyUsages);
+      @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
+      @Nonnull JsArray<String> keyUsages);
 
   /**
    * The unwrapKey() method of the SubtleCrypto interface &quot;unwraps&quot; a key. This means that it takes as its input a key that has been exported and then encrypted (also called &quot;wrapped&quot;). It decrypts the key and then imports it, returning a CryptoKey object that can be used in the Web Crypto API.
@@ -636,7 +635,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull String unwrapAlgorithm, @Nonnull JsObject unwrappedKeyAlgorithm, boolean extractable,
+      @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -660,7 +659,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull JsObject unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
+      @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
   /**
@@ -697,7 +696,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull JsObject unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
+      @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
 
   /**
@@ -721,7 +720,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull JsObject unwrappedKeyAlgorithm,
+      @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
 
   /**
@@ -733,8 +732,8 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull JsObject unwrapAlgorithm, @Nonnull JsObject unwrappedKeyAlgorithm,
-      boolean extractable, @Nonnull String[] keyUsages);
+      @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
+      @Nonnull String[] keyUsages);
 
   /**
    * The unwrapKey() method of the SubtleCrypto interface &quot;unwraps&quot; a key. This means that it takes as its input a key that has been exported and then encrypted (also called &quot;wrapped&quot;). It decrypts the key and then imports it, returning a CryptoKey object that can be used in the Web Crypto API.
@@ -745,7 +744,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull String unwrapAlgorithm, @Nonnull JsObject unwrappedKeyAlgorithm, boolean extractable,
+      @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
   /**
@@ -769,7 +768,7 @@ public class SubtleCrypto {
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(@KeyFormat @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
-      @Nonnull JsObject unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
+      @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
   /**
@@ -801,7 +800,7 @@ public class SubtleCrypto {
    * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-verify">SubtleCrypto.verify() - Web Cryptography API</a>
    */
   @Nonnull
-  public native Promise<Any> verify(@Nonnull JsObject algorithm, @Nonnull CryptoKey key,
+  public native Promise<Any> verify(@Nonnull Object algorithm, @Nonnull CryptoKey key,
       @Nonnull BufferSource signature, @Nonnull BufferSource data);
 
   /**
@@ -832,7 +831,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> wrapKey(@KeyFormat @Nonnull String format, @Nonnull CryptoKey key,
-      @Nonnull CryptoKey wrappingKey, @Nonnull JsObject wrapAlgorithm);
+      @Nonnull CryptoKey wrappingKey, @Nonnull Object wrapAlgorithm);
 
   /**
    * The wrapKey() method of the SubtleCrypto interface &quot;wraps&quot; a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as inside an otherwise unprotected data store or in transmission over an unprotected network.

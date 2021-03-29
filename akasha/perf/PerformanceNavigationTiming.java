@@ -1,6 +1,5 @@
 package akasha.perf;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -142,5 +141,5 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
    * @see <a href="https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-tojson">toJSON() - Navigation Timing Level 2</a>
    */
   @Nonnull
-  public native JsObject toJSON();
+  public native Object toJSON();
 }

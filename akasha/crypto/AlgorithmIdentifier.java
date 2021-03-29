@@ -1,6 +1,5 @@
 package akasha.crypto;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -17,7 +16,7 @@ import jsinterop.base.Js;
 public interface AlgorithmIdentifier {
   @JsOverlay
   @Nonnull
-  static AlgorithmIdentifier of(@Nonnull final JsObject value) {
+  static AlgorithmIdentifier of(@Nonnull final Object value) {
     return Js.cast( value );
   }
 

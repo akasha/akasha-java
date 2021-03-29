@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -166,14 +165,14 @@ public class CSSPseudoElement extends EventTarget {
   public native JsArray<DOMQuad> getBoxQuads();
 
   @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes, double options);
+  public native Animation animate(@Nullable Object keyframes, double options);
 
   @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes,
+  public native Animation animate(@Nullable Object keyframes,
       @Nonnull KeyframeAnimationOptions options);
 
   @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes);
+  public native Animation animate(@Nullable Object keyframes);
 
   @Nonnull
   public native JsArray<Animation> getAnimations();

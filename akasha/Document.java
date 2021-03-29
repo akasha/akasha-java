@@ -2,7 +2,6 @@ package akasha;
 
 import akasha.clipboard.ClipboardEventHandler;
 import akasha.clipboard.ClipboardEventListener;
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import akasha.svg.SVGSVGElement;
@@ -1763,8 +1762,8 @@ public class Document extends Node {
 
   @JsOverlay
   @Nonnull
-  public final JsObject get(@Nonnull final String name) {
-    return Js.<JsPropertyMap<JsObject>>cast( this ).get( name );
+  public final Object get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<Object>>cast( this ).get( name );
   }
 
   public native void captureEvents();

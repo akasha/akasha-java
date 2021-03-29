@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -57,7 +56,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeEffectOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect">keyframeEffect() - Web Animations</a>
    */
-  public KeyframeEffect(@Nonnull final Element target, @Nullable final JsObject keyframes,
+  public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes,
       final double options) {
   }
 
@@ -68,7 +67,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeEffectOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect">keyframeEffect() - Web Animations</a>
    */
-  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final JsObject keyframes,
+  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes,
       final double options) {
   }
 
@@ -79,7 +78,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeEffectOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect">keyframeEffect() - Web Animations</a>
    */
-  public KeyframeEffect(@Nonnull final Element target, @Nullable final JsObject keyframes,
+  public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes,
       @Nonnull final KeyframeEffectOptions options) {
   }
 
@@ -90,7 +89,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeEffectOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect">keyframeEffect() - Web Animations</a>
    */
-  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final JsObject keyframes,
+  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes,
       @Nonnull final KeyframeEffectOptions options) {
   }
 
@@ -101,7 +100,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeEffectOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect">keyframeEffect() - Web Animations</a>
    */
-  public KeyframeEffect(@Nonnull final Element target, @Nullable final JsObject keyframes) {
+  public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes) {
   }
 
   /**
@@ -111,8 +110,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeEffectOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect">keyframeEffect() - Web Animations</a>
    */
-  public KeyframeEffect(@Nonnull final CSSPseudoElement target,
-      @Nullable final JsObject keyframes) {
+  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes) {
   }
 
   /**
@@ -132,7 +130,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-getkeyframes">KeyframeEffect.getKeyframes() - Web Animations</a>
    */
   @Nonnull
-  public native JsArray<JsObject> getKeyframes();
+  public native JsArray<Object> getKeyframes();
 
   /**
    * The setKeyframes() method of the KeyframeEffect interface replaces the keyframes that make up the affected KeyframeEffect with a new set of keyframes.
@@ -140,5 +138,5 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/setKeyframes">KeyframeEffect.setKeyframes - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-setkeyframes">KeyframeEffect.setKeyframes() - Web Animations</a>
    */
-  public native void setKeyframes(@Nullable JsObject keyframes);
+  public native void setKeyframes(@Nullable Object keyframes);
 }

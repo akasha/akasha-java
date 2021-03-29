@@ -1,6 +1,5 @@
 package akasha.audio;
 
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -107,14 +106,14 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   @JsProperty(
       name = "processorOptions"
   )
-  JsObject processorOptions();
+  Object processorOptions();
 
   @JsProperty
-  void setProcessorOptions(@Nonnull JsObject processorOptions);
+  void setProcessorOptions(@Nonnull Object processorOptions);
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions processorOptions(@Nonnull final JsObject processorOptions) {
+  default AudioWorkletNodeOptions processorOptions(@Nonnull final Object processorOptions) {
     setProcessorOptions( processorOptions );
     return this;
   }

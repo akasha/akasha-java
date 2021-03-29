@@ -3,7 +3,6 @@ package akasha.wasm;
 import akasha.Global;
 import akasha.Response;
 import akasha.core.BufferSource;
-import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -38,7 +37,7 @@ public final class WebAssembly {
    */
   @Nonnull
   public static Promise<WebAssemblyInstantiatedSource> instantiate(@Nonnull BufferSource bytes,
-      @Nonnull JsObject importObject) {
+      @Nonnull Object importObject) {
     return namespace().instantiate(bytes, importObject);
   }
 
@@ -61,7 +60,7 @@ public final class WebAssembly {
    */
   @Nonnull
   public static Promise<Instance> instantiate(@Nonnull Module moduleObject,
-      @Nonnull JsObject importObject) {
+      @Nonnull Object importObject) {
     return namespace().instantiate(moduleObject, importObject);
   }
 
@@ -105,7 +104,7 @@ public final class WebAssembly {
    */
   @Nonnull
   public static Promise<WebAssemblyInstantiatedSource> instantiateStreaming(
-      @Nonnull Promise<Response> source, @Nonnull JsObject importObject) {
+      @Nonnull Promise<Response> source, @Nonnull Object importObject) {
     return namespace().instantiateStreaming(source, importObject);
   }
 

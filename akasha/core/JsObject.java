@@ -33,7 +33,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.assign">Object.assign - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsObject assign(@Nonnull JsObject target, @Nonnull JsObject... sources);
+  public static native Object assign(@Nonnull Object target, @Nonnull Object... sources);
 
   /**
    * The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
@@ -42,7 +42,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.create">Object.create - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsObject create(@Nullable JsObject proto,
+  public static native Object create(@Nullable Object proto,
       @Nullable JsPropertyMap<ObjectPropertyDescriptor> props);
 
   /**
@@ -52,7 +52,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.create">Object.create - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsObject create(@Nullable JsObject proto);
+  public static native Object create(@Nullable Object proto);
 
   /**
    * The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.
@@ -60,7 +60,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties">Object.defineProperties - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.defineproperties">Object.defineProperties - ECMAScript (ECMA-262)</a>
    */
-  public static native void defineProperties(@Nonnull JsObject obj,
+  public static native void defineProperties(@Nonnull Object obj,
       @Nonnull JsPropertyMap<ObjectPropertyDescriptor> props);
 
   /**
@@ -69,7 +69,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.defineproperty">Object.defineProperty - ECMAScript (ECMA-262)</a>
    */
-  public static native void defineProperty(@Nonnull JsObject obj, @Nonnull String prop,
+  public static native void defineProperty(@Nonnull Object obj, @Nonnull String prop,
       @Nonnull ObjectPropertyDescriptor descriptor);
 
   /**
@@ -78,7 +78,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.defineproperty">Object.defineProperty - ECMAScript (ECMA-262)</a>
    */
-  public static native void defineProperty(@Nonnull JsObject obj, @Nonnull Symbol prop,
+  public static native void defineProperty(@Nonnull Object obj, @Nonnull Symbol prop,
       @Nonnull ObjectPropertyDescriptor descriptor);
 
   /**
@@ -88,7 +88,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.entries">Object.entries - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsArray<ObjectPropertyEntry> entries(@Nonnull JsObject obj);
+  public static native JsArray<ObjectPropertyEntry> entries(@Nonnull Object obj);
 
   /**
    * The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it, existing properties from being removed, prevents changing the enumerability, configurability, or writability of existing properties, and prevents the values of existing properties from being changed. In addition, freezing an object also prevents its prototype from being changed. freeze() returns the same object that was passed in.
@@ -96,7 +96,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">Object.freeze - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.freeze">Object.freeze - ECMAScript (ECMA-262)</a>
    */
-  public static native void freeze(@Nonnull JsObject obj);
+  public static native void freeze(@Nonnull Object obj);
 
   /**
    * The Object.fromEntries() method transforms a list of key-value pairs into an object.
@@ -105,7 +105,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.fromentries">Object.fromEntries - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsObject fromEntries(@Nonnull JsIterable<ObjectPropertyEntry> iterable);
+  public static native Object fromEntries(@Nonnull JsIterable<ObjectPropertyEntry> iterable);
 
   /**
    * The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific property on a given object (that is, one directly present on an object and not in the object's prototype chain). The object returned is mutable but mutating it has no effect on the original property's configuration.
@@ -114,7 +114,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.getownpropertydescriptor">Object.getOwnPropertyDescriptor - ECMAScript (ECMA-262)</a>
    */
   @Nullable
-  public static native ObjectPropertyDescriptor getOwnPropertyDescriptor(@Nonnull JsObject obj,
+  public static native ObjectPropertyDescriptor getOwnPropertyDescriptor(@Nonnull Object obj,
       @Nonnull String prop);
 
   /**
@@ -124,7 +124,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.getownpropertydescriptor">Object.getOwnPropertyDescriptor - ECMAScript (ECMA-262)</a>
    */
   @Nullable
-  public static native ObjectPropertyDescriptor getOwnPropertyDescriptor(@Nonnull JsObject obj,
+  public static native ObjectPropertyDescriptor getOwnPropertyDescriptor(@Nonnull Object obj,
       @Nonnull Symbol prop);
 
   /**
@@ -135,7 +135,7 @@ public class JsObject {
    */
   @Nonnull
   public static native JsArray<ObjectPropertyDescriptor> getOwnPropertyDescriptors(
-      @Nonnull JsObject obj);
+      @Nonnull Object obj);
 
   /**
    * The Object.getOwnPropertyNames() method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
@@ -144,7 +144,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.getownpropertynames">Object.getOwnPropertyNames - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsArray<String> getOwnPropertyNames(@Nonnull JsObject obj);
+  public static native JsArray<String> getOwnPropertyNames(@Nonnull Object obj);
 
   /**
    * The Object.getOwnPropertySymbols() method returns an array of all symbol properties found directly upon a given object.
@@ -153,7 +153,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.getownpropertysymbols">Object.getOwnPropertySymbols - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsArray<Symbol> getOwnPropertySymbols(@Nonnull JsObject obj);
+  public static native JsArray<Symbol> getOwnPropertySymbols(@Nonnull Object obj);
 
   /**
    * The Object.getPrototypeOf() method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.
@@ -162,7 +162,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.getprototypeof">Object.getPrototypeOf - ECMAScript (ECMA-262)</a>
    */
   @Nullable
-  public static native JsObject getPrototypeOf(@Nonnull JsObject obj);
+  public static native Object getPrototypeOf(@Nonnull Object obj);
 
   /**
    * The Object.is() method determines whether two values are the same value.
@@ -170,7 +170,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.is">Object.is - ECMAScript (ECMA-262)</a>
    */
-  public static native boolean is(@Nonnull JsObject value1, @Nonnull JsObject value2);
+  public static native boolean is(@Nonnull Object value1, @Nonnull Object value2);
 
   /**
    * The Object.isExtensible() method determines if an object is extensible (whether it can have new properties added to it).
@@ -178,7 +178,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible">Object.isExtensible - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.isextensible">Object.isExtensible - ECMAScript (ECMA-262)</a>
    */
-  public static native boolean isExtensible(@Nonnull JsObject obj);
+  public static native boolean isExtensible(@Nonnull Object obj);
 
   /**
    * The Object.isFrozen() determines if an object is frozen.
@@ -186,7 +186,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen">Object.isFrozen - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.isfrozen">Object.isFrozen - ECMAScript (ECMA-262)</a>
    */
-  public static native boolean isFrozen(@Nonnull JsObject obj);
+  public static native boolean isFrozen(@Nonnull Object obj);
 
   /**
    * The Object.isSealed() method determines if an object is sealed.
@@ -194,7 +194,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed">Object.isSealed - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.issealed">Object.isSealed - ECMAScript (ECMA-262)</a>
    */
-  public static native boolean isSealed(@Nonnull JsObject obj);
+  public static native boolean isSealed(@Nonnull Object obj);
 
   /**
    * The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
@@ -203,7 +203,7 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.keys">Object.keys - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsArray<String> keys(@Nonnull JsObject obj);
+  public static native JsArray<String> keys(@Nonnull Object obj);
 
   /**
    * The Object.preventExtensions() method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).
@@ -211,7 +211,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions">Object.preventExtensions - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.preventextensions">Object.preventExtensions - ECMAScript (ECMA-262)</a>
    */
-  public static native void preventExtensions(@Nonnull JsObject obj);
+  public static native void preventExtensions(@Nonnull Object obj);
 
   /**
    * The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.
@@ -219,7 +219,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal">Object.seal - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.seal">Object.seal - ECMAScript (ECMA-262)</a>
    */
-  public static native void seal(@Nonnull JsObject obj);
+  public static native void seal(@Nonnull Object obj);
 
   /**
    * The Object.setPrototypeOf() method sets the prototype (i.e., the internal [[Prototype]] property) of a specified object to another object or null.
@@ -227,7 +227,7 @@ public class JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf">Object.setPrototypeOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.setprototypeof">Object.setPrototypeOf - ECMAScript (ECMA-262)</a>
    */
-  public static native void setPrototypeOf(@Nonnull JsObject obj, @Nonnull JsObject prototype);
+  public static native void setPrototypeOf(@Nonnull Object obj, @Nonnull Object prototype);
 
   /**
    * The Object.values() method returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop. (The only difference is that a for...in loop enumerates properties in the prototype chain as well.)
@@ -236,5 +236,5 @@ public class JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-object.values">Object.values - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native JsArray<Any> values(@Nonnull JsObject obj);
+  public static native JsArray<Any> values(@Nonnull Object obj);
 }

@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -30,8 +29,8 @@ public class MimeTypeArray {
   public native int length();
 
   @Nullable
-  public native JsObject namedItem(@Nonnull String name);
+  public native Object namedItem(@Nonnull String name);
 
   @Nullable
-  public native JsObject item(int index);
+  public native Object item(int index);
 }

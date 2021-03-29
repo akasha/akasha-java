@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -133,7 +132,7 @@ public class HTMLInputElement extends HTMLElement {
   public String value;
 
   @Nullable
-  public JsObject valueAsDate;
+  public Object valueAsDate;
 
   public double valueAsNumber;
 

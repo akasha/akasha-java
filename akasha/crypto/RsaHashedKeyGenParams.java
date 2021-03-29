@@ -1,6 +1,5 @@
 package akasha.crypto;
 
-import akasha.core.JsObject;
 import akasha.core.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -34,7 +33,7 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
   @JsOverlay
   @Nonnull
   static RsaHashedKeyGenParams create(@Nonnull final String name, final int modulusLength,
-      @Nonnull final Uint8Array publicExponent, @Nonnull final JsObject hash) {
+      @Nonnull final Uint8Array publicExponent, @Nonnull final Object hash) {
     return Js.<RsaHashedKeyGenParams>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
   }
 
@@ -62,13 +61,13 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
   }
 
   @JsOverlay
-  default void setHash(@Nonnull final JsObject hash) {
+  default void setHash(@Nonnull final Object hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
   @JsOverlay
   @Nonnull
-  default RsaHashedKeyGenParams hash(@Nonnull final JsObject hash) {
+  default RsaHashedKeyGenParams hash(@Nonnull final Object hash) {
     setHash( hash );
     return this;
   }

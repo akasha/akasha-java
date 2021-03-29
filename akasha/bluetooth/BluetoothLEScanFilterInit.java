@@ -1,6 +1,5 @@
 package akasha.bluetooth;
 
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -27,14 +26,14 @@ public interface BluetoothLEScanFilterInit {
   @JsProperty(
       name = "manufacturerData"
   )
-  JsObject manufacturerData();
+  Object manufacturerData();
 
   @JsProperty
-  void setManufacturerData(@Nonnull JsObject manufacturerData);
+  void setManufacturerData(@Nonnull Object manufacturerData);
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit manufacturerData(@Nonnull final JsObject manufacturerData) {
+  default BluetoothLEScanFilterInit manufacturerData(@Nonnull final Object manufacturerData) {
     setManufacturerData( manufacturerData );
     return this;
   }
@@ -72,14 +71,14 @@ public interface BluetoothLEScanFilterInit {
   @JsProperty(
       name = "serviceData"
   )
-  JsObject serviceData();
+  Object serviceData();
 
   @JsProperty
-  void setServiceData(@Nonnull JsObject serviceData);
+  void setServiceData(@Nonnull Object serviceData);
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit serviceData(@Nonnull final JsObject serviceData) {
+  default BluetoothLEScanFilterInit serviceData(@Nonnull final Object serviceData) {
     setServiceData( serviceData );
     return this;
   }

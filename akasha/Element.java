@@ -1,7 +1,6 @@
 package akasha;
 
 import akasha.clipboard.ClipboardEventListener;
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
@@ -1105,7 +1104,7 @@ public class Element extends Node {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
    */
   @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes, double options);
+  public native Animation animate(@Nullable Object keyframes, double options);
 
   /**
    * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
@@ -1115,7 +1114,7 @@ public class Element extends Node {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
    */
   @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes,
+  public native Animation animate(@Nullable Object keyframes,
       @Nonnull KeyframeAnimationOptions options);
 
   /**
@@ -1126,7 +1125,7 @@ public class Element extends Node {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
    */
   @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes);
+  public native Animation animate(@Nullable Object keyframes);
 
   /**
    * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.

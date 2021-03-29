@@ -1,6 +1,5 @@
 package akasha.perf;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -89,5 +88,5 @@ public class PerformanceEntry {
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceentry-tojson">toJSON - Performance Timeline Level 2</a>
    */
   @Nonnull
-  public native JsObject toJSON();
+  public native Object toJSON();
 }

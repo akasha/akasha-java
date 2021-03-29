@@ -1,6 +1,5 @@
 package akasha;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -128,5 +127,5 @@ public class DOMPointReadOnly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/toJSON">DOMPointReadOnly.toJSON - MDN</a>
    */
   @Nonnull
-  public native JsObject toJSON();
+  public native Object toJSON();
 }
