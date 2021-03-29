@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -28,7 +29,7 @@ public class WritableStream implements Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/WritableStream">WritableStream.WritableStream - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#ws-constructor">WritableStream() - Streams</a>
    */
-  public WritableStream(@Nonnull final Object underlyingSink,
+  public WritableStream(@Nonnull final JsObject underlyingSink,
       @Nonnull final QueuingStrategy strategy) {
   }
 
@@ -38,7 +39,7 @@ public class WritableStream implements Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/WritableStream">WritableStream.WritableStream - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#ws-constructor">WritableStream() - Streams</a>
    */
-  public WritableStream(@Nonnull final Object underlyingSink) {
+  public WritableStream(@Nonnull final JsObject underlyingSink) {
   }
 
   /**

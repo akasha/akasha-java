@@ -1,5 +1,6 @@
 package akasha.perf;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -59,5 +60,5 @@ public class PerformanceNavigation {
   public native int type();
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 }

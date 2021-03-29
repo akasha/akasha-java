@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -60,5 +61,5 @@ public class Report {
   public native String url();
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 }

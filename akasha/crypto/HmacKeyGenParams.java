@@ -1,5 +1,6 @@
 package akasha.crypto;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -31,7 +32,7 @@ public interface HmacKeyGenParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  static HmacKeyGenParams create(@Nonnull final String name, @Nonnull final Object hash) {
+  static HmacKeyGenParams create(@Nonnull final String name, @Nonnull final JsObject hash) {
     return Js.<HmacKeyGenParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash );
   }
 
@@ -58,13 +59,13 @@ public interface HmacKeyGenParams extends Algorithm {
   }
 
   @JsOverlay
-  default void setHash(@Nonnull final Object hash) {
+  default void setHash(@Nonnull final JsObject hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
   @JsOverlay
   @Nonnull
-  default HmacKeyGenParams hash(@Nonnull final Object hash) {
+  default HmacKeyGenParams hash(@Nonnull final JsObject hash) {
     setHash( hash );
     return this;
   }

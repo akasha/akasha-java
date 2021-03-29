@@ -1,5 +1,6 @@
 package akasha.crypto;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -30,7 +31,7 @@ public interface EcdsaParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  static EcdsaParams create(@Nonnull final String name, @Nonnull final Object hash) {
+  static EcdsaParams create(@Nonnull final String name, @Nonnull final JsObject hash) {
     return Js.<EcdsaParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash );
   }
 
@@ -57,13 +58,13 @@ public interface EcdsaParams extends Algorithm {
   }
 
   @JsOverlay
-  default void setHash(@Nonnull final Object hash) {
+  default void setHash(@Nonnull final JsObject hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
   @JsOverlay
   @Nonnull
-  default EcdsaParams hash(@Nonnull final Object hash) {
+  default EcdsaParams hash(@Nonnull final JsObject hash) {
     setHash( hash );
     return this;
   }

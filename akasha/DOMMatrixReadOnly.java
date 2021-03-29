@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.core.Float32Array;
 import akasha.core.Float64Array;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -355,7 +356,7 @@ public class DOMMatrixReadOnly {
   public native Float64Array toFloat64Array();
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 
   @Nonnull
   public native DOMPoint transformPoint(@Nonnull DOMPointInit point);

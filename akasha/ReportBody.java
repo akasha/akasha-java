@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -16,5 +17,5 @@ public class ReportBody {
   }
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 }

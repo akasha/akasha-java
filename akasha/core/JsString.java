@@ -164,7 +164,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
   public native int localeCompare(@Nonnull String compareString, @Nonnull String locales,
-      @Nonnull Object options);
+      @Nonnull JsObject options);
 
   /**
    * The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.
@@ -174,7 +174,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
   public native int localeCompare(@Nonnull String compareString, @Nonnull JsArray<String> locales,
-      @Nonnull Object options);
+      @Nonnull JsObject options);
 
   /**
    * The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.
@@ -184,7 +184,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
   public native int localeCompare(@Nonnull String compareString, @Nonnull String[] locales,
-      @Nonnull Object options);
+      @Nonnull JsObject options);
 
   /**
    * The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.

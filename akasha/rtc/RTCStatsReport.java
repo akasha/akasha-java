@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
 import javax.annotation.Generated;
@@ -35,13 +36,13 @@ public class RTCStatsReport {
   public native boolean has(@Nonnull String key);
 
   @Nullable
-  public native Object get(@Nonnull String key);
+  public native JsObject get(@Nonnull String key);
 
   @Nonnull
   public native JsIterator<String> keys();
 
   @Nonnull
-  public native JsIterator<Object> values();
+  public native JsIterator<JsObject> values();
 
   @Nonnull
   public native JsIterator<Entry> entries();
@@ -66,7 +67,7 @@ public class RTCStatsReport {
 
     @JsOverlay
     @Nonnull
-    public Object value() {
+    public JsObject value() {
       return getAtAsAny( 1 ).cast();
     }
   }
@@ -74,18 +75,18 @@ public class RTCStatsReport {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull Object value);
+    void item(@Nonnull JsObject value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull Object value, @Nonnull String key);
+    void item(@Nonnull JsObject value, @Nonnull String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull Object value, @Nonnull String key, @Nonnull RTCStatsReport map);
+    void item(@Nonnull JsObject value, @Nonnull String key, @Nonnull RTCStatsReport map);
   }
 }
