@@ -102,7 +102,6 @@ public interface FederatedCredentialInit extends CredentialData {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FederatedCredentialInit id(@Nonnull final String id) {
     setId( id );
     return this;

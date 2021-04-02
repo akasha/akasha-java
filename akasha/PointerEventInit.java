@@ -175,7 +175,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit button(final short button) {
     setButton( button );
     return this;
@@ -183,7 +182,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit buttons(final int buttons) {
     setButtons( buttons );
     return this;
@@ -191,7 +189,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit relatedTarget(@Nullable final EventTarget relatedTarget) {
     setRelatedTarget( relatedTarget );
     return this;
@@ -199,7 +196,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit clientX(final double clientX) {
     setClientX( clientX );
     return this;
@@ -207,7 +203,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit clientY(final double clientY) {
     setClientY( clientY );
     return this;
@@ -215,7 +210,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit screenX(final double screenX) {
     setScreenX( screenX );
     return this;
@@ -223,7 +217,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit screenY(final double screenY) {
     setScreenY( screenY );
     return this;
@@ -231,7 +224,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit movementX(final int movementX) {
     setMovementX( movementX );
     return this;
@@ -239,7 +231,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit movementY(final int movementY) {
     setMovementY( movementY );
     return this;
@@ -247,7 +238,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit altKey(final boolean altKey) {
     setAltKey( altKey );
     return this;
@@ -255,7 +245,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit ctrlKey(final boolean ctrlKey) {
     setCtrlKey( ctrlKey );
     return this;
@@ -263,7 +252,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit metaKey(final boolean metaKey) {
     setMetaKey( metaKey );
     return this;
@@ -271,7 +259,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierAltGraph(final boolean modifierAltGraph) {
     setModifierAltGraph( modifierAltGraph );
     return this;
@@ -279,7 +266,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierCapsLock(final boolean modifierCapsLock) {
     setModifierCapsLock( modifierCapsLock );
     return this;
@@ -287,7 +273,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierFn(final boolean modifierFn) {
     setModifierFn( modifierFn );
     return this;
@@ -295,7 +280,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierFnLock(final boolean modifierFnLock) {
     setModifierFnLock( modifierFnLock );
     return this;
@@ -303,7 +287,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierHyper(final boolean modifierHyper) {
     setModifierHyper( modifierHyper );
     return this;
@@ -311,7 +294,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierNumLock(final boolean modifierNumLock) {
     setModifierNumLock( modifierNumLock );
     return this;
@@ -319,7 +301,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierScrollLock(final boolean modifierScrollLock) {
     setModifierScrollLock( modifierScrollLock );
     return this;
@@ -327,7 +308,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierSuper(final boolean modifierSuper) {
     setModifierSuper( modifierSuper );
     return this;
@@ -335,7 +315,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierSymbol(final boolean modifierSymbol) {
     setModifierSymbol( modifierSymbol );
     return this;
@@ -343,7 +322,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
     setModifierSymbolLock( modifierSymbolLock );
     return this;
@@ -351,7 +329,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit shiftKey(final boolean shiftKey) {
     setShiftKey( shiftKey );
     return this;
@@ -359,7 +336,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -367,7 +343,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -375,7 +350,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -383,7 +357,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -391,7 +364,6 @@ public interface PointerEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PointerEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

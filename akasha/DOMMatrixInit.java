@@ -189,7 +189,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit a(final double a) {
     setA( a );
     return this;
@@ -197,7 +196,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit b(final double b) {
     setB( b );
     return this;
@@ -205,7 +203,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit c(final double c) {
     setC( c );
     return this;
@@ -213,7 +210,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit d(final double d) {
     setD( d );
     return this;
@@ -221,7 +217,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit e(final double e) {
     setE( e );
     return this;
@@ -229,7 +224,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit f(final double f) {
     setF( f );
     return this;
@@ -237,7 +231,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit m11(final double m11) {
     setM11( m11 );
     return this;
@@ -245,7 +238,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit m12(final double m12) {
     setM12( m12 );
     return this;
@@ -253,7 +245,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit m21(final double m21) {
     setM21( m21 );
     return this;
@@ -261,7 +252,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit m22(final double m22) {
     setM22( m22 );
     return this;
@@ -269,7 +259,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit m41(final double m41) {
     setM41( m41 );
     return this;
@@ -277,7 +266,6 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DOMMatrixInit m42(final double m42) {
     setM42( m42 );
     return this;

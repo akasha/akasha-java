@@ -42,7 +42,6 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedKeyAlgorithm modulusLength(final int modulusLength) {
     setModulusLength( modulusLength );
     return this;
@@ -50,7 +49,6 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedKeyAlgorithm publicExponent(@Nonnull final Uint8Array publicExponent) {
     setPublicExponent( publicExponent );
     return this;
@@ -58,7 +56,6 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedKeyAlgorithm name(@Nonnull final String name) {
     setName( name );
     return this;

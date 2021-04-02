@@ -236,7 +236,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PannerOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -244,7 +243,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PannerOptions channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
@@ -252,7 +250,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PannerOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

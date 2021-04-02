@@ -43,7 +43,6 @@ public interface PopStateEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PopStateEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -51,7 +50,6 @@ public interface PopStateEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PopStateEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -59,7 +57,6 @@ public interface PopStateEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PopStateEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

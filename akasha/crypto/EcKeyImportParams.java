@@ -46,7 +46,6 @@ public interface EcKeyImportParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default EcKeyImportParams name(@Nonnull final String name) {
     setName( name );
     return this;

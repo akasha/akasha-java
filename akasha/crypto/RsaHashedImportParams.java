@@ -83,7 +83,6 @@ public interface RsaHashedImportParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedImportParams name(@Nonnull final String name) {
     setName( name );
     return this;

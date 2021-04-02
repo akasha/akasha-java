@@ -155,7 +155,6 @@ public interface RTCCodecStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCCodecStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -169,7 +168,6 @@ public interface RTCCodecStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCCodecStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -183,7 +181,6 @@ public interface RTCCodecStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCCodecStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

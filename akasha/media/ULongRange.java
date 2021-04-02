@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ULongRange {
   @JsOverlay
   @Nonnull
-  static ULongRange create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -36,13 +36,6 @@ public interface ULongRange {
   @JsProperty
   void setMax(int max);
 
-  @JsOverlay
-  @Nonnull
-  default ULongRange max(final int max) {
-    setMax( max );
-    return this;
-  }
-
   @JsProperty(
       name = "min"
   )
@@ -51,10 +44,31 @@ public interface ULongRange {
   @JsProperty
   void setMin(int min);
 
-  @JsOverlay
-  @Nonnull
-  default ULongRange min(final int min) {
-    setMin( min );
-    return this;
+  /**
+   * The ULongRange dictionary is used to define a range of permitted integer values for a property, with either or both a maximum and minimum value specified. The ConstrainULongRange dictionary is based on this, augmenting it to support exact and ideal values as well.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ULongRange">ULongRange - MDN</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange">ULongRange - Media Capture and Streams</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ULongRange {
+    @JsOverlay
+    @Nonnull
+    default Builder max(final int max) {
+      setMax( max );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder min(final int min) {
+      setMin( min );
+      return this;
+    }
   }
 }

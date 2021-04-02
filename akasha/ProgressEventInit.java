@@ -69,7 +69,6 @@ public interface ProgressEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ProgressEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -77,7 +76,6 @@ public interface ProgressEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ProgressEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -85,7 +83,6 @@ public interface ProgressEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ProgressEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

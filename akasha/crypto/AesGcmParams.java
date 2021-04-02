@@ -77,7 +77,6 @@ public interface AesGcmParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AesGcmParams name(@Nonnull final String name) {
     setName( name );
     return this;

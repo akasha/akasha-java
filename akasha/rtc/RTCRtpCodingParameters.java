@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodingParameters {
   @JsOverlay
   @Nonnull
-  static RTCRtpCodingParameters create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface RTCRtpCodingParameters {
   @JsProperty
   void setRid(@Nonnull String rid);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodingParameters rid(@Nonnull final String rid) {
-    setRid( rid );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpCodingParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder rid(@Nonnull final String rid) {
+      setRid( rid );
+      return this;
+    }
   }
 }

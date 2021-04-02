@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DOMMatrix2DInit {
   @JsOverlay
   @Nonnull
-  static DOMMatrix2DInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setA(double a);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit a(final double a) {
-    setA( a );
-    return this;
-  }
-
   @JsProperty(
       name = "b"
   )
@@ -44,13 +37,6 @@ public interface DOMMatrix2DInit {
 
   @JsProperty
   void setB(double b);
-
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit b(final double b) {
-    setB( b );
-    return this;
-  }
 
   @JsProperty(
       name = "c"
@@ -60,13 +46,6 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setC(double c);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit c(final double c) {
-    setC( c );
-    return this;
-  }
-
   @JsProperty(
       name = "d"
   )
@@ -74,13 +53,6 @@ public interface DOMMatrix2DInit {
 
   @JsProperty
   void setD(double d);
-
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit d(final double d) {
-    setD( d );
-    return this;
-  }
 
   @JsProperty(
       name = "e"
@@ -90,13 +62,6 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setE(double e);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit e(final double e) {
-    setE( e );
-    return this;
-  }
-
   @JsProperty(
       name = "f"
   )
@@ -104,13 +69,6 @@ public interface DOMMatrix2DInit {
 
   @JsProperty
   void setF(double f);
-
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit f(final double f) {
-    setF( f );
-    return this;
-  }
 
   @JsProperty(
       name = "m11"
@@ -120,13 +78,6 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setM11(double m11);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit m11(final double m11) {
-    setM11( m11 );
-    return this;
-  }
-
   @JsProperty(
       name = "m12"
   )
@@ -134,13 +85,6 @@ public interface DOMMatrix2DInit {
 
   @JsProperty
   void setM12(double m12);
-
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit m12(final double m12) {
-    setM12( m12 );
-    return this;
-  }
 
   @JsProperty(
       name = "m21"
@@ -150,13 +94,6 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setM21(double m21);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit m21(final double m21) {
-    setM21( m21 );
-    return this;
-  }
-
   @JsProperty(
       name = "m22"
   )
@@ -164,13 +101,6 @@ public interface DOMMatrix2DInit {
 
   @JsProperty
   void setM22(double m22);
-
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit m22(final double m22) {
-    setM22( m22 );
-    return this;
-  }
 
   @JsProperty(
       name = "m41"
@@ -180,13 +110,6 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setM41(double m41);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit m41(final double m41) {
-    setM41( m41 );
-    return this;
-  }
-
   @JsProperty(
       name = "m42"
   )
@@ -195,10 +118,95 @@ public interface DOMMatrix2DInit {
   @JsProperty
   void setM42(double m42);
 
-  @JsOverlay
-  @Nonnull
-  default DOMMatrix2DInit m42(final double m42) {
-    setM42( m42 );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DOMMatrix2DInit {
+    @JsOverlay
+    @Nonnull
+    default Builder a(final double a) {
+      setA( a );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder b(final double b) {
+      setB( b );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder c(final double c) {
+      setC( c );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder d(final double d) {
+      setD( d );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder e(final double e) {
+      setE( e );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder f(final double f) {
+      setF( f );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder m11(final double m11) {
+      setM11( m11 );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder m12(final double m12) {
+      setM12( m12 );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder m21(final double m21) {
+      setM21( m21 );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder m22(final double m22) {
+      setM22( m22 );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder m41(final double m41) {
+      setM41( m41 );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder m42(final double m42) {
+      setM42( m42 );
+      return this;
+    }
   }
 }

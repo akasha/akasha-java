@@ -42,7 +42,6 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default OfflineAudioCompletionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -50,7 +49,6 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default OfflineAudioCompletionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -58,7 +56,6 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default OfflineAudioCompletionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

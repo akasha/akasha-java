@@ -56,7 +56,6 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushSubscriptionChangeEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -64,7 +63,6 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushSubscriptionChangeEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -72,7 +70,6 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushSubscriptionChangeEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

@@ -100,7 +100,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit altKey(final boolean altKey) {
     setAltKey( altKey );
     return this;
@@ -108,7 +107,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit ctrlKey(final boolean ctrlKey) {
     setCtrlKey( ctrlKey );
     return this;
@@ -116,7 +114,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit metaKey(final boolean metaKey) {
     setMetaKey( metaKey );
     return this;
@@ -124,7 +121,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierAltGraph(final boolean modifierAltGraph) {
     setModifierAltGraph( modifierAltGraph );
     return this;
@@ -132,7 +128,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierCapsLock(final boolean modifierCapsLock) {
     setModifierCapsLock( modifierCapsLock );
     return this;
@@ -140,7 +135,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierFn(final boolean modifierFn) {
     setModifierFn( modifierFn );
     return this;
@@ -148,7 +142,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierFnLock(final boolean modifierFnLock) {
     setModifierFnLock( modifierFnLock );
     return this;
@@ -156,7 +149,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierHyper(final boolean modifierHyper) {
     setModifierHyper( modifierHyper );
     return this;
@@ -164,7 +156,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierNumLock(final boolean modifierNumLock) {
     setModifierNumLock( modifierNumLock );
     return this;
@@ -172,7 +163,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierScrollLock(final boolean modifierScrollLock) {
     setModifierScrollLock( modifierScrollLock );
     return this;
@@ -180,7 +170,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierSuper(final boolean modifierSuper) {
     setModifierSuper( modifierSuper );
     return this;
@@ -188,7 +177,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierSymbol(final boolean modifierSymbol) {
     setModifierSymbol( modifierSymbol );
     return this;
@@ -196,7 +184,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
     setModifierSymbolLock( modifierSymbolLock );
     return this;
@@ -204,7 +191,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit shiftKey(final boolean shiftKey) {
     setShiftKey( shiftKey );
     return this;
@@ -212,7 +198,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -220,7 +205,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -228,7 +212,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -236,7 +219,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -244,7 +226,6 @@ public interface KeyboardEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyboardEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

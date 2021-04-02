@@ -19,9 +19,9 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaKeyGenParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static RsaKeyGenParams create(@Nonnull final String name, final int modulusLength,
+  static Builder create(@Nonnull final String name, final int modulusLength,
       @Nonnull final Uint8Array publicExponent) {
-    return Js.<RsaKeyGenParams>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface RsaKeyGenParams extends Algorithm {
   @JsProperty
   void setModulusLength(int modulusLength);
 
-  @JsOverlay
-  @Nonnull
-  default RsaKeyGenParams modulusLength(final int modulusLength) {
-    setModulusLength( modulusLength );
-    return this;
-  }
-
   @JsProperty(
       name = "publicExponent"
   )
@@ -48,18 +41,32 @@ public interface RsaKeyGenParams extends Algorithm {
   @JsProperty
   void setPublicExponent(@Nonnull Uint8Array publicExponent);
 
-  @JsOverlay
-  @Nonnull
-  default RsaKeyGenParams publicExponent(@Nonnull final Uint8Array publicExponent) {
-    setPublicExponent( publicExponent );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RsaKeyGenParams {
+    @JsOverlay
+    @Nonnull
+    default Builder modulusLength(final int modulusLength) {
+      setModulusLength( modulusLength );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default RsaKeyGenParams name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder publicExponent(@Nonnull final Uint8Array publicExponent) {
+      setPublicExponent( publicExponent );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

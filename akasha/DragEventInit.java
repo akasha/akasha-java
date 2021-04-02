@@ -41,7 +41,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit button(final short button) {
     setButton( button );
     return this;
@@ -49,7 +48,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit buttons(final int buttons) {
     setButtons( buttons );
     return this;
@@ -57,7 +55,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit relatedTarget(@Nullable final EventTarget relatedTarget) {
     setRelatedTarget( relatedTarget );
     return this;
@@ -65,7 +62,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit clientX(final double clientX) {
     setClientX( clientX );
     return this;
@@ -73,7 +69,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit clientY(final double clientY) {
     setClientY( clientY );
     return this;
@@ -81,7 +76,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit screenX(final double screenX) {
     setScreenX( screenX );
     return this;
@@ -89,7 +83,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit screenY(final double screenY) {
     setScreenY( screenY );
     return this;
@@ -97,7 +90,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit movementX(final int movementX) {
     setMovementX( movementX );
     return this;
@@ -105,7 +97,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit movementY(final int movementY) {
     setMovementY( movementY );
     return this;
@@ -113,7 +104,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit altKey(final boolean altKey) {
     setAltKey( altKey );
     return this;
@@ -121,7 +111,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit ctrlKey(final boolean ctrlKey) {
     setCtrlKey( ctrlKey );
     return this;
@@ -129,7 +118,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit metaKey(final boolean metaKey) {
     setMetaKey( metaKey );
     return this;
@@ -137,7 +125,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierAltGraph(final boolean modifierAltGraph) {
     setModifierAltGraph( modifierAltGraph );
     return this;
@@ -145,7 +132,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierCapsLock(final boolean modifierCapsLock) {
     setModifierCapsLock( modifierCapsLock );
     return this;
@@ -153,7 +139,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierFn(final boolean modifierFn) {
     setModifierFn( modifierFn );
     return this;
@@ -161,7 +146,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierFnLock(final boolean modifierFnLock) {
     setModifierFnLock( modifierFnLock );
     return this;
@@ -169,7 +153,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierHyper(final boolean modifierHyper) {
     setModifierHyper( modifierHyper );
     return this;
@@ -177,7 +160,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierNumLock(final boolean modifierNumLock) {
     setModifierNumLock( modifierNumLock );
     return this;
@@ -185,7 +167,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierScrollLock(final boolean modifierScrollLock) {
     setModifierScrollLock( modifierScrollLock );
     return this;
@@ -193,7 +174,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierSuper(final boolean modifierSuper) {
     setModifierSuper( modifierSuper );
     return this;
@@ -201,7 +181,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierSymbol(final boolean modifierSymbol) {
     setModifierSymbol( modifierSymbol );
     return this;
@@ -209,7 +188,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
     setModifierSymbolLock( modifierSymbolLock );
     return this;
@@ -217,7 +195,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit shiftKey(final boolean shiftKey) {
     setShiftKey( shiftKey );
     return this;
@@ -225,7 +202,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -233,7 +209,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -241,7 +216,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -249,7 +223,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -257,7 +230,6 @@ public interface DragEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DragEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

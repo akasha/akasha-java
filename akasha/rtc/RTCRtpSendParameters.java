@@ -146,7 +146,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSendParameters codecs(@Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
     setCodecs( codecs );
     return this;
@@ -154,7 +153,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSendParameters codecs(@Nonnull final RTCRtpCodecParameters... codecs) {
     setCodecs( codecs );
     return this;
@@ -162,7 +160,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSendParameters headerExtensions(
       @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions) {
     setHeaderExtensions( headerExtensions );
@@ -171,7 +168,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSendParameters headerExtensions(
       @Nonnull final RTCRtpHeaderExtensionParameters... headerExtensions) {
     setHeaderExtensions( headerExtensions );
@@ -180,7 +176,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSendParameters rtcp(@Nonnull final RTCRtcpParameters rtcp) {
     setRtcp( rtcp );
     return this;

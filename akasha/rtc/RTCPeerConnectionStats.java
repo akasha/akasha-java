@@ -91,7 +91,6 @@ public interface RTCPeerConnectionStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCPeerConnectionStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -105,7 +104,6 @@ public interface RTCPeerConnectionStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCPeerConnectionStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -119,7 +117,6 @@ public interface RTCPeerConnectionStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCPeerConnectionStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

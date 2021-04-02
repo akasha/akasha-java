@@ -127,7 +127,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats bytesSent(final int bytesSent) {
     setBytesSent( bytesSent );
     return this;
@@ -135,7 +134,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats packetsSent(final int packetsSent) {
     setPacketsSent( packetsSent );
     return this;
@@ -149,7 +147,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats codecId(@Nonnull final String codecId) {
     setCodecId( codecId );
     return this;
@@ -163,7 +160,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -177,7 +173,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats ssrc(final int ssrc) {
     setSsrc( ssrc );
     return this;
@@ -191,7 +186,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats transportId(@Nonnull final String transportId) {
     setTransportId( transportId );
     return this;
@@ -199,7 +193,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats averageRTCPInterval(final double averageRTCPInterval) {
     setAverageRTCPInterval( averageRTCPInterval );
     return this;
@@ -207,7 +200,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats mediaType(@Nonnull final String mediaType) {
     setMediaType( mediaType );
     return this;
@@ -221,7 +213,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -235,7 +226,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -249,7 +239,6 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRemoteOutboundRtpStreamStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

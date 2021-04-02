@@ -118,7 +118,6 @@ public interface HkdfParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default HkdfParams name(@Nonnull final String name) {
     setName( name );
     return this;

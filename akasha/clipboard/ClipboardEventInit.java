@@ -43,7 +43,6 @@ public interface ClipboardEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ClipboardEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -51,7 +50,6 @@ public interface ClipboardEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ClipboardEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -59,7 +57,6 @@ public interface ClipboardEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ClipboardEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

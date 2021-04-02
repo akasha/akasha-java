@@ -40,7 +40,6 @@ public interface EcKeyAlgorithm extends KeyAlgorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default EcKeyAlgorithm name(@Nonnull final String name) {
     setName( name );
     return this;

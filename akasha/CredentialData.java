@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface CredentialData {
   @JsOverlay
   @Nonnull
-  static CredentialData create(@Nonnull final String id) {
-    return Js.<CredentialData>uncheckedCast( JsPropertyMap.of() ).id( id );
+  static Builder create(@Nonnull final String id) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id );
   }
 
   @JsProperty(
@@ -31,10 +31,18 @@ public interface CredentialData {
   @JsProperty
   void setId(@Nonnull String id);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialData id(@Nonnull final String id) {
-    setId( id );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CredentialData {
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
+      return this;
+    }
   }
 }

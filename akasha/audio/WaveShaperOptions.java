@@ -68,7 +68,6 @@ public interface WaveShaperOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WaveShaperOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -76,7 +75,6 @@ public interface WaveShaperOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WaveShaperOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -85,7 +83,6 @@ public interface WaveShaperOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WaveShaperOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

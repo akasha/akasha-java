@@ -100,7 +100,6 @@ public interface XRReferenceSpaceEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRReferenceSpaceEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -108,7 +107,6 @@ public interface XRReferenceSpaceEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRReferenceSpaceEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -116,7 +114,6 @@ public interface XRReferenceSpaceEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRReferenceSpaceEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

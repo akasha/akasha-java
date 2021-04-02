@@ -39,7 +39,6 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushPermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;

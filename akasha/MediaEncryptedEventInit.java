@@ -57,7 +57,6 @@ public interface MediaEncryptedEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MediaEncryptedEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -65,7 +64,6 @@ public interface MediaEncryptedEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MediaEncryptedEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -73,7 +71,6 @@ public interface MediaEncryptedEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MediaEncryptedEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

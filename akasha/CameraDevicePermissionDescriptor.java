@@ -39,7 +39,6 @@ public interface CameraDevicePermissionDescriptor extends DevicePermissionDescri
 
   @JsOverlay
   @Nonnull
-  @Override
   default CameraDevicePermissionDescriptor deviceId(@Nonnull final String deviceId) {
     setDeviceId( deviceId );
     return this;
@@ -47,7 +46,6 @@ public interface CameraDevicePermissionDescriptor extends DevicePermissionDescri
 
   @JsOverlay
   @Nonnull
-  @Override
   default CameraDevicePermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;

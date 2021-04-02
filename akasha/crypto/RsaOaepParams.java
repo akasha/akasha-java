@@ -46,7 +46,6 @@ public interface RsaOaepParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaOaepParams name(@Nonnull final String name) {
     setName( name );
     return this;

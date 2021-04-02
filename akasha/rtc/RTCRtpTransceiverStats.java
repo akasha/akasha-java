@@ -79,7 +79,6 @@ public interface RTCRtpTransceiverStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpTransceiverStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -93,7 +92,6 @@ public interface RTCRtpTransceiverStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpTransceiverStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -107,7 +105,6 @@ public interface RTCRtpTransceiverStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpTransceiverStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

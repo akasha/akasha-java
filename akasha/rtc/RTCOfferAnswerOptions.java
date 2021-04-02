@@ -23,7 +23,22 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCOfferAnswerOptions {
   @JsOverlay
   @Nonnull
-  static RTCOfferAnswerOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
+  }
+
+  /**
+   * The WebRTC API's RTCOfferAnswerOptions dictionary is used to specify options that configure and control the process of creating WebRTC offers or answers.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferAnswerOptions">RTCOfferAnswerOptions - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferansweroptions">RTCOfferAnswerOptions - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCOfferAnswerOptions {
   }
 }

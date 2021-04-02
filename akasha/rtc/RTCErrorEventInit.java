@@ -41,7 +41,6 @@ public interface RTCErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCErrorEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -49,7 +48,6 @@ public interface RTCErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCErrorEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -57,7 +55,6 @@ public interface RTCErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCErrorEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

@@ -71,7 +71,6 @@ public interface InputEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default InputEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -79,7 +78,6 @@ public interface InputEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default InputEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -87,7 +85,6 @@ public interface InputEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default InputEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -95,7 +92,6 @@ public interface InputEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default InputEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -103,7 +99,6 @@ public interface InputEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default InputEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

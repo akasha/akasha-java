@@ -39,7 +39,6 @@ public interface AesKeyAlgorithm extends KeyAlgorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AesKeyAlgorithm name(@Nonnull final String name) {
     setName( name );
     return this;

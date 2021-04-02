@@ -43,7 +43,6 @@ public interface CustomEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CustomEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -51,7 +50,6 @@ public interface CustomEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CustomEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -59,7 +57,6 @@ public interface CustomEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CustomEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

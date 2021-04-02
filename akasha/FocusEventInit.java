@@ -41,7 +41,6 @@ public interface FocusEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FocusEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -49,7 +48,6 @@ public interface FocusEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FocusEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -57,7 +55,6 @@ public interface FocusEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FocusEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -65,7 +62,6 @@ public interface FocusEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FocusEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -73,7 +69,6 @@ public interface FocusEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FocusEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

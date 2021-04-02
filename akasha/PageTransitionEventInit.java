@@ -39,7 +39,6 @@ public interface PageTransitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PageTransitionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -47,7 +46,6 @@ public interface PageTransitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PageTransitionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -55,7 +53,6 @@ public interface PageTransitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PageTransitionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

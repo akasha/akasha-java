@@ -63,7 +63,6 @@ public interface AesCtrParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AesCtrParams name(@Nonnull final String name) {
     setName( name );
     return this;

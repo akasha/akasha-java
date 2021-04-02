@@ -100,7 +100,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BiquadFilterOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -108,7 +107,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BiquadFilterOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -117,7 +115,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BiquadFilterOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

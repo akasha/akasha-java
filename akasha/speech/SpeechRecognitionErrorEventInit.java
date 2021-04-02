@@ -59,7 +59,6 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechRecognitionErrorEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -67,7 +66,6 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechRecognitionErrorEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -75,7 +73,6 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechRecognitionErrorEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

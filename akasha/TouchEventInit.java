@@ -107,7 +107,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit altKey(final boolean altKey) {
     setAltKey( altKey );
     return this;
@@ -115,7 +114,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit ctrlKey(final boolean ctrlKey) {
     setCtrlKey( ctrlKey );
     return this;
@@ -123,7 +121,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit metaKey(final boolean metaKey) {
     setMetaKey( metaKey );
     return this;
@@ -131,7 +128,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierAltGraph(final boolean modifierAltGraph) {
     setModifierAltGraph( modifierAltGraph );
     return this;
@@ -139,7 +135,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierCapsLock(final boolean modifierCapsLock) {
     setModifierCapsLock( modifierCapsLock );
     return this;
@@ -147,7 +142,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierFn(final boolean modifierFn) {
     setModifierFn( modifierFn );
     return this;
@@ -155,7 +149,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierFnLock(final boolean modifierFnLock) {
     setModifierFnLock( modifierFnLock );
     return this;
@@ -163,7 +156,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierHyper(final boolean modifierHyper) {
     setModifierHyper( modifierHyper );
     return this;
@@ -171,7 +163,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierNumLock(final boolean modifierNumLock) {
     setModifierNumLock( modifierNumLock );
     return this;
@@ -179,7 +170,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierScrollLock(final boolean modifierScrollLock) {
     setModifierScrollLock( modifierScrollLock );
     return this;
@@ -187,7 +177,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierSuper(final boolean modifierSuper) {
     setModifierSuper( modifierSuper );
     return this;
@@ -195,7 +184,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierSymbol(final boolean modifierSymbol) {
     setModifierSymbol( modifierSymbol );
     return this;
@@ -203,7 +191,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
     setModifierSymbolLock( modifierSymbolLock );
     return this;
@@ -211,7 +198,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit shiftKey(final boolean shiftKey) {
     setShiftKey( shiftKey );
     return this;
@@ -219,7 +205,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -227,7 +212,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -235,7 +219,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -243,7 +226,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -251,7 +233,6 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TouchEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

@@ -95,7 +95,6 @@ public interface RTCCertificateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCCertificateStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -109,7 +108,6 @@ public interface RTCCertificateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCCertificateStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -123,7 +121,6 @@ public interface RTCCertificateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCCertificateStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

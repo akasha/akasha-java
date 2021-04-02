@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static AudioNodeOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -36,13 +36,6 @@ public interface AudioNodeOptions {
   @JsProperty
   void setChannelCount(int channelCount);
 
-  @JsOverlay
-  @Nonnull
-  default AudioNodeOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
-
   @JsProperty(
       name = "channelCountMode"
   )
@@ -51,14 +44,6 @@ public interface AudioNodeOptions {
 
   @JsProperty
   void setChannelCountMode(@ChannelCountMode @Nonnull String channelCountMode);
-
-  @JsOverlay
-  @Nonnull
-  default AudioNodeOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
 
   @JsProperty(
       name = "channelInterpretation"
@@ -69,11 +54,39 @@ public interface AudioNodeOptions {
   @JsProperty
   void setChannelInterpretation(@ChannelInterpretation @Nonnull String channelInterpretation);
 
-  @JsOverlay
-  @Nonnull
-  default AudioNodeOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+  /**
+   * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions">AudioNodeOptions - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audionodeoptions">AudioNodeOptions - Web Audio API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AudioNodeOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

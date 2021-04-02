@@ -103,7 +103,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCPeerConnectionIceErrorEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -111,7 +110,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCPeerConnectionIceErrorEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -119,7 +117,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCPeerConnectionIceErrorEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

@@ -74,7 +74,6 @@ public interface RTCMediaStreamStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCMediaStreamStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -88,7 +87,6 @@ public interface RTCMediaStreamStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCMediaStreamStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -102,7 +100,6 @@ public interface RTCMediaStreamStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCMediaStreamStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

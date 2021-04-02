@@ -39,7 +39,6 @@ public interface FilePropertyBag extends BlobPropertyBag {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FilePropertyBag endings(@EndingType @Nonnull final String endings) {
     setEndings( endings );
     return this;
@@ -47,7 +46,6 @@ public interface FilePropertyBag extends BlobPropertyBag {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FilePropertyBag type(@Nonnull final String type) {
     setType( type );
     return this;

@@ -117,7 +117,6 @@ public interface Pbkdf2Params extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default Pbkdf2Params name(@Nonnull final String name) {
     setName( name );
     return this;

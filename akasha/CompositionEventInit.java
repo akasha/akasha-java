@@ -40,7 +40,6 @@ public interface CompositionEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CompositionEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -48,7 +47,6 @@ public interface CompositionEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CompositionEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -56,7 +54,6 @@ public interface CompositionEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CompositionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -64,7 +61,6 @@ public interface CompositionEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CompositionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -72,7 +68,6 @@ public interface CompositionEventInit extends UIEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CompositionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

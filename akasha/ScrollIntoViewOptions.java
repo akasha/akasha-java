@@ -56,7 +56,6 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ScrollIntoViewOptions behavior(@ScrollBehavior @Nonnull final String behavior) {
     setBehavior( behavior );
     return this;

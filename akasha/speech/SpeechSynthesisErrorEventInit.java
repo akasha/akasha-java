@@ -43,7 +43,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit charIndex(final int charIndex) {
     setCharIndex( charIndex );
     return this;
@@ -51,7 +50,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit charLength(final int charLength) {
     setCharLength( charLength );
     return this;
@@ -59,7 +57,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit elapsedTime(final float elapsedTime) {
     setElapsedTime( elapsedTime );
     return this;
@@ -67,7 +64,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit name(@Nonnull final String name) {
     setName( name );
     return this;
@@ -75,7 +71,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit utterance(
       @Nonnull final SpeechSynthesisUtterance utterance) {
     setUtterance( utterance );
@@ -84,7 +79,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -92,7 +86,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -100,7 +93,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechSynthesisErrorEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

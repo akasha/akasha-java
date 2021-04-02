@@ -54,7 +54,6 @@ public interface ConstrainDoubleRange extends DoubleRange {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConstrainDoubleRange max(final double max) {
     setMax( max );
     return this;
@@ -62,7 +61,6 @@ public interface ConstrainDoubleRange extends DoubleRange {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConstrainDoubleRange min(final double min) {
     setMin( min );
     return this;

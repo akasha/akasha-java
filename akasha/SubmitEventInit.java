@@ -41,7 +41,6 @@ public interface SubmitEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SubmitEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -49,7 +48,6 @@ public interface SubmitEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SubmitEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -57,7 +55,6 @@ public interface SubmitEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SubmitEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

@@ -64,7 +64,6 @@ public interface PushEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -72,7 +71,6 @@ public interface PushEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -80,7 +78,6 @@ public interface PushEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PushEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

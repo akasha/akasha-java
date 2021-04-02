@@ -73,7 +73,6 @@ public interface AudioProcessingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AudioProcessingEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -81,7 +80,6 @@ public interface AudioProcessingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AudioProcessingEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -89,7 +87,6 @@ public interface AudioProcessingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AudioProcessingEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

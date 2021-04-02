@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static DevicePermissionDescriptor create(@PermissionName @Nonnull final String name) {
-    return Js.<DevicePermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@PermissionName @Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -30,18 +30,25 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
 
-  @JsOverlay
-  @Nonnull
-  default DevicePermissionDescriptor deviceId(@Nonnull final String deviceId) {
-    setDeviceId( deviceId );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DevicePermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder deviceId(@Nonnull final String deviceId) {
+      setDeviceId( deviceId );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default DevicePermissionDescriptor name(@PermissionName @Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@PermissionName @Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

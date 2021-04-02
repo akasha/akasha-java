@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CacheQueryOptions {
   @JsOverlay
   @Nonnull
-  static CacheQueryOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface CacheQueryOptions {
   @JsProperty
   void setIgnoreMethod(boolean ignoreMethod);
 
-  @JsOverlay
-  @Nonnull
-  default CacheQueryOptions ignoreMethod(final boolean ignoreMethod) {
-    setIgnoreMethod( ignoreMethod );
-    return this;
-  }
-
   @JsProperty(
       name = "ignoreSearch"
   )
@@ -44,13 +37,6 @@ public interface CacheQueryOptions {
 
   @JsProperty
   void setIgnoreSearch(boolean ignoreSearch);
-
-  @JsOverlay
-  @Nonnull
-  default CacheQueryOptions ignoreSearch(final boolean ignoreSearch) {
-    setIgnoreSearch( ignoreSearch );
-    return this;
-  }
 
   @JsProperty(
       name = "ignoreVary"
@@ -60,10 +46,32 @@ public interface CacheQueryOptions {
   @JsProperty
   void setIgnoreVary(boolean ignoreVary);
 
-  @JsOverlay
-  @Nonnull
-  default CacheQueryOptions ignoreVary(final boolean ignoreVary) {
-    setIgnoreVary( ignoreVary );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CacheQueryOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreMethod(final boolean ignoreMethod) {
+      setIgnoreMethod( ignoreMethod );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreSearch(final boolean ignoreSearch) {
+      setIgnoreSearch( ignoreSearch );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreVary(final boolean ignoreVary) {
+      setIgnoreVary( ignoreVary );
+      return this;
+    }
   }
 }

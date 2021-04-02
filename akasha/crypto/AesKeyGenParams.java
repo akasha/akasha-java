@@ -45,7 +45,6 @@ public interface AesKeyGenParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AesKeyGenParams name(@Nonnull final String name) {
     setName( name );
     return this;

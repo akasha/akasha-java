@@ -82,7 +82,6 @@ public interface EcdsaParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default EcdsaParams name(@Nonnull final String name) {
     setName( name );
     return this;

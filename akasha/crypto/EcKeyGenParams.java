@@ -46,7 +46,6 @@ public interface EcKeyGenParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default EcKeyGenParams name(@Nonnull final String name) {
     setName( name );
     return this;

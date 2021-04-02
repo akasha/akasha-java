@@ -39,7 +39,6 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PublicKeyCredentialRpEntity icon(@Nonnull final String icon) {
     setIcon( icon );
     return this;
@@ -47,7 +46,6 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PublicKeyCredentialRpEntity name(@Nonnull final String name) {
     setName( name );
     return this;

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BlobPropertyBag {
   @JsOverlay
   @Nonnull
-  static BlobPropertyBag create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface BlobPropertyBag {
   @JsProperty
   void setEndings(@EndingType @Nonnull String endings);
 
-  @JsOverlay
-  @Nonnull
-  default BlobPropertyBag endings(@EndingType @Nonnull final String endings) {
-    setEndings( endings );
-    return this;
-  }
-
   @JsProperty(
       name = "type"
   )
@@ -46,10 +39,25 @@ public interface BlobPropertyBag {
   @JsProperty
   void setType(@Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default BlobPropertyBag type(@Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BlobPropertyBag {
+    @JsOverlay
+    @Nonnull
+    default Builder endings(@EndingType @Nonnull final String endings) {
+      setEndings( endings );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

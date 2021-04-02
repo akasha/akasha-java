@@ -39,7 +39,6 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MidiPermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;

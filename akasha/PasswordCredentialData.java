@@ -87,7 +87,6 @@ public interface PasswordCredentialData extends CredentialData {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PasswordCredentialData id(@Nonnull final String id) {
     setId( id );
     return this;

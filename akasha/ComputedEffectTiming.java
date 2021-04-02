@@ -109,7 +109,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming delay(final double delay) {
     setDelay( delay );
     return this;
@@ -123,7 +122,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming direction(@PlaybackDirection @Nonnull final String direction) {
     setDirection( direction );
     return this;
@@ -137,7 +135,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming duration(final double duration) {
     setDuration( duration );
     return this;
@@ -151,7 +148,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming duration(@Nonnull final String duration) {
     setDuration( duration );
     return this;
@@ -165,7 +161,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming easing(@Nonnull final String easing) {
     setEasing( easing );
     return this;
@@ -179,7 +174,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming endDelay(final double endDelay) {
     setEndDelay( endDelay );
     return this;
@@ -193,7 +187,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming fill(@FillMode @Nonnull final String fill) {
     setFill( fill );
     return this;
@@ -207,7 +200,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming iterationStart(final double iterationStart) {
     setIterationStart( iterationStart );
     return this;
@@ -221,7 +213,6 @@ public interface ComputedEffectTiming extends EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default ComputedEffectTiming iterations(final double iterations) {
     setIterations( iterations );
     return this;

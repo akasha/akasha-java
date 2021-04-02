@@ -39,7 +39,6 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MultiCacheQueryOptions ignoreMethod(final boolean ignoreMethod) {
     setIgnoreMethod( ignoreMethod );
     return this;
@@ -47,7 +46,6 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MultiCacheQueryOptions ignoreSearch(final boolean ignoreSearch) {
     setIgnoreSearch( ignoreSearch );
     return this;
@@ -55,7 +53,6 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MultiCacheQueryOptions ignoreVary(final boolean ignoreVary) {
     setIgnoreVary( ignoreVary );
     return this;

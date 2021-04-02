@@ -54,7 +54,6 @@ public interface ConstrainULongRange extends ULongRange {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConstrainULongRange max(final int max) {
     setMax( max );
     return this;
@@ -62,7 +61,6 @@ public interface ConstrainULongRange extends ULongRange {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConstrainULongRange min(final int min) {
     setMin( min );
     return this;

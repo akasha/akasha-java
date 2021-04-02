@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ScrollOptions {
   @JsOverlay
   @Nonnull
-  static ScrollOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,10 +31,18 @@ public interface ScrollOptions {
   @JsProperty
   void setBehavior(@ScrollBehavior @Nonnull String behavior);
 
-  @JsOverlay
-  @Nonnull
-  default ScrollOptions behavior(@ScrollBehavior @Nonnull final String behavior) {
-    setBehavior( behavior );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ScrollOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder behavior(@ScrollBehavior @Nonnull final String behavior) {
+      setBehavior( behavior );
+      return this;
+    }
   }
 }

@@ -1036,7 +1036,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats burstDiscardCount(final int burstDiscardCount) {
     setBurstDiscardCount( burstDiscardCount );
     return this;
@@ -1044,7 +1043,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats burstDiscardRate(final double burstDiscardRate) {
     setBurstDiscardRate( burstDiscardRate );
     return this;
@@ -1052,7 +1050,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats burstLossCount(final int burstLossCount) {
     setBurstLossCount( burstLossCount );
     return this;
@@ -1060,7 +1057,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats burstLossRate(final double burstLossRate) {
     setBurstLossRate( burstLossRate );
     return this;
@@ -1068,7 +1064,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats burstPacketsDiscarded(final int burstPacketsDiscarded) {
     setBurstPacketsDiscarded( burstPacketsDiscarded );
     return this;
@@ -1076,7 +1071,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats burstPacketsLost(final int burstPacketsLost) {
     setBurstPacketsLost( burstPacketsLost );
     return this;
@@ -1084,7 +1078,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats framesDropped(final int framesDropped) {
     setFramesDropped( framesDropped );
     return this;
@@ -1092,7 +1085,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats fullFramesLost(final int fullFramesLost) {
     setFullFramesLost( fullFramesLost );
     return this;
@@ -1100,7 +1092,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats gapDiscardRate(final double gapDiscardRate) {
     setGapDiscardRate( gapDiscardRate );
     return this;
@@ -1108,7 +1099,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats gapLossRate(final double gapLossRate) {
     setGapLossRate( gapLossRate );
     return this;
@@ -1116,7 +1106,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats jitter(final double jitter) {
     setJitter( jitter );
     return this;
@@ -1124,7 +1113,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats packetsDiscarded(final int packetsDiscarded) {
     setPacketsDiscarded( packetsDiscarded );
     return this;
@@ -1132,7 +1120,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats packetsLost(final int packetsLost) {
     setPacketsLost( packetsLost );
     return this;
@@ -1140,7 +1127,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats packetsReceived(final int packetsReceived) {
     setPacketsReceived( packetsReceived );
     return this;
@@ -1148,7 +1134,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats packetsRepaired(final int packetsRepaired) {
     setPacketsRepaired( packetsRepaired );
     return this;
@@ -1156,7 +1141,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats partialFramesLost(final int partialFramesLost) {
     setPartialFramesLost( partialFramesLost );
     return this;
@@ -1170,7 +1154,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats codecId(@Nonnull final String codecId) {
     setCodecId( codecId );
     return this;
@@ -1184,7 +1167,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -1198,7 +1180,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats ssrc(final int ssrc) {
     setSsrc( ssrc );
     return this;
@@ -1212,7 +1193,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats transportId(@Nonnull final String transportId) {
     setTransportId( transportId );
     return this;
@@ -1220,7 +1200,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats averageRTCPInterval(final double averageRTCPInterval) {
     setAverageRTCPInterval( averageRTCPInterval );
     return this;
@@ -1228,7 +1207,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats mediaType(@Nonnull final String mediaType) {
     setMediaType( mediaType );
     return this;
@@ -1242,7 +1220,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -1256,7 +1233,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -1270,7 +1246,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCInboundRtpStreamStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

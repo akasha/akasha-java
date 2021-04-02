@@ -144,7 +144,6 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpEncodingParameters rid(@Nonnull final String rid) {
     setRid( rid );
     return this;

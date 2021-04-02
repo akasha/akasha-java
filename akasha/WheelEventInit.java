@@ -85,7 +85,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit button(final short button) {
     setButton( button );
     return this;
@@ -93,7 +92,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit buttons(final int buttons) {
     setButtons( buttons );
     return this;
@@ -101,7 +99,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit relatedTarget(@Nullable final EventTarget relatedTarget) {
     setRelatedTarget( relatedTarget );
     return this;
@@ -109,7 +106,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit clientX(final double clientX) {
     setClientX( clientX );
     return this;
@@ -117,7 +113,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit clientY(final double clientY) {
     setClientY( clientY );
     return this;
@@ -125,7 +120,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit screenX(final double screenX) {
     setScreenX( screenX );
     return this;
@@ -133,7 +127,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit screenY(final double screenY) {
     setScreenY( screenY );
     return this;
@@ -141,7 +134,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit movementX(final int movementX) {
     setMovementX( movementX );
     return this;
@@ -149,7 +141,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit movementY(final int movementY) {
     setMovementY( movementY );
     return this;
@@ -157,7 +148,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit altKey(final boolean altKey) {
     setAltKey( altKey );
     return this;
@@ -165,7 +155,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit ctrlKey(final boolean ctrlKey) {
     setCtrlKey( ctrlKey );
     return this;
@@ -173,7 +162,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit metaKey(final boolean metaKey) {
     setMetaKey( metaKey );
     return this;
@@ -181,7 +169,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierAltGraph(final boolean modifierAltGraph) {
     setModifierAltGraph( modifierAltGraph );
     return this;
@@ -189,7 +176,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierCapsLock(final boolean modifierCapsLock) {
     setModifierCapsLock( modifierCapsLock );
     return this;
@@ -197,7 +183,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierFn(final boolean modifierFn) {
     setModifierFn( modifierFn );
     return this;
@@ -205,7 +190,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierFnLock(final boolean modifierFnLock) {
     setModifierFnLock( modifierFnLock );
     return this;
@@ -213,7 +197,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierHyper(final boolean modifierHyper) {
     setModifierHyper( modifierHyper );
     return this;
@@ -221,7 +204,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierNumLock(final boolean modifierNumLock) {
     setModifierNumLock( modifierNumLock );
     return this;
@@ -229,7 +211,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierScrollLock(final boolean modifierScrollLock) {
     setModifierScrollLock( modifierScrollLock );
     return this;
@@ -237,7 +218,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierSuper(final boolean modifierSuper) {
     setModifierSuper( modifierSuper );
     return this;
@@ -245,7 +225,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierSymbol(final boolean modifierSymbol) {
     setModifierSymbol( modifierSymbol );
     return this;
@@ -253,7 +232,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
     setModifierSymbolLock( modifierSymbolLock );
     return this;
@@ -261,7 +239,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit shiftKey(final boolean shiftKey) {
     setShiftKey( shiftKey );
     return this;
@@ -269,7 +246,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit detail(final int detail) {
     setDetail( detail );
     return this;
@@ -277,7 +253,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit view(@Nullable final Window view) {
     setView( view );
     return this;
@@ -285,7 +260,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -293,7 +267,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -301,7 +274,6 @@ public interface WheelEventInit extends MouseEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WheelEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

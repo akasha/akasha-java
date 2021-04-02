@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DoubleRange {
   @JsOverlay
   @Nonnull
-  static DoubleRange create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -36,13 +36,6 @@ public interface DoubleRange {
   @JsProperty
   void setMax(double max);
 
-  @JsOverlay
-  @Nonnull
-  default DoubleRange max(final double max) {
-    setMax( max );
-    return this;
-  }
-
   @JsProperty(
       name = "min"
   )
@@ -51,10 +44,31 @@ public interface DoubleRange {
   @JsProperty
   void setMin(double min);
 
-  @JsOverlay
-  @Nonnull
-  default DoubleRange min(final double min) {
-    setMin( min );
-    return this;
+  /**
+   * The DoubleRange dictionary is used to define a range of permitted double-precision floating-point values for a property, with either or both a maximum and minimum value specified. The ConstrainDouble dictionary is based on this, augmenting it to support exact and ideal values as well.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DoubleRange">DoubleRange - MDN</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-doublerange">DoubleRange - Media Capture and Streams</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DoubleRange {
+    @JsOverlay
+    @Nonnull
+    default Builder max(final double max) {
+      setMax( max );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder min(final double min) {
+      setMin( min );
+      return this;
+    }
   }
 }

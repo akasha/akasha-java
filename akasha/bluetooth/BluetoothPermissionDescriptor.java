@@ -115,7 +115,6 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BluetoothPermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;

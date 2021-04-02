@@ -54,7 +54,6 @@ public interface MediaQueryListEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MediaQueryListEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -62,7 +61,6 @@ public interface MediaQueryListEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MediaQueryListEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -70,7 +68,6 @@ public interface MediaQueryListEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MediaQueryListEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

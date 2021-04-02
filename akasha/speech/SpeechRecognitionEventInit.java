@@ -56,7 +56,6 @@ public interface SpeechRecognitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechRecognitionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -64,7 +63,6 @@ public interface SpeechRecognitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechRecognitionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -72,7 +70,6 @@ public interface SpeechRecognitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SpeechRecognitionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

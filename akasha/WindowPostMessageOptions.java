@@ -40,7 +40,6 @@ public interface WindowPostMessageOptions extends PostMessageOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WindowPostMessageOptions transfer(@Nonnull final JsArray<Transferable> transfer) {
     setTransfer( transfer );
     return this;
@@ -48,7 +47,6 @@ public interface WindowPostMessageOptions extends PostMessageOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default WindowPostMessageOptions transfer(@Nonnull final Transferable... transfer) {
     setTransfer( transfer );
     return this;

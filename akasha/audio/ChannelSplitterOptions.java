@@ -39,7 +39,6 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ChannelSplitterOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -47,7 +46,6 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ChannelSplitterOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -56,7 +54,6 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ChannelSplitterOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

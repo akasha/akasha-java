@@ -65,7 +65,6 @@ public interface XRSessionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRSessionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -73,7 +72,6 @@ public interface XRSessionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRSessionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -81,7 +79,6 @@ public interface XRSessionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRSessionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

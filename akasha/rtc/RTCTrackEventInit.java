@@ -176,7 +176,6 @@ public interface RTCTrackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCTrackEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -184,7 +183,6 @@ public interface RTCTrackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCTrackEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -192,7 +190,6 @@ public interface RTCTrackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCTrackEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

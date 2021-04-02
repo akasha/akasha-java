@@ -25,7 +25,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats estimatedPlayoutTimestamp(
       final double estimatedPlayoutTimestamp) {
     setEstimatedPlayoutTimestamp( estimatedPlayoutTimestamp );
@@ -34,7 +33,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats framesDecoded(final int framesDecoded) {
     setFramesDecoded( framesDecoded );
     return this;
@@ -42,7 +40,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats framesDropped(final int framesDropped) {
     setFramesDropped( framesDropped );
     return this;
@@ -50,7 +47,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats framesReceived(final int framesReceived) {
     setFramesReceived( framesReceived );
     return this;
@@ -58,7 +54,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats fullFramesLost(final int fullFramesLost) {
     setFullFramesLost( fullFramesLost );
     return this;
@@ -66,7 +61,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats jitterBufferDelay(final double jitterBufferDelay) {
     setJitterBufferDelay( jitterBufferDelay );
     return this;
@@ -74,7 +68,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats jitterBufferEmittedCount(
       final int jitterBufferEmittedCount) {
     setJitterBufferEmittedCount( jitterBufferEmittedCount );
@@ -83,7 +76,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats keyFramesReceived(final int keyFramesReceived) {
     setKeyFramesReceived( keyFramesReceived );
     return this;
@@ -91,7 +83,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats partialFramesLost(final int partialFramesLost) {
     setPartialFramesLost( partialFramesLost );
     return this;
@@ -99,7 +90,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats frameHeight(final int frameHeight) {
     setFrameHeight( frameHeight );
     return this;
@@ -107,7 +97,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats frameWidth(final int frameWidth) {
     setFrameWidth( frameWidth );
     return this;
@@ -115,7 +104,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats framesPerSecond(final double framesPerSecond) {
     setFramesPerSecond( framesPerSecond );
     return this;
@@ -123,7 +111,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats ended(final boolean ended) {
     setEnded( ended );
     return this;
@@ -131,7 +118,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -139,7 +125,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats trackIdentifier(
       @Nonnull final String trackIdentifier) {
     setTrackIdentifier( trackIdentifier );
@@ -148,7 +133,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats priority(
       @RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
@@ -157,7 +141,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats remoteSource(final boolean remoteSource) {
     setRemoteSource( remoteSource );
     return this;
@@ -171,7 +154,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -185,7 +167,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -199,7 +180,6 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverVideoTrackAttachmentStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

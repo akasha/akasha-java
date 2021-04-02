@@ -25,7 +25,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats concealedSamples(final int concealedSamples) {
     setConcealedSamples( concealedSamples );
     return this;
@@ -33,7 +32,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats concealmentEvents(final int concealmentEvents) {
     setConcealmentEvents( concealmentEvents );
     return this;
@@ -41,7 +39,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats estimatedPlayoutTimestamp(
       final double estimatedPlayoutTimestamp) {
     setEstimatedPlayoutTimestamp( estimatedPlayoutTimestamp );
@@ -50,7 +47,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats insertedSamplesForDeceleration(
       final int insertedSamplesForDeceleration) {
     setInsertedSamplesForDeceleration( insertedSamplesForDeceleration );
@@ -59,7 +55,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats jitterBufferDelay(final double jitterBufferDelay) {
     setJitterBufferDelay( jitterBufferDelay );
     return this;
@@ -67,7 +62,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats jitterBufferEmittedCount(
       final int jitterBufferEmittedCount) {
     setJitterBufferEmittedCount( jitterBufferEmittedCount );
@@ -76,7 +70,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats removedSamplesForAcceleration(
       final int removedSamplesForAcceleration) {
     setRemovedSamplesForAcceleration( removedSamplesForAcceleration );
@@ -85,7 +78,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats silentConcealedSamples(
       final int silentConcealedSamples) {
     setSilentConcealedSamples( silentConcealedSamples );
@@ -94,7 +86,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats totalSamplesReceived(
       final int totalSamplesReceived) {
     setTotalSamplesReceived( totalSamplesReceived );
@@ -103,7 +94,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats audioLevel(final double audioLevel) {
     setAudioLevel( audioLevel );
     return this;
@@ -111,7 +101,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats totalAudioEnergy(final double totalAudioEnergy) {
     setTotalAudioEnergy( totalAudioEnergy );
     return this;
@@ -119,7 +108,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats totalSamplesDuration(
       final double totalSamplesDuration) {
     setTotalSamplesDuration( totalSamplesDuration );
@@ -128,7 +116,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats voiceActivityFlag(final boolean voiceActivityFlag) {
     setVoiceActivityFlag( voiceActivityFlag );
     return this;
@@ -136,7 +123,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats ended(final boolean ended) {
     setEnded( ended );
     return this;
@@ -144,7 +130,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -152,7 +137,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats trackIdentifier(
       @Nonnull final String trackIdentifier) {
     setTrackIdentifier( trackIdentifier );
@@ -161,7 +145,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats priority(
       @RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
@@ -170,7 +153,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats remoteSource(final boolean remoteSource) {
     setRemoteSource( remoteSource );
     return this;
@@ -184,7 +166,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -198,7 +179,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -212,7 +192,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

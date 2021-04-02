@@ -356,7 +356,6 @@ public interface RTCIceCandidateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCIceCandidateStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -370,7 +369,6 @@ public interface RTCIceCandidateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCIceCandidateStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -384,7 +382,6 @@ public interface RTCIceCandidateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCIceCandidateStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

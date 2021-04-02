@@ -163,7 +163,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BluetoothAdvertisingEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -171,7 +170,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BluetoothAdvertisingEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -179,7 +177,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default BluetoothAdvertisingEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

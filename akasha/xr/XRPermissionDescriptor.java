@@ -182,7 +182,6 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRPermissionDescriptor name(@PermissionName @Nonnull final String name) {
     setName( name );
     return this;

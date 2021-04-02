@@ -3,7 +3,6 @@ package akasha.core;
 import akasha.Global;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsOverlay;
 
 /**
  * Math is a built-in object that has properties and methods for mathematical constants and functions. It&rsquo;s not a function object.
@@ -19,7 +18,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E">Math.E - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.e">Math.E - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double E = JsMathNamespace.E;
 
   /**
@@ -28,7 +26,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LN10">Math.LN10 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.ln10">Math.LN10 - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double LN10 = JsMathNamespace.LN10;
 
   /**
@@ -37,7 +34,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LN2">Math.LN2 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.ln2">Math.LN2 - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double LN2 = JsMathNamespace.LN2;
 
   /**
@@ -46,7 +42,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG10E">Math.LOG10E - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.log10e">Math.LOG10E - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double LOG10E = JsMathNamespace.LOG10E;
 
   /**
@@ -55,7 +50,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG2E">Math.LOG2E - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.log2e">Math.LOG2E - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double LOG2E = JsMathNamespace.LOG2E;
 
   /**
@@ -64,7 +58,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI">Math.PI - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.pi">Math.PI - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double PI = JsMathNamespace.PI;
 
   /**
@@ -73,7 +66,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2">Math.SQRT1_2 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.sqrt1_2">Math.SQRT1_2 - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double SQRT1_2 = JsMathNamespace.SQRT1_2;
 
   /**
@@ -82,7 +74,6 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT2">Math.SQRT2 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.sqrt2">Math.SQRT2 - ECMAScript (ECMA-262)</a>
    */
-  @JsOverlay
   public static final double SQRT2 = JsMathNamespace.SQRT2;
 
   private JsMath() {

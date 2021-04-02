@@ -39,7 +39,6 @@ public interface AesDerivedKeyParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AesDerivedKeyParams name(@Nonnull final String name) {
     setName( name );
     return this;

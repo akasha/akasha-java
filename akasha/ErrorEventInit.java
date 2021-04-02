@@ -103,7 +103,6 @@ public interface ErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ErrorEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -111,7 +110,6 @@ public interface ErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ErrorEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -119,7 +117,6 @@ public interface ErrorEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ErrorEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

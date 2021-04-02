@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface UIEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static UIEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface UIEventInit extends EventInit {
   @JsProperty
   void setDetail(int detail);
 
-  @JsOverlay
-  @Nonnull
-  default UIEventInit detail(final int detail) {
-    setDetail( detail );
-    return this;
-  }
-
   @JsProperty(
       name = "view"
   )
@@ -47,34 +40,46 @@ public interface UIEventInit extends EventInit {
   @JsProperty
   void setView(@Nullable Window view);
 
-  @JsOverlay
-  @Nonnull
-  default UIEventInit view(@Nullable final Window view) {
-    setView( view );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends UIEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder detail(final int detail) {
+      setDetail( detail );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default UIEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nullable final Window view) {
+      setView( view );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default UIEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default UIEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

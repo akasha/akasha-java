@@ -79,7 +79,6 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PeriodicWaveOptions disableNormalization(final boolean disableNormalization) {
     setDisableNormalization( disableNormalization );
     return this;

@@ -88,7 +88,6 @@ public interface DeviceOrientationEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DeviceOrientationEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -96,7 +95,6 @@ public interface DeviceOrientationEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DeviceOrientationEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -104,7 +102,6 @@ public interface DeviceOrientationEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DeviceOrientationEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

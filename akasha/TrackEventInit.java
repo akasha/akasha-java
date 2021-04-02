@@ -70,7 +70,6 @@ public interface TrackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TrackEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -78,7 +77,6 @@ public interface TrackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TrackEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -86,7 +84,6 @@ public interface TrackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default TrackEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

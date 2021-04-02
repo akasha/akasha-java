@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PeriodicWaveConstraints {
   @JsOverlay
   @Nonnull
-  static PeriodicWaveConstraints create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface PeriodicWaveConstraints {
   @JsProperty
   void setDisableNormalization(boolean disableNormalization);
 
-  @JsOverlay
-  @Nonnull
-  default PeriodicWaveConstraints disableNormalization(final boolean disableNormalization) {
-    setDisableNormalization( disableNormalization );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PeriodicWaveConstraints {
+    @JsOverlay
+    @Nonnull
+    default Builder disableNormalization(final boolean disableNormalization) {
+      setDisableNormalization( disableNormalization );
+      return this;
+    }
   }
 }

@@ -101,7 +101,6 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCAudioSourceStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -109,7 +108,6 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCAudioSourceStats relayedSource(final boolean relayedSource) {
     setRelayedSource( relayedSource );
     return this;
@@ -117,7 +115,6 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCAudioSourceStats trackIdentifier(@Nonnull final String trackIdentifier) {
     setTrackIdentifier( trackIdentifier );
     return this;
@@ -131,7 +128,6 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCAudioSourceStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -145,7 +141,6 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCAudioSourceStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -159,7 +154,6 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCAudioSourceStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

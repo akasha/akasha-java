@@ -24,7 +24,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats mediaSourceId(@Nonnull final String mediaSourceId) {
     setMediaSourceId( mediaSourceId );
     return this;
@@ -32,7 +31,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats framesCaptured(final int framesCaptured) {
     setFramesCaptured( framesCaptured );
     return this;
@@ -40,7 +38,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats framesSent(final int framesSent) {
     setFramesSent( framesSent );
     return this;
@@ -48,7 +45,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats hugeFramesSent(final int hugeFramesSent) {
     setHugeFramesSent( hugeFramesSent );
     return this;
@@ -56,7 +52,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats keyFramesSent(final int keyFramesSent) {
     setKeyFramesSent( keyFramesSent );
     return this;
@@ -64,7 +59,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats frameHeight(final int frameHeight) {
     setFrameHeight( frameHeight );
     return this;
@@ -72,7 +66,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats frameWidth(final int frameWidth) {
     setFrameWidth( frameWidth );
     return this;
@@ -80,7 +73,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats framesPerSecond(final double framesPerSecond) {
     setFramesPerSecond( framesPerSecond );
     return this;
@@ -88,7 +80,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats ended(final boolean ended) {
     setEnded( ended );
     return this;
@@ -96,7 +87,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -104,7 +94,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats trackIdentifier(
       @Nonnull final String trackIdentifier) {
     setTrackIdentifier( trackIdentifier );
@@ -113,7 +102,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats priority(
       @RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
@@ -122,7 +110,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats remoteSource(final boolean remoteSource) {
     setRemoteSource( remoteSource );
     return this;
@@ -136,7 +123,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -150,7 +136,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -164,7 +149,6 @@ public interface RTCSenderVideoTrackAttachmentStats extends RTCVideoSenderStats 
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderVideoTrackAttachmentStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

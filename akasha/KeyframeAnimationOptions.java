@@ -39,7 +39,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions composite(@CompositeOperation @Nonnull final String composite) {
     setComposite( composite );
     return this;
@@ -47,7 +46,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions iterationComposite(
       @IterationCompositeOperation @Nonnull final String iterationComposite) {
     setIterationComposite( iterationComposite );
@@ -62,7 +60,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions delay(final double delay) {
     setDelay( delay );
     return this;
@@ -76,7 +73,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions direction(@PlaybackDirection @Nonnull final String direction) {
     setDirection( direction );
     return this;
@@ -90,7 +86,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions duration(final double duration) {
     setDuration( duration );
     return this;
@@ -104,7 +99,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions duration(@Nonnull final String duration) {
     setDuration( duration );
     return this;
@@ -118,7 +112,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions easing(@Nonnull final String easing) {
     setEasing( easing );
     return this;
@@ -132,7 +125,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions endDelay(final double endDelay) {
     setEndDelay( endDelay );
     return this;
@@ -146,7 +138,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions fill(@FillMode @Nonnull final String fill) {
     setFill( fill );
     return this;
@@ -160,7 +151,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions iterationStart(final double iterationStart) {
     setIterationStart( iterationStart );
     return this;
@@ -174,7 +164,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default KeyframeAnimationOptions iterations(final double iterations) {
     setIterations( iterations );
     return this;

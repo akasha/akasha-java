@@ -153,7 +153,6 @@ public interface MessageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MessageEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -161,7 +160,6 @@ public interface MessageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MessageEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -169,7 +167,6 @@ public interface MessageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default MessageEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

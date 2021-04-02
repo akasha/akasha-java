@@ -40,7 +40,6 @@ public interface FormDataEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FormDataEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -48,7 +47,6 @@ public interface FormDataEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FormDataEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -56,7 +54,6 @@ public interface FormDataEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default FormDataEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

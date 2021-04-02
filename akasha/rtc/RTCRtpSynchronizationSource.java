@@ -36,7 +36,6 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSynchronizationSource audioLevel(final double audioLevel) {
     setAudioLevel( audioLevel );
     return this;
@@ -50,7 +49,6 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSynchronizationSource rtpTimestamp(final int rtpTimestamp) {
     setRtpTimestamp( rtpTimestamp );
     return this;
@@ -64,7 +62,6 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSynchronizationSource source(final int source) {
     setSource( source );
     return this;
@@ -78,7 +75,6 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCRtpSynchronizationSource timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;

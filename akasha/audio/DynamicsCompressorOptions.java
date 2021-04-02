@@ -99,7 +99,6 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DynamicsCompressorOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -107,7 +106,6 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DynamicsCompressorOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -116,7 +114,6 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default DynamicsCompressorOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

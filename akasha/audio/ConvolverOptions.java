@@ -56,7 +56,6 @@ public interface ConvolverOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConvolverOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -64,7 +63,6 @@ public interface ConvolverOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConvolverOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -73,7 +71,6 @@ public interface ConvolverOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default ConvolverOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

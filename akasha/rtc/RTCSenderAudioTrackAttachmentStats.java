@@ -24,7 +24,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats mediaSourceId(@Nonnull final String mediaSourceId) {
     setMediaSourceId( mediaSourceId );
     return this;
@@ -32,7 +31,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats echoReturnLoss(final double echoReturnLoss) {
     setEchoReturnLoss( echoReturnLoss );
     return this;
@@ -40,7 +38,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats echoReturnLossEnhancement(
       final double echoReturnLossEnhancement) {
     setEchoReturnLossEnhancement( echoReturnLossEnhancement );
@@ -49,7 +46,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats totalSamplesSent(final int totalSamplesSent) {
     setTotalSamplesSent( totalSamplesSent );
     return this;
@@ -57,7 +53,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats audioLevel(final double audioLevel) {
     setAudioLevel( audioLevel );
     return this;
@@ -65,7 +60,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats totalAudioEnergy(final double totalAudioEnergy) {
     setTotalAudioEnergy( totalAudioEnergy );
     return this;
@@ -73,7 +67,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats totalSamplesDuration(
       final double totalSamplesDuration) {
     setTotalSamplesDuration( totalSamplesDuration );
@@ -82,7 +75,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats voiceActivityFlag(final boolean voiceActivityFlag) {
     setVoiceActivityFlag( voiceActivityFlag );
     return this;
@@ -90,7 +82,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats ended(final boolean ended) {
     setEnded( ended );
     return this;
@@ -98,7 +89,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats kind(@Nonnull final String kind) {
     setKind( kind );
     return this;
@@ -106,7 +96,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats trackIdentifier(
       @Nonnull final String trackIdentifier) {
     setTrackIdentifier( trackIdentifier );
@@ -115,7 +104,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats priority(
       @RTCPriorityType @Nonnull final String priority) {
     setPriority( priority );
@@ -124,7 +112,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
 
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats remoteSource(final boolean remoteSource) {
     setRemoteSource( remoteSource );
     return this;
@@ -138,7 +125,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats id(@Nonnull final String id) {
     setId( id );
     return this;
@@ -152,7 +138,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats timestamp(final double timestamp) {
     setTimestamp( timestamp );
     return this;
@@ -166,7 +151,6 @@ public interface RTCSenderAudioTrackAttachmentStats extends RTCAudioSenderStats 
    */
   @JsOverlay
   @Nonnull
-  @Override
   default RTCSenderAudioTrackAttachmentStats type(@RTCStatsType @Nonnull final String type) {
     setType( type );
     return this;

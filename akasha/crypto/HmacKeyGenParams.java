@@ -98,7 +98,6 @@ public interface HmacKeyGenParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default HmacKeyGenParams name(@Nonnull final String name) {
     setName( name );
     return this;

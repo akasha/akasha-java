@@ -47,7 +47,6 @@ public interface AesCbcParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AesCbcParams name(@Nonnull final String name) {
     setName( name );
     return this;

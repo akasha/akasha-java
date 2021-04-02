@@ -57,7 +57,6 @@ public interface AnimationPlaybackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AnimationPlaybackEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -65,7 +64,6 @@ public interface AnimationPlaybackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AnimationPlaybackEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -73,7 +71,6 @@ public interface AnimationPlaybackEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AnimationPlaybackEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

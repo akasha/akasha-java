@@ -60,7 +60,6 @@ public interface PromiseRejectionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PromiseRejectionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -68,7 +67,6 @@ public interface PromiseRejectionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PromiseRejectionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -76,7 +74,6 @@ public interface PromiseRejectionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default PromiseRejectionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

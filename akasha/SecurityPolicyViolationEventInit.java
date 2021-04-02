@@ -199,7 +199,6 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SecurityPolicyViolationEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -207,7 +206,6 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SecurityPolicyViolationEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -215,7 +213,6 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SecurityPolicyViolationEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

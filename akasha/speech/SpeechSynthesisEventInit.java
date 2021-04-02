@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechSynthesisEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static SpeechSynthesisEventInit create(@Nonnull final SpeechSynthesisUtterance utterance) {
-    return Js.<SpeechSynthesisEventInit>uncheckedCast( JsPropertyMap.of() ).utterance( utterance );
+  static Builder create(@Nonnull final SpeechSynthesisUtterance utterance) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).utterance( utterance );
   }
 
   @JsProperty(
@@ -31,13 +31,6 @@ public interface SpeechSynthesisEventInit extends EventInit {
   @JsProperty
   void setCharIndex(int charIndex);
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisEventInit charIndex(final int charIndex) {
-    setCharIndex( charIndex );
-    return this;
-  }
-
   @JsProperty(
       name = "charLength"
   )
@@ -45,13 +38,6 @@ public interface SpeechSynthesisEventInit extends EventInit {
 
   @JsProperty
   void setCharLength(int charLength);
-
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisEventInit charLength(final int charLength) {
-    setCharLength( charLength );
-    return this;
-  }
 
   @JsProperty(
       name = "elapsedTime"
@@ -61,13 +47,6 @@ public interface SpeechSynthesisEventInit extends EventInit {
   @JsProperty
   void setElapsedTime(float elapsedTime);
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisEventInit elapsedTime(final float elapsedTime) {
-    setElapsedTime( elapsedTime );
-    return this;
-  }
-
   @JsProperty(
       name = "name"
   )
@@ -75,13 +54,6 @@ public interface SpeechSynthesisEventInit extends EventInit {
 
   @JsProperty
   void setName(@Nonnull String name);
-
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisEventInit name(@Nonnull final String name) {
-    setName( name );
-    return this;
-  }
 
   @JsProperty(
       name = "utterance"
@@ -92,34 +64,67 @@ public interface SpeechSynthesisEventInit extends EventInit {
   @JsProperty
   void setUtterance(@Nonnull SpeechSynthesisUtterance utterance);
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisEventInit utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
-    setUtterance( utterance );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends SpeechSynthesisEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder charIndex(final int charIndex) {
+      setCharIndex( charIndex );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default SpeechSynthesisEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder charLength(final int charLength) {
+      setCharLength( charLength );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default SpeechSynthesisEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder elapsedTime(final float elapsedTime) {
+      setElapsedTime( elapsedTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  @Override
-  default SpeechSynthesisEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
+      setUtterance( utterance );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

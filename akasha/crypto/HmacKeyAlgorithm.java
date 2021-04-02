@@ -56,7 +56,6 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default HmacKeyAlgorithm name(@Nonnull final String name) {
     setName( name );
     return this;

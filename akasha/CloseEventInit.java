@@ -69,7 +69,6 @@ public interface CloseEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CloseEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -77,7 +76,6 @@ public interface CloseEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CloseEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -85,7 +83,6 @@ public interface CloseEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default CloseEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

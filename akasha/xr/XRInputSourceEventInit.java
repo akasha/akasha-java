@@ -100,7 +100,6 @@ public interface XRInputSourceEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRInputSourceEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -108,7 +107,6 @@ public interface XRInputSourceEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRInputSourceEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -116,7 +114,6 @@ public interface XRInputSourceEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default XRInputSourceEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

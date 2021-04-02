@@ -55,7 +55,6 @@ public interface SyncEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SyncEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -63,7 +62,6 @@ public interface SyncEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SyncEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -71,7 +69,6 @@ public interface SyncEventInit extends ExtendableEventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default SyncEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

@@ -45,7 +45,6 @@ public interface RsaPssParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaPssParams name(@Nonnull final String name) {
     setName( name );
     return this;

@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Algorithm {
   @JsOverlay
   @Nonnull
-  static Algorithm create(@Nonnull final String name) {
-    return Js.<Algorithm>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -31,10 +31,18 @@ public interface Algorithm {
   @JsProperty
   void setName(@Nonnull String name);
 
-  @JsOverlay
-  @Nonnull
-  default Algorithm name(@Nonnull final String name) {
-    setName( name );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Algorithm {
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

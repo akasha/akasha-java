@@ -98,7 +98,6 @@ public interface HmacImportParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default HmacImportParams name(@Nonnull final String name) {
     setName( name );
     return this;

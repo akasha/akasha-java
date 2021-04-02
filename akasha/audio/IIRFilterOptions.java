@@ -103,7 +103,6 @@ public interface IIRFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default IIRFilterOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -111,7 +110,6 @@ public interface IIRFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default IIRFilterOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -120,7 +118,6 @@ public interface IIRFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default IIRFilterOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

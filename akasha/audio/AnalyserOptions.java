@@ -84,7 +84,6 @@ public interface AnalyserOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AnalyserOptions channelCount(final int channelCount) {
     setChannelCount( channelCount );
     return this;
@@ -92,7 +91,6 @@ public interface AnalyserOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AnalyserOptions channelCountMode(
       @ChannelCountMode @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
@@ -101,7 +99,6 @@ public interface AnalyserOptions extends AudioNodeOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AnalyserOptions channelInterpretation(
       @ChannelInterpretation @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );

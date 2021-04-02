@@ -86,7 +86,6 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedKeyGenParams modulusLength(final int modulusLength) {
     setModulusLength( modulusLength );
     return this;
@@ -94,7 +93,6 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedKeyGenParams publicExponent(@Nonnull final Uint8Array publicExponent) {
     setPublicExponent( publicExponent );
     return this;
@@ -102,7 +100,6 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
 
   @JsOverlay
   @Nonnull
-  @Override
   default RsaHashedKeyGenParams name(@Nonnull final String name) {
     setName( name );
     return this;

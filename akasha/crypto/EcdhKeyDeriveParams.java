@@ -46,7 +46,6 @@ public interface EcdhKeyDeriveParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  @Override
   default EcdhKeyDeriveParams name(@Nonnull final String name) {
     setName( name );
     return this;
