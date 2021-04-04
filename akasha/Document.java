@@ -917,19 +917,6 @@ public class Document extends Node {
   public native HTMLCollection anchors();
 
   /**
-   * The applets property of the Document interface returns a list of the applets within a document.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/applets">Document.applets - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-applets">Document.applets - HTML Living Standard</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862">Document.applets - Document Object Model (DOM) Level 2 HTML Specification</a>
-   */
-  @JsProperty(
-      name = "applets"
-  )
-  @Nonnull
-  public native HTMLCollection applets();
-
-  /**
    * The Document.characterSet read-only property returns the character encoding of the document that it's currently rendered with.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/characterSet">Document.characterSet - MDN</a>
@@ -1765,17 +1752,6 @@ public class Document extends Node {
   public final Object get(@Nonnull final String name) {
     return Js.<JsPropertyMap<Object>>cast( this ).get( name );
   }
-
-  public native void captureEvents();
-
-  /**
-   * The Document.clear() method clears the whole specified document in early (pre-1.0) versions of Mozilla.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/clear">Document.clear - MDN</a>
-   */
-  public native void clear();
-
-  public native void releaseEvents();
 
   /**
    * The ParentNode.append() method inserts a set of Node objects or DOMString objects after the last child of the ParentNode.

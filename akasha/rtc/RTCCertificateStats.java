@@ -75,7 +75,7 @@ public interface RTCCertificateStats extends RTCStats {
   @JsProperty(
       name = "issuerCertificateId"
   )
-  String issuerCertificateId();
+  String _issuerCertificateId();
 
   @JsProperty
   void setIssuerCertificateId(@Nonnull String issuerCertificateId);

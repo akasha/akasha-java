@@ -997,12 +997,6 @@ public class Window extends EventTarget {
   @Nonnull
   public native EventOrUndefinedUnion event();
 
-  @JsProperty(
-      name = "external"
-  )
-  @Nonnull
-  public native External external();
-
   /**
    * The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded.
    *
@@ -1775,20 +1769,6 @@ public class Window extends EventTarget {
    */
   @Nullable
   public native Selection getSelection();
-
-  /**
-   * The Window.captureEvents() method registers the window to capture all events of the specified type.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents">Window.captureEvents - MDN</a>
-   */
-  public native void captureEvents();
-
-  /**
-   * Releases the window from trapping events of a specific type.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/releaseEvents">Window.releaseEvents - MDN</a>
-   */
-  public native void releaseEvents();
 
   /**
    * The WindowOrWorkerGlobalScope.atob() function decodes a string of data which has been encoded using Base64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31.

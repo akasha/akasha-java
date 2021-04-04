@@ -126,11 +126,6 @@ public final class Global {
     return globalThis().event();
   }
 
-  @Nonnull
-  public static External external() {
-    return globalThis().external();
-  }
-
   /**
    * The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded.
    *
@@ -2035,24 +2030,6 @@ public final class Global {
   @Nullable
   public static Selection getSelection() {
     return globalThis().getSelection();
-  }
-
-  /**
-   * The Window.captureEvents() method registers the window to capture all events of the specified type.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents">Window.captureEvents - MDN</a>
-   */
-  public static void captureEvents() {
-    globalThis().captureEvents();
-  }
-
-  /**
-   * Releases the window from trapping events of a specific type.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/releaseEvents">Window.releaseEvents - MDN</a>
-   */
-  public static void releaseEvents() {
-    globalThis().releaseEvents();
   }
 
   /**
