@@ -2612,6 +2612,27 @@ var WebAssembly;
  * @private
  */
 function PerformanceTiming() {}
+/** @type {!number} */ PerformanceTiming.prototype.connectEnd;
+/** @type {!number} */ PerformanceTiming.prototype.connectStart;
+/** @type {!number} */ PerformanceTiming.prototype.domComplete;
+/** @type {!number} */ PerformanceTiming.prototype.domContentLoadedEventEnd;
+/** @type {!number} */ PerformanceTiming.prototype.domContentLoadedEventStart;
+/** @type {!number} */ PerformanceTiming.prototype.domInteractive;
+/** @type {!number} */ PerformanceTiming.prototype.domLoading;
+/** @type {!number} */ PerformanceTiming.prototype.domainLookupEnd;
+/** @type {!number} */ PerformanceTiming.prototype.domainLookupStart;
+/** @type {!number} */ PerformanceTiming.prototype.fetchStart;
+/** @type {!number} */ PerformanceTiming.prototype.loadEventEnd;
+/** @type {!number} */ PerformanceTiming.prototype.loadEventStart;
+/** @type {!number} */ PerformanceTiming.prototype.navigationStart;
+/** @type {!number} */ PerformanceTiming.prototype.redirectEnd;
+/** @type {!number} */ PerformanceTiming.prototype.redirectStart;
+/** @type {!number} */ PerformanceTiming.prototype.requestStart;
+/** @type {!number} */ PerformanceTiming.prototype.responseEnd;
+/** @type {!number} */ PerformanceTiming.prototype.responseStart;
+/** @type {!number} */ PerformanceTiming.prototype.secureConnectionStart;
+/** @type {!number} */ PerformanceTiming.prototype.unloadEventEnd;
+/** @type {!number} */ PerformanceTiming.prototype.unloadEventStart;
 /**
  * @return {!Object}
  */
@@ -2622,6 +2643,9 @@ PerformanceTiming.prototype.toJSON = function() {}
  * @private
  */
 function CSSImportRule() {}
+/** @type {!string} */ CSSImportRule.prototype.href;
+/** @type {!MediaList} */ CSSImportRule.prototype.media;
+/** @type {!CSSStyleSheet} */ CSSImportRule.prototype.styleSheet;
 /**
  * @constructor
  * @private
@@ -2638,6 +2662,10 @@ WakeLock.prototype.request = function(type) {}
  * @private
  */
 function SVGForeignObjectElement() {}
+/** @type {!SVGAnimatedLength} */ SVGForeignObjectElement.prototype.height;
+/** @type {!SVGAnimatedLength} */ SVGForeignObjectElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGForeignObjectElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGForeignObjectElement.prototype.y;
 /**
  * @constructor
  * @extends {Error}
@@ -2660,6 +2688,7 @@ CSSFontFeatureValuesMap.prototype.set = function(featureValueName,values) {}
  * @param {!MemoryDescriptor} descriptor
  */
 WebAssembly.Memory = function(descriptor) {}
+/** @type {!ArrayBuffer} */ WebAssembly.Memory.prototype.buffer;
 /**
  * @param {!number} delta
  * @return {!number}
@@ -2671,6 +2700,9 @@ WebAssembly.Memory.prototype.grow = function(delta) {}
  * @param {(!HTMLFormElement|!PasswordCredentialData)} arg0
  */
 function PasswordCredential(arg0) {}
+/** @type {!string} */ PasswordCredential.prototype.password;
+/** @type {!string} */ PasswordCredential.prototype.iconURL;
+/** @type {!string} */ PasswordCredential.prototype.name;
 /**
  * @constructor
  * @extends {Error}
@@ -2682,17 +2714,31 @@ function URIError(message) {}
  * @private
  */
 function SVGAnimatedBoolean() {}
+/** @type {!boolean} */ SVGAnimatedBoolean.prototype.animVal;
+/** @type {!boolean} */ SVGAnimatedBoolean.prototype.baseVal;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFEDiffuseLightingElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGFEDiffuseLightingElement.prototype.diffuseConstant;
+/** @type {!SVGAnimatedString} */ SVGFEDiffuseLightingElement.prototype.in1;
+/** @type {!SVGAnimatedNumber} */ SVGFEDiffuseLightingElement.prototype.kernelUnitLengthX;
+/** @type {!SVGAnimatedNumber} */ SVGFEDiffuseLightingElement.prototype.kernelUnitLengthY;
+/** @type {!SVGAnimatedNumber} */ SVGFEDiffuseLightingElement.prototype.surfaceScale;
+/** @type {!SVGAnimatedLength} */ SVGFEDiffuseLightingElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEDiffuseLightingElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEDiffuseLightingElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEDiffuseLightingElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEDiffuseLightingElement.prototype.y;
 /**
  * @constructor
  * @private
  */
 function SVGPointList() {}
+/** @type {!number} */ SVGPointList.prototype.length;
+/** @type {!number} */ SVGPointList.prototype.numberOfItems;
 /**
  * @param {!number} index
  * @return {!DOMPoint}
@@ -2745,11 +2791,20 @@ function SVGFEColorMatrixElement() {}
 /** @const {!number} */ SVGFEColorMatrixElement.prototype.SVG_FECOLORMATRIX_TYPE_SATURATE;
 /** @const {!number} */ SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_UNKNOWN;
 /** @const {!number} */ SVGFEColorMatrixElement.prototype.SVG_FECOLORMATRIX_TYPE_UNKNOWN;
+/** @type {!SVGAnimatedString} */ SVGFEColorMatrixElement.prototype.in1;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEColorMatrixElement.prototype.type;
+/** @type {!SVGAnimatedNumberList} */ SVGFEColorMatrixElement.prototype.values;
+/** @type {!SVGAnimatedLength} */ SVGFEColorMatrixElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEColorMatrixElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEColorMatrixElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEColorMatrixElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEColorMatrixElement.prototype.y;
 /**
  * @constructor
  * @private
  */
 function HTMLCollection() {}
+/** @type {!number} */ HTMLCollection.prototype.length;
 /**
  * @param {!string} name
  * @return {?Element}
@@ -2771,6 +2826,10 @@ function HTMLSpanElement() {}
  * @private
  */
 function GamepadTouch() {}
+/** @type {!Float32Array} */ GamepadTouch.prototype.position;
+/** @type {?Uint32Array} */ GamepadTouch.prototype.surfaceDimensions;
+/** @type {!number} */ GamepadTouch.prototype.surfaceId;
+/** @type {!number} */ GamepadTouch.prototype.touchId;
 /**
  * @constructor
  * @extends {Event}
@@ -2778,12 +2837,14 @@ function GamepadTouch() {}
  * @param {!XRSessionEventInit} eventInitDict
  */
 function XRSessionEvent(type,eventInitDict) {}
+/** @type {!XRSession} */ XRSessionEvent.prototype.session;
 /**
  * @constructor
  * @extends {PermissionStatus}
  * @private
  */
 function XRPermissionStatus() {}
+/** @type {!Array<*>} */ XRPermissionStatus.prototype.granted;
 /**
  * @constructor
  * @extends {SpeechSynthesisEvent}
@@ -2791,6 +2852,7 @@ function XRPermissionStatus() {}
  * @param {!SpeechSynthesisErrorEventInit} eventInitDict
  */
 function SpeechSynthesisErrorEvent(type,eventInitDict) {}
+/** @type {!string} */ SpeechSynthesisErrorEvent.prototype.error;
 /**
  * @constructor
  * @private
@@ -2807,6 +2869,7 @@ CanvasPattern.prototype.setTransform = function(transform) {}
  * @private
  */
 function HTMLDivElement() {}
+/** @type {!string} */ HTMLDivElement.prototype.align;
 /**
  * @constructor
  */
@@ -2833,6 +2896,22 @@ function WEBGL_compressed_texture_pvrtc() {}
  * @private
  */
 function SpeechRecognition() {}
+/** @type {!boolean} */ SpeechRecognition.prototype.continuous;
+/** @type {!SpeechGrammarList} */ SpeechRecognition.prototype.grammars;
+/** @type {!boolean} */ SpeechRecognition.prototype.interimResults;
+/** @type {!string} */ SpeechRecognition.prototype.lang;
+/** @type {!number} */ SpeechRecognition.prototype.maxAlternatives;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onaudioend;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onaudiostart;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onend;
+/** @type {?SpeechRecognitionErrorEventHandler} */ SpeechRecognition.prototype.onerror;
+/** @type {?SpeechRecognitionEventHandler} */ SpeechRecognition.prototype.onnomatch;
+/** @type {?SpeechRecognitionEventHandler} */ SpeechRecognition.prototype.onresult;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onsoundend;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onsoundstart;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onspeechend;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onspeechstart;
+/** @type {?EventHandler} */ SpeechRecognition.prototype.onstart;
 /**
  * @return {undefined}
  */
@@ -2851,12 +2930,15 @@ SpeechRecognition.prototype.start = function() {}
  * @private
  */
 function HTMLTimeElement() {}
+/** @type {!string} */ HTMLTimeElement.prototype.dateTime;
 /**
  * @constructor
  * @extends {CSSRule}
  * @private
  */
 function CSSNamespaceRule() {}
+/** @type {!CSSOMString} */ CSSNamespaceRule.prototype.namespaceURI;
+/** @type {!CSSOMString} */ CSSNamespaceRule.prototype.prefix;
 /**
  * @constructor
  * @private
@@ -2872,6 +2954,8 @@ function KHR_parallel_shader_compile() {}
  * @private
  */
 function SVGFEDistantLightElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGFEDistantLightElement.prototype.azimuth;
+/** @type {!SVGAnimatedNumber} */ SVGFEDistantLightElement.prototype.elevation;
 /**
  * @constructor
  * @extends {Event}
@@ -2879,11 +2963,15 @@ function SVGFEDistantLightElement() {}
  * @param {!MediaKeyMessageEventInit} eventInitDict
  */
 function MediaKeyMessageEvent(type,eventInitDict) {}
+/** @type {!ArrayBuffer} */ MediaKeyMessageEvent.prototype.message;
+/** @type {!string} */ MediaKeyMessageEvent.prototype.messageType;
 /**
  * @constructor
  * @private
  */
 function SVGAnimatedInteger() {}
+/** @type {!number} */ SVGAnimatedInteger.prototype.animVal;
+/** @type {!number} */ SVGAnimatedInteger.prototype.baseVal;
 /**
  * @constructor
  * @extends {MediaDeviceInfo}
@@ -2899,6 +2987,7 @@ InputDeviceInfo.prototype.getCapabilities = function() {}
  * @private
  */
 function Crypto() {}
+/** @type {!SubtleCrypto} */ Crypto.prototype.subtle;
 /**
  * @param {!ArrayBufferView} array
  * @return {!ArrayBufferView}
@@ -2909,12 +2998,27 @@ Crypto.prototype.getRandomValues = function(array) {}
  * @private
  */
 function StyleSheet() {}
+/** @type {?string} */ StyleSheet.prototype.href;
+/** @type {!MediaList} */ StyleSheet.prototype.media;
+/** @type {(!Element|!ProcessingInstruction)} */ StyleSheet.prototype.ownerNode;
+/** @type {?CSSStyleSheet} */ StyleSheet.prototype.parentStyleSheet;
+/** @type {?string} */ StyleSheet.prototype.title;
+/** @type {!CSSOMString} */ StyleSheet.prototype.type;
+/** @type {!boolean} */ StyleSheet.prototype.disabled;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function IDBTransaction() {}
+/** @type {!IDBDatabase} */ IDBTransaction.prototype.db;
+/** @type {!string} */ IDBTransaction.prototype.durability;
+/** @type {?DOMException} */ IDBTransaction.prototype.error;
+/** @type {!string} */ IDBTransaction.prototype.mode;
+/** @type {!DOMStringList} */ IDBTransaction.prototype.objectStoreNames;
+/** @type {?EventHandler} */ IDBTransaction.prototype.onabort;
+/** @type {?EventHandler} */ IDBTransaction.prototype.oncomplete;
+/** @type {?EventHandler} */ IDBTransaction.prototype.onerror;
 /**
  * @param {!string} name
  * @return {!IDBObjectStore}
@@ -2934,17 +3038,44 @@ IDBTransaction.prototype.commit = function() {}
  * @private
  */
 function HTMLFrameSetElement() {}
+/** @type {!string} */ HTMLFrameSetElement.prototype.cols;
+/** @type {!string} */ HTMLFrameSetElement.prototype.rows;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onafterprint;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onbeforeprint;
+/** @type {!NullableOnBeforeUnloadEventHandler} */ HTMLFrameSetElement.prototype.onbeforeunload;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onhashchange;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onlanguagechange;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onmessage;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onmessageerror;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onoffline;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.ononline;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onpagehide;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onpageshow;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onpopstate;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onrejectionhandled;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onstorage;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onunhandledrejection;
+/** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onunload;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLOptionElement() {}
+/** @type {?HTMLFormElement} */ HTMLOptionElement.prototype.form;
+/** @type {!number} */ HTMLOptionElement.prototype.index;
+/** @type {!boolean} */ HTMLOptionElement.prototype.defaultSelected;
+/** @type {!boolean} */ HTMLOptionElement.prototype.disabled;
+/** @type {!string} */ HTMLOptionElement.prototype.label;
+/** @type {!boolean} */ HTMLOptionElement.prototype.selected;
+/** @type {!string} */ HTMLOptionElement.prototype.text;
+/** @type {!string} */ HTMLOptionElement.prototype.value;
 /**
  * @record
  * @private
  */
 function SpeechGrammarList() {}
+/** @type {!number} */ SpeechGrammarList.prototype.length;
 /**
  * @param {!string} src
  * @param {!number=} weight
@@ -2967,6 +3098,11 @@ SpeechGrammarList.prototype.addFromString = function(string,weight) {}
  * @private
  */
 function AudioParam() {}
+/** @type {!number} */ AudioParam.prototype.defaultValue;
+/** @type {!number} */ AudioParam.prototype.maxValue;
+/** @type {!number} */ AudioParam.prototype.minValue;
+/** @type {!string} */ AudioParam.prototype.automationRate;
+/** @type {!number} */ AudioParam.prototype.value;
 /**
  * @param {!number} value
  * @param {!number} startTime
@@ -3046,6 +3182,9 @@ function StaticRange(init) {}
  * @private
  */
 function RTCRtpSender() {}
+/** @type {?MediaStreamTrack} */ RTCRtpSender.prototype.track;
+/** @type {?RTCDtlsTransport} */ RTCRtpSender.prototype.transport;
+/** @type {?RTCDTMFSender} */ RTCRtpSender.prototype.dtmf;
 /**
  * @param {!RTCRtpSendParameters} parameters
  * @return {!Promise<undefined>}
@@ -3081,12 +3220,14 @@ RTCRtpSender.getCapabilities = function(kind) {}
  * @param {!GamepadEventInit} eventInitDict
  */
 function GamepadEvent(type,eventInitDict) {}
+/** @type {!Gamepad} */ GamepadEvent.prototype.gamepad;
 /**
  * @constructor
  * @param {!WebAssembly.Module} module
  * @param {!Object=} importObject
  */
 WebAssembly.Instance = function(module,importObject) {}
+/** @type {!Object} */ WebAssembly.Instance.prototype.exports;
 /**
  * @constructor
  * @extends {DOMException}
@@ -3094,17 +3235,35 @@ WebAssembly.Instance = function(module,importObject) {}
  * @param {!string=} message
  */
 function RTCError(init,message) {}
+/** @type {!string} */ RTCError.prototype.errorDetail;
+/** @type {?number} */ RTCError.prototype.receivedAlert;
+/** @type {?number} */ RTCError.prototype.sctpCauseCode;
+/** @type {?number} */ RTCError.prototype.sdpLineNumber;
+/** @type {?number} */ RTCError.prototype.sentAlert;
+/** @type {?number} */ RTCError.prototype.httpRequestStatusCode;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFEFloodElement() {}
+/** @type {!SVGAnimatedLength} */ SVGFEFloodElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEFloodElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEFloodElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEFloodElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEFloodElement.prototype.y;
 /**
  * @constructor
  * @private
  */
 function Selection() {}
+/** @type {?Node} */ Selection.prototype.anchorNode;
+/** @type {!number} */ Selection.prototype.anchorOffset;
+/** @type {?Node} */ Selection.prototype.focusNode;
+/** @type {!number} */ Selection.prototype.focusOffset;
+/** @type {!boolean} */ Selection.prototype.isCollapsed;
+/** @type {!number} */ Selection.prototype.rangeCount;
+/** @type {!string} */ Selection.prototype.type;
 /**
  * @param {!number} index
  * @return {!Range}
@@ -3182,6 +3341,27 @@ Selection.prototype.collapse = function(node,offset) {}
  * @private
  */
 function CanvasRenderingContext2D() {}
+/** @type {!HTMLCanvasElement} */ CanvasRenderingContext2D.prototype.canvas;
+/** @type {!boolean} */ CanvasRenderingContext2D.prototype.imageSmoothingEnabled;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.imageSmoothingQuality;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.globalAlpha;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.globalCompositeOperation;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.lineCap;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.lineDashOffset;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.lineJoin;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.lineWidth;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.miterLimit;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.direction;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.font;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.textAlign;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.textBaseline;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.filter;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.shadowBlur;
+/** @type {!string} */ CanvasRenderingContext2D.prototype.shadowColor;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.shadowOffsetX;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.shadowOffsetY;
+/** @type {(!string|!CanvasGradient|!CanvasPattern)} */ CanvasRenderingContext2D.prototype.fillStyle;
+/** @type {(!string|!CanvasGradient|!CanvasPattern)} */ CanvasRenderingContext2D.prototype.strokeStyle;
 /**
  * @param {!number} angle
  * @return {undefined}
@@ -3482,6 +3662,27 @@ CanvasRenderingContext2D.prototype.moveTo = function(x,y) {}
  * @param {!NotificationOptions=} options
  */
 function Notification(title,options) {}
+/** @type {!number} */ Notification.maxActions;
+/** @type {!string} */ Notification.permission;
+/** @type {!Array<!NotificationAction>} */ Notification.prototype.actions;
+/** @type {!string} */ Notification.prototype.badge;
+/** @type {!string} */ Notification.prototype.body;
+/** @type {*} */ Notification.prototype.data;
+/** @type {!string} */ Notification.prototype.dir;
+/** @type {!string} */ Notification.prototype.icon;
+/** @type {!string} */ Notification.prototype.image;
+/** @type {!string} */ Notification.prototype.lang;
+/** @type {!boolean} */ Notification.prototype.renotify;
+/** @type {!boolean} */ Notification.prototype.requireInteraction;
+/** @type {!boolean} */ Notification.prototype.silent;
+/** @type {!string} */ Notification.prototype.tag;
+/** @type {!DOMTimeStamp} */ Notification.prototype.timestamp;
+/** @type {!string} */ Notification.prototype.title;
+/** @type {!Array<!number>} */ Notification.prototype.vibrate;
+/** @type {!NullableEventHandler} */ Notification.prototype.onclick;
+/** @type {!NullableEventHandler} */ Notification.prototype.onclose;
+/** @type {!NullableEventHandler} */ Notification.prototype.onerror;
+/** @type {!NullableEventHandler} */ Notification.prototype.onshow;
 /**
  * @param {!NotificationPermissionCallback=} deprecatedCallback
  * @return {!Promise<!string>}
@@ -3499,6 +3700,11 @@ Notification.prototype.close = function() {}
  * @param {!XRWebGLLayerInit=} layerInit
  */
 function XRWebGLLayer(session,context,layerInit) {}
+/** @type {!boolean} */ XRWebGLLayer.prototype.antialias;
+/** @type {?WebGLFramebuffer} */ XRWebGLLayer.prototype.framebuffer;
+/** @type {!number} */ XRWebGLLayer.prototype.framebufferHeight;
+/** @type {!number} */ XRWebGLLayer.prototype.framebufferWidth;
+/** @type {!boolean} */ XRWebGLLayer.prototype.ignoreDepthValues;
 /**
  * @param {!XRView} view
  * @return {?XRViewport}
@@ -3521,12 +3727,18 @@ function ChannelMergerNode(context,options) {}
  * @private
  */
 function SVGAnimatedLengthList() {}
+/** @type {!SVGLengthList} */ SVGAnimatedLengthList.prototype.animVal;
+/** @type {!SVGLengthList} */ SVGAnimatedLengthList.prototype.baseVal;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function AudioTrackList() {}
+/** @type {!number} */ AudioTrackList.prototype.length;
+/** @type {?TrackEventHandler} */ AudioTrackList.prototype.onaddtrack;
+/** @type {?EventHandler} */ AudioTrackList.prototype.onchange;
+/** @type {?TrackEventHandler} */ AudioTrackList.prototype.onremovetrack;
 /**
  * @param {!string} id
  * @return {?AudioTrack}
@@ -3538,17 +3750,22 @@ AudioTrackList.prototype.getTrackById = function(id) {}
  * @private
  */
 function HTMLBaseElement() {}
+/** @type {!string} */ HTMLBaseElement.prototype.href;
+/** @type {!string} */ HTMLBaseElement.prototype.target;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLMapElement() {}
+/** @type {!HTMLCollection} */ HTMLMapElement.prototype.areas;
+/** @type {!string} */ HTMLMapElement.prototype.name;
 /**
  * @constructor
  * @private
  */
 function XRInputSourceArray() {}
+/** @type {!number} */ XRInputSourceArray.prototype.length;
 /**
  * @constructor
  */
@@ -3563,6 +3780,8 @@ XMLSerializer.prototype.serializeToString = function(root) {}
  * @private
  */
 function SVGAnimatedPreserveAspectRatio() {}
+/** @type {!SVGPreserveAspectRatio} */ SVGAnimatedPreserveAspectRatio.prototype.animVal;
+/** @type {!SVGPreserveAspectRatio} */ SVGAnimatedPreserveAspectRatio.prototype.baseVal;
 /**
  * @constructor
  * @extends {UIEvent}
@@ -3570,6 +3789,25 @@ function SVGAnimatedPreserveAspectRatio() {}
  * @param {!MouseEventInit=} eventInitDict
  */
 function MouseEvent(type,eventInitDict) {}
+/** @type {!boolean} */ MouseEvent.prototype.altKey;
+/** @type {!number} */ MouseEvent.prototype.button;
+/** @type {!number} */ MouseEvent.prototype.buttons;
+/** @type {!boolean} */ MouseEvent.prototype.ctrlKey;
+/** @type {!boolean} */ MouseEvent.prototype.metaKey;
+/** @type {?EventTarget} */ MouseEvent.prototype.relatedTarget;
+/** @type {!boolean} */ MouseEvent.prototype.shiftKey;
+/** @type {!number} */ MouseEvent.prototype.clientX;
+/** @type {!number} */ MouseEvent.prototype.clientY;
+/** @type {!number} */ MouseEvent.prototype.offsetX;
+/** @type {!number} */ MouseEvent.prototype.offsetY;
+/** @type {!number} */ MouseEvent.prototype.pageX;
+/** @type {!number} */ MouseEvent.prototype.pageY;
+/** @type {!number} */ MouseEvent.prototype.screenX;
+/** @type {!number} */ MouseEvent.prototype.screenY;
+/** @type {!number} */ MouseEvent.prototype.x;
+/** @type {!number} */ MouseEvent.prototype.y;
+/** @type {!number} */ MouseEvent.prototype.movementX;
+/** @type {!number} */ MouseEvent.prototype.movementY;
 /**
  * @param {!string} keyArg
  * @return {!boolean}
@@ -3592,6 +3830,23 @@ function ObjectPropertyEntry() {}
  * @private
  */
 function HTMLSelectElement() {}
+/** @type {?HTMLFormElement} */ HTMLSelectElement.prototype.form;
+/** @type {!NodeList} */ HTMLSelectElement.prototype.labels;
+/** @type {!HTMLOptionsCollection} */ HTMLSelectElement.prototype.options;
+/** @type {!HTMLCollection} */ HTMLSelectElement.prototype.selectedOptions;
+/** @type {!string} */ HTMLSelectElement.prototype.type;
+/** @type {!string} */ HTMLSelectElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLSelectElement.prototype.validity;
+/** @type {!boolean} */ HTMLSelectElement.prototype.willValidate;
+/** @type {!string} */ HTMLSelectElement.prototype.autocomplete;
+/** @type {!boolean} */ HTMLSelectElement.prototype.disabled;
+/** @type {!number} */ HTMLSelectElement.prototype.length;
+/** @type {!boolean} */ HTMLSelectElement.prototype.multiple;
+/** @type {!string} */ HTMLSelectElement.prototype.name;
+/** @type {!boolean} */ HTMLSelectElement.prototype.required;
+/** @type {!number} */ HTMLSelectElement.prototype.selectedIndex;
+/** @type {!number} */ HTMLSelectElement.prototype.size;
+/** @type {!string} */ HTMLSelectElement.prototype.value;
 /**
  * @param {(!HTMLOptionElement|!HTMLOptGroupElement)} element
  * @param {(!HTMLElement|!number)=} before
@@ -3633,6 +3888,7 @@ HTMLSelectElement.prototype.checkValidity = function() {}
  * @param {!SubmitEventInit=} eventInitDict
  */
 function SubmitEvent(type,eventInitDict) {}
+/** @type {?HTMLElement} */ SubmitEvent.prototype.submitter;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -3645,12 +3901,22 @@ function SVGMetadataElement() {}
  * @private
  */
 function SVGUseElement() {}
+/** @type {?SVGElement} */ SVGUseElement.prototype.animatedInstanceRoot;
+/** @type {!SVGAnimatedLength} */ SVGUseElement.prototype.height;
+/** @type {?SVGElement} */ SVGUseElement.prototype.instanceRoot;
+/** @type {!SVGAnimatedLength} */ SVGUseElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGUseElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGUseElement.prototype.y;
+/** @type {!SVGAnimatedString} */ SVGUseElement.prototype.href;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function WakeLockSentinel() {}
+/** @type {!boolean} */ WakeLockSentinel.prototype.released;
+/** @type {!string} */ WakeLockSentinel.prototype.type;
+/** @type {!NullableEventHandler} */ WakeLockSentinel.prototype.onrelease;
 /**
  * @return {!Promise<undefined>}
  */
@@ -3661,12 +3927,23 @@ WakeLockSentinel.prototype.release = function() {}
  * @private
  */
 function SVGRadialGradientElement() {}
+/** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.cx;
+/** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.cy;
+/** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.fr;
+/** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.fx;
+/** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.fy;
+/** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.r;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLHRElement() {}
+/** @type {!string} */ HTMLHRElement.prototype.align;
+/** @type {!string} */ HTMLHRElement.prototype.color;
+/** @type {!boolean} */ HTMLHRElement.prototype.noShade;
+/** @type {!string} */ HTMLHRElement.prototype.size;
+/** @type {!string} */ HTMLHRElement.prototype.width;
 /**
  * @constructor
  * @extends {Error}
@@ -3674,6 +3951,7 @@ function HTMLHRElement() {}
  * @param {!string=} message
  */
 function AggregateError(errors,message) {}
+/** @type {!Array<*>} */ AggregateError.prototype.errors;
 /**
  * @record
  * @private
@@ -3700,6 +3978,9 @@ function SVGTransform() {}
 /** @const {!number} */ SVGTransform.prototype.SVG_TRANSFORM_TRANSLATE;
 /** @const {!number} */ SVGTransform.SVG_TRANSFORM_UNKNOWN;
 /** @const {!number} */ SVGTransform.prototype.SVG_TRANSFORM_UNKNOWN;
+/** @type {!number} */ SVGTransform.prototype.angle;
+/** @type {!DOMMatrix} */ SVGTransform.prototype.matrix;
+/** @type {!number} */ SVGTransform.prototype.type;
 /**
  * @param {!number} sx
  * @param {!number} sy
@@ -3739,6 +4020,8 @@ SVGTransform.prototype.setSkewY = function(angle) {}
  * @param {!RTCSessionDescriptionInit} descriptionInitDict
  */
 function RTCSessionDescription(descriptionInitDict) {}
+/** @type {!string} */ RTCSessionDescription.prototype.sdp;
+/** @type {!string} */ RTCSessionDescription.prototype.type;
 /**
  * @return {!Object}
  */
@@ -3747,17 +4030,26 @@ RTCSessionDescription.prototype.toJSON = function() {}
  * @constructor
  */
 function MessageChannel() {}
+/** @type {!MessagePort} */ MessageChannel.prototype.port1;
+/** @type {!MessagePort} */ MessageChannel.prototype.port2;
 /**
  * @constructor
  * @private
  */
 function VideoTrack() {}
+/** @type {!string} */ VideoTrack.prototype.id;
+/** @type {!string} */ VideoTrack.prototype.kind;
+/** @type {!string} */ VideoTrack.prototype.label;
+/** @type {!string} */ VideoTrack.prototype.language;
+/** @type {!boolean} */ VideoTrack.prototype.selected;
+/** @type {?SourceBuffer} */ VideoTrack.prototype.sourceBuffer;
 /**
  * @constructor
  * @extends {CSSRule}
  * @private
  */
 function CSSFontFaceRule() {}
+/** @type {!CSSStyleDeclaration} */ CSSFontFaceRule.prototype.style;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -3770,6 +4062,7 @@ function WebGLVertexArrayObject() {}
  * @private
  */
 function SVGFEMergeNodeElement() {}
+/** @type {!SVGAnimatedString} */ SVGFEMergeNodeElement.prototype.in1;
 /**
  * @constructor
  * @extends {HTMLAudioElement}
@@ -3788,6 +4081,12 @@ function WebGLTransformFeedback() {}
  * @private
  */
 function AudioNode() {}
+/** @type {!BaseAudioContext} */ AudioNode.prototype.context;
+/** @type {!number} */ AudioNode.prototype.numberOfInputs;
+/** @type {!number} */ AudioNode.prototype.numberOfOutputs;
+/** @type {!number} */ AudioNode.prototype.channelCount;
+/** @type {!string} */ AudioNode.prototype.channelCountMode;
+/** @type {!string} */ AudioNode.prototype.channelInterpretation;
 /**
  * @param {(!number|!AudioNode|!AudioParam)=} arg0
  * @param {!number=} arg1
@@ -3807,12 +4106,16 @@ AudioNode.prototype.connect = function(arg0,arg1,arg2) {}
  * @private
  */
 function XRPose() {}
+/** @type {!boolean} */ XRPose.prototype.emulatedPosition;
+/** @type {!XRRigidTransform} */ XRPose.prototype.transform;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLDialogElement() {}
+/** @type {!boolean} */ HTMLDialogElement.prototype.open;
+/** @type {!string} */ HTMLDialogElement.prototype.returnValue;
 /**
  * @return {undefined}
  */
@@ -3831,6 +4134,8 @@ HTMLDialogElement.prototype.close = function(returnValue) {}
  * @private
  */
 function DOMTokenList() {}
+/** @type {!number} */ DOMTokenList.prototype.length;
+/** @type {!string} */ DOMTokenList.prototype.value;
 /**
  * @param {...!string} tokens
  * @return {undefined}
@@ -3874,12 +4179,14 @@ DOMTokenList.prototype.remove = function(tokens) {}
  * @private
  */
 function HTMLTemplateElement() {}
+/** @type {!DocumentFragment} */ HTMLTemplateElement.prototype.content;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLDirectoryElement() {}
+/** @type {!boolean} */ HTMLDirectoryElement.prototype.compact;
 /**
  * @constructor
  * @extends {UIEvent}
@@ -3887,6 +4194,13 @@ function HTMLDirectoryElement() {}
  * @param {!TouchEventInit=} eventInitDict
  */
 function TouchEvent(type,eventInitDict) {}
+/** @type {!boolean} */ TouchEvent.prototype.altKey;
+/** @type {!TouchList} */ TouchEvent.prototype.changedTouches;
+/** @type {!boolean} */ TouchEvent.prototype.ctrlKey;
+/** @type {!boolean} */ TouchEvent.prototype.metaKey;
+/** @type {!boolean} */ TouchEvent.prototype.shiftKey;
+/** @type {!TouchList} */ TouchEvent.prototype.targetTouches;
+/** @type {!TouchList} */ TouchEvent.prototype.touches;
 /**
  * @constructor
  * @private
@@ -3897,6 +4211,9 @@ function DOMStringMap() {}
  * @private
  */
 function DeviceMotionEventRotationRate() {}
+/** @type {?number} */ DeviceMotionEventRotationRate.prototype.alpha;
+/** @type {?number} */ DeviceMotionEventRotationRate.prototype.beta;
+/** @type {?number} */ DeviceMotionEventRotationRate.prototype.gamma;
 /**
  * @constructor
  * @extends {Event}
@@ -3904,11 +4221,15 @@ function DeviceMotionEventRotationRate() {}
  * @param {!ProgressEventInit=} eventInitDict
  */
 function ProgressEvent(type,eventInitDict) {}
+/** @type {!boolean} */ ProgressEvent.prototype.lengthComputable;
+/** @type {!number} */ ProgressEvent.prototype.loaded;
+/** @type {!number} */ ProgressEvent.prototype.total;
 /**
  * @constructor
  * @private
  */
 function GamepadHapticActuator() {}
+/** @type {!string} */ GamepadHapticActuator.prototype.type;
 /**
  * @param {!number} value
  * @param {!number} duration
@@ -3921,6 +4242,7 @@ GamepadHapticActuator.prototype.pulse = function(value,duration) {}
  * @param {*=} v
  */
 WebAssembly.Global = function(descriptor,v) {}
+/** @type {*} */ WebAssembly.Global.prototype.value;
 /**
  * @return {*}
  * @override
@@ -3966,6 +4288,11 @@ OCULUS_multiview.prototype.framebufferTextureMultisampleMultiviewOVR = function(
  * @constructor
  */
 function DataTransfer() {}
+/** @type {!FileList} */ DataTransfer.prototype.files;
+/** @type {!DataTransferItemList} */ DataTransfer.prototype.items;
+/** @type {!Array<!string>} */ DataTransfer.prototype.types;
+/** @type {!string} */ DataTransfer.prototype.dropEffect;
+/** @type {!string} */ DataTransfer.prototype.effectAllowed;
 /**
  * @param {!string} format
  * @param {!string} data
@@ -3995,6 +4322,19 @@ DataTransfer.prototype.clearData = function(format) {}
  * @private
  */
 function HTMLFormElement() {}
+/** @type {!HTMLFormControlsCollection} */ HTMLFormElement.prototype.elements;
+/** @type {!number} */ HTMLFormElement.prototype.length;
+/** @type {!DOMTokenList} */ HTMLFormElement.prototype.relList;
+/** @type {!string} */ HTMLFormElement.prototype.acceptCharset;
+/** @type {!string} */ HTMLFormElement.prototype.action;
+/** @type {!string} */ HTMLFormElement.prototype.autocomplete;
+/** @type {!string} */ HTMLFormElement.prototype.encoding;
+/** @type {!string} */ HTMLFormElement.prototype.enctype;
+/** @type {!string} */ HTMLFormElement.prototype.method;
+/** @type {!string} */ HTMLFormElement.prototype.name;
+/** @type {!boolean} */ HTMLFormElement.prototype.noValidate;
+/** @type {!string} */ HTMLFormElement.prototype.rel;
+/** @type {!string} */ HTMLFormElement.prototype.target;
 /**
  * @return {undefined}
  */
@@ -4022,6 +4362,16 @@ HTMLFormElement.prototype.checkValidity = function() {}
  * @private
  */
 function HTMLOutputElement() {}
+/** @type {?HTMLFormElement} */ HTMLOutputElement.prototype.form;
+/** @type {!DOMTokenList} */ HTMLOutputElement.prototype.htmlFor;
+/** @type {!NodeList} */ HTMLOutputElement.prototype.labels;
+/** @type {!string} */ HTMLOutputElement.prototype.type;
+/** @type {!string} */ HTMLOutputElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLOutputElement.prototype.validity;
+/** @type {!boolean} */ HTMLOutputElement.prototype.willValidate;
+/** @type {!string} */ HTMLOutputElement.prototype.defaultValue;
+/** @type {!string} */ HTMLOutputElement.prototype.name;
+/** @type {!string} */ HTMLOutputElement.prototype.value;
 /**
  * @param {!string} error
  * @return {undefined}
@@ -4042,6 +4392,9 @@ HTMLOutputElement.prototype.checkValidity = function() {}
  * @param {!number=} arg2
  */
 function ImageData(arg0,arg1,arg2) {}
+/** @type {!Uint8ClampedArray} */ ImageData.prototype.data;
+/** @type {!number} */ ImageData.prototype.height;
+/** @type {!number} */ ImageData.prototype.width;
 /**
  * @constructor
  * @private
@@ -4052,6 +4405,11 @@ function BluetoothManufacturerDataMap() {}
  * @private
  */
 function RTCRtpTransceiver() {}
+/** @type {?string} */ RTCRtpTransceiver.prototype.currentDirection;
+/** @type {?string} */ RTCRtpTransceiver.prototype.mid;
+/** @type {!RTCRtpReceiver} */ RTCRtpTransceiver.prototype.receiver;
+/** @type {!RTCRtpSender} */ RTCRtpTransceiver.prototype.sender;
+/** @type {!string} */ RTCRtpTransceiver.prototype.direction;
 /**
  * @return {undefined}
  */
@@ -4067,6 +4425,8 @@ RTCRtpTransceiver.prototype.setCodecPreferences = function(codecs) {}
  * @private
  */
 function HTMLUListElement() {}
+/** @type {!boolean} */ HTMLUListElement.prototype.compact;
+/** @type {!string} */ HTMLUListElement.prototype.type;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -4074,6 +4434,7 @@ function HTMLUListElement() {}
  * @param {!MediaStreamAudioSourceOptions} options
  */
 function MediaStreamAudioSourceNode(context,options) {}
+/** @type {!MediaStream} */ MediaStreamAudioSourceNode.prototype.mediaStream;
 /**
  * @constructor
  * @extends {Event}
@@ -4081,12 +4442,15 @@ function MediaStreamAudioSourceNode(context,options) {}
  * @param {!PromiseRejectionEventInit} eventInitDict
  */
 function PromiseRejectionEvent(type,eventInitDict) {}
+/** @type {!Promise<*>} */ PromiseRejectionEvent.prototype.promise;
+/** @type {*} */ PromiseRejectionEvent.prototype.reason;
 /**
  * @constructor
  * @extends {XRReferenceSpace}
  * @private
  */
 function XRBoundedReferenceSpace() {}
+/** @type {!Array<!DOMPointReadOnly>} */ XRBoundedReferenceSpace.prototype.boundsGeometry;
 /**
  * @record
  * @private
@@ -4101,6 +4465,15 @@ function WEBGL_debug_renderer_info() {}
  * @param {!string=} flags
  */
 function RegExp(pattern,flags) {}
+/** @type {!string} */ RegExp.prototype.source;
+/** @type {!string} */ RegExp.prototype.flags;
+/** @type {!boolean} */ RegExp.prototype.dotAll;
+/** @type {!boolean} */ RegExp.prototype.global;
+/** @type {!boolean} */ RegExp.prototype.ignoreCase;
+/** @type {!boolean} */ RegExp.prototype.multiline;
+/** @type {!boolean} */ RegExp.prototype.sticky;
+/** @type {!boolean} */ RegExp.prototype.unicode;
+/** @type {!number} */ RegExp.prototype.lastIndex;
 /**
  * @param {!string} text
  * @return {!boolean}
@@ -4131,6 +4504,10 @@ function SVGAngle() {}
 /** @const {!number} */ SVGAngle.prototype.SVG_ANGLETYPE_UNKNOWN;
 /** @const {!number} */ SVGAngle.SVG_ANGLETYPE_UNSPECIFIED;
 /** @const {!number} */ SVGAngle.prototype.SVG_ANGLETYPE_UNSPECIFIED;
+/** @type {!number} */ SVGAngle.prototype.unitType;
+/** @type {!number} */ SVGAngle.prototype.value;
+/** @type {!string} */ SVGAngle.prototype.valueAsString;
+/** @type {!number} */ SVGAngle.prototype.valueInSpecifiedUnits;
 /**
  * @param {!number} unitType
  * @return {undefined}
@@ -4194,6 +4571,7 @@ URLSearchParams.prototype.append = function(name,value) {}
  * @private
  */
 function Storage() {}
+/** @type {!number} */ Storage.prototype.length;
 /**
  * @param {!string} key
  * @return {undefined}
@@ -4224,6 +4602,7 @@ Storage.prototype.key = function(index) {}
  * @private
  */
 function IdleDeadline() {}
+/** @type {!boolean} */ IdleDeadline.prototype.didTimeout;
 /**
  * @return {!DOMHighResTimeStamp}
  */
@@ -4235,6 +4614,18 @@ IdleDeadline.prototype.timeRemaining = function() {}
  * @param {!MediaRecorderOptions=} options
  */
 function MediaRecorder(stream,options) {}
+/** @type {!string} */ MediaRecorder.prototype.audioBitrateMode;
+/** @type {!number} */ MediaRecorder.prototype.audioBitsPerSecond;
+/** @type {!string} */ MediaRecorder.prototype.mimeType;
+/** @type {!string} */ MediaRecorder.prototype.state;
+/** @type {!MediaStream} */ MediaRecorder.prototype.stream;
+/** @type {!number} */ MediaRecorder.prototype.videoBitsPerSecond;
+/** @type {!NullableEventHandler} */ MediaRecorder.prototype.ondataavailable;
+/** @type {?MediaRecorderErrorEventHandler} */ MediaRecorder.prototype.onerror;
+/** @type {!NullableEventHandler} */ MediaRecorder.prototype.onpause;
+/** @type {!NullableEventHandler} */ MediaRecorder.prototype.onresume;
+/** @type {!NullableEventHandler} */ MediaRecorder.prototype.onstart;
+/** @type {!NullableEventHandler} */ MediaRecorder.prototype.onstop;
 /**
  * @return {undefined}
  */
@@ -4268,6 +4659,8 @@ MediaRecorder.prototype.pause = function() {}
  * @param {!AnimationPlaybackEventInit=} eventInitDict
  */
 function AnimationPlaybackEvent(type,eventInitDict) {}
+/** @type {?number} */ AnimationPlaybackEvent.prototype.currentTime;
+/** @type {?number} */ AnimationPlaybackEvent.prototype.timelineTime;
 /**
  * @constructor
  * @private
@@ -4319,6 +4712,10 @@ Cache.prototype.matchAll = function(request,options) {}
  * @param {!ClipboardItemOptions=} options
  */
 function ClipboardItem(items,options) {}
+/** @type {!boolean} */ ClipboardItem.prototype.delayed;
+/** @type {!number} */ ClipboardItem.prototype.lastModified;
+/** @type {!string} */ ClipboardItem.prototype.presentationStyle;
+/** @type {!Array<!string>} */ ClipboardItem.prototype.types;
 /**
  * @param {!string} type
  * @return {!Promise<!Blob>}
@@ -4336,6 +4733,12 @@ ClipboardItem.createDelayed = function(items,options) {}
  * @private
  */
 function HTMLVideoElement() {}
+/** @type {!number} */ HTMLVideoElement.prototype.videoHeight;
+/** @type {!number} */ HTMLVideoElement.prototype.videoWidth;
+/** @type {!number} */ HTMLVideoElement.prototype.height;
+/** @type {!boolean} */ HTMLVideoElement.prototype.playsInline;
+/** @type {!string} */ HTMLVideoElement.prototype.poster;
+/** @type {!number} */ HTMLVideoElement.prototype.width;
 /**
  * @return {!VideoPlaybackQuality}
  */
@@ -4346,6 +4749,24 @@ HTMLVideoElement.prototype.getVideoPlaybackQuality = function() {}
  * @private
  */
 function HTMLIFrameElement() {}
+/** @type {?Document} */ HTMLIFrameElement.prototype.contentDocument;
+/** @type {?WindowProxy} */ HTMLIFrameElement.prototype.contentWindow;
+/** @type {!DOMTokenList} */ HTMLIFrameElement.prototype.sandbox;
+/** @type {!string} */ HTMLIFrameElement.prototype.allow;
+/** @type {!boolean} */ HTMLIFrameElement.prototype.allowFullscreen;
+/** @type {!string} */ HTMLIFrameElement.prototype.height;
+/** @type {!string} */ HTMLIFrameElement.prototype.loading;
+/** @type {!string} */ HTMLIFrameElement.prototype.name;
+/** @type {!string} */ HTMLIFrameElement.prototype.referrerPolicy;
+/** @type {!string} */ HTMLIFrameElement.prototype.src;
+/** @type {!string} */ HTMLIFrameElement.prototype.srcdoc;
+/** @type {!string} */ HTMLIFrameElement.prototype.width;
+/** @type {!string} */ HTMLIFrameElement.prototype.align;
+/** @type {!string} */ HTMLIFrameElement.prototype.frameBorder;
+/** @type {!string} */ HTMLIFrameElement.prototype.longDesc;
+/** @type {!string} */ HTMLIFrameElement.prototype.marginHeight;
+/** @type {!string} */ HTMLIFrameElement.prototype.marginWidth;
+/** @type {!string} */ HTMLIFrameElement.prototype.scrolling;
 /**
  * @return {?Document}
  */
@@ -4357,6 +4778,7 @@ HTMLIFrameElement.prototype.getSVGDocument = function() {}
  * @param {!MediaRecorderErrorEventInit} eventInitDict
  */
 function MediaRecorderErrorEvent(type,eventInitDict) {}
+/** @type {!DOMException} */ MediaRecorderErrorEvent.prototype.error;
 /**
  * @constructor
  * @extends {Event}
@@ -4364,12 +4786,18 @@ function MediaRecorderErrorEvent(type,eventInitDict) {}
  * @param {!RTCDTMFToneChangeEventInit=} eventInitDict
  */
 function RTCDTMFToneChangeEvent(type,eventInitDict) {}
+/** @type {!string} */ RTCDTMFToneChangeEvent.prototype.tone;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function VideoTrackList() {}
+/** @type {!number} */ VideoTrackList.prototype.length;
+/** @type {!number} */ VideoTrackList.prototype.selectedIndex;
+/** @type {?TrackEventHandler} */ VideoTrackList.prototype.onaddtrack;
+/** @type {?EventHandler} */ VideoTrackList.prototype.onchange;
+/** @type {?TrackEventHandler} */ VideoTrackList.prototype.onremovetrack;
 /**
  * @param {!string} id
  * @return {?VideoTrack}
@@ -4405,6 +4833,17 @@ BluetoothUUID.getService = function(name) {}
  * @private
  */
 function Gamepad() {}
+/** @type {!Array<!number>} */ Gamepad.prototype.axes;
+/** @type {!Array<!GamepadButton>} */ Gamepad.prototype.buttons;
+/** @type {!boolean} */ Gamepad.prototype.connected;
+/** @type {!string} */ Gamepad.prototype.id;
+/** @type {!number} */ Gamepad.prototype.index;
+/** @type {!string} */ Gamepad.prototype.mapping;
+/** @type {!DOMHighResTimeStamp} */ Gamepad.prototype.timestamp;
+/** @type {!string} */ Gamepad.prototype.hand;
+/** @type {!Array<!GamepadHapticActuator>} */ Gamepad.prototype.hapticActuators;
+/** @type {?GamepadPose} */ Gamepad.prototype.pose;
+/** @type {?Array<!GamepadTouch>} */ Gamepad.prototype.touchEvents;
 /**
  * @constructor
  * @extends {Event}
@@ -4412,11 +4851,28 @@ function Gamepad() {}
  * @param {!SecurityPolicyViolationEventInit=} eventInitDict
  */
 function SecurityPolicyViolationEvent(type,eventInitDict) {}
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.blockedURI;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.blockedURL;
+/** @type {!number} */ SecurityPolicyViolationEvent.prototype.colno;
+/** @type {!number} */ SecurityPolicyViolationEvent.prototype.columnNumber;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.disposition;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.documentURI;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.documentURL;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.effectiveDirective;
+/** @type {!number} */ SecurityPolicyViolationEvent.prototype.lineNumber;
+/** @type {!number} */ SecurityPolicyViolationEvent.prototype.lineno;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.originalPolicy;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.referrer;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.sample;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.sourceFile;
+/** @type {!number} */ SecurityPolicyViolationEvent.prototype.statusCode;
+/** @type {!string} */ SecurityPolicyViolationEvent.prototype.violatedDirective;
 /**
  * @constructor
  * @private
  */
 function ReadableStreamDefaultController() {}
+/** @type {?number} */ ReadableStreamDefaultController.prototype.desiredSize;
 /**
  * @param {*=} chunk
  * @return {undefined}
@@ -4449,6 +4905,10 @@ function SVGTextPathElement() {}
 /** @const {!number} */ SVGTextPathElement.prototype.TEXTPATH_SPACINGTYPE_EXACT;
 /** @const {!number} */ SVGTextPathElement.TEXTPATH_SPACINGTYPE_UNKNOWN;
 /** @const {!number} */ SVGTextPathElement.prototype.TEXTPATH_SPACINGTYPE_UNKNOWN;
+/** @type {!SVGAnimatedEnumeration} */ SVGTextPathElement.prototype.method;
+/** @type {!SVGAnimatedEnumeration} */ SVGTextPathElement.prototype.spacing;
+/** @type {!SVGAnimatedLength} */ SVGTextPathElement.prototype.startOffset;
+/** @type {!SVGAnimatedString} */ SVGTextPathElement.prototype.href;
 /**
  * @constructor
  * @private
@@ -4469,6 +4929,7 @@ MediaKeys.prototype.setServerCertificate = function(serverCertificate) {}
  * @param {!PerformanceObserverCallback} callback
  */
 function PerformanceObserver(callback) {}
+/** @type {!Array<!string>} */ PerformanceObserver.supportedEntryTypes;
 /**
  * @return {undefined}
  */
@@ -4488,17 +4949,29 @@ PerformanceObserver.prototype.observe = function(options) {}
  * @private
  */
 function HTMLBRElement() {}
+/** @type {!string} */ HTMLBRElement.prototype.clear;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function TextTrackCue() {}
+/** @type {?TextTrack} */ TextTrackCue.prototype.track;
+/** @type {!number} */ TextTrackCue.prototype.endTime;
+/** @type {!string} */ TextTrackCue.prototype.id;
+/** @type {!NullableEventHandler} */ TextTrackCue.prototype.onenter;
+/** @type {!NullableEventHandler} */ TextTrackCue.prototype.onexit;
+/** @type {!boolean} */ TextTrackCue.prototype.pauseOnExit;
+/** @type {!number} */ TextTrackCue.prototype.startTime;
 /**
  * @constructor
  * @extends {Node}
  */
 function DocumentFragment() {}
+/** @type {!number} */ DocumentFragment.prototype.childElementCount;
+/** @type {!HTMLCollection} */ DocumentFragment.prototype.children;
+/** @type {?Element} */ DocumentFragment.prototype.firstElementChild;
+/** @type {?Element} */ DocumentFragment.prototype.lastElementChild;
 /**
  * @param {!string} elementId
  * @return {?Element}
@@ -4536,11 +5009,18 @@ DocumentFragment.prototype.append = function(nodes) {}
  * @param {!DynamicsCompressorOptions=} options
  */
 function DynamicsCompressorNode(context,options) {}
+/** @type {!AudioParam} */ DynamicsCompressorNode.prototype.attack;
+/** @type {!AudioParam} */ DynamicsCompressorNode.prototype.knee;
+/** @type {!AudioParam} */ DynamicsCompressorNode.prototype.ratio;
+/** @type {!number} */ DynamicsCompressorNode.prototype.reduction;
+/** @type {!AudioParam} */ DynamicsCompressorNode.prototype.release;
+/** @type {!AudioParam} */ DynamicsCompressorNode.prototype.threshold;
 /**
  * @constructor
  * @private
  */
 function NamedNodeMap() {}
+/** @type {!number} */ NamedNodeMap.prototype.length;
 /**
  * @param {!number} index
  * @return {?Attr}
@@ -4583,6 +5063,53 @@ NamedNodeMap.prototype.removeNamedItemNS = function(namespace,localName) {}
  * @private
  */
 function ElementInternals() {}
+/** @type {?HTMLFormElement} */ ElementInternals.prototype.form;
+/** @type {!NodeList} */ ElementInternals.prototype.labels;
+/** @type {?ShadowRoot} */ ElementInternals.prototype.shadowRoot;
+/** @type {!string} */ ElementInternals.prototype.validationMessage;
+/** @type {!ValidityState} */ ElementInternals.prototype.validity;
+/** @type {!boolean} */ ElementInternals.prototype.willValidate;
+/** @type {!string} */ ElementInternals.prototype.ariaAtomic;
+/** @type {!string} */ ElementInternals.prototype.ariaAutoComplete;
+/** @type {!string} */ ElementInternals.prototype.ariaBusy;
+/** @type {!string} */ ElementInternals.prototype.ariaChecked;
+/** @type {!string} */ ElementInternals.prototype.ariaColCount;
+/** @type {!string} */ ElementInternals.prototype.ariaColIndex;
+/** @type {!string} */ ElementInternals.prototype.ariaColIndexText;
+/** @type {!string} */ ElementInternals.prototype.ariaColSpan;
+/** @type {!string} */ ElementInternals.prototype.ariaCurrent;
+/** @type {!string} */ ElementInternals.prototype.ariaDescription;
+/** @type {!string} */ ElementInternals.prototype.ariaDisabled;
+/** @type {!string} */ ElementInternals.prototype.ariaExpanded;
+/** @type {!string} */ ElementInternals.prototype.ariaHasPopup;
+/** @type {!string} */ ElementInternals.prototype.ariaHidden;
+/** @type {!string} */ ElementInternals.prototype.ariaInvalid;
+/** @type {!string} */ ElementInternals.prototype.ariaKeyShortcuts;
+/** @type {!string} */ ElementInternals.prototype.ariaLabel;
+/** @type {!string} */ ElementInternals.prototype.ariaLevel;
+/** @type {!string} */ ElementInternals.prototype.ariaLive;
+/** @type {!string} */ ElementInternals.prototype.ariaModal;
+/** @type {!string} */ ElementInternals.prototype.ariaMultiLine;
+/** @type {!string} */ ElementInternals.prototype.ariaMultiSelectable;
+/** @type {!string} */ ElementInternals.prototype.ariaOrientation;
+/** @type {!string} */ ElementInternals.prototype.ariaPlaceholder;
+/** @type {!string} */ ElementInternals.prototype.ariaPosInSet;
+/** @type {!string} */ ElementInternals.prototype.ariaPressed;
+/** @type {!string} */ ElementInternals.prototype.ariaReadOnly;
+/** @type {!string} */ ElementInternals.prototype.ariaRequired;
+/** @type {!string} */ ElementInternals.prototype.ariaRoleDescription;
+/** @type {!string} */ ElementInternals.prototype.ariaRowCount;
+/** @type {!string} */ ElementInternals.prototype.ariaRowIndex;
+/** @type {!string} */ ElementInternals.prototype.ariaRowIndexText;
+/** @type {!string} */ ElementInternals.prototype.ariaRowSpan;
+/** @type {!string} */ ElementInternals.prototype.ariaSelected;
+/** @type {!string} */ ElementInternals.prototype.ariaSetSize;
+/** @type {!string} */ ElementInternals.prototype.ariaSort;
+/** @type {!string} */ ElementInternals.prototype.ariaValueMax;
+/** @type {!string} */ ElementInternals.prototype.ariaValueMin;
+/** @type {!string} */ ElementInternals.prototype.ariaValueNow;
+/** @type {!string} */ ElementInternals.prototype.ariaValueText;
+/** @type {?string} */ ElementInternals.prototype.role;
 /**
  * @param {(!File|!string|!FormData)} value
  * @param {(!File|!string|!FormData)=} state
@@ -4609,6 +5136,9 @@ ElementInternals.prototype.checkValidity = function() {}
  * @private
  */
 function Report() {}
+/** @type {?ReportBody} */ Report.prototype.body;
+/** @type {!string} */ Report.prototype.type;
+/** @type {!string} */ Report.prototype.url;
 /**
  * @return {!Object}
  */
@@ -4627,11 +5157,30 @@ function SVGFEConvolveMatrixElement() {}
 /** @const {!number} */ SVGFEConvolveMatrixElement.prototype.SVG_EDGEMODE_UNKNOWN;
 /** @const {!number} */ SVGFEConvolveMatrixElement.SVG_EDGEMODE_WRAP;
 /** @const {!number} */ SVGFEConvolveMatrixElement.prototype.SVG_EDGEMODE_WRAP;
+/** @type {!SVGAnimatedNumber} */ SVGFEConvolveMatrixElement.prototype.bias;
+/** @type {!SVGAnimatedNumber} */ SVGFEConvolveMatrixElement.prototype.divisor;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEConvolveMatrixElement.prototype.edgeMode;
+/** @type {!SVGAnimatedString} */ SVGFEConvolveMatrixElement.prototype.in1;
+/** @type {!SVGAnimatedNumberList} */ SVGFEConvolveMatrixElement.prototype.kernelMatrix;
+/** @type {!SVGAnimatedNumber} */ SVGFEConvolveMatrixElement.prototype.kernelUnitLengthX;
+/** @type {!SVGAnimatedNumber} */ SVGFEConvolveMatrixElement.prototype.kernelUnitLengthY;
+/** @type {!SVGAnimatedInteger} */ SVGFEConvolveMatrixElement.prototype.orderX;
+/** @type {!SVGAnimatedInteger} */ SVGFEConvolveMatrixElement.prototype.orderY;
+/** @type {!SVGAnimatedBoolean} */ SVGFEConvolveMatrixElement.prototype.preserveAlpha;
+/** @type {!SVGAnimatedInteger} */ SVGFEConvolveMatrixElement.prototype.targetX;
+/** @type {!SVGAnimatedInteger} */ SVGFEConvolveMatrixElement.prototype.targetY;
+/** @type {!SVGAnimatedLength} */ SVGFEConvolveMatrixElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEConvolveMatrixElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEConvolveMatrixElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEConvolveMatrixElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEConvolveMatrixElement.prototype.y;
 /**
  * @constructor
  * @private
  */
 function BluetoothRemoteGATTServer() {}
+/** @type {!boolean} */ BluetoothRemoteGATTServer.prototype.connected;
+/** @type {!BluetoothDevice} */ BluetoothRemoteGATTServer.prototype.device;
 /**
  * @return {undefined}
  */
@@ -4657,6 +5206,7 @@ BluetoothRemoteGATTServer.prototype.connect = function() {}
  * @param {!ValueEventInit=} initDict
  */
 function ValueEvent(type,initDict) {}
+/** @type {*} */ ValueEvent.prototype.value;
 /**
  * @record
  * @private
@@ -4668,12 +5218,26 @@ function OES_texture_float_linear() {}
  * @private
  */
 function TextMetrics() {}
+/** @type {!number} */ TextMetrics.prototype.actualBoundingBoxAscent;
+/** @type {!number} */ TextMetrics.prototype.actualBoundingBoxDescent;
+/** @type {!number} */ TextMetrics.prototype.actualBoundingBoxLeft;
+/** @type {!number} */ TextMetrics.prototype.actualBoundingBoxRight;
+/** @type {!number} */ TextMetrics.prototype.alphabeticBaseline;
+/** @type {!number} */ TextMetrics.prototype.emHeightAscent;
+/** @type {!number} */ TextMetrics.prototype.emHeightDescent;
+/** @type {!number} */ TextMetrics.prototype.fontBoundingBoxAscent;
+/** @type {!number} */ TextMetrics.prototype.fontBoundingBoxDescent;
+/** @type {!number} */ TextMetrics.prototype.hangingBaseline;
+/** @type {!number} */ TextMetrics.prototype.ideographicBaseline;
+/** @type {!number} */ TextMetrics.prototype.width;
 /**
  * @constructor
  * @extends {SVGGeometryElement}
  * @private
  */
 function SVGPolygonElement() {}
+/** @type {!SVGPointList} */ SVGPolygonElement.prototype.animatedPoints;
+/** @type {!SVGPointList} */ SVGPolygonElement.prototype.points;
 /**
  * @constructor
  * @extends {ShadowRoot}
@@ -4686,12 +5250,23 @@ function SVGUseElementShadowRoot() {}
  * @private
  */
 function XRViewerPose() {}
+/** @type {!Array<!XRView>} */ XRViewerPose.prototype.views;
 /**
  * @constructor
  * @extends {PerformanceResourceTiming}
  * @private
  */
 function PerformanceNavigationTiming() {}
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.domComplete;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.domContentLoadedEventEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.domContentLoadedEventStart;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.domInteractive;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.loadEventEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.loadEventStart;
+/** @type {!number} */ PerformanceNavigationTiming.prototype.redirectCount;
+/** @type {!string} */ PerformanceNavigationTiming.prototype.type;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.unloadEventEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.unloadEventStart;
 /**
  * @return {!Object}
  */
@@ -4701,12 +5276,26 @@ PerformanceNavigationTiming.prototype.toJSON = function() {}
  * @private
  */
 function XRRenderState() {}
+/** @type {?XRWebGLLayer} */ XRRenderState.prototype.baseLayer;
+/** @type {!number} */ XRRenderState.prototype.depthFar;
+/** @type {!number} */ XRRenderState.prototype.depthNear;
+/** @type {?number} */ XRRenderState.prototype.inlineVerticalFieldOfView;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLFrameElement() {}
+/** @type {?Document} */ HTMLFrameElement.prototype.contentDocument;
+/** @type {?WindowProxy} */ HTMLFrameElement.prototype.contentWindow;
+/** @type {!string} */ HTMLFrameElement.prototype.frameBorder;
+/** @type {!string} */ HTMLFrameElement.prototype.longDesc;
+/** @type {!string} */ HTMLFrameElement.prototype.marginHeight;
+/** @type {!string} */ HTMLFrameElement.prototype.marginWidth;
+/** @type {!string} */ HTMLFrameElement.prototype.name;
+/** @type {!boolean} */ HTMLFrameElement.prototype.noResize;
+/** @type {!string} */ HTMLFrameElement.prototype.scrolling;
+/** @type {!string} */ HTMLFrameElement.prototype.src;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -4722,6 +5311,16 @@ function WebSocket(url,protocols) {}
 /** @const {!number} */ WebSocket.prototype.CONNECTING;
 /** @const {!number} */ WebSocket.OPEN;
 /** @const {!number} */ WebSocket.prototype.OPEN;
+/** @type {!number} */ WebSocket.prototype.bufferedAmount;
+/** @type {!string} */ WebSocket.prototype.extensions;
+/** @type {!string} */ WebSocket.prototype.protocol;
+/** @type {!number} */ WebSocket.prototype.readyState;
+/** @type {!string} */ WebSocket.prototype.url;
+/** @type {!string} */ WebSocket.prototype.binaryType;
+/** @type {?CloseEventHandler} */ WebSocket.prototype.onclose;
+/** @type {?EventHandler} */ WebSocket.prototype.onerror;
+/** @type {?MessageEventHandler} */ WebSocket.prototype.onmessage;
+/** @type {?EventHandler} */ WebSocket.prototype.onopen;
 /**
  * @param {(!string|!Blob|!ArrayBuffer|!ArrayBufferView)} arg0
  * @return {undefined}
@@ -4738,12 +5337,39 @@ WebSocket.prototype.close = function(code,reason) {}
  * @private
  */
 function SVGAnimatedTransformList() {}
+/** @type {!SVGTransformList} */ SVGAnimatedTransformList.prototype.animVal;
+/** @type {!SVGTransformList} */ SVGAnimatedTransformList.prototype.baseVal;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLAnchorElement() {}
+/** @type {!DOMTokenList} */ HTMLAnchorElement.prototype.relList;
+/** @type {!string} */ HTMLAnchorElement.prototype.download;
+/** @type {!string} */ HTMLAnchorElement.prototype.hreflang;
+/** @type {!string} */ HTMLAnchorElement.prototype.ping;
+/** @type {!string} */ HTMLAnchorElement.prototype.referrerPolicy;
+/** @type {!string} */ HTMLAnchorElement.prototype.rel;
+/** @type {!string} */ HTMLAnchorElement.prototype.target;
+/** @type {!string} */ HTMLAnchorElement.prototype.text;
+/** @type {!string} */ HTMLAnchorElement.prototype.type;
+/** @type {!string} */ HTMLAnchorElement.prototype.charset;
+/** @type {!string} */ HTMLAnchorElement.prototype.coords;
+/** @type {!string} */ HTMLAnchorElement.prototype.name;
+/** @type {!string} */ HTMLAnchorElement.prototype.rev;
+/** @type {!string} */ HTMLAnchorElement.prototype.shape;
+/** @type {!string} */ HTMLAnchorElement.prototype.origin;
+/** @type {!string} */ HTMLAnchorElement.prototype.hash;
+/** @type {!string} */ HTMLAnchorElement.prototype.host;
+/** @type {!string} */ HTMLAnchorElement.prototype.hostname;
+/** @type {!string} */ HTMLAnchorElement.prototype.password;
+/** @type {!string} */ HTMLAnchorElement.prototype.pathname;
+/** @type {!string} */ HTMLAnchorElement.prototype.port;
+/** @type {!string} */ HTMLAnchorElement.prototype.protocol;
+/** @type {!string} */ HTMLAnchorElement.prototype.search;
+/** @type {!string} */ HTMLAnchorElement.prototype.username;
+/** @type {!string} */ HTMLAnchorElement.prototype.href;
 /**
  * @constructor
  * @private
@@ -4795,6 +5421,10 @@ ReportBody.prototype.toJSON = function() {}
  * @private
  */
 function SVGLinearGradientElement() {}
+/** @type {!SVGAnimatedLength} */ SVGLinearGradientElement.prototype.x1;
+/** @type {!SVGAnimatedLength} */ SVGLinearGradientElement.prototype.x2;
+/** @type {!SVGAnimatedLength} */ SVGLinearGradientElement.prototype.y1;
+/** @type {!SVGAnimatedLength} */ SVGLinearGradientElement.prototype.y2;
 /**
  * @constructor
  * @extends {Event}
@@ -4802,6 +5432,11 @@ function SVGLinearGradientElement() {}
  * @param {!RTCPeerConnectionIceErrorEventInit} eventInitDict
  */
 function RTCPeerConnectionIceErrorEvent(type,eventInitDict) {}
+/** @type {?string} */ RTCPeerConnectionIceErrorEvent.prototype.address;
+/** @type {!number} */ RTCPeerConnectionIceErrorEvent.prototype.errorCode;
+/** @type {!string} */ RTCPeerConnectionIceErrorEvent.prototype.errorText;
+/** @type {?number} */ RTCPeerConnectionIceErrorEvent.prototype.port;
+/** @type {!string} */ RTCPeerConnectionIceErrorEvent.prototype.url;
 /**
  * @constructor
  * @extends {Event}
@@ -4809,12 +5444,21 @@ function RTCPeerConnectionIceErrorEvent(type,eventInitDict) {}
  * @param {!AnimationEventInit=} animationEventInitDict
  */
 function AnimationEvent(type,animationEventInitDict) {}
+/** @type {!CSSOMString} */ AnimationEvent.prototype.animationName;
+/** @type {!number} */ AnimationEvent.prototype.elapsedTime;
+/** @type {!CSSOMString} */ AnimationEvent.prototype.pseudoElement;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFEComponentTransferElement() {}
+/** @type {!SVGAnimatedString} */ SVGFEComponentTransferElement.prototype.in1;
+/** @type {!SVGAnimatedLength} */ SVGFEComponentTransferElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEComponentTransferElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEComponentTransferElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEComponentTransferElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEComponentTransferElement.prototype.y;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -4822,6 +5466,8 @@ function SVGFEComponentTransferElement() {}
  * @param {!WaveShaperOptions=} options
  */
 function WaveShaperNode(context,options) {}
+/** @type {?Float32Array} */ WaveShaperNode.prototype.curve;
+/** @type {!string} */ WaveShaperNode.prototype.oversample;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -4836,6 +5482,10 @@ function SVGGradientElement() {}
 /** @const {!number} */ SVGGradientElement.prototype.SVG_SPREADMETHOD_REPEAT;
 /** @const {!number} */ SVGGradientElement.SVG_SPREADMETHOD_UNKNOWN;
 /** @const {!number} */ SVGGradientElement.prototype.SVG_SPREADMETHOD_UNKNOWN;
+/** @type {!SVGAnimatedTransformList} */ SVGGradientElement.prototype.gradientTransform;
+/** @type {!SVGAnimatedEnumeration} */ SVGGradientElement.prototype.gradientUnits;
+/** @type {!SVGAnimatedEnumeration} */ SVGGradientElement.prototype.spreadMethod;
+/** @type {!SVGAnimatedString} */ SVGGradientElement.prototype.href;
 /**
  * @record
  * @private
@@ -4855,6 +5505,8 @@ function SVGTextContentElement() {}
 /** @const {!number} */ SVGTextContentElement.prototype.LENGTHADJUST_SPACINGANDGLYPHS;
 /** @const {!number} */ SVGTextContentElement.LENGTHADJUST_UNKNOWN;
 /** @const {!number} */ SVGTextContentElement.prototype.LENGTHADJUST_UNKNOWN;
+/** @type {!SVGAnimatedEnumeration} */ SVGTextContentElement.prototype.lengthAdjust;
+/** @type {!SVGAnimatedLength} */ SVGTextContentElement.prototype.textLength;
 /**
  * @param {!number} charnum
  * @return {!DOMPoint}
@@ -5594,6 +6246,8 @@ function WebGLRenderingContext() {}
 /** @const {!GLenum} */ WebGLRenderingContext.prototype.VIEWPORT;
 /** @const {!GLenum} */ WebGLRenderingContext.ZERO;
 /** @const {!GLenum} */ WebGLRenderingContext.prototype.ZERO;
+/** @type {!GLsizei} */ WebGLRenderingContext.prototype.drawingBufferHeight;
+/** @type {!GLsizei} */ WebGLRenderingContext.prototype.drawingBufferWidth;
 /**
  * @param {?WebGLBuffer} buffer
  * @return {!GLboolean}
@@ -6459,6 +7113,9 @@ WebGLRenderingContext.prototype.isShader = function(shader) {}
  * @param {!AudioProcessingEventInit} eventInitDict
  */
 function AudioProcessingEvent(type,eventInitDict) {}
+/** @type {!AudioBuffer} */ AudioProcessingEvent.prototype.inputBuffer;
+/** @type {!AudioBuffer} */ AudioProcessingEvent.prototype.outputBuffer;
+/** @type {!number} */ AudioProcessingEvent.prototype.playbackTime;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -6466,6 +7123,8 @@ function AudioProcessingEvent(type,eventInitDict) {}
  * @param {!ConvolverOptions=} options
  */
 function ConvolverNode(context,options) {}
+/** @type {?AudioBuffer} */ ConvolverNode.prototype.buffer;
+/** @type {!boolean} */ ConvolverNode.prototype.normalize;
 /**
  * @constructor
  * @extends {HTMLImageElement}
@@ -6489,6 +7148,10 @@ function SVGUnitTypes() {}
  * @private
  */
 function PerformanceEntry() {}
+/** @type {!DOMHighResTimeStamp} */ PerformanceEntry.prototype.duration;
+/** @type {!string} */ PerformanceEntry.prototype.entryType;
+/** @type {!string} */ PerformanceEntry.prototype.name;
+/** @type {!DOMHighResTimeStamp} */ PerformanceEntry.prototype.startTime;
 /**
  * @return {!Object}
  */
@@ -6499,6 +7162,23 @@ PerformanceEntry.prototype.toJSON = function() {}
  * @private
  */
 function PerformanceResourceTiming() {}
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.connectEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.connectStart;
+/** @type {!number} */ PerformanceResourceTiming.prototype.decodedBodySize;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.domainLookupEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.domainLookupStart;
+/** @type {!number} */ PerformanceResourceTiming.prototype.encodedBodySize;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.fetchStart;
+/** @type {!string} */ PerformanceResourceTiming.prototype.initiatorType;
+/** @type {!string} */ PerformanceResourceTiming.prototype.nextHopProtocol;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.redirectEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.redirectStart;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.requestStart;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.responseEnd;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.responseStart;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.secureConnectionStart;
+/** @type {!number} */ PerformanceResourceTiming.prototype.transferSize;
+/** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.workerStart;
 /**
  * @return {!Object}
  */
@@ -6509,6 +7189,18 @@ PerformanceResourceTiming.prototype.toJSON = function() {}
  * @private
  */
 function XRSession() {}
+/** @type {!XRInputSourceArray} */ XRSession.prototype.inputSources;
+/** @type {!XRRenderState} */ XRSession.prototype.renderState;
+/** @type {!string} */ XRSession.prototype.visibilityState;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onend;
+/** @type {!NullableEventHandler} */ XRSession.prototype.oninputsourceschange;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onselect;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onselectend;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onselectstart;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onsqueeze;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onsqueezeend;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onsqueezestart;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onvisibilitychange;
 /**
  * @param {!number} handle
  * @return {undefined}
@@ -6538,6 +7230,7 @@ XRSession.prototype.requestAnimationFrame = function(callback) {}
  * @private
  */
 function MimeTypeArray() {}
+/** @type {!number} */ MimeTypeArray.prototype.length;
 /**
  * @param {!number} index
  * @return {?Object}
@@ -6582,6 +7275,8 @@ function XRLayer() {}
  * @private
  */
 function SVGAnimatedLength() {}
+/** @type {!SVGLength} */ SVGAnimatedLength.prototype.animVal;
+/** @type {!SVGLength} */ SVGAnimatedLength.prototype.baseVal;
 /**
  * @constructor
  * @extends {UIEvent}
@@ -6589,6 +7284,9 @@ function SVGAnimatedLength() {}
  * @param {!InputEventInit=} eventInitDict
  */
 function InputEvent(type,eventInitDict) {}
+/** @type {?string} */ InputEvent.prototype.data;
+/** @type {!string} */ InputEvent.prototype.inputType;
+/** @type {!boolean} */ InputEvent.prototype.isComposing;
 /**
  * @record
  * @private
@@ -6602,11 +7300,15 @@ function EXT_float_blend() {}
  * @param {!QueuingStrategy=} readableStrategy
  */
 function TransformStream(transformer,writableStrategy,readableStrategy) {}
+/** @type {!ReadableStream} */ TransformStream.prototype.readable;
+/** @type {!WritableStream} */ TransformStream.prototype.writable;
 /**
  * @constructor
  * @private
  */
 function ReadableByteStreamController() {}
+/** @type {?ReadableStreamBYOBRequest} */ ReadableByteStreamController.prototype.byobRequest;
+/** @type {?number} */ ReadableByteStreamController.prototype.desiredSize;
 /**
  * @param {!ArrayBufferView} chunk
  * @return {undefined}
@@ -6627,12 +7329,15 @@ ReadableByteStreamController.prototype.close = function() {}
  * @private
  */
 function HTMLTitleElement() {}
+/** @type {!string} */ HTMLTitleElement.prototype.text;
 /**
  * @constructor
  * @extends {IDBRequest}
  * @private
  */
 function IDBOpenDBRequest() {}
+/** @type {?IDBVersionChangeEventHandler} */ IDBOpenDBRequest.prototype.onblocked;
+/** @type {?IDBVersionChangeEventHandler} */ IDBOpenDBRequest.prototype.onupgradeneeded;
 /**
  * @constructor
  * @extends {Event}
@@ -6640,6 +7345,9 @@ function IDBOpenDBRequest() {}
  * @param {!CloseEventInit=} eventInitDict
  */
 function CloseEvent(type,eventInitDict) {}
+/** @type {!number} */ CloseEvent.prototype.code;
+/** @type {!string} */ CloseEvent.prototype.reason;
+/** @type {!boolean} */ CloseEvent.prototype.wasClean;
 /**
  * @constructor
  * @extends {Event}
@@ -6647,6 +7355,11 @@ function CloseEvent(type,eventInitDict) {}
  * @param {!StorageEventInit=} eventInitDict
  */
 function StorageEvent(type,eventInitDict) {}
+/** @type {?string} */ StorageEvent.prototype.key;
+/** @type {?string} */ StorageEvent.prototype.newValue;
+/** @type {?string} */ StorageEvent.prototype.oldValue;
+/** @type {?Storage} */ StorageEvent.prototype.storageArea;
+/** @type {!string} */ StorageEvent.prototype.url;
 /**
  * @param {!string} type
  * @param {!boolean=} bubbles
@@ -6664,6 +7377,8 @@ StorageEvent.prototype.initStorageEvent = function(type,bubbles,cancelable,key,o
  * @private
  */
 function Position() {}
+/** @type {!Coordinates} */ Position.prototype.coords;
+/** @type {!DOMTimeStamp} */ Position.prototype.timestamp;
 /**
  * @constructor
  * @extends {SVGGeometryElement}
@@ -6680,40 +7395,62 @@ function AudioParamMap() {}
  * @private
  */
 function MutationRecord() {}
+/** @type {!NodeList} */ MutationRecord.prototype.addedNodes;
+/** @type {?string} */ MutationRecord.prototype.attributeName;
+/** @type {?string} */ MutationRecord.prototype.attributeNamespace;
+/** @type {?Node} */ MutationRecord.prototype.nextSibling;
+/** @type {?string} */ MutationRecord.prototype.oldValue;
+/** @type {?Node} */ MutationRecord.prototype.previousSibling;
+/** @type {!NodeList} */ MutationRecord.prototype.removedNodes;
+/** @type {!Node} */ MutationRecord.prototype.target;
+/** @type {!string} */ MutationRecord.prototype.type;
 /**
  * @record
  * @extends {Event}
  * @private
  */
 function SpeechRecognitionEvent() {}
+/** @type {!number} */ SpeechRecognitionEvent.prototype.resultIndex;
+/** @type {!SpeechRecognitionResultList} */ SpeechRecognitionEvent.prototype.results;
 /**
  * @constructor
  * @extends {SVGGeometryElement}
  * @private
  */
 function SVGEllipseElement() {}
+/** @type {!SVGAnimatedLength} */ SVGEllipseElement.prototype.cx;
+/** @type {!SVGAnimatedLength} */ SVGEllipseElement.prototype.cy;
+/** @type {!SVGAnimatedLength} */ SVGEllipseElement.prototype.rx;
+/** @type {!SVGAnimatedLength} */ SVGEllipseElement.prototype.ry;
 /**
  * @constructor
  * @private
  */
 function SVGAnimatedNumberList() {}
+/** @type {!SVGNumberList} */ SVGAnimatedNumberList.prototype.animVal;
+/** @type {!SVGNumberList} */ SVGAnimatedNumberList.prototype.baseVal;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLDetailsElement() {}
+/** @type {!boolean} */ HTMLDetailsElement.prototype.open;
 /**
  * @record
  * @private
  */
 function SpeechRecognitionAlternative() {}
+/** @type {!number} */ SpeechRecognitionAlternative.prototype.confidence;
+/** @type {!string} */ SpeechRecognitionAlternative.prototype.transcript;
 /**
  * @constructor
  * @extends {CSSRule}
  * @private
  */
 function CSSFontPaletteValuesRule() {}
+/** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.basePalette;
+/** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.fontFamily;
 /**
  * @constructor
  * @extends {Event}
@@ -6721,10 +7458,12 @@ function CSSFontPaletteValuesRule() {}
  * @param {!OfflineAudioCompletionEventInit} eventInitDict
  */
 function OfflineAudioCompletionEvent(type,eventInitDict) {}
+/** @type {!AudioBuffer} */ OfflineAudioCompletionEvent.prototype.renderedBuffer;
 /**
  * @constructor
  */
 function AbortController() {}
+/** @type {!AbortSignal} */ AbortController.prototype.signal;
 /**
  * @return {undefined}
  */
@@ -6734,6 +7473,9 @@ AbortController.prototype.abort = function() {}
  * @param {!WritableStream} stream
  */
 function WritableStreamDefaultWriter(stream) {}
+/** @type {!Promise<undefined>} */ WritableStreamDefaultWriter.prototype.closed;
+/** @type {?number} */ WritableStreamDefaultWriter.prototype.desiredSize;
+/** @type {!Promise<undefined>} */ WritableStreamDefaultWriter.prototype.ready;
 /**
  * @param {*=} reason
  * @return {!Promise<undefined>}
@@ -6757,11 +7499,15 @@ WritableStreamDefaultWriter.prototype.close = function() {}
  * @param {!string} format
  */
 function DecompressionStream(format) {}
+/** @type {!ReadableStream} */ DecompressionStream.prototype.readable;
+/** @type {!WritableStream} */ DecompressionStream.prototype.writable;
 /**
  * @constructor
  * @private
  */
 function ImageBitmap() {}
+/** @type {!number} */ ImageBitmap.prototype.height;
+/** @type {!number} */ ImageBitmap.prototype.width;
 /**
  * @return {undefined}
  */
@@ -6772,11 +7518,14 @@ ImageBitmap.prototype.close = function() {}
  * @private
  */
 function ProcessingInstruction() {}
+/** @type {!string} */ ProcessingInstruction.prototype.target;
+/** @type {?CSSStyleSheet} */ ProcessingInstruction.prototype.sheet;
 /**
  * @constructor
  * @private
  */
 function TouchList() {}
+/** @type {!number} */ TouchList.prototype.length;
 /**
  * @param {!number} index
  * @return {?Touch}
@@ -6789,6 +7538,7 @@ TouchList.prototype.item = function(index) {}
  * @param {!ClipboardEventInit=} eventInitDict
  */
 function ClipboardEvent(type,eventInitDict) {}
+/** @type {?DataTransfer} */ ClipboardEvent.prototype.clipboardData;
 /**
  * @record
  * @private
@@ -6811,6 +7561,8 @@ function WebGLSampler() {}
  * @private
  */
 function HTMLOptionsCollection() {}
+/** @type {!number} */ HTMLOptionsCollection.prototype.length;
+/** @type {!number} */ HTMLOptionsCollection.prototype.selectedIndex;
 /**
  * @param {(!HTMLOptionElement|!HTMLOptGroupElement)} element
  * @param {(!HTMLElement|!number)=} before
@@ -6829,6 +7581,11 @@ HTMLOptionsCollection.prototype.remove = function(index) {}
  * @param {!MessageEventInit=} eventInitDict
  */
 function MessageEvent(type,eventInitDict) {}
+/** @type {*} */ MessageEvent.prototype.data;
+/** @type {!string} */ MessageEvent.prototype.lastEventId;
+/** @type {!string} */ MessageEvent.prototype.origin;
+/** @type {!Array<!MessagePort>} */ MessageEvent.prototype.ports;
+/** @type {?MessageEventSource} */ MessageEvent.prototype.source;
 /**
  * @param {!string} type
  * @param {!boolean=} bubbles
@@ -6862,6 +7619,18 @@ function EXT_texture_compression_bptc() {}
  * @param {!string=} base
  */
 function URL(url,base) {}
+/** @type {!string} */ URL.prototype.origin;
+/** @type {!URLSearchParams} */ URL.prototype.searchParams;
+/** @type {!string} */ URL.prototype.hash;
+/** @type {!string} */ URL.prototype.host;
+/** @type {!string} */ URL.prototype.hostname;
+/** @type {!string} */ URL.prototype.password;
+/** @type {!string} */ URL.prototype.pathname;
+/** @type {!string} */ URL.prototype.port;
+/** @type {!string} */ URL.prototype.protocol;
+/** @type {!string} */ URL.prototype.search;
+/** @type {!string} */ URL.prototype.username;
+/** @type {!string} */ URL.prototype.href;
 /**
  * @param {!string} url
  * @return {undefined}
@@ -6907,18 +7676,41 @@ function SVGFECompositeElement() {}
 /** @const {!number} */ SVGFECompositeElement.prototype.SVG_FECOMPOSITE_OPERATOR_UNKNOWN;
 /** @const {!number} */ SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_XOR;
 /** @const {!number} */ SVGFECompositeElement.prototype.SVG_FECOMPOSITE_OPERATOR_XOR;
+/** @type {!SVGAnimatedString} */ SVGFECompositeElement.prototype.in1;
+/** @type {!SVGAnimatedString} */ SVGFECompositeElement.prototype.in2;
+/** @type {!SVGAnimatedNumber} */ SVGFECompositeElement.prototype.k1;
+/** @type {!SVGAnimatedNumber} */ SVGFECompositeElement.prototype.k2;
+/** @type {!SVGAnimatedNumber} */ SVGFECompositeElement.prototype.k3;
+/** @type {!SVGAnimatedNumber} */ SVGFECompositeElement.prototype.k4;
+/** @type {!SVGAnimatedEnumeration} */ SVGFECompositeElement.prototype.operator;
+/** @type {!SVGAnimatedLength} */ SVGFECompositeElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFECompositeElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFECompositeElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFECompositeElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFECompositeElement.prototype.y;
 /**
  * @constructor
  * @extends {CSSRule}
  * @private
  */
 function CSSMarginRule() {}
+/** @type {!CSSOMString} */ CSSMarginRule.prototype.name;
+/** @type {!CSSStyleDeclaration} */ CSSMarginRule.prototype.style;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function ServiceWorkerRegistration() {}
+/** @type {?ServiceWorker} */ ServiceWorkerRegistration.prototype.active;
+/** @type {?ServiceWorker} */ ServiceWorkerRegistration.prototype.installing;
+/** @type {!NavigationPreloadManager} */ ServiceWorkerRegistration.prototype.navigationPreload;
+/** @type {!string} */ ServiceWorkerRegistration.prototype.scope;
+/** @type {!string} */ ServiceWorkerRegistration.prototype.updateViaCache;
+/** @type {?ServiceWorker} */ ServiceWorkerRegistration.prototype.waiting;
+/** @type {!NullableEventHandler} */ ServiceWorkerRegistration.prototype.onupdatefound;
+/** @type {!SyncManager} */ ServiceWorkerRegistration.prototype.sync;
+/** @type {!PushManager} */ ServiceWorkerRegistration.prototype.pushManager;
 /**
  * @param {!GetNotificationOptions=} filter
  * @return {!Promise<!Array<!Notification>>}
@@ -6944,6 +7736,15 @@ ServiceWorkerRegistration.prototype.showNotification = function(title,options) {
  * @private
  */
 function VisualViewport() {}
+/** @type {!number} */ VisualViewport.prototype.height;
+/** @type {!number} */ VisualViewport.prototype.offsetLeft;
+/** @type {!number} */ VisualViewport.prototype.offsetTop;
+/** @type {!number} */ VisualViewport.prototype.pageLeft;
+/** @type {!number} */ VisualViewport.prototype.pageTop;
+/** @type {!number} */ VisualViewport.prototype.scale;
+/** @type {!number} */ VisualViewport.prototype.width;
+/** @type {?EventHandler} */ VisualViewport.prototype.onresize;
+/** @type {?EventHandler} */ VisualViewport.prototype.onscroll;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -6962,6 +7763,16 @@ function SVGMarkerElement() {}
 /** @const {!number} */ SVGMarkerElement.prototype.SVG_MARKER_ORIENT_AUTO;
 /** @const {!number} */ SVGMarkerElement.SVG_MARKER_ORIENT_UNKNOWN;
 /** @const {!number} */ SVGMarkerElement.prototype.SVG_MARKER_ORIENT_UNKNOWN;
+/** @type {!SVGAnimatedLength} */ SVGMarkerElement.prototype.markerHeight;
+/** @type {!SVGAnimatedEnumeration} */ SVGMarkerElement.prototype.markerUnits;
+/** @type {!SVGAnimatedLength} */ SVGMarkerElement.prototype.markerWidth;
+/** @type {!SVGAnimatedAngle} */ SVGMarkerElement.prototype.orientAngle;
+/** @type {!SVGAnimatedEnumeration} */ SVGMarkerElement.prototype.orientType;
+/** @type {!SVGAnimatedLength} */ SVGMarkerElement.prototype.refX;
+/** @type {!SVGAnimatedLength} */ SVGMarkerElement.prototype.refY;
+/** @type {!string} */ SVGMarkerElement.prototype.orient;
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGMarkerElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedRect} */ SVGMarkerElement.prototype.viewBox;
 /**
  * @param {!SVGAngle} angle
  * @return {undefined}
@@ -6977,6 +7788,10 @@ SVGMarkerElement.prototype.setOrientToAuto = function() {}
  * @private
  */
 function HTMLMetaElement() {}
+/** @type {!string} */ HTMLMetaElement.prototype.content;
+/** @type {!string} */ HTMLMetaElement.prototype.httpEquiv;
+/** @type {!string} */ HTMLMetaElement.prototype.name;
+/** @type {!string} */ HTMLMetaElement.prototype.scheme;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -6984,6 +7799,9 @@ function HTMLMetaElement() {}
  * @param {!WorkerOptions=} options
  */
 function Worker(scriptURL,options) {}
+/** @type {?MessageEventHandler} */ Worker.prototype.onmessage;
+/** @type {?MessageEventHandler} */ Worker.prototype.onmessageerror;
+/** @type {!NullableEventHandler} */ Worker.prototype.onerror;
 /**
  * @param {*} arg0
  * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
@@ -7005,6 +7823,7 @@ function SVGDefsElement() {}
  * @private
  */
 function SpeechRecognitionResultList() {}
+/** @type {!number} */ SpeechRecognitionResultList.prototype.length;
 /**
  * @param {!number} index
  * @return {!SpeechRecognitionResult}
@@ -7016,11 +7835,33 @@ SpeechRecognitionResultList.prototype.item = function(index) {}
  * @private
  */
 function HTMLDataListElement() {}
+/** @type {!HTMLCollection} */ HTMLDataListElement.prototype.options;
 /**
  * @constructor
  * @private
  */
 function OffscreenCanvasRenderingContext2D() {}
+/** @type {!OffscreenCanvas} */ OffscreenCanvasRenderingContext2D.prototype.canvas;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.globalAlpha;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.globalCompositeOperation;
+/** @type {(!string|!CanvasGradient|!CanvasPattern)} */ OffscreenCanvasRenderingContext2D.prototype.fillStyle;
+/** @type {(!string|!CanvasGradient|!CanvasPattern)} */ OffscreenCanvasRenderingContext2D.prototype.strokeStyle;
+/** @type {!boolean} */ OffscreenCanvasRenderingContext2D.prototype.imageSmoothingEnabled;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.imageSmoothingQuality;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.filter;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.lineCap;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.lineDashOffset;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.lineJoin;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.lineWidth;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.miterLimit;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.direction;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.font;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.textAlign;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.textBaseline;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.shadowBlur;
+/** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.shadowColor;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.shadowOffsetX;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.shadowOffsetY;
 /**
  * @param {!number} angle
  * @return {undefined}
@@ -7309,12 +8150,40 @@ OffscreenCanvasRenderingContext2D.prototype.createLinearGradient = function(x0,y
  * @private
  */
 function SVGFETileElement() {}
+/** @type {!SVGAnimatedString} */ SVGFETileElement.prototype.in1;
+/** @type {!SVGAnimatedLength} */ SVGFETileElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFETileElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFETileElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFETileElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFETileElement.prototype.y;
 /**
  * @constructor
  * @extends {DOMMatrixReadOnly}
  * @param {(!string|!Array<!number>)=} init
  */
 function DOMMatrix(init) {}
+/** @type {!number} */ DOMMatrix.prototype.a;
+/** @type {!number} */ DOMMatrix.prototype.b;
+/** @type {!number} */ DOMMatrix.prototype.c;
+/** @type {!number} */ DOMMatrix.prototype.d;
+/** @type {!number} */ DOMMatrix.prototype.e;
+/** @type {!number} */ DOMMatrix.prototype.f;
+/** @type {!number} */ DOMMatrix.prototype.m11;
+/** @type {!number} */ DOMMatrix.prototype.m12;
+/** @type {!number} */ DOMMatrix.prototype.m13;
+/** @type {!number} */ DOMMatrix.prototype.m14;
+/** @type {!number} */ DOMMatrix.prototype.m21;
+/** @type {!number} */ DOMMatrix.prototype.m22;
+/** @type {!number} */ DOMMatrix.prototype.m23;
+/** @type {!number} */ DOMMatrix.prototype.m24;
+/** @type {!number} */ DOMMatrix.prototype.m31;
+/** @type {!number} */ DOMMatrix.prototype.m32;
+/** @type {!number} */ DOMMatrix.prototype.m33;
+/** @type {!number} */ DOMMatrix.prototype.m34;
+/** @type {!number} */ DOMMatrix.prototype.m41;
+/** @type {!number} */ DOMMatrix.prototype.m42;
+/** @type {!number} */ DOMMatrix.prototype.m43;
+/** @type {!number} */ DOMMatrix.prototype.m44;
 /**
  * @param {!DOMMatrixInit=} other
  * @return {!DOMMatrix}
@@ -7412,6 +8281,9 @@ DOMMatrix.prototype.invertSelf = function() {}
  * @param {!UIEventInit=} eventInitDict
  */
 function UIEvent(type,eventInitDict) {}
+/** @type {!number} */ UIEvent.prototype.detail;
+/** @type {?Window} */ UIEvent.prototype.view;
+/** @type {!number} */ UIEvent.prototype.which;
 /**
  * @constructor
  * @private
@@ -7425,6 +8297,14 @@ function WebGLUniformLocation() {}
  * @param {!number=} height
  */
 function DOMRectReadOnly(x,y,width,height) {}
+/** @type {!number} */ DOMRectReadOnly.prototype.bottom;
+/** @type {!number} */ DOMRectReadOnly.prototype.height;
+/** @type {!number} */ DOMRectReadOnly.prototype.left;
+/** @type {!number} */ DOMRectReadOnly.prototype.right;
+/** @type {!number} */ DOMRectReadOnly.prototype.top;
+/** @type {!number} */ DOMRectReadOnly.prototype.width;
+/** @type {!number} */ DOMRectReadOnly.prototype.x;
+/** @type {!number} */ DOMRectReadOnly.prototype.y;
 /**
  * @param {!DOMRectInit=} other
  * @return {!DOMRectReadOnly}
@@ -7461,6 +8341,10 @@ function SVGLength() {}
 /** @const {!number} */ SVGLength.prototype.SVG_LENGTHTYPE_PX;
 /** @const {!number} */ SVGLength.SVG_LENGTHTYPE_UNKNOWN;
 /** @const {!number} */ SVGLength.prototype.SVG_LENGTHTYPE_UNKNOWN;
+/** @type {!number} */ SVGLength.prototype.unitType;
+/** @type {!number} */ SVGLength.prototype.value;
+/** @type {!string} */ SVGLength.prototype.valueAsString;
+/** @type {!number} */ SVGLength.prototype.valueInSpecifiedUnits;
 /**
  * @param {!number} unitType
  * @return {undefined}
@@ -7493,6 +8377,13 @@ function EXT_texture_compression_rgtc() {}
  * @private
  */
 function XMLHttpRequestEventTarget() {}
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onabort;
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onerror;
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onload;
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onloadend;
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onloadstart;
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onprogress;
+/** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.ontimeout;
 /**
  * @constructor
  * @extends {XMLHttpRequestEventTarget}
@@ -7511,6 +8402,8 @@ function EvalError(message) {}
  * @param {!string=} data
  */
 function Text(data) {}
+/** @type {!string} */ Text.prototype.wholeText;
+/** @type {?HTMLSlotElement} */ Text.prototype.assignedSlot;
 /**
  * @param {!DOMQuadInit} quad
  * @param {!GeometryNode} from
@@ -7547,6 +8440,7 @@ Text.prototype.splitText = function(offset) {}
  * @private
  */
 function AuthenticatorResponse() {}
+/** @type {!ArrayBuffer} */ AuthenticatorResponse.prototype.clientDataJSON;
 /**
  * @constructor
  * @private
@@ -7580,17 +8474,22 @@ function SVGPreserveAspectRatio() {}
 /** @const {!number} */ SVGPreserveAspectRatio.prototype.SVG_PRESERVEASPECTRATIO_XMINYMID;
 /** @const {!number} */ SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMIN;
 /** @const {!number} */ SVGPreserveAspectRatio.prototype.SVG_PRESERVEASPECTRATIO_XMINYMIN;
+/** @type {!number} */ SVGPreserveAspectRatio.prototype.align;
+/** @type {!number} */ SVGPreserveAspectRatio.prototype.meetOrSlice;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLDListElement() {}
+/** @type {!boolean} */ HTMLDListElement.prototype.compact;
 /**
  * @constructor
  * @private
  */
 function CaretPosition() {}
+/** @type {!number} */ CaretPosition.prototype.offset;
+/** @type {!Node} */ CaretPosition.prototype.offsetNode;
 /**
  * @return {?DOMRect}
  */
@@ -7601,6 +8500,10 @@ CaretPosition.prototype.getClientRect = function() {}
  * @private
  */
 function ServiceWorker() {}
+/** @type {!string} */ ServiceWorker.prototype.scriptURL;
+/** @type {!string} */ ServiceWorker.prototype.state;
+/** @type {!NullableEventHandler} */ ServiceWorker.prototype.onstatechange;
+/** @type {!NullableEventHandler} */ ServiceWorker.prototype.onerror;
 /**
  * @param {*} arg0
  * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
@@ -7620,12 +8523,26 @@ function OES_texture_half_float_linear() {}
  * @param {!MediaQueryListEventInit=} eventInitDict
  */
 function MediaQueryListEvent(type,eventInitDict) {}
+/** @type {!boolean} */ MediaQueryListEvent.prototype.matches;
+/** @type {!CSSOMString} */ MediaQueryListEvent.prototype.media;
 /**
  * @record
  * @extends {EventTarget}
  * @private
  */
 function Animation() {}
+/** @type {!Promise<!Animation>} */ Animation.prototype.finished;
+/** @type {!boolean} */ Animation.prototype.pending;
+/** @type {!string} */ Animation.prototype.playState;
+/** @type {!Promise<!Animation>} */ Animation.prototype.ready;
+/** @type {?number} */ Animation.prototype.currentTime;
+/** @type {?AnimationEffect} */ Animation.prototype.effect;
+/** @type {!string} */ Animation.prototype.id;
+/** @type {!NullableEventHandler} */ Animation.prototype.oncancel;
+/** @type {!NullableEventHandler} */ Animation.prototype.onfinish;
+/** @type {!number} */ Animation.prototype.playbackRate;
+/** @type {?number} */ Animation.prototype.startTime;
+/** @type {?AnimationTimeline} */ Animation.prototype.timeline;
 /**
  * @return {undefined}
  */
@@ -7656,6 +8573,7 @@ Animation.prototype.pause = function() {}
  * @private
  */
 function ImageBitmapRenderingContext() {}
+/** @type {(!HTMLCanvasElement|!OffscreenCanvas)} */ ImageBitmapRenderingContext.prototype.canvas;
 /**
  * @param {?ImageBitmap} bitmap
  * @return {undefined}
@@ -7691,6 +8609,9 @@ Clipboard.prototype.write = function(data) {}
  * @private
  */
 function SVGFEPointLightElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGFEPointLightElement.prototype.x;
+/** @type {!SVGAnimatedNumber} */ SVGFEPointLightElement.prototype.y;
+/** @type {!SVGAnimatedNumber} */ SVGFEPointLightElement.prototype.z;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -7698,12 +8619,14 @@ function SVGFEPointLightElement() {}
  * @param {!DelayOptions=} options
  */
 function DelayNode(context,options) {}
+/** @type {!AudioParam} */ DelayNode.prototype.delayTime;
 /**
  * @constructor
  * @extends {IDBCursor}
  * @private
  */
 function IDBCursorWithValue() {}
+/** @type {*} */ IDBCursorWithValue.prototype.value;
 /**
  * @record
  * @private
@@ -7767,6 +8690,7 @@ EXT_disjoint_timer_query.prototype.getQueryEXT = function(target,pname) {}
  * @param {!CustomEventInit=} eventInitDict
  */
 function CustomEvent(type,eventInitDict) {}
+/** @type {*} */ CustomEvent.prototype.detail;
 /**
  * @param {!string} type
  * @param {!boolean=} bubbles
@@ -7780,6 +8704,8 @@ CustomEvent.prototype.initCustomEvent = function(type,bubbles,cancelable,detail)
  * @private
  */
 function MediaList() {}
+/** @type {!number} */ MediaList.prototype.length;
+/** @type {!CSSOMString} */ MediaList.prototype.mediaText;
 /**
  * @param {!number} index
  * @return {?CSSOMString}
@@ -7800,6 +8726,7 @@ MediaList.prototype.appendMedium = function(medium) {}
  * @private
  */
 function HTMLFormControlsCollection() {}
+/** @type {!number} */ HTMLFormControlsCollection.prototype.length;
 /**
  * @param {!string} name
  * @return {(!RadioNodeList|!Element)}
@@ -7816,17 +8743,24 @@ HTMLFormControlsCollection.prototype.item = function(index) {}
  * @private
  */
 function HTMLOListElement() {}
+/** @type {!boolean} */ HTMLOListElement.prototype.reversed;
+/** @type {!number} */ HTMLOListElement.prototype.start;
+/** @type {!string} */ HTMLOListElement.prototype.type;
+/** @type {!boolean} */ HTMLOListElement.prototype.compact;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLOptGroupElement() {}
+/** @type {!boolean} */ HTMLOptGroupElement.prototype.disabled;
+/** @type {!string} */ HTMLOptGroupElement.prototype.label;
 /**
  * @constructor
  * @private
  */
 function PluginArray() {}
+/** @type {!number} */ PluginArray.prototype.length;
 /**
  * @param {!number} index
  * @return {?Object}
@@ -7846,6 +8780,10 @@ PluginArray.prototype.refresh = function() {}
  * @private
  */
 function MediaDeviceInfo() {}
+/** @type {!string} */ MediaDeviceInfo.prototype.deviceId;
+/** @type {!string} */ MediaDeviceInfo.prototype.groupId;
+/** @type {!string} */ MediaDeviceInfo.prototype.kind;
+/** @type {!string} */ MediaDeviceInfo.prototype.label;
 /**
  * @return {!Object}
  */
@@ -7854,12 +8792,18 @@ MediaDeviceInfo.prototype.toJSON = function() {}
  * @constructor
  */
 function TextEncoderStream() {}
+/** @type {!string} */ TextEncoderStream.prototype.encoding;
+/** @type {!ReadableStream} */ TextEncoderStream.prototype.readable;
+/** @type {!WritableStream} */ TextEncoderStream.prototype.writable;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLFontElement() {}
+/** @type {!string} */ HTMLFontElement.prototype.color;
+/** @type {!string} */ HTMLFontElement.prototype.face;
+/** @type {!string} */ HTMLFontElement.prototype.size;
 /**
  * @constructor
  * @extends {HTMLElement}
@@ -7872,11 +8816,16 @@ function HTMLPictureElement() {}
  * @private
  */
 function HTMLLabelElement() {}
+/** @type {?HTMLElement} */ HTMLLabelElement.prototype.control;
+/** @type {?HTMLFormElement} */ HTMLLabelElement.prototype.form;
+/** @type {!string} */ HTMLLabelElement.prototype.htmlFor;
 /**
  * @constructor
  * @private
  */
 function SVGTransformList() {}
+/** @type {!number} */ SVGTransformList.prototype.length;
+/** @type {!number} */ SVGTransformList.prototype.numberOfItems;
 /**
  * @param {!DOMMatrixReadOnly} matrix
  * @return {!SVGTransform}
@@ -7928,6 +8877,9 @@ SVGTransformList.prototype.appendItem = function(newItem) {}
  * @private
  */
 function SVGCircleElement() {}
+/** @type {!SVGAnimatedLength} */ SVGCircleElement.prototype.cx;
+/** @type {!SVGAnimatedLength} */ SVGCircleElement.prototype.cy;
+/** @type {!SVGAnimatedLength} */ SVGCircleElement.prototype.r;
 /**
  * @constructor
  * @extends {Event}
@@ -7935,6 +8887,7 @@ function SVGCircleElement() {}
  * @param {!MediaStreamTrackEventInit} eventInitDict
  */
 function MediaStreamTrackEvent(type,eventInitDict) {}
+/** @type {!MediaStreamTrack} */ MediaStreamTrackEvent.prototype.track;
 /**
  * @constructor
  * @extends {Event}
@@ -7942,6 +8895,7 @@ function MediaStreamTrackEvent(type,eventInitDict) {}
  * @param {!RTCErrorEventInit} eventInitDict
  */
 function RTCErrorEvent(type,eventInitDict) {}
+/** @type {!RTCError} */ RTCErrorEvent.prototype.error;
 /**
  * @constructor
  * @extends {Text}
@@ -7954,6 +8908,31 @@ function CDATASection() {}
  * @private
  */
 function HTMLImageElement() {}
+/** @type {!boolean} */ HTMLImageElement.prototype.complete;
+/** @type {!string} */ HTMLImageElement.prototype.currentSrc;
+/** @type {!number} */ HTMLImageElement.prototype.naturalHeight;
+/** @type {!number} */ HTMLImageElement.prototype.naturalWidth;
+/** @type {!string} */ HTMLImageElement.prototype.alt;
+/** @type {?string} */ HTMLImageElement.prototype.crossOrigin;
+/** @type {!string} */ HTMLImageElement.prototype.decoding;
+/** @type {!number} */ HTMLImageElement.prototype.height;
+/** @type {!boolean} */ HTMLImageElement.prototype.isMap;
+/** @type {!string} */ HTMLImageElement.prototype.loading;
+/** @type {!string} */ HTMLImageElement.prototype.referrerPolicy;
+/** @type {!string} */ HTMLImageElement.prototype.sizes;
+/** @type {!string} */ HTMLImageElement.prototype.src;
+/** @type {!string} */ HTMLImageElement.prototype.srcset;
+/** @type {!string} */ HTMLImageElement.prototype.useMap;
+/** @type {!number} */ HTMLImageElement.prototype.width;
+/** @type {!number} */ HTMLImageElement.prototype.x;
+/** @type {!number} */ HTMLImageElement.prototype.y;
+/** @type {!string} */ HTMLImageElement.prototype.align;
+/** @type {!string} */ HTMLImageElement.prototype.border;
+/** @type {!number} */ HTMLImageElement.prototype.hspace;
+/** @type {!string} */ HTMLImageElement.prototype.longDesc;
+/** @type {!string} */ HTMLImageElement.prototype.lowsrc;
+/** @type {!string} */ HTMLImageElement.prototype.name;
+/** @type {!number} */ HTMLImageElement.prototype.vspace;
 /**
  * @return {!Promise<undefined>}
  */
@@ -7970,6 +8949,9 @@ function DocumentTimeline(options) {}
  * @private
  */
 function RTCDTMFSender() {}
+/** @type {!boolean} */ RTCDTMFSender.prototype.canInsertDTMF;
+/** @type {!string} */ RTCDTMFSender.prototype.toneBuffer;
+/** @type {?RTCDTMFToneChangeEventHandler} */ RTCDTMFSender.prototype.ontonechange;
 /**
  * @param {!string} tones
  * @param {!number=} duration
@@ -7984,6 +8966,8 @@ RTCDTMFSender.prototype.insertDTMF = function(tones,duration,interToneGap) {}
  * @param {!HashChangeEventInit=} eventInitDict
  */
 function HashChangeEvent(type,eventInitDict) {}
+/** @type {!string} */ HashChangeEvent.prototype.newURL;
+/** @type {!string} */ HashChangeEvent.prototype.oldURL;
 /**
  * @constructor
  * @private
@@ -8040,6 +9024,13 @@ CacheStorage.prototype.open = function(cacheName) {}
  * @private
  */
 function BluetoothRemoteGATTService() {}
+/** @type {!BluetoothDevice} */ BluetoothRemoteGATTService.prototype.device;
+/** @type {!boolean} */ BluetoothRemoteGATTService.prototype.isPrimary;
+/** @type {!UUID} */ BluetoothRemoteGATTService.prototype.uuid;
+/** @type {!NullableEventHandler} */ BluetoothRemoteGATTService.prototype.oncharacteristicvaluechanged;
+/** @type {!NullableEventHandler} */ BluetoothRemoteGATTService.prototype.onserviceadded;
+/** @type {!NullableEventHandler} */ BluetoothRemoteGATTService.prototype.onservicechanged;
+/** @type {!NullableEventHandler} */ BluetoothRemoteGATTService.prototype.onserviceremoved;
 /**
  * @param {!BluetoothServiceUUID} service
  * @return {!Promise<!BluetoothRemoteGATTService>}
@@ -8065,6 +9056,7 @@ BluetoothRemoteGATTService.prototype.getCharacteristics = function(characteristi
  * @private
  */
 function TransformStreamDefaultController() {}
+/** @type {?number} */ TransformStreamDefaultController.prototype.desiredSize;
 /**
  * @param {*=} chunk
  * @return {undefined}
@@ -8092,12 +9084,15 @@ function MediaError() {}
 /** @const {!number} */ MediaError.prototype.MEDIA_ERR_NETWORK;
 /** @const {!number} */ MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED;
 /** @const {!number} */ MediaError.prototype.MEDIA_ERR_SRC_NOT_SUPPORTED;
+/** @type {!number} */ MediaError.prototype.code;
+/** @type {!string} */ MediaError.prototype.message;
 /**
  * @constructor
  * @extends {CSSRule}
  * @private
  */
 function CSSGroupingRule() {}
+/** @type {!CSSRuleList} */ CSSGroupingRule.prototype.cssRules;
 /**
  * @param {!CSSOMString} rule
  * @param {!number=} index
@@ -8114,6 +9109,8 @@ CSSGroupingRule.prototype.deleteRule = function(index) {}
  * @private
  */
 function PushSubscriptionOptions() {}
+/** @type {?ArrayBuffer} */ PushSubscriptionOptions.prototype.applicationServerKey;
+/** @type {!boolean} */ PushSubscriptionOptions.prototype.userVisibleOnly;
 /**
  * @constructor
  * @extends {AbstractRange}
@@ -8127,6 +9124,7 @@ function Range() {}
 /** @const {!number} */ Range.prototype.START_TO_END;
 /** @const {!number} */ Range.START_TO_START;
 /** @const {!number} */ Range.prototype.START_TO_START;
+/** @type {!Node} */ Range.prototype.commonAncestorContainer;
 /**
  * @return {!Range}
  */
@@ -8245,6 +9243,9 @@ Range.prototype.collapse = function(toStart) {}
  * @private
  */
 function PushSubscription() {}
+/** @type {!string} */ PushSubscription.prototype.endpoint;
+/** @type {?DOMTimeStamp} */ PushSubscription.prototype.expirationTime;
+/** @type {!PushSubscriptionOptions} */ PushSubscription.prototype.options;
 /**
  * @param {!string} name
  * @return {?ArrayBuffer}
@@ -8264,6 +9265,17 @@ PushSubscription.prototype.unsubscribe = function() {}
  * @private
  */
 function HTMLMarqueeElement() {}
+/** @type {!string} */ HTMLMarqueeElement.prototype.behavior;
+/** @type {!string} */ HTMLMarqueeElement.prototype.bgColor;
+/** @type {!string} */ HTMLMarqueeElement.prototype.direction;
+/** @type {!string} */ HTMLMarqueeElement.prototype.height;
+/** @type {!number} */ HTMLMarqueeElement.prototype.hspace;
+/** @type {!number} */ HTMLMarqueeElement.prototype.loop;
+/** @type {!number} */ HTMLMarqueeElement.prototype.scrollAmount;
+/** @type {!number} */ HTMLMarqueeElement.prototype.scrollDelay;
+/** @type {!boolean} */ HTMLMarqueeElement.prototype.trueSpeed;
+/** @type {!number} */ HTMLMarqueeElement.prototype.vspace;
+/** @type {!string} */ HTMLMarqueeElement.prototype.width;
 /**
  * @return {undefined}
  */
@@ -8277,6 +9289,7 @@ HTMLMarqueeElement.prototype.start = function() {}
  * @private
  */
 function XRFrame() {}
+/** @type {!XRSession} */ XRFrame.prototype.session;
 /**
  * @param {!XRSpace} space
  * @param {!XRSpace} baseSpace
@@ -8293,6 +9306,10 @@ XRFrame.prototype.getViewerPose = function(referenceSpace) {}
  * @private
  */
 function VideoPlaybackQuality() {}
+/** @type {!number} */ VideoPlaybackQuality.prototype.corruptedVideoFrames;
+/** @type {!DOMHighResTimeStamp} */ VideoPlaybackQuality.prototype.creationTime;
+/** @type {!number} */ VideoPlaybackQuality.prototype.droppedVideoFrames;
+/** @type {!number} */ VideoPlaybackQuality.prototype.totalVideoFrames;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -8305,6 +9322,15 @@ function SVGFEMorphologyElement() {}
 /** @const {!number} */ SVGFEMorphologyElement.prototype.SVG_MORPHOLOGY_OPERATOR_ERODE;
 /** @const {!number} */ SVGFEMorphologyElement.SVG_MORPHOLOGY_OPERATOR_UNKNOWN;
 /** @const {!number} */ SVGFEMorphologyElement.prototype.SVG_MORPHOLOGY_OPERATOR_UNKNOWN;
+/** @type {!SVGAnimatedString} */ SVGFEMorphologyElement.prototype.in1;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEMorphologyElement.prototype.operator;
+/** @type {!SVGAnimatedNumber} */ SVGFEMorphologyElement.prototype.radiusX;
+/** @type {!SVGAnimatedNumber} */ SVGFEMorphologyElement.prototype.radiusY;
+/** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEMorphologyElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.y;
 /**
  * @constructor
  * @private
@@ -8315,6 +9341,12 @@ function RTCStatsReport() {}
  * @private
  */
 function AudioTrack() {}
+/** @type {!string} */ AudioTrack.prototype.id;
+/** @type {!string} */ AudioTrack.prototype.kind;
+/** @type {!string} */ AudioTrack.prototype.label;
+/** @type {!string} */ AudioTrack.prototype.language;
+/** @type {!boolean} */ AudioTrack.prototype.enabled;
+/** @type {?SourceBuffer} */ AudioTrack.prototype.sourceBuffer;
 /**
  * @constructor
  * @extends {HTMLOptionElement}
@@ -8330,6 +9362,13 @@ function Option(text,value,defaultSelected,selected) {}
  * @private
  */
 function IDBRequest() {}
+/** @type {?DOMException} */ IDBRequest.prototype.error;
+/** @type {!string} */ IDBRequest.prototype.readyState;
+/** @type {*} */ IDBRequest.prototype.result;
+/** @type {(!IDBObjectStore|!IDBIndex|!IDBCursor)} */ IDBRequest.prototype.source;
+/** @type {?IDBTransaction} */ IDBRequest.prototype.transaction;
+/** @type {?EventHandler} */ IDBRequest.prototype.onerror;
+/** @type {?EventHandler} */ IDBRequest.prototype.onsuccess;
 /**
  * @constructor
  * @extends {Blob}
@@ -8338,22 +9377,28 @@ function IDBRequest() {}
  * @param {!FilePropertyBag=} options
  */
 function File(fileBits,fileName,options) {}
+/** @type {!number} */ File.prototype.lastModified;
+/** @type {!string} */ File.prototype.name;
 /**
  * @constructor
  * @extends {CSSGroupingRule}
  * @private
  */
 function CSSPageRule() {}
+/** @type {!CSSStyleDeclaration} */ CSSPageRule.prototype.style;
+/** @type {!CSSOMString} */ CSSPageRule.prototype.selectorText;
 /**
  * @constructor
  * @private
  */
 function SVGNumber() {}
+/** @type {!number} */ SVGNumber.prototype.value;
 /**
  * @constructor
  * @param {!number} length
  */
 function SharedArrayBuffer(length) {}
+/** @type {!number} */ SharedArrayBuffer.prototype.byteLength;
 /**
  * @param {!number=} begin
  * @param {!number=} end
@@ -8366,6 +9411,13 @@ SharedArrayBuffer.prototype.slice = function(begin,end) {}
  * @private
  */
 function IDBDatabase() {}
+/** @type {!string} */ IDBDatabase.prototype.name;
+/** @type {!DOMStringList} */ IDBDatabase.prototype.objectStoreNames;
+/** @type {!number} */ IDBDatabase.prototype.version;
+/** @type {?EventHandler} */ IDBDatabase.prototype.onabort;
+/** @type {!NullableEventHandler} */ IDBDatabase.prototype.onclose;
+/** @type {?EventHandler} */ IDBDatabase.prototype.onerror;
+/** @type {?EventHandler} */ IDBDatabase.prototype.onversionchange;
 /**
  * @param {!string} name
  * @param {!IDBObjectStoreParameters=} options
@@ -8395,18 +9447,25 @@ IDBDatabase.prototype.transaction = function(storeNames,mode,options) {}
  * @param {!XRInputSourcesChangeEventInit} eventInitDict
  */
 function XRInputSourcesChangeEvent(type,eventInitDict) {}
+/** @type {!Array<!XRInputSource>} */ XRInputSourcesChangeEvent.prototype.added;
+/** @type {!Array<!XRInputSource>} */ XRInputSourcesChangeEvent.prototype.removed;
+/** @type {!XRSession} */ XRInputSourcesChangeEvent.prototype.session;
 /**
  * @constructor
  * @extends {AuthenticatorResponse}
  * @private
  */
 function AuthenticatorAssertionResponse() {}
+/** @type {!ArrayBuffer} */ AuthenticatorAssertionResponse.prototype.authenticatorData;
+/** @type {!ArrayBuffer} */ AuthenticatorAssertionResponse.prototype.signature;
+/** @type {?ArrayBuffer} */ AuthenticatorAssertionResponse.prototype.userHandle;
 /**
  * @constructor
  * @param {!Object=} underlyingSource
  * @param {!QueuingStrategy=} strategy
  */
 function ReadableStream(underlyingSource,strategy) {}
+/** @type {!boolean} */ ReadableStream.prototype.locked;
 /**
  * @param {*=} reason
  * @return {!Promise<undefined>}
@@ -8498,17 +9557,33 @@ DOMImplementation.prototype.createDocument = function(namespace,qualifiedName,do
  * @param {!QueuingStrategyInit} init
  */
 function CountQueuingStrategy(init) {}
+/** @type {!number} */ CountQueuingStrategy.prototype.highWaterMark;
+/** @type {!Function} */ CountQueuingStrategy.prototype.size;
 /**
  * @constructor
  * @extends {EventTarget}
  * @param {!string=} text
  */
 function SpeechSynthesisUtterance(text) {}
+/** @type {!string} */ SpeechSynthesisUtterance.prototype.lang;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onboundary;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onend;
+/** @type {?SpeechSynthesisErrorEventHandler} */ SpeechSynthesisUtterance.prototype.onerror;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onmark;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onpause;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onresume;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onstart;
+/** @type {!number} */ SpeechSynthesisUtterance.prototype.pitch;
+/** @type {!number} */ SpeechSynthesisUtterance.prototype.rate;
+/** @type {!string} */ SpeechSynthesisUtterance.prototype.text;
+/** @type {?SpeechSynthesisVoice} */ SpeechSynthesisUtterance.prototype.voice;
+/** @type {!number} */ SpeechSynthesisUtterance.prototype.volume;
 /**
  * @constructor
  * @param {!ReadableStream} stream
  */
 function ReadableStreamBYOBReader(stream) {}
+/** @type {!Promise<undefined>} */ ReadableStreamBYOBReader.prototype.closed;
 /**
  * @param {*=} reason
  * @return {!Promise<undefined>}
@@ -8537,6 +9612,10 @@ function WebGLFramebuffer() {}
  * @param {!DOMPointInit=} p4
  */
 function DOMQuad(p1,p2,p3,p4) {}
+/** @type {!DOMPoint} */ DOMQuad.prototype.p1;
+/** @type {!DOMPoint} */ DOMQuad.prototype.p2;
+/** @type {!DOMPoint} */ DOMQuad.prototype.p3;
+/** @type {!DOMPoint} */ DOMQuad.prototype.p4;
 /**
  * @param {!DOMRectInit=} other
  * @return {!DOMQuad}
@@ -8587,29 +9666,72 @@ IDBFactory.prototype.open = function(name,version) {}
  * @private
  */
 function CSSStyleRule() {}
+/** @type {!CSSStyleDeclaration} */ CSSStyleRule.prototype.style;
+/** @type {!CSSOMString} */ CSSStyleRule.prototype.selectorText;
 /**
  * @constructor
  * @extends {SVGTextContentElement}
  * @private
  */
 function SVGTextPositioningElement() {}
+/** @type {!SVGAnimatedLengthList} */ SVGTextPositioningElement.prototype.dx;
+/** @type {!SVGAnimatedLengthList} */ SVGTextPositioningElement.prototype.dy;
+/** @type {!SVGAnimatedNumberList} */ SVGTextPositioningElement.prototype.rotate;
+/** @type {!SVGAnimatedLengthList} */ SVGTextPositioningElement.prototype.x;
+/** @type {!SVGAnimatedLengthList} */ SVGTextPositioningElement.prototype.y;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFilterElement() {}
+/** @type {!SVGAnimatedEnumeration} */ SVGFilterElement.prototype.filterUnits;
+/** @type {!SVGAnimatedLength} */ SVGFilterElement.prototype.height;
+/** @type {!SVGAnimatedEnumeration} */ SVGFilterElement.prototype.primitiveUnits;
+/** @type {!SVGAnimatedLength} */ SVGFilterElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFilterElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFilterElement.prototype.y;
+/** @type {!SVGAnimatedString} */ SVGFilterElement.prototype.href;
 /**
  * @constructor
  * @private
  */
 function AbstractRange() {}
+/** @type {!boolean} */ AbstractRange.prototype.collapsed;
+/** @type {!Node} */ AbstractRange.prototype.endContainer;
+/** @type {!number} */ AbstractRange.prototype.endOffset;
+/** @type {!Node} */ AbstractRange.prototype.startContainer;
+/** @type {!number} */ AbstractRange.prototype.startOffset;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLTextAreaElement() {}
+/** @type {?HTMLFormElement} */ HTMLTextAreaElement.prototype.form;
+/** @type {!NodeList} */ HTMLTextAreaElement.prototype.labels;
+/** @type {!number} */ HTMLTextAreaElement.prototype.textLength;
+/** @type {!string} */ HTMLTextAreaElement.prototype.type;
+/** @type {!string} */ HTMLTextAreaElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLTextAreaElement.prototype.validity;
+/** @type {!boolean} */ HTMLTextAreaElement.prototype.willValidate;
+/** @type {!string} */ HTMLTextAreaElement.prototype.autocomplete;
+/** @type {!number} */ HTMLTextAreaElement.prototype.cols;
+/** @type {!string} */ HTMLTextAreaElement.prototype.defaultValue;
+/** @type {!string} */ HTMLTextAreaElement.prototype.dirName;
+/** @type {!boolean} */ HTMLTextAreaElement.prototype.disabled;
+/** @type {!number} */ HTMLTextAreaElement.prototype.maxLength;
+/** @type {!number} */ HTMLTextAreaElement.prototype.minLength;
+/** @type {!string} */ HTMLTextAreaElement.prototype.name;
+/** @type {!string} */ HTMLTextAreaElement.prototype.placeholder;
+/** @type {!boolean} */ HTMLTextAreaElement.prototype.readOnly;
+/** @type {!boolean} */ HTMLTextAreaElement.prototype.required;
+/** @type {!number} */ HTMLTextAreaElement.prototype.rows;
+/** @type {!string} */ HTMLTextAreaElement.prototype.selectionDirection;
+/** @type {!number} */ HTMLTextAreaElement.prototype.selectionEnd;
+/** @type {!number} */ HTMLTextAreaElement.prototype.selectionStart;
+/** @type {!string} */ HTMLTextAreaElement.prototype.value;
+/** @type {!string} */ HTMLTextAreaElement.prototype.wrap;
 /**
  * @return {undefined}
  */
@@ -8647,11 +9769,18 @@ HTMLTextAreaElement.prototype.checkValidity = function() {}
  * @param {!QueuingStrategyInit} init
  */
 function ByteLengthQueuingStrategy(init) {}
+/** @type {!number} */ ByteLengthQueuingStrategy.prototype.highWaterMark;
+/** @type {!Function} */ ByteLengthQueuingStrategy.prototype.size;
 /**
  * @constructor
  * @private
  */
 function NodeIterator() {}
+/** @type {?NodeFilter} */ NodeIterator.prototype.filter;
+/** @type {!boolean} */ NodeIterator.prototype.pointerBeforeReferenceNode;
+/** @type {!Node} */ NodeIterator.prototype.referenceNode;
+/** @type {!Node} */ NodeIterator.prototype.root;
+/** @type {!number} */ NodeIterator.prototype.whatToShow;
 /**
  * @return {?Node}
  */
@@ -8676,12 +9805,44 @@ function Comment(data) {}
  * @private
  */
 function SVGPatternElement() {}
+/** @type {!SVGAnimatedLength} */ SVGPatternElement.prototype.height;
+/** @type {!SVGAnimatedEnumeration} */ SVGPatternElement.prototype.patternContentUnits;
+/** @type {!SVGAnimatedTransformList} */ SVGPatternElement.prototype.patternTransform;
+/** @type {!SVGAnimatedEnumeration} */ SVGPatternElement.prototype.patternUnits;
+/** @type {!SVGAnimatedLength} */ SVGPatternElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGPatternElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGPatternElement.prototype.y;
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGPatternElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedRect} */ SVGPatternElement.prototype.viewBox;
+/** @type {!SVGAnimatedString} */ SVGPatternElement.prototype.href;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLObjectElement() {}
+/** @type {?Document} */ HTMLObjectElement.prototype.contentDocument;
+/** @type {?WindowProxy} */ HTMLObjectElement.prototype.contentWindow;
+/** @type {?HTMLFormElement} */ HTMLObjectElement.prototype.form;
+/** @type {!string} */ HTMLObjectElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLObjectElement.prototype.validity;
+/** @type {!boolean} */ HTMLObjectElement.prototype.willValidate;
+/** @type {!string} */ HTMLObjectElement.prototype.data;
+/** @type {!string} */ HTMLObjectElement.prototype.height;
+/** @type {!string} */ HTMLObjectElement.prototype.name;
+/** @type {!string} */ HTMLObjectElement.prototype.type;
+/** @type {!string} */ HTMLObjectElement.prototype.width;
+/** @type {!string} */ HTMLObjectElement.prototype.align;
+/** @type {!string} */ HTMLObjectElement.prototype.archive;
+/** @type {!string} */ HTMLObjectElement.prototype.border;
+/** @type {!string} */ HTMLObjectElement.prototype.code;
+/** @type {!string} */ HTMLObjectElement.prototype.codeBase;
+/** @type {!string} */ HTMLObjectElement.prototype.codeType;
+/** @type {!boolean} */ HTMLObjectElement.prototype.declare;
+/** @type {!number} */ HTMLObjectElement.prototype.hspace;
+/** @type {!string} */ HTMLObjectElement.prototype.standby;
+/** @type {!string} */ HTMLObjectElement.prototype.useMap;
+/** @type {!number} */ HTMLObjectElement.prototype.vspace;
 /**
  * @param {!string} error
  * @return {undefined}
@@ -8732,11 +9893,18 @@ function CSSRule() {}
 /** @const {!number} */ CSSRule.prototype.FONT_FEATURE_VALUES_RULE;
 /** @const {!number} */ CSSRule.FONT_PALETTE_VALUES_RULE;
 /** @const {!number} */ CSSRule.prototype.FONT_PALETTE_VALUES_RULE;
+/** @type {?CSSRule} */ CSSRule.prototype.parentRule;
+/** @type {?CSSStyleSheet} */ CSSRule.prototype.parentStyleSheet;
+/** @type {!number} */ CSSRule.prototype.type;
+/** @type {!CSSOMString} */ CSSRule.prototype.cssText;
 /**
  * @constructor
  * @param {!string=} message
  */
 function Error(message) {}
+/** @type {!string} */ Error.prototype.name;
+/** @type {!string} */ Error.prototype.message;
+/** @type {!string} */ Error.prototype.stack;
 /**
  * @constructor
  * @extends {PerformanceEntry}
@@ -8749,6 +9917,8 @@ function PerformanceMark() {}
  * @private
  */
 function PublicKeyCredential() {}
+/** @type {!ArrayBuffer} */ PublicKeyCredential.prototype.rawId;
+/** @type {!AuthenticatorResponse} */ PublicKeyCredential.prototype.response;
 /**
  * @return {!AuthenticationExtensionsClientOutputs}
  */
@@ -8768,6 +9938,8 @@ function WebGLSync() {}
  * @private
  */
 function SVGNumberList() {}
+/** @type {!number} */ SVGNumberList.prototype.length;
+/** @type {!number} */ SVGNumberList.prototype.numberOfItems;
 /**
  * @param {!number} index
  * @return {!SVGNumber}
@@ -8810,6 +9982,9 @@ SVGNumberList.prototype.appendItem = function(newItem) {}
  * @private
  */
 function ScreenOrientation() {}
+/** @type {!number} */ ScreenOrientation.prototype.angle;
+/** @type {!string} */ ScreenOrientation.prototype.type;
+/** @type {!NullableEventHandler} */ ScreenOrientation.prototype.onchange;
 /**
  * @return {undefined}
  */
@@ -8826,16 +10001,31 @@ ScreenOrientation.prototype.lock = function(orientation) {}
  * @param {!MediaEncryptedEventInit=} eventInitDict
  */
 function MediaEncryptedEvent(type,eventInitDict) {}
+/** @type {?ArrayBuffer} */ MediaEncryptedEvent.prototype.initData;
+/** @type {!string} */ MediaEncryptedEvent.prototype.initDataType;
 /**
  * @constructor
  * @private
  */
 function VTTRegion() {}
+/** @type {!string} */ VTTRegion.prototype.id;
+/** @type {!number} */ VTTRegion.prototype.lines;
+/** @type {!number} */ VTTRegion.prototype.regionAnchorX;
+/** @type {!number} */ VTTRegion.prototype.regionAnchorY;
+/** @type {!string} */ VTTRegion.prototype.scroll;
+/** @type {!number} */ VTTRegion.prototype.viewportAnchorX;
+/** @type {!number} */ VTTRegion.prototype.viewportAnchorY;
+/** @type {!number} */ VTTRegion.prototype.width;
 /**
  * @constructor
  * @private
  */
 function XRInputSource() {}
+/** @type {?XRSpace} */ XRInputSource.prototype.gripSpace;
+/** @type {!string} */ XRInputSource.prototype.handedness;
+/** @type {!Array<!string>} */ XRInputSource.prototype.profiles;
+/** @type {!string} */ XRInputSource.prototype.targetRayMode;
+/** @type {!XRSpace} */ XRInputSource.prototype.targetRaySpace;
 /**
  * @constructor
  * @extends {SVGTextPositioningElement}
@@ -8848,12 +10038,40 @@ function SVGTSpanElement() {}
  * @private
  */
 function HTMLBodyElement() {}
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onorientationchange;
+/** @type {!string} */ HTMLBodyElement.prototype.aLink;
+/** @type {!string} */ HTMLBodyElement.prototype.background;
+/** @type {!string} */ HTMLBodyElement.prototype.bgColor;
+/** @type {!string} */ HTMLBodyElement.prototype.link;
+/** @type {!string} */ HTMLBodyElement.prototype.text;
+/** @type {!string} */ HTMLBodyElement.prototype.vLink;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onafterprint;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onbeforeprint;
+/** @type {!NullableOnBeforeUnloadEventHandler} */ HTMLBodyElement.prototype.onbeforeunload;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onhashchange;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onlanguagechange;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onmessage;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onmessageerror;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onoffline;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.ononline;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onpagehide;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onpageshow;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onpopstate;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onrejectionhandled;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onstorage;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onunhandledrejection;
+/** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onunload;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFEMergeElement() {}
+/** @type {!SVGAnimatedLength} */ SVGFEMergeElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEMergeElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEMergeElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEMergeElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEMergeElement.prototype.y;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -8866,6 +10084,7 @@ function XRSpace() {}
  * @private
  */
 function HTMLQuoteElement() {}
+/** @type {!string} */ HTMLQuoteElement.prototype.cite;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -8908,6 +10127,20 @@ function Node() {}
 /** @const {!number} */ Node.prototype.PROCESSING_INSTRUCTION_NODE;
 /** @const {!number} */ Node.TEXT_NODE;
 /** @const {!number} */ Node.prototype.TEXT_NODE;
+/** @type {!string} */ Node.prototype.baseURI;
+/** @type {!NodeList} */ Node.prototype.childNodes;
+/** @type {?Node} */ Node.prototype.firstChild;
+/** @type {!boolean} */ Node.prototype.isConnected;
+/** @type {?Node} */ Node.prototype.lastChild;
+/** @type {?Node} */ Node.prototype.nextSibling;
+/** @type {!string} */ Node.prototype.nodeName;
+/** @type {!number} */ Node.prototype.nodeType;
+/** @type {?Document} */ Node.prototype.ownerDocument;
+/** @type {?Element} */ Node.prototype.parentElement;
+/** @type {?Node} */ Node.prototype.parentNode;
+/** @type {?Node} */ Node.prototype.previousSibling;
+/** @type {?string} */ Node.prototype.nodeValue;
+/** @type {?string} */ Node.prototype.textContent;
 /**
  * @param {!Node} node
  * @return {!Node}
@@ -8989,6 +10222,51 @@ Node.prototype.getRootNode = function(options) {}
  * @private
  */
 function HTMLInputElement() {}
+/** @type {?HTMLFormElement} */ HTMLInputElement.prototype.form;
+/** @type {?NodeList} */ HTMLInputElement.prototype.labels;
+/** @type {?HTMLElement} */ HTMLInputElement.prototype.list;
+/** @type {!string} */ HTMLInputElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLInputElement.prototype.validity;
+/** @type {!boolean} */ HTMLInputElement.prototype.willValidate;
+/** @type {!string} */ HTMLInputElement.prototype.accept;
+/** @type {!string} */ HTMLInputElement.prototype.alt;
+/** @type {!string} */ HTMLInputElement.prototype.autocomplete;
+/** @type {!boolean} */ HTMLInputElement.prototype.checked;
+/** @type {!boolean} */ HTMLInputElement.prototype.defaultChecked;
+/** @type {!string} */ HTMLInputElement.prototype.defaultValue;
+/** @type {!string} */ HTMLInputElement.prototype.dirName;
+/** @type {!boolean} */ HTMLInputElement.prototype.disabled;
+/** @type {?FileList} */ HTMLInputElement.prototype.files;
+/** @type {!string} */ HTMLInputElement.prototype.formAction;
+/** @type {!string} */ HTMLInputElement.prototype.formEnctype;
+/** @type {!string} */ HTMLInputElement.prototype.formMethod;
+/** @type {!boolean} */ HTMLInputElement.prototype.formNoValidate;
+/** @type {!string} */ HTMLInputElement.prototype.formTarget;
+/** @type {!number} */ HTMLInputElement.prototype.height;
+/** @type {!boolean} */ HTMLInputElement.prototype.indeterminate;
+/** @type {!string} */ HTMLInputElement.prototype.max;
+/** @type {!number} */ HTMLInputElement.prototype.maxLength;
+/** @type {!string} */ HTMLInputElement.prototype.min;
+/** @type {!number} */ HTMLInputElement.prototype.minLength;
+/** @type {!boolean} */ HTMLInputElement.prototype.multiple;
+/** @type {!string} */ HTMLInputElement.prototype.name;
+/** @type {!string} */ HTMLInputElement.prototype.pattern;
+/** @type {!string} */ HTMLInputElement.prototype.placeholder;
+/** @type {!boolean} */ HTMLInputElement.prototype.readOnly;
+/** @type {!boolean} */ HTMLInputElement.prototype.required;
+/** @type {?string} */ HTMLInputElement.prototype.selectionDirection;
+/** @type {?number} */ HTMLInputElement.prototype.selectionEnd;
+/** @type {?number} */ HTMLInputElement.prototype.selectionStart;
+/** @type {!number} */ HTMLInputElement.prototype.size;
+/** @type {!string} */ HTMLInputElement.prototype.src;
+/** @type {!string} */ HTMLInputElement.prototype.step;
+/** @type {!string} */ HTMLInputElement.prototype.type;
+/** @type {!string} */ HTMLInputElement.prototype.value;
+/** @type {?Object} */ HTMLInputElement.prototype.valueAsDate;
+/** @type {!number} */ HTMLInputElement.prototype.valueAsNumber;
+/** @type {!number} */ HTMLInputElement.prototype.width;
+/** @type {!string} */ HTMLInputElement.prototype.align;
+/** @type {!string} */ HTMLInputElement.prototype.useMap;
 /**
  * @param {!number=} n
  * @return {undefined}
@@ -9046,6 +10324,17 @@ function KeyboardEvent(type,eventInitDict) {}
 /** @const {!number} */ KeyboardEvent.prototype.DOM_KEY_LOCATION_RIGHT;
 /** @const {!number} */ KeyboardEvent.DOM_KEY_LOCATION_STANDARD;
 /** @const {!number} */ KeyboardEvent.prototype.DOM_KEY_LOCATION_STANDARD;
+/** @type {!boolean} */ KeyboardEvent.prototype.altKey;
+/** @type {!string} */ KeyboardEvent.prototype.code;
+/** @type {!boolean} */ KeyboardEvent.prototype.ctrlKey;
+/** @type {!boolean} */ KeyboardEvent.prototype.isComposing;
+/** @type {!string} */ KeyboardEvent.prototype.key;
+/** @type {!number} */ KeyboardEvent.prototype.location;
+/** @type {!boolean} */ KeyboardEvent.prototype.metaKey;
+/** @type {!boolean} */ KeyboardEvent.prototype.repeat;
+/** @type {!boolean} */ KeyboardEvent.prototype.shiftKey;
+/** @type {!number} */ KeyboardEvent.prototype.charCode;
+/** @type {!number} */ KeyboardEvent.prototype.keyCode;
 /**
  * @param {!string} keyArg
  * @return {!boolean}
@@ -9057,12 +10346,26 @@ KeyboardEvent.prototype.getModifierState = function(keyArg) {}
  * @private
  */
 function SVGFESpecularLightingElement() {}
+/** @type {!SVGAnimatedString} */ SVGFESpecularLightingElement.prototype.in1;
+/** @type {!SVGAnimatedNumber} */ SVGFESpecularLightingElement.prototype.kernelUnitLengthX;
+/** @type {!SVGAnimatedNumber} */ SVGFESpecularLightingElement.prototype.kernelUnitLengthY;
+/** @type {!SVGAnimatedNumber} */ SVGFESpecularLightingElement.prototype.specularConstant;
+/** @type {!SVGAnimatedNumber} */ SVGFESpecularLightingElement.prototype.specularExponent;
+/** @type {!SVGAnimatedNumber} */ SVGFESpecularLightingElement.prototype.surfaceScale;
+/** @type {!SVGAnimatedLength} */ SVGFESpecularLightingElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFESpecularLightingElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFESpecularLightingElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFESpecularLightingElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFESpecularLightingElement.prototype.y;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function MediaQueryList() {}
+/** @type {!boolean} */ MediaQueryList.prototype.matches;
+/** @type {!CSSOMString} */ MediaQueryList.prototype.media;
+/** @type {!NullableEventHandler} */ MediaQueryList.prototype.onchange;
 /**
  * @param {?EventListener} callback
  * @return {undefined}
@@ -9078,6 +10381,156 @@ MediaQueryList.prototype.addListener = function(callback) {}
  * @extends {Node}
  */
 function Document() {}
+/** @type {!string} */ Document.prototype.URL;
+/** @type {!string} */ Document.prototype.characterSet;
+/** @type {!string} */ Document.prototype.charset;
+/** @type {!string} */ Document.prototype.compatMode;
+/** @type {!string} */ Document.prototype.contentType;
+/** @type {?DocumentType} */ Document.prototype.doctype;
+/** @type {?Element} */ Document.prototype.documentElement;
+/** @type {!string} */ Document.prototype.documentURI;
+/** @type {!DOMImplementation} */ Document.prototype.implementation;
+/** @type {!string} */ Document.prototype.inputEncoding;
+/** @type {?Element} */ Document.prototype.scrollingElement;
+/** @type {!boolean} */ Document.prototype.hidden;
+/** @type {!string} */ Document.prototype.visibilityState;
+/** @type {?EventHandler} */ Document.prototype.onvisibilitychange;
+/** @type {?EventHandler} */ Document.prototype.onpointerlockchange;
+/** @type {?EventHandler} */ Document.prototype.onpointerlockerror;
+/** @type {?SVGSVGElement} */ Document.prototype.rootElement;
+/** @type {!DocumentTimeline} */ Document.prototype.timeline;
+/** @type {!boolean} */ Document.prototype.fullscreen;
+/** @type {!boolean} */ Document.prototype.fullscreenEnabled;
+/** @type {?EventHandler} */ Document.prototype.onfullscreenchange;
+/** @type {!NullableEventHandler} */ Document.prototype.onfullscreenerror;
+/** @type {?HTMLOrSVGScriptElement} */ Document.prototype.currentScript;
+/** @type {?WindowProxy} */ Document.prototype.defaultView;
+/** @type {!HTMLCollection} */ Document.prototype.embeds;
+/** @type {!HTMLCollection} */ Document.prototype.forms;
+/** @type {?HTMLHeadElement} */ Document.prototype.head;
+/** @type {!HTMLCollection} */ Document.prototype.images;
+/** @type {!string} */ Document.prototype.lastModified;
+/** @type {!HTMLCollection} */ Document.prototype.links;
+/** @type {?Location} */ Document.prototype.location;
+/** @type {!HTMLCollection} */ Document.prototype.plugins;
+/** @type {!string} */ Document.prototype.readyState;
+/** @type {!string} */ Document.prototype.referrer;
+/** @type {!HTMLCollection} */ Document.prototype.scripts;
+/** @type {?HTMLElement} */ Document.prototype.body;
+/** @type {!string} */ Document.prototype.cookie;
+/** @type {!string} */ Document.prototype.designMode;
+/** @type {!string} */ Document.prototype.dir;
+/** @type {!string} */ Document.prototype.domain;
+/** @type {?EventHandler} */ Document.prototype.onreadystatechange;
+/** @type {!string} */ Document.prototype.title;
+/** @type {!HTMLAllCollection} */ Document.prototype.all;
+/** @type {!HTMLCollection} */ Document.prototype.anchors;
+/** @type {!string} */ Document.prototype.alinkColor;
+/** @type {!string} */ Document.prototype.bgColor;
+/** @type {!string} */ Document.prototype.fgColor;
+/** @type {!string} */ Document.prototype.linkColor;
+/** @type {!string} */ Document.prototype.vlinkColor;
+/** @type {!number} */ Document.prototype.childElementCount;
+/** @type {!HTMLCollection} */ Document.prototype.children;
+/** @type {?Element} */ Document.prototype.firstElementChild;
+/** @type {?Element} */ Document.prototype.lastElementChild;
+/** @type {!NullableEventHandler} */ Document.prototype.onabort;
+/** @type {!NullableEventHandler} */ Document.prototype.onauxclick;
+/** @type {!NullableEventHandler} */ Document.prototype.onblur;
+/** @type {!NullableEventHandler} */ Document.prototype.oncancel;
+/** @type {!NullableEventHandler} */ Document.prototype.oncanplay;
+/** @type {!NullableEventHandler} */ Document.prototype.oncanplaythrough;
+/** @type {!NullableEventHandler} */ Document.prototype.onchange;
+/** @type {!NullableEventHandler} */ Document.prototype.onclick;
+/** @type {!NullableEventHandler} */ Document.prototype.onclose;
+/** @type {!NullableEventHandler} */ Document.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ Document.prototype.oncuechange;
+/** @type {!NullableEventHandler} */ Document.prototype.ondblclick;
+/** @type {?DragEventHandler} */ Document.prototype.ondrag;
+/** @type {?DragEventHandler} */ Document.prototype.ondragend;
+/** @type {?DragEventHandler} */ Document.prototype.ondragenter;
+/** @type {?DragEventHandler} */ Document.prototype.ondragleave;
+/** @type {?DragEventHandler} */ Document.prototype.ondragover;
+/** @type {?DragEventHandler} */ Document.prototype.ondragstart;
+/** @type {?DragEventHandler} */ Document.prototype.ondrop;
+/** @type {!NullableEventHandler} */ Document.prototype.ondurationchange;
+/** @type {!NullableEventHandler} */ Document.prototype.onemptied;
+/** @type {!NullableEventHandler} */ Document.prototype.onended;
+/** @type {!NullableOnErrorEventHandler} */ Document.prototype.onerror;
+/** @type {!NullableEventHandler} */ Document.prototype.onfocus;
+/** @type {!NullableEventHandler} */ Document.prototype.onformdata;
+/** @type {!NullableEventHandler} */ Document.prototype.oninput;
+/** @type {!NullableEventHandler} */ Document.prototype.oninvalid;
+/** @type {?KeyboardEventHandler} */ Document.prototype.onkeydown;
+/** @type {!NullableEventHandler} */ Document.prototype.onkeypress;
+/** @type {?KeyboardEventHandler} */ Document.prototype.onkeyup;
+/** @type {!NullableEventHandler} */ Document.prototype.onload;
+/** @type {!NullableEventHandler} */ Document.prototype.onloadeddata;
+/** @type {!NullableEventHandler} */ Document.prototype.onloadedmetadata;
+/** @type {!NullableEventHandler} */ Document.prototype.onloadstart;
+/** @type {!NullableEventHandler} */ Document.prototype.onmousedown;
+/** @type {!NullableEventHandler} */ Document.prototype.onmouseenter;
+/** @type {!NullableEventHandler} */ Document.prototype.onmouseleave;
+/** @type {!NullableEventHandler} */ Document.prototype.onmousemove;
+/** @type {!NullableEventHandler} */ Document.prototype.onmouseout;
+/** @type {!NullableEventHandler} */ Document.prototype.onmouseover;
+/** @type {!NullableEventHandler} */ Document.prototype.onmouseup;
+/** @type {!NullableEventHandler} */ Document.prototype.onpause;
+/** @type {!NullableEventHandler} */ Document.prototype.onplay;
+/** @type {!NullableEventHandler} */ Document.prototype.onplaying;
+/** @type {!NullableEventHandler} */ Document.prototype.onprogress;
+/** @type {!NullableEventHandler} */ Document.prototype.onratechange;
+/** @type {!NullableEventHandler} */ Document.prototype.onreset;
+/** @type {!NullableEventHandler} */ Document.prototype.onresize;
+/** @type {?EventHandler} */ Document.prototype.onscroll;
+/** @type {!NullableEventHandler} */ Document.prototype.onsecuritypolicyviolation;
+/** @type {!NullableEventHandler} */ Document.prototype.onseeked;
+/** @type {!NullableEventHandler} */ Document.prototype.onseeking;
+/** @type {!NullableEventHandler} */ Document.prototype.onselect;
+/** @type {!NullableEventHandler} */ Document.prototype.onslotchange;
+/** @type {!NullableEventHandler} */ Document.prototype.onstalled;
+/** @type {!NullableEventHandler} */ Document.prototype.onsubmit;
+/** @type {!NullableEventHandler} */ Document.prototype.onsuspend;
+/** @type {!NullableEventHandler} */ Document.prototype.ontimeupdate;
+/** @type {!NullableEventHandler} */ Document.prototype.ontoggle;
+/** @type {!NullableEventHandler} */ Document.prototype.onvolumechange;
+/** @type {!NullableEventHandler} */ Document.prototype.onwaiting;
+/** @type {!NullableEventHandler} */ Document.prototype.onwebkitanimationend;
+/** @type {!NullableEventHandler} */ Document.prototype.onwebkitanimationiteration;
+/** @type {!NullableEventHandler} */ Document.prototype.onwebkitanimationstart;
+/** @type {!NullableEventHandler} */ Document.prototype.onwebkittransitionend;
+/** @type {?WheelEventHandler} */ Document.prototype.onwheel;
+/** @type {?AnimationEventHandler} */ Document.prototype.onanimationcancel;
+/** @type {?AnimationEventHandler} */ Document.prototype.onanimationend;
+/** @type {?AnimationEventHandler} */ Document.prototype.onanimationiteration;
+/** @type {?AnimationEventHandler} */ Document.prototype.onanimationstart;
+/** @type {?TransitionEventHandler} */ Document.prototype.ontransitioncancel;
+/** @type {?TransitionEventHandler} */ Document.prototype.ontransitionend;
+/** @type {?TransitionEventHandler} */ Document.prototype.ontransitionrun;
+/** @type {?TransitionEventHandler} */ Document.prototype.ontransitionstart;
+/** @type {?PointerEventHandler} */ Document.prototype.ongotpointercapture;
+/** @type {?PointerEventHandler} */ Document.prototype.onlostpointercapture;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointercancel;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointerdown;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointerenter;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointerleave;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointermove;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointerout;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointerover;
+/** @type {?PointerEventHandler} */ Document.prototype.onpointerup;
+/** @type {?EventHandler} */ Document.prototype.onselectionchange;
+/** @type {?EventHandler} */ Document.prototype.onselectstart;
+/** @type {?TouchEventHandler} */ Document.prototype.ontouchcancel;
+/** @type {?TouchEventHandler} */ Document.prototype.ontouchend;
+/** @type {?TouchEventHandler} */ Document.prototype.ontouchmove;
+/** @type {?TouchEventHandler} */ Document.prototype.ontouchstart;
+/** @type {!StyleSheetList} */ Document.prototype.styleSheets;
+/** @type {?Element} */ Document.prototype.pointerLockElement;
+/** @type {?Element} */ Document.prototype.fullscreenElement;
+/** @type {?Element} */ Document.prototype.activeElement;
+/** @type {?ClipboardEventHandler} */ Document.prototype.oncopy;
+/** @type {?ClipboardEventHandler} */ Document.prototype.oncut;
+/** @type {?ClipboardEventHandler} */ Document.prototype.onpaste;
 /**
  * @param {!DOMQuadInit} quad
  * @param {!GeometryNode} from
@@ -9354,6 +10807,9 @@ Document.prototype.createExpression = function(expression,resolver) {}
  * @private
  */
 function History() {}
+/** @type {!number} */ History.prototype.length;
+/** @type {*} */ History.prototype.state;
+/** @type {!string} */ History.prototype.scrollRestoration;
 /**
  * @param {*} data
  * @param {!string} unused
@@ -9387,6 +10843,13 @@ History.prototype.replaceState = function(data,unused,url) {}
  * @private
  */
 function Attr() {}
+/** @type {!string} */ Attr.prototype.localName;
+/** @type {!string} */ Attr.prototype.name;
+/** @type {?string} */ Attr.prototype.namespaceURI;
+/** @type {?Element} */ Attr.prototype.ownerElement;
+/** @type {?string} */ Attr.prototype.prefix;
+/** @type {!boolean} */ Attr.prototype.specified;
+/** @type {!string} */ Attr.prototype.value;
 /**
  * @constructor
  * @extends {Document}
@@ -9399,6 +10862,10 @@ function XMLDocument() {}
  * @private
  */
 function SpeechSynthesis() {}
+/** @type {!boolean} */ SpeechSynthesis.prototype.paused;
+/** @type {!boolean} */ SpeechSynthesis.prototype.pending;
+/** @type {!boolean} */ SpeechSynthesis.prototype.speaking;
+/** @type {?EventHandler} */ SpeechSynthesis.prototype.onvoiceschanged;
 /**
  * @return {undefined}
  */
@@ -9428,17 +10895,27 @@ SpeechSynthesis.prototype.pause = function() {}
  * @param {!AudioWorkletNodeOptions=} options
  */
 function AudioWorkletNode(context,name,options) {}
+/** @type {!AudioParamMap} */ AudioWorkletNode.prototype.parameters;
+/** @type {!MessagePort} */ AudioWorkletNode.prototype.port;
+/** @type {!NullableEventHandler} */ AudioWorkletNode.prototype.onprocessorerror;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLTableColElement() {}
+/** @type {!number} */ HTMLTableColElement.prototype.span;
+/** @type {!string} */ HTMLTableColElement.prototype.align;
+/** @type {!string} */ HTMLTableColElement.prototype.ch;
+/** @type {!string} */ HTMLTableColElement.prototype.chOff;
+/** @type {!string} */ HTMLTableColElement.prototype.vAlign;
+/** @type {!string} */ HTMLTableColElement.prototype.width;
 /**
  * @constructor
  * @private
  */
 function DataTransferItemList() {}
+/** @type {!number} */ DataTransferItemList.prototype.length;
 /**
  * @param {(!string|!File)} arg0
  * @param {!string=} arg1
@@ -9462,6 +10939,9 @@ DataTransferItemList.prototype.remove = function(index) {}
  * @param {(!number|!KeyframeEffectOptions)=} arg2
  */
 function KeyframeEffect(arg0,arg1,arg2) {}
+/** @type {!string} */ KeyframeEffect.prototype.composite;
+/** @type {!string} */ KeyframeEffect.prototype.iterationComposite;
+/** @type {(!Element|!CSSPseudoElement)} */ KeyframeEffect.prototype.target;
 /**
  * @param {?Object} keyframes
  * @return {undefined}
@@ -9477,11 +10957,13 @@ KeyframeEffect.prototype.getKeyframes = function() {}
  * @private
  */
 function HTMLTableCaptionElement() {}
+/** @type {!string} */ HTMLTableCaptionElement.prototype.align;
 /**
  * @constructor
  * @private
  */
 function StyleSheetList() {}
+/** @type {!number} */ StyleSheetList.prototype.length;
 /**
  * @param {!number} index
  * @return {?CSSStyleSheet}
@@ -9499,12 +10981,15 @@ function HTMLUnknownElement() {}
  * @private
  */
 function HTMLMenuElement() {}
+/** @type {!boolean} */ HTMLMenuElement.prototype.compact;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLModElement() {}
+/** @type {!string} */ HTMLModElement.prototype.cite;
+/** @type {!string} */ HTMLModElement.prototype.dateTime;
 /**
  * @record
  * @private
@@ -9519,6 +11004,7 @@ function EXT_texture_filter_anisotropic() {}
  * @private
  */
 function CSSMediaRule() {}
+/** @type {!MediaList} */ CSSMediaRule.prototype.media;
 /**
  * @record
  * @extends {WebGLObject}
@@ -9540,6 +11026,15 @@ WritableStreamDefaultController.prototype.error = function(e) {}
  * @private
  */
 function AudioListener() {}
+/** @type {!AudioParam} */ AudioListener.prototype.forwardX;
+/** @type {!AudioParam} */ AudioListener.prototype.forwardY;
+/** @type {!AudioParam} */ AudioListener.prototype.forwardZ;
+/** @type {!AudioParam} */ AudioListener.prototype.positionX;
+/** @type {!AudioParam} */ AudioListener.prototype.positionY;
+/** @type {!AudioParam} */ AudioListener.prototype.positionZ;
+/** @type {!AudioParam} */ AudioListener.prototype.upX;
+/** @type {!AudioParam} */ AudioListener.prototype.upY;
+/** @type {!AudioParam} */ AudioListener.prototype.upZ;
 /**
  * @param {!number} x
  * @param {!number} y
@@ -9563,6 +11058,8 @@ AudioListener.prototype.setPosition = function(x,y,z) {}
  * @private
  */
 function HTMLLIElement() {}
+/** @type {!number} */ HTMLLIElement.prototype.value;
+/** @type {!string} */ HTMLLIElement.prototype.type;
 /**
  * @record
  * @private
@@ -9579,18 +11076,24 @@ function WEBGL_compressed_texture_s3tc() {}
  * @param {!string} name
  */
 function RTCIdentityAssertion(idp,name) {}
+/** @type {!string} */ RTCIdentityAssertion.prototype.idp;
+/** @type {!string} */ RTCIdentityAssertion.prototype.name;
 /**
  * @constructor
  * @extends {CSSGroupingRule}
  * @private
  */
 function CSSConditionRule() {}
+/** @type {!CSSOMString} */ CSSConditionRule.prototype.conditionText;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLStyleElement() {}
+/** @type {!string} */ HTMLStyleElement.prototype.media;
+/** @type {!string} */ HTMLStyleElement.prototype.type;
+/** @type {?CSSStyleSheet} */ HTMLStyleElement.prototype.sheet;
 /**
  * @constructor
  * @extends {Event}
@@ -9598,16 +11101,39 @@ function HTMLStyleElement() {}
  * @param {!IDBVersionChangeEventInit=} eventInitDict
  */
 function IDBVersionChangeEvent(type,eventInitDict) {}
+/** @type {?number} */ IDBVersionChangeEvent.prototype.newVersion;
+/** @type {!number} */ IDBVersionChangeEvent.prototype.oldVersion;
 /**
  * @constructor
  * @param {!IntersectionObserverEntryInit} intersectionObserverEntryInit
  */
 function IntersectionObserverEntry(intersectionObserverEntryInit) {}
+/** @type {!DOMRectReadOnly} */ IntersectionObserverEntry.prototype.boundingClientRect;
+/** @type {!number} */ IntersectionObserverEntry.prototype.intersectionRatio;
+/** @type {!DOMRectReadOnly} */ IntersectionObserverEntry.prototype.intersectionRect;
+/** @type {!boolean} */ IntersectionObserverEntry.prototype.isIntersecting;
+/** @type {?DOMRectReadOnly} */ IntersectionObserverEntry.prototype.rootBounds;
+/** @type {!Element} */ IntersectionObserverEntry.prototype.target;
+/** @type {!DOMHighResTimeStamp} */ IntersectionObserverEntry.prototype.time;
 /**
  * @constructor
  * @param {!RTCIceCandidateInit=} candidateInitDict
  */
 function RTCIceCandidate(candidateInitDict) {}
+/** @type {?string} */ RTCIceCandidate.prototype.address;
+/** @type {!string} */ RTCIceCandidate.prototype.candidate;
+/** @type {?string} */ RTCIceCandidate.prototype.component;
+/** @type {?string} */ RTCIceCandidate.prototype.foundation;
+/** @type {?number} */ RTCIceCandidate.prototype.port;
+/** @type {?number} */ RTCIceCandidate.prototype.priority;
+/** @type {?string} */ RTCIceCandidate.prototype.protocol;
+/** @type {?string} */ RTCIceCandidate.prototype.relatedAddress;
+/** @type {?number} */ RTCIceCandidate.prototype.relatedPort;
+/** @type {?number} */ RTCIceCandidate.prototype.sdpMLineIndex;
+/** @type {?string} */ RTCIceCandidate.prototype.sdpMid;
+/** @type {?string} */ RTCIceCandidate.prototype.tcpType;
+/** @type {?string} */ RTCIceCandidate.prototype.type;
+/** @type {?string} */ RTCIceCandidate.prototype.usernameFragment;
 /**
  * @return {!RTCIceCandidateInit}
  */
@@ -9619,6 +11145,12 @@ RTCIceCandidate.prototype.toJSON = function() {}
  * @param {!AudioBufferSourceOptions=} options
  */
 function AudioBufferSourceNode(context,options) {}
+/** @type {!AudioParam} */ AudioBufferSourceNode.prototype.detune;
+/** @type {!AudioParam} */ AudioBufferSourceNode.prototype.playbackRate;
+/** @type {?AudioBuffer} */ AudioBufferSourceNode.prototype.buffer;
+/** @type {!boolean} */ AudioBufferSourceNode.prototype.loop;
+/** @type {!number} */ AudioBufferSourceNode.prototype.loopEnd;
+/** @type {!number} */ AudioBufferSourceNode.prototype.loopStart;
 /**
  * @param {!number=} when
  * @param {!number=} offset
@@ -9633,6 +11165,8 @@ AudioBufferSourceNode.prototype.start = function(when,offset,duration) {}
  * @param {(!string|!WorkerOptions)=} options
  */
 function SharedWorker(scriptURL,options) {}
+/** @type {!MessagePort} */ SharedWorker.prototype.port;
+/** @type {!NullableEventHandler} */ SharedWorker.prototype.onerror;
 /**
  * @constructor
  * @extends {Error}
@@ -9645,6 +11179,12 @@ function TypeError(message) {}
  * @private
  */
 function HTMLEmbedElement() {}
+/** @type {!string} */ HTMLEmbedElement.prototype.height;
+/** @type {!string} */ HTMLEmbedElement.prototype.src;
+/** @type {!string} */ HTMLEmbedElement.prototype.type;
+/** @type {!string} */ HTMLEmbedElement.prototype.width;
+/** @type {!string} */ HTMLEmbedElement.prototype.align;
+/** @type {!string} */ HTMLEmbedElement.prototype.name;
 /**
  * @return {?Document}
  */
@@ -9655,6 +11195,14 @@ HTMLEmbedElement.prototype.getSVGDocument = function() {}
  * @private
  */
 function Bluetooth() {}
+/** @type {?BluetoothDevice} */ Bluetooth.prototype.referringDevice;
+/** @type {?EventHandler} */ Bluetooth.prototype.onavailabilitychanged;
+/** @type {!NullableEventHandler} */ Bluetooth.prototype.onserviceadded;
+/** @type {!NullableEventHandler} */ Bluetooth.prototype.onservicechanged;
+/** @type {!NullableEventHandler} */ Bluetooth.prototype.onserviceremoved;
+/** @type {!NullableEventHandler} */ Bluetooth.prototype.oncharacteristicvaluechanged;
+/** @type {!NullableEventHandler} */ Bluetooth.prototype.onadvertisementreceived;
+/** @type {!NullableEventHandler} */ Bluetooth.prototype.ongattserverdisconnected;
 /**
  * @return {!Promise<!Array<!BluetoothDevice>>}
  */
@@ -9680,12 +11228,117 @@ function EXT_frag_depth() {}
  * @private
  */
 function CSSKeyframeRule() {}
+/** @type {!CSSStyleDeclaration} */ CSSKeyframeRule.prototype.style;
+/** @type {!CSSOMString} */ CSSKeyframeRule.prototype.keyText;
 /**
  * @constructor
  * @extends {Element}
  * @private
  */
 function SVGElement() {}
+/** @type {!SVGAnimatedString} */ SVGElement.prototype.className;
+/** @type {?SVGSVGElement} */ SVGElement.prototype.ownerSVGElement;
+/** @type {?SVGElement} */ SVGElement.prototype.viewportElement;
+/** @type {?ClipboardEventHandler} */ SVGElement.prototype.oncopy;
+/** @type {?ClipboardEventHandler} */ SVGElement.prototype.oncut;
+/** @type {?ClipboardEventHandler} */ SVGElement.prototype.onpaste;
+/** @type {?SVGElement} */ SVGElement.prototype.correspondingElement;
+/** @type {?SVGUseElement} */ SVGElement.prototype.correspondingUseElement;
+/** @type {!CSSStyleDeclaration} */ SVGElement.prototype.style;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onabort;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onauxclick;
+/** @type {?FocusEventHandler} */ SVGElement.prototype.onblur;
+/** @type {?EventHandler} */ SVGElement.prototype.oncancel;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oncanplay;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oncanplaythrough;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onchange;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onclick;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onclose;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oncuechange;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.ondblclick;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondrag;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondragend;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondragenter;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondragleave;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondragover;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondragstart;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondrop;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ondurationchange;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onemptied;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onended;
+/** @type {!NullableOnErrorEventHandler} */ SVGElement.prototype.onerror;
+/** @type {?FocusEventHandler} */ SVGElement.prototype.onfocus;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onformdata;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oninput;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oninvalid;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onkeydown;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onkeypress;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onkeyup;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onload;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onloadeddata;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onloadedmetadata;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onloadstart;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmousedown;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmouseenter;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmouseleave;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmousemove;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmouseout;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmouseover;
+/** @type {?MouseEventHandler} */ SVGElement.prototype.onmouseup;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpause;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onplay;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onplaying;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onprogress;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onratechange;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onreset;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onresize;
+/** @type {?EventHandler} */ SVGElement.prototype.onscroll;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onsecuritypolicyviolation;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onseeked;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onseeking;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onselect;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onslotchange;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onstalled;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onsubmit;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onsuspend;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ontimeupdate;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ontoggle;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onvolumechange;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onwaiting;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onwebkitanimationend;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onwebkitanimationiteration;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onwebkitanimationstart;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onwebkittransitionend;
+/** @type {?WheelEventHandler} */ SVGElement.prototype.onwheel;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onanimationcancel;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onanimationend;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onanimationiteration;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onanimationstart;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ontransitioncancel;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ontransitionend;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ontransitionrun;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ontransitionstart;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.ongotpointercapture;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onlostpointercapture;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointercancel;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointerdown;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointerenter;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointerleave;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointermove;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointerout;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointerover;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onpointerup;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onselectionchange;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.onselectstart;
+/** @type {?TouchEventHandler} */ SVGElement.prototype.ontouchcancel;
+/** @type {?TouchEventHandler} */ SVGElement.prototype.ontouchend;
+/** @type {?TouchEventHandler} */ SVGElement.prototype.ontouchmove;
+/** @type {?TouchEventHandler} */ SVGElement.prototype.ontouchstart;
+/** @type {!DOMStringMap} */ SVGElement.prototype.dataset;
+/** @type {!boolean} */ SVGElement.prototype.autofocus;
+/** @type {!string} */ SVGElement.prototype.nonce;
+/** @type {!number} */ SVGElement.prototype.tabIndex;
 /**
  * @param {!FocusOptions=} options
  * @return {undefined}
@@ -9700,18 +11353,43 @@ SVGElement.prototype.blur = function() {}
  * @private
  */
 function AnimationTimeline() {}
+/** @type {?number} */ AnimationTimeline.prototype.currentTime;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGMaskElement() {}
+/** @type {!SVGAnimatedLength} */ SVGMaskElement.prototype.height;
+/** @type {!SVGAnimatedEnumeration} */ SVGMaskElement.prototype.maskContentUnits;
+/** @type {!SVGAnimatedEnumeration} */ SVGMaskElement.prototype.maskUnits;
+/** @type {!SVGAnimatedLength} */ SVGMaskElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGMaskElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGMaskElement.prototype.y;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function RTCDataChannel() {}
+/** @type {!number} */ RTCDataChannel.prototype.bufferedAmount;
+/** @type {?number} */ RTCDataChannel.prototype.id;
+/** @type {!string} */ RTCDataChannel.prototype.label;
+/** @type {?number} */ RTCDataChannel.prototype.maxPacketLifeTime;
+/** @type {?number} */ RTCDataChannel.prototype.maxRetransmits;
+/** @type {!boolean} */ RTCDataChannel.prototype.negotiated;
+/** @type {!boolean} */ RTCDataChannel.prototype.ordered;
+/** @type {!string} */ RTCDataChannel.prototype.protocol;
+/** @type {!string} */ RTCDataChannel.prototype.readyState;
+/** @type {!string} */ RTCDataChannel.prototype.binaryType;
+/** @type {!number} */ RTCDataChannel.prototype.bufferedAmountLowThreshold;
+/** @type {?EventHandler} */ RTCDataChannel.prototype.onbufferedamountlow;
+/** @type {?EventHandler} */ RTCDataChannel.prototype.onclose;
+/** @type {!NullableEventHandler} */ RTCDataChannel.prototype.onclosing;
+/** @type {?RTCErrorEventHandler} */ RTCDataChannel.prototype.onerror;
+/** @type {?MessageEventHandler} */ RTCDataChannel.prototype.onmessage;
+/** @type {?RTCDataChannelEventHandler} */ RTCDataChannel.prototype.onopen;
+/** @type {!string} */ RTCDataChannel.prototype.priority;
 /**
  * @param {(!string|!Blob|!ArrayBuffer|!ArrayBufferView)} arg0
  * @return {undefined}
@@ -9728,6 +11406,7 @@ RTCDataChannel.prototype.close = function() {}
  * @param {!GainOptions=} options
  */
 function GainNode(context,options) {}
+/** @type {!AudioParam} */ GainNode.prototype.gain;
 /**
  * @constructor
  * @extends {HTMLMediaElement}
@@ -9749,6 +11428,8 @@ function WEBGL_color_buffer_float() {}
  * @private
  */
 function MessagePort() {}
+/** @type {?MessageEventHandler} */ MessagePort.prototype.onmessage;
+/** @type {?MessageEventHandler} */ MessagePort.prototype.onmessageerror;
 /**
  * @param {*} arg0
  * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
@@ -9781,6 +11462,13 @@ function SVGComponentTransferFunctionElement() {}
 /** @const {!number} */ SVGComponentTransferFunctionElement.prototype.SVG_FECOMPONENTTRANSFER_TYPE_TABLE;
 /** @const {!number} */ SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN;
 /** @const {!number} */ SVGComponentTransferFunctionElement.prototype.SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN;
+/** @type {!SVGAnimatedNumber} */ SVGComponentTransferFunctionElement.prototype.amplitude;
+/** @type {!SVGAnimatedNumber} */ SVGComponentTransferFunctionElement.prototype.exponent;
+/** @type {!SVGAnimatedNumber} */ SVGComponentTransferFunctionElement.prototype.intercept;
+/** @type {!SVGAnimatedNumber} */ SVGComponentTransferFunctionElement.prototype.offset;
+/** @type {!SVGAnimatedNumber} */ SVGComponentTransferFunctionElement.prototype.slope;
+/** @type {!SVGAnimatedNumberList} */ SVGComponentTransferFunctionElement.prototype.tableValues;
+/** @type {!SVGAnimatedEnumeration} */ SVGComponentTransferFunctionElement.prototype.type;
 /**
  * @constructor
  * @extends {Event}
@@ -9788,12 +11476,16 @@ function SVGComponentTransferFunctionElement() {}
  * @param {!SpeechRecognitionErrorEventInit} eventInitDict
  */
 function SpeechRecognitionErrorEvent(type,eventInitDict) {}
+/** @type {!string} */ SpeechRecognitionErrorEvent.prototype.error;
+/** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
 /**
  * @constructor
  * @extends {SVGGraphicsElement}
  * @private
  */
 function SVGSymbolElement() {}
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGSymbolElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedRect} */ SVGSymbolElement.prototype.viewBox;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -9812,12 +11504,174 @@ function SVGUnknownElement() {}
  * @private
  */
 function HTMLHtmlElement() {}
+/** @type {!string} */ HTMLHtmlElement.prototype.version;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function Window() {}
+/** @type {!boolean} */ Window.prototype.closed;
+/** @type {!CustomElementRegistry} */ Window.prototype.customElements;
+/** @type {!Document} */ Window.prototype.document;
+/** @type {?Element} */ Window.prototype.frameElement;
+/** @type {!WindowProxy} */ Window.prototype.frames;
+/** @type {!History} */ Window.prototype.history;
+/** @type {!number} */ Window.prototype.length;
+/** @type {!Location} */ Window.prototype.location;
+/** @type {!BarProp} */ Window.prototype.locationbar;
+/** @type {!BarProp} */ Window.prototype.menubar;
+/** @type {!Navigator} */ Window.prototype.navigator;
+/** @type {!boolean} */ Window.prototype.originAgentCluster;
+/** @type {?WindowProxy} */ Window.prototype.parent;
+/** @type {!BarProp} */ Window.prototype.personalbar;
+/** @type {!BarProp} */ Window.prototype.scrollbars;
+/** @type {!WindowProxy} */ Window.prototype.self;
+/** @type {!BarProp} */ Window.prototype.statusbar;
+/** @type {!BarProp} */ Window.prototype.toolbar;
+/** @type {?WindowProxy} */ Window.prototype.top;
+/** @type {!WindowProxy} */ Window.prototype.window;
+/** @type {!string} */ Window.prototype.name;
+/** @type {*} */ Window.prototype.opener;
+/** @type {!string} */ Window.prototype.status;
+/** @type {!number} */ Window.prototype.devicePixelRatio;
+/** @type {!number} */ Window.prototype.innerHeight;
+/** @type {!number} */ Window.prototype.innerWidth;
+/** @type {!number} */ Window.prototype.outerHeight;
+/** @type {!number} */ Window.prototype.outerWidth;
+/** @type {!number} */ Window.prototype.pageXOffset;
+/** @type {!number} */ Window.prototype.pageYOffset;
+/** @type {!Screen} */ Window.prototype.screen;
+/** @type {!number} */ Window.prototype.screenLeft;
+/** @type {!number} */ Window.prototype.screenTop;
+/** @type {!number} */ Window.prototype.screenX;
+/** @type {!number} */ Window.prototype.screenY;
+/** @type {!number} */ Window.prototype.scrollX;
+/** @type {!number} */ Window.prototype.scrollY;
+/** @type {?DeviceOrientationEventHandler} */ Window.prototype.ondeviceorientation;
+/** @type {!NullableEventHandler} */ Window.prototype.ondeviceorientationabsolute;
+/** @type {!NullableEventHandler} */ Window.prototype.oncompassneedscalibration;
+/** @type {?DeviceMotionEventHandler} */ Window.prototype.ondevicemotion;
+/** @type {!SpeechSynthesis} */ Window.prototype.speechSynthesis;
+/** @type {!VisualViewport} */ Window.prototype.visualViewport;
+/** @type {!number} */ Window.prototype.orientation;
+/** @type {?EventHandler} */ Window.prototype.onorientationchange;
+/** @type {(!Event|undefined)} */ Window.prototype.event;
+/** @type {!boolean} */ Window.prototype.crossOriginIsolated;
+/** @type {!boolean} */ Window.prototype.isSecureContext;
+/** @type {!string} */ Window.prototype.origin;
+/** @type {!Performance} */ Window.prototype.performance;
+/** @type {!IDBFactory} */ Window.prototype.indexedDB;
+/** @type {!CacheStorage} */ Window.prototype.caches;
+/** @type {!Crypto} */ Window.prototype.crypto;
+/** @type {?EventHandler} */ Window.prototype.onafterprint;
+/** @type {?EventHandler} */ Window.prototype.onbeforeprint;
+/** @type {!NullableOnBeforeUnloadEventHandler} */ Window.prototype.onbeforeunload;
+/** @type {?HashChangeEventHandler} */ Window.prototype.onhashchange;
+/** @type {?EventHandler} */ Window.prototype.onlanguagechange;
+/** @type {?MessageEventHandler} */ Window.prototype.onmessage;
+/** @type {?MessageEventHandler} */ Window.prototype.onmessageerror;
+/** @type {?EventHandler} */ Window.prototype.onoffline;
+/** @type {?EventHandler} */ Window.prototype.ononline;
+/** @type {?PageTransitionEventHandler} */ Window.prototype.onpagehide;
+/** @type {?PageTransitionEventHandler} */ Window.prototype.onpageshow;
+/** @type {!NullableEventHandler} */ Window.prototype.onpopstate;
+/** @type {?PromiseRejectionEventHandler} */ Window.prototype.onrejectionhandled;
+/** @type {?StorageEventHandler} */ Window.prototype.onstorage;
+/** @type {?PromiseRejectionEventHandler} */ Window.prototype.onunhandledrejection;
+/** @type {?EventHandler} */ Window.prototype.onunload;
+/** @type {!Storage} */ Window.prototype.localStorage;
+/** @type {!NullableEventHandler} */ Window.prototype.onabort;
+/** @type {!NullableEventHandler} */ Window.prototype.onauxclick;
+/** @type {?FocusEventHandler} */ Window.prototype.onblur;
+/** @type {!NullableEventHandler} */ Window.prototype.oncancel;
+/** @type {!NullableEventHandler} */ Window.prototype.oncanplay;
+/** @type {!NullableEventHandler} */ Window.prototype.oncanplaythrough;
+/** @type {!NullableEventHandler} */ Window.prototype.onchange;
+/** @type {!NullableEventHandler} */ Window.prototype.onclick;
+/** @type {!NullableEventHandler} */ Window.prototype.onclose;
+/** @type {!NullableEventHandler} */ Window.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ Window.prototype.oncuechange;
+/** @type {!NullableEventHandler} */ Window.prototype.ondblclick;
+/** @type {!NullableEventHandler} */ Window.prototype.ondrag;
+/** @type {!NullableEventHandler} */ Window.prototype.ondragend;
+/** @type {!NullableEventHandler} */ Window.prototype.ondragenter;
+/** @type {!NullableEventHandler} */ Window.prototype.ondragleave;
+/** @type {!NullableEventHandler} */ Window.prototype.ondragover;
+/** @type {!NullableEventHandler} */ Window.prototype.ondragstart;
+/** @type {!NullableEventHandler} */ Window.prototype.ondrop;
+/** @type {!NullableEventHandler} */ Window.prototype.ondurationchange;
+/** @type {!NullableEventHandler} */ Window.prototype.onemptied;
+/** @type {!NullableEventHandler} */ Window.prototype.onended;
+/** @type {!NullableOnErrorEventHandler} */ Window.prototype.onerror;
+/** @type {?FocusEventHandler} */ Window.prototype.onfocus;
+/** @type {!NullableEventHandler} */ Window.prototype.onformdata;
+/** @type {!NullableEventHandler} */ Window.prototype.oninput;
+/** @type {!NullableEventHandler} */ Window.prototype.oninvalid;
+/** @type {!NullableEventHandler} */ Window.prototype.onkeydown;
+/** @type {!NullableEventHandler} */ Window.prototype.onkeypress;
+/** @type {!NullableEventHandler} */ Window.prototype.onkeyup;
+/** @type {?EventHandler} */ Window.prototype.onload;
+/** @type {!NullableEventHandler} */ Window.prototype.onloadeddata;
+/** @type {!NullableEventHandler} */ Window.prototype.onloadedmetadata;
+/** @type {!NullableEventHandler} */ Window.prototype.onloadstart;
+/** @type {!NullableEventHandler} */ Window.prototype.onmousedown;
+/** @type {!NullableEventHandler} */ Window.prototype.onmouseenter;
+/** @type {!NullableEventHandler} */ Window.prototype.onmouseleave;
+/** @type {!NullableEventHandler} */ Window.prototype.onmousemove;
+/** @type {!NullableEventHandler} */ Window.prototype.onmouseout;
+/** @type {!NullableEventHandler} */ Window.prototype.onmouseover;
+/** @type {!NullableEventHandler} */ Window.prototype.onmouseup;
+/** @type {!NullableEventHandler} */ Window.prototype.onpause;
+/** @type {!NullableEventHandler} */ Window.prototype.onplay;
+/** @type {!NullableEventHandler} */ Window.prototype.onplaying;
+/** @type {!NullableEventHandler} */ Window.prototype.onprogress;
+/** @type {!NullableEventHandler} */ Window.prototype.onratechange;
+/** @type {!NullableEventHandler} */ Window.prototype.onreset;
+/** @type {?UIEventHandler} */ Window.prototype.onresize;
+/** @type {!NullableEventHandler} */ Window.prototype.onscroll;
+/** @type {!NullableEventHandler} */ Window.prototype.onsecuritypolicyviolation;
+/** @type {!NullableEventHandler} */ Window.prototype.onseeked;
+/** @type {!NullableEventHandler} */ Window.prototype.onseeking;
+/** @type {!NullableEventHandler} */ Window.prototype.onselect;
+/** @type {!NullableEventHandler} */ Window.prototype.onslotchange;
+/** @type {!NullableEventHandler} */ Window.prototype.onstalled;
+/** @type {!NullableEventHandler} */ Window.prototype.onsubmit;
+/** @type {!NullableEventHandler} */ Window.prototype.onsuspend;
+/** @type {!NullableEventHandler} */ Window.prototype.ontimeupdate;
+/** @type {!NullableEventHandler} */ Window.prototype.ontoggle;
+/** @type {!NullableEventHandler} */ Window.prototype.onvolumechange;
+/** @type {!NullableEventHandler} */ Window.prototype.onwaiting;
+/** @type {!NullableEventHandler} */ Window.prototype.onwebkitanimationend;
+/** @type {!NullableEventHandler} */ Window.prototype.onwebkitanimationiteration;
+/** @type {!NullableEventHandler} */ Window.prototype.onwebkitanimationstart;
+/** @type {!NullableEventHandler} */ Window.prototype.onwebkittransitionend;
+/** @type {!NullableEventHandler} */ Window.prototype.onwheel;
+/** @type {?AnimationEventHandler} */ Window.prototype.onanimationcancel;
+/** @type {?AnimationEventHandler} */ Window.prototype.onanimationend;
+/** @type {?AnimationEventHandler} */ Window.prototype.onanimationiteration;
+/** @type {?AnimationEventHandler} */ Window.prototype.onanimationstart;
+/** @type {?TransitionEventHandler} */ Window.prototype.ontransitioncancel;
+/** @type {?TransitionEventHandler} */ Window.prototype.ontransitionend;
+/** @type {?TransitionEventHandler} */ Window.prototype.ontransitionrun;
+/** @type {?TransitionEventHandler} */ Window.prototype.ontransitionstart;
+/** @type {!NullableEventHandler} */ Window.prototype.ongotpointercapture;
+/** @type {!NullableEventHandler} */ Window.prototype.onlostpointercapture;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointercancel;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointerdown;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointerenter;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointerleave;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointermove;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointerout;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointerover;
+/** @type {!NullableEventHandler} */ Window.prototype.onpointerup;
+/** @type {!NullableEventHandler} */ Window.prototype.onselectionchange;
+/** @type {!NullableEventHandler} */ Window.prototype.onselectstart;
+/** @type {!NullableEventHandler} */ Window.prototype.ontouchcancel;
+/** @type {!NullableEventHandler} */ Window.prototype.ontouchend;
+/** @type {!NullableEventHandler} */ Window.prototype.ontouchmove;
+/** @type {!NullableEventHandler} */ Window.prototype.ontouchstart;
+/** @type {!Storage} */ Window.prototype.sessionStorage;
 /**
  * @param {(!ScrollToOptions|!number)=} arg0
  * @param {!number=} arg1
@@ -10004,12 +11858,15 @@ Window.prototype.moveTo = function(x,y) {}
  * @private
  */
 function Credential() {}
+/** @type {!string} */ Credential.prototype.id;
+/** @type {!string} */ Credential.prototype.type;
 /**
  * @constructor
  * @extends {SVGGraphicsElement}
  * @private
  */
 function SVGGeometryElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGGeometryElement.prototype.pathLength;
 /**
  * @return {!number}
  */
@@ -10034,6 +11891,35 @@ SVGGeometryElement.prototype.isPointInFill = function(point) {}
  * @private
  */
 function Navigator() {}
+/** @type {!Clipboard} */ Navigator.prototype.clipboard;
+/** @type {!CredentialsContainer} */ Navigator.prototype.credentials;
+/** @type {!Geolocation} */ Navigator.prototype.geolocation;
+/** @type {!MediaDevices} */ Navigator.prototype.mediaDevices;
+/** @type {!Permissions} */ Navigator.prototype.permissions;
+/** @type {!number} */ Navigator.prototype.maxTouchPoints;
+/** @type {!WakeLock} */ Navigator.prototype.wakeLock;
+/** @type {!ServiceWorkerContainer} */ Navigator.prototype.serviceWorker;
+/** @type {!Bluetooth} */ Navigator.prototype.bluetooth;
+/** @type {!XRSystem} */ Navigator.prototype.xr;
+/** @type {!string} */ Navigator.prototype.language;
+/** @type {!Array<!string>} */ Navigator.prototype.languages;
+/** @type {!boolean} */ Navigator.prototype.onLine;
+/** @type {!boolean} */ Navigator.prototype.cookieEnabled;
+/** @type {!StorageManager} */ Navigator.prototype.storage;
+/** @type {!number} */ Navigator.prototype.hardwareConcurrency;
+/** @type {!string} */ Navigator.prototype.appCodeName;
+/** @type {!string} */ Navigator.prototype.appName;
+/** @type {!string} */ Navigator.prototype.appVersion;
+/** @type {!string} */ Navigator.prototype.platform;
+/** @type {!string} */ Navigator.prototype.product;
+/** @type {!string} */ Navigator.prototype.productSub;
+/** @type {!string} */ Navigator.prototype.userAgent;
+/** @type {!string} */ Navigator.prototype.vendor;
+/** @type {!string} */ Navigator.prototype.vendorSub;
+/** @type {!string} */ Navigator.prototype.oscpu;
+/** @type {!boolean} */ Navigator.prototype.webdriver;
+/** @type {!MimeTypeArray} */ Navigator.prototype.mimeTypes;
+/** @type {!PluginArray} */ Navigator.prototype.plugins;
 /**
  * @return {!boolean}
  */
@@ -10085,11 +11971,17 @@ Navigator.prototype.getGamepads = function() {}
  * @private
  */
 function XRView() {}
+/** @type {!string} */ XRView.prototype.eye;
+/** @type {!Float32Array} */ XRView.prototype.projectionMatrix;
+/** @type {!XRRigidTransform} */ XRView.prototype.transform;
 /**
  * @constructor
  * @private
  */
 function BluetoothRemoteGATTDescriptor() {}
+/** @type {!BluetoothRemoteGATTCharacteristic} */ BluetoothRemoteGATTDescriptor.prototype.characteristic;
+/** @type {!UUID} */ BluetoothRemoteGATTDescriptor.prototype.uuid;
+/** @type {?DataView} */ BluetoothRemoteGATTDescriptor.prototype.value;
 /**
  * @return {!Promise<!DataView>}
  */
@@ -10105,6 +11997,7 @@ BluetoothRemoteGATTDescriptor.prototype.writeValue = function(value) {}
  * @private
  */
 function XRSystem() {}
+/** @type {?EventHandler} */ XRSystem.prototype.ondevicechange;
 /**
  * @param {!string} mode
  * @return {!Promise<!boolean>}
@@ -10122,6 +12015,16 @@ XRSystem.prototype.requestSession = function(mode,options) {}
  * @private
  */
 function SVGFEDropShadowElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGFEDropShadowElement.prototype.dx;
+/** @type {!SVGAnimatedNumber} */ SVGFEDropShadowElement.prototype.dy;
+/** @type {!SVGAnimatedString} */ SVGFEDropShadowElement.prototype.in1;
+/** @type {!SVGAnimatedNumber} */ SVGFEDropShadowElement.prototype.stdDeviationX;
+/** @type {!SVGAnimatedNumber} */ SVGFEDropShadowElement.prototype.stdDeviationY;
+/** @type {!SVGAnimatedLength} */ SVGFEDropShadowElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEDropShadowElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEDropShadowElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEDropShadowElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEDropShadowElement.prototype.y;
 /**
  * @param {!number} stdDeviationX
  * @param {!number} stdDeviationY
@@ -10135,6 +12038,20 @@ SVGFEDropShadowElement.prototype.setStdDeviation = function(stdDeviationX,stdDev
  * @param {!PannerOptions=} options
  */
 function PannerNode(context,options) {}
+/** @type {!AudioParam} */ PannerNode.prototype.orientationX;
+/** @type {!AudioParam} */ PannerNode.prototype.orientationY;
+/** @type {!AudioParam} */ PannerNode.prototype.orientationZ;
+/** @type {!AudioParam} */ PannerNode.prototype.positionX;
+/** @type {!AudioParam} */ PannerNode.prototype.positionY;
+/** @type {!AudioParam} */ PannerNode.prototype.positionZ;
+/** @type {!number} */ PannerNode.prototype.coneInnerAngle;
+/** @type {!number} */ PannerNode.prototype.coneOuterAngle;
+/** @type {!number} */ PannerNode.prototype.coneOuterGain;
+/** @type {!string} */ PannerNode.prototype.distanceModel;
+/** @type {!number} */ PannerNode.prototype.maxDistance;
+/** @type {!string} */ PannerNode.prototype.panningModel;
+/** @type {!number} */ PannerNode.prototype.refDistance;
+/** @type {!number} */ PannerNode.prototype.rolloffFactor;
 /**
  * @param {!number} x
  * @param {!number} y
@@ -10155,6 +12072,7 @@ PannerNode.prototype.setPosition = function(x,y,z) {}
  * @private
  */
 function AudioScheduledSourceNode() {}
+/** @type {?EventHandler} */ AudioScheduledSourceNode.prototype.onended;
 /**
  * @param {!number=} when
  * @return {undefined}
@@ -10179,6 +12097,19 @@ function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.prototype.CAPTURING_PHASE;
 /** @const {!number} */ Event.NONE;
 /** @const {!number} */ Event.prototype.NONE;
+/** @type {!boolean} */ Event.prototype.bubbles;
+/** @type {!boolean} */ Event.prototype.cancelable;
+/** @type {!boolean} */ Event.prototype.composed;
+/** @type {?EventTarget} */ Event.prototype.currentTarget;
+/** @type {!boolean} */ Event.prototype.defaultPrevented;
+/** @type {!number} */ Event.prototype.eventPhase;
+/** @type {!boolean} */ Event.prototype.isTrusted;
+/** @type {?EventTarget} */ Event.prototype.srcElement;
+/** @type {?EventTarget} */ Event.prototype.target;
+/** @type {!DOMHighResTimeStamp} */ Event.prototype.timeStamp;
+/** @type {!string} */ Event.prototype.type;
+/** @type {!boolean} */ Event.prototype.cancelBubble;
+/** @type {!boolean} */ Event.prototype.returnValue;
 /**
  * @return {undefined}
  */
@@ -10207,6 +12138,7 @@ Event.prototype.preventDefault = function() {}
  * @private
  */
 function TextTrackCueList() {}
+/** @type {!number} */ TextTrackCueList.prototype.length;
 /**
  * @param {!string} id
  * @return {?TextTrackCue}
@@ -10227,6 +12159,18 @@ function XMLHttpRequest() {}
 /** @const {!number} */ XMLHttpRequest.prototype.OPENED;
 /** @const {!number} */ XMLHttpRequest.UNSENT;
 /** @const {!number} */ XMLHttpRequest.prototype.UNSENT;
+/** @type {!number} */ XMLHttpRequest.prototype.readyState;
+/** @type {*} */ XMLHttpRequest.prototype.response;
+/** @type {!string} */ XMLHttpRequest.prototype.responseText;
+/** @type {!string} */ XMLHttpRequest.prototype.responseURL;
+/** @type {?Document} */ XMLHttpRequest.prototype.responseXML;
+/** @type {!number} */ XMLHttpRequest.prototype.status;
+/** @type {!string} */ XMLHttpRequest.prototype.statusText;
+/** @type {!XMLHttpRequestUpload} */ XMLHttpRequest.prototype.upload;
+/** @type {!NullableEventHandler} */ XMLHttpRequest.prototype.onreadystatechange;
+/** @type {!string} */ XMLHttpRequest.prototype.responseType;
+/** @type {!number} */ XMLHttpRequest.prototype.timeout;
+/** @type {!boolean} */ XMLHttpRequest.prototype.withCredentials;
 /**
  * @return {!string}
  */
@@ -10271,6 +12215,10 @@ XMLHttpRequest.prototype.open = function(arg0,arg1,arg2,arg3,arg4) {}
  * @private
  */
 function HTMLProgressElement() {}
+/** @type {!NodeList} */ HTMLProgressElement.prototype.labels;
+/** @type {!number} */ HTMLProgressElement.prototype.position;
+/** @type {!number} */ HTMLProgressElement.prototype.max;
+/** @type {!number} */ HTMLProgressElement.prototype.value;
 /**
  * @constructor
  * @extends {DOMRectReadOnly}
@@ -10280,6 +12228,10 @@ function HTMLProgressElement() {}
  * @param {!number=} height
  */
 function DOMRect(x,y,width,height) {}
+/** @type {!number} */ DOMRect.prototype.height;
+/** @type {!number} */ DOMRect.prototype.width;
+/** @type {!number} */ DOMRect.prototype.x;
+/** @type {!number} */ DOMRect.prototype.y;
 /**
  * @param {!DOMRectInit=} other
  * @return {!DOMRect}
@@ -10303,6 +12255,8 @@ XPathExpression.prototype.evaluate = function(contextNode,type,result) {}
  * @private
  */
 function OfflineAudioContext() {}
+/** @type {!number} */ OfflineAudioContext.prototype.length;
+/** @type {?OfflineAudioCompletionEventHandler} */ OfflineAudioContext.prototype.oncomplete;
 /**
  * @param {!number} suspendTime
  * @return {!Promise<undefined>}
@@ -10322,6 +12276,9 @@ OfflineAudioContext.prototype.startRendering = function() {}
  * @private
  */
 function SVGGraphicsElement() {}
+/** @type {!SVGAnimatedTransformList} */ SVGGraphicsElement.prototype.transform;
+/** @type {!SVGStringList} */ SVGGraphicsElement.prototype.requiredExtensions;
+/** @type {!SVGStringList} */ SVGGraphicsElement.prototype.systemLanguage;
 /**
  * @param {!SVGBoundingBoxOptions=} options
  * @return {!DOMRect}
@@ -10341,6 +12298,14 @@ SVGGraphicsElement.prototype.getCTM = function() {}
  * @private
  */
 function HTMLTableRowElement() {}
+/** @type {!HTMLCollection} */ HTMLTableRowElement.prototype.cells;
+/** @type {!number} */ HTMLTableRowElement.prototype.rowIndex;
+/** @type {!number} */ HTMLTableRowElement.prototype.sectionRowIndex;
+/** @type {!string} */ HTMLTableRowElement.prototype.align;
+/** @type {!string} */ HTMLTableRowElement.prototype.bgColor;
+/** @type {!string} */ HTMLTableRowElement.prototype.ch;
+/** @type {!string} */ HTMLTableRowElement.prototype.chOff;
+/** @type {!string} */ HTMLTableRowElement.prototype.vAlign;
 /**
  * @param {!number=} index
  * @return {!HTMLTableCellElement}
@@ -10379,6 +12344,7 @@ Geolocation.prototype.clearWatch = function(watchId) {}
  * @constructor
  */
 function TextEncoder() {}
+/** @type {!string} */ TextEncoder.prototype.encoding;
 /**
  * @param {!string=} input
  * @return {!Uint8Array}
@@ -10413,6 +12379,13 @@ StorageManager.prototype.persist = function() {}
  * @private
  */
 function CSSFontFeatureValuesRule() {}
+/** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.annotation;
+/** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.characterVariant;
+/** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.ornaments;
+/** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.styleset;
+/** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.stylistic;
+/** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.swash;
+/** @type {!CSSOMString} */ CSSFontFeatureValuesRule.prototype.fontFamily;
 /**
  * @constructor
  * @private
@@ -10424,6 +12397,11 @@ WebAssembly.RuntimeError = function() {}
  * @private
  */
 function BluetoothRemoteGATTCharacteristic() {}
+/** @type {!BluetoothCharacteristicProperties} */ BluetoothRemoteGATTCharacteristic.prototype.properties;
+/** @type {!BluetoothRemoteGATTService} */ BluetoothRemoteGATTCharacteristic.prototype.service;
+/** @type {!UUID} */ BluetoothRemoteGATTCharacteristic.prototype.uuid;
+/** @type {?DataView} */ BluetoothRemoteGATTCharacteristic.prototype.value;
+/** @type {!NullableEventHandler} */ BluetoothRemoteGATTCharacteristic.prototype.oncharacteristicvaluechanged;
 /**
  * @param {!BufferSource} value
  * @return {!Promise<undefined>}
@@ -10467,12 +12445,20 @@ BluetoothRemoteGATTCharacteristic.prototype.stopNotifications = function() {}
  * @private
  */
 function RadioNodeList() {}
+/** @type {!string} */ RadioNodeList.prototype.value;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function BaseAudioContext() {}
+/** @type {!AudioWorklet} */ BaseAudioContext.prototype.audioWorklet;
+/** @type {!number} */ BaseAudioContext.prototype.currentTime;
+/** @type {!AudioDestinationNode} */ BaseAudioContext.prototype.destination;
+/** @type {!AudioListener} */ BaseAudioContext.prototype.listener;
+/** @type {!number} */ BaseAudioContext.prototype.sampleRate;
+/** @type {!string} */ BaseAudioContext.prototype.state;
+/** @type {!NullableEventHandler} */ BaseAudioContext.prototype.onstatechange;
 /**
  * @return {!PannerNode}
  */
@@ -10572,6 +12558,13 @@ BaseAudioContext.prototype.createPeriodicWave = function(real,imag,constraints) 
  * @private
  */
 function HTMLMeterElement() {}
+/** @type {!NodeList} */ HTMLMeterElement.prototype.labels;
+/** @type {!number} */ HTMLMeterElement.prototype.high;
+/** @type {!number} */ HTMLMeterElement.prototype.low;
+/** @type {!number} */ HTMLMeterElement.prototype.max;
+/** @type {!number} */ HTMLMeterElement.prototype.min;
+/** @type {!number} */ HTMLMeterElement.prototype.optimum;
+/** @type {!number} */ HTMLMeterElement.prototype.value;
 /**
  * @constructor
  * @private
@@ -10585,6 +12578,8 @@ function PerformanceNavigation() {}
 /** @const {!number} */ PerformanceNavigation.prototype.TYPE_RELOAD;
 /** @const {!number} */ PerformanceNavigation.TYPE_RESERVED;
 /** @const {!number} */ PerformanceNavigation.prototype.TYPE_RESERVED;
+/** @type {!number} */ PerformanceNavigation.prototype.redirectCount;
+/** @type {!number} */ PerformanceNavigation.prototype.type;
 /**
  * @return {!Object}
  */
@@ -10594,6 +12589,8 @@ PerformanceNavigation.prototype.toJSON = function() {}
  * @private
  */
 function SpeechRecognitionResult() {}
+/** @type {!boolean} */ SpeechRecognitionResult.prototype.isFinal;
+/** @type {!number} */ SpeechRecognitionResult.prototype.length;
 /**
  * @param {!number} index
  * @return {!SpeechRecognitionAlternative}
@@ -10606,11 +12603,20 @@ SpeechRecognitionResult.prototype.item = function(index) {}
  * @param {!SpeechSynthesisEventInit} eventInitDict
  */
 function SpeechSynthesisEvent(type,eventInitDict) {}
+/** @type {!number} */ SpeechSynthesisEvent.prototype.charIndex;
+/** @type {!number} */ SpeechSynthesisEvent.prototype.charLength;
+/** @type {!number} */ SpeechSynthesisEvent.prototype.elapsedTime;
+/** @type {!string} */ SpeechSynthesisEvent.prototype.name;
+/** @type {!SpeechSynthesisUtterance} */ SpeechSynthesisEvent.prototype.utterance;
 /**
  * @constructor
  * @private
  */
 function IDBKeyRange() {}
+/** @type {*} */ IDBKeyRange.prototype.lower;
+/** @type {!boolean} */ IDBKeyRange.prototype.lowerOpen;
+/** @type {*} */ IDBKeyRange.prototype.upper;
+/** @type {!boolean} */ IDBKeyRange.prototype.upperOpen;
 /**
  * @param {*} upper
  * @param {!boolean=} open
@@ -10648,6 +12654,7 @@ IDBKeyRange.lowerBound = function(lower,open) {}
  * @param {(!CSSPseudoElement|!Element)} newTarget
  */
 function ShadowAnimation(source,newTarget) {}
+/** @type {!Animation} */ ShadowAnimation.prototype.sourceAnimation;
 /**
  * @constructor
  * @private
@@ -10665,6 +12672,7 @@ Permissions.prototype.query = function(permissionDesc) {}
  * @param {!MediaElementAudioSourceOptions} options
  */
 function MediaElementAudioSourceNode(context,options) {}
+/** @type {!HTMLMediaElement} */ MediaElementAudioSourceNode.prototype.mediaElement;
 /**
  * @constructor
  * @extends {DOMException}
@@ -10672,12 +12680,27 @@ function MediaElementAudioSourceNode(context,options) {}
  * @param {!string=} message
  */
 function OverconstrainedError(constraint,message) {}
+/** @type {!string} */ OverconstrainedError.prototype.constraint;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLButtonElement() {}
+/** @type {?HTMLFormElement} */ HTMLButtonElement.prototype.form;
+/** @type {!NodeList} */ HTMLButtonElement.prototype.labels;
+/** @type {!string} */ HTMLButtonElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLButtonElement.prototype.validity;
+/** @type {!boolean} */ HTMLButtonElement.prototype.willValidate;
+/** @type {!boolean} */ HTMLButtonElement.prototype.disabled;
+/** @type {!string} */ HTMLButtonElement.prototype.formAction;
+/** @type {!string} */ HTMLButtonElement.prototype.formEnctype;
+/** @type {!string} */ HTMLButtonElement.prototype.formMethod;
+/** @type {!boolean} */ HTMLButtonElement.prototype.formNoValidate;
+/** @type {!string} */ HTMLButtonElement.prototype.formTarget;
+/** @type {!string} */ HTMLButtonElement.prototype.name;
+/** @type {!string} */ HTMLButtonElement.prototype.type;
+/** @type {!string} */ HTMLButtonElement.prototype.value;
 /**
  * @param {!string} error
  * @return {undefined}
@@ -10698,6 +12721,10 @@ HTMLButtonElement.prototype.checkValidity = function() {}
  * @param {!DeviceOrientationEventInit=} eventInitDict
  */
 function DeviceOrientationEvent(type,eventInitDict) {}
+/** @type {!boolean} */ DeviceOrientationEvent.prototype.absolute;
+/** @type {?number} */ DeviceOrientationEvent.prototype.alpha;
+/** @type {?number} */ DeviceOrientationEvent.prototype.beta;
+/** @type {?number} */ DeviceOrientationEvent.prototype.gamma;
 /**
  * @return {!Promise<!string>}
  */
@@ -10708,6 +12735,7 @@ DeviceOrientationEvent.requestPermission = function() {}
  * @private
  */
 function HTMLHeadingElement() {}
+/** @type {!string} */ HTMLHeadingElement.prototype.align;
 /**
  * @constructor
  * @param {!HTMLFormElement=} form
@@ -10752,6 +12780,11 @@ FormData.prototype.append = function(arg0,arg1,arg2) {}
  * @private
  */
 function IDBObjectStore() {}
+/** @type {!boolean} */ IDBObjectStore.prototype.autoIncrement;
+/** @type {!DOMStringList} */ IDBObjectStore.prototype.indexNames;
+/** @type {*} */ IDBObjectStore.prototype.keyPath;
+/** @type {!IDBTransaction} */ IDBObjectStore.prototype.transaction;
+/** @type {!string} */ IDBObjectStore.prototype.name;
 /**
  * @param {*} value
  * @param {*=} key
@@ -10834,6 +12867,7 @@ IDBObjectStore.prototype.get = function(query) {}
  * @param {!ReadableStream} stream
  */
 function ReadableStreamDefaultReader(stream) {}
+/** @type {!Promise<undefined>} */ ReadableStreamDefaultReader.prototype.closed;
 /**
  * @param {*=} reason
  * @return {!Promise<undefined>}
@@ -10853,6 +12887,8 @@ ReadableStreamDefaultReader.prototype.releaseLock = function() {}
  * @private
  */
 function HTMLLegendElement() {}
+/** @type {?HTMLFormElement} */ HTMLLegendElement.prototype.form;
+/** @type {!string} */ HTMLLegendElement.prototype.align;
 /**
  * @constructor
  * @extends {Event}
@@ -10860,17 +12896,30 @@ function HTMLLegendElement() {}
  * @param {!TrackEventInit=} eventInitDict
  */
 function TrackEvent(type,eventInitDict) {}
+/** @type {(!VideoTrack|!AudioTrack|!TextTrack)} */ TrackEvent.prototype.track;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFEOffsetElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGFEOffsetElement.prototype.dx;
+/** @type {!SVGAnimatedNumber} */ SVGFEOffsetElement.prototype.dy;
+/** @type {!SVGAnimatedString} */ SVGFEOffsetElement.prototype.in1;
+/** @type {!SVGAnimatedLength} */ SVGFEOffsetElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEOffsetElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEOffsetElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEOffsetElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEOffsetElement.prototype.y;
 /**
  * @constructor
  * @private
  */
 function TreeWalker() {}
+/** @type {?NodeFilter} */ TreeWalker.prototype.filter;
+/** @type {!Node} */ TreeWalker.prototype.root;
+/** @type {!number} */ TreeWalker.prototype.whatToShow;
+/** @type {!Node} */ TreeWalker.prototype.currentNode;
 /**
  * @return {?Node}
  */
@@ -10911,6 +12960,31 @@ function SVGSVGElement() {}
 /** @const {!number} */ SVGSVGElement.prototype.SVG_ZOOMANDPAN_MAGNIFY;
 /** @const {!number} */ SVGSVGElement.SVG_ZOOMANDPAN_UNKNOWN;
 /** @const {!number} */ SVGSVGElement.prototype.SVG_ZOOMANDPAN_UNKNOWN;
+/** @type {!DOMPointReadOnly} */ SVGSVGElement.prototype.currentTranslate;
+/** @type {!SVGAnimatedLength} */ SVGSVGElement.prototype.height;
+/** @type {!SVGAnimatedLength} */ SVGSVGElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGSVGElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGSVGElement.prototype.y;
+/** @type {!number} */ SVGSVGElement.prototype.currentScale;
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGSVGElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedRect} */ SVGSVGElement.prototype.viewBox;
+/** @type {!number} */ SVGSVGElement.prototype.zoomAndPan;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onafterprint;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onbeforeprint;
+/** @type {!NullableOnBeforeUnloadEventHandler} */ SVGSVGElement.prototype.onbeforeunload;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onhashchange;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onlanguagechange;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onmessage;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onmessageerror;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onoffline;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.ononline;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onpagehide;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onpageshow;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onpopstate;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onrejectionhandled;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onstorage;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onunhandledrejection;
+/** @type {!NullableEventHandler} */ SVGSVGElement.prototype.onunload;
 /**
  * @param {!number} suspendHandleID
  * @return {undefined}
@@ -11006,6 +13080,10 @@ function WebGLObject() {}
  * @private
  */
 function RTCDtlsTransport() {}
+/** @type {!RTCIceTransport} */ RTCDtlsTransport.prototype.iceTransport;
+/** @type {!string} */ RTCDtlsTransport.prototype.state;
+/** @type {!NullableEventHandler} */ RTCDtlsTransport.prototype.onerror;
+/** @type {!NullableEventHandler} */ RTCDtlsTransport.prototype.onstatechange;
 /**
  * @return {!Array<!ArrayBuffer>}
  */
@@ -11023,6 +13101,12 @@ function EventSource(url,eventSourceInitDict) {}
 /** @const {!number} */ EventSource.prototype.CONNECTING;
 /** @const {!number} */ EventSource.OPEN;
 /** @const {!number} */ EventSource.prototype.OPEN;
+/** @type {!number} */ EventSource.prototype.readyState;
+/** @type {!string} */ EventSource.prototype.url;
+/** @type {!boolean} */ EventSource.prototype.withCredentials;
+/** @type {!NullableEventHandler} */ EventSource.prototype.onerror;
+/** @type {?MessageEventHandler} */ EventSource.prototype.onmessage;
+/** @type {?EventHandler} */ EventSource.prototype.onopen;
 /**
  * @return {undefined}
  */
@@ -11035,6 +13119,10 @@ EventSource.prototype.close = function() {}
  * @param {!number=} w
  */
 function DOMPointReadOnly(x,y,z,w) {}
+/** @type {!number} */ DOMPointReadOnly.prototype.w;
+/** @type {!number} */ DOMPointReadOnly.prototype.x;
+/** @type {!number} */ DOMPointReadOnly.prototype.y;
+/** @type {!number} */ DOMPointReadOnly.prototype.z;
 /**
  * @param {!DOMMatrixInit=} matrix
  * @return {!DOMPoint}
@@ -11055,6 +13143,10 @@ DOMPointReadOnly.fromPoint = function(other) {}
  * @private
  */
 function CharacterData() {}
+/** @type {!number} */ CharacterData.prototype.length;
+/** @type {!string} */ CharacterData.prototype.data;
+/** @type {?Element} */ CharacterData.prototype.nextElementSibling;
+/** @type {?Element} */ CharacterData.prototype.previousElementSibling;
 /**
  * @param {!string} data
  * @return {undefined}
@@ -11110,6 +13202,12 @@ CharacterData.prototype.replaceWith = function(nodes) {}
  * @private
  */
 function MediaKeySession() {}
+/** @type {!Promise<undefined>} */ MediaKeySession.prototype.closed;
+/** @type {!number} */ MediaKeySession.prototype.expiration;
+/** @type {!MediaKeyStatusMap} */ MediaKeySession.prototype.keyStatuses;
+/** @type {!string} */ MediaKeySession.prototype.sessionId;
+/** @type {!NullableEventHandler} */ MediaKeySession.prototype.onkeystatuseschange;
+/** @type {!NullableEventHandler} */ MediaKeySession.prototype.onmessage;
 /**
  * @param {!string} sessionId
  * @return {!Promise<!boolean>}
@@ -11165,6 +13263,37 @@ function HTMLMediaElement() {}
 /** @const {!number} */ HTMLMediaElement.prototype.NETWORK_LOADING;
 /** @const {!number} */ HTMLMediaElement.NETWORK_NO_SOURCE;
 /** @const {!number} */ HTMLMediaElement.prototype.NETWORK_NO_SOURCE;
+/** @type {!AudioTrackList} */ HTMLMediaElement.prototype.audioTracks;
+/** @type {!TimeRanges} */ HTMLMediaElement.prototype.buffered;
+/** @type {!string} */ HTMLMediaElement.prototype.currentSrc;
+/** @type {!number} */ HTMLMediaElement.prototype.duration;
+/** @type {!boolean} */ HTMLMediaElement.prototype.ended;
+/** @type {?MediaError} */ HTMLMediaElement.prototype.error;
+/** @type {!number} */ HTMLMediaElement.prototype.networkState;
+/** @type {!boolean} */ HTMLMediaElement.prototype.paused;
+/** @type {!TimeRanges} */ HTMLMediaElement.prototype.played;
+/** @type {!number} */ HTMLMediaElement.prototype.readyState;
+/** @type {!TimeRanges} */ HTMLMediaElement.prototype.seekable;
+/** @type {!boolean} */ HTMLMediaElement.prototype.seeking;
+/** @type {!TextTrackList} */ HTMLMediaElement.prototype.textTracks;
+/** @type {!VideoTrackList} */ HTMLMediaElement.prototype.videoTracks;
+/** @type {!boolean} */ HTMLMediaElement.prototype.autoplay;
+/** @type {!boolean} */ HTMLMediaElement.prototype.controls;
+/** @type {?string} */ HTMLMediaElement.prototype.crossOrigin;
+/** @type {!number} */ HTMLMediaElement.prototype.currentTime;
+/** @type {!boolean} */ HTMLMediaElement.prototype.defaultMuted;
+/** @type {!number} */ HTMLMediaElement.prototype.defaultPlaybackRate;
+/** @type {!boolean} */ HTMLMediaElement.prototype.loop;
+/** @type {!boolean} */ HTMLMediaElement.prototype.muted;
+/** @type {!number} */ HTMLMediaElement.prototype.playbackRate;
+/** @type {!string} */ HTMLMediaElement.prototype.preload;
+/** @type {!boolean} */ HTMLMediaElement.prototype.preservesPitch;
+/** @type {!string} */ HTMLMediaElement.prototype.src;
+/** @type {?MediaProvider} */ HTMLMediaElement.prototype.srcObject;
+/** @type {!number} */ HTMLMediaElement.prototype.volume;
+/** @type {?MediaKeys} */ HTMLMediaElement.prototype.mediaKeys;
+/** @type {!NullableEventHandler} */ HTMLMediaElement.prototype.onencrypted;
+/** @type {!NullableEventHandler} */ HTMLMediaElement.prototype.onwaitingforkey;
 /**
  * @return {!Promise<undefined>}
  */
@@ -11208,12 +13337,21 @@ HTMLMediaElement.prototype.fastSeek = function(time) {}
  * @private
  */
 function BarProp() {}
+/** @type {!boolean} */ BarProp.prototype.visible;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLFieldSetElement() {}
+/** @type {!HTMLCollection} */ HTMLFieldSetElement.prototype.elements;
+/** @type {?HTMLFormElement} */ HTMLFieldSetElement.prototype.form;
+/** @type {!string} */ HTMLFieldSetElement.prototype.type;
+/** @type {!string} */ HTMLFieldSetElement.prototype.validationMessage;
+/** @type {!ValidityState} */ HTMLFieldSetElement.prototype.validity;
+/** @type {!boolean} */ HTMLFieldSetElement.prototype.willValidate;
+/** @type {!boolean} */ HTMLFieldSetElement.prototype.disabled;
+/** @type {!string} */ HTMLFieldSetElement.prototype.name;
 /**
  * @param {!string} error
  * @return {undefined}
@@ -11234,6 +13372,9 @@ HTMLFieldSetElement.prototype.checkValidity = function() {}
  * @param {!OscillatorOptions=} options
  */
 function OscillatorNode(context,options) {}
+/** @type {!AudioParam} */ OscillatorNode.prototype.detune;
+/** @type {!AudioParam} */ OscillatorNode.prototype.frequency;
+/** @type {!string} */ OscillatorNode.prototype.type;
 /**
  * @param {!PeriodicWave} periodicWave
  * @return {undefined}
@@ -11245,6 +13386,10 @@ OscillatorNode.prototype.setPeriodicWave = function(periodicWave) {}
  * @private
  */
 function TextTrackList() {}
+/** @type {!number} */ TextTrackList.prototype.length;
+/** @type {?TrackEventHandler} */ TextTrackList.prototype.onaddtrack;
+/** @type {?EventHandler} */ TextTrackList.prototype.onchange;
+/** @type {!NullableEventHandler} */ TextTrackList.prototype.onremovetrack;
 /**
  * @param {!string} id
  * @return {?TextTrack}
@@ -11255,6 +13400,15 @@ TextTrackList.prototype.getTrackById = function(id) {}
  * @private
  */
 function BluetoothCharacteristicProperties() {}
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.authenticatedSignedWrites;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.broadcast;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.indicate;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.notify;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.read;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.reliableWrite;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.writableAuxiliaries;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.write;
+/** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.writeWithoutResponse;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -11266,6 +13420,17 @@ function SVGTitleElement() {}
  * @private
  */
 function ValidityState() {}
+/** @type {!boolean} */ ValidityState.prototype.badInput;
+/** @type {!boolean} */ ValidityState.prototype.customError;
+/** @type {!boolean} */ ValidityState.prototype.patternMismatch;
+/** @type {!boolean} */ ValidityState.prototype.rangeOverflow;
+/** @type {!boolean} */ ValidityState.prototype.rangeUnderflow;
+/** @type {!boolean} */ ValidityState.prototype.stepMismatch;
+/** @type {!boolean} */ ValidityState.prototype.tooLong;
+/** @type {!boolean} */ ValidityState.prototype.tooShort;
+/** @type {!boolean} */ ValidityState.prototype.typeMismatch;
+/** @type {!boolean} */ ValidityState.prototype.valid;
+/** @type {!boolean} */ ValidityState.prototype.valueMissing;
 /**
  * @constructor
  * @param {!MutationCallback} callback
@@ -11291,6 +13456,76 @@ MutationObserver.prototype.observe = function(target,options) {}
  * @private
  */
 function Element() {}
+/** @type {!NamedNodeMap} */ Element.prototype.attributes;
+/** @type {!DOMTokenList} */ Element.prototype.classList;
+/** @type {!string} */ Element.prototype.localName;
+/** @type {?string} */ Element.prototype.namespaceURI;
+/** @type {?string} */ Element.prototype.prefix;
+/** @type {?ShadowRoot} */ Element.prototype.shadowRoot;
+/** @type {!string} */ Element.prototype.tagName;
+/** @type {!string} */ Element.prototype.className;
+/** @type {!string} */ Element.prototype.id;
+/** @type {!string} */ Element.prototype.slot;
+/** @type {!number} */ Element.prototype.clientHeight;
+/** @type {!number} */ Element.prototype.clientLeft;
+/** @type {!number} */ Element.prototype.clientTop;
+/** @type {!number} */ Element.prototype.clientWidth;
+/** @type {!number} */ Element.prototype.scrollHeight;
+/** @type {!number} */ Element.prototype.scrollWidth;
+/** @type {!number} */ Element.prototype.scrollLeft;
+/** @type {!number} */ Element.prototype.scrollTop;
+/** @type {!string} */ Element.prototype.outerHTML;
+/** @type {?EventHandler} */ Element.prototype.onfullscreenchange;
+/** @type {?EventHandler} */ Element.prototype.onfullscreenerror;
+/** @type {!number} */ Element.prototype.childElementCount;
+/** @type {!HTMLCollection} */ Element.prototype.children;
+/** @type {?Element} */ Element.prototype.firstElementChild;
+/** @type {?Element} */ Element.prototype.lastElementChild;
+/** @type {?HTMLSlotElement} */ Element.prototype.assignedSlot;
+/** @type {?Element} */ Element.prototype.nextElementSibling;
+/** @type {?Element} */ Element.prototype.previousElementSibling;
+/** @type {!string} */ Element.prototype.innerHTML;
+/** @type {!string} */ Element.prototype.ariaAtomic;
+/** @type {!string} */ Element.prototype.ariaAutoComplete;
+/** @type {!string} */ Element.prototype.ariaBusy;
+/** @type {!string} */ Element.prototype.ariaChecked;
+/** @type {!string} */ Element.prototype.ariaColCount;
+/** @type {!string} */ Element.prototype.ariaColIndex;
+/** @type {!string} */ Element.prototype.ariaColIndexText;
+/** @type {!string} */ Element.prototype.ariaColSpan;
+/** @type {!string} */ Element.prototype.ariaCurrent;
+/** @type {!string} */ Element.prototype.ariaDescription;
+/** @type {!string} */ Element.prototype.ariaDisabled;
+/** @type {!string} */ Element.prototype.ariaExpanded;
+/** @type {!string} */ Element.prototype.ariaHasPopup;
+/** @type {!string} */ Element.prototype.ariaHidden;
+/** @type {!string} */ Element.prototype.ariaInvalid;
+/** @type {!string} */ Element.prototype.ariaKeyShortcuts;
+/** @type {!string} */ Element.prototype.ariaLabel;
+/** @type {!string} */ Element.prototype.ariaLevel;
+/** @type {!string} */ Element.prototype.ariaLive;
+/** @type {!string} */ Element.prototype.ariaModal;
+/** @type {!string} */ Element.prototype.ariaMultiLine;
+/** @type {!string} */ Element.prototype.ariaMultiSelectable;
+/** @type {!string} */ Element.prototype.ariaOrientation;
+/** @type {!string} */ Element.prototype.ariaPlaceholder;
+/** @type {!string} */ Element.prototype.ariaPosInSet;
+/** @type {!string} */ Element.prototype.ariaPressed;
+/** @type {!string} */ Element.prototype.ariaReadOnly;
+/** @type {!string} */ Element.prototype.ariaRequired;
+/** @type {!string} */ Element.prototype.ariaRoleDescription;
+/** @type {!string} */ Element.prototype.ariaRowCount;
+/** @type {!string} */ Element.prototype.ariaRowIndex;
+/** @type {!string} */ Element.prototype.ariaRowIndexText;
+/** @type {!string} */ Element.prototype.ariaRowSpan;
+/** @type {!string} */ Element.prototype.ariaSelected;
+/** @type {!string} */ Element.prototype.ariaSetSize;
+/** @type {!string} */ Element.prototype.ariaSort;
+/** @type {!string} */ Element.prototype.ariaValueMax;
+/** @type {!string} */ Element.prototype.ariaValueMin;
+/** @type {!string} */ Element.prototype.ariaValueNow;
+/** @type {!string} */ Element.prototype.ariaValueText;
+/** @type {?string} */ Element.prototype.role;
 /**
  * @param {!DOMQuadInit} quad
  * @param {!GeometryNode} from
@@ -11578,6 +13813,7 @@ Element.prototype.closest = function(selectors) {}
  * @param {!DragEventInit=} eventInitDict
  */
 function DragEvent(type,eventInitDict) {}
+/** @type {?DataTransfer} */ DragEvent.prototype.dataTransfer;
 /**
  * @constructor
  * @extends {Error}
@@ -11635,12 +13871,17 @@ function DOMException(message,name) {}
 /** @const {!number} */ DOMException.prototype.VALIDATION_ERR;
 /** @const {!number} */ DOMException.WRONG_DOCUMENT_ERR;
 /** @const {!number} */ DOMException.prototype.WRONG_DOCUMENT_ERR;
+/** @type {!number} */ DOMException.prototype.code;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGStyleElement() {}
+/** @type {!string} */ SVGStyleElement.prototype.media;
+/** @type {!string} */ SVGStyleElement.prototype.title;
+/** @type {!string} */ SVGStyleElement.prototype.type;
+/** @type {?CSSStyleSheet} */ SVGStyleElement.prototype.sheet;
 /**
  * @constructor
  * @extends {Event}
@@ -11648,12 +13889,27 @@ function SVGStyleElement() {}
  * @param {!BluetoothAdvertisingEventInit} init
  */
 function BluetoothAdvertisingEvent(type,init) {}
+/** @type {?number} */ BluetoothAdvertisingEvent.prototype.appearance;
+/** @type {!BluetoothDevice} */ BluetoothAdvertisingEvent.prototype.device;
+/** @type {!BluetoothManufacturerDataMap} */ BluetoothAdvertisingEvent.prototype.manufacturerData;
+/** @type {?string} */ BluetoothAdvertisingEvent.prototype.name;
+/** @type {?number} */ BluetoothAdvertisingEvent.prototype.rssi;
+/** @type {!BluetoothServiceDataMap} */ BluetoothAdvertisingEvent.prototype.serviceData;
+/** @type {?number} */ BluetoothAdvertisingEvent.prototype.txPower;
+/** @type {!Array<!UUID>} */ BluetoothAdvertisingEvent.prototype.uuids;
 /**
  * @constructor
  * @extends {SVGGraphicsElement}
  * @private
  */
 function SVGImageElement() {}
+/** @type {!SVGAnimatedLength} */ SVGImageElement.prototype.height;
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGImageElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedLength} */ SVGImageElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGImageElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGImageElement.prototype.y;
+/** @type {?string} */ SVGImageElement.prototype.crossOrigin;
+/** @type {!SVGAnimatedString} */ SVGImageElement.prototype.href;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -11665,6 +13921,15 @@ function FileReader() {}
 /** @const {!number} */ FileReader.prototype.EMPTY;
 /** @const {!number} */ FileReader.LOADING;
 /** @const {!number} */ FileReader.prototype.LOADING;
+/** @type {?DOMException} */ FileReader.prototype.error;
+/** @type {!number} */ FileReader.prototype.readyState;
+/** @type {(!string|!ArrayBuffer)} */ FileReader.prototype.result;
+/** @type {?ProgressEventHandler} */ FileReader.prototype.onabort;
+/** @type {?ProgressEventHandler} */ FileReader.prototype.onerror;
+/** @type {?ProgressEventHandler} */ FileReader.prototype.onload;
+/** @type {?ProgressEventHandler} */ FileReader.prototype.onloadend;
+/** @type {?ProgressEventHandler} */ FileReader.prototype.onloadstart;
+/** @type {?ProgressEventHandler} */ FileReader.prototype.onprogress;
 /**
  * @param {!Blob} blob
  * @return {undefined}
@@ -11696,11 +13961,14 @@ FileReader.prototype.readAsArrayBuffer = function(blob) {}
  * @private
  */
 function BluetoothPermissionResult() {}
+/** @type {!Array<!BluetoothDevice>} */ BluetoothPermissionResult.prototype.devices;
 /**
  * @constructor
  * @private
  */
 function RTCRtpReceiver() {}
+/** @type {!MediaStreamTrack} */ RTCRtpReceiver.prototype.track;
+/** @type {?RTCDtlsTransport} */ RTCRtpReceiver.prototype.transport;
 /**
  * @return {!Promise<!RTCStatsReport>}
  */
@@ -11728,12 +13996,14 @@ RTCRtpReceiver.prototype.getContributingSources = function() {}
  * @private
  */
 function AuthenticatorAttestationResponse() {}
+/** @type {!ArrayBuffer} */ AuthenticatorAttestationResponse.prototype.attestationObject;
 /**
  * @constructor
  * @extends {XRSpace}
  * @private
  */
 function XRReferenceSpace() {}
+/** @type {?XRReferenceSpaceEventHandler} */ XRReferenceSpace.prototype.onreset;
 /**
  * @param {!XRRigidTransform} originOffset
  * @return {!XRReferenceSpace}
@@ -12885,6 +15155,8 @@ function WebGL2RenderingContext() {}
 /** @const {!GLenum} */ WebGL2RenderingContext.prototype.VERTEX_ATTRIB_ARRAY_INTEGER;
 /** @const {!GLenum} */ WebGL2RenderingContext.WAIT_FAILED;
 /** @const {!GLenum} */ WebGL2RenderingContext.prototype.WAIT_FAILED;
+/** @type {!GLsizei} */ WebGL2RenderingContext.prototype.drawingBufferHeight;
+/** @type {!GLsizei} */ WebGL2RenderingContext.prototype.drawingBufferWidth;
 /**
  * @param {?WebGLBuffer} buffer
  * @return {!GLboolean}
@@ -14427,12 +16699,32 @@ WebGL2RenderingContext.prototype.isShader = function(shader) {}
  * @private
  */
 function SourceBufferList() {}
+/** @type {!number} */ SourceBufferList.prototype.length;
+/** @type {!NullableEventHandler} */ SourceBufferList.prototype.onaddsourcebuffer;
+/** @type {!NullableEventHandler} */ SourceBufferList.prototype.onremovesourcebuffer;
 /**
  * @constructor
  * @param {!RequestInfo} input
  * @param {!RequestInit=} init
  */
 function Request(input,init) {}
+/** @type {!string} */ Request.prototype.cache;
+/** @type {!string} */ Request.prototype.credentials;
+/** @type {!string} */ Request.prototype.destination;
+/** @type {!Headers} */ Request.prototype.headers;
+/** @type {!string} */ Request.prototype.integrity;
+/** @type {!boolean} */ Request.prototype.isHistoryNavigation;
+/** @type {!boolean} */ Request.prototype.isReloadNavigation;
+/** @type {!boolean} */ Request.prototype.keepalive;
+/** @type {!string} */ Request.prototype.method;
+/** @type {!string} */ Request.prototype.mode;
+/** @type {!string} */ Request.prototype.redirect;
+/** @type {!string} */ Request.prototype.referrer;
+/** @type {!string} */ Request.prototype.referrerPolicy;
+/** @type {!AbortSignal} */ Request.prototype.signal;
+/** @type {!string} */ Request.prototype.url;
+/** @type {?ReadableStream} */ Request.prototype.body;
+/** @type {!boolean} */ Request.prototype.bodyUsed;
 /**
  * @return {!Promise<!Blob>}
  */
@@ -14463,6 +16755,9 @@ Request.prototype.text = function() {}
  * @private
  */
 function DocumentType() {}
+/** @type {!string} */ DocumentType.prototype.name;
+/** @type {!string} */ DocumentType.prototype.publicId;
+/** @type {!string} */ DocumentType.prototype.systemId;
 /**
  * @param {...(!Node|!string)} nodes
  * @return {undefined}
@@ -14488,12 +16783,21 @@ DocumentType.prototype.replaceWith = function(nodes) {}
  * @private
  */
 function HTMLSourceElement() {}
+/** @type {!number} */ HTMLSourceElement.prototype.height;
+/** @type {!string} */ HTMLSourceElement.prototype.media;
+/** @type {!string} */ HTMLSourceElement.prototype.sizes;
+/** @type {!string} */ HTMLSourceElement.prototype.src;
+/** @type {!string} */ HTMLSourceElement.prototype.srcset;
+/** @type {!string} */ HTMLSourceElement.prototype.type;
+/** @type {!number} */ HTMLSourceElement.prototype.width;
 /**
  * @record
  * @extends {BaseAudioContext}
  * @private
  */
 function AudioContext() {}
+/** @type {!number} */ AudioContext.prototype.baseLatency;
+/** @type {!number} */ AudioContext.prototype.outputLatency;
 /**
  * @return {!Promise<undefined>}
  */
@@ -14572,6 +16876,10 @@ IIRFilterNode.prototype.getFrequencyResponse = function(frequencyHz,magResponse,
  * @param {!FederatedCredentialInit} data
  */
 function FederatedCredential(data) {}
+/** @type {?string} */ FederatedCredential.prototype.protocol;
+/** @type {!string} */ FederatedCredential.prototype.provider;
+/** @type {!string} */ FederatedCredential.prototype.iconURL;
+/** @type {!string} */ FederatedCredential.prototype.name;
 /**
  * @constructor
  * @extends {Worklet}
@@ -14584,6 +16892,7 @@ function AudioWorklet() {}
  * @private
  */
 function HTMLParagraphElement() {}
+/** @type {!string} */ HTMLParagraphElement.prototype.align;
 /**
  * @record
  * @private
@@ -14620,6 +16929,9 @@ ANGLE_instanced_arrays.prototype.drawElementsInstancedANGLE = function(mode,coun
  * @param {!string} name
  */
 function BroadcastChannel(name) {}
+/** @type {!string} */ BroadcastChannel.prototype.name;
+/** @type {?MessageEventHandler} */ BroadcastChannel.prototype.onmessage;
+/** @type {?MessageEventHandler} */ BroadcastChannel.prototype.onmessageerror;
 /**
  * @param {*} message
  * @return {undefined}
@@ -14647,17 +16959,36 @@ function OES_fbo_render_mipmap() {}
  * @private
  */
 function BeforeUnloadEvent() {}
+/** @type {!string} */ BeforeUnloadEvent.prototype.returnValue;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGFEImageElement() {}
+/** @type {!SVGAnimatedString} */ SVGFEImageElement.prototype.crossOrigin;
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGFEImageElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedString} */ SVGFEImageElement.prototype.href;
+/** @type {!SVGAnimatedLength} */ SVGFEImageElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEImageElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEImageElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEImageElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEImageElement.prototype.y;
 /**
  * @constructor
  * @private
  */
 function Location() {}
+/** @type {!DOMStringList} */ Location.prototype.ancestorOrigins;
+/** @type {!string} */ Location.prototype.origin;
+/** @type {!string} */ Location.prototype.hash;
+/** @type {!string} */ Location.prototype.host;
+/** @type {!string} */ Location.prototype.hostname;
+/** @type {!string} */ Location.prototype.pathname;
+/** @type {!string} */ Location.prototype.port;
+/** @type {!string} */ Location.prototype.protocol;
+/** @type {!string} */ Location.prototype.search;
+/** @type {!string} */ Location.prototype.href;
 /**
  * @return {undefined}
  */
@@ -14677,6 +17008,8 @@ Location.prototype.assign = function(url) {}
  * @private
  */
 function SpeechGrammar() {}
+/** @type {!string} */ SpeechGrammar.prototype.src;
+/** @type {!number} */ SpeechGrammar.prototype.weight;
 /**
  * @constructor
  * @private
@@ -14688,6 +17021,16 @@ WebAssembly.CompileError = function() {}
  * @private
  */
 function TextTrack() {}
+/** @type {?TextTrackCueList} */ TextTrack.prototype.activeCues;
+/** @type {?TextTrackCueList} */ TextTrack.prototype.cues;
+/** @type {!string} */ TextTrack.prototype.id;
+/** @type {!string} */ TextTrack.prototype.inBandMetadataTrackDispatchType;
+/** @type {!string} */ TextTrack.prototype.kind;
+/** @type {!string} */ TextTrack.prototype.label;
+/** @type {!string} */ TextTrack.prototype.language;
+/** @type {!string} */ TextTrack.prototype.mode;
+/** @type {?EventHandler} */ TextTrack.prototype.oncuechange;
+/** @type {?SourceBuffer} */ TextTrack.prototype.sourceBuffer;
 /**
  * @param {!TextTrackCue} cue
  * @return {undefined}
@@ -14704,6 +17047,8 @@ TextTrack.prototype.addCue = function(cue) {}
  * @private
  */
 function CSSPseudoElement() {}
+/** @type {!Element} */ CSSPseudoElement.prototype.element;
+/** @type {!CSSOMString} */ CSSPseudoElement.prototype.type;
 /**
  * @param {!DOMQuadInit} quad
  * @param {!GeometryNode} from
@@ -14745,6 +17090,7 @@ CSSPseudoElement.prototype.animate = function(keyframes,options) {}
  * @private
  */
 function HTMLAllCollection() {}
+/** @type {!number} */ HTMLAllCollection.prototype.length;
 /**
  * @param {!string} name
  * @return {(!HTMLCollection|!Element)}
@@ -14760,27 +17106,42 @@ HTMLAllCollection.prototype.item = function(nameOrIndex) {}
  * @private
  */
 function CryptoKey() {}
+/** @type {!Object} */ CryptoKey.prototype.algorithm;
+/** @type {!boolean} */ CryptoKey.prototype.extractable;
+/** @type {!string} */ CryptoKey.prototype.type;
+/** @type {!Object} */ CryptoKey.prototype.usages;
 /**
  * @constructor
  * @extends {SVGGeometryElement}
  * @private
  */
 function SVGLineElement() {}
+/** @type {!SVGAnimatedLength} */ SVGLineElement.prototype.x1;
+/** @type {!SVGAnimatedLength} */ SVGLineElement.prototype.x2;
+/** @type {!SVGAnimatedLength} */ SVGLineElement.prototype.y1;
+/** @type {!SVGAnimatedLength} */ SVGLineElement.prototype.y2;
 /**
  * @constructor
  * @private
  */
 function DeviceMotionEventAcceleration() {}
+/** @type {?number} */ DeviceMotionEventAcceleration.prototype.x;
+/** @type {?number} */ DeviceMotionEventAcceleration.prototype.y;
+/** @type {?number} */ DeviceMotionEventAcceleration.prototype.z;
 /**
  * @constructor
  * @private
  */
 function SVGAnimatedNumber() {}
+/** @type {!number} */ SVGAnimatedNumber.prototype.animVal;
+/** @type {!number} */ SVGAnimatedNumber.prototype.baseVal;
 /**
  * @constructor
  * @private
  */
 function SVGStringList() {}
+/** @type {!number} */ SVGStringList.prototype.length;
+/** @type {!number} */ SVGStringList.prototype.numberOfItems;
 /**
  * @param {!number} index
  * @return {!string}
@@ -14827,6 +17188,11 @@ function BluetoothServiceDataMap() {}
  * @private
  */
 function IDBCursor() {}
+/** @type {!string} */ IDBCursor.prototype.direction;
+/** @type {*} */ IDBCursor.prototype.key;
+/** @type {*} */ IDBCursor.prototype.primaryKey;
+/** @type {!IDBRequest} */ IDBCursor.prototype.request;
+/** @type {(!IDBObjectStore|!IDBIndex)} */ IDBCursor.prototype.source;
 /**
  * @param {*=} key
  * @return {undefined}
@@ -14858,6 +17224,11 @@ IDBCursor.prototype.advance = function(count) {}
  * @private
  */
 function RTCSctpTransport() {}
+/** @type {?number} */ RTCSctpTransport.prototype.maxChannels;
+/** @type {!number} */ RTCSctpTransport.prototype.maxMessageSize;
+/** @type {!string} */ RTCSctpTransport.prototype.state;
+/** @type {!RTCDtlsTransport} */ RTCSctpTransport.prototype.transport;
+/** @type {!NullableEventHandler} */ RTCSctpTransport.prototype.onstatechange;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -14872,6 +17243,15 @@ function SVGFEGaussianBlurElement() {}
 /** @const {!number} */ SVGFEGaussianBlurElement.prototype.SVG_EDGEMODE_UNKNOWN;
 /** @const {!number} */ SVGFEGaussianBlurElement.SVG_EDGEMODE_WRAP;
 /** @const {!number} */ SVGFEGaussianBlurElement.prototype.SVG_EDGEMODE_WRAP;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEGaussianBlurElement.prototype.edgeMode;
+/** @type {!SVGAnimatedString} */ SVGFEGaussianBlurElement.prototype.in1;
+/** @type {!SVGAnimatedNumber} */ SVGFEGaussianBlurElement.prototype.stdDeviationX;
+/** @type {!SVGAnimatedNumber} */ SVGFEGaussianBlurElement.prototype.stdDeviationY;
+/** @type {!SVGAnimatedLength} */ SVGFEGaussianBlurElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEGaussianBlurElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEGaussianBlurElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEGaussianBlurElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEGaussianBlurElement.prototype.y;
 /**
  * @param {!number} stdDeviationX
  * @param {!number} stdDeviationY
@@ -14884,6 +17264,20 @@ SVGFEGaussianBlurElement.prototype.setStdDeviation = function(stdDeviationX,stdD
  * @private
  */
 function HTMLTableElement() {}
+/** @type {!HTMLCollection} */ HTMLTableElement.prototype.rows;
+/** @type {!HTMLCollection} */ HTMLTableElement.prototype.tBodies;
+/** @type {?HTMLTableCaptionElement} */ HTMLTableElement.prototype.caption;
+/** @type {?HTMLTableSectionElement} */ HTMLTableElement.prototype.tFoot;
+/** @type {?HTMLTableSectionElement} */ HTMLTableElement.prototype.tHead;
+/** @type {!string} */ HTMLTableElement.prototype.align;
+/** @type {!string} */ HTMLTableElement.prototype.bgColor;
+/** @type {!string} */ HTMLTableElement.prototype.border;
+/** @type {!string} */ HTMLTableElement.prototype.cellPadding;
+/** @type {!string} */ HTMLTableElement.prototype.cellSpacing;
+/** @type {!string} */ HTMLTableElement.prototype.frame;
+/** @type {!string} */ HTMLTableElement.prototype.rules;
+/** @type {!string} */ HTMLTableElement.prototype.summary;
+/** @type {!string} */ HTMLTableElement.prototype.width;
 /**
  * @return {undefined}
  */
@@ -14935,6 +17329,7 @@ function OES_element_index_uint() {}
  * @param {!StereoPannerOptions=} options
  */
 function StereoPannerNode(context,options) {}
+/** @type {!AudioParam} */ StereoPannerNode.prototype.pan;
 /**
  * @constructor
  * @extends {AudioScheduledSourceNode}
@@ -14942,12 +17337,20 @@ function StereoPannerNode(context,options) {}
  * @param {!ConstantSourceOptions=} options
  */
 function ConstantSourceNode(context,options) {}
+/** @type {!AudioParam} */ ConstantSourceNode.prototype.offset;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function RTCIceTransport() {}
+/** @type {!string} */ RTCIceTransport.prototype.component;
+/** @type {!string} */ RTCIceTransport.prototype.gatheringState;
+/** @type {!string} */ RTCIceTransport.prototype.role;
+/** @type {!string} */ RTCIceTransport.prototype.state;
+/** @type {?EventHandler} */ RTCIceTransport.prototype.ongatheringstatechange;
+/** @type {?EventHandler} */ RTCIceTransport.prototype.onselectedcandidatepairchange;
+/** @type {?EventHandler} */ RTCIceTransport.prototype.onstatechange;
 /**
  * @return {?RTCIceParameters}
  */
@@ -14974,6 +17377,16 @@ RTCIceTransport.prototype.getSelectedCandidatePair = function() {}
  * @private
  */
 function BluetoothDevice() {}
+/** @type {?BluetoothRemoteGATTServer} */ BluetoothDevice.prototype.gatt;
+/** @type {!string} */ BluetoothDevice.prototype.id;
+/** @type {?string} */ BluetoothDevice.prototype.name;
+/** @type {!boolean} */ BluetoothDevice.prototype.watchingAdvertisements;
+/** @type {!NullableEventHandler} */ BluetoothDevice.prototype.onserviceadded;
+/** @type {!NullableEventHandler} */ BluetoothDevice.prototype.onservicechanged;
+/** @type {!NullableEventHandler} */ BluetoothDevice.prototype.onserviceremoved;
+/** @type {!NullableEventHandler} */ BluetoothDevice.prototype.oncharacteristicvaluechanged;
+/** @type {!NullableEventHandler} */ BluetoothDevice.prototype.onadvertisementreceived;
+/** @type {!NullableEventHandler} */ BluetoothDevice.prototype.ongattserverdisconnected;
 /**
  * @param {!WatchAdvertisementsOptions=} options
  * @return {!Promise<undefined>}
@@ -14985,6 +17398,124 @@ BluetoothDevice.prototype.watchAdvertisements = function(options) {}
  * @private
  */
 function HTMLElement() {}
+/** @type {!string} */ HTMLElement.prototype.accessKeyLabel;
+/** @type {!string} */ HTMLElement.prototype.accessKey;
+/** @type {!string} */ HTMLElement.prototype.autocapitalize;
+/** @type {!string} */ HTMLElement.prototype.dir;
+/** @type {!boolean} */ HTMLElement.prototype.draggable;
+/** @type {!boolean} */ HTMLElement.prototype.hidden;
+/** @type {!string} */ HTMLElement.prototype.innerText;
+/** @type {!string} */ HTMLElement.prototype.lang;
+/** @type {!boolean} */ HTMLElement.prototype.spellcheck;
+/** @type {!string} */ HTMLElement.prototype.title;
+/** @type {!boolean} */ HTMLElement.prototype.translate;
+/** @type {!number} */ HTMLElement.prototype.offsetHeight;
+/** @type {!number} */ HTMLElement.prototype.offsetLeft;
+/** @type {?Element} */ HTMLElement.prototype.offsetParent;
+/** @type {!number} */ HTMLElement.prototype.offsetTop;
+/** @type {!number} */ HTMLElement.prototype.offsetWidth;
+/** @type {!boolean} */ HTMLElement.prototype.isContentEditable;
+/** @type {!string} */ HTMLElement.prototype.contentEditable;
+/** @type {!string} */ HTMLElement.prototype.enterKeyHint;
+/** @type {!string} */ HTMLElement.prototype.inputMode;
+/** @type {!CSSStyleDeclaration} */ HTMLElement.prototype.style;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onabort;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onauxclick;
+/** @type {?FocusEventHandler} */ HTMLElement.prototype.onblur;
+/** @type {?EventHandler} */ HTMLElement.prototype.oncancel;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.oncanplay;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.oncanplaythrough;
+/** @type {?EventHandler} */ HTMLElement.prototype.onchange;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onclick;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onclose;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.oncuechange;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.ondblclick;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondrag;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondragend;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondragenter;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondragleave;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondragover;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondragstart;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondrop;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ondurationchange;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onemptied;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onended;
+/** @type {!NullableOnErrorEventHandler} */ HTMLElement.prototype.onerror;
+/** @type {?FocusEventHandler} */ HTMLElement.prototype.onfocus;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onformdata;
+/** @type {?InputEventHandler} */ HTMLElement.prototype.oninput;
+/** @type {?EventHandler} */ HTMLElement.prototype.oninvalid;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onkeydown;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onkeypress;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onkeyup;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onload;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onloadeddata;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onloadedmetadata;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onloadstart;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmousedown;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmouseenter;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmouseleave;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmousemove;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmouseout;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmouseover;
+/** @type {?MouseEventHandler} */ HTMLElement.prototype.onmouseup;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onpause;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onplay;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onplaying;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onprogress;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onratechange;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onreset;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onresize;
+/** @type {?EventHandler} */ HTMLElement.prototype.onscroll;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onsecuritypolicyviolation;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onseeked;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onseeking;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onselect;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onslotchange;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onstalled;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onsubmit;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onsuspend;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ontimeupdate;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.ontoggle;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onvolumechange;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onwaiting;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onwebkitanimationend;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onwebkitanimationiteration;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onwebkitanimationstart;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onwebkittransitionend;
+/** @type {?WheelEventHandler} */ HTMLElement.prototype.onwheel;
+/** @type {?AnimationEventHandler} */ HTMLElement.prototype.onanimationcancel;
+/** @type {?AnimationEventHandler} */ HTMLElement.prototype.onanimationend;
+/** @type {?AnimationEventHandler} */ HTMLElement.prototype.onanimationiteration;
+/** @type {?AnimationEventHandler} */ HTMLElement.prototype.onanimationstart;
+/** @type {?TransitionEventHandler} */ HTMLElement.prototype.ontransitioncancel;
+/** @type {?TransitionEventHandler} */ HTMLElement.prototype.ontransitionend;
+/** @type {?TransitionEventHandler} */ HTMLElement.prototype.ontransitionrun;
+/** @type {?TransitionEventHandler} */ HTMLElement.prototype.ontransitionstart;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.ongotpointercapture;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onlostpointercapture;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointercancel;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointerdown;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointerenter;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointerleave;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointermove;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointerout;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointerover;
+/** @type {?PointerEventHandler} */ HTMLElement.prototype.onpointerup;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onselectionchange;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.onselectstart;
+/** @type {?TouchEventHandler} */ HTMLElement.prototype.ontouchcancel;
+/** @type {?TouchEventHandler} */ HTMLElement.prototype.ontouchend;
+/** @type {?TouchEventHandler} */ HTMLElement.prototype.ontouchmove;
+/** @type {?TouchEventHandler} */ HTMLElement.prototype.ontouchstart;
+/** @type {!DOMStringMap} */ HTMLElement.prototype.dataset;
+/** @type {!boolean} */ HTMLElement.prototype.autofocus;
+/** @type {!string} */ HTMLElement.prototype.nonce;
+/** @type {!number} */ HTMLElement.prototype.tabIndex;
+/** @type {?ClipboardEventHandler} */ HTMLElement.prototype.oncopy;
+/** @type {?ClipboardEventHandler} */ HTMLElement.prototype.oncut;
+/** @type {?ClipboardEventHandler} */ HTMLElement.prototype.onpaste;
 /**
  * @return {!ElementInternals}
  */
@@ -15014,16 +17545,29 @@ function ChannelSplitterNode(context,options) {}
  * @private
  */
 function SpeechSynthesisVoice() {}
+/** @type {!boolean} */ SpeechSynthesisVoice.prototype.default;
+/** @type {!string} */ SpeechSynthesisVoice.prototype.lang;
+/** @type {!boolean} */ SpeechSynthesisVoice.prototype.localService;
+/** @type {!string} */ SpeechSynthesisVoice.prototype.name;
+/** @type {!string} */ SpeechSynthesisVoice.prototype.voiceURI;
 /**
  * @record
  * @private
  */
 function Coordinates() {}
+/** @type {!number} */ Coordinates.prototype.accuracy;
+/** @type {?number} */ Coordinates.prototype.altitude;
+/** @type {?number} */ Coordinates.prototype.altitudeAccuracy;
+/** @type {?number} */ Coordinates.prototype.heading;
+/** @type {!number} */ Coordinates.prototype.latitude;
+/** @type {!number} */ Coordinates.prototype.longitude;
+/** @type {?number} */ Coordinates.prototype.speed;
 /**
  * @constructor
  * @private
  */
 function NodeList() {}
+/** @type {!number} */ NodeList.prototype.length;
 /**
  * @param {!number} index
  * @return {?Node}
@@ -15050,12 +17594,15 @@ SyncManager.prototype.register = function(tag) {}
  * @param {!XRReferenceSpaceEventInit} eventInitDict
  */
 function XRReferenceSpaceEvent(type,eventInitDict) {}
+/** @type {!XRReferenceSpace} */ XRReferenceSpaceEvent.prototype.referenceSpace;
+/** @type {?XRRigidTransform} */ XRReferenceSpaceEvent.prototype.transform;
 /**
  * @constructor
  * @param {!Object=} underlyingSink
  * @param {!QueuingStrategy=} strategy
  */
 function WritableStream(underlyingSink,strategy) {}
+/** @type {!boolean} */ WritableStream.prototype.locked;
 /**
  * @param {*=} reason
  * @return {!Promise<undefined>}
@@ -15074,6 +17621,30 @@ WritableStream.prototype.close = function() {}
  * @param {(!string|!Array<!number>)=} init
  */
 function DOMMatrixReadOnly(init) {}
+/** @type {!number} */ DOMMatrixReadOnly.prototype.a;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.b;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.c;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.d;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.e;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.f;
+/** @type {!boolean} */ DOMMatrixReadOnly.prototype.is2D;
+/** @type {!boolean} */ DOMMatrixReadOnly.prototype.isIdentity;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m11;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m12;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m13;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m14;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m21;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m22;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m23;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m24;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m31;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m32;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m33;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m34;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m41;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m42;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m43;
+/** @type {!number} */ DOMMatrixReadOnly.prototype.m44;
 /**
  * @param {!number=} rotX
  * @param {!number=} rotY
@@ -15192,6 +17763,11 @@ DOMMatrixReadOnly.prototype.rotateAxisAngle = function(x,y,z,angle) {}
  * @param {!BiquadFilterOptions=} options
  */
 function BiquadFilterNode(context,options) {}
+/** @type {!AudioParam} */ BiquadFilterNode.prototype.Q;
+/** @type {!AudioParam} */ BiquadFilterNode.prototype.detune;
+/** @type {!AudioParam} */ BiquadFilterNode.prototype.frequency;
+/** @type {!AudioParam} */ BiquadFilterNode.prototype.gain;
+/** @type {!string} */ BiquadFilterNode.prototype.type;
 /**
  * @param {!Float32Array} frequencyHz
  * @param {!Float32Array} magResponse
@@ -15205,6 +17781,8 @@ BiquadFilterNode.prototype.getFrequencyResponse = function(frequencyHz,magRespon
  * @private
  */
 function ScriptProcessorNode() {}
+/** @type {!number} */ ScriptProcessorNode.prototype.bufferSize;
+/** @type {?AudioProcessingEventHandler} */ ScriptProcessorNode.prototype.onaudioprocess;
 /**
  * @constructor
  * @private
@@ -15233,6 +17811,10 @@ NavigationPreloadManager.prototype.setHeaderValue = function(value) {}
  * @param {(!MediaStream|!Array<!MediaStreamTrack>)=} arg0
  */
 function MediaStream(arg0) {}
+/** @type {!boolean} */ MediaStream.prototype.active;
+/** @type {!string} */ MediaStream.prototype.id;
+/** @type {?MediaStreamTrackEventHandler} */ MediaStream.prototype.onaddtrack;
+/** @type {?MediaStreamTrackEventHandler} */ MediaStream.prototype.onremovetrack;
 /**
  * @param {!MediaStreamTrack} track
  * @return {undefined}
@@ -15336,12 +17918,23 @@ function HTMLTrackElement() {}
 /** @const {!number} */ HTMLTrackElement.prototype.LOADING;
 /** @const {!number} */ HTMLTrackElement.NONE;
 /** @const {!number} */ HTMLTrackElement.prototype.NONE;
+/** @type {!number} */ HTMLTrackElement.prototype.readyState;
+/** @type {!TextTrack} */ HTMLTrackElement.prototype.track;
+/** @type {!boolean} */ HTMLTrackElement.prototype.default;
+/** @type {!string} */ HTMLTrackElement.prototype.kind;
+/** @type {!string} */ HTMLTrackElement.prototype.label;
+/** @type {!string} */ HTMLTrackElement.prototype.src;
+/** @type {!string} */ HTMLTrackElement.prototype.srclang;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function Performance() {}
+/** @type {!DOMHighResTimeStamp} */ Performance.prototype.timeOrigin;
+/** @type {!PerformanceNavigation} */ Performance.prototype.navigation;
+/** @type {!PerformanceTiming} */ Performance.prototype.timing;
+/** @type {?EventHandler} */ Performance.prototype.onresourcetimingbufferfull;
 /**
  * @param {!string} name
  * @param {!string=} type
@@ -15429,6 +18022,10 @@ WebAssembly.Module.exports = function(moduleObject) {}
  * @param {!DeviceMotionEventInit=} eventInitDict
  */
 function DeviceMotionEvent(type,eventInitDict) {}
+/** @type {?DeviceMotionEventAcceleration} */ DeviceMotionEvent.prototype.acceleration;
+/** @type {?DeviceMotionEventAcceleration} */ DeviceMotionEvent.prototype.accelerationIncludingGravity;
+/** @type {!number} */ DeviceMotionEvent.prototype.interval;
+/** @type {?DeviceMotionEventRotationRate} */ DeviceMotionEvent.prototype.rotationRate;
 /**
  * @return {!Promise<!string>}
  */
@@ -15440,6 +18037,7 @@ DeviceMotionEvent.requestPermission = function() {}
  * @param {!PopStateEventInit=} eventInitDict
  */
 function PopStateEvent(type,eventInitDict) {}
+/** @type {*} */ PopStateEvent.prototype.state;
 /**
  * @record
  * @private
@@ -15465,6 +18063,7 @@ function SVGTextElement() {}
  * @private
  */
 function ReadableStreamBYOBRequest() {}
+/** @type {?ArrayBufferView} */ ReadableStreamBYOBRequest.prototype.view;
 /**
  * @param {!ArrayBufferView} view
  * @return {undefined}
@@ -15481,6 +18080,10 @@ ReadableStreamBYOBRequest.prototype.respond = function(bytesWritten) {}
  * @param {!DOMPointInit=} orientation
  */
 function XRRigidTransform(position,orientation) {}
+/** @type {!XRRigidTransform} */ XRRigidTransform.prototype.inverse;
+/** @type {!Float32Array} */ XRRigidTransform.prototype.matrix;
+/** @type {!DOMPointReadOnly} */ XRRigidTransform.prototype.orientation;
+/** @type {!DOMPointReadOnly} */ XRRigidTransform.prototype.position;
 /**
  * @constructor
  * @param {(!Path2D|!string)=} path
@@ -15594,6 +18197,8 @@ XPathEvaluator.prototype.createExpression = function(expression,resolver) {}
  * @param {!string} format
  */
 function CompressionStream(format) {}
+/** @type {!ReadableStream} */ CompressionStream.prototype.readable;
+/** @type {!WritableStream} */ CompressionStream.prototype.writable;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -15605,6 +18210,7 @@ function WebGLBuffer() {}
  * @private
  */
 function MediaKeyStatusMap() {}
+/** @type {!number} */ MediaKeyStatusMap.prototype.size;
 /**
  * @param {!BufferSource} keyId
  * @return {*}
@@ -15620,11 +18226,20 @@ MediaKeyStatusMap.prototype.has = function(keyId) {}
  * @private
  */
 function GamepadPose() {}
+/** @type {?Float32Array} */ GamepadPose.prototype.angularAcceleration;
+/** @type {?Float32Array} */ GamepadPose.prototype.angularVelocity;
+/** @type {!boolean} */ GamepadPose.prototype.hasOrientation;
+/** @type {!boolean} */ GamepadPose.prototype.hasPosition;
+/** @type {?Float32Array} */ GamepadPose.prototype.linearAcceleration;
+/** @type {?Float32Array} */ GamepadPose.prototype.linearVelocity;
+/** @type {?Float32Array} */ GamepadPose.prototype.orientation;
+/** @type {?Float32Array} */ GamepadPose.prototype.position;
 /**
  * @constructor
  * @private
  */
 function PushManager() {}
+/** @type {!Array<!string>} */ PushManager.supportedContentEncodings;
 /**
  * @param {!PushSubscriptionOptionsInit=} options
  * @return {!Promise<!string>}
@@ -15648,6 +18263,10 @@ PushManager.prototype.getSubscription = function() {}
  * @param {!number=} w
  */
 function DOMPoint(x,y,z,w) {}
+/** @type {!number} */ DOMPoint.prototype.w;
+/** @type {!number} */ DOMPoint.prototype.x;
+/** @type {!number} */ DOMPoint.prototype.y;
+/** @type {!number} */ DOMPoint.prototype.z;
 /**
  * @param {!DOMPointInit=} other
  * @return {!DOMPoint}
@@ -15658,6 +18277,10 @@ DOMPoint.fromPoint = function(other) {}
  * @param {!AudioBufferOptions} options
  */
 function AudioBuffer(options) {}
+/** @type {!number} */ AudioBuffer.prototype.duration;
+/** @type {!number} */ AudioBuffer.prototype.length;
+/** @type {!number} */ AudioBuffer.prototype.numberOfChannels;
+/** @type {!number} */ AudioBuffer.prototype.sampleRate;
 /**
  * @param {!number} channel
  * @return {!Float32Array}
@@ -15683,6 +18306,7 @@ AudioBuffer.prototype.copyFromChannel = function(destination,channelNumber,buffe
  * @private
  */
 function SVGStopElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGStopElement.prototype.offset;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -15695,11 +18319,15 @@ function SVGViewElement() {}
 /** @const {!number} */ SVGViewElement.prototype.SVG_ZOOMANDPAN_MAGNIFY;
 /** @const {!number} */ SVGViewElement.SVG_ZOOMANDPAN_UNKNOWN;
 /** @const {!number} */ SVGViewElement.prototype.SVG_ZOOMANDPAN_UNKNOWN;
+/** @type {!SVGAnimatedPreserveAspectRatio} */ SVGViewElement.prototype.preserveAspectRatio;
+/** @type {!SVGAnimatedRect} */ SVGViewElement.prototype.viewBox;
+/** @type {!number} */ SVGViewElement.prototype.zoomAndPan;
 /**
  * @constructor
  * @param {!TableDescriptor} descriptor
  */
 WebAssembly.Table = function(descriptor) {}
+/** @type {!number} */ WebAssembly.Table.prototype.length;
 /**
  * @param {!number} index
  * @param {?Function} value
@@ -15721,6 +18349,7 @@ WebAssembly.Table.prototype.get = function(index) {}
  * @private
  */
 function DOMStringList() {}
+/** @type {!number} */ DOMStringList.prototype.length;
 /**
  * @param {!number} index
  * @return {?string}
@@ -15736,6 +18365,8 @@ DOMStringList.prototype.contains = function(string) {}
  * @private
  */
 function SVGAnimatedString() {}
+/** @type {!string} */ SVGAnimatedString.prototype.animVal;
+/** @type {!string} */ SVGAnimatedString.prototype.baseVal;
 /**
  * @constructor
  * @extends {Event}
@@ -15743,6 +18374,8 @@ function SVGAnimatedString() {}
  * @param {!BlobEventInit} eventInitDict
  */
 function BlobEvent(type,eventInitDict) {}
+/** @type {!Blob} */ BlobEvent.prototype.data;
+/** @type {!DOMHighResTimeStamp} */ BlobEvent.prototype.timecode;
 /**
  * @constructor
  * @private
@@ -15766,6 +18399,9 @@ AnimationEffect.prototype.updateTiming = function(timing) {}
  * @private
  */
 function WebGLShaderPrecisionFormat() {}
+/** @type {!GLint} */ WebGLShaderPrecisionFormat.prototype.precision;
+/** @type {!GLint} */ WebGLShaderPrecisionFormat.prototype.rangeMax;
+/** @type {!GLint} */ WebGLShaderPrecisionFormat.prototype.rangeMin;
 /**
  * @constructor
  * @private
@@ -15782,11 +18418,17 @@ Worklet.prototype.addModule = function(moduleURL,options) {}
  * @private
  */
 function SVGAnimatedAngle() {}
+/** @type {!SVGAngle} */ SVGAnimatedAngle.prototype.animVal;
+/** @type {!SVGAngle} */ SVGAnimatedAngle.prototype.baseVal;
 /**
  * @constructor
  * @private
  */
 function CSSStyleDeclaration() {}
+/** @type {!number} */ CSSStyleDeclaration.prototype.length;
+/** @type {?CSSRule} */ CSSStyleDeclaration.prototype.parentRule;
+/** @type {!CSSOMString} */ CSSStyleDeclaration.prototype.cssFloat;
+/** @type {!CSSOMString} */ CSSStyleDeclaration.prototype.cssText;
 /**
  * @param {!number} index
  * @return {!CSSOMString}
@@ -15821,6 +18463,7 @@ CSSStyleDeclaration.prototype.removeProperty = function(property) {}
  * @param {!AudioNodeOptions=} options
  */
 function MediaStreamAudioDestinationNode(context,options) {}
+/** @type {!MediaStream} */ MediaStreamAudioDestinationNode.prototype.stream;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -15828,6 +18471,8 @@ function MediaStreamAudioDestinationNode(context,options) {}
  * @param {!number} height
  */
 function OffscreenCanvas(width,height) {}
+/** @type {!number} */ OffscreenCanvas.prototype.height;
+/** @type {!number} */ OffscreenCanvas.prototype.width;
 /**
  * @param {!ImageEncodeOptions=} options
  * @return {!Promise<!Blob>}
@@ -15849,6 +18494,9 @@ OffscreenCanvas.prototype.getContext = function(contextId,options) {}
  * @private
  */
 function SVGScriptElement() {}
+/** @type {?string} */ SVGScriptElement.prototype.crossOrigin;
+/** @type {!string} */ SVGScriptElement.prototype.type;
+/** @type {!SVGAnimatedString} */ SVGScriptElement.prototype.href;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -15860,6 +18508,7 @@ function WebGLQuery() {}
  * @private
  */
 function TimeRanges() {}
+/** @type {!number} */ TimeRanges.prototype.length;
 /**
  * @param {!number} index
  * @return {!number}
@@ -15876,6 +18525,18 @@ TimeRanges.prototype.end = function(index) {}
  * @private
  */
 function HTMLScriptElement() {}
+/** @type {!boolean} */ HTMLScriptElement.prototype.async;
+/** @type {?string} */ HTMLScriptElement.prototype.crossOrigin;
+/** @type {!boolean} */ HTMLScriptElement.prototype.defer;
+/** @type {!string} */ HTMLScriptElement.prototype.integrity;
+/** @type {!boolean} */ HTMLScriptElement.prototype.noModule;
+/** @type {!string} */ HTMLScriptElement.prototype.referrerPolicy;
+/** @type {!string} */ HTMLScriptElement.prototype.src;
+/** @type {!string} */ HTMLScriptElement.prototype.text;
+/** @type {!string} */ HTMLScriptElement.prototype.type;
+/** @type {!string} */ HTMLScriptElement.prototype.charset;
+/** @type {!string} */ HTMLScriptElement.prototype.event;
+/** @type {!string} */ HTMLScriptElement.prototype.htmlFor;
 /**
  * @constructor
  * @param {!ReportingObserverCallback} callback
@@ -15901,6 +18562,11 @@ ReportingObserver.prototype.observe = function() {}
  * @param {!ErrorEventInit=} eventInitDict
  */
 function ErrorEvent(type,eventInitDict) {}
+/** @type {!number} */ ErrorEvent.prototype.colno;
+/** @type {*} */ ErrorEvent.prototype.error;
+/** @type {!string} */ ErrorEvent.prototype.filename;
+/** @type {!number} */ ErrorEvent.prototype.lineno;
+/** @type {!string} */ ErrorEvent.prototype.message;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -15915,6 +18581,16 @@ function WebGLProgram() {}
  * @param {!string} text
  */
 function VTTCue(startTime,endTime,text) {}
+/** @type {!string} */ VTTCue.prototype.align;
+/** @type {!LineAndPositionSetting} */ VTTCue.prototype.line;
+/** @type {!string} */ VTTCue.prototype.lineAlign;
+/** @type {!LineAndPositionSetting} */ VTTCue.prototype.position;
+/** @type {!string} */ VTTCue.prototype.positionAlign;
+/** @type {?VTTRegion} */ VTTCue.prototype.region;
+/** @type {!number} */ VTTCue.prototype.size;
+/** @type {!boolean} */ VTTCue.prototype.snapToLines;
+/** @type {!string} */ VTTCue.prototype.text;
+/** @type {!string} */ VTTCue.prototype.vertical;
 /**
  * @return {!DocumentFragment}
  */
@@ -15953,6 +18629,7 @@ CustomElementRegistry.prototype.whenDefined = function(name) {}
  * @param {!PageTransitionEventInit=} eventInitDict
  */
 function PageTransitionEvent(type,eventInitDict) {}
+/** @type {!boolean} */ PageTransitionEvent.prototype.persisted;
 /**
  * @constructor
  * @extends {Event}
@@ -15960,12 +18637,16 @@ function PageTransitionEvent(type,eventInitDict) {}
  * @param {!WebGLContextEventInit=} eventInit
  */
 function WebGLContextEvent(type,eventInit) {}
+/** @type {!string} */ WebGLContextEvent.prototype.statusMessage;
 /**
  * @constructor
  * @param {!string=} label
  * @param {!TextDecoderOptions=} options
  */
 function TextDecoder(label,options) {}
+/** @type {!string} */ TextDecoder.prototype.encoding;
+/** @type {!boolean} */ TextDecoder.prototype.fatal;
+/** @type {!boolean} */ TextDecoder.prototype.ignoreBOM;
 /**
  * @param {!BufferSource=} input
  * @param {!TextDecodeOptions=} options
@@ -15979,11 +18660,15 @@ TextDecoder.prototype.decode = function(input,options) {}
  * @param {!RTCPeerConnectionIceEventInit=} eventInitDict
  */
 function RTCPeerConnectionIceEvent(type,eventInitDict) {}
+/** @type {?RTCIceCandidate} */ RTCPeerConnectionIceEvent.prototype.candidate;
+/** @type {?string} */ RTCPeerConnectionIceEvent.prototype.url;
 /**
  * @constructor
  * @private
  */
 function DataTransferItem() {}
+/** @type {!string} */ DataTransferItem.prototype.kind;
+/** @type {!string} */ DataTransferItem.prototype.type;
 /**
  * @return {?File}
  */
@@ -16001,6 +18686,8 @@ function PositionError() {}
 /** @const {!number} */ PositionError.prototype.PERMISSION_DENIED;
 /** @const {!number} */ PositionError.prototype.POSITION_UNAVAILABLE;
 /** @const {!number} */ PositionError.prototype.TIMEOUT;
+/** @type {!number} */ PositionError.prototype.code;
+/** @type {!string} */ PositionError.prototype.message;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -16051,6 +18738,8 @@ WEBGL_compressed_texture_astc.prototype.getSupportedProfiles = function() {}
  * @private
  */
 function SVGPolylineElement() {}
+/** @type {!SVGPointList} */ SVGPolylineElement.prototype.animatedPoints;
+/** @type {!SVGPointList} */ SVGPolylineElement.prototype.points;
 /**
  * @constructor
  * @param {!BaseAudioContext} context
@@ -16063,6 +18752,8 @@ function PeriodicWave(context,options) {}
  * @private
  */
 function CSSKeyframesRule() {}
+/** @type {!CSSRuleList} */ CSSKeyframesRule.prototype.cssRules;
+/** @type {!CSSOMString} */ CSSKeyframesRule.prototype.name;
 /**
  * @param {!CSSOMString} select
  * @return {?CSSKeyframeRule}
@@ -16091,11 +18782,13 @@ function SVGFEFuncGElement() {}
  * @param {!FocusEventInit=} eventInitDict
  */
 function FocusEvent(type,eventInitDict) {}
+/** @type {?EventTarget} */ FocusEvent.prototype.relatedTarget;
 /**
  * @constructor
  * @private
  */
 function CSSRuleList() {}
+/** @type {!number} */ CSSRuleList.prototype.length;
 /**
  * @param {!number} index
  * @return {?CSSRule}
@@ -16112,6 +18805,7 @@ function SVGFEFuncRElement() {}
  * @private
  */
 function DOMRectList() {}
+/** @type {!number} */ DOMRectList.prototype.length;
 /**
  * @param {!number} index
  * @return {?DOMRect}
@@ -16157,18 +18851,36 @@ function SVGFEBlendElement() {}
 /** @const {!number} */ SVGFEBlendElement.prototype.SVG_FEBLEND_MODE_SOFT_LIGHT;
 /** @const {!number} */ SVGFEBlendElement.SVG_FEBLEND_MODE_UNKNOWN;
 /** @const {!number} */ SVGFEBlendElement.prototype.SVG_FEBLEND_MODE_UNKNOWN;
+/** @type {!SVGAnimatedString} */ SVGFEBlendElement.prototype.in1;
+/** @type {!SVGAnimatedString} */ SVGFEBlendElement.prototype.in2;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEBlendElement.prototype.mode;
+/** @type {!SVGAnimatedLength} */ SVGFEBlendElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEBlendElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEBlendElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEBlendElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEBlendElement.prototype.y;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLParamElement() {}
+/** @type {!string} */ HTMLParamElement.prototype.name;
+/** @type {!string} */ HTMLParamElement.prototype.value;
+/** @type {!string} */ HTMLParamElement.prototype.type;
+/** @type {!string} */ HTMLParamElement.prototype.valueType;
 /**
  * @constructor
  * @extends {SVGGeometryElement}
  * @private
  */
 function SVGRectElement() {}
+/** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.height;
+/** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.rx;
+/** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.ry;
+/** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.y;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -16176,6 +18888,11 @@ function SVGRectElement() {}
  * @param {!AnalyserOptions=} options
  */
 function AnalyserNode(context,options) {}
+/** @type {!number} */ AnalyserNode.prototype.frequencyBinCount;
+/** @type {!number} */ AnalyserNode.prototype.fftSize;
+/** @type {!number} */ AnalyserNode.prototype.maxDecibels;
+/** @type {!number} */ AnalyserNode.prototype.minDecibels;
+/** @type {!number} */ AnalyserNode.prototype.smoothingTimeConstant;
 /**
  * @param {!Float32Array} array
  * @return {undefined}
@@ -16203,6 +18920,10 @@ AnalyserNode.prototype.getFloatTimeDomainData = function(array) {}
  * @param {!RTCTrackEventInit} eventInitDict
  */
 function RTCTrackEvent(type,eventInitDict) {}
+/** @type {!RTCRtpReceiver} */ RTCTrackEvent.prototype.receiver;
+/** @type {!Array<!MediaStream>} */ RTCTrackEvent.prototype.streams;
+/** @type {!MediaStreamTrack} */ RTCTrackEvent.prototype.track;
+/** @type {!RTCRtpTransceiver} */ RTCTrackEvent.prototype.transceiver;
 /**
  * @constructor
  * @extends {Error}
@@ -16225,6 +18946,7 @@ function WEBGL_compressed_texture_s3tc_srgb() {}
  * @private
  */
 function MediaDevices() {}
+/** @type {!NullableEventHandler} */ MediaDevices.prototype.ondevicechange;
 /**
  * @param {!MediaStreamConstraints=} constraints
  * @return {!Promise<!MediaStream>}
@@ -16248,11 +18970,17 @@ MediaDevices.prototype.getSupportedConstraints = function() {}
  * @private
  */
 function SVGAnimatedEnumeration() {}
+/** @type {!number} */ SVGAnimatedEnumeration.prototype.animVal;
+/** @type {!number} */ SVGAnimatedEnumeration.prototype.baseVal;
 /**
  * @constructor
  * @private
  */
 function XRViewport() {}
+/** @type {!number} */ XRViewport.prototype.height;
+/** @type {!number} */ XRViewport.prototype.width;
+/** @type {!number} */ XRViewport.prototype.x;
+/** @type {!number} */ XRViewport.prototype.y;
 /**
  * @record
  * @private
@@ -16265,11 +18993,28 @@ function EXT_color_buffer_float() {}
  * @private
  */
 function HTMLTableCellElement() {}
+/** @type {!number} */ HTMLTableCellElement.prototype.cellIndex;
+/** @type {!string} */ HTMLTableCellElement.prototype.abbr;
+/** @type {!number} */ HTMLTableCellElement.prototype.colSpan;
+/** @type {!string} */ HTMLTableCellElement.prototype.headers;
+/** @type {!number} */ HTMLTableCellElement.prototype.rowSpan;
+/** @type {!string} */ HTMLTableCellElement.prototype.scope;
+/** @type {!string} */ HTMLTableCellElement.prototype.align;
+/** @type {!string} */ HTMLTableCellElement.prototype.axis;
+/** @type {!string} */ HTMLTableCellElement.prototype.bgColor;
+/** @type {!string} */ HTMLTableCellElement.prototype.ch;
+/** @type {!string} */ HTMLTableCellElement.prototype.chOff;
+/** @type {!string} */ HTMLTableCellElement.prototype.height;
+/** @type {!boolean} */ HTMLTableCellElement.prototype.noWrap;
+/** @type {!string} */ HTMLTableCellElement.prototype.vAlign;
+/** @type {!string} */ HTMLTableCellElement.prototype.width;
 /**
  * @constructor
  * @private
  */
 function SVGLengthList() {}
+/** @type {!number} */ SVGLengthList.prototype.length;
+/** @type {!number} */ SVGLengthList.prototype.numberOfItems;
 /**
  * @param {!number} index
  * @return {!SVGLength}
@@ -16311,6 +19056,10 @@ SVGLengthList.prototype.appendItem = function(newItem) {}
  * @private
  */
 function RegExpResult() {}
+/** @type {!string} */ RegExpResult.prototype.input;
+/** @type {!number} */ RegExpResult.prototype.index;
+/** @type {?RegExpGroups} */ RegExpResult.prototype.groups;
+/** @type {!number} */ RegExpResult.prototype.length;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -16331,6 +19080,8 @@ function EXT_blend_minmax() {}
  * @param {!BlobPropertyBag=} options
  */
 function Blob(blobParts,options) {}
+/** @type {!number} */ Blob.prototype.size;
+/** @type {!string} */ Blob.prototype.type;
 /**
  * @return {!Promise<!ArrayBuffer>}
  */
@@ -16369,11 +19120,16 @@ function WheelEvent(type,eventInitDict) {}
 /** @const {!number} */ WheelEvent.prototype.DOM_DELTA_PAGE;
 /** @const {!number} */ WheelEvent.DOM_DELTA_PIXEL;
 /** @const {!number} */ WheelEvent.prototype.DOM_DELTA_PIXEL;
+/** @type {!number} */ WheelEvent.prototype.deltaMode;
+/** @type {!number} */ WheelEvent.prototype.deltaX;
+/** @type {!number} */ WheelEvent.prototype.deltaY;
+/** @type {!number} */ WheelEvent.prototype.deltaZ;
 /**
  * @constructor
  * @private
  */
 function FileList() {}
+/** @type {!number} */ FileList.prototype.length;
 /**
  * @param {!number} index
  * @return {?File}
@@ -16393,11 +19149,15 @@ function WEBGL_depth_texture() {}
  * @param {!TransitionEventInit=} transitionEventInitDict
  */
 function TransitionEvent(type,transitionEventInitDict) {}
+/** @type {!number} */ TransitionEvent.prototype.elapsedTime;
+/** @type {!CSSOMString} */ TransitionEvent.prototype.propertyName;
+/** @type {!CSSOMString} */ TransitionEvent.prototype.pseudoElement;
 /**
  * @constructor
  * @private
  */
 function MediaKeySystemAccess() {}
+/** @type {!string} */ MediaKeySystemAccess.prototype.keySystem;
 /**
  * @return {!Promise<!MediaKeys>}
  */
@@ -16412,6 +19172,17 @@ MediaKeySystemAccess.prototype.getConfiguration = function() {}
  * @private
  */
 function MediaStreamTrack() {}
+/** @type {!string} */ MediaStreamTrack.prototype.id;
+/** @type {!string} */ MediaStreamTrack.prototype.kind;
+/** @type {!string} */ MediaStreamTrack.prototype.label;
+/** @type {!boolean} */ MediaStreamTrack.prototype.muted;
+/** @type {!string} */ MediaStreamTrack.prototype.readyState;
+/** @type {!boolean} */ MediaStreamTrack.prototype.enabled;
+/** @type {?EventHandler} */ MediaStreamTrack.prototype.onended;
+/** @type {?EventHandler} */ MediaStreamTrack.prototype.onmute;
+/** @type {?EventHandler} */ MediaStreamTrack.prototype.onunmute;
+/** @type {!boolean} */ MediaStreamTrack.prototype.isolated;
+/** @type {!NullableEventHandler} */ MediaStreamTrack.prototype.onisolationchange;
 /**
  * @return {!MediaTrackConstraints}
  */
@@ -16442,18 +19213,55 @@ MediaStreamTrack.prototype.getCapabilities = function() {}
  * @private
  */
 function GamepadButton() {}
+/** @type {!boolean} */ GamepadButton.prototype.pressed;
+/** @type {!boolean} */ GamepadButton.prototype.touched;
+/** @type {!number} */ GamepadButton.prototype.value;
 /**
  * @constructor
  * @extends {SVGGraphicsElement}
  * @private
  */
 function SVGAElement() {}
+/** @type {!DOMTokenList} */ SVGAElement.prototype.relList;
+/** @type {!SVGAnimatedString} */ SVGAElement.prototype.target;
+/** @type {!string} */ SVGAElement.prototype.download;
+/** @type {!string} */ SVGAElement.prototype.hreflang;
+/** @type {!string} */ SVGAElement.prototype.ping;
+/** @type {!string} */ SVGAElement.prototype.referrerPolicy;
+/** @type {!string} */ SVGAElement.prototype.rel;
+/** @type {!string} */ SVGAElement.prototype.text;
+/** @type {!string} */ SVGAElement.prototype.type;
+/** @type {!string} */ SVGAElement.prototype.origin;
+/** @type {!string} */ SVGAElement.prototype.hash;
+/** @type {!string} */ SVGAElement.prototype.host;
+/** @type {!string} */ SVGAElement.prototype.hostname;
+/** @type {!string} */ SVGAElement.prototype.password;
+/** @type {!string} */ SVGAElement.prototype.pathname;
+/** @type {!string} */ SVGAElement.prototype.port;
+/** @type {!string} */ SVGAElement.prototype.protocol;
+/** @type {!string} */ SVGAElement.prototype.search;
+/** @type {!string} */ SVGAElement.prototype.username;
+/** @type {!string} */ SVGAElement.prototype.href;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function SourceBuffer() {}
+/** @type {!AudioTrackList} */ SourceBuffer.prototype.audioTracks;
+/** @type {!TimeRanges} */ SourceBuffer.prototype.buffered;
+/** @type {!TextTrackList} */ SourceBuffer.prototype.textTracks;
+/** @type {!boolean} */ SourceBuffer.prototype.updating;
+/** @type {!VideoTrackList} */ SourceBuffer.prototype.videoTracks;
+/** @type {!number} */ SourceBuffer.prototype.appendWindowEnd;
+/** @type {!number} */ SourceBuffer.prototype.appendWindowStart;
+/** @type {!string} */ SourceBuffer.prototype.mode;
+/** @type {!NullableEventHandler} */ SourceBuffer.prototype.onabort;
+/** @type {!NullableEventHandler} */ SourceBuffer.prototype.onerror;
+/** @type {!NullableEventHandler} */ SourceBuffer.prototype.onupdate;
+/** @type {!NullableEventHandler} */ SourceBuffer.prototype.onupdateend;
+/** @type {!NullableEventHandler} */ SourceBuffer.prototype.onupdatestart;
+/** @type {!number} */ SourceBuffer.prototype.timestampOffset;
 /**
  * @return {undefined}
  */
@@ -16475,6 +19283,24 @@ SourceBuffer.prototype.remove = function(start,end) {}
  * @private
  */
 function HTMLLinkElement() {}
+/** @type {!DOMTokenList} */ HTMLLinkElement.prototype.relList;
+/** @type {!DOMTokenList} */ HTMLLinkElement.prototype.sizes;
+/** @type {!string} */ HTMLLinkElement.prototype.as;
+/** @type {?string} */ HTMLLinkElement.prototype.crossOrigin;
+/** @type {!boolean} */ HTMLLinkElement.prototype.disabled;
+/** @type {!string} */ HTMLLinkElement.prototype.href;
+/** @type {!string} */ HTMLLinkElement.prototype.hreflang;
+/** @type {!string} */ HTMLLinkElement.prototype.imageSizes;
+/** @type {!string} */ HTMLLinkElement.prototype.imageSrcset;
+/** @type {!string} */ HTMLLinkElement.prototype.integrity;
+/** @type {!string} */ HTMLLinkElement.prototype.media;
+/** @type {!string} */ HTMLLinkElement.prototype.referrerPolicy;
+/** @type {!string} */ HTMLLinkElement.prototype.rel;
+/** @type {!string} */ HTMLLinkElement.prototype.type;
+/** @type {!string} */ HTMLLinkElement.prototype.charset;
+/** @type {!string} */ HTMLLinkElement.prototype.rev;
+/** @type {!string} */ HTMLLinkElement.prototype.target;
+/** @type {?CSSStyleSheet} */ HTMLLinkElement.prototype.sheet;
 /**
  * @constructor
  * @extends {CSSConditionRule}
@@ -16499,6 +19325,17 @@ function SVGFETurbulenceElement() {}
 /** @const {!number} */ SVGFETurbulenceElement.prototype.SVG_TURBULENCE_TYPE_TURBULENCE;
 /** @const {!number} */ SVGFETurbulenceElement.SVG_TURBULENCE_TYPE_UNKNOWN;
 /** @const {!number} */ SVGFETurbulenceElement.prototype.SVG_TURBULENCE_TYPE_UNKNOWN;
+/** @type {!SVGAnimatedNumber} */ SVGFETurbulenceElement.prototype.baseFrequencyX;
+/** @type {!SVGAnimatedNumber} */ SVGFETurbulenceElement.prototype.baseFrequencyY;
+/** @type {!SVGAnimatedInteger} */ SVGFETurbulenceElement.prototype.numOctaves;
+/** @type {!SVGAnimatedNumber} */ SVGFETurbulenceElement.prototype.seed;
+/** @type {!SVGAnimatedEnumeration} */ SVGFETurbulenceElement.prototype.stitchTiles;
+/** @type {!SVGAnimatedEnumeration} */ SVGFETurbulenceElement.prototype.type;
+/** @type {!SVGAnimatedLength} */ SVGFETurbulenceElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFETurbulenceElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFETurbulenceElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFETurbulenceElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFETurbulenceElement.prototype.y;
 /**
  * @record
  * @private
@@ -16511,12 +19348,41 @@ function EXT_shader_texture_lod() {}
  * @param {!TextDecoderOptions=} options
  */
 function TextDecoderStream(label,options) {}
+/** @type {!ReadableStream} */ TextDecoderStream.prototype.readable;
+/** @type {!WritableStream} */ TextDecoderStream.prototype.writable;
+/** @type {!string} */ TextDecoderStream.prototype.encoding;
+/** @type {!boolean} */ TextDecoderStream.prototype.fatal;
+/** @type {!boolean} */ TextDecoderStream.prototype.ignoreBOM;
 /**
  * @constructor
  * @extends {EventTarget}
  * @param {!RTCConfiguration=} configuration
  */
 function RTCPeerConnection(configuration) {}
+/** @type {?boolean} */ RTCPeerConnection.prototype.canTrickleIceCandidates;
+/** @type {!string} */ RTCPeerConnection.prototype.connectionState;
+/** @type {?RTCSessionDescription} */ RTCPeerConnection.prototype.currentLocalDescription;
+/** @type {?RTCSessionDescription} */ RTCPeerConnection.prototype.currentRemoteDescription;
+/** @type {!string} */ RTCPeerConnection.prototype.iceConnectionState;
+/** @type {!string} */ RTCPeerConnection.prototype.iceGatheringState;
+/** @type {?RTCSessionDescription} */ RTCPeerConnection.prototype.localDescription;
+/** @type {?RTCSessionDescription} */ RTCPeerConnection.prototype.pendingLocalDescription;
+/** @type {?RTCSessionDescription} */ RTCPeerConnection.prototype.pendingRemoteDescription;
+/** @type {?RTCSessionDescription} */ RTCPeerConnection.prototype.remoteDescription;
+/** @type {!string} */ RTCPeerConnection.prototype.signalingState;
+/** @type {?EventHandler} */ RTCPeerConnection.prototype.onconnectionstatechange;
+/** @type {?RTCPeerConnectionIceEventHandler} */ RTCPeerConnection.prototype.onicecandidate;
+/** @type {?RTCPeerConnectionIceErrorEventHandler} */ RTCPeerConnection.prototype.onicecandidateerror;
+/** @type {?EventHandler} */ RTCPeerConnection.prototype.oniceconnectionstatechange;
+/** @type {?EventHandler} */ RTCPeerConnection.prototype.onicegatheringstatechange;
+/** @type {?EventHandler} */ RTCPeerConnection.prototype.onnegotiationneeded;
+/** @type {?EventHandler} */ RTCPeerConnection.prototype.onsignalingstatechange;
+/** @type {?RTCTrackEventHandler} */ RTCPeerConnection.prototype.ontrack;
+/** @type {?RTCSctpTransport} */ RTCPeerConnection.prototype.sctp;
+/** @type {?RTCDataChannelEventHandler} */ RTCPeerConnection.prototype.ondatachannel;
+/** @type {?string} */ RTCPeerConnection.prototype.idpErrorInfo;
+/** @type {?string} */ RTCPeerConnection.prototype.idpLoginUrl;
+/** @type {!Promise<!RTCIdentityAssertion>} */ RTCPeerConnection.prototype.peerIdentity;
 /**
  * @param {!AlgorithmIdentifier} keygenAlgorithm
  * @return {!Promise<!RTCCertificate>}
@@ -16629,6 +19495,14 @@ RTCPeerConnection.prototype.close = function() {}
  * @private
  */
 function ShadowRoot() {}
+/** @type {!Element} */ ShadowRoot.prototype.host;
+/** @type {!string} */ ShadowRoot.prototype.mode;
+/** @type {!NullableEventHandler} */ ShadowRoot.prototype.onslotchange;
+/** @type {!StyleSheetList} */ ShadowRoot.prototype.styleSheets;
+/** @type {?Element} */ ShadowRoot.prototype.pointerLockElement;
+/** @type {?Element} */ ShadowRoot.prototype.fullscreenElement;
+/** @type {?Element} */ ShadowRoot.prototype.activeElement;
+/** @type {!string} */ ShadowRoot.prototype.innerHTML;
 /**
  * @constructor
  * @extends {HTMLElement}
@@ -16640,6 +19514,11 @@ function HTMLHeadElement() {}
  * @private
  */
 function IDBIndex() {}
+/** @type {*} */ IDBIndex.prototype.keyPath;
+/** @type {!boolean} */ IDBIndex.prototype.multiEntry;
+/** @type {!IDBObjectStore} */ IDBIndex.prototype.objectStore;
+/** @type {!boolean} */ IDBIndex.prototype.unique;
+/** @type {!string} */ IDBIndex.prototype.name;
 /**
  * @param {*} query
  * @return {!IDBRequest}
@@ -16695,12 +19574,25 @@ function SVGFEDisplacementMapElement() {}
 /** @const {!number} */ SVGFEDisplacementMapElement.prototype.SVG_CHANNEL_R;
 /** @const {!number} */ SVGFEDisplacementMapElement.SVG_CHANNEL_UNKNOWN;
 /** @const {!number} */ SVGFEDisplacementMapElement.prototype.SVG_CHANNEL_UNKNOWN;
+/** @type {!SVGAnimatedString} */ SVGFEDisplacementMapElement.prototype.in1;
+/** @type {!SVGAnimatedString} */ SVGFEDisplacementMapElement.prototype.in2;
+/** @type {!SVGAnimatedNumber} */ SVGFEDisplacementMapElement.prototype.scale;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEDisplacementMapElement.prototype.xChannelSelector;
+/** @type {!SVGAnimatedEnumeration} */ SVGFEDisplacementMapElement.prototype.yChannelSelector;
+/** @type {!SVGAnimatedLength} */ SVGFEDisplacementMapElement.prototype.height;
+/** @type {!SVGAnimatedString} */ SVGFEDisplacementMapElement.prototype.result;
+/** @type {!SVGAnimatedLength} */ SVGFEDisplacementMapElement.prototype.width;
+/** @type {!SVGAnimatedLength} */ SVGFEDisplacementMapElement.prototype.x;
+/** @type {!SVGAnimatedLength} */ SVGFEDisplacementMapElement.prototype.y;
 /**
  * @constructor
  * @param {!IntersectionObserverCallback} callback
  * @param {!IntersectionObserverInit=} options
  */
 function IntersectionObserver(callback,options) {}
+/** @type {(!Element|!Document)} */ IntersectionObserver.prototype.root;
+/** @type {!string} */ IntersectionObserver.prototype.rootMargin;
+/** @type {!Array<!number>} */ IntersectionObserver.prototype.thresholds;
 /**
  * @return {undefined}
  */
@@ -16725,26 +19617,54 @@ IntersectionObserver.prototype.observe = function(target) {}
  * @private
  */
 function AudioDestinationNode() {}
+/** @type {!number} */ AudioDestinationNode.prototype.maxChannelCount;
 /**
  * @constructor
  * @private
  */
 function Screen() {}
+/** @type {!number} */ Screen.prototype.availHeight;
+/** @type {!number} */ Screen.prototype.availWidth;
+/** @type {!number} */ Screen.prototype.colorDepth;
+/** @type {!number} */ Screen.prototype.height;
+/** @type {!number} */ Screen.prototype.pixelDepth;
+/** @type {!number} */ Screen.prototype.width;
+/** @type {!ScreenOrientation} */ Screen.prototype.orientation;
 /**
  * @constructor
  * @private
  */
 function WebGLActiveInfo() {}
+/** @type {!string} */ WebGLActiveInfo.prototype.name;
+/** @type {!GLint} */ WebGLActiveInfo.prototype.size;
+/** @type {!GLenum} */ WebGLActiveInfo.prototype.type;
 /**
  * @constructor
  * @param {!TouchInit} touchInitDict
  */
 function Touch(touchInitDict) {}
+/** @type {!number} */ Touch.prototype.altitudeAngle;
+/** @type {!number} */ Touch.prototype.azimuthAngle;
+/** @type {!number} */ Touch.prototype.clientX;
+/** @type {!number} */ Touch.prototype.clientY;
+/** @type {!number} */ Touch.prototype.force;
+/** @type {!number} */ Touch.prototype.identifier;
+/** @type {!number} */ Touch.prototype.pageX;
+/** @type {!number} */ Touch.prototype.pageY;
+/** @type {!number} */ Touch.prototype.radiusX;
+/** @type {!number} */ Touch.prototype.radiusY;
+/** @type {!number} */ Touch.prototype.rotationAngle;
+/** @type {!number} */ Touch.prototype.screenX;
+/** @type {!number} */ Touch.prototype.screenY;
+/** @type {!EventTarget} */ Touch.prototype.target;
+/** @type {!string} */ Touch.prototype.touchType;
 /**
  * @constructor
  * @private
  */
 function SVGAnimatedRect() {}
+/** @type {!DOMRectReadOnly} */ SVGAnimatedRect.prototype.animVal;
+/** @type {!DOMRect} */ SVGAnimatedRect.prototype.baseVal;
 /**
  * @record
  * @private
@@ -16796,12 +19716,38 @@ WEBGL_draw_buffers.prototype.drawBuffersWEBGL = function(buffers) {}
  * @private
  */
 function HTMLAreaElement() {}
+/** @type {!DOMTokenList} */ HTMLAreaElement.prototype.relList;
+/** @type {!string} */ HTMLAreaElement.prototype.alt;
+/** @type {!string} */ HTMLAreaElement.prototype.coords;
+/** @type {!string} */ HTMLAreaElement.prototype.download;
+/** @type {!string} */ HTMLAreaElement.prototype.ping;
+/** @type {!string} */ HTMLAreaElement.prototype.referrerPolicy;
+/** @type {!string} */ HTMLAreaElement.prototype.rel;
+/** @type {!string} */ HTMLAreaElement.prototype.shape;
+/** @type {!string} */ HTMLAreaElement.prototype.target;
+/** @type {!boolean} */ HTMLAreaElement.prototype.noHref;
+/** @type {!string} */ HTMLAreaElement.prototype.origin;
+/** @type {!string} */ HTMLAreaElement.prototype.hash;
+/** @type {!string} */ HTMLAreaElement.prototype.host;
+/** @type {!string} */ HTMLAreaElement.prototype.hostname;
+/** @type {!string} */ HTMLAreaElement.prototype.password;
+/** @type {!string} */ HTMLAreaElement.prototype.pathname;
+/** @type {!string} */ HTMLAreaElement.prototype.port;
+/** @type {!string} */ HTMLAreaElement.prototype.protocol;
+/** @type {!string} */ HTMLAreaElement.prototype.search;
+/** @type {!string} */ HTMLAreaElement.prototype.username;
+/** @type {!string} */ HTMLAreaElement.prototype.href;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLTableSectionElement() {}
+/** @type {!HTMLCollection} */ HTMLTableSectionElement.prototype.rows;
+/** @type {!string} */ HTMLTableSectionElement.prototype.align;
+/** @type {!string} */ HTMLTableSectionElement.prototype.ch;
+/** @type {!string} */ HTMLTableSectionElement.prototype.chOff;
+/** @type {!string} */ HTMLTableSectionElement.prototype.vAlign;
 /**
  * @param {!number} index
  * @return {undefined}
@@ -16818,6 +19764,11 @@ HTMLTableSectionElement.prototype.insertRow = function(index) {}
  * @private
  */
 function ServiceWorkerContainer() {}
+/** @type {?ServiceWorker} */ ServiceWorkerContainer.prototype.controller;
+/** @type {!Promise<!ServiceWorkerRegistration>} */ ServiceWorkerContainer.prototype.ready;
+/** @type {!NullableEventHandler} */ ServiceWorkerContainer.prototype.oncontrollerchange;
+/** @type {?MessageEventHandler} */ ServiceWorkerContainer.prototype.onmessage;
+/** @type {!NullableEventHandler} */ ServiceWorkerContainer.prototype.onmessageerror;
 /**
  * @return {undefined}
  */
@@ -16843,6 +19794,8 @@ ServiceWorkerContainer.prototype.register = function(scriptURL,options) {}
  * @private
  */
 function AbortSignal() {}
+/** @type {!boolean} */ AbortSignal.prototype.aborted;
+/** @type {?EventHandler} */ AbortSignal.prototype.onabort;
 /**
  * @return {!AbortSignal}
  */
@@ -16858,6 +19811,7 @@ function RangeError(message) {}
  * @private
  */
 function RTCCertificate() {}
+/** @type {!DOMTimeStamp} */ RTCCertificate.prototype.expires;
 /**
  * @return {!Array<!RTCDtlsFingerprint>}
  */
@@ -16892,6 +19846,13 @@ function XPathResult() {}
 /** @const {!number} */ XPathResult.prototype.UNORDERED_NODE_ITERATOR_TYPE;
 /** @const {!number} */ XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE;
 /** @const {!number} */ XPathResult.prototype.UNORDERED_NODE_SNAPSHOT_TYPE;
+/** @type {!boolean} */ XPathResult.prototype.booleanValue;
+/** @type {!boolean} */ XPathResult.prototype.invalidIteratorState;
+/** @type {!number} */ XPathResult.prototype.numberValue;
+/** @type {!number} */ XPathResult.prototype.resultType;
+/** @type {?Node} */ XPathResult.prototype.singleNodeValue;
+/** @type {!number} */ XPathResult.prototype.snapshotLength;
+/** @type {!string} */ XPathResult.prototype.stringValue;
 /**
  * @return {?Node}
  */
@@ -16907,12 +19868,25 @@ XPathResult.prototype.snapshotItem = function(index) {}
  * @private
  */
 function CSSCounterStyleRule() {}
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.additiveSymbols;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.fallback;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.name;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.negative;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.pad;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.prefix;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.range;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.speakAs;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.suffix;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.symbols;
+/** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.system;
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
 function PermissionStatus() {}
+/** @type {!string} */ PermissionStatus.prototype.state;
+/** @type {!NullableEventHandler} */ PermissionStatus.prototype.onchange;
 /**
  * @record
  * @private
@@ -16936,6 +19910,7 @@ EXT_disjoint_timer_query_webgl2.prototype.queryCounterEXT = function(query,targe
  * @param {!FormDataEventInit} eventInitDict
  */
 function FormDataEvent(type,eventInitDict) {}
+/** @type {!FormData} */ FormDataEvent.prototype.formData;
 /**
  * @constructor
  * @extends {MouseEvent}
@@ -16943,12 +19918,23 @@ function FormDataEvent(type,eventInitDict) {}
  * @param {!PointerEventInit=} eventInitDict
  */
 function PointerEvent(type,eventInitDict) {}
+/** @type {!number} */ PointerEvent.prototype.height;
+/** @type {!boolean} */ PointerEvent.prototype.isPrimary;
+/** @type {!number} */ PointerEvent.prototype.pointerId;
+/** @type {!string} */ PointerEvent.prototype.pointerType;
+/** @type {!number} */ PointerEvent.prototype.pressure;
+/** @type {!number} */ PointerEvent.prototype.tangentialPressure;
+/** @type {!number} */ PointerEvent.prototype.tiltX;
+/** @type {!number} */ PointerEvent.prototype.tiltY;
+/** @type {!number} */ PointerEvent.prototype.twist;
+/** @type {!number} */ PointerEvent.prototype.width;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLSlotElement() {}
+/** @type {!string} */ HTMLSlotElement.prototype.name;
 /**
  * @param {!AssignedNodesOptions=} options
  * @return {!Array<!Node>}
@@ -16965,6 +19951,7 @@ HTMLSlotElement.prototype.assignedElements = function(options) {}
  * @private
  */
 function HTMLDataElement() {}
+/** @type {!string} */ HTMLDataElement.prototype.value;
 /**
  * @constructor
  * @extends {PerformanceEntry}
@@ -16978,12 +19965,16 @@ function PerformanceMeasure() {}
  * @param {!XRInputSourceEventInit} eventInitDict
  */
 function XRInputSourceEvent(type,eventInitDict) {}
+/** @type {!XRFrame} */ XRInputSourceEvent.prototype.frame;
+/** @type {!XRInputSource} */ XRInputSourceEvent.prototype.inputSource;
 /**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGClipPathElement() {}
+/** @type {!SVGAnimatedEnumeration} */ SVGClipPathElement.prototype.clipPathUnits;
+/** @type {!SVGAnimatedTransformList} */ SVGClipPathElement.prototype.transform;
 /**
  * @constructor
  * @extends {SVGComponentTransferFunctionElement}
@@ -16997,12 +19988,22 @@ function SVGFEFuncBElement() {}
  * @param {!CompositionEventInit=} eventInitDict
  */
 function CompositionEvent(type,eventInitDict) {}
+/** @type {!string} */ CompositionEvent.prototype.data;
 /**
  * @constructor
  * @param {?BodyInit=} body
  * @param {!ResponseInit=} init
  */
 function Response(body,init) {}
+/** @type {!Headers} */ Response.prototype.headers;
+/** @type {!boolean} */ Response.prototype.ok;
+/** @type {!boolean} */ Response.prototype.redirected;
+/** @type {!number} */ Response.prototype.status;
+/** @type {!string} */ Response.prototype.statusText;
+/** @type {!string} */ Response.prototype.type;
+/** @type {!string} */ Response.prototype.url;
+/** @type {?ReadableStream} */ Response.prototype.body;
+/** @type {!boolean} */ Response.prototype.bodyUsed;
 /**
  * @param {!string} url
  * @param {!number=} status
@@ -17067,6 +20068,13 @@ CredentialsContainer.prototype.store = function(credential) {}
  * @private
  */
 function MediaSource() {}
+/** @type {!SourceBufferList} */ MediaSource.prototype.activeSourceBuffers;
+/** @type {!string} */ MediaSource.prototype.readyState;
+/** @type {!SourceBufferList} */ MediaSource.prototype.sourceBuffers;
+/** @type {!number} */ MediaSource.prototype.duration;
+/** @type {!NullableEventHandler} */ MediaSource.prototype.onsourceclose;
+/** @type {!NullableEventHandler} */ MediaSource.prototype.onsourceended;
+/** @type {!NullableEventHandler} */ MediaSource.prototype.onsourceopen;
 /**
  * @param {!SourceBuffer} sourceBuffer
  * @return {undefined}
@@ -17103,18 +20111,30 @@ MediaSource.prototype.clearLiveSeekableRange = function() {}
  * @private
  */
 function SVGFESpotLightElement() {}
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.limitingConeAngle;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.pointsAtX;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.pointsAtY;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.pointsAtZ;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.specularExponent;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.x;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.y;
+/** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.z;
 /**
  * @constructor
  * @extends {HTMLElement}
  * @private
  */
 function HTMLPreElement() {}
+/** @type {!number} */ HTMLPreElement.prototype.width;
 /**
  * @constructor
  * @extends {StyleSheet}
  * @private
  */
 function CSSStyleSheet() {}
+/** @type {!CSSRuleList} */ CSSStyleSheet.prototype.cssRules;
+/** @type {?CSSRule} */ CSSStyleSheet.prototype.ownerRule;
+/** @type {!CSSRuleList} */ CSSStyleSheet.prototype.rules;
 /**
  * @param {!CSSOMString} rule
  * @param {!number=} index
@@ -17145,6 +20165,7 @@ CSSStyleSheet.prototype.deleteRule = function(index) {}
  * @param {!RTCDataChannelEventInit} eventInitDict
  */
 function RTCDataChannelEvent(type,eventInitDict) {}
+/** @type {!RTCDataChannel} */ RTCDataChannelEvent.prototype.channel;
 /**
  * @record
  * @extends {WebGLObject}
@@ -17157,6 +20178,17 @@ function WebGLVertexArrayObjectOES() {}
  * @private
  */
 function CSPViolationReportBody() {}
+/** @type {?string} */ CSPViolationReportBody.prototype.blockedURL;
+/** @type {?number} */ CSPViolationReportBody.prototype.columnNumber;
+/** @type {!string} */ CSPViolationReportBody.prototype.disposition;
+/** @type {!string} */ CSPViolationReportBody.prototype.documentURL;
+/** @type {!string} */ CSPViolationReportBody.prototype.effectiveDirective;
+/** @type {?number} */ CSPViolationReportBody.prototype.lineNumber;
+/** @type {!string} */ CSPViolationReportBody.prototype.originalPolicy;
+/** @type {?string} */ CSPViolationReportBody.prototype.referrer;
+/** @type {?string} */ CSPViolationReportBody.prototype.sample;
+/** @type {?string} */ CSPViolationReportBody.prototype.sourceFile;
+/** @type {!number} */ CSPViolationReportBody.prototype.statusCode;
 /**
  * @record
  * @private
@@ -17173,6 +20205,8 @@ function EXT_color_buffer_half_float() {}
  * @private
  */
 function HTMLCanvasElement() {}
+/** @type {!number} */ HTMLCanvasElement.prototype.height;
+/** @type {!number} */ HTMLCanvasElement.prototype.width;
 /**
  * @return {!OffscreenCanvas}
  */
