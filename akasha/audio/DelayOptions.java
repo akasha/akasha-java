@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DelayOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static DelayOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface DelayOptions extends AudioNodeOptions {
   @JsProperty
   void setDelayTime(double delayTime);
 
-  @JsOverlay
-  @Nonnull
-  default DelayOptions delayTime(final double delayTime) {
-    setDelayTime( delayTime );
-    return this;
-  }
-
   @JsProperty(
       name = "maxDelayTime"
   )
@@ -45,32 +38,47 @@ public interface DelayOptions extends AudioNodeOptions {
   @JsProperty
   void setMaxDelayTime(double maxDelayTime);
 
-  @JsOverlay
-  @Nonnull
-  default DelayOptions maxDelayTime(final double maxDelayTime) {
-    setMaxDelayTime( maxDelayTime );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DelayOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder delayTime(final double delayTime) {
+      setDelayTime( delayTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DelayOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder maxDelayTime(final double maxDelayTime) {
+      setMaxDelayTime( maxDelayTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DelayOptions channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DelayOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

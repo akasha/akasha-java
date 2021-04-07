@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ClipboardEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static ClipboardEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -34,31 +34,39 @@ public interface ClipboardEventInit extends EventInit {
   @JsProperty
   void setClipboardData(@Nullable DataTransfer clipboardData);
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardEventInit clipboardData(@Nullable final DataTransfer clipboardData) {
-    setClipboardData( clipboardData );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ClipboardEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder clipboardData(@Nullable final DataTransfer clipboardData) {
+      setClipboardData( clipboardData );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

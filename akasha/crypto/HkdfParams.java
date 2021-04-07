@@ -25,23 +25,23 @@ import jsinterop.base.JsPropertyMap;
 public interface HkdfParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static HkdfParams create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
+  static Builder create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
       @Nonnull final BufferSource info, @Nonnull final BufferSource salt) {
-    return Js.<HkdfParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
   }
 
   @JsOverlay
   @Nonnull
-  static HkdfParams create(@Nonnull final String name, @Nonnull final Object hash,
+  static Builder create(@Nonnull final String name, @Nonnull final Object hash,
       @Nonnull final BufferSource info, @Nonnull final BufferSource salt) {
-    return Js.<HkdfParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
   }
 
   @JsOverlay
   @Nonnull
-  static HkdfParams create(@Nonnull final String name, @Nonnull final String hash,
+  static Builder create(@Nonnull final String name, @Nonnull final String hash,
       @Nonnull final BufferSource info, @Nonnull final BufferSource salt) {
-    return Js.<HkdfParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
   }
 
   @JsProperty(
@@ -54,34 +54,13 @@ public interface HkdfParams extends Algorithm {
   void setHash(@Nonnull AlgorithmIdentifier hash);
 
   @JsOverlay
-  @Nonnull
-  default HkdfParams hash(@Nonnull final AlgorithmIdentifier hash) {
-    setHash( hash );
-    return this;
-  }
-
-  @JsOverlay
   default void setHash(@Nonnull final Object hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
   @JsOverlay
-  @Nonnull
-  default HkdfParams hash(@Nonnull final Object hash) {
-    setHash( hash );
-    return this;
-  }
-
-  @JsOverlay
   default void setHash(@Nonnull final String hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default HkdfParams hash(@Nonnull final String hash) {
-    setHash( hash );
-    return this;
   }
 
   @JsProperty(
@@ -93,13 +72,6 @@ public interface HkdfParams extends Algorithm {
   @JsProperty
   void setInfo(@Nonnull BufferSource info);
 
-  @JsOverlay
-  @Nonnull
-  default HkdfParams info(@Nonnull final BufferSource info) {
-    setInfo( info );
-    return this;
-  }
-
   @JsProperty(
       name = "salt"
   )
@@ -109,17 +81,59 @@ public interface HkdfParams extends Algorithm {
   @JsProperty
   void setSalt(@Nonnull BufferSource salt);
 
-  @JsOverlay
-  @Nonnull
-  default HkdfParams salt(@Nonnull final BufferSource salt) {
-    setSalt( salt );
-    return this;
-  }
+  /**
+   * A DOMString representing the digest algorithm to use. This may be one of:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams">SubtleCrypto.HkdfParams - Web Cryptography API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends HkdfParams {
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final AlgorithmIdentifier hash) {
+      setHash( hash );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default HkdfParams name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final Object hash) {
+      setHash( hash );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final String hash) {
+      setHash( hash );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder info(@Nonnull final BufferSource info) {
+      setInfo( info );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder salt(@Nonnull final BufferSource salt) {
+      setSalt( salt );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static ChannelSplitterOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,33 +30,40 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsProperty
   void setNumberOfOutputs(int numberOfOutputs);
 
-  @JsOverlay
-  @Nonnull
-  default ChannelSplitterOptions numberOfOutputs(final int numberOfOutputs) {
-    setNumberOfOutputs( numberOfOutputs );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ChannelSplitterOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder numberOfOutputs(final int numberOfOutputs) {
+      setNumberOfOutputs( numberOfOutputs );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ChannelSplitterOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ChannelSplitterOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ChannelSplitterOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

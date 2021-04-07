@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushSubscriptionOptionsInit {
   @JsOverlay
   @Nonnull
-  static PushSubscriptionOptionsInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,24 +39,8 @@ public interface PushSubscriptionOptionsInit {
   }
 
   @JsOverlay
-  @Nonnull
-  default PushSubscriptionOptionsInit applicationServerKey(
-      @Nonnull final BufferSource applicationServerKey) {
-    setApplicationServerKey( applicationServerKey );
-    return this;
-  }
-
-  @JsOverlay
   default void setApplicationServerKey(@Nonnull final String applicationServerKey) {
     setApplicationServerKey( BufferSourceOrStringUnion.of( applicationServerKey ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionOptionsInit applicationServerKey(
-      @Nonnull final String applicationServerKey) {
-    setApplicationServerKey( applicationServerKey );
-    return this;
   }
 
   @JsProperty(
@@ -67,10 +51,32 @@ public interface PushSubscriptionOptionsInit {
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionOptionsInit userVisibleOnly(final boolean userVisibleOnly) {
-    setUserVisibleOnly( userVisibleOnly );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PushSubscriptionOptionsInit {
+    @JsOverlay
+    @Nonnull
+    default Builder applicationServerKey(@Nonnull final BufferSource applicationServerKey) {
+      setApplicationServerKey( applicationServerKey );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder applicationServerKey(@Nonnull final String applicationServerKey) {
+      setApplicationServerKey( applicationServerKey );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder userVisibleOnly(final boolean userVisibleOnly) {
+      setUserVisibleOnly( userVisibleOnly );
+      return this;
+    }
   }
 }

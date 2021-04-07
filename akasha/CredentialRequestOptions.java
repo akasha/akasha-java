@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CredentialRequestOptions {
   @JsOverlay
   @Nonnull
-  static CredentialRequestOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,14 +31,6 @@ public interface CredentialRequestOptions {
   @JsProperty
   void setMediation(@CredentialMediationRequirement @Nonnull String mediation);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialRequestOptions mediation(
-      @CredentialMediationRequirement @Nonnull final String mediation) {
-    setMediation( mediation );
-    return this;
-  }
-
   @JsProperty(
       name = "signal"
   )
@@ -46,13 +38,6 @@ public interface CredentialRequestOptions {
 
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);
-
-  @JsOverlay
-  @Nonnull
-  default CredentialRequestOptions signal(@Nonnull final AbortSignal signal) {
-    setSignal( signal );
-    return this;
-  }
 
   @JsProperty(
       name = "password"
@@ -62,13 +47,6 @@ public interface CredentialRequestOptions {
   @JsProperty
   void setPassword(boolean password);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialRequestOptions password(final boolean password) {
-    setPassword( password );
-    return this;
-  }
-
   @JsProperty(
       name = "federated"
   )
@@ -76,14 +54,6 @@ public interface CredentialRequestOptions {
 
   @JsProperty
   void setFederated(@Nonnull FederatedCredentialRequestOptions federated);
-
-  @JsOverlay
-  @Nonnull
-  default CredentialRequestOptions federated(
-      @Nonnull final FederatedCredentialRequestOptions federated) {
-    setFederated( federated );
-    return this;
-  }
 
   @JsProperty(
       name = "publicKey"
@@ -93,11 +63,46 @@ public interface CredentialRequestOptions {
   @JsProperty
   void setPublicKey(@Nonnull PublicKeyCredentialRequestOptions publicKey);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialRequestOptions publicKey(
-      @Nonnull final PublicKeyCredentialRequestOptions publicKey) {
-    setPublicKey( publicKey );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CredentialRequestOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder mediation(@CredentialMediationRequirement @Nonnull final String mediation) {
+      setMediation( mediation );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder signal(@Nonnull final AbortSignal signal) {
+      setSignal( signal );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder password(final boolean password) {
+      setPassword( password );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder federated(@Nonnull final FederatedCredentialRequestOptions federated) {
+      setFederated( federated );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder publicKey(@Nonnull final PublicKeyCredentialRequestOptions publicKey) {
+      setPublicKey( publicKey );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaRecorderOptions {
   @JsOverlay
   @Nonnull
-  static MediaRecorderOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,14 +31,6 @@ public interface MediaRecorderOptions {
   @JsProperty
   void setAudioBitrateMode(@BitrateMode @Nonnull String audioBitrateMode);
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderOptions audioBitrateMode(
-      @BitrateMode @Nonnull final String audioBitrateMode) {
-    setAudioBitrateMode( audioBitrateMode );
-    return this;
-  }
-
   @JsProperty(
       name = "audioBitsPerSecond"
   )
@@ -46,13 +38,6 @@ public interface MediaRecorderOptions {
 
   @JsProperty
   void setAudioBitsPerSecond(int audioBitsPerSecond);
-
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderOptions audioBitsPerSecond(final int audioBitsPerSecond) {
-    setAudioBitsPerSecond( audioBitsPerSecond );
-    return this;
-  }
 
   @JsProperty(
       name = "bitsPerSecond"
@@ -62,13 +47,6 @@ public interface MediaRecorderOptions {
   @JsProperty
   void setBitsPerSecond(int bitsPerSecond);
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderOptions bitsPerSecond(final int bitsPerSecond) {
-    setBitsPerSecond( bitsPerSecond );
-    return this;
-  }
-
   @JsProperty(
       name = "mimeType"
   )
@@ -76,13 +54,6 @@ public interface MediaRecorderOptions {
 
   @JsProperty
   void setMimeType(@Nonnull String mimeType);
-
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderOptions mimeType(@Nonnull final String mimeType) {
-    setMimeType( mimeType );
-    return this;
-  }
 
   @JsProperty(
       name = "videoBitsPerSecond"
@@ -92,10 +63,46 @@ public interface MediaRecorderOptions {
   @JsProperty
   void setVideoBitsPerSecond(int videoBitsPerSecond);
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderOptions videoBitsPerSecond(final int videoBitsPerSecond) {
-    setVideoBitsPerSecond( videoBitsPerSecond );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaRecorderOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder audioBitrateMode(@BitrateMode @Nonnull final String audioBitrateMode) {
+      setAudioBitrateMode( audioBitrateMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder audioBitsPerSecond(final int audioBitsPerSecond) {
+      setAudioBitsPerSecond( audioBitsPerSecond );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bitsPerSecond(final int bitsPerSecond) {
+      setBitsPerSecond( bitsPerSecond );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mimeType(@Nonnull final String mimeType) {
+      setMimeType( mimeType );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder videoBitsPerSecond(final int videoBitsPerSecond) {
+      setVideoBitsPerSecond( videoBitsPerSecond );
+      return this;
+    }
   }
 }

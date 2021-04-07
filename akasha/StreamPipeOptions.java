@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface StreamPipeOptions {
   @JsOverlay
   @Nonnull
-  static StreamPipeOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface StreamPipeOptions {
   @JsProperty
   void setPreventClose(boolean preventClose);
 
-  @JsOverlay
-  @Nonnull
-  default StreamPipeOptions preventClose(final boolean preventClose) {
-    setPreventClose( preventClose );
-    return this;
-  }
-
   @JsProperty(
       name = "preventAbort"
   )
@@ -44,13 +37,6 @@ public interface StreamPipeOptions {
 
   @JsProperty
   void setPreventAbort(boolean preventAbort);
-
-  @JsOverlay
-  @Nonnull
-  default StreamPipeOptions preventAbort(final boolean preventAbort) {
-    setPreventAbort( preventAbort );
-    return this;
-  }
 
   @JsProperty(
       name = "preventCancel"
@@ -60,13 +46,6 @@ public interface StreamPipeOptions {
   @JsProperty
   void setPreventCancel(boolean preventCancel);
 
-  @JsOverlay
-  @Nonnull
-  default StreamPipeOptions preventCancel(final boolean preventCancel) {
-    setPreventCancel( preventCancel );
-    return this;
-  }
-
   @JsProperty(
       name = "signal"
   )
@@ -75,10 +54,39 @@ public interface StreamPipeOptions {
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);
 
-  @JsOverlay
-  @Nonnull
-  default StreamPipeOptions signal(@Nonnull final AbortSignal signal) {
-    setSignal( signal );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends StreamPipeOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder preventClose(final boolean preventClose) {
+      setPreventClose( preventClose );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder preventAbort(final boolean preventAbort) {
+      setPreventAbort( preventAbort );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder preventCancel(final boolean preventCancel) {
+      setPreventCancel( preventCancel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder signal(@Nonnull final AbortSignal signal) {
+      setSignal( signal );
+      return this;
+    }
   }
 }

@@ -18,9 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialParameters {
   @JsOverlay
   @Nonnull
-  static PublicKeyCredentialParameters create(final int alg,
-      @PublicKeyCredentialType @Nonnull final String type) {
-    return Js.<PublicKeyCredentialParameters>uncheckedCast( JsPropertyMap.of() ).alg( alg ).type( type );
+  static Builder create(final int alg, @PublicKeyCredentialType @Nonnull final String type) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).alg( alg ).type( type );
   }
 
   @JsProperty(
@@ -30,13 +29,6 @@ public interface PublicKeyCredentialParameters {
 
   @JsProperty
   void setAlg(int alg);
-
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialParameters alg(final int alg) {
-    setAlg( alg );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -48,10 +40,25 @@ public interface PublicKeyCredentialParameters {
   @JsProperty
   void setType(@PublicKeyCredentialType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialParameters type(@PublicKeyCredentialType @Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PublicKeyCredentialParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder alg(final int alg) {
+      setAlg( alg );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@PublicKeyCredentialType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

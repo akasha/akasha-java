@@ -19,9 +19,9 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsOverlay
   @Nonnull
-  static RsaHashedKeyAlgorithm create(@Nonnull final String name, final int modulusLength,
+  static Builder create(@Nonnull final String name, final int modulusLength,
       @Nonnull final Uint8Array publicExponent, @Nonnull final KeyAlgorithm hash) {
-    return Js.<RsaHashedKeyAlgorithm>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
   }
 
   @JsProperty(
@@ -33,31 +33,39 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsProperty
   void setHash(@Nonnull KeyAlgorithm hash);
 
-  @JsOverlay
-  @Nonnull
-  default RsaHashedKeyAlgorithm hash(@Nonnull final KeyAlgorithm hash) {
-    setHash( hash );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RsaHashedKeyAlgorithm {
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final KeyAlgorithm hash) {
+      setHash( hash );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RsaHashedKeyAlgorithm modulusLength(final int modulusLength) {
-    setModulusLength( modulusLength );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modulusLength(final int modulusLength) {
+      setModulusLength( modulusLength );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RsaHashedKeyAlgorithm publicExponent(@Nonnull final Uint8Array publicExponent) {
-    setPublicExponent( publicExponent );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder publicExponent(@Nonnull final Uint8Array publicExponent) {
+      setPublicExponent( publicExponent );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RsaHashedKeyAlgorithm name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

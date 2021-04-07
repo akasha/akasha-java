@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaTrackSupportedConstraints {
   @JsOverlay
   @Nonnull
-  static MediaTrackSupportedConstraints create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -48,19 +48,6 @@ public interface MediaTrackSupportedConstraints {
   void setAspectRatio(boolean aspectRatio);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's aspectRatio property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the aspectRatio constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/aspectRatio">MediaTrackSupportedConstraints.aspectRatio - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-aspectratio">aspectRatio - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints aspectRatio(final boolean aspectRatio) {
-    setAspectRatio( aspectRatio );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's autoGainControl property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the autoGainControl constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/autoGainControl">MediaTrackSupportedConstraints.autoGainControl - MDN</a>
@@ -79,19 +66,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setAutoGainControl(boolean autoGainControl);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's autoGainControl property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the autoGainControl constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/autoGainControl">MediaTrackSupportedConstraints.autoGainControl - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-autogaincontrol">autoGainControl - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints autoGainControl(final boolean autoGainControl) {
-    setAutoGainControl( autoGainControl );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's channelCount property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the channelCount constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
@@ -114,19 +88,6 @@ public interface MediaTrackSupportedConstraints {
   void setChannelCount(boolean channelCount);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's channelCount property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the channelCount constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/channelCount">MediaTrackSupportedConstraints.channelCount - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-channelcount">channelCount - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints channelCount(final boolean channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's deviceId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the deviceId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/deviceId">MediaTrackSupportedConstraints.deviceId - MDN</a>
@@ -145,19 +106,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setDeviceId(boolean deviceId);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's deviceId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the deviceId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/deviceId">MediaTrackSupportedConstraints.deviceId - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-deviceid">deviceId - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints deviceId(final boolean deviceId) {
-    setDeviceId( deviceId );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's echoCancellation property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the echoCancellation constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
@@ -180,19 +128,6 @@ public interface MediaTrackSupportedConstraints {
   void setEchoCancellation(boolean echoCancellation);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's echoCancellation property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the echoCancellation constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/echoCancellation">MediaTrackSupportedConstraints.echoCancellation - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-echocancellation">echoCancellation - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints echoCancellation(final boolean echoCancellation) {
-    setEchoCancellation( echoCancellation );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's facingMode property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the facingMode constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/facingMode">MediaTrackSupportedConstraints.facingMode - MDN</a>
@@ -211,19 +146,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setFacingMode(boolean facingMode);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's facingMode property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the facingMode constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/facingMode">MediaTrackSupportedConstraints.facingMode - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-facingmode">facingMode - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints facingMode(final boolean facingMode) {
-    setFacingMode( facingMode );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's frameRate property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the frameRate constraint.
@@ -246,19 +168,6 @@ public interface MediaTrackSupportedConstraints {
   void setFrameRate(boolean frameRate);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's frameRate property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the frameRate constraint.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/frameRate">MediaTrackSupportedConstraints.frameRate - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-framerate">frameRate - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints frameRate(final boolean frameRate) {
-    setFrameRate( frameRate );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's groupId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the groupId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/groupId">MediaTrackSupportedConstraints.groupId - MDN</a>
@@ -277,19 +186,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setGroupId(boolean groupId);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's groupId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the groupId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/groupId">MediaTrackSupportedConstraints.groupId - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-groupid">groupId - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints groupId(final boolean groupId) {
-    setGroupId( groupId );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's height property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the height constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
@@ -312,19 +208,6 @@ public interface MediaTrackSupportedConstraints {
   void setHeight(boolean height);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's height property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the height constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/height">MediaTrackSupportedConstraints.height - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-height">height - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints height(final boolean height) {
-    setHeight( height );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's latency property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the latency constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/latency">MediaTrackSupportedConstraints.latency - MDN</a>
@@ -343,19 +226,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setLatency(boolean latency);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's latency property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the latency constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/latency">MediaTrackSupportedConstraints.latency - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-latency">latency - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints latency(final boolean latency) {
-    setLatency( latency );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's noiseSuppression property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the noiseSuppression constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
@@ -377,19 +247,6 @@ public interface MediaTrackSupportedConstraints {
   @JsProperty
   void setNoiseSuppression(boolean noiseSuppression);
 
-  /**
-   * The MediaTrackSupportedConstraints dictionary's noiseSuppression property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the noiseSuppression constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/noiseSuppression">MediaTrackSupportedConstraints.noiseSuppression - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-noisesuppression">noiseSuppression - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints noiseSuppression(final boolean noiseSuppression) {
-    setNoiseSuppression( noiseSuppression );
-    return this;
-  }
-
   @JsProperty(
       name = "resizeMode"
   )
@@ -397,13 +254,6 @@ public interface MediaTrackSupportedConstraints {
 
   @JsProperty
   void setResizeMode(boolean resizeMode);
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints resizeMode(final boolean resizeMode) {
-    setResizeMode( resizeMode );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's sampleRate property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the sampleRate constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
@@ -426,19 +276,6 @@ public interface MediaTrackSupportedConstraints {
   void setSampleRate(boolean sampleRate);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's sampleRate property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the sampleRate constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleRate">MediaTrackSupportedConstraints.sampleRate - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-samplerate">sampleRate - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints sampleRate(final boolean sampleRate) {
-    setSampleRate( sampleRate );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's sampleSize property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the sampleSize constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleSize">MediaTrackSupportedConstraints.sampleSize - MDN</a>
@@ -457,19 +294,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setSampleSize(boolean sampleSize);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's sampleSize property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the sampleSize constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleSize">MediaTrackSupportedConstraints.sampleSize - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-samplesize">sampleSize - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints sampleSize(final boolean sampleSize) {
-    setSampleSize( sampleSize );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's width property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the width constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
@@ -492,19 +316,6 @@ public interface MediaTrackSupportedConstraints {
   void setWidth(boolean width);
 
   /**
-   * The MediaTrackSupportedConstraints dictionary's width property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the width constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/width">MediaTrackSupportedConstraints.width - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-width">width - Media Capture and Streams</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints width(final boolean width) {
-    setWidth( width );
-    return this;
-  }
-
-  /**
    * The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor">MediaTrackSupportedConstraints.cursor - MDN</a>
@@ -523,19 +334,6 @@ public interface MediaTrackSupportedConstraints {
    */
   @JsProperty
   void setCursor(boolean cursor);
-
-  /**
-   * The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor">MediaTrackSupportedConstraints.cursor - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-cursor">MediaTrackSupportedConstraints.cursor - Screen Capture</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints cursor(final boolean cursor) {
-    setCursor( cursor );
-    return this;
-  }
 
   /**
    * The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.
@@ -557,19 +355,6 @@ public interface MediaTrackSupportedConstraints {
   @JsProperty
   void setDisplaySurface(boolean displaySurface);
 
-  /**
-   * The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface">MediaTrackSupportedConstraints.displaySurface - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-displaysurface">MediaTrackSupportedConstraints.displaySurface - Screen Capture</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints displaySurface(final boolean displaySurface) {
-    setDisplaySurface( displaySurface );
-    return this;
-  }
-
   @JsProperty(
       name = "logicalSurface"
   )
@@ -577,13 +362,6 @@ public interface MediaTrackSupportedConstraints {
 
   @JsProperty
   void setLogicalSurface(boolean logicalSurface);
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints logicalSurface(final boolean logicalSurface) {
-    setLogicalSurface( logicalSurface );
-    return this;
-  }
 
   @JsProperty(
       name = "restrictOwnAudio"
@@ -593,10 +371,245 @@ public interface MediaTrackSupportedConstraints {
   @JsProperty
   void setRestrictOwnAudio(boolean restrictOwnAudio);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackSupportedConstraints restrictOwnAudio(final boolean restrictOwnAudio) {
-    setRestrictOwnAudio( restrictOwnAudio );
-    return this;
+  /**
+   * The MediaTrackSupportedConstraints dictionary establishes the list of constrainable properties recognized by the user agent or browser in its implementation of the MediaStreamTrack object. An object conforming to MediaTrackSupportedConstraints is returned by MediaDevices.getSupportedConstraints().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints">MediaTrackSupportedConstraints - MDN</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaTrackSupportedConstraints {
+    /**
+     * The MediaTrackSupportedConstraints dictionary's aspectRatio property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the aspectRatio constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/aspectRatio">MediaTrackSupportedConstraints.aspectRatio - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-aspectratio">aspectRatio - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder aspectRatio(final boolean aspectRatio) {
+      setAspectRatio( aspectRatio );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's autoGainControl property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the autoGainControl constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/autoGainControl">MediaTrackSupportedConstraints.autoGainControl - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-autogaincontrol">autoGainControl - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder autoGainControl(final boolean autoGainControl) {
+      setAutoGainControl( autoGainControl );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's channelCount property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the channelCount constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/channelCount">MediaTrackSupportedConstraints.channelCount - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-channelcount">channelCount - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final boolean channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's deviceId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the deviceId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/deviceId">MediaTrackSupportedConstraints.deviceId - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-deviceid">deviceId - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder deviceId(final boolean deviceId) {
+      setDeviceId( deviceId );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's echoCancellation property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the echoCancellation constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/echoCancellation">MediaTrackSupportedConstraints.echoCancellation - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-echocancellation">echoCancellation - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder echoCancellation(final boolean echoCancellation) {
+      setEchoCancellation( echoCancellation );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's facingMode property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the facingMode constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/facingMode">MediaTrackSupportedConstraints.facingMode - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-facingmode">facingMode - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder facingMode(final boolean facingMode) {
+      setFacingMode( facingMode );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's frameRate property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the frameRate constraint.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/frameRate">MediaTrackSupportedConstraints.frameRate - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-framerate">frameRate - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder frameRate(final boolean frameRate) {
+      setFrameRate( frameRate );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's groupId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the groupId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/groupId">MediaTrackSupportedConstraints.groupId - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-groupid">groupId - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder groupId(final boolean groupId) {
+      setGroupId( groupId );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's height property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the height constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/height">MediaTrackSupportedConstraints.height - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-height">height - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder height(final boolean height) {
+      setHeight( height );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's latency property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the latency constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/latency">MediaTrackSupportedConstraints.latency - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-latency">latency - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder latency(final boolean latency) {
+      setLatency( latency );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's noiseSuppression property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the noiseSuppression constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/noiseSuppression">MediaTrackSupportedConstraints.noiseSuppression - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-noisesuppression">noiseSuppression - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder noiseSuppression(final boolean noiseSuppression) {
+      setNoiseSuppression( noiseSuppression );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resizeMode(final boolean resizeMode) {
+      setResizeMode( resizeMode );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's sampleRate property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the sampleRate constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleRate">MediaTrackSupportedConstraints.sampleRate - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-samplerate">sampleRate - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder sampleRate(final boolean sampleRate) {
+      setSampleRate( sampleRate );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's sampleSize property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the sampleSize constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/sampleSize">MediaTrackSupportedConstraints.sampleSize - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-samplesize">sampleSize - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder sampleSize(final boolean sampleSize) {
+      setSampleSize( sampleSize );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's width property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the width constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/width">MediaTrackSupportedConstraints.width - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-width">width - Media Capture and Streams</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder width(final boolean width) {
+      setWidth( width );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor">MediaTrackSupportedConstraints.cursor - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-cursor">MediaTrackSupportedConstraints.cursor - Screen Capture</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder cursor(final boolean cursor) {
+      setCursor( cursor );
+      return this;
+    }
+
+    /**
+     * The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface">MediaTrackSupportedConstraints.displaySurface - MDN</a>
+     * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-displaysurface">MediaTrackSupportedConstraints.displaySurface - Screen Capture</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder displaySurface(final boolean displaySurface) {
+      setDisplaySurface( displaySurface );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder logicalSurface(final boolean logicalSurface) {
+      setLogicalSurface( logicalSurface );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder restrictOwnAudio(final boolean restrictOwnAudio) {
+      setRestrictOwnAudio( restrictOwnAudio );
+      return this;
+    }
   }
 }

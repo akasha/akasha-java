@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DeviceMotionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static DeviceMotionEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,14 +30,6 @@ public interface DeviceMotionEventInit extends EventInit {
   @JsProperty
   void setAcceleration(@Nonnull DeviceMotionEventAccelerationInit acceleration);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit acceleration(
-      @Nonnull final DeviceMotionEventAccelerationInit acceleration) {
-    setAcceleration( acceleration );
-    return this;
-  }
-
   @JsProperty(
       name = "accelerationIncludingGravity"
   )
@@ -47,14 +39,6 @@ public interface DeviceMotionEventInit extends EventInit {
   void setAccelerationIncludingGravity(
       @Nonnull DeviceMotionEventAccelerationInit accelerationIncludingGravity);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit accelerationIncludingGravity(
-      @Nonnull final DeviceMotionEventAccelerationInit accelerationIncludingGravity) {
-    setAccelerationIncludingGravity( accelerationIncludingGravity );
-    return this;
-  }
-
   @JsProperty(
       name = "interval"
   )
@@ -62,13 +46,6 @@ public interface DeviceMotionEventInit extends EventInit {
 
   @JsProperty
   void setInterval(double interval);
-
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit interval(final double interval) {
-    setInterval( interval );
-    return this;
-  }
 
   @JsProperty(
       name = "rotationRate"
@@ -78,32 +55,61 @@ public interface DeviceMotionEventInit extends EventInit {
   @JsProperty
   void setRotationRate(@Nonnull DeviceMotionEventRotationRateInit rotationRate);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit rotationRate(
-      @Nonnull final DeviceMotionEventRotationRateInit rotationRate) {
-    setRotationRate( rotationRate );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DeviceMotionEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder acceleration(@Nonnull final DeviceMotionEventAccelerationInit acceleration) {
+      setAcceleration( acceleration );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder accelerationIncludingGravity(
+        @Nonnull final DeviceMotionEventAccelerationInit accelerationIncludingGravity) {
+      setAccelerationIncludingGravity( accelerationIncludingGravity );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder interval(final double interval) {
+      setInterval( interval );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder rotationRate(@Nonnull final DeviceMotionEventRotationRateInit rotationRate) {
+      setRotationRate( rotationRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

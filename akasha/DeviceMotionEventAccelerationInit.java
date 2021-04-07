@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DeviceMotionEventAccelerationInit {
   @JsOverlay
   @Nonnull
-  static DeviceMotionEventAccelerationInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface DeviceMotionEventAccelerationInit {
   @JsProperty
   void setX(@Nullable Double x);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventAccelerationInit x(@Nullable final Double x) {
-    setX( x );
-    return this;
-  }
-
   @JsProperty(
       name = "y"
   )
@@ -47,13 +40,6 @@ public interface DeviceMotionEventAccelerationInit {
 
   @JsProperty
   void setY(@Nullable Double y);
-
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventAccelerationInit y(@Nullable final Double y) {
-    setY( y );
-    return this;
-  }
 
   @JsProperty(
       name = "z"
@@ -64,10 +50,32 @@ public interface DeviceMotionEventAccelerationInit {
   @JsProperty
   void setZ(@Nullable Double z);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventAccelerationInit z(@Nullable final Double z) {
-    setZ( z );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DeviceMotionEventAccelerationInit {
+    @JsOverlay
+    @Nonnull
+    default Builder x(@Nullable final Double x) {
+      setX( x );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder y(@Nullable final Double y) {
+      setY( y );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder z(@Nullable final Double z) {
+      setZ( z );
+      return this;
+    }
   }
 }

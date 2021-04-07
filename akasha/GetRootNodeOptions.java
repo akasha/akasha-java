@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GetRootNodeOptions {
   @JsOverlay
   @Nonnull
-  static GetRootNodeOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface GetRootNodeOptions {
   @JsProperty
   void setComposed(boolean composed);
 
-  @JsOverlay
-  @Nonnull
-  default GetRootNodeOptions composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends GetRootNodeOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

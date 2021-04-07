@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   @JsOverlay
   @Nonnull
-  static PeriodicWaveOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,22 +32,8 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   void setImag(@Nonnull JsArray<Double> imag);
 
   @JsOverlay
-  @Nonnull
-  default PeriodicWaveOptions imag(@Nonnull final JsArray<Double> imag) {
-    setImag( imag );
-    return this;
-  }
-
-  @JsOverlay
   default void setImag(@Nonnull final double... imag) {
     setImag( Js.<JsArray<Double>>uncheckedCast( imag ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PeriodicWaveOptions imag(@Nonnull final double... imag) {
-    setImag( imag );
-    return this;
   }
 
   @JsProperty(
@@ -59,28 +45,50 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   void setReal(@Nonnull JsArray<Double> real);
 
   @JsOverlay
-  @Nonnull
-  default PeriodicWaveOptions real(@Nonnull final JsArray<Double> real) {
-    setReal( real );
-    return this;
-  }
-
-  @JsOverlay
   default void setReal(@Nonnull final double... real) {
     setReal( Js.<JsArray<Double>>uncheckedCast( real ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default PeriodicWaveOptions real(@Nonnull final double... real) {
-    setReal( real );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PeriodicWaveOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder imag(@Nonnull final JsArray<Double> imag) {
+      setImag( imag );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PeriodicWaveOptions disableNormalization(final boolean disableNormalization) {
-    setDisableNormalization( disableNormalization );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder imag(@Nonnull final double... imag) {
+      setImag( imag );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder real(@Nonnull final JsArray<Double> real) {
+      setReal( real );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder real(@Nonnull final double... real) {
+      setReal( real );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder disableNormalization(final boolean disableNormalization) {
+      setDisableNormalization( disableNormalization );
+      return this;
+    }
   }
 }

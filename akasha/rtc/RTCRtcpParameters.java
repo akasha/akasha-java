@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtcpParameters {
   @JsOverlay
   @Nonnull
-  static RTCRtcpParameters create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -36,13 +36,6 @@ public interface RTCRtcpParameters {
   @JsProperty
   void setCname(@Nonnull String cname);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtcpParameters cname(@Nonnull final String cname) {
-    setCname( cname );
-    return this;
-  }
-
   @JsProperty(
       name = "reducedSize"
   )
@@ -51,10 +44,31 @@ public interface RTCRtcpParameters {
   @JsProperty
   void setReducedSize(boolean reducedSize);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtcpParameters reducedSize(final boolean reducedSize) {
-    setReducedSize( reducedSize );
-    return this;
+  /**
+   * The RTCRtcpParameters dictionary provides parameters of an RTCP connection. It's used as the value of the rtcp property of the parameters of an RTCRtpSender or RTCRtpReceiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtcpParameters">RTCRtcpParameters - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtcpparameters">RTCRtcpParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtcpParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder cname(@Nonnull final String cname) {
+      setCname( cname );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder reducedSize(final boolean reducedSize) {
+      setReducedSize( reducedSize );
+      return this;
+    }
   }
 }

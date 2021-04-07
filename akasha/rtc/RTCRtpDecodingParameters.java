@@ -17,14 +17,22 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpDecodingParameters extends RTCRtpCodingParameters {
   @JsOverlay
   @Nonnull
-  static RTCRtpDecodingParameters create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpDecodingParameters rid(@Nonnull final String rid) {
-    setRid( rid );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpDecodingParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder rid(@Nonnull final String rid) {
+      setRid( rid );
+      return this;
+    }
   }
 }

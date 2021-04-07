@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface ModuleImportDescriptor {
   @JsOverlay
   @Nonnull
-  static ModuleImportDescriptor create(@ImportExportKind @Nonnull final String kind,
-      @Nonnull final String module, @Nonnull final String name) {
-    return Js.<ModuleImportDescriptor>uncheckedCast( JsPropertyMap.of() ).kind( kind ).module( module ).name( name );
+  static Builder create(@ImportExportKind @Nonnull final String kind, @Nonnull final String module,
+      @Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).kind( kind ).module( module ).name( name );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface ModuleImportDescriptor {
   @JsProperty
   void setKind(@ImportExportKind @Nonnull String kind);
 
-  @JsOverlay
-  @Nonnull
-  default ModuleImportDescriptor kind(@ImportExportKind @Nonnull final String kind) {
-    setKind( kind );
-    return this;
-  }
-
   @JsProperty(
       name = "module"
   )
@@ -48,13 +41,6 @@ public interface ModuleImportDescriptor {
 
   @JsProperty
   void setModule(@Nonnull String module);
-
-  @JsOverlay
-  @Nonnull
-  default ModuleImportDescriptor module(@Nonnull final String module) {
-    setModule( module );
-    return this;
-  }
 
   @JsProperty(
       name = "name"
@@ -65,10 +51,32 @@ public interface ModuleImportDescriptor {
   @JsProperty
   void setName(@Nonnull String name);
 
-  @JsOverlay
-  @Nonnull
-  default ModuleImportDescriptor name(@Nonnull final String name) {
-    setName( name );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ModuleImportDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder kind(@ImportExportKind @Nonnull final String kind) {
+      setKind( kind );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder module(@Nonnull final String module) {
+      setModule( module );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

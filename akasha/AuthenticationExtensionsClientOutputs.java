@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AuthenticationExtensionsClientOutputs {
   @JsOverlay
   @Nonnull
-  static AuthenticationExtensionsClientOutputs create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface AuthenticationExtensionsClientOutputs {
   @JsProperty
   void setAppid(boolean appid);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs appid(final boolean appid) {
-    setAppid( appid );
-    return this;
-  }
-
   @JsProperty(
       name = "txAuthSimple"
   )
@@ -46,13 +39,6 @@ public interface AuthenticationExtensionsClientOutputs {
 
   @JsProperty
   void setTxAuthSimple(@Nonnull String txAuthSimple);
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs txAuthSimple(@Nonnull final String txAuthSimple) {
-    setTxAuthSimple( txAuthSimple );
-    return this;
-  }
 
   @JsProperty(
       name = "txAuthGeneric"
@@ -62,14 +48,6 @@ public interface AuthenticationExtensionsClientOutputs {
   @JsProperty
   void setTxAuthGeneric(@Nonnull ArrayBuffer txAuthGeneric);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs txAuthGeneric(
-      @Nonnull final ArrayBuffer txAuthGeneric) {
-    setTxAuthGeneric( txAuthGeneric );
-    return this;
-  }
-
   @JsProperty(
       name = "authnSel"
   )
@@ -77,13 +55,6 @@ public interface AuthenticationExtensionsClientOutputs {
 
   @JsProperty
   void setAuthnSel(boolean authnSel);
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs authnSel(final boolean authnSel) {
-    setAuthnSel( authnSel );
-    return this;
-  }
 
   @JsProperty(
       name = "exts"
@@ -94,22 +65,8 @@ public interface AuthenticationExtensionsClientOutputs {
   void setExts(@Nonnull JsArray<String> exts);
 
   @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs exts(@Nonnull final JsArray<String> exts) {
-    setExts( exts );
-    return this;
-  }
-
-  @JsOverlay
   default void setExts(@Nonnull final String... exts) {
     setExts( Js.<JsArray<String>>uncheckedCast( exts ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs exts(@Nonnull final String... exts) {
-    setExts( exts );
-    return this;
   }
 
   @JsProperty(
@@ -120,13 +77,6 @@ public interface AuthenticationExtensionsClientOutputs {
   @JsProperty
   void setUvi(@Nonnull ArrayBuffer uvi);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs uvi(@Nonnull final ArrayBuffer uvi) {
-    setUvi( uvi );
-    return this;
-  }
-
   @JsProperty(
       name = "loc"
   )
@@ -134,13 +84,6 @@ public interface AuthenticationExtensionsClientOutputs {
 
   @JsProperty
   void setLoc(@Nonnull Coordinates loc);
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs loc(@Nonnull final Coordinates loc) {
-    setLoc( loc );
-    return this;
-  }
 
   @JsProperty(
       name = "uvm"
@@ -151,23 +94,87 @@ public interface AuthenticationExtensionsClientOutputs {
   void setUvm(@Nonnull JsArray<JsArray<Double>> uvm);
 
   @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientOutputs uvm(@Nonnull final JsArray<JsArray<Double>> uvm) {
-    setUvm( uvm );
-    return this;
-  }
-
-  @JsOverlay
   @SuppressWarnings("unchecked")
   default void setUvm(@Nonnull final JsArray<Double>... uvm) {
     setUvm( Js.<JsArray<JsArray<Double>>>uncheckedCast( uvm ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  @SuppressWarnings("unchecked")
-  default AuthenticationExtensionsClientOutputs uvm(@Nonnull final JsArray<Double>... uvm) {
-    setUvm( uvm );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AuthenticationExtensionsClientOutputs {
+    @JsOverlay
+    @Nonnull
+    default Builder appid(final boolean appid) {
+      setAppid( appid );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder txAuthSimple(@Nonnull final String txAuthSimple) {
+      setTxAuthSimple( txAuthSimple );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder txAuthGeneric(@Nonnull final ArrayBuffer txAuthGeneric) {
+      setTxAuthGeneric( txAuthGeneric );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder authnSel(final boolean authnSel) {
+      setAuthnSel( authnSel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder exts(@Nonnull final JsArray<String> exts) {
+      setExts( exts );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder exts(@Nonnull final String... exts) {
+      setExts( exts );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uvi(@Nonnull final ArrayBuffer uvi) {
+      setUvi( uvi );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder loc(@Nonnull final Coordinates loc) {
+      setLoc( loc );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uvm(@Nonnull final JsArray<JsArray<Double>> uvm) {
+      setUvm( uvm );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    @SuppressWarnings("unchecked")
+    default Builder uvm(@Nonnull final JsArray<Double>... uvm) {
+      setUvm( uvm );
+      return this;
+    }
   }
 }

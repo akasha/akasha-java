@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CompositionEventInit extends UIEventInit {
   @JsOverlay
   @Nonnull
-  static CompositionEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,45 +31,53 @@ public interface CompositionEventInit extends UIEventInit {
   @JsProperty
   void setData(@Nonnull String data);
 
-  @JsOverlay
-  @Nonnull
-  default CompositionEventInit data(@Nonnull final String data) {
-    setData( data );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CompositionEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull final String data) {
+      setData( data );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CompositionEventInit detail(final int detail) {
-    setDetail( detail );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder detail(final int detail) {
+      setDetail( detail );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CompositionEventInit view(@Nullable final Window view) {
-    setView( view );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nullable final Window view) {
+      setView( view );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CompositionEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CompositionEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CompositionEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

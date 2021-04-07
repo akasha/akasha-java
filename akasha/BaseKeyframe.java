@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BaseKeyframe {
   @JsOverlay
   @Nonnull
-  static BaseKeyframe create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface BaseKeyframe {
   @JsProperty
   void setComposite(@CompositeOperationOrAuto @Nonnull String composite);
 
-  @JsOverlay
-  @Nonnull
-  default BaseKeyframe composite(@CompositeOperationOrAuto @Nonnull final String composite) {
-    setComposite( composite );
-    return this;
-  }
-
   @JsProperty(
       name = "easing"
   )
@@ -46,13 +39,6 @@ public interface BaseKeyframe {
 
   @JsProperty
   void setEasing(@Nonnull String easing);
-
-  @JsOverlay
-  @Nonnull
-  default BaseKeyframe easing(@Nonnull final String easing) {
-    setEasing( easing );
-    return this;
-  }
 
   @JsProperty(
       name = "offset"
@@ -63,10 +49,32 @@ public interface BaseKeyframe {
   @JsProperty
   void setOffset(@Nullable Double offset);
 
-  @JsOverlay
-  @Nonnull
-  default BaseKeyframe offset(@Nullable final Double offset) {
-    setOffset( offset );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BaseKeyframe {
+    @JsOverlay
+    @Nonnull
+    default Builder composite(@CompositeOperationOrAuto @Nonnull final String composite) {
+      setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nonnull final String easing) {
+      setEasing( easing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offset(@Nullable final Double offset) {
+      setOffset( offset );
+      return this;
+    }
   }
 }

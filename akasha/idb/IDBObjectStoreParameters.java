@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IDBObjectStoreParameters {
   @JsOverlay
   @Nonnull
-  static IDBObjectStoreParameters create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface IDBObjectStoreParameters {
 
   @JsProperty
   void setAutoIncrement(boolean autoIncrement);
-
-  @JsOverlay
-  @Nonnull
-  default IDBObjectStoreParameters autoIncrement(final boolean autoIncrement) {
-    setAutoIncrement( autoIncrement );
-    return this;
-  }
 
   @JsProperty(
       name = "keyPath"
@@ -55,22 +48,8 @@ public interface IDBObjectStoreParameters {
   }
 
   @JsOverlay
-  @Nonnull
-  default IDBObjectStoreParameters keyPath(@Nonnull final String keyPath) {
-    setKeyPath( keyPath );
-    return this;
-  }
-
-  @JsOverlay
   default void setKeyPath(@Nonnull final JsArray<String> keyPath) {
     setKeyPath( StringOrStringArrayUnion.of( keyPath ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default IDBObjectStoreParameters keyPath(@Nonnull final JsArray<String> keyPath) {
-    setKeyPath( keyPath );
-    return this;
   }
 
   @JsOverlay
@@ -78,10 +57,39 @@ public interface IDBObjectStoreParameters {
     setKeyPath( StringOrStringArrayUnion.of( keyPath ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default IDBObjectStoreParameters keyPath(@Nonnull final String... keyPath) {
-    setKeyPath( keyPath );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IDBObjectStoreParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder autoIncrement(final boolean autoIncrement) {
+      setAutoIncrement( autoIncrement );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keyPath(@Nonnull final String keyPath) {
+      setKeyPath( keyPath );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keyPath(@Nonnull final JsArray<String> keyPath) {
+      setKeyPath( keyPath );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keyPath(@Nonnull final String... keyPath) {
+      setKeyPath( keyPath );
+      return this;
+    }
   }
 }

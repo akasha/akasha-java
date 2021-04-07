@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TextDecodeOptions {
   @JsOverlay
   @Nonnull
-  static TextDecodeOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface TextDecodeOptions {
   @JsProperty
   void setStream(boolean stream);
 
-  @JsOverlay
-  @Nonnull
-  default TextDecodeOptions stream(final boolean stream) {
-    setStream( stream );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TextDecodeOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder stream(final boolean stream) {
+      setStream( stream );
+      return this;
+    }
   }
 }

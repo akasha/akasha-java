@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ConvolverOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static ConvolverOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface ConvolverOptions extends AudioNodeOptions {
   @JsProperty
   void setBuffer(@Nullable AudioBuffer buffer);
 
-  @JsOverlay
-  @Nonnull
-  default ConvolverOptions buffer(@Nullable final AudioBuffer buffer) {
-    setBuffer( buffer );
-    return this;
-  }
-
   @JsProperty(
       name = "disableNormalization"
   )
@@ -47,33 +40,47 @@ public interface ConvolverOptions extends AudioNodeOptions {
   @JsProperty
   void setDisableNormalization(boolean disableNormalization);
 
-  @JsOverlay
-  @Nonnull
-  default ConvolverOptions disableNormalization(final boolean disableNormalization) {
-    setDisableNormalization( disableNormalization );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ConvolverOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder buffer(@Nullable final AudioBuffer buffer) {
+      setBuffer( buffer );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConvolverOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder disableNormalization(final boolean disableNormalization) {
+      setDisableNormalization( disableNormalization );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConvolverOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConvolverOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

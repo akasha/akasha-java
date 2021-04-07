@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AuthenticatorSelectionCriteria {
   @JsOverlay
   @Nonnull
-  static AuthenticatorSelectionCriteria create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,14 +31,6 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty
   void setAuthenticatorAttachment(@AuthenticatorAttachment @Nonnull String authenticatorAttachment);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticatorSelectionCriteria authenticatorAttachment(
-      @AuthenticatorAttachment @Nonnull final String authenticatorAttachment) {
-    setAuthenticatorAttachment( authenticatorAttachment );
-    return this;
-  }
-
   @JsProperty(
       name = "requireResidentKey"
   )
@@ -46,13 +38,6 @@ public interface AuthenticatorSelectionCriteria {
 
   @JsProperty
   void setRequireResidentKey(boolean requireResidentKey);
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticatorSelectionCriteria requireResidentKey(final boolean requireResidentKey) {
-    setRequireResidentKey( requireResidentKey );
-    return this;
-  }
 
   @JsProperty(
       name = "userVerification"
@@ -63,11 +48,34 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty
   void setUserVerification(@UserVerificationRequirement @Nonnull String userVerification);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticatorSelectionCriteria userVerification(
-      @UserVerificationRequirement @Nonnull final String userVerification) {
-    setUserVerification( userVerification );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AuthenticatorSelectionCriteria {
+    @JsOverlay
+    @Nonnull
+    default Builder authenticatorAttachment(
+        @AuthenticatorAttachment @Nonnull final String authenticatorAttachment) {
+      setAuthenticatorAttachment( authenticatorAttachment );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requireResidentKey(final boolean requireResidentKey) {
+      setRequireResidentKey( requireResidentKey );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder userVerification(
+        @UserVerificationRequirement @Nonnull final String userVerification) {
+      setUserVerification( userVerification );
+      return this;
+    }
   }
 }

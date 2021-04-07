@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static SpeechRecognitionErrorEventInit create(
-      @SpeechRecognitionErrorCode @Nonnull final String error) {
-    return Js.<SpeechRecognitionErrorEventInit>uncheckedCast( JsPropertyMap.of() ).error( error );
+  static Builder create(@SpeechRecognitionErrorCode @Nonnull final String error) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
   @JsProperty(
@@ -34,14 +33,6 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsProperty
   void setError(@SpeechRecognitionErrorCode @Nonnull String error);
 
-  @JsOverlay
-  @Nonnull
-  default SpeechRecognitionErrorEventInit error(
-      @SpeechRecognitionErrorCode @Nonnull final String error) {
-    setError( error );
-    return this;
-  }
-
   @JsProperty(
       name = "message"
   )
@@ -50,31 +41,46 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsProperty
   void setMessage(@Nonnull String message);
 
-  @JsOverlay
-  @Nonnull
-  default SpeechRecognitionErrorEventInit message(@Nonnull final String message) {
-    setMessage( message );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends SpeechRecognitionErrorEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder error(@SpeechRecognitionErrorCode @Nonnull final String error) {
+      setError( error );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechRecognitionErrorEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder message(@Nonnull final String message) {
+      setMessage( message );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechRecognitionErrorEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechRecognitionErrorEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

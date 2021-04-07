@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FocusOptions {
   @JsOverlay
   @Nonnull
-  static FocusOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface FocusOptions {
   @JsProperty
   void setPreventScroll(boolean preventScroll);
 
-  @JsOverlay
-  @Nonnull
-  default FocusOptions preventScroll(final boolean preventScroll) {
-    setPreventScroll( preventScroll );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FocusOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder preventScroll(final boolean preventScroll) {
+      setPreventScroll( preventScroll );
+      return this;
+    }
   }
 }

@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCErrorInit {
   @JsOverlay
   @Nonnull
-  static RTCErrorInit create(@RTCErrorDetailType @Nonnull final String errorDetail) {
-    return Js.<RTCErrorInit>uncheckedCast( JsPropertyMap.of() ).errorDetail( errorDetail );
+  static Builder create(@RTCErrorDetailType @Nonnull final String errorDetail) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).errorDetail( errorDetail );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface RTCErrorInit {
   @JsProperty
   void setErrorDetail(@RTCErrorDetailType @Nonnull String errorDetail);
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorInit errorDetail(@RTCErrorDetailType @Nonnull final String errorDetail) {
-    setErrorDetail( errorDetail );
-    return this;
-  }
-
   @JsProperty(
       name = "receivedAlert"
   )
@@ -46,13 +39,6 @@ public interface RTCErrorInit {
 
   @JsProperty
   void setReceivedAlert(int receivedAlert);
-
-  @JsOverlay
-  @Nonnull
-  default RTCErrorInit receivedAlert(final int receivedAlert) {
-    setReceivedAlert( receivedAlert );
-    return this;
-  }
 
   @JsProperty(
       name = "sctpCauseCode"
@@ -62,13 +48,6 @@ public interface RTCErrorInit {
   @JsProperty
   void setSctpCauseCode(int sctpCauseCode);
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorInit sctpCauseCode(final int sctpCauseCode) {
-    setSctpCauseCode( sctpCauseCode );
-    return this;
-  }
-
   @JsProperty(
       name = "sdpLineNumber"
   )
@@ -76,13 +55,6 @@ public interface RTCErrorInit {
 
   @JsProperty
   void setSdpLineNumber(int sdpLineNumber);
-
-  @JsOverlay
-  @Nonnull
-  default RTCErrorInit sdpLineNumber(final int sdpLineNumber) {
-    setSdpLineNumber( sdpLineNumber );
-    return this;
-  }
 
   @JsProperty(
       name = "sentAlert"
@@ -92,13 +64,6 @@ public interface RTCErrorInit {
   @JsProperty
   void setSentAlert(int sentAlert);
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorInit sentAlert(final int sentAlert) {
-    setSentAlert( sentAlert );
-    return this;
-  }
-
   @JsProperty(
       name = "httpRequestStatusCode"
   )
@@ -107,10 +72,53 @@ public interface RTCErrorInit {
   @JsProperty
   void setHttpRequestStatusCode(int httpRequestStatusCode);
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorInit httpRequestStatusCode(final int httpRequestStatusCode) {
-    setHttpRequestStatusCode( httpRequestStatusCode );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCErrorInit {
+    @JsOverlay
+    @Nonnull
+    default Builder errorDetail(@RTCErrorDetailType @Nonnull final String errorDetail) {
+      setErrorDetail( errorDetail );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder receivedAlert(final int receivedAlert) {
+      setReceivedAlert( receivedAlert );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sctpCauseCode(final int sctpCauseCode) {
+      setSctpCauseCode( sctpCauseCode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sdpLineNumber(final int sdpLineNumber) {
+      setSdpLineNumber( sdpLineNumber );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sentAlert(final int sentAlert) {
+      setSentAlert( sentAlert );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder httpRequestStatusCode(final int httpRequestStatusCode) {
+      setHttpRequestStatusCode( httpRequestStatusCode );
+      return this;
+    }
   }
 }

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PerformanceObserverInit {
   @JsOverlay
   @Nonnull
-  static PerformanceObserverInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface PerformanceObserverInit {
   @JsProperty
   void setBuffered(boolean buffered);
 
-  @JsOverlay
-  @Nonnull
-  default PerformanceObserverInit buffered(final boolean buffered) {
-    setBuffered( buffered );
-    return this;
-  }
-
   @JsProperty(
       name = "entryTypes"
   )
@@ -47,22 +40,8 @@ public interface PerformanceObserverInit {
   void setEntryTypes(@Nonnull JsArray<String> entryTypes);
 
   @JsOverlay
-  @Nonnull
-  default PerformanceObserverInit entryTypes(@Nonnull final JsArray<String> entryTypes) {
-    setEntryTypes( entryTypes );
-    return this;
-  }
-
-  @JsOverlay
   default void setEntryTypes(@Nonnull final String... entryTypes) {
     setEntryTypes( Js.<JsArray<String>>uncheckedCast( entryTypes ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PerformanceObserverInit entryTypes(@Nonnull final String... entryTypes) {
-    setEntryTypes( entryTypes );
-    return this;
   }
 
   @JsProperty(
@@ -73,10 +52,39 @@ public interface PerformanceObserverInit {
   @JsProperty
   void setType(@Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default PerformanceObserverInit type(@Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PerformanceObserverInit {
+    @JsOverlay
+    @Nonnull
+    default Builder buffered(final boolean buffered) {
+      setBuffered( buffered );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder entryTypes(@Nonnull final JsArray<String> entryTypes) {
+      setEntryTypes( entryTypes );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder entryTypes(@Nonnull final String... entryTypes) {
+      setEntryTypes( entryTypes );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

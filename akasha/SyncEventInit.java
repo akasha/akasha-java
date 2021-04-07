@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface SyncEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static SyncEventInit create(@Nonnull final String tag) {
-    return Js.<SyncEventInit>uncheckedCast( JsPropertyMap.of() ).tag( tag );
+  static Builder create(@Nonnull final String tag) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).tag( tag );
   }
 
   @JsProperty(
@@ -30,13 +30,6 @@ public interface SyncEventInit extends ExtendableEventInit {
   @JsProperty
   void setLastChance(boolean lastChance);
 
-  @JsOverlay
-  @Nonnull
-  default SyncEventInit lastChance(final boolean lastChance) {
-    setLastChance( lastChance );
-    return this;
-  }
-
   @JsProperty(
       name = "tag"
   )
@@ -46,31 +39,46 @@ public interface SyncEventInit extends ExtendableEventInit {
   @JsProperty
   void setTag(@Nonnull String tag);
 
-  @JsOverlay
-  @Nonnull
-  default SyncEventInit tag(@Nonnull final String tag) {
-    setTag( tag );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends SyncEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder lastChance(final boolean lastChance) {
+      setLastChance( lastChance );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SyncEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder tag(@Nonnull final String tag) {
+      setTag( tag );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SyncEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SyncEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

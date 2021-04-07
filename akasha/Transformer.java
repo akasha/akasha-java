@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Transformer {
   @JsOverlay
   @Nonnull
-  static Transformer create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,13 +33,6 @@ public interface Transformer {
   @JsProperty
   void setStart(@Nonnull TransformerStartCallback start);
 
-  @JsOverlay
-  @Nonnull
-  default Transformer start(@Nonnull final TransformerStartCallback start) {
-    setStart( start );
-    return this;
-  }
-
   @JsProperty(
       name = "transform"
   )
@@ -48,13 +41,6 @@ public interface Transformer {
   @JsProperty
   void setTransform(@Nonnull TransformerTransformCallback transform);
 
-  @JsOverlay
-  @Nonnull
-  default Transformer transform(@Nonnull final TransformerTransformCallback transform) {
-    setTransform( transform );
-    return this;
-  }
-
   @JsProperty(
       name = "flush"
   )
@@ -62,13 +48,6 @@ public interface Transformer {
 
   @JsProperty
   void setFlush(@Nonnull TransformerFlushCallback flush);
-
-  @JsOverlay
-  @Nonnull
-  default Transformer flush(@Nonnull final TransformerFlushCallback flush) {
-    setFlush( flush );
-    return this;
-  }
 
   @JsProperty(
       name = "readableType"
@@ -79,13 +58,6 @@ public interface Transformer {
   @JsProperty
   void setReadableType(@DoNotAutobox @Nullable Object readableType);
 
-  @JsOverlay
-  @Nonnull
-  default Transformer readableType(@DoNotAutobox @Nullable final Object readableType) {
-    setReadableType( readableType );
-    return this;
-  }
-
   @JsProperty(
       name = "writableType"
   )
@@ -95,10 +67,46 @@ public interface Transformer {
   @JsProperty
   void setWritableType(@DoNotAutobox @Nullable Object writableType);
 
-  @JsOverlay
-  @Nonnull
-  default Transformer writableType(@DoNotAutobox @Nullable final Object writableType) {
-    setWritableType( writableType );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Transformer {
+    @JsOverlay
+    @Nonnull
+    default Builder start(@Nonnull final TransformerStartCallback start) {
+      setStart( start );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder transform(@Nonnull final TransformerTransformCallback transform) {
+      setTransform( transform );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder flush(@Nonnull final TransformerFlushCallback flush) {
+      setFlush( flush );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder readableType(@DoNotAutobox @Nullable final Object readableType) {
+      setReadableType( readableType );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder writableType(@DoNotAutobox @Nullable final Object writableType) {
+      setWritableType( writableType );
+      return this;
+    }
   }
 }

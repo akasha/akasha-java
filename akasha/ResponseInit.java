@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ResponseInit {
   @JsOverlay
   @Nonnull
-  static ResponseInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,22 +32,8 @@ public interface ResponseInit {
   void setHeaders(@Nonnull HeadersInit headers);
 
   @JsOverlay
-  @Nonnull
-  default ResponseInit headers(@Nonnull final HeadersInit headers) {
-    setHeaders( headers );
-    return this;
-  }
-
-  @JsOverlay
   default void setHeaders(@Nonnull final JsArray<JsArray<String>> headers) {
     setHeaders( HeadersInit.of( headers ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default ResponseInit headers(@Nonnull final JsArray<JsArray<String>> headers) {
-    setHeaders( headers );
-    return this;
   }
 
   @JsOverlay
@@ -57,23 +43,8 @@ public interface ResponseInit {
   }
 
   @JsOverlay
-  @Nonnull
-  @SuppressWarnings("unchecked")
-  default ResponseInit headers(@Nonnull final JsArray<String>... headers) {
-    setHeaders( headers );
-    return this;
-  }
-
-  @JsOverlay
   default void setHeaders(@Nonnull final JsPropertyMap<String> headers) {
     setHeaders( HeadersInit.of( headers ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default ResponseInit headers(@Nonnull final JsPropertyMap<String> headers) {
-    setHeaders( headers );
-    return this;
   }
 
   @JsProperty(
@@ -84,13 +55,6 @@ public interface ResponseInit {
   @JsProperty
   void setStatus(int status);
 
-  @JsOverlay
-  @Nonnull
-  default ResponseInit status(final int status) {
-    setStatus( status );
-    return this;
-  }
-
   @JsProperty(
       name = "statusText"
   )
@@ -99,10 +63,54 @@ public interface ResponseInit {
   @JsProperty
   void setStatusText(@Nonnull String statusText);
 
-  @JsOverlay
-  @Nonnull
-  default ResponseInit statusText(@Nonnull final String statusText) {
-    setStatusText( statusText );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ResponseInit {
+    @JsOverlay
+    @Nonnull
+    default Builder headers(@Nonnull final HeadersInit headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder headers(@Nonnull final JsArray<JsArray<String>> headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    @SuppressWarnings("unchecked")
+    default Builder headers(@Nonnull final JsArray<String>... headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder headers(@Nonnull final JsPropertyMap<String> headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder status(final int status) {
+      setStatus( status );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder statusText(@Nonnull final String statusText) {
+      setStatusText( statusText );
+      return this;
+    }
   }
 }

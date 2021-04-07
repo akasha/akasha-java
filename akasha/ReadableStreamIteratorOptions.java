@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ReadableStreamIteratorOptions {
   @JsOverlay
   @Nonnull
-  static ReadableStreamIteratorOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface ReadableStreamIteratorOptions {
   @JsProperty
   void setPreventCancel(boolean preventCancel);
 
-  @JsOverlay
-  @Nonnull
-  default ReadableStreamIteratorOptions preventCancel(final boolean preventCancel) {
-    setPreventCancel( preventCancel );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ReadableStreamIteratorOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder preventCancel(final boolean preventCancel) {
+      setPreventCancel( preventCancel );
+      return this;
+    }
   }
 }

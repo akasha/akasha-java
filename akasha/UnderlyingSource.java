@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface UnderlyingSource {
   @JsOverlay
   @Nonnull
-  static UnderlyingSource create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface UnderlyingSource {
   @JsProperty
   void setStart(@Nonnull UnderlyingSourceStartCallback start);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSource start(@Nonnull final UnderlyingSourceStartCallback start) {
-    setStart( start );
-    return this;
-  }
-
   @JsProperty(
       name = "pull"
   )
@@ -45,13 +38,6 @@ public interface UnderlyingSource {
   @JsProperty
   void setPull(@Nonnull UnderlyingSourcePullCallback pull);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSource pull(@Nonnull final UnderlyingSourcePullCallback pull) {
-    setPull( pull );
-    return this;
-  }
-
   @JsProperty(
       name = "cancel"
   )
@@ -59,13 +45,6 @@ public interface UnderlyingSource {
 
   @JsProperty
   void setCancel(@Nonnull UnderlyingSourceCancelCallback cancel);
-
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSource cancel(@Nonnull final UnderlyingSourceCancelCallback cancel) {
-    setCancel( cancel );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -76,13 +55,6 @@ public interface UnderlyingSource {
   @JsProperty
   void setType(@ReadableStreamType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSource type(@ReadableStreamType @Nonnull final String type) {
-    setType( type );
-    return this;
-  }
-
   @JsProperty(
       name = "autoAllocateChunkSize"
   )
@@ -91,10 +63,46 @@ public interface UnderlyingSource {
   @JsProperty
   void setAutoAllocateChunkSize(int autoAllocateChunkSize);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSource autoAllocateChunkSize(final int autoAllocateChunkSize) {
-    setAutoAllocateChunkSize( autoAllocateChunkSize );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends UnderlyingSource {
+    @JsOverlay
+    @Nonnull
+    default Builder start(@Nonnull final UnderlyingSourceStartCallback start) {
+      setStart( start );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder pull(@Nonnull final UnderlyingSourcePullCallback pull) {
+      setPull( pull );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancel(@Nonnull final UnderlyingSourceCancelCallback cancel) {
+      setCancel( cancel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@ReadableStreamType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder autoAllocateChunkSize(final int autoAllocateChunkSize) {
+      setAutoAllocateChunkSize( autoAllocateChunkSize );
+      return this;
+    }
   }
 }

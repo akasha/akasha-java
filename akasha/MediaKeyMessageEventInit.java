@@ -19,9 +19,9 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaKeyMessageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static MediaKeyMessageEventInit create(@Nonnull final ArrayBuffer message,
+  static Builder create(@Nonnull final ArrayBuffer message,
       @MediaKeyMessageType @Nonnull final String messageType) {
-    return Js.<MediaKeyMessageEventInit>uncheckedCast( JsPropertyMap.of() ).message( message ).messageType( messageType );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).message( message ).messageType( messageType );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsProperty
   void setMessage(@Nonnull ArrayBuffer message);
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeyMessageEventInit message(@Nonnull final ArrayBuffer message) {
-    setMessage( message );
-    return this;
-  }
-
   @JsProperty(
       name = "messageType"
   )
@@ -50,32 +43,46 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsProperty
   void setMessageType(@MediaKeyMessageType @Nonnull String messageType);
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeyMessageEventInit messageType(
-      @MediaKeyMessageType @Nonnull final String messageType) {
-    setMessageType( messageType );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaKeyMessageEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder message(@Nonnull final ArrayBuffer message) {
+      setMessage( message );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeyMessageEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder messageType(@MediaKeyMessageType @Nonnull final String messageType) {
+      setMessageType( messageType );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeyMessageEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeyMessageEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

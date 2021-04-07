@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FederatedCredentialRequestOptions {
   @JsOverlay
   @Nonnull
-  static FederatedCredentialRequestOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,22 +32,8 @@ public interface FederatedCredentialRequestOptions {
   void setProtocols(@Nonnull JsArray<String> protocols);
 
   @JsOverlay
-  @Nonnull
-  default FederatedCredentialRequestOptions protocols(@Nonnull final JsArray<String> protocols) {
-    setProtocols( protocols );
-    return this;
-  }
-
-  @JsOverlay
   default void setProtocols(@Nonnull final String... protocols) {
     setProtocols( Js.<JsArray<String>>uncheckedCast( protocols ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialRequestOptions protocols(@Nonnull final String... protocols) {
-    setProtocols( protocols );
-    return this;
   }
 
   @JsProperty(
@@ -59,21 +45,43 @@ public interface FederatedCredentialRequestOptions {
   void setProviders(@Nonnull JsArray<String> providers);
 
   @JsOverlay
-  @Nonnull
-  default FederatedCredentialRequestOptions providers(@Nonnull final JsArray<String> providers) {
-    setProviders( providers );
-    return this;
-  }
-
-  @JsOverlay
   default void setProviders(@Nonnull final String... providers) {
     setProviders( Js.<JsArray<String>>uncheckedCast( providers ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialRequestOptions providers(@Nonnull final String... providers) {
-    setProviders( providers );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FederatedCredentialRequestOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder protocols(@Nonnull final JsArray<String> protocols) {
+      setProtocols( protocols );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder protocols(@Nonnull final String... protocols) {
+      setProtocols( protocols );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder providers(@Nonnull final JsArray<String> providers) {
+      setProviders( providers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder providers(@Nonnull final String... providers) {
+      setProviders( providers );
+      return this;
+    }
   }
 }

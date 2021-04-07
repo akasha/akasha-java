@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCSessionDescriptionInit {
   @JsOverlay
   @Nonnull
-  static RTCSessionDescriptionInit create(@RTCSdpType @Nonnull final String type) {
-    return Js.<RTCSessionDescriptionInit>uncheckedCast( JsPropertyMap.of() ).type( type );
+  static Builder create(@RTCSdpType @Nonnull final String type) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).type( type );
   }
 
   @JsProperty(
@@ -29,13 +29,6 @@ public interface RTCSessionDescriptionInit {
 
   @JsProperty
   void setSdp(@Nonnull String sdp);
-
-  @JsOverlay
-  @Nonnull
-  default RTCSessionDescriptionInit sdp(@Nonnull final String sdp) {
-    setSdp( sdp );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -47,10 +40,25 @@ public interface RTCSessionDescriptionInit {
   @JsProperty
   void setType(@RTCSdpType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default RTCSessionDescriptionInit type(@RTCSdpType @Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCSessionDescriptionInit {
+    @JsOverlay
+    @Nonnull
+    default Builder sdp(@Nonnull final String sdp) {
+      setSdp( sdp );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@RTCSdpType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

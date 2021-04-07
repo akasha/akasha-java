@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GainOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static GainOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,32 +30,40 @@ public interface GainOptions extends AudioNodeOptions {
   @JsProperty
   void setGain(float gain);
 
-  @JsOverlay
-  @Nonnull
-  default GainOptions gain(final float gain) {
-    setGain( gain );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends GainOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder gain(final float gain) {
+      setGain( gain );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default GainOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default GainOptions channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default GainOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

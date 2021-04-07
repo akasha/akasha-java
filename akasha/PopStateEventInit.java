@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PopStateEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static PopStateEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -34,31 +34,39 @@ public interface PopStateEventInit extends EventInit {
   @JsProperty
   void setState(@DoNotAutobox @Nullable Object state);
 
-  @JsOverlay
-  @Nonnull
-  default PopStateEventInit state(@DoNotAutobox @Nullable final Object state) {
-    setState( state );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PopStateEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder state(@DoNotAutobox @Nullable final Object state) {
+      setState( state );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PopStateEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PopStateEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PopStateEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

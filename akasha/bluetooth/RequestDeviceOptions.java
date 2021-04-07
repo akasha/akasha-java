@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RequestDeviceOptions {
   @JsOverlay
   @Nonnull
-  static RequestDeviceOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface RequestDeviceOptions {
   @JsProperty
   void setAcceptAllDevices(boolean acceptAllDevices);
 
-  @JsOverlay
-  @Nonnull
-  default RequestDeviceOptions acceptAllDevices(final boolean acceptAllDevices) {
-    setAcceptAllDevices( acceptAllDevices );
-    return this;
-  }
-
   @JsProperty(
       name = "filters"
   )
@@ -47,22 +40,8 @@ public interface RequestDeviceOptions {
   void setFilters(@Nonnull JsArray<BluetoothLEScanFilterInit> filters);
 
   @JsOverlay
-  @Nonnull
-  default RequestDeviceOptions filters(@Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
-    setFilters( filters );
-    return this;
-  }
-
-  @JsOverlay
   default void setFilters(@Nonnull final BluetoothLEScanFilterInit... filters) {
     setFilters( Js.<JsArray<BluetoothLEScanFilterInit>>uncheckedCast( filters ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestDeviceOptions filters(@Nonnull final BluetoothLEScanFilterInit... filters) {
-    setFilters( filters );
-    return this;
   }
 
   @JsProperty(
@@ -74,23 +53,51 @@ public interface RequestDeviceOptions {
   void setOptionalServices(@Nonnull JsArray<BluetoothServiceUUID> optionalServices);
 
   @JsOverlay
-  @Nonnull
-  default RequestDeviceOptions optionalServices(
-      @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
-    setOptionalServices( optionalServices );
-    return this;
-  }
-
-  @JsOverlay
   default void setOptionalServices(@Nonnull final BluetoothServiceUUID... optionalServices) {
     setOptionalServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( optionalServices ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default RequestDeviceOptions optionalServices(
-      @Nonnull final BluetoothServiceUUID... optionalServices) {
-    setOptionalServices( optionalServices );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RequestDeviceOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder acceptAllDevices(final boolean acceptAllDevices) {
+      setAcceptAllDevices( acceptAllDevices );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder filters(@Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
+      setFilters( filters );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder filters(@Nonnull final BluetoothLEScanFilterInit... filters) {
+      setFilters( filters );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalServices(
+        @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
+      setOptionalServices( optionalServices );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalServices(@Nonnull final BluetoothServiceUUID... optionalServices) {
+      setOptionalServices( optionalServices );
+      return this;
+    }
   }
 }

@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CanvasRenderingContext2DSettings {
   @JsOverlay
   @Nonnull
-  static CanvasRenderingContext2DSettings create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -46,18 +46,6 @@ public interface CanvasRenderingContext2DSettings {
   void setAlpha(boolean alpha);
 
   /**
-   * A flag that indicates whether the canvas contains an alpha channel. If set to false, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings.alpha - MDN</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default CanvasRenderingContext2DSettings alpha(final boolean alpha) {
-    setAlpha( alpha );
-    return this;
-  }
-
-  /**
    * A flag that provides a hint to the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings.desynchronized - MDN</a>
@@ -76,14 +64,39 @@ public interface CanvasRenderingContext2DSettings {
   void setDesynchronized(boolean desynchronized);
 
   /**
-   * A flag that provides a hint to the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
+   * Attributes that control the characteristics of the {@link akasha.gl.WebGLRenderingContext} created. This should only be supplied when creating a {@link akasha.gl.WebGLRenderingContext} context.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings.desynchronized - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings - MDN</a>
    */
-  @JsOverlay
-  @Nonnull
-  default CanvasRenderingContext2DSettings desynchronized(final boolean desynchronized) {
-    setDesynchronized( desynchronized );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CanvasRenderingContext2DSettings {
+    /**
+     * A flag that indicates whether the canvas contains an alpha channel. If set to false, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings.alpha - MDN</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder alpha(final boolean alpha) {
+      setAlpha( alpha );
+      return this;
+    }
+
+    /**
+     * A flag that provides a hint to the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings.desynchronized - MDN</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder desynchronized(final boolean desynchronized) {
+      setDesynchronized( desynchronized );
+      return this;
+    }
   }
 }

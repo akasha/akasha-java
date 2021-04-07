@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BoxQuadOptions {
   @JsOverlay
   @Nonnull
-  static BoxQuadOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface BoxQuadOptions {
   @JsProperty
   void setBox(@CSSBoxType @Nonnull String box);
 
-  @JsOverlay
-  @Nonnull
-  default BoxQuadOptions box(@CSSBoxType @Nonnull final String box) {
-    setBox( box );
-    return this;
-  }
-
   @JsProperty(
       name = "relativeTo"
   )
@@ -47,22 +40,8 @@ public interface BoxQuadOptions {
   void setRelativeTo(@Nonnull GeometryNode relativeTo);
 
   @JsOverlay
-  @Nonnull
-  default BoxQuadOptions relativeTo(@Nonnull final GeometryNode relativeTo) {
-    setRelativeTo( relativeTo );
-    return this;
-  }
-
-  @JsOverlay
   default void setRelativeTo(@Nonnull final Text relativeTo) {
     setRelativeTo( GeometryNode.of( relativeTo ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BoxQuadOptions relativeTo(@Nonnull final Text relativeTo) {
-    setRelativeTo( relativeTo );
-    return this;
   }
 
   @JsOverlay
@@ -71,22 +50,8 @@ public interface BoxQuadOptions {
   }
 
   @JsOverlay
-  @Nonnull
-  default BoxQuadOptions relativeTo(@Nonnull final Element relativeTo) {
-    setRelativeTo( relativeTo );
-    return this;
-  }
-
-  @JsOverlay
   default void setRelativeTo(@Nonnull final CSSPseudoElement relativeTo) {
     setRelativeTo( GeometryNode.of( relativeTo ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BoxQuadOptions relativeTo(@Nonnull final CSSPseudoElement relativeTo) {
-    setRelativeTo( relativeTo );
-    return this;
   }
 
   @JsOverlay
@@ -94,10 +59,53 @@ public interface BoxQuadOptions {
     setRelativeTo( GeometryNode.of( relativeTo ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default BoxQuadOptions relativeTo(@Nonnull final Document relativeTo) {
-    setRelativeTo( relativeTo );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BoxQuadOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder box(@CSSBoxType @Nonnull final String box) {
+      setBox( box );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder relativeTo(@Nonnull final GeometryNode relativeTo) {
+      setRelativeTo( relativeTo );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder relativeTo(@Nonnull final Text relativeTo) {
+      setRelativeTo( relativeTo );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder relativeTo(@Nonnull final Element relativeTo) {
+      setRelativeTo( relativeTo );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder relativeTo(@Nonnull final CSSPseudoElement relativeTo) {
+      setRelativeTo( relativeTo );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder relativeTo(@Nonnull final Document relativeTo) {
+      setRelativeTo( relativeTo );
+      return this;
+    }
   }
 }

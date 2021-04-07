@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit {
   @JsOverlay
   @Nonnull
-  static SpeechSynthesisErrorEventInit create(@Nonnull final SpeechSynthesisUtterance utterance,
+  static Builder create(@Nonnull final SpeechSynthesisUtterance utterance,
       @SpeechSynthesisErrorCode @Nonnull final String error) {
-    return Js.<SpeechSynthesisErrorEventInit>uncheckedCast( JsPropertyMap.of() ).utterance( utterance ).error( error );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).utterance( utterance ).error( error );
   }
 
   @JsProperty(
@@ -33,68 +33,74 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
   @JsProperty
   void setError(@SpeechSynthesisErrorCode @Nonnull String error);
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit error(
-      @SpeechSynthesisErrorCode @Nonnull final String error) {
-    setError( error );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends SpeechSynthesisErrorEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder error(@SpeechSynthesisErrorCode @Nonnull final String error) {
+      setError( error );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit charIndex(final int charIndex) {
-    setCharIndex( charIndex );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder charIndex(final int charIndex) {
+      setCharIndex( charIndex );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit charLength(final int charLength) {
-    setCharLength( charLength );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder charLength(final int charLength) {
+      setCharLength( charLength );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit elapsedTime(final float elapsedTime) {
-    setElapsedTime( elapsedTime );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder elapsedTime(final float elapsedTime) {
+      setElapsedTime( elapsedTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit name(@Nonnull final String name) {
-    setName( name );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit utterance(
-      @Nonnull final SpeechSynthesisUtterance utterance) {
-    setUtterance( utterance );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
+      setUtterance( utterance );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default SpeechSynthesisErrorEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

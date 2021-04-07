@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCDataChannelEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static RTCDataChannelEventInit create(@Nonnull final RTCDataChannel channel) {
-    return Js.<RTCDataChannelEventInit>uncheckedCast( JsPropertyMap.of() ).channel( channel );
+  static Builder create(@Nonnull final RTCDataChannel channel) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).channel( channel );
   }
 
   @JsProperty(
@@ -32,31 +32,39 @@ public interface RTCDataChannelEventInit extends EventInit {
   @JsProperty
   void setChannel(@Nonnull RTCDataChannel channel);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelEventInit channel(@Nonnull final RTCDataChannel channel) {
-    setChannel( channel );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCDataChannelEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder channel(@Nonnull final RTCDataChannel channel) {
+      setChannel( channel );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

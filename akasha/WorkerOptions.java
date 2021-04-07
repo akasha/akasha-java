@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WorkerOptions {
   @JsOverlay
   @Nonnull
-  static WorkerOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface WorkerOptions {
   @JsProperty
   void setCredentials(@RequestCredentials @Nonnull String credentials);
 
-  @JsOverlay
-  @Nonnull
-  default WorkerOptions credentials(@RequestCredentials @Nonnull final String credentials) {
-    setCredentials( credentials );
-    return this;
-  }
-
   @JsProperty(
       name = "name"
   )
@@ -45,13 +38,6 @@ public interface WorkerOptions {
 
   @JsProperty
   void setName(@Nonnull String name);
-
-  @JsOverlay
-  @Nonnull
-  default WorkerOptions name(@Nonnull final String name) {
-    setName( name );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -62,10 +48,32 @@ public interface WorkerOptions {
   @JsProperty
   void setType(@WorkerType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default WorkerOptions type(@WorkerType @Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WorkerOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder credentials(@RequestCredentials @Nonnull final String credentials) {
+      setCredentials( credentials );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@WorkerType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

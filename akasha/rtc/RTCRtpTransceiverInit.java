@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpTransceiverInit {
   @JsOverlay
   @Nonnull
-  static RTCRtpTransceiverInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,14 +39,6 @@ public interface RTCRtpTransceiverInit {
   @JsProperty
   void setDirection(@RTCRtpTransceiverDirection @Nonnull String direction);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpTransceiverInit direction(
-      @RTCRtpTransceiverDirection @Nonnull final String direction) {
-    setDirection( direction );
-    return this;
-  }
-
   @JsProperty(
       name = "sendEncodings"
   )
@@ -56,24 +48,8 @@ public interface RTCRtpTransceiverInit {
   void setSendEncodings(@Nonnull JsArray<RTCRtpEncodingParameters> sendEncodings);
 
   @JsOverlay
-  @Nonnull
-  default RTCRtpTransceiverInit sendEncodings(
-      @Nonnull final JsArray<RTCRtpEncodingParameters> sendEncodings) {
-    setSendEncodings( sendEncodings );
-    return this;
-  }
-
-  @JsOverlay
   default void setSendEncodings(@Nonnull final RTCRtpEncodingParameters... sendEncodings) {
     setSendEncodings( Js.<JsArray<RTCRtpEncodingParameters>>uncheckedCast( sendEncodings ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RTCRtpTransceiverInit sendEncodings(
-      @Nonnull final RTCRtpEncodingParameters... sendEncodings) {
-    setSendEncodings( sendEncodings );
-    return this;
   }
 
   @JsProperty(
@@ -85,21 +61,56 @@ public interface RTCRtpTransceiverInit {
   void setStreams(@Nonnull JsArray<MediaStream> streams);
 
   @JsOverlay
-  @Nonnull
-  default RTCRtpTransceiverInit streams(@Nonnull final JsArray<MediaStream> streams) {
-    setStreams( streams );
-    return this;
-  }
-
-  @JsOverlay
   default void setStreams(@Nonnull final MediaStream... streams) {
     setStreams( Js.<JsArray<MediaStream>>uncheckedCast( streams ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpTransceiverInit streams(@Nonnull final MediaStream... streams) {
-    setStreams( streams );
-    return this;
+  /**
+   * The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit">RTCRtpTransceiverInit - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">RTCRtpTransceiverInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpTransceiverInit {
+    @JsOverlay
+    @Nonnull
+    default Builder direction(@RTCRtpTransceiverDirection @Nonnull final String direction) {
+      setDirection( direction );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sendEncodings(@Nonnull final JsArray<RTCRtpEncodingParameters> sendEncodings) {
+      setSendEncodings( sendEncodings );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sendEncodings(@Nonnull final RTCRtpEncodingParameters... sendEncodings) {
+      setSendEncodings( sendEncodings );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder streams(@Nonnull final JsArray<MediaStream> streams) {
+      setStreams( streams );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder streams(@Nonnull final MediaStream... streams) {
+      setStreams( streams );
+      return this;
+    }
   }
 }

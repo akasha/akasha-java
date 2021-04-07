@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioBufferSourceOptions {
   @JsOverlay
   @Nonnull
-  static AudioBufferSourceOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface AudioBufferSourceOptions {
   @JsProperty
   void setBuffer(@Nullable AudioBuffer buffer);
 
-  @JsOverlay
-  @Nonnull
-  default AudioBufferSourceOptions buffer(@Nullable final AudioBuffer buffer) {
-    setBuffer( buffer );
-    return this;
-  }
-
   @JsProperty(
       name = "detune"
   )
@@ -46,13 +39,6 @@ public interface AudioBufferSourceOptions {
 
   @JsProperty
   void setDetune(float detune);
-
-  @JsOverlay
-  @Nonnull
-  default AudioBufferSourceOptions detune(final float detune) {
-    setDetune( detune );
-    return this;
-  }
 
   @JsProperty(
       name = "loop"
@@ -62,13 +48,6 @@ public interface AudioBufferSourceOptions {
   @JsProperty
   void setLoop(boolean loop);
 
-  @JsOverlay
-  @Nonnull
-  default AudioBufferSourceOptions loop(final boolean loop) {
-    setLoop( loop );
-    return this;
-  }
-
   @JsProperty(
       name = "loopEnd"
   )
@@ -76,13 +55,6 @@ public interface AudioBufferSourceOptions {
 
   @JsProperty
   void setLoopEnd(double loopEnd);
-
-  @JsOverlay
-  @Nonnull
-  default AudioBufferSourceOptions loopEnd(final double loopEnd) {
-    setLoopEnd( loopEnd );
-    return this;
-  }
 
   @JsProperty(
       name = "loopStart"
@@ -92,13 +64,6 @@ public interface AudioBufferSourceOptions {
   @JsProperty
   void setLoopStart(double loopStart);
 
-  @JsOverlay
-  @Nonnull
-  default AudioBufferSourceOptions loopStart(final double loopStart) {
-    setLoopStart( loopStart );
-    return this;
-  }
-
   @JsProperty(
       name = "playbackRate"
   )
@@ -107,10 +72,53 @@ public interface AudioBufferSourceOptions {
   @JsProperty
   void setPlaybackRate(float playbackRate);
 
-  @JsOverlay
-  @Nonnull
-  default AudioBufferSourceOptions playbackRate(final float playbackRate) {
-    setPlaybackRate( playbackRate );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AudioBufferSourceOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder buffer(@Nullable final AudioBuffer buffer) {
+      setBuffer( buffer );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder detune(final float detune) {
+      setDetune( detune );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder loop(final boolean loop) {
+      setLoop( loop );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder loopEnd(final double loopEnd) {
+      setLoopEnd( loopEnd );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder loopStart(final double loopStart) {
+      setLoopStart( loopStart );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder playbackRate(final float playbackRate) {
+      setPlaybackRate( playbackRate );
+      return this;
+    }
   }
 }

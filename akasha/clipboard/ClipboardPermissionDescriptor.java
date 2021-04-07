@@ -20,8 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static ClipboardPermissionDescriptor create(@PermissionName @Nonnull final String name) {
-    return Js.<ClipboardPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@PermissionName @Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -32,17 +32,25 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setAllowWithoutGesture(boolean allowWithoutGesture);
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardPermissionDescriptor allowWithoutGesture(final boolean allowWithoutGesture) {
-    setAllowWithoutGesture( allowWithoutGesture );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ClipboardPermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder allowWithoutGesture(final boolean allowWithoutGesture) {
+      setAllowWithoutGesture( allowWithoutGesture );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardPermissionDescriptor name(@PermissionName @Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@PermissionName @Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

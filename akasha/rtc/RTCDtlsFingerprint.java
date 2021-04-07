@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCDtlsFingerprint {
   @JsOverlay
   @Nonnull
-  static RTCDtlsFingerprint create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface RTCDtlsFingerprint {
   @JsProperty
   void setAlgorithm(@Nonnull String algorithm);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDtlsFingerprint algorithm(@Nonnull final String algorithm) {
-    setAlgorithm( algorithm );
-    return this;
-  }
-
   @JsProperty(
       name = "value"
   )
@@ -45,10 +38,25 @@ public interface RTCDtlsFingerprint {
   @JsProperty
   void setValue(@Nonnull String value);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDtlsFingerprint value(@Nonnull final String value) {
-    setValue( value );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCDtlsFingerprint {
+    @JsOverlay
+    @Nonnull
+    default Builder algorithm(@Nonnull final String algorithm) {
+      setAlgorithm( algorithm );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder value(@Nonnull final String value) {
+      setValue( value );
+      return this;
+    }
   }
 }

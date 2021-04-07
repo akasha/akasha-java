@@ -23,9 +23,9 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodecParameters {
   @JsOverlay
   @Nonnull
-  static RTCRtpCodecParameters create(final int clockRate, @Nonnull final String mimeType,
+  static Builder create(final int clockRate, @Nonnull final String mimeType,
       final short payloadType) {
-    return Js.<RTCRtpCodecParameters>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType ).payloadType( payloadType );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType ).payloadType( payloadType );
   }
 
   @JsProperty(
@@ -36,13 +36,6 @@ public interface RTCRtpCodecParameters {
   @JsProperty
   void setChannels(int channels);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecParameters channels(final int channels) {
-    setChannels( channels );
-    return this;
-  }
-
   @JsProperty(
       name = "clockRate"
   )
@@ -50,13 +43,6 @@ public interface RTCRtpCodecParameters {
 
   @JsProperty
   void setClockRate(int clockRate);
-
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecParameters clockRate(final int clockRate) {
-    setClockRate( clockRate );
-    return this;
-  }
 
   @JsProperty(
       name = "mimeType"
@@ -67,13 +53,6 @@ public interface RTCRtpCodecParameters {
   @JsProperty
   void setMimeType(@Nonnull String mimeType);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecParameters mimeType(@Nonnull final String mimeType) {
-    setMimeType( mimeType );
-    return this;
-  }
-
   @JsProperty(
       name = "payloadType"
   )
@@ -81,13 +60,6 @@ public interface RTCRtpCodecParameters {
 
   @JsProperty
   void setPayloadType(short payloadType);
-
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecParameters payloadType(final short payloadType) {
-    setPayloadType( payloadType );
-    return this;
-  }
 
   @JsProperty(
       name = "sdpFmtpLine"
@@ -97,10 +69,51 @@ public interface RTCRtpCodecParameters {
   @JsProperty
   void setSdpFmtpLine(@Nonnull String sdpFmtpLine);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecParameters sdpFmtpLine(@Nonnull final String sdpFmtpLine) {
-    setSdpFmtpLine( sdpFmtpLine );
-    return this;
+  /**
+   * The RTCRtpCodecParameters dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media codec.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters">RTCRtpCodecParameters - MDN</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpCodecParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder channels(final int channels) {
+      setChannels( channels );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clockRate(final int clockRate) {
+      setClockRate( clockRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mimeType(@Nonnull final String mimeType) {
+      setMimeType( mimeType );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder payloadType(final short payloadType) {
+      setPayloadType( payloadType );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sdpFmtpLine(@Nonnull final String sdpFmtpLine) {
+      setSdpFmtpLine( sdpFmtpLine );
+      return this;
+    }
   }
 }

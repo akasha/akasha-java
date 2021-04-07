@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BaseComputedKeyframe {
   @JsOverlay
   @Nonnull
-  static BaseComputedKeyframe create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,14 +32,6 @@ public interface BaseComputedKeyframe {
   @JsProperty
   void setComposite(@CompositeOperationOrAuto @Nonnull String composite);
 
-  @JsOverlay
-  @Nonnull
-  default BaseComputedKeyframe composite(
-      @CompositeOperationOrAuto @Nonnull final String composite) {
-    setComposite( composite );
-    return this;
-  }
-
   @JsProperty(
       name = "computedOffset"
   )
@@ -48,13 +40,6 @@ public interface BaseComputedKeyframe {
   @JsProperty
   void setComputedOffset(double computedOffset);
 
-  @JsOverlay
-  @Nonnull
-  default BaseComputedKeyframe computedOffset(final double computedOffset) {
-    setComputedOffset( computedOffset );
-    return this;
-  }
-
   @JsProperty(
       name = "easing"
   )
@@ -62,13 +47,6 @@ public interface BaseComputedKeyframe {
 
   @JsProperty
   void setEasing(@Nonnull String easing);
-
-  @JsOverlay
-  @Nonnull
-  default BaseComputedKeyframe easing(@Nonnull final String easing) {
-    setEasing( easing );
-    return this;
-  }
 
   @JsProperty(
       name = "offset"
@@ -79,10 +57,39 @@ public interface BaseComputedKeyframe {
   @JsProperty
   void setOffset(@Nullable Double offset);
 
-  @JsOverlay
-  @Nonnull
-  default BaseComputedKeyframe offset(@Nullable final Double offset) {
-    setOffset( offset );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BaseComputedKeyframe {
+    @JsOverlay
+    @Nonnull
+    default Builder composite(@CompositeOperationOrAuto @Nonnull final String composite) {
+      setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder computedOffset(final double computedOffset) {
+      setComputedOffset( computedOffset );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nonnull final String easing) {
+      setEasing( easing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offset(@Nullable final Double offset) {
+      setOffset( offset );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ConstrainULongRange extends ULongRange {
   @JsOverlay
   @Nonnull
-  static ConstrainULongRange create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ConstrainULongRange extends ULongRange {
   @JsProperty
   void setExact(int exact);
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainULongRange exact(final int exact) {
-    setExact( exact );
-    return this;
-  }
-
   @JsProperty(
       name = "ideal"
   )
@@ -45,24 +38,39 @@ public interface ConstrainULongRange extends ULongRange {
   @JsProperty
   void setIdeal(int ideal);
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainULongRange ideal(final int ideal) {
-    setIdeal( ideal );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ConstrainULongRange {
+    @JsOverlay
+    @Nonnull
+    default Builder exact(final int exact) {
+      setExact( exact );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainULongRange max(final int max) {
-    setMax( max );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder ideal(final int ideal) {
+      setIdeal( ideal );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainULongRange min(final int min) {
-    setMin( min );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder max(final int max) {
+      setMax( max );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder min(final int min) {
+      setMin( min );
+      return this;
+    }
   }
 }

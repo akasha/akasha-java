@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TextEncoderEncodeIntoResult {
   @JsOverlay
   @Nonnull
-  static TextEncoderEncodeIntoResult create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface TextEncoderEncodeIntoResult {
   @JsProperty
   void setRead(int read);
 
-  @JsOverlay
-  @Nonnull
-  default TextEncoderEncodeIntoResult read(final int read) {
-    setRead( read );
-    return this;
-  }
-
   @JsProperty(
       name = "written"
   )
@@ -45,10 +38,25 @@ public interface TextEncoderEncodeIntoResult {
   @JsProperty
   void setWritten(int written);
 
-  @JsOverlay
-  @Nonnull
-  default TextEncoderEncodeIntoResult written(final int written) {
-    setWritten( written );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TextEncoderEncodeIntoResult {
+    @JsOverlay
+    @Nonnull
+    default Builder read(final int read) {
+      setRead( read );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder written(final int written) {
+      setWritten( written );
+      return this;
+    }
   }
 }

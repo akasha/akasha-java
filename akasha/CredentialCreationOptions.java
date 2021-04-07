@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CredentialCreationOptions {
   @JsOverlay
   @Nonnull
-  static CredentialCreationOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface CredentialCreationOptions {
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialCreationOptions signal(@Nonnull final AbortSignal signal) {
-    setSignal( signal );
-    return this;
-  }
-
   @JsProperty(
       name = "password"
   )
@@ -46,34 +39,13 @@ public interface CredentialCreationOptions {
   void setPassword(@Nonnull PasswordCredentialInit password);
 
   @JsOverlay
-  @Nonnull
-  default CredentialCreationOptions password(@Nonnull final PasswordCredentialInit password) {
-    setPassword( password );
-    return this;
-  }
-
-  @JsOverlay
   default void setPassword(@Nonnull final PasswordCredentialData password) {
     setPassword( PasswordCredentialInit.of( password ) );
   }
 
   @JsOverlay
-  @Nonnull
-  default CredentialCreationOptions password(@Nonnull final PasswordCredentialData password) {
-    setPassword( password );
-    return this;
-  }
-
-  @JsOverlay
   default void setPassword(@Nonnull final HTMLFormElement password) {
     setPassword( PasswordCredentialInit.of( password ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default CredentialCreationOptions password(@Nonnull final HTMLFormElement password) {
-    setPassword( password );
-    return this;
   }
 
   @JsProperty(
@@ -84,13 +56,6 @@ public interface CredentialCreationOptions {
   @JsProperty
   void setFederated(@Nonnull FederatedCredentialInit federated);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialCreationOptions federated(@Nonnull final FederatedCredentialInit federated) {
-    setFederated( federated );
-    return this;
-  }
-
   @JsProperty(
       name = "publicKey"
   )
@@ -99,11 +64,53 @@ public interface CredentialCreationOptions {
   @JsProperty
   void setPublicKey(@Nonnull PublicKeyCredentialCreationOptions publicKey);
 
-  @JsOverlay
-  @Nonnull
-  default CredentialCreationOptions publicKey(
-      @Nonnull final PublicKeyCredentialCreationOptions publicKey) {
-    setPublicKey( publicKey );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CredentialCreationOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder signal(@Nonnull final AbortSignal signal) {
+      setSignal( signal );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder password(@Nonnull final PasswordCredentialInit password) {
+      setPassword( password );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder password(@Nonnull final PasswordCredentialData password) {
+      setPassword( password );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder password(@Nonnull final HTMLFormElement password) {
+      setPassword( password );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder federated(@Nonnull final FederatedCredentialInit federated) {
+      setFederated( federated );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder publicKey(@Nonnull final PublicKeyCredentialCreationOptions publicKey) {
+      setPublicKey( publicKey );
+      return this;
+    }
   }
 }

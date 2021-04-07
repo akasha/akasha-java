@@ -24,8 +24,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaPssParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static RsaPssParams create(@Nonnull final String name, final int saltLength) {
-    return Js.<RsaPssParams>uncheckedCast( JsPropertyMap.of() ).name( name ).saltLength( saltLength );
+  static Builder create(@Nonnull final String name, final int saltLength) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).saltLength( saltLength );
   }
 
   @JsProperty(
@@ -36,17 +36,31 @@ public interface RsaPssParams extends Algorithm {
   @JsProperty
   void setSaltLength(int saltLength);
 
-  @JsOverlay
-  @Nonnull
-  default RsaPssParams saltLength(final int saltLength) {
-    setSaltLength( saltLength );
-    return this;
-  }
+  /**
+   * The RsaPssParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify(), when using the RSA-PSS algorithm.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RsaPssParams">RsaPssParams - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaPssParams">SubtleCrypto.RsaPssParams - Web Cryptography API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RsaPssParams {
+    @JsOverlay
+    @Nonnull
+    default Builder saltLength(final int saltLength) {
+      setSaltLength( saltLength );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RsaPssParams name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

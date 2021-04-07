@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WatchAdvertisementsOptions {
   @JsOverlay
   @Nonnull
-  static WatchAdvertisementsOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,10 +31,18 @@ public interface WatchAdvertisementsOptions {
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);
 
-  @JsOverlay
-  @Nonnull
-  default WatchAdvertisementsOptions signal(@Nonnull final AbortSignal signal) {
-    setSignal( signal );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WatchAdvertisementsOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder signal(@Nonnull final AbortSignal signal) {
+      setSignal( signal );
+      return this;
+    }
   }
 }

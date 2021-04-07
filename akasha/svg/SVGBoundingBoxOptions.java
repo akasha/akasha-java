@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface SVGBoundingBoxOptions {
   @JsOverlay
   @Nonnull
-  static SVGBoundingBoxOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface SVGBoundingBoxOptions {
   @JsProperty
   void setClipped(boolean clipped);
 
-  @JsOverlay
-  @Nonnull
-  default SVGBoundingBoxOptions clipped(final boolean clipped) {
-    setClipped( clipped );
-    return this;
-  }
-
   @JsProperty(
       name = "fill"
   )
@@ -44,13 +37,6 @@ public interface SVGBoundingBoxOptions {
 
   @JsProperty
   void setFill(boolean fill);
-
-  @JsOverlay
-  @Nonnull
-  default SVGBoundingBoxOptions fill(final boolean fill) {
-    setFill( fill );
-    return this;
-  }
 
   @JsProperty(
       name = "markers"
@@ -60,13 +46,6 @@ public interface SVGBoundingBoxOptions {
   @JsProperty
   void setMarkers(boolean markers);
 
-  @JsOverlay
-  @Nonnull
-  default SVGBoundingBoxOptions markers(final boolean markers) {
-    setMarkers( markers );
-    return this;
-  }
-
   @JsProperty(
       name = "stroke"
   )
@@ -75,10 +54,39 @@ public interface SVGBoundingBoxOptions {
   @JsProperty
   void setStroke(boolean stroke);
 
-  @JsOverlay
-  @Nonnull
-  default SVGBoundingBoxOptions stroke(final boolean stroke) {
-    setStroke( stroke );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends SVGBoundingBoxOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder clipped(final boolean clipped) {
+      setClipped( clipped );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder fill(final boolean fill) {
+      setFill( fill );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder markers(final boolean markers) {
+      setMarkers( markers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder stroke(final boolean stroke) {
+      setStroke( stroke );
+      return this;
+    }
   }
 }

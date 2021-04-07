@@ -20,9 +20,9 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialDescriptor {
   @JsOverlay
   @Nonnull
-  static PublicKeyCredentialDescriptor create(@Nonnull final BufferSource id,
+  static Builder create(@Nonnull final BufferSource id,
       @PublicKeyCredentialType @Nonnull final String type) {
-    return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsProperty(
@@ -34,13 +34,6 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty
   void setId(@Nonnull BufferSource id);
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialDescriptor id(@Nonnull final BufferSource id) {
-    setId( id );
-    return this;
-  }
-
   @JsProperty(
       name = "transports"
   )
@@ -50,22 +43,8 @@ public interface PublicKeyCredentialDescriptor {
   void setTransports(@Nonnull JsArray<String> transports);
 
   @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialDescriptor transports(@Nonnull final JsArray<String> transports) {
-    setTransports( transports );
-    return this;
-  }
-
-  @JsOverlay
   default void setTransports(@Nonnull final String... transports) {
     setTransports( Js.<JsArray<String>>uncheckedCast( transports ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialDescriptor transports(@Nonnull final String... transports) {
-    setTransports( transports );
-    return this;
   }
 
   @JsProperty(
@@ -78,10 +57,39 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty
   void setType(@PublicKeyCredentialType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialDescriptor type(@PublicKeyCredentialType @Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PublicKeyCredentialDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final BufferSource id) {
+      setId( id );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder transports(@Nonnull final JsArray<String> transports) {
+      setTransports( transports );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder transports(@Nonnull final String... transports) {
+      setTransports( transports );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@PublicKeyCredentialType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

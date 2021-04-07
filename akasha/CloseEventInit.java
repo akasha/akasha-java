@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CloseEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static CloseEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface CloseEventInit extends EventInit {
   @JsProperty
   void setCode(int code);
 
-  @JsOverlay
-  @Nonnull
-  default CloseEventInit code(final int code) {
-    setCode( code );
-    return this;
-  }
-
   @JsProperty(
       name = "reason"
   )
@@ -44,13 +37,6 @@ public interface CloseEventInit extends EventInit {
 
   @JsProperty
   void setReason(@Nonnull String reason);
-
-  @JsOverlay
-  @Nonnull
-  default CloseEventInit reason(@Nonnull final String reason) {
-    setReason( reason );
-    return this;
-  }
 
   @JsProperty(
       name = "wasClean"
@@ -60,31 +46,53 @@ public interface CloseEventInit extends EventInit {
   @JsProperty
   void setWasClean(boolean wasClean);
 
-  @JsOverlay
-  @Nonnull
-  default CloseEventInit wasClean(final boolean wasClean) {
-    setWasClean( wasClean );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CloseEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder code(final int code) {
+      setCode( code );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CloseEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder reason(@Nonnull final String reason) {
+      setReason( reason );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CloseEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder wasClean(final boolean wasClean) {
+      setWasClean( wasClean );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CloseEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

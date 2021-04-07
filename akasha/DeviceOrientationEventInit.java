@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DeviceOrientationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static DeviceOrientationEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface DeviceOrientationEventInit extends EventInit {
   @JsProperty
   void setAbsolute(boolean absolute);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit absolute(final boolean absolute) {
-    setAbsolute( absolute );
-    return this;
-  }
-
   @JsProperty(
       name = "alpha"
   )
@@ -46,13 +39,6 @@ public interface DeviceOrientationEventInit extends EventInit {
 
   @JsProperty
   void setAlpha(@Nullable Double alpha);
-
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit alpha(@Nullable final Double alpha) {
-    setAlpha( alpha );
-    return this;
-  }
 
   @JsProperty(
       name = "beta"
@@ -63,13 +49,6 @@ public interface DeviceOrientationEventInit extends EventInit {
   @JsProperty
   void setBeta(@Nullable Double beta);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit beta(@Nullable final Double beta) {
-    setBeta( beta );
-    return this;
-  }
-
   @JsProperty(
       name = "gamma"
   )
@@ -79,31 +58,60 @@ public interface DeviceOrientationEventInit extends EventInit {
   @JsProperty
   void setGamma(@Nullable Double gamma);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit gamma(@Nullable final Double gamma) {
-    setGamma( gamma );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DeviceOrientationEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder absolute(final boolean absolute) {
+      setAbsolute( absolute );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder alpha(@Nullable final Double alpha) {
+      setAlpha( alpha );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder beta(@Nullable final Double beta) {
+      setBeta( beta );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DeviceOrientationEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder gamma(@Nullable final Double gamma) {
+      setGamma( gamma );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

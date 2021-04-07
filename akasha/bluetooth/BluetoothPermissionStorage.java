@@ -19,15 +19,14 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothPermissionStorage {
   @JsOverlay
   @Nonnull
-  static BluetoothPermissionStorage create(
-      @Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
-    return Js.<BluetoothPermissionStorage>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
+  static Builder create(@Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 
   @JsOverlay
   @Nonnull
-  static BluetoothPermissionStorage create(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
-    return Js.<BluetoothPermissionStorage>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
+  static Builder create(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 
   @JsProperty(
@@ -40,23 +39,29 @@ public interface BluetoothPermissionStorage {
   void setAllowedDevices(@Nonnull JsArray<AllowedBluetoothDevice> allowedDevices);
 
   @JsOverlay
-  @Nonnull
-  default BluetoothPermissionStorage allowedDevices(
-      @Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
-    setAllowedDevices( allowedDevices );
-    return this;
-  }
-
-  @JsOverlay
   default void setAllowedDevices(@Nonnull final AllowedBluetoothDevice... allowedDevices) {
     setAllowedDevices( Js.<JsArray<AllowedBluetoothDevice>>uncheckedCast( allowedDevices ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionStorage allowedDevices(
-      @Nonnull final AllowedBluetoothDevice... allowedDevices) {
-    setAllowedDevices( allowedDevices );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BluetoothPermissionStorage {
+    @JsOverlay
+    @Nonnull
+    default Builder allowedDevices(@Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
+      setAllowedDevices( allowedDevices );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder allowedDevices(@Nonnull final AllowedBluetoothDevice... allowedDevices) {
+      setAllowedDevices( allowedDevices );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MultiCacheQueryOptions extends CacheQueryOptions {
   @JsOverlay
   @Nonnull
-  static MultiCacheQueryOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,31 +30,39 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
   @JsProperty
   void setCacheName(@Nonnull String cacheName);
 
-  @JsOverlay
-  @Nonnull
-  default MultiCacheQueryOptions cacheName(@Nonnull final String cacheName) {
-    setCacheName( cacheName );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MultiCacheQueryOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder cacheName(@Nonnull final String cacheName) {
+      setCacheName( cacheName );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MultiCacheQueryOptions ignoreMethod(final boolean ignoreMethod) {
-    setIgnoreMethod( ignoreMethod );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreMethod(final boolean ignoreMethod) {
+      setIgnoreMethod( ignoreMethod );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MultiCacheQueryOptions ignoreSearch(final boolean ignoreSearch) {
-    setIgnoreSearch( ignoreSearch );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreSearch(final boolean ignoreSearch) {
+      setIgnoreSearch( ignoreSearch );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MultiCacheQueryOptions ignoreVary(final boolean ignoreVary) {
-    setIgnoreVary( ignoreVary );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreVary(final boolean ignoreVary) {
+      setIgnoreVary( ignoreVary );
+      return this;
+    }
   }
 }

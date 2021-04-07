@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ReadableStreamDefaultReadResult {
   @JsOverlay
   @Nonnull
-  static ReadableStreamDefaultReadResult create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -34,13 +34,6 @@ public interface ReadableStreamDefaultReadResult {
   @JsProperty
   void setValue(@DoNotAutobox @Nullable Object value);
 
-  @JsOverlay
-  @Nonnull
-  default ReadableStreamDefaultReadResult value(@DoNotAutobox @Nullable final Object value) {
-    setValue( value );
-    return this;
-  }
-
   @JsProperty(
       name = "done"
   )
@@ -49,10 +42,25 @@ public interface ReadableStreamDefaultReadResult {
   @JsProperty
   void setDone(boolean done);
 
-  @JsOverlay
-  @Nonnull
-  default ReadableStreamDefaultReadResult done(final boolean done) {
-    setDone( done );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ReadableStreamDefaultReadResult {
+    @JsOverlay
+    @Nonnull
+    default Builder value(@DoNotAutobox @Nullable final Object value) {
+      setValue( value );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder done(final boolean done) {
+      setDone( done );
+      return this;
+    }
   }
 }

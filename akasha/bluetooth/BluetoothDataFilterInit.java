@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothDataFilterInit {
   @JsOverlay
   @Nonnull
-  static BluetoothDataFilterInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface BluetoothDataFilterInit {
   @JsProperty
   void setDataPrefix(@Nonnull BufferSource dataPrefix);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothDataFilterInit dataPrefix(@Nonnull final BufferSource dataPrefix) {
-    setDataPrefix( dataPrefix );
-    return this;
-  }
-
   @JsProperty(
       name = "mask"
   )
@@ -46,10 +39,25 @@ public interface BluetoothDataFilterInit {
   @JsProperty
   void setMask(@Nonnull BufferSource mask);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothDataFilterInit mask(@Nonnull final BufferSource mask) {
-    setMask( mask );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BluetoothDataFilterInit {
+    @JsOverlay
+    @Nonnull
+    default Builder dataPrefix(@Nonnull final BufferSource dataPrefix) {
+      setDataPrefix( dataPrefix );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mask(@Nonnull final BufferSource mask) {
+      setMask( mask );
+      return this;
+    }
   }
 }

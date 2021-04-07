@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface OfflineAudioContextOptions {
   @JsOverlay
   @Nonnull
-  static OfflineAudioContextOptions create(final int length, final float sampleRate) {
-    return Js.<OfflineAudioContextOptions>uncheckedCast( JsPropertyMap.of() ).length( length ).sampleRate( sampleRate );
+  static Builder create(final int length, final float sampleRate) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).length( length ).sampleRate( sampleRate );
   }
 
   @JsProperty(
@@ -30,13 +30,6 @@ public interface OfflineAudioContextOptions {
   @JsProperty
   void setLength(int length);
 
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioContextOptions length(final int length) {
-    setLength( length );
-    return this;
-  }
-
   @JsProperty(
       name = "numberOfChannels"
   )
@@ -44,13 +37,6 @@ public interface OfflineAudioContextOptions {
 
   @JsProperty
   void setNumberOfChannels(int numberOfChannels);
-
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioContextOptions numberOfChannels(final int numberOfChannels) {
-    setNumberOfChannels( numberOfChannels );
-    return this;
-  }
 
   @JsProperty(
       name = "sampleRate"
@@ -60,10 +46,32 @@ public interface OfflineAudioContextOptions {
   @JsProperty
   void setSampleRate(float sampleRate);
 
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioContextOptions sampleRate(final float sampleRate) {
-    setSampleRate( sampleRate );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OfflineAudioContextOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder length(final int length) {
+      setLength( length );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder numberOfChannels(final int numberOfChannels) {
+      setNumberOfChannels( numberOfChannels );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sampleRate(final float sampleRate) {
+      setSampleRate( sampleRate );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IDBTransactionOptions {
   @JsOverlay
   @Nonnull
-  static IDBTransactionOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,11 +31,18 @@ public interface IDBTransactionOptions {
   @JsProperty
   void setDurability(@IDBTransactionDurability @Nonnull String durability);
 
-  @JsOverlay
-  @Nonnull
-  default IDBTransactionOptions durability(
-      @IDBTransactionDurability @Nonnull final String durability) {
-    setDurability( durability );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IDBTransactionOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder durability(@IDBTransactionDurability @Nonnull final String durability) {
+      setDurability( durability );
+      return this;
+    }
   }
 }

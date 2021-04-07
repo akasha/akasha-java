@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaEncryptedEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static MediaEncryptedEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,13 +33,6 @@ public interface MediaEncryptedEventInit extends EventInit {
   @JsProperty
   void setInitData(@Nullable ArrayBuffer initData);
 
-  @JsOverlay
-  @Nonnull
-  default MediaEncryptedEventInit initData(@Nullable final ArrayBuffer initData) {
-    setInitData( initData );
-    return this;
-  }
-
   @JsProperty(
       name = "initDataType"
   )
@@ -48,31 +41,46 @@ public interface MediaEncryptedEventInit extends EventInit {
   @JsProperty
   void setInitDataType(@Nonnull String initDataType);
 
-  @JsOverlay
-  @Nonnull
-  default MediaEncryptedEventInit initDataType(@Nonnull final String initDataType) {
-    setInitDataType( initDataType );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaEncryptedEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder initData(@Nullable final ArrayBuffer initData) {
+      setInitData( initData );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaEncryptedEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder initDataType(@Nonnull final String initDataType) {
+      setInitDataType( initDataType );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaEncryptedEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaEncryptedEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

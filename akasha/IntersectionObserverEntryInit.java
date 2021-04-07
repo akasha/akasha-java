@@ -19,11 +19,11 @@ import jsinterop.base.JsPropertyMap;
 public interface IntersectionObserverEntryInit {
   @JsOverlay
   @Nonnull
-  static IntersectionObserverEntryInit create(@Nonnull final DOMRectInit boundingClientRect,
+  static Builder create(@Nonnull final DOMRectInit boundingClientRect,
       final double intersectionRatio, @Nonnull final DOMRectInit intersectionRect,
       final boolean isIntersecting, @Nullable final DOMRectInit rootBounds,
       @Nonnull final Element target, final double time) {
-    return Js.<IntersectionObserverEntryInit>uncheckedCast( JsPropertyMap.of() ).boundingClientRect( boundingClientRect ).intersectionRatio( intersectionRatio ).intersectionRect( intersectionRect ).isIntersecting( isIntersecting ).rootBounds( rootBounds ).target( target ).time( time );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).boundingClientRect( boundingClientRect ).intersectionRatio( intersectionRatio ).intersectionRect( intersectionRect ).isIntersecting( isIntersecting ).rootBounds( rootBounds ).target( target ).time( time );
   }
 
   @JsProperty(
@@ -35,14 +35,6 @@ public interface IntersectionObserverEntryInit {
   @JsProperty
   void setBoundingClientRect(@Nonnull DOMRectInit boundingClientRect);
 
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit boundingClientRect(
-      @Nonnull final DOMRectInit boundingClientRect) {
-    setBoundingClientRect( boundingClientRect );
-    return this;
-  }
-
   @JsProperty(
       name = "intersectionRatio"
   )
@@ -50,13 +42,6 @@ public interface IntersectionObserverEntryInit {
 
   @JsProperty
   void setIntersectionRatio(double intersectionRatio);
-
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit intersectionRatio(final double intersectionRatio) {
-    setIntersectionRatio( intersectionRatio );
-    return this;
-  }
 
   @JsProperty(
       name = "intersectionRect"
@@ -67,14 +52,6 @@ public interface IntersectionObserverEntryInit {
   @JsProperty
   void setIntersectionRect(@Nonnull DOMRectInit intersectionRect);
 
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit intersectionRect(
-      @Nonnull final DOMRectInit intersectionRect) {
-    setIntersectionRect( intersectionRect );
-    return this;
-  }
-
   @JsProperty(
       name = "isIntersecting"
   )
@@ -82,13 +59,6 @@ public interface IntersectionObserverEntryInit {
 
   @JsProperty
   void setIsIntersecting(boolean isIntersecting);
-
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit isIntersecting(final boolean isIntersecting) {
-    setIsIntersecting( isIntersecting );
-    return this;
-  }
 
   @JsProperty(
       name = "rootBounds"
@@ -99,13 +69,6 @@ public interface IntersectionObserverEntryInit {
   @JsProperty
   void setRootBounds(@Nullable DOMRectInit rootBounds);
 
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit rootBounds(@Nullable final DOMRectInit rootBounds) {
-    setRootBounds( rootBounds );
-    return this;
-  }
-
   @JsProperty(
       name = "target"
   )
@@ -115,13 +78,6 @@ public interface IntersectionObserverEntryInit {
   @JsProperty
   void setTarget(@Nonnull Element target);
 
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit target(@Nonnull final Element target) {
-    setTarget( target );
-    return this;
-  }
-
   @JsProperty(
       name = "time"
   )
@@ -130,10 +86,60 @@ public interface IntersectionObserverEntryInit {
   @JsProperty
   void setTime(double time);
 
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverEntryInit time(final double time) {
-    setTime( time );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IntersectionObserverEntryInit {
+    @JsOverlay
+    @Nonnull
+    default Builder boundingClientRect(@Nonnull final DOMRectInit boundingClientRect) {
+      setBoundingClientRect( boundingClientRect );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder intersectionRatio(final double intersectionRatio) {
+      setIntersectionRatio( intersectionRatio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder intersectionRect(@Nonnull final DOMRectInit intersectionRect) {
+      setIntersectionRect( intersectionRect );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder isIntersecting(final boolean isIntersecting) {
+      setIsIntersecting( isIntersecting );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rootBounds(@Nullable final DOMRectInit rootBounds) {
+      setRootBounds( rootBounds );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder target(@Nonnull final Element target) {
+      setTarget( target );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder time(final double time) {
+      setTime( time );
+      return this;
+    }
   }
 }

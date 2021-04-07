@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface StereoPannerOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static StereoPannerOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,33 +30,40 @@ public interface StereoPannerOptions extends AudioNodeOptions {
   @JsProperty
   void setPan(float pan);
 
-  @JsOverlay
-  @Nonnull
-  default StereoPannerOptions pan(final float pan) {
-    setPan( pan );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends StereoPannerOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder pan(final float pan) {
+      setPan( pan );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default StereoPannerOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default StereoPannerOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default StereoPannerOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

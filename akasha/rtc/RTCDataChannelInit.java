@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCDataChannelInit {
   @JsOverlay
   @Nonnull
-  static RTCDataChannelInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface RTCDataChannelInit {
   @JsProperty
   void setId(int id);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit id(final int id) {
-    setId( id );
-    return this;
-  }
-
   @JsProperty(
       name = "maxPacketLifeTime"
   )
@@ -44,13 +37,6 @@ public interface RTCDataChannelInit {
 
   @JsProperty
   void setMaxPacketLifeTime(int maxPacketLifeTime);
-
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit maxPacketLifeTime(final int maxPacketLifeTime) {
-    setMaxPacketLifeTime( maxPacketLifeTime );
-    return this;
-  }
 
   @JsProperty(
       name = "maxRetransmits"
@@ -60,13 +46,6 @@ public interface RTCDataChannelInit {
   @JsProperty
   void setMaxRetransmits(int maxRetransmits);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit maxRetransmits(final int maxRetransmits) {
-    setMaxRetransmits( maxRetransmits );
-    return this;
-  }
-
   @JsProperty(
       name = "negotiated"
   )
@@ -74,13 +53,6 @@ public interface RTCDataChannelInit {
 
   @JsProperty
   void setNegotiated(boolean negotiated);
-
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit negotiated(final boolean negotiated) {
-    setNegotiated( negotiated );
-    return this;
-  }
 
   @JsProperty(
       name = "ordered"
@@ -90,13 +62,6 @@ public interface RTCDataChannelInit {
   @JsProperty
   void setOrdered(boolean ordered);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit ordered(final boolean ordered) {
-    setOrdered( ordered );
-    return this;
-  }
-
   @JsProperty(
       name = "protocol"
   )
@@ -104,13 +69,6 @@ public interface RTCDataChannelInit {
 
   @JsProperty
   void setProtocol(@Nonnull String protocol);
-
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit protocol(@Nonnull final String protocol) {
-    setProtocol( protocol );
-    return this;
-  }
 
   @JsProperty(
       name = "priority"
@@ -121,10 +79,60 @@ public interface RTCDataChannelInit {
   @JsProperty
   void setPriority(@RTCPriorityType @Nonnull String priority);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDataChannelInit priority(@RTCPriorityType @Nonnull final String priority) {
-    setPriority( priority );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCDataChannelInit {
+    @JsOverlay
+    @Nonnull
+    default Builder id(final int id) {
+      setId( id );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder maxPacketLifeTime(final int maxPacketLifeTime) {
+      setMaxPacketLifeTime( maxPacketLifeTime );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder maxRetransmits(final int maxRetransmits) {
+      setMaxRetransmits( maxRetransmits );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder negotiated(final boolean negotiated) {
+      setNegotiated( negotiated );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder ordered(final boolean ordered) {
+      setOrdered( ordered );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder protocol(@Nonnull final String protocol) {
+      setProtocol( protocol );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder priority(@RTCPriorityType @Nonnull final String priority) {
+      setPriority( priority );
+      return this;
+    }
   }
 }

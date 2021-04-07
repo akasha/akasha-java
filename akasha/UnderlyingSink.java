@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface UnderlyingSink {
   @JsOverlay
   @Nonnull
-  static UnderlyingSink create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,13 +33,6 @@ public interface UnderlyingSink {
   @JsProperty
   void setStart(@Nonnull UnderlyingSinkStartCallback start);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSink start(@Nonnull final UnderlyingSinkStartCallback start) {
-    setStart( start );
-    return this;
-  }
-
   @JsProperty(
       name = "write"
   )
@@ -47,13 +40,6 @@ public interface UnderlyingSink {
 
   @JsProperty
   void setWrite(@Nonnull UnderlyingSinkWriteCallback write);
-
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSink write(@Nonnull final UnderlyingSinkWriteCallback write) {
-    setWrite( write );
-    return this;
-  }
 
   @JsProperty(
       name = "close"
@@ -63,13 +49,6 @@ public interface UnderlyingSink {
   @JsProperty
   void setClose(@Nonnull UnderlyingSinkCloseCallback close);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSink close(@Nonnull final UnderlyingSinkCloseCallback close) {
-    setClose( close );
-    return this;
-  }
-
   @JsProperty(
       name = "abort"
   )
@@ -77,13 +56,6 @@ public interface UnderlyingSink {
 
   @JsProperty
   void setAbort(@Nonnull UnderlyingSinkAbortCallback abort);
-
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSink abort(@Nonnull final UnderlyingSinkAbortCallback abort) {
-    setAbort( abort );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -94,10 +66,46 @@ public interface UnderlyingSink {
   @JsProperty
   void setType(@DoNotAutobox @Nullable Object type);
 
-  @JsOverlay
-  @Nonnull
-  default UnderlyingSink type(@DoNotAutobox @Nullable final Object type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends UnderlyingSink {
+    @JsOverlay
+    @Nonnull
+    default Builder start(@Nonnull final UnderlyingSinkStartCallback start) {
+      setStart( start );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder write(@Nonnull final UnderlyingSinkWriteCallback write) {
+      setWrite( write );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder close(@Nonnull final UnderlyingSinkCloseCallback close) {
+      setClose( close );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder abort(@Nonnull final UnderlyingSinkAbortCallback abort) {
+      setAbort( abort );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@DoNotAutobox @Nullable final Object type) {
+      setType( type );
+      return this;
+    }
   }
 }

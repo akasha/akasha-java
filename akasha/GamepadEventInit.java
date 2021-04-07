@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface GamepadEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static GamepadEventInit create(@Nonnull final Gamepad gamepad) {
-    return Js.<GamepadEventInit>uncheckedCast( JsPropertyMap.of() ).gamepad( gamepad );
+  static Builder create(@Nonnull final Gamepad gamepad) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).gamepad( gamepad );
   }
 
   @JsProperty(
@@ -31,31 +31,39 @@ public interface GamepadEventInit extends EventInit {
   @JsProperty
   void setGamepad(@Nonnull Gamepad gamepad);
 
-  @JsOverlay
-  @Nonnull
-  default GamepadEventInit gamepad(@Nonnull final Gamepad gamepad) {
-    setGamepad( gamepad );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends GamepadEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder gamepad(@Nonnull final Gamepad gamepad) {
+      setGamepad( gamepad );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default GamepadEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default GamepadEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default GamepadEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

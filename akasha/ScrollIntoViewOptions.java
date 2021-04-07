@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ScrollIntoViewOptions extends ScrollOptions {
   @JsOverlay
   @Nonnull
-  static ScrollIntoViewOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   @JsProperty
   void setBlock(@ScrollLogicalPosition @Nonnull String block);
 
-  @JsOverlay
-  @Nonnull
-  default ScrollIntoViewOptions block(@ScrollLogicalPosition @Nonnull final String block) {
-    setBlock( block );
-    return this;
-  }
-
   @JsProperty(
       name = "inline"
   )
@@ -47,17 +40,32 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   @JsProperty
   void setInline(@ScrollLogicalPosition @Nonnull String inline);
 
-  @JsOverlay
-  @Nonnull
-  default ScrollIntoViewOptions inline(@ScrollLogicalPosition @Nonnull final String inline) {
-    setInline( inline );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ScrollIntoViewOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder block(@ScrollLogicalPosition @Nonnull final String block) {
+      setBlock( block );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ScrollIntoViewOptions behavior(@ScrollBehavior @Nonnull final String behavior) {
-    setBehavior( behavior );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder inline(@ScrollLogicalPosition @Nonnull final String inline) {
+      setInline( inline );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder behavior(@ScrollBehavior @Nonnull final String behavior) {
+      setBehavior( behavior );
+      return this;
+    }
   }
 }

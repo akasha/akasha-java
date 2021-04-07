@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PannerOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static PannerOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setConeInnerAngle(double coneInnerAngle);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions coneInnerAngle(final double coneInnerAngle) {
-    setConeInnerAngle( coneInnerAngle );
-    return this;
-  }
-
   @JsProperty(
       name = "coneOuterAngle"
   )
@@ -45,13 +38,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setConeOuterAngle(double coneOuterAngle);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions coneOuterAngle(final double coneOuterAngle) {
-    setConeOuterAngle( coneOuterAngle );
-    return this;
-  }
-
   @JsProperty(
       name = "coneOuterGain"
   )
@@ -59,13 +45,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsProperty
   void setConeOuterGain(double coneOuterGain);
-
-  @JsOverlay
-  @Nonnull
-  default PannerOptions coneOuterGain(final double coneOuterGain) {
-    setConeOuterGain( coneOuterGain );
-    return this;
-  }
 
   @JsProperty(
       name = "distanceModel"
@@ -76,13 +55,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setDistanceModel(@DistanceModelType @Nonnull String distanceModel);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions distanceModel(@DistanceModelType @Nonnull final String distanceModel) {
-    setDistanceModel( distanceModel );
-    return this;
-  }
-
   @JsProperty(
       name = "maxDistance"
   )
@@ -90,13 +62,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsProperty
   void setMaxDistance(double maxDistance);
-
-  @JsOverlay
-  @Nonnull
-  default PannerOptions maxDistance(final double maxDistance) {
-    setMaxDistance( maxDistance );
-    return this;
-  }
 
   @JsProperty(
       name = "orientationX"
@@ -106,13 +71,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setOrientationX(float orientationX);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions orientationX(final float orientationX) {
-    setOrientationX( orientationX );
-    return this;
-  }
-
   @JsProperty(
       name = "orientationY"
   )
@@ -121,13 +79,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setOrientationY(float orientationY);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions orientationY(final float orientationY) {
-    setOrientationY( orientationY );
-    return this;
-  }
-
   @JsProperty(
       name = "orientationZ"
   )
@@ -135,13 +86,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsProperty
   void setOrientationZ(float orientationZ);
-
-  @JsOverlay
-  @Nonnull
-  default PannerOptions orientationZ(final float orientationZ) {
-    setOrientationZ( orientationZ );
-    return this;
-  }
 
   @JsProperty(
       name = "panningModel"
@@ -152,13 +96,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setPanningModel(@PanningModelType @Nonnull String panningModel);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions panningModel(@PanningModelType @Nonnull final String panningModel) {
-    setPanningModel( panningModel );
-    return this;
-  }
-
   @JsProperty(
       name = "positionX"
   )
@@ -166,13 +103,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsProperty
   void setPositionX(float positionX);
-
-  @JsOverlay
-  @Nonnull
-  default PannerOptions positionX(final float positionX) {
-    setPositionX( positionX );
-    return this;
-  }
 
   @JsProperty(
       name = "positionY"
@@ -182,13 +112,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setPositionY(float positionY);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions positionY(final float positionY) {
-    setPositionY( positionY );
-    return this;
-  }
-
   @JsProperty(
       name = "positionZ"
   )
@@ -196,13 +119,6 @@ public interface PannerOptions extends AudioNodeOptions {
 
   @JsProperty
   void setPositionZ(float positionZ);
-
-  @JsOverlay
-  @Nonnull
-  default PannerOptions positionZ(final float positionZ) {
-    setPositionZ( positionZ );
-    return this;
-  }
 
   @JsProperty(
       name = "refDistance"
@@ -212,13 +128,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setRefDistance(double refDistance);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions refDistance(final double refDistance) {
-    setRefDistance( refDistance );
-    return this;
-  }
-
   @JsProperty(
       name = "rolloffFactor"
   )
@@ -227,32 +136,131 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setRolloffFactor(double rolloffFactor);
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions rolloffFactor(final double rolloffFactor) {
-    setRolloffFactor( rolloffFactor );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PannerOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder coneInnerAngle(final double coneInnerAngle) {
+      setConeInnerAngle( coneInnerAngle );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder coneOuterAngle(final double coneOuterAngle) {
+      setConeOuterAngle( coneOuterAngle );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder coneOuterGain(final double coneOuterGain) {
+      setConeOuterGain( coneOuterGain );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PannerOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder distanceModel(@DistanceModelType @Nonnull final String distanceModel) {
+      setDistanceModel( distanceModel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder maxDistance(final double maxDistance) {
+      setMaxDistance( maxDistance );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder orientationX(final float orientationX) {
+      setOrientationX( orientationX );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder orientationY(final float orientationY) {
+      setOrientationY( orientationY );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder orientationZ(final float orientationZ) {
+      setOrientationZ( orientationZ );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder panningModel(@PanningModelType @Nonnull final String panningModel) {
+      setPanningModel( panningModel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder positionX(final float positionX) {
+      setPositionX( positionX );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder positionY(final float positionY) {
+      setPositionY( positionY );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder positionZ(final float positionZ) {
+      setPositionZ( positionZ );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder refDistance(final double refDistance) {
+      setRefDistance( refDistance );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rolloffFactor(final double rolloffFactor) {
+      setRolloffFactor( rolloffFactor );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

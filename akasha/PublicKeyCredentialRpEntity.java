@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
   @JsOverlay
   @Nonnull
-  static PublicKeyCredentialRpEntity create(@Nonnull final String name) {
-    return Js.<PublicKeyCredentialRpEntity>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -30,24 +30,32 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
   @JsProperty
   void setId(@Nonnull String id);
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialRpEntity id(@Nonnull final String id) {
-    setId( id );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PublicKeyCredentialRpEntity {
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialRpEntity icon(@Nonnull final String icon) {
-    setIcon( icon );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder icon(@Nonnull final String icon) {
+      setIcon( icon );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialRpEntity name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

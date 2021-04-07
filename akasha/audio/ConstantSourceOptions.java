@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ConstantSourceOptions {
   @JsOverlay
   @Nonnull
-  static ConstantSourceOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface ConstantSourceOptions {
   @JsProperty
   void setOffset(float offset);
 
-  @JsOverlay
-  @Nonnull
-  default ConstantSourceOptions offset(final float offset) {
-    setOffset( offset );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ConstantSourceOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder offset(final float offset) {
+      setOffset( offset );
+      return this;
+    }
   }
 }

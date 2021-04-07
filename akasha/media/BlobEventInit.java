@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface BlobEventInit {
   @JsOverlay
   @Nonnull
-  static BlobEventInit create(@Nonnull final Blob data) {
-    return Js.<BlobEventInit>uncheckedCast( JsPropertyMap.of() ).data( data );
+  static Builder create(@Nonnull final Blob data) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).data( data );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface BlobEventInit {
   @JsProperty
   void setData(@Nonnull Blob data);
 
-  @JsOverlay
-  @Nonnull
-  default BlobEventInit data(@Nonnull final Blob data) {
-    setData( data );
-    return this;
-  }
-
   @JsProperty(
       name = "timecode"
   )
@@ -47,10 +40,25 @@ public interface BlobEventInit {
   @JsProperty
   void setTimecode(double timecode);
 
-  @JsOverlay
-  @Nonnull
-  default BlobEventInit timecode(final double timecode) {
-    setTimecode( timecode );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BlobEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull final Blob data) {
+      setData( data );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder timecode(final double timecode) {
+      setTimecode( timecode );
+      return this;
+    }
   }
 }

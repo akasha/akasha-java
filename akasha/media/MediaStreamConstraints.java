@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaStreamConstraints {
   @JsOverlay
   @Nonnull
-  static MediaStreamConstraints create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -41,22 +41,8 @@ public interface MediaStreamConstraints {
   }
 
   @JsOverlay
-  @Nonnull
-  default MediaStreamConstraints audio(final boolean audio) {
-    setAudio( audio );
-    return this;
-  }
-
-  @JsOverlay
   default void setAudio(@Nonnull final MediaTrackConstraints audio) {
     setAudio( BooleanOrMediaTrackConstraintsUnion.of( audio ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaStreamConstraints audio(@Nonnull final MediaTrackConstraints audio) {
-    setAudio( audio );
-    return this;
   }
 
   @JsProperty(
@@ -73,22 +59,8 @@ public interface MediaStreamConstraints {
   }
 
   @JsOverlay
-  @Nonnull
-  default MediaStreamConstraints video(final boolean video) {
-    setVideo( video );
-    return this;
-  }
-
-  @JsOverlay
   default void setVideo(@Nonnull final MediaTrackConstraints video) {
     setVideo( BooleanOrMediaTrackConstraintsUnion.of( video ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaStreamConstraints video(@Nonnull final MediaTrackConstraints video) {
-    setVideo( video );
-    return this;
   }
 
   @JsProperty(
@@ -99,10 +71,51 @@ public interface MediaStreamConstraints {
   @JsProperty
   void setPeerIdentity(@Nonnull String peerIdentity);
 
-  @JsOverlay
-  @Nonnull
-  default MediaStreamConstraints peerIdentity(@Nonnull final String peerIdentity) {
-    setPeerIdentity( peerIdentity );
-    return this;
+  /**
+   * The MediaStreamConstraints dictionary is used when calling getUserMedia() to specify what kinds of tracks should be included in the returned MediaStream, and, optionally, to establish constraints for those tracks' settings.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamConstraints">MediaStreamConstraints - MDN</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaStreamConstraints {
+    @JsOverlay
+    @Nonnull
+    default Builder audio(final boolean audio) {
+      setAudio( audio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder audio(@Nonnull final MediaTrackConstraints audio) {
+      setAudio( audio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder video(final boolean video) {
+      setVideo( video );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder video(@Nonnull final MediaTrackConstraints video) {
+      setVideo( video );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder peerIdentity(@Nonnull final String peerIdentity) {
+      setPeerIdentity( peerIdentity );
+      return this;
+    }
   }
 }

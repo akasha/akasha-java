@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaQueryListEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static MediaQueryListEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface MediaQueryListEventInit extends EventInit {
   @JsProperty
   void setMatches(boolean matches);
 
-  @JsOverlay
-  @Nonnull
-  default MediaQueryListEventInit matches(final boolean matches) {
-    setMatches( matches );
-    return this;
-  }
-
   @JsProperty(
       name = "media"
   )
@@ -45,31 +38,46 @@ public interface MediaQueryListEventInit extends EventInit {
   @JsProperty
   void setMedia(@Nonnull String media);
 
-  @JsOverlay
-  @Nonnull
-  default MediaQueryListEventInit media(@Nonnull final String media) {
-    setMedia( media );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaQueryListEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder matches(final boolean matches) {
+      setMatches( matches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaQueryListEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder media(@Nonnull final String media) {
+      setMedia( media );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaQueryListEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaQueryListEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

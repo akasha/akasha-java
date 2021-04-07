@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WindowPostMessageOptions extends PostMessageOptions {
   @JsOverlay
   @Nonnull
-  static WindowPostMessageOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,24 +31,32 @@ public interface WindowPostMessageOptions extends PostMessageOptions {
   @JsProperty
   void setTargetOrigin(@Nonnull String targetOrigin);
 
-  @JsOverlay
-  @Nonnull
-  default WindowPostMessageOptions targetOrigin(@Nonnull final String targetOrigin) {
-    setTargetOrigin( targetOrigin );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WindowPostMessageOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder targetOrigin(@Nonnull final String targetOrigin) {
+      setTargetOrigin( targetOrigin );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default WindowPostMessageOptions transfer(@Nonnull final JsArray<Transferable> transfer) {
-    setTransfer( transfer );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder transfer(@Nonnull final JsArray<Transferable> transfer) {
+      setTransfer( transfer );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default WindowPostMessageOptions transfer(@Nonnull final Transferable... transfer) {
-    setTransfer( transfer );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder transfer(@Nonnull final Transferable... transfer) {
+      setTransfer( transfer );
+      return this;
+    }
   }
 }

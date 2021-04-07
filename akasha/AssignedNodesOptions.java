@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AssignedNodesOptions {
   @JsOverlay
   @Nonnull
-  static AssignedNodesOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface AssignedNodesOptions {
   @JsProperty
   void setFlatten(boolean flatten);
 
-  @JsOverlay
-  @Nonnull
-  default AssignedNodesOptions flatten(final boolean flatten) {
-    setFlatten( flatten );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AssignedNodesOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder flatten(final boolean flatten) {
+      setFlatten( flatten );
+      return this;
+    }
   }
 }

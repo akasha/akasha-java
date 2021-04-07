@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface OptionalEffectTiming {
   @JsOverlay
   @Nonnull
-  static OptionalEffectTiming create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface OptionalEffectTiming {
   @JsProperty
   void setDelay(double delay);
 
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming delay(final double delay) {
-    setDelay( delay );
-    return this;
-  }
-
   @JsProperty(
       name = "direction"
   )
@@ -45,13 +38,6 @@ public interface OptionalEffectTiming {
 
   @JsProperty
   void setDirection(@PlaybackDirection @Nonnull String direction);
-
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming direction(@PlaybackDirection @Nonnull final String direction) {
-    setDirection( direction );
-    return this;
-  }
 
   @JsProperty(
       name = "duration"
@@ -67,22 +53,8 @@ public interface OptionalEffectTiming {
   }
 
   @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming duration(final double duration) {
-    setDuration( duration );
-    return this;
-  }
-
-  @JsOverlay
   default void setDuration(@Nonnull final String duration) {
     setDuration( UnrestrictedDoubleOrStringUnion.of( duration ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming duration(@Nonnull final String duration) {
-    setDuration( duration );
-    return this;
   }
 
   @JsProperty(
@@ -93,13 +65,6 @@ public interface OptionalEffectTiming {
   @JsProperty
   void setEasing(@Nonnull String easing);
 
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming easing(@Nonnull final String easing) {
-    setEasing( easing );
-    return this;
-  }
-
   @JsProperty(
       name = "endDelay"
   )
@@ -107,13 +72,6 @@ public interface OptionalEffectTiming {
 
   @JsProperty
   void setEndDelay(double endDelay);
-
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming endDelay(final double endDelay) {
-    setEndDelay( endDelay );
-    return this;
-  }
 
   @JsProperty(
       name = "fill"
@@ -124,13 +82,6 @@ public interface OptionalEffectTiming {
   @JsProperty
   void setFill(@FillMode @Nonnull String fill);
 
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming fill(@FillMode @Nonnull final String fill) {
-    setFill( fill );
-    return this;
-  }
-
   @JsProperty(
       name = "iterationStart"
   )
@@ -138,13 +89,6 @@ public interface OptionalEffectTiming {
 
   @JsProperty
   void setIterationStart(double iterationStart);
-
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming iterationStart(final double iterationStart) {
-    setIterationStart( iterationStart );
-    return this;
-  }
 
   @JsProperty(
       name = "iterations"
@@ -154,10 +98,74 @@ public interface OptionalEffectTiming {
   @JsProperty
   void setIterations(double iterations);
 
-  @JsOverlay
-  @Nonnull
-  default OptionalEffectTiming iterations(final double iterations) {
-    setIterations( iterations );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OptionalEffectTiming {
+    @JsOverlay
+    @Nonnull
+    default Builder delay(final double delay) {
+      setDelay( delay );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder direction(@PlaybackDirection @Nonnull final String direction) {
+      setDirection( direction );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder duration(final double duration) {
+      setDuration( duration );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder duration(@Nonnull final String duration) {
+      setDuration( duration );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nonnull final String easing) {
+      setEasing( easing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder endDelay(final double endDelay) {
+      setEndDelay( endDelay );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder fill(@FillMode @Nonnull final String fill) {
+      setFill( fill );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder iterationStart(final double iterationStart) {
+      setIterationStart( iterationStart );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder iterations(final double iterations) {
+      setIterations( iterations );
+      return this;
+    }
   }
 }

@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface TxAuthGenericArg {
   @JsOverlay
   @Nonnull
-  static TxAuthGenericArg create(@Nonnull final ArrayBuffer content,
-      @Nonnull final String contentType) {
-    return Js.<TxAuthGenericArg>uncheckedCast( JsPropertyMap.of() ).content( content ).contentType( contentType );
+  static Builder create(@Nonnull final ArrayBuffer content, @Nonnull final String contentType) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).content( content ).contentType( contentType );
   }
 
   @JsProperty(
@@ -33,13 +32,6 @@ public interface TxAuthGenericArg {
   @JsProperty
   void setContent(@Nonnull ArrayBuffer content);
 
-  @JsOverlay
-  @Nonnull
-  default TxAuthGenericArg content(@Nonnull final ArrayBuffer content) {
-    setContent( content );
-    return this;
-  }
-
   @JsProperty(
       name = "contentType"
   )
@@ -49,10 +41,25 @@ public interface TxAuthGenericArg {
   @JsProperty
   void setContentType(@Nonnull String contentType);
 
-  @JsOverlay
-  @Nonnull
-  default TxAuthGenericArg contentType(@Nonnull final String contentType) {
-    setContentType( contentType );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TxAuthGenericArg {
+    @JsOverlay
+    @Nonnull
+    default Builder content(@Nonnull final ArrayBuffer content) {
+      setContent( content );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder contentType(@Nonnull final String contentType) {
+      setContentType( contentType );
+      return this;
+    }
   }
 }

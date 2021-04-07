@@ -19,9 +19,9 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioProcessingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static AudioProcessingEventInit create(@Nonnull final AudioBuffer inputBuffer,
+  static Builder create(@Nonnull final AudioBuffer inputBuffer,
       @Nonnull final AudioBuffer outputBuffer, final double playbackTime) {
-    return Js.<AudioProcessingEventInit>uncheckedCast( JsPropertyMap.of() ).inputBuffer( inputBuffer ).outputBuffer( outputBuffer ).playbackTime( playbackTime );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).inputBuffer( inputBuffer ).outputBuffer( outputBuffer ).playbackTime( playbackTime );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsProperty
   void setInputBuffer(@Nonnull AudioBuffer inputBuffer);
 
-  @JsOverlay
-  @Nonnull
-  default AudioProcessingEventInit inputBuffer(@Nonnull final AudioBuffer inputBuffer) {
-    setInputBuffer( inputBuffer );
-    return this;
-  }
-
   @JsProperty(
       name = "outputBuffer"
   )
@@ -49,13 +42,6 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsProperty
   void setOutputBuffer(@Nonnull AudioBuffer outputBuffer);
 
-  @JsOverlay
-  @Nonnull
-  default AudioProcessingEventInit outputBuffer(@Nonnull final AudioBuffer outputBuffer) {
-    setOutputBuffer( outputBuffer );
-    return this;
-  }
-
   @JsProperty(
       name = "playbackTime"
   )
@@ -64,31 +50,53 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsProperty
   void setPlaybackTime(double playbackTime);
 
-  @JsOverlay
-  @Nonnull
-  default AudioProcessingEventInit playbackTime(final double playbackTime) {
-    setPlaybackTime( playbackTime );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AudioProcessingEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder inputBuffer(@Nonnull final AudioBuffer inputBuffer) {
+      setInputBuffer( inputBuffer );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AudioProcessingEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder outputBuffer(@Nonnull final AudioBuffer outputBuffer) {
+      setOutputBuffer( outputBuffer );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AudioProcessingEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder playbackTime(final double playbackTime) {
+      setPlaybackTime( playbackTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AudioProcessingEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface ShadowRootInit {
   @JsOverlay
   @Nonnull
-  static ShadowRootInit create(@ShadowRootMode @Nonnull final String mode) {
-    return Js.<ShadowRootInit>uncheckedCast( JsPropertyMap.of() ).mode( mode );
+  static Builder create(@ShadowRootMode @Nonnull final String mode) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mode( mode );
   }
 
   @JsProperty(
@@ -29,13 +29,6 @@ public interface ShadowRootInit {
 
   @JsProperty
   void setDelegatesFocus(boolean delegatesFocus);
-
-  @JsOverlay
-  @Nonnull
-  default ShadowRootInit delegatesFocus(final boolean delegatesFocus) {
-    setDelegatesFocus( delegatesFocus );
-    return this;
-  }
 
   @JsProperty(
       name = "mode"
@@ -47,10 +40,25 @@ public interface ShadowRootInit {
   @JsProperty
   void setMode(@ShadowRootMode @Nonnull String mode);
 
-  @JsOverlay
-  @Nonnull
-  default ShadowRootInit mode(@ShadowRootMode @Nonnull final String mode) {
-    setMode( mode );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ShadowRootInit {
+    @JsOverlay
+    @Nonnull
+    default Builder delegatesFocus(final boolean delegatesFocus) {
+      setDelegatesFocus( delegatesFocus );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mode(@ShadowRootMode @Nonnull final String mode) {
+      setMode( mode );
+      return this;
+    }
   }
 }

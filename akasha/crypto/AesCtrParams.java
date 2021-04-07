@@ -25,9 +25,9 @@ import jsinterop.base.JsPropertyMap;
 public interface AesCtrParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static AesCtrParams create(@Nonnull final String name, @Nonnull final BufferSource counter,
+  static Builder create(@Nonnull final String name, @Nonnull final BufferSource counter,
       final short length) {
-    return Js.<AesCtrParams>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
   }
 
   @JsProperty(
@@ -39,13 +39,6 @@ public interface AesCtrParams extends Algorithm {
   @JsProperty
   void setCounter(@Nonnull BufferSource counter);
 
-  @JsOverlay
-  @Nonnull
-  default AesCtrParams counter(@Nonnull final BufferSource counter) {
-    setCounter( counter );
-    return this;
-  }
-
   @JsProperty(
       name = "length"
   )
@@ -54,17 +47,38 @@ public interface AesCtrParams extends Algorithm {
   @JsProperty
   void setLength(short length);
 
-  @JsOverlay
-  @Nonnull
-  default AesCtrParams length(final short length) {
-    setLength( length );
-    return this;
-  }
+  /**
+   * The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams">AesCtrParams - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams">SubtleCrypto.AesCtrParams - Web Cryptography API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AesCtrParams {
+    @JsOverlay
+    @Nonnull
+    default Builder counter(@Nonnull final BufferSource counter) {
+      setCounter( counter );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AesCtrParams name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder length(final short length) {
+      setLength( length );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

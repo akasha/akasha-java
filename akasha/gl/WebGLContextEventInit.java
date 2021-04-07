@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WebGLContextEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static WebGLContextEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,31 +31,39 @@ public interface WebGLContextEventInit extends EventInit {
   @JsProperty
   void setStatusMessage(@Nonnull String statusMessage);
 
-  @JsOverlay
-  @Nonnull
-  default WebGLContextEventInit statusMessage(@Nonnull final String statusMessage) {
-    setStatusMessage( statusMessage );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WebGLContextEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder statusMessage(@Nonnull final String statusMessage) {
+      setStatusMessage( statusMessage );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default WebGLContextEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default WebGLContextEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default WebGLContextEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

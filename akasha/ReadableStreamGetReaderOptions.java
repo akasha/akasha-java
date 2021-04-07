@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ReadableStreamGetReaderOptions {
   @JsOverlay
   @Nonnull
-  static ReadableStreamGetReaderOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,11 +31,18 @@ public interface ReadableStreamGetReaderOptions {
   @JsProperty
   void setMode(@ReadableStreamReaderMode @Nonnull String mode);
 
-  @JsOverlay
-  @Nonnull
-  default ReadableStreamGetReaderOptions mode(
-      @ReadableStreamReaderMode @Nonnull final String mode) {
-    setMode( mode );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ReadableStreamGetReaderOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder mode(@ReadableStreamReaderMode @Nonnull final String mode) {
+      setMode( mode );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ConvertCoordinateOptions {
   @JsOverlay
   @Nonnull
-  static ConvertCoordinateOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface ConvertCoordinateOptions {
   @JsProperty
   void setFromBox(@CSSBoxType @Nonnull String fromBox);
 
-  @JsOverlay
-  @Nonnull
-  default ConvertCoordinateOptions fromBox(@CSSBoxType @Nonnull final String fromBox) {
-    setFromBox( fromBox );
-    return this;
-  }
-
   @JsProperty(
       name = "toBox"
   )
@@ -47,10 +40,25 @@ public interface ConvertCoordinateOptions {
   @JsProperty
   void setToBox(@CSSBoxType @Nonnull String toBox);
 
-  @JsOverlay
-  @Nonnull
-  default ConvertCoordinateOptions toBox(@CSSBoxType @Nonnull final String toBox) {
-    setToBox( toBox );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ConvertCoordinateOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder fromBox(@CSSBoxType @Nonnull final String fromBox) {
+      setFromBox( fromBox );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder toBox(@CSSBoxType @Nonnull final String toBox) {
+      setToBox( toBox );
+      return this;
+    }
   }
 }

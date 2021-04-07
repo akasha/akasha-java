@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RegistrationOptions {
   @JsOverlay
   @Nonnull
-  static RegistrationOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface RegistrationOptions {
   @JsProperty
   void setScope(@Nonnull String scope);
 
-  @JsOverlay
-  @Nonnull
-  default RegistrationOptions scope(@Nonnull final String scope) {
-    setScope( scope );
-    return this;
-  }
-
   @JsProperty(
       name = "type"
   )
@@ -45,13 +38,6 @@ public interface RegistrationOptions {
 
   @JsProperty
   void setType(@WorkerType @Nonnull String type);
-
-  @JsOverlay
-  @Nonnull
-  default RegistrationOptions type(@WorkerType @Nonnull final String type) {
-    setType( type );
-    return this;
-  }
 
   @JsProperty(
       name = "updateViaCache"
@@ -62,11 +48,33 @@ public interface RegistrationOptions {
   @JsProperty
   void setUpdateViaCache(@ServiceWorkerUpdateViaCache @Nonnull String updateViaCache);
 
-  @JsOverlay
-  @Nonnull
-  default RegistrationOptions updateViaCache(
-      @ServiceWorkerUpdateViaCache @Nonnull final String updateViaCache) {
-    setUpdateViaCache( updateViaCache );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RegistrationOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder scope(@Nonnull final String scope) {
+      setScope( scope );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@WorkerType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder updateViaCache(
+        @ServiceWorkerUpdateViaCache @Nonnull final String updateViaCache) {
+      setUpdateViaCache( updateViaCache );
+      return this;
+    }
   }
 }

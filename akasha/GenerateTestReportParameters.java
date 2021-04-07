@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface GenerateTestReportParameters {
   @JsOverlay
   @Nonnull
-  static GenerateTestReportParameters create(@Nonnull final String message) {
-    return Js.<GenerateTestReportParameters>uncheckedCast( JsPropertyMap.of() ).message( message );
+  static Builder create(@Nonnull final String message) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).message( message );
   }
 
   @JsProperty(
@@ -30,13 +30,6 @@ public interface GenerateTestReportParameters {
   @JsProperty
   void setGroup(@Nonnull String group);
 
-  @JsOverlay
-  @Nonnull
-  default GenerateTestReportParameters group(@Nonnull final String group) {
-    setGroup( group );
-    return this;
-  }
-
   @JsProperty(
       name = "message"
   )
@@ -46,10 +39,25 @@ public interface GenerateTestReportParameters {
   @JsProperty
   void setMessage(@Nonnull String message);
 
-  @JsOverlay
-  @Nonnull
-  default GenerateTestReportParameters message(@Nonnull final String message) {
-    setMessage( message );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends GenerateTestReportParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder group(@Nonnull final String group) {
+      setGroup( group );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder message(@Nonnull final String message) {
+      setMessage( message );
+      return this;
+    }
   }
 }

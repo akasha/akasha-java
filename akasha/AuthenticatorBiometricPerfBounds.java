@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AuthenticatorBiometricPerfBounds {
   @JsOverlay
   @Nonnull
-  static AuthenticatorBiometricPerfBounds create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface AuthenticatorBiometricPerfBounds {
   @JsProperty
   void setFAR(float FAR);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticatorBiometricPerfBounds FAR(final float FAR) {
-    setFAR( FAR );
-    return this;
-  }
-
   @JsProperty(
       name = "FRR"
   )
@@ -45,10 +38,25 @@ public interface AuthenticatorBiometricPerfBounds {
   @JsProperty
   void setFRR(float FRR);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticatorBiometricPerfBounds FRR(final float FRR) {
-    setFRR( FRR );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AuthenticatorBiometricPerfBounds {
+    @JsOverlay
+    @Nonnull
+    default Builder FAR(final float FAR) {
+      setFAR( FAR );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder FRR(final float FRR) {
+      setFRR( FRR );
+      return this;
+    }
   }
 }

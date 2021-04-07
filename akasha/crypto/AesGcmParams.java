@@ -25,8 +25,8 @@ import jsinterop.base.JsPropertyMap;
 public interface AesGcmParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static AesGcmParams create(@Nonnull final String name, @Nonnull final BufferSource iv) {
-    return Js.<AesGcmParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
+  static Builder create(@Nonnull final String name, @Nonnull final BufferSource iv) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
   }
 
   @JsProperty(
@@ -37,13 +37,6 @@ public interface AesGcmParams extends Algorithm {
   @JsProperty
   void setAdditionalData(@Nonnull BufferSource additionalData);
 
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams additionalData(@Nonnull final BufferSource additionalData) {
-    setAdditionalData( additionalData );
-    return this;
-  }
-
   @JsProperty(
       name = "iv"
   )
@@ -53,13 +46,6 @@ public interface AesGcmParams extends Algorithm {
   @JsProperty
   void setIv(@Nonnull BufferSource iv);
 
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams iv(@Nonnull final BufferSource iv) {
-    setIv( iv );
-    return this;
-  }
-
   @JsProperty(
       name = "tagLength"
   )
@@ -68,17 +54,45 @@ public interface AesGcmParams extends Algorithm {
   @JsProperty
   void setTagLength(short tagLength);
 
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams tagLength(final short tagLength) {
-    setTagLength( tagLength );
-    return this;
-  }
+  /**
+   * The AesGcmParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-GCM algorithm.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams">AesGcmParams - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams">SubtleCrypto.AesGcmParams - Web Cryptography API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AesGcmParams {
+    @JsOverlay
+    @Nonnull
+    default Builder additionalData(@Nonnull final BufferSource additionalData) {
+      setAdditionalData( additionalData );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AesGcmParams name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder iv(@Nonnull final BufferSource iv) {
+      setIv( iv );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder tagLength(final short tagLength) {
+      setTagLength( tagLength );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

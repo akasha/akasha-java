@@ -21,8 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static BluetoothPermissionDescriptor create(@PermissionName @Nonnull final String name) {
-    return Js.<BluetoothPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@PermissionName @Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setAcceptAllDevices(boolean acceptAllDevices);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor acceptAllDevices(final boolean acceptAllDevices) {
-    setAcceptAllDevices( acceptAllDevices );
-    return this;
-  }
-
   @JsProperty(
       name = "deviceId"
   )
@@ -47,13 +40,6 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor deviceId(@Nonnull final String deviceId) {
-    setDeviceId( deviceId );
-    return this;
-  }
 
   @JsProperty(
       name = "filters"
@@ -64,24 +50,8 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   void setFilters(@Nonnull JsArray<BluetoothLEScanFilterInit> filters);
 
   @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor filters(
-      @Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
-    setFilters( filters );
-    return this;
-  }
-
-  @JsOverlay
   default void setFilters(@Nonnull final BluetoothLEScanFilterInit... filters) {
     setFilters( Js.<JsArray<BluetoothLEScanFilterInit>>uncheckedCast( filters ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor filters(
-      @Nonnull final BluetoothLEScanFilterInit... filters) {
-    setFilters( filters );
-    return this;
   }
 
   @JsProperty(
@@ -93,30 +63,65 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   void setOptionalServices(@Nonnull JsArray<BluetoothServiceUUID> optionalServices);
 
   @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor optionalServices(
-      @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
-    setOptionalServices( optionalServices );
-    return this;
-  }
-
-  @JsOverlay
   default void setOptionalServices(@Nonnull final BluetoothServiceUUID... optionalServices) {
     setOptionalServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( optionalServices ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor optionalServices(
-      @Nonnull final BluetoothServiceUUID... optionalServices) {
-    setOptionalServices( optionalServices );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BluetoothPermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder acceptAllDevices(final boolean acceptAllDevices) {
+      setAcceptAllDevices( acceptAllDevices );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor name(@PermissionName @Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder deviceId(@Nonnull final String deviceId) {
+      setDeviceId( deviceId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder filters(@Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
+      setFilters( filters );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder filters(@Nonnull final BluetoothLEScanFilterInit... filters) {
+      setFilters( filters );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalServices(
+        @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
+      setOptionalServices( optionalServices );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalServices(@Nonnull final BluetoothServiceUUID... optionalServices) {
+      setOptionalServices( optionalServices );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@PermissionName @Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

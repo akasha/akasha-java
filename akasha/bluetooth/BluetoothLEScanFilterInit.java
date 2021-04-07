@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothLEScanFilterInit {
   @JsOverlay
   @Nonnull
-  static BluetoothLEScanFilterInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface BluetoothLEScanFilterInit {
   @JsProperty
   void setManufacturerData(@Nonnull Object manufacturerData);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothLEScanFilterInit manufacturerData(@Nonnull final Object manufacturerData) {
-    setManufacturerData( manufacturerData );
-    return this;
-  }
-
   @JsProperty(
       name = "name"
   )
@@ -45,13 +38,6 @@ public interface BluetoothLEScanFilterInit {
 
   @JsProperty
   void setName(@Nonnull String name);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothLEScanFilterInit name(@Nonnull final String name) {
-    setName( name );
-    return this;
-  }
 
   @JsProperty(
       name = "namePrefix"
@@ -61,13 +47,6 @@ public interface BluetoothLEScanFilterInit {
   @JsProperty
   void setNamePrefix(@Nonnull String namePrefix);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothLEScanFilterInit namePrefix(@Nonnull final String namePrefix) {
-    setNamePrefix( namePrefix );
-    return this;
-  }
-
   @JsProperty(
       name = "serviceData"
   )
@@ -75,13 +54,6 @@ public interface BluetoothLEScanFilterInit {
 
   @JsProperty
   void setServiceData(@Nonnull Object serviceData);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothLEScanFilterInit serviceData(@Nonnull final Object serviceData) {
-    setServiceData( serviceData );
-    return this;
-  }
 
   @JsProperty(
       name = "services"
@@ -92,22 +64,57 @@ public interface BluetoothLEScanFilterInit {
   void setServices(@Nonnull JsArray<BluetoothServiceUUID> services);
 
   @JsOverlay
-  @Nonnull
-  default BluetoothLEScanFilterInit services(
-      @Nonnull final JsArray<BluetoothServiceUUID> services) {
-    setServices( services );
-    return this;
-  }
-
-  @JsOverlay
   default void setServices(@Nonnull final BluetoothServiceUUID... services) {
     setServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( services ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothLEScanFilterInit services(@Nonnull final BluetoothServiceUUID... services) {
-    setServices( services );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BluetoothLEScanFilterInit {
+    @JsOverlay
+    @Nonnull
+    default Builder manufacturerData(@Nonnull final Object manufacturerData) {
+      setManufacturerData( manufacturerData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder namePrefix(@Nonnull final String namePrefix) {
+      setNamePrefix( namePrefix );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder serviceData(@Nonnull final Object serviceData) {
+      setServiceData( serviceData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder services(@Nonnull final JsArray<BluetoothServiceUUID> services) {
+      setServices( services );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder services(@Nonnull final BluetoothServiceUUID... services) {
+      setServices( services );
+      return this;
+    }
   }
 }

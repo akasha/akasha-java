@@ -20,8 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaRecorderErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static MediaRecorderErrorEventInit create(@Nonnull final DOMException error) {
-    return Js.<MediaRecorderErrorEventInit>uncheckedCast( JsPropertyMap.of() ).error( error );
+  static Builder create(@Nonnull final DOMException error) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
   @JsProperty(
@@ -33,31 +33,39 @@ public interface MediaRecorderErrorEventInit extends EventInit {
   @JsProperty
   void setError(@Nonnull DOMException error);
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderErrorEventInit error(@Nonnull final DOMException error) {
-    setError( error );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaRecorderErrorEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder error(@Nonnull final DOMException error) {
+      setError( error );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderErrorEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderErrorEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaRecorderErrorEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

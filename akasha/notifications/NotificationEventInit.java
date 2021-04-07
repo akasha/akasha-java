@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface NotificationEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static NotificationEventInit create(@Nonnull final Notification notification) {
-    return Js.<NotificationEventInit>uncheckedCast( JsPropertyMap.of() ).notification( notification );
+  static Builder create(@Nonnull final Notification notification) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).notification( notification );
   }
 
   @JsProperty(
@@ -31,13 +31,6 @@ public interface NotificationEventInit extends ExtendableEventInit {
   @JsProperty
   void setAction(@Nonnull String action);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationEventInit action(@Nonnull final String action) {
-    setAction( action );
-    return this;
-  }
-
   @JsProperty(
       name = "notification"
   )
@@ -47,31 +40,46 @@ public interface NotificationEventInit extends ExtendableEventInit {
   @JsProperty
   void setNotification(@Nonnull Notification notification);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationEventInit notification(@Nonnull final Notification notification) {
-    setNotification( notification );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends NotificationEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder action(@Nonnull final String action) {
+      setAction( action );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default NotificationEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder notification(@Nonnull final Notification notification) {
+      setNotification( notification );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default NotificationEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default NotificationEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

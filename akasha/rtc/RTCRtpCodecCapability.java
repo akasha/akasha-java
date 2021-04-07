@@ -24,8 +24,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodecCapability {
   @JsOverlay
   @Nonnull
-  static RTCRtpCodecCapability create(final int clockRate, @Nonnull final String mimeType) {
-    return Js.<RTCRtpCodecCapability>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType );
+  static Builder create(final int clockRate, @Nonnull final String mimeType) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType );
   }
 
   @JsProperty(
@@ -36,13 +36,6 @@ public interface RTCRtpCodecCapability {
   @JsProperty
   void setChannels(int channels);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecCapability channels(final int channels) {
-    setChannels( channels );
-    return this;
-  }
-
   @JsProperty(
       name = "clockRate"
   )
@@ -50,13 +43,6 @@ public interface RTCRtpCodecCapability {
 
   @JsProperty
   void setClockRate(int clockRate);
-
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecCapability clockRate(final int clockRate) {
-    setClockRate( clockRate );
-    return this;
-  }
 
   @JsProperty(
       name = "mimeType"
@@ -67,13 +53,6 @@ public interface RTCRtpCodecCapability {
   @JsProperty
   void setMimeType(@Nonnull String mimeType);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecCapability mimeType(@Nonnull final String mimeType) {
-    setMimeType( mimeType );
-    return this;
-  }
-
   @JsProperty(
       name = "sdpFmtpLine"
   )
@@ -82,10 +61,45 @@ public interface RTCRtpCodecCapability {
   @JsProperty
   void setSdpFmtpLine(@Nonnull String sdpFmtpLine);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpCodecCapability sdpFmtpLine(@Nonnull final String sdpFmtpLine) {
-    setSdpFmtpLine( sdpFmtpLine );
-    return this;
+  /**
+   * The WebRTC API's RTCRtpCodecCapability dictionary provides information describing the capabilities of a single media codec.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecCapability">RTCRtpCodecCapability - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpcodeccapability">RTCRtpCodecCapability - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpCodecCapability {
+    @JsOverlay
+    @Nonnull
+    default Builder channels(final int channels) {
+      setChannels( channels );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clockRate(final int clockRate) {
+      setClockRate( clockRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mimeType(@Nonnull final String mimeType) {
+      setMimeType( mimeType );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sdpFmtpLine(@Nonnull final String sdpFmtpLine) {
+      setSdpFmtpLine( sdpFmtpLine );
+      return this;
+    }
   }
 }

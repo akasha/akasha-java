@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FilePropertyBag extends BlobPropertyBag {
   @JsOverlay
   @Nonnull
-  static FilePropertyBag create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,24 +30,32 @@ public interface FilePropertyBag extends BlobPropertyBag {
   @JsProperty
   void setLastModified(int lastModified);
 
-  @JsOverlay
-  @Nonnull
-  default FilePropertyBag lastModified(final int lastModified) {
-    setLastModified( lastModified );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FilePropertyBag {
+    @JsOverlay
+    @Nonnull
+    default Builder lastModified(final int lastModified) {
+      setLastModified( lastModified );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FilePropertyBag endings(@EndingType @Nonnull final String endings) {
-    setEndings( endings );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder endings(@EndingType @Nonnull final String endings) {
+      setEndings( endings );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FilePropertyBag type(@Nonnull final String type) {
-    setType( type );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder type(@Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

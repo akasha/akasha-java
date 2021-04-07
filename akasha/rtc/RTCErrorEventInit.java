@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static RTCErrorEventInit create(@Nonnull final RTCError error) {
-    return Js.<RTCErrorEventInit>uncheckedCast( JsPropertyMap.of() ).error( error );
+  static Builder create(@Nonnull final RTCError error) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
   @JsProperty(
@@ -32,31 +32,39 @@ public interface RTCErrorEventInit extends EventInit {
   @JsProperty
   void setError(@Nonnull RTCError error);
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorEventInit error(@Nonnull final RTCError error) {
-    setError( error );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCErrorEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder error(@Nonnull final RTCError error) {
+      setError( error );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCErrorEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

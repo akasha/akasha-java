@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRRenderStateInit {
   @JsOverlay
   @Nonnull
-  static XRRenderStateInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,13 +39,6 @@ public interface XRRenderStateInit {
   @JsProperty
   void setBaseLayer(@Nullable XRWebGLLayer baseLayer);
 
-  @JsOverlay
-  @Nonnull
-  default XRRenderStateInit baseLayer(@Nullable final XRWebGLLayer baseLayer) {
-    setBaseLayer( baseLayer );
-    return this;
-  }
-
   @JsProperty(
       name = "depthFar"
   )
@@ -53,13 +46,6 @@ public interface XRRenderStateInit {
 
   @JsProperty
   void setDepthFar(double depthFar);
-
-  @JsOverlay
-  @Nonnull
-  default XRRenderStateInit depthFar(final double depthFar) {
-    setDepthFar( depthFar );
-    return this;
-  }
 
   @JsProperty(
       name = "depthNear"
@@ -69,13 +55,6 @@ public interface XRRenderStateInit {
   @JsProperty
   void setDepthNear(double depthNear);
 
-  @JsOverlay
-  @Nonnull
-  default XRRenderStateInit depthNear(final double depthNear) {
-    setDepthNear( depthNear );
-    return this;
-  }
-
   @JsProperty(
       name = "inlineVerticalFieldOfView"
   )
@@ -83,13 +62,6 @@ public interface XRRenderStateInit {
 
   @JsProperty
   void setInlineVerticalFieldOfView(double inlineVerticalFieldOfView);
-
-  @JsOverlay
-  @Nonnull
-  default XRRenderStateInit inlineVerticalFieldOfView(final double inlineVerticalFieldOfView) {
-    setInlineVerticalFieldOfView( inlineVerticalFieldOfView );
-    return this;
-  }
 
   @JsProperty(
       name = "layers"
@@ -101,21 +73,63 @@ public interface XRRenderStateInit {
   void setLayers(@Nullable JsArray<XRLayer> layers);
 
   @JsOverlay
-  @Nonnull
-  default XRRenderStateInit layers(@Nullable final JsArray<XRLayer> layers) {
-    setLayers( layers );
-    return this;
-  }
-
-  @JsOverlay
   default void setLayers(@Nullable final XRLayer... layers) {
     setLayers( Js.<JsArray<XRLayer>>uncheckedCast( layers ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default XRRenderStateInit layers(@Nullable final XRLayer... layers) {
-    setLayers( layers );
-    return this;
+  /**
+   * The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrrenderstateinit">XRRenderStateInit - WebXR Device API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends XRRenderStateInit {
+    @JsOverlay
+    @Nonnull
+    default Builder baseLayer(@Nullable final XRWebGLLayer baseLayer) {
+      setBaseLayer( baseLayer );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder depthFar(final double depthFar) {
+      setDepthFar( depthFar );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder depthNear(final double depthNear) {
+      setDepthNear( depthNear );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder inlineVerticalFieldOfView(final double inlineVerticalFieldOfView) {
+      setInlineVerticalFieldOfView( inlineVerticalFieldOfView );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder layers(@Nullable final JsArray<XRLayer> layers) {
+      setLayers( layers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder layers(@Nullable final XRLayer... layers) {
+      setLayers( layers );
+      return this;
+    }
   }
 }

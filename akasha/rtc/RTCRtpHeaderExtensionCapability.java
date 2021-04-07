@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpHeaderExtensionCapability {
   @JsOverlay
   @Nonnull
-  static RTCRtpHeaderExtensionCapability create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface RTCRtpHeaderExtensionCapability {
   @JsProperty
   void setUri(@Nonnull String uri);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpHeaderExtensionCapability uri(@Nonnull final String uri) {
-    setUri( uri );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpHeaderExtensionCapability {
+    @JsOverlay
+    @Nonnull
+    default Builder uri(@Nonnull final String uri) {
+      setUri( uri );
+      return this;
+    }
   }
 }

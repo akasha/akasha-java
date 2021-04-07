@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCCertificateExpiration {
   @JsOverlay
   @Nonnull
-  static RTCCertificateExpiration create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface RTCCertificateExpiration {
   @JsProperty
   void setExpires(int expires);
 
-  @JsOverlay
-  @Nonnull
-  default RTCCertificateExpiration expires(final int expires) {
-    setExpires( expires );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCCertificateExpiration {
+    @JsOverlay
+    @Nonnull
+    default Builder expires(final int expires) {
+      setExpires( expires );
+      return this;
+    }
   }
 }

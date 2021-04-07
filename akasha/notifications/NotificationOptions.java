@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface NotificationOptions {
   @JsOverlay
   @Nonnull
-  static NotificationOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -36,22 +36,8 @@ public interface NotificationOptions {
   void setActions(@Nonnull JsArray<NotificationAction> actions);
 
   @JsOverlay
-  @Nonnull
-  default NotificationOptions actions(@Nonnull final JsArray<NotificationAction> actions) {
-    setActions( actions );
-    return this;
-  }
-
-  @JsOverlay
   default void setActions(@Nonnull final NotificationAction... actions) {
     setActions( Js.<JsArray<NotificationAction>>uncheckedCast( actions ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions actions(@Nonnull final NotificationAction... actions) {
-    setActions( actions );
-    return this;
   }
 
   @JsProperty(
@@ -62,13 +48,6 @@ public interface NotificationOptions {
   @JsProperty
   void setBadge(@Nonnull String badge);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions badge(@Nonnull final String badge) {
-    setBadge( badge );
-    return this;
-  }
-
   @JsProperty(
       name = "body"
   )
@@ -76,13 +55,6 @@ public interface NotificationOptions {
 
   @JsProperty
   void setBody(@Nonnull String body);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions body(@Nonnull final String body) {
-    setBody( body );
-    return this;
-  }
 
   @JsProperty(
       name = "data"
@@ -93,13 +65,6 @@ public interface NotificationOptions {
   @JsProperty
   void setData(@DoNotAutobox @Nullable Object data);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions data(@DoNotAutobox @Nullable final Object data) {
-    setData( data );
-    return this;
-  }
-
   @JsProperty(
       name = "dir"
   )
@@ -109,13 +74,6 @@ public interface NotificationOptions {
   @JsProperty
   void setDir(@NotificationDirection @Nonnull String dir);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions dir(@NotificationDirection @Nonnull final String dir) {
-    setDir( dir );
-    return this;
-  }
-
   @JsProperty(
       name = "icon"
   )
@@ -123,13 +81,6 @@ public interface NotificationOptions {
 
   @JsProperty
   void setIcon(@Nonnull String icon);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions icon(@Nonnull final String icon) {
-    setIcon( icon );
-    return this;
-  }
 
   @JsProperty(
       name = "image"
@@ -139,13 +90,6 @@ public interface NotificationOptions {
   @JsProperty
   void setImage(@Nonnull String image);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions image(@Nonnull final String image) {
-    setImage( image );
-    return this;
-  }
-
   @JsProperty(
       name = "lang"
   )
@@ -153,13 +97,6 @@ public interface NotificationOptions {
 
   @JsProperty
   void setLang(@Nonnull String lang);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions lang(@Nonnull final String lang) {
-    setLang( lang );
-    return this;
-  }
 
   @JsProperty(
       name = "renotify"
@@ -169,13 +106,6 @@ public interface NotificationOptions {
   @JsProperty
   void setRenotify(boolean renotify);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions renotify(final boolean renotify) {
-    setRenotify( renotify );
-    return this;
-  }
-
   @JsProperty(
       name = "requireInteraction"
   )
@@ -183,13 +113,6 @@ public interface NotificationOptions {
 
   @JsProperty
   void setRequireInteraction(boolean requireInteraction);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions requireInteraction(final boolean requireInteraction) {
-    setRequireInteraction( requireInteraction );
-    return this;
-  }
 
   @JsProperty(
       name = "silent"
@@ -199,13 +122,6 @@ public interface NotificationOptions {
   @JsProperty
   void setSilent(boolean silent);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions silent(final boolean silent) {
-    setSilent( silent );
-    return this;
-  }
-
   @JsProperty(
       name = "tag"
   )
@@ -214,13 +130,6 @@ public interface NotificationOptions {
   @JsProperty
   void setTag(@Nonnull String tag);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions tag(@Nonnull final String tag) {
-    setTag( tag );
-    return this;
-  }
-
   @JsProperty(
       name = "timestamp"
   )
@@ -228,13 +137,6 @@ public interface NotificationOptions {
 
   @JsProperty
   void setTimestamp(int timestamp);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions timestamp(final int timestamp) {
-    setTimestamp( timestamp );
-    return this;
-  }
 
   @JsProperty(
       name = "vibrate"
@@ -245,22 +147,8 @@ public interface NotificationOptions {
   void setVibrate(@Nonnull VibratePattern vibrate);
 
   @JsOverlay
-  @Nonnull
-  default NotificationOptions vibrate(@Nonnull final VibratePattern vibrate) {
-    setVibrate( vibrate );
-    return this;
-  }
-
-  @JsOverlay
   default void setVibrate(final int vibrate) {
     setVibrate( VibratePattern.of( vibrate ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions vibrate(final int vibrate) {
-    setVibrate( vibrate );
-    return this;
   }
 
   @JsOverlay
@@ -269,21 +157,141 @@ public interface NotificationOptions {
   }
 
   @JsOverlay
-  @Nonnull
-  default NotificationOptions vibrate(@Nonnull final JsArray<Double> vibrate) {
-    setVibrate( vibrate );
-    return this;
-  }
-
-  @JsOverlay
   default void setVibrate(@Nonnull final double... vibrate) {
     setVibrate( VibratePattern.of( vibrate ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions vibrate(@Nonnull final double... vibrate) {
-    setVibrate( vibrate );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends NotificationOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder actions(@Nonnull final JsArray<NotificationAction> actions) {
+      setActions( actions );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder actions(@Nonnull final NotificationAction... actions) {
+      setActions( actions );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder badge(@Nonnull final String badge) {
+      setBadge( badge );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final String body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder data(@DoNotAutobox @Nullable final Object data) {
+      setData( data );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder dir(@NotificationDirection @Nonnull final String dir) {
+      setDir( dir );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder icon(@Nonnull final String icon) {
+      setIcon( icon );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder image(@Nonnull final String image) {
+      setImage( image );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder lang(@Nonnull final String lang) {
+      setLang( lang );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder renotify(final boolean renotify) {
+      setRenotify( renotify );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requireInteraction(final boolean requireInteraction) {
+      setRequireInteraction( requireInteraction );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder silent(final boolean silent) {
+      setSilent( silent );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder tag(@Nonnull final String tag) {
+      setTag( tag );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder timestamp(final int timestamp) {
+      setTimestamp( timestamp );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder vibrate(@Nonnull final VibratePattern vibrate) {
+      setVibrate( vibrate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder vibrate(final int vibrate) {
+      setVibrate( vibrate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder vibrate(@Nonnull final JsArray<Double> vibrate) {
+      setVibrate( vibrate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder vibrate(@Nonnull final double... vibrate) {
+      setVibrate( vibrate );
+      return this;
+    }
   }
 }

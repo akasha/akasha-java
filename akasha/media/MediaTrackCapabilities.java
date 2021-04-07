@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaTrackCapabilities {
   @JsOverlay
   @Nonnull
-  static MediaTrackCapabilities create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setAspectRatio(@Nonnull DoubleRange aspectRatio);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities aspectRatio(@Nonnull final DoubleRange aspectRatio) {
-    setAspectRatio( aspectRatio );
-    return this;
-  }
-
   @JsProperty(
       name = "autoGainControl"
   )
@@ -47,22 +40,8 @@ public interface MediaTrackCapabilities {
   void setAutoGainControl(@Nonnull JsArray<Boolean> autoGainControl);
 
   @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities autoGainControl(@Nonnull final JsArray<Boolean> autoGainControl) {
-    setAutoGainControl( autoGainControl );
-    return this;
-  }
-
-  @JsOverlay
   default void setAutoGainControl(@Nonnull final Boolean... autoGainControl) {
     setAutoGainControl( Js.<JsArray<Boolean>>uncheckedCast( autoGainControl ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities autoGainControl(@Nonnull final Boolean... autoGainControl) {
-    setAutoGainControl( autoGainControl );
-    return this;
   }
 
   @JsProperty(
@@ -73,13 +52,6 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setChannelCount(@Nonnull ULongRange channelCount);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities channelCount(@Nonnull final ULongRange channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
-
   @JsProperty(
       name = "deviceId"
   )
@@ -87,13 +59,6 @@ public interface MediaTrackCapabilities {
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities deviceId(@Nonnull final String deviceId) {
-    setDeviceId( deviceId );
-    return this;
-  }
 
   @JsProperty(
       name = "echoCancellation"
@@ -104,23 +69,8 @@ public interface MediaTrackCapabilities {
   void setEchoCancellation(@Nonnull JsArray<Boolean> echoCancellation);
 
   @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities echoCancellation(
-      @Nonnull final JsArray<Boolean> echoCancellation) {
-    setEchoCancellation( echoCancellation );
-    return this;
-  }
-
-  @JsOverlay
   default void setEchoCancellation(@Nonnull final Boolean... echoCancellation) {
     setEchoCancellation( Js.<JsArray<Boolean>>uncheckedCast( echoCancellation ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities echoCancellation(@Nonnull final Boolean... echoCancellation) {
-    setEchoCancellation( echoCancellation );
-    return this;
   }
 
   @JsProperty(
@@ -132,22 +82,8 @@ public interface MediaTrackCapabilities {
   void setFacingMode(@Nonnull JsArray<String> facingMode);
 
   @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities facingMode(@Nonnull final JsArray<String> facingMode) {
-    setFacingMode( facingMode );
-    return this;
-  }
-
-  @JsOverlay
   default void setFacingMode(@Nonnull final String... facingMode) {
     setFacingMode( Js.<JsArray<String>>uncheckedCast( facingMode ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities facingMode(@Nonnull final String... facingMode) {
-    setFacingMode( facingMode );
-    return this;
   }
 
   @JsProperty(
@@ -158,13 +94,6 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setFrameRate(@Nonnull DoubleRange frameRate);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities frameRate(@Nonnull final DoubleRange frameRate) {
-    setFrameRate( frameRate );
-    return this;
-  }
-
   @JsProperty(
       name = "groupId"
   )
@@ -172,13 +101,6 @@ public interface MediaTrackCapabilities {
 
   @JsProperty
   void setGroupId(@Nonnull String groupId);
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities groupId(@Nonnull final String groupId) {
-    setGroupId( groupId );
-    return this;
-  }
 
   @JsProperty(
       name = "height"
@@ -188,13 +110,6 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setHeight(@Nonnull ULongRange height);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities height(@Nonnull final ULongRange height) {
-    setHeight( height );
-    return this;
-  }
-
   @JsProperty(
       name = "latency"
   )
@@ -202,13 +117,6 @@ public interface MediaTrackCapabilities {
 
   @JsProperty
   void setLatency(@Nonnull DoubleRange latency);
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities latency(@Nonnull final DoubleRange latency) {
-    setLatency( latency );
-    return this;
-  }
 
   @JsProperty(
       name = "noiseSuppression"
@@ -219,23 +127,8 @@ public interface MediaTrackCapabilities {
   void setNoiseSuppression(@Nonnull JsArray<Boolean> noiseSuppression);
 
   @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities noiseSuppression(
-      @Nonnull final JsArray<Boolean> noiseSuppression) {
-    setNoiseSuppression( noiseSuppression );
-    return this;
-  }
-
-  @JsOverlay
   default void setNoiseSuppression(@Nonnull final Boolean... noiseSuppression) {
     setNoiseSuppression( Js.<JsArray<Boolean>>uncheckedCast( noiseSuppression ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities noiseSuppression(@Nonnull final Boolean... noiseSuppression) {
-    setNoiseSuppression( noiseSuppression );
-    return this;
   }
 
   @JsProperty(
@@ -247,22 +140,8 @@ public interface MediaTrackCapabilities {
   void setResizeMode(@Nonnull JsArray<String> resizeMode);
 
   @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities resizeMode(@Nonnull final JsArray<String> resizeMode) {
-    setResizeMode( resizeMode );
-    return this;
-  }
-
-  @JsOverlay
   default void setResizeMode(@Nonnull final String... resizeMode) {
     setResizeMode( Js.<JsArray<String>>uncheckedCast( resizeMode ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities resizeMode(@Nonnull final String... resizeMode) {
-    setResizeMode( resizeMode );
-    return this;
   }
 
   @JsProperty(
@@ -273,13 +152,6 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setSampleRate(@Nonnull ULongRange sampleRate);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities sampleRate(@Nonnull final ULongRange sampleRate) {
-    setSampleRate( sampleRate );
-    return this;
-  }
-
   @JsProperty(
       name = "sampleSize"
   )
@@ -287,13 +159,6 @@ public interface MediaTrackCapabilities {
 
   @JsProperty
   void setSampleSize(@Nonnull ULongRange sampleSize);
-
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities sampleSize(@Nonnull final ULongRange sampleSize) {
-    setSampleSize( sampleSize );
-    return this;
-  }
 
   @JsProperty(
       name = "width"
@@ -303,10 +168,151 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setWidth(@Nonnull ULongRange width);
 
-  @JsOverlay
-  @Nonnull
-  default MediaTrackCapabilities width(@Nonnull final ULongRange width) {
-    setWidth( width );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaTrackCapabilities {
+    @JsOverlay
+    @Nonnull
+    default Builder aspectRatio(@Nonnull final DoubleRange aspectRatio) {
+      setAspectRatio( aspectRatio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder autoGainControl(@Nonnull final JsArray<Boolean> autoGainControl) {
+      setAutoGainControl( autoGainControl );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder autoGainControl(@Nonnull final Boolean... autoGainControl) {
+      setAutoGainControl( autoGainControl );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(@Nonnull final ULongRange channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder deviceId(@Nonnull final String deviceId) {
+      setDeviceId( deviceId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder echoCancellation(@Nonnull final JsArray<Boolean> echoCancellation) {
+      setEchoCancellation( echoCancellation );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder echoCancellation(@Nonnull final Boolean... echoCancellation) {
+      setEchoCancellation( echoCancellation );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder facingMode(@Nonnull final JsArray<String> facingMode) {
+      setFacingMode( facingMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder facingMode(@Nonnull final String... facingMode) {
+      setFacingMode( facingMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder frameRate(@Nonnull final DoubleRange frameRate) {
+      setFrameRate( frameRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder groupId(@Nonnull final String groupId) {
+      setGroupId( groupId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder height(@Nonnull final ULongRange height) {
+      setHeight( height );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder latency(@Nonnull final DoubleRange latency) {
+      setLatency( latency );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder noiseSuppression(@Nonnull final JsArray<Boolean> noiseSuppression) {
+      setNoiseSuppression( noiseSuppression );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder noiseSuppression(@Nonnull final Boolean... noiseSuppression) {
+      setNoiseSuppression( noiseSuppression );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resizeMode(@Nonnull final JsArray<String> resizeMode) {
+      setResizeMode( resizeMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resizeMode(@Nonnull final String... resizeMode) {
+      setResizeMode( resizeMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sampleRate(@Nonnull final ULongRange sampleRate) {
+      setSampleRate( sampleRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sampleSize(@Nonnull final ULongRange sampleSize) {
+      setSampleSize( sampleSize );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder width(@Nonnull final ULongRange width) {
+      setWidth( width );
+      return this;
+    }
   }
 }

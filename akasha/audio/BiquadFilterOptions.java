@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static BiquadFilterOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsProperty
   void setQ(float Q);
 
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions Q(final float Q) {
-    setQ( Q );
-    return this;
-  }
-
   @JsProperty(
       name = "detune"
   )
@@ -44,13 +37,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
 
   @JsProperty
   void setDetune(float detune);
-
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions detune(final float detune) {
-    setDetune( detune );
-    return this;
-  }
 
   @JsProperty(
       name = "frequency"
@@ -60,13 +46,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsProperty
   void setFrequency(float frequency);
 
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions frequency(final float frequency) {
-    setFrequency( frequency );
-    return this;
-  }
-
   @JsProperty(
       name = "gain"
   )
@@ -74,13 +53,6 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
 
   @JsProperty
   void setGain(float gain);
-
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions gain(final float gain) {
-    setGain( gain );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -91,33 +63,68 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsProperty
   void setType(@BiquadFilterType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions type(@BiquadFilterType @Nonnull final String type) {
-    setType( type );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BiquadFilterOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder Q(final float Q) {
+      setQ( Q );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder detune(final float detune) {
+      setDetune( detune );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder frequency(final float frequency) {
+      setFrequency( frequency );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BiquadFilterOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder gain(final float gain) {
+      setGain( gain );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@BiquadFilterType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

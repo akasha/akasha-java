@@ -19,9 +19,9 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity {
   @JsOverlay
   @Nonnull
-  static PublicKeyCredentialUserEntity create(@Nonnull final String name,
-      @Nonnull final String displayName, @Nonnull final BufferSource id) {
-    return Js.<PublicKeyCredentialUserEntity>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
+  static Builder create(@Nonnull final String name, @Nonnull final String displayName,
+      @Nonnull final BufferSource id) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
   @JsProperty
   void setDisplayName(@Nonnull String displayName);
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialUserEntity displayName(@Nonnull final String displayName) {
-    setDisplayName( displayName );
-    return this;
-  }
-
   @JsProperty(
       name = "id"
   )
@@ -49,24 +42,39 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
   @JsProperty
   void setId(@Nonnull BufferSource id);
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialUserEntity id(@Nonnull final BufferSource id) {
-    setId( id );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PublicKeyCredentialUserEntity {
+    @JsOverlay
+    @Nonnull
+    default Builder displayName(@Nonnull final String displayName) {
+      setDisplayName( displayName );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialUserEntity icon(@Nonnull final String icon) {
-    setIcon( icon );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final BufferSource id) {
+      setId( id );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PublicKeyCredentialUserEntity name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder icon(@Nonnull final String icon) {
+      setIcon( icon );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

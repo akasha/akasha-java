@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ObjectPropertyDescriptor {
   @JsOverlay
   @Nonnull
-  static ObjectPropertyDescriptor create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,13 +33,6 @@ public interface ObjectPropertyDescriptor {
   @JsProperty
   void setConfigurable(boolean configurable);
 
-  @JsOverlay
-  @Nonnull
-  default ObjectPropertyDescriptor configurable(final boolean configurable) {
-    setConfigurable( configurable );
-    return this;
-  }
-
   @JsProperty(
       name = "enumerable"
   )
@@ -47,13 +40,6 @@ public interface ObjectPropertyDescriptor {
 
   @JsProperty
   void setEnumerable(boolean enumerable);
-
-  @JsOverlay
-  @Nonnull
-  default ObjectPropertyDescriptor enumerable(final boolean enumerable) {
-    setEnumerable( enumerable );
-    return this;
-  }
 
   @JsProperty(
       name = "get"
@@ -63,13 +49,6 @@ public interface ObjectPropertyDescriptor {
   @JsProperty
   void setGet(@Nonnull PropertyAccessorFunction get);
 
-  @JsOverlay
-  @Nonnull
-  default ObjectPropertyDescriptor get(@Nonnull final PropertyAccessorFunction get) {
-    setGet( get );
-    return this;
-  }
-
   @JsProperty(
       name = "set"
   )
@@ -77,13 +56,6 @@ public interface ObjectPropertyDescriptor {
 
   @JsProperty
   void setSet(@Nonnull PropertyMutatorFunction set);
-
-  @JsOverlay
-  @Nonnull
-  default ObjectPropertyDescriptor set(@Nonnull final PropertyMutatorFunction set) {
-    setSet( set );
-    return this;
-  }
 
   @JsProperty(
       name = "value"
@@ -94,13 +66,6 @@ public interface ObjectPropertyDescriptor {
   @JsProperty
   void setValue(@DoNotAutobox @Nullable Object value);
 
-  @JsOverlay
-  @Nonnull
-  default ObjectPropertyDescriptor value(@DoNotAutobox @Nullable final Object value) {
-    setValue( value );
-    return this;
-  }
-
   @JsProperty(
       name = "writable"
   )
@@ -109,10 +74,53 @@ public interface ObjectPropertyDescriptor {
   @JsProperty
   void setWritable(boolean writable);
 
-  @JsOverlay
-  @Nonnull
-  default ObjectPropertyDescriptor writable(final boolean writable) {
-    setWritable( writable );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ObjectPropertyDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder configurable(final boolean configurable) {
+      setConfigurable( configurable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder enumerable(final boolean enumerable) {
+      setEnumerable( enumerable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder get(@Nonnull final PropertyAccessorFunction get) {
+      setGet( get );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder set(@Nonnull final PropertyMutatorFunction set) {
+      setSet( set );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder value(@DoNotAutobox @Nullable final Object value) {
+      setValue( value );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder writable(final boolean writable) {
+      setWritable( writable );
+      return this;
+    }
   }
 }

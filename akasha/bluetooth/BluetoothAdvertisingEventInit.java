@@ -21,8 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static BluetoothAdvertisingEventInit create(@Nonnull final BluetoothDevice device) {
-    return Js.<BluetoothAdvertisingEventInit>uncheckedCast( JsPropertyMap.of() ).device( device );
+  static Builder create(@Nonnull final BluetoothDevice device) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).device( device );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsProperty
   void setAppearance(int appearance);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit appearance(final int appearance) {
-    setAppearance( appearance );
-    return this;
-  }
-
   @JsProperty(
       name = "device"
   )
@@ -49,13 +42,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsProperty
   void setDevice(@Nonnull BluetoothDevice device);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit device(@Nonnull final BluetoothDevice device) {
-    setDevice( device );
-    return this;
-  }
-
   @JsProperty(
       name = "manufacturerData"
   )
@@ -63,14 +49,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsProperty
   void setManufacturerData(@Nonnull BluetoothManufacturerDataMap manufacturerData);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit manufacturerData(
-      @Nonnull final BluetoothManufacturerDataMap manufacturerData) {
-    setManufacturerData( manufacturerData );
-    return this;
-  }
 
   @JsProperty(
       name = "name"
@@ -80,13 +58,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsProperty
   void setName(@Nonnull String name);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit name(@Nonnull final String name) {
-    setName( name );
-    return this;
-  }
-
   @JsProperty(
       name = "rssi"
   )
@@ -94,13 +65,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsProperty
   void setRssi(byte rssi);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit rssi(final byte rssi) {
-    setRssi( rssi );
-    return this;
-  }
 
   @JsProperty(
       name = "serviceData"
@@ -110,14 +74,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsProperty
   void setServiceData(@Nonnull BluetoothServiceDataMap serviceData);
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit serviceData(
-      @Nonnull final BluetoothServiceDataMap serviceData) {
-    setServiceData( serviceData );
-    return this;
-  }
-
   @JsProperty(
       name = "txPower"
   )
@@ -125,13 +81,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsProperty
   void setTxPower(byte txPower);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit txPower(final byte txPower) {
-    setTxPower( txPower );
-    return this;
-  }
 
   @JsProperty(
       name = "uuids"
@@ -142,43 +91,99 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   void setUuids(@Nonnull JsArray<StringOrUnsignedLongUnion> uuids);
 
   @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit uuids(
-      @Nonnull final JsArray<StringOrUnsignedLongUnion> uuids) {
-    setUuids( uuids );
-    return this;
-  }
-
-  @JsOverlay
   default void setUuids(@Nonnull final StringOrUnsignedLongUnion... uuids) {
     setUuids( Js.<JsArray<StringOrUnsignedLongUnion>>uncheckedCast( uuids ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit uuids(@Nonnull final StringOrUnsignedLongUnion... uuids) {
-    setUuids( uuids );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BluetoothAdvertisingEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder appearance(final int appearance) {
+      setAppearance( appearance );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder device(@Nonnull final BluetoothDevice device) {
+      setDevice( device );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder manufacturerData(@Nonnull final BluetoothManufacturerDataMap manufacturerData) {
+      setManufacturerData( manufacturerData );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default BluetoothAdvertisingEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rssi(final byte rssi) {
+      setRssi( rssi );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder serviceData(@Nonnull final BluetoothServiceDataMap serviceData) {
+      setServiceData( serviceData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder txPower(final byte txPower) {
+      setTxPower( txPower );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uuids(@Nonnull final JsArray<StringOrUnsignedLongUnion> uuids) {
+      setUuids( uuids );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uuids(@Nonnull final StringOrUnsignedLongUnion... uuids) {
+      setUuids( uuids );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

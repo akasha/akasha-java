@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ProgressEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static ProgressEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ProgressEventInit extends EventInit {
   @JsProperty
   void setLengthComputable(boolean lengthComputable);
 
-  @JsOverlay
-  @Nonnull
-  default ProgressEventInit lengthComputable(final boolean lengthComputable) {
-    setLengthComputable( lengthComputable );
-    return this;
-  }
-
   @JsProperty(
       name = "loaded"
   )
@@ -44,13 +37,6 @@ public interface ProgressEventInit extends EventInit {
 
   @JsProperty
   void setLoaded(int loaded);
-
-  @JsOverlay
-  @Nonnull
-  default ProgressEventInit loaded(final int loaded) {
-    setLoaded( loaded );
-    return this;
-  }
 
   @JsProperty(
       name = "total"
@@ -60,31 +46,53 @@ public interface ProgressEventInit extends EventInit {
   @JsProperty
   void setTotal(int total);
 
-  @JsOverlay
-  @Nonnull
-  default ProgressEventInit total(final int total) {
-    setTotal( total );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ProgressEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder lengthComputable(final boolean lengthComputable) {
+      setLengthComputable( lengthComputable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ProgressEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder loaded(final int loaded) {
+      setLoaded( loaded );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ProgressEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder total(final int total) {
+      setTotal( total );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ProgressEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

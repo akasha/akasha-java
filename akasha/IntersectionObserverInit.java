@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IntersectionObserverInit {
   @JsOverlay
   @Nonnull
-  static IntersectionObserverInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,22 +39,8 @@ public interface IntersectionObserverInit {
   }
 
   @JsOverlay
-  @Nonnull
-  default IntersectionObserverInit root(@Nonnull final Element root) {
-    setRoot( root );
-    return this;
-  }
-
-  @JsOverlay
   default void setRoot(@Nonnull final Document root) {
     setRoot( ElementOrDocumentUnion.of( root ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverInit root(@Nonnull final Document root) {
-    setRoot( root );
-    return this;
   }
 
   @JsProperty(
@@ -64,13 +50,6 @@ public interface IntersectionObserverInit {
 
   @JsProperty
   void setRootMargin(@Nonnull String rootMargin);
-
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverInit rootMargin(@Nonnull final String rootMargin) {
-    setRootMargin( rootMargin );
-    return this;
-  }
 
   @JsProperty(
       name = "threshold"
@@ -86,22 +65,8 @@ public interface IntersectionObserverInit {
   }
 
   @JsOverlay
-  @Nonnull
-  default IntersectionObserverInit threshold(final double threshold) {
-    setThreshold( threshold );
-    return this;
-  }
-
-  @JsOverlay
   default void setThreshold(@Nonnull final JsArray<Double> threshold) {
     setThreshold( DoubleOrDoubleArrayUnion.of( threshold ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverInit threshold(@Nonnull final JsArray<Double> threshold) {
-    setThreshold( threshold );
-    return this;
   }
 
   @JsOverlay
@@ -109,10 +74,53 @@ public interface IntersectionObserverInit {
     setThreshold( DoubleOrDoubleArrayUnion.of( threshold ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default IntersectionObserverInit threshold(@Nonnull final double... threshold) {
-    setThreshold( threshold );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IntersectionObserverInit {
+    @JsOverlay
+    @Nonnull
+    default Builder root(@Nonnull final Element root) {
+      setRoot( root );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder root(@Nonnull final Document root) {
+      setRoot( root );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rootMargin(@Nonnull final String rootMargin) {
+      setRootMargin( rootMargin );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder threshold(final double threshold) {
+      setThreshold( threshold );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder threshold(@Nonnull final JsArray<Double> threshold) {
+      setThreshold( threshold );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder threshold(@Nonnull final double... threshold) {
+      setThreshold( threshold );
+      return this;
+    }
   }
 }

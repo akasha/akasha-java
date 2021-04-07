@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static PushEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,22 +32,8 @@ public interface PushEventInit extends ExtendableEventInit {
   void setData(@Nonnull PushMessageDataInit data);
 
   @JsOverlay
-  @Nonnull
-  default PushEventInit data(@Nonnull final PushMessageDataInit data) {
-    setData( data );
-    return this;
-  }
-
-  @JsOverlay
   default void setData(@Nonnull final BufferSource data) {
     setData( PushMessageDataInit.of( data ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default PushEventInit data(@Nonnull final BufferSource data) {
-    setData( data );
-    return this;
   }
 
   @JsOverlay
@@ -55,31 +41,53 @@ public interface PushEventInit extends ExtendableEventInit {
     setData( PushMessageDataInit.of( data ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default PushEventInit data(@Nonnull final String data) {
-    setData( data );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PushEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull final PushMessageDataInit data) {
+      setData( data );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PushEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull final BufferSource data) {
+      setData( data );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PushEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull final String data) {
+      setData( data );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PushEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

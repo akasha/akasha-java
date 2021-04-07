@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaOtherPrimesInfo {
   @JsOverlay
   @Nonnull
-  static RsaOtherPrimesInfo create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface RsaOtherPrimesInfo {
   @JsProperty
   void setD(@Nonnull String d);
 
-  @JsOverlay
-  @Nonnull
-  default RsaOtherPrimesInfo d(@Nonnull final String d) {
-    setD( d );
-    return this;
-  }
-
   @JsProperty(
       name = "r"
   )
@@ -44,13 +37,6 @@ public interface RsaOtherPrimesInfo {
 
   @JsProperty
   void setR(@Nonnull String r);
-
-  @JsOverlay
-  @Nonnull
-  default RsaOtherPrimesInfo r(@Nonnull final String r) {
-    setR( r );
-    return this;
-  }
 
   @JsProperty(
       name = "t"
@@ -60,10 +46,32 @@ public interface RsaOtherPrimesInfo {
   @JsProperty
   void setT(@Nonnull String t);
 
-  @JsOverlay
-  @Nonnull
-  default RsaOtherPrimesInfo t(@Nonnull final String t) {
-    setT( t );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RsaOtherPrimesInfo {
+    @JsOverlay
+    @Nonnull
+    default Builder d(@Nonnull final String d) {
+      setD( d );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder r(@Nonnull final String r) {
+      setR( r );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder t(@Nonnull final String t) {
+      setT( t );
+      return this;
+    }
   }
 }

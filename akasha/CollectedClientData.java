@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface CollectedClientData {
   @JsOverlay
   @Nonnull
-  static CollectedClientData create(@Nonnull final String challenge, @Nonnull final String origin,
+  static Builder create(@Nonnull final String challenge, @Nonnull final String origin,
       @Nonnull final String type) {
-    return Js.<CollectedClientData>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).origin( origin ).type( type );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).origin( origin ).type( type );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface CollectedClientData {
   @JsProperty
   void setChallenge(@Nonnull String challenge);
 
-  @JsOverlay
-  @Nonnull
-  default CollectedClientData challenge(@Nonnull final String challenge) {
-    setChallenge( challenge );
-    return this;
-  }
-
   @JsProperty(
       name = "origin"
   )
@@ -48,13 +41,6 @@ public interface CollectedClientData {
   @JsProperty
   void setOrigin(@Nonnull String origin);
 
-  @JsOverlay
-  @Nonnull
-  default CollectedClientData origin(@Nonnull final String origin) {
-    setOrigin( origin );
-    return this;
-  }
-
   @JsProperty(
       name = "tokenBinding"
   )
@@ -62,13 +48,6 @@ public interface CollectedClientData {
 
   @JsProperty
   void setTokenBinding(@Nonnull TokenBinding tokenBinding);
-
-  @JsOverlay
-  @Nonnull
-  default CollectedClientData tokenBinding(@Nonnull final TokenBinding tokenBinding) {
-    setTokenBinding( tokenBinding );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -79,10 +58,39 @@ public interface CollectedClientData {
   @JsProperty
   void setType(@Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default CollectedClientData type(@Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CollectedClientData {
+    @JsOverlay
+    @Nonnull
+    default Builder challenge(@Nonnull final String challenge) {
+      setChallenge( challenge );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder origin(@Nonnull final String origin) {
+      setOrigin( origin );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder tokenBinding(@Nonnull final TokenBinding tokenBinding) {
+      setTokenBinding( tokenBinding );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioTimestamp {
   @JsOverlay
   @Nonnull
-  static AudioTimestamp create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface AudioTimestamp {
   @JsProperty
   void setContextTime(double contextTime);
 
-  @JsOverlay
-  @Nonnull
-  default AudioTimestamp contextTime(final double contextTime) {
-    setContextTime( contextTime );
-    return this;
-  }
-
   @JsProperty(
       name = "performanceTime"
   )
@@ -45,10 +38,25 @@ public interface AudioTimestamp {
   @JsProperty
   void setPerformanceTime(double performanceTime);
 
-  @JsOverlay
-  @Nonnull
-  default AudioTimestamp performanceTime(final double performanceTime) {
-    setPerformanceTime( performanceTime );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AudioTimestamp {
+    @JsOverlay
+    @Nonnull
+    default Builder contextTime(final double contextTime) {
+      setContextTime( contextTime );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder performanceTime(final double performanceTime) {
+      setPerformanceTime( performanceTime );
+      return this;
+    }
   }
 }

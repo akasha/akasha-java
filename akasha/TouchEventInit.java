@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TouchEventInit extends EventModifierInit {
   @JsOverlay
   @Nonnull
-  static TouchEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,22 +33,8 @@ public interface TouchEventInit extends EventModifierInit {
   void setChangedTouches(@Nonnull JsArray<Touch> changedTouches);
 
   @JsOverlay
-  @Nonnull
-  default TouchEventInit changedTouches(@Nonnull final JsArray<Touch> changedTouches) {
-    setChangedTouches( changedTouches );
-    return this;
-  }
-
-  @JsOverlay
   default void setChangedTouches(@Nonnull final Touch... changedTouches) {
     setChangedTouches( Js.<JsArray<Touch>>uncheckedCast( changedTouches ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit changedTouches(@Nonnull final Touch... changedTouches) {
-    setChangedTouches( changedTouches );
-    return this;
   }
 
   @JsProperty(
@@ -60,22 +46,8 @@ public interface TouchEventInit extends EventModifierInit {
   void setTargetTouches(@Nonnull JsArray<Touch> targetTouches);
 
   @JsOverlay
-  @Nonnull
-  default TouchEventInit targetTouches(@Nonnull final JsArray<Touch> targetTouches) {
-    setTargetTouches( targetTouches );
-    return this;
-  }
-
-  @JsOverlay
   default void setTargetTouches(@Nonnull final Touch... targetTouches) {
     setTargetTouches( Js.<JsArray<Touch>>uncheckedCast( targetTouches ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit targetTouches(@Nonnull final Touch... targetTouches) {
-    setTargetTouches( targetTouches );
-    return this;
   }
 
   @JsProperty(
@@ -87,154 +59,190 @@ public interface TouchEventInit extends EventModifierInit {
   void setTouches(@Nonnull JsArray<Touch> touches);
 
   @JsOverlay
-  @Nonnull
-  default TouchEventInit touches(@Nonnull final JsArray<Touch> touches) {
-    setTouches( touches );
-    return this;
-  }
-
-  @JsOverlay
   default void setTouches(@Nonnull final Touch... touches) {
     setTouches( Js.<JsArray<Touch>>uncheckedCast( touches ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit touches(@Nonnull final Touch... touches) {
-    setTouches( touches );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TouchEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder changedTouches(@Nonnull final JsArray<Touch> changedTouches) {
+      setChangedTouches( changedTouches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit altKey(final boolean altKey) {
-    setAltKey( altKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder changedTouches(@Nonnull final Touch... changedTouches) {
+      setChangedTouches( changedTouches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit ctrlKey(final boolean ctrlKey) {
-    setCtrlKey( ctrlKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder targetTouches(@Nonnull final JsArray<Touch> targetTouches) {
+      setTargetTouches( targetTouches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit metaKey(final boolean metaKey) {
-    setMetaKey( metaKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder targetTouches(@Nonnull final Touch... targetTouches) {
+      setTargetTouches( targetTouches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierAltGraph(final boolean modifierAltGraph) {
-    setModifierAltGraph( modifierAltGraph );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder touches(@Nonnull final JsArray<Touch> touches) {
+      setTouches( touches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierCapsLock(final boolean modifierCapsLock) {
-    setModifierCapsLock( modifierCapsLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder touches(@Nonnull final Touch... touches) {
+      setTouches( touches );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierFn(final boolean modifierFn) {
-    setModifierFn( modifierFn );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder altKey(final boolean altKey) {
+      setAltKey( altKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierFnLock(final boolean modifierFnLock) {
-    setModifierFnLock( modifierFnLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder ctrlKey(final boolean ctrlKey) {
+      setCtrlKey( ctrlKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierHyper(final boolean modifierHyper) {
-    setModifierHyper( modifierHyper );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder metaKey(final boolean metaKey) {
+      setMetaKey( metaKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierNumLock(final boolean modifierNumLock) {
-    setModifierNumLock( modifierNumLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierAltGraph(final boolean modifierAltGraph) {
+      setModifierAltGraph( modifierAltGraph );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierScrollLock(final boolean modifierScrollLock) {
-    setModifierScrollLock( modifierScrollLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierCapsLock(final boolean modifierCapsLock) {
+      setModifierCapsLock( modifierCapsLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierSuper(final boolean modifierSuper) {
-    setModifierSuper( modifierSuper );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierFn(final boolean modifierFn) {
+      setModifierFn( modifierFn );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierSymbol(final boolean modifierSymbol) {
-    setModifierSymbol( modifierSymbol );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierFnLock(final boolean modifierFnLock) {
+      setModifierFnLock( modifierFnLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
-    setModifierSymbolLock( modifierSymbolLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierHyper(final boolean modifierHyper) {
+      setModifierHyper( modifierHyper );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit shiftKey(final boolean shiftKey) {
-    setShiftKey( shiftKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierNumLock(final boolean modifierNumLock) {
+      setModifierNumLock( modifierNumLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit detail(final int detail) {
-    setDetail( detail );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierScrollLock(final boolean modifierScrollLock) {
+      setModifierScrollLock( modifierScrollLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit view(@Nullable final Window view) {
-    setView( view );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierSuper(final boolean modifierSuper) {
+      setModifierSuper( modifierSuper );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierSymbol(final boolean modifierSymbol) {
+      setModifierSymbol( modifierSymbol );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierSymbolLock(final boolean modifierSymbolLock) {
+      setModifierSymbolLock( modifierSymbolLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default TouchEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder shiftKey(final boolean shiftKey) {
+      setShiftKey( shiftKey );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder detail(final int detail) {
+      setDetail( detail );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nullable final Window view) {
+      setView( view );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

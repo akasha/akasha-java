@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCOfferOptions extends RTCOfferAnswerOptions {
   @JsOverlay
   @Nonnull
-  static RTCOfferOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -48,19 +48,6 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
   @JsProperty
   void setIceRestart(boolean iceRestart);
 
-  /**
-   * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">RTCOfferOptions.iceRestart - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCOfferOptions iceRestart(final boolean iceRestart) {
-    setIceRestart( iceRestart );
-    return this;
-  }
-
   @JsProperty(
       name = "offerToReceiveAudio"
   )
@@ -68,13 +55,6 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
 
   @JsProperty
   void setOfferToReceiveAudio(boolean offerToReceiveAudio);
-
-  @JsOverlay
-  @Nonnull
-  default RTCOfferOptions offerToReceiveAudio(final boolean offerToReceiveAudio) {
-    setOfferToReceiveAudio( offerToReceiveAudio );
-    return this;
-  }
 
   @JsProperty(
       name = "offerToReceiveVideo"
@@ -84,10 +64,44 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
   @JsProperty
   void setOfferToReceiveVideo(boolean offerToReceiveVideo);
 
-  @JsOverlay
-  @Nonnull
-  default RTCOfferOptions offerToReceiveVideo(final boolean offerToReceiveVideo) {
-    setOfferToReceiveVideo( offerToReceiveVideo );
-    return this;
+  /**
+   * The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">RTCOfferOptions - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCOfferOptions {
+    /**
+     * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart">RTCOfferOptions.iceRestart - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder iceRestart(final boolean iceRestart) {
+      setIceRestart( iceRestart );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offerToReceiveAudio(final boolean offerToReceiveAudio) {
+      setOfferToReceiveAudio( offerToReceiveAudio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offerToReceiveVideo(final boolean offerToReceiveVideo) {
+      setOfferToReceiveVideo( offerToReceiveVideo );
+      return this;
+    }
   }
 }

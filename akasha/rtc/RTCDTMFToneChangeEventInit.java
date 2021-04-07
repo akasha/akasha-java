@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCDTMFToneChangeEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static RTCDTMFToneChangeEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,31 +31,39 @@ public interface RTCDTMFToneChangeEventInit extends EventInit {
   @JsProperty
   void setTone(@Nonnull String tone);
 
-  @JsOverlay
-  @Nonnull
-  default RTCDTMFToneChangeEventInit tone(@Nonnull final String tone) {
-    setTone( tone );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCDTMFToneChangeEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder tone(@Nonnull final String tone) {
+      setTone( tone );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCDTMFToneChangeEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCDTMFToneChangeEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCDTMFToneChangeEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

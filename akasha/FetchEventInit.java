@@ -20,8 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface FetchEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static FetchEventInit create(@Nonnull final Request request) {
-    return Js.<FetchEventInit>uncheckedCast( JsPropertyMap.of() ).request( request );
+  static Builder create(@Nonnull final Request request) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).request( request );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsProperty
   void setClientId(@Nonnull String clientId);
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit clientId(@Nonnull final String clientId) {
-    setClientId( clientId );
-    return this;
-  }
-
   @JsProperty(
       name = "handled"
   )
@@ -46,13 +39,6 @@ public interface FetchEventInit extends ExtendableEventInit {
 
   @JsProperty
   void setHandled(@Nonnull Promise<Void> handled);
-
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit handled(@Nonnull final Promise<Void> handled) {
-    setHandled( handled );
-    return this;
-  }
 
   @JsProperty(
       name = "preloadResponse"
@@ -62,13 +48,6 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsProperty
   void setPreloadResponse(@Nonnull Promise<Any> preloadResponse);
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit preloadResponse(@Nonnull final Promise<Any> preloadResponse) {
-    setPreloadResponse( preloadResponse );
-    return this;
-  }
-
   @JsProperty(
       name = "replacesClientId"
   )
@@ -76,13 +55,6 @@ public interface FetchEventInit extends ExtendableEventInit {
 
   @JsProperty
   void setReplacesClientId(@Nonnull String replacesClientId);
-
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit replacesClientId(@Nonnull final String replacesClientId) {
-    setReplacesClientId( replacesClientId );
-    return this;
-  }
 
   @JsProperty(
       name = "request"
@@ -93,13 +65,6 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsProperty
   void setRequest(@Nonnull Request request);
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit request(@Nonnull final Request request) {
-    setRequest( request );
-    return this;
-  }
-
   @JsProperty(
       name = "resultingClientId"
   )
@@ -108,31 +73,74 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsProperty
   void setResultingClientId(@Nonnull String resultingClientId);
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit resultingClientId(@Nonnull final String resultingClientId) {
-    setResultingClientId( resultingClientId );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FetchEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder clientId(@Nonnull final String clientId) {
+      setClientId( clientId );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder handled(@Nonnull final Promise<Void> handled) {
+      setHandled( handled );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder preloadResponse(@Nonnull final Promise<Any> preloadResponse) {
+      setPreloadResponse( preloadResponse );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FetchEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder replacesClientId(@Nonnull final String replacesClientId) {
+      setReplacesClientId( replacesClientId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder request(@Nonnull final Request request) {
+      setRequest( request );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resultingClientId(@Nonnull final String resultingClientId) {
+      setResultingClientId( resultingClientId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

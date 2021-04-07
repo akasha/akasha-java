@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface HmacKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
   @Nonnull
-  static HmacKeyAlgorithm create(@Nonnull final String name, @Nonnull final KeyAlgorithm hash,
+  static Builder create(@Nonnull final String name, @Nonnull final KeyAlgorithm hash,
       final int length) {
-    return Js.<HmacKeyAlgorithm>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).length( length );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).length( length );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
   @JsProperty
   void setHash(@Nonnull KeyAlgorithm hash);
 
-  @JsOverlay
-  @Nonnull
-  default HmacKeyAlgorithm hash(@Nonnull final KeyAlgorithm hash) {
-    setHash( hash );
-    return this;
-  }
-
   @JsProperty(
       name = "length"
   )
@@ -47,17 +40,32 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
   @JsProperty
   void setLength(int length);
 
-  @JsOverlay
-  @Nonnull
-  default HmacKeyAlgorithm length(final int length) {
-    setLength( length );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends HmacKeyAlgorithm {
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final KeyAlgorithm hash) {
+      setHash( hash );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default HmacKeyAlgorithm name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder length(final int length) {
+      setLength( length );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

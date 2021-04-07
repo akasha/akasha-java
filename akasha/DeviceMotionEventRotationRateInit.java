@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DeviceMotionEventRotationRateInit {
   @JsOverlay
   @Nonnull
-  static DeviceMotionEventRotationRateInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface DeviceMotionEventRotationRateInit {
   @JsProperty
   void setAlpha(@Nullable Double alpha);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventRotationRateInit alpha(@Nullable final Double alpha) {
-    setAlpha( alpha );
-    return this;
-  }
-
   @JsProperty(
       name = "beta"
   )
@@ -47,13 +40,6 @@ public interface DeviceMotionEventRotationRateInit {
 
   @JsProperty
   void setBeta(@Nullable Double beta);
-
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventRotationRateInit beta(@Nullable final Double beta) {
-    setBeta( beta );
-    return this;
-  }
 
   @JsProperty(
       name = "gamma"
@@ -64,10 +50,32 @@ public interface DeviceMotionEventRotationRateInit {
   @JsProperty
   void setGamma(@Nullable Double gamma);
 
-  @JsOverlay
-  @Nonnull
-  default DeviceMotionEventRotationRateInit gamma(@Nullable final Double gamma) {
-    setGamma( gamma );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DeviceMotionEventRotationRateInit {
+    @JsOverlay
+    @Nonnull
+    default Builder alpha(@Nullable final Double alpha) {
+      setAlpha( alpha );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder beta(@Nullable final Double beta) {
+      setBeta( beta );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder gamma(@Nullable final Double gamma) {
+      setGamma( gamma );
+      return this;
+    }
   }
 }

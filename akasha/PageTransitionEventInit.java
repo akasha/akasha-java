@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PageTransitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static PageTransitionEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,31 +30,39 @@ public interface PageTransitionEventInit extends EventInit {
   @JsProperty
   void setPersisted(boolean persisted);
 
-  @JsOverlay
-  @Nonnull
-  default PageTransitionEventInit persisted(final boolean persisted) {
-    setPersisted( persisted );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PageTransitionEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder persisted(final boolean persisted) {
+      setPersisted( persisted );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PageTransitionEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PageTransitionEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PageTransitionEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

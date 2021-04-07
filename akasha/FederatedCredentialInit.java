@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface FederatedCredentialInit extends CredentialData {
   @JsOverlay
   @Nonnull
-  static FederatedCredentialInit create(@Nonnull final String id, @Nonnull final String origin,
+  static Builder create(@Nonnull final String id, @Nonnull final String origin,
       @Nonnull final String provider) {
-    return Js.<FederatedCredentialInit>uncheckedCast( JsPropertyMap.of() ).id( id ).origin( origin ).provider( provider );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).origin( origin ).provider( provider );
   }
 
   @JsProperty(
@@ -31,13 +31,6 @@ public interface FederatedCredentialInit extends CredentialData {
   @JsProperty
   void setIconURL(@Nonnull String iconURL);
 
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialInit iconURL(@Nonnull final String iconURL) {
-    setIconURL( iconURL );
-    return this;
-  }
-
   @JsProperty(
       name = "name"
   )
@@ -45,13 +38,6 @@ public interface FederatedCredentialInit extends CredentialData {
 
   @JsProperty
   void setName(@Nonnull String name);
-
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialInit name(@Nonnull final String name) {
-    setName( name );
-    return this;
-  }
 
   @JsProperty(
       name = "origin"
@@ -62,13 +48,6 @@ public interface FederatedCredentialInit extends CredentialData {
   @JsProperty
   void setOrigin(@Nonnull String origin);
 
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialInit origin(@Nonnull final String origin) {
-    setOrigin( origin );
-    return this;
-  }
-
   @JsProperty(
       name = "protocol"
   )
@@ -76,13 +55,6 @@ public interface FederatedCredentialInit extends CredentialData {
 
   @JsProperty
   void setProtocol(@Nonnull String protocol);
-
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialInit protocol(@Nonnull final String protocol) {
-    setProtocol( protocol );
-    return this;
-  }
 
   @JsProperty(
       name = "provider"
@@ -93,17 +65,53 @@ public interface FederatedCredentialInit extends CredentialData {
   @JsProperty
   void setProvider(@Nonnull String provider);
 
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialInit provider(@Nonnull final String provider) {
-    setProvider( provider );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FederatedCredentialInit {
+    @JsOverlay
+    @Nonnull
+    default Builder iconURL(@Nonnull final String iconURL) {
+      setIconURL( iconURL );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FederatedCredentialInit id(@Nonnull final String id) {
-    setId( id );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder origin(@Nonnull final String origin) {
+      setOrigin( origin );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder protocol(@Nonnull final String protocol) {
+      setProtocol( protocol );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder provider(@Nonnull final String provider) {
+      setProvider( provider );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
+      return this;
+    }
   }
 }

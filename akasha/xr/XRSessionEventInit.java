@@ -25,8 +25,8 @@ import jsinterop.base.JsPropertyMap;
 public interface XRSessionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static XRSessionEventInit create(@Nonnull final XRSession session) {
-    return Js.<XRSessionEventInit>uncheckedCast( JsPropertyMap.of() ).session( session );
+  static Builder create(@Nonnull final XRSession session) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).session( session );
   }
 
   /**
@@ -51,36 +51,50 @@ public interface XRSessionEventInit extends EventInit {
   void setSession(@Nonnull XRSession session);
 
   /**
-   * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
+   * The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit">XRSessionEventInit - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit">XRSessionEventInit - WebXR Device API</a>
    */
-  @JsOverlay
-  @Nonnull
-  default XRSessionEventInit session(@Nonnull final XRSession session) {
-    setSession( session );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends XRSessionEventInit {
+    /**
+     * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
+     * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder session(@Nonnull final XRSession session) {
+      setSession( session );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default XRSessionEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default XRSessionEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default XRSessionEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

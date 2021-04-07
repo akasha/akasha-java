@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ClientQueryOptions {
   @JsOverlay
   @Nonnull
-  static ClientQueryOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ClientQueryOptions {
   @JsProperty
   void setIncludeUncontrolled(boolean includeUncontrolled);
 
-  @JsOverlay
-  @Nonnull
-  default ClientQueryOptions includeUncontrolled(final boolean includeUncontrolled) {
-    setIncludeUncontrolled( includeUncontrolled );
-    return this;
-  }
-
   @JsProperty(
       name = "type"
   )
@@ -46,10 +39,25 @@ public interface ClientQueryOptions {
   @JsProperty
   void setType(@ClientType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default ClientQueryOptions type(@ClientType @Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ClientQueryOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder includeUncontrolled(final boolean includeUncontrolled) {
+      setIncludeUncontrolled( includeUncontrolled );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@ClientType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

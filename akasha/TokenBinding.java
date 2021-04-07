@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface TokenBinding {
   @JsOverlay
   @Nonnull
-  static TokenBinding create(@TokenBindingStatus @Nonnull final String status) {
-    return Js.<TokenBinding>uncheckedCast( JsPropertyMap.of() ).status( status );
+  static Builder create(@TokenBindingStatus @Nonnull final String status) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).status( status );
   }
 
   @JsProperty(
@@ -29,13 +29,6 @@ public interface TokenBinding {
 
   @JsProperty
   void setId(@Nonnull String id);
-
-  @JsOverlay
-  @Nonnull
-  default TokenBinding id(@Nonnull final String id) {
-    setId( id );
-    return this;
-  }
 
   @JsProperty(
       name = "status"
@@ -47,10 +40,25 @@ public interface TokenBinding {
   @JsProperty
   void setStatus(@TokenBindingStatus @Nonnull String status);
 
-  @JsOverlay
-  @Nonnull
-  default TokenBinding status(@TokenBindingStatus @Nonnull final String status) {
-    setStatus( status );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TokenBinding {
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder status(@TokenBindingStatus @Nonnull final String status) {
+      setStatus( status );
+      return this;
+    }
   }
 }

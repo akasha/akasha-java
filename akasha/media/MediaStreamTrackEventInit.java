@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaStreamTrackEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static MediaStreamTrackEventInit create(@Nonnull final MediaStreamTrack track) {
-    return Js.<MediaStreamTrackEventInit>uncheckedCast( JsPropertyMap.of() ).track( track );
+  static Builder create(@Nonnull final MediaStreamTrack track) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).track( track );
   }
 
   @JsProperty(
@@ -32,31 +32,39 @@ public interface MediaStreamTrackEventInit extends EventInit {
   @JsProperty
   void setTrack(@Nonnull MediaStreamTrack track);
 
-  @JsOverlay
-  @Nonnull
-  default MediaStreamTrackEventInit track(@Nonnull final MediaStreamTrack track) {
-    setTrack( track );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaStreamTrackEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder track(@Nonnull final MediaStreamTrack track) {
+      setTrack( track );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaStreamTrackEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaStreamTrackEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MediaStreamTrackEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

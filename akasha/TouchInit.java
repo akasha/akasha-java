@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface TouchInit {
   @JsOverlay
   @Nonnull
-  static TouchInit create(final int identifier, @Nonnull final EventTarget target) {
-    return Js.<TouchInit>uncheckedCast( JsPropertyMap.of() ).identifier( identifier ).target( target );
+  static Builder create(final int identifier, @Nonnull final EventTarget target) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).identifier( identifier ).target( target );
   }
 
   @JsProperty(
@@ -30,13 +30,6 @@ public interface TouchInit {
   @JsProperty
   void setAltitudeAngle(double altitudeAngle);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit altitudeAngle(final double altitudeAngle) {
-    setAltitudeAngle( altitudeAngle );
-    return this;
-  }
-
   @JsProperty(
       name = "azimuthAngle"
   )
@@ -44,13 +37,6 @@ public interface TouchInit {
 
   @JsProperty
   void setAzimuthAngle(double azimuthAngle);
-
-  @JsOverlay
-  @Nonnull
-  default TouchInit azimuthAngle(final double azimuthAngle) {
-    setAzimuthAngle( azimuthAngle );
-    return this;
-  }
 
   @JsProperty(
       name = "clientX"
@@ -60,13 +46,6 @@ public interface TouchInit {
   @JsProperty
   void setClientX(double clientX);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit clientX(final double clientX) {
-    setClientX( clientX );
-    return this;
-  }
-
   @JsProperty(
       name = "clientY"
   )
@@ -74,13 +53,6 @@ public interface TouchInit {
 
   @JsProperty
   void setClientY(double clientY);
-
-  @JsOverlay
-  @Nonnull
-  default TouchInit clientY(final double clientY) {
-    setClientY( clientY );
-    return this;
-  }
 
   @JsProperty(
       name = "force"
@@ -90,13 +62,6 @@ public interface TouchInit {
   @JsProperty
   void setForce(float force);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit force(final float force) {
-    setForce( force );
-    return this;
-  }
-
   @JsProperty(
       name = "identifier"
   )
@@ -104,13 +69,6 @@ public interface TouchInit {
 
   @JsProperty
   void setIdentifier(int identifier);
-
-  @JsOverlay
-  @Nonnull
-  default TouchInit identifier(final int identifier) {
-    setIdentifier( identifier );
-    return this;
-  }
 
   @JsProperty(
       name = "pageX"
@@ -120,13 +78,6 @@ public interface TouchInit {
   @JsProperty
   void setPageX(double pageX);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit pageX(final double pageX) {
-    setPageX( pageX );
-    return this;
-  }
-
   @JsProperty(
       name = "pageY"
   )
@@ -134,13 +85,6 @@ public interface TouchInit {
 
   @JsProperty
   void setPageY(double pageY);
-
-  @JsOverlay
-  @Nonnull
-  default TouchInit pageY(final double pageY) {
-    setPageY( pageY );
-    return this;
-  }
 
   @JsProperty(
       name = "radiusX"
@@ -150,13 +94,6 @@ public interface TouchInit {
   @JsProperty
   void setRadiusX(float radiusX);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit radiusX(final float radiusX) {
-    setRadiusX( radiusX );
-    return this;
-  }
-
   @JsProperty(
       name = "radiusY"
   )
@@ -164,13 +101,6 @@ public interface TouchInit {
 
   @JsProperty
   void setRadiusY(float radiusY);
-
-  @JsOverlay
-  @Nonnull
-  default TouchInit radiusY(final float radiusY) {
-    setRadiusY( radiusY );
-    return this;
-  }
 
   @JsProperty(
       name = "rotationAngle"
@@ -180,13 +110,6 @@ public interface TouchInit {
   @JsProperty
   void setRotationAngle(float rotationAngle);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit rotationAngle(final float rotationAngle) {
-    setRotationAngle( rotationAngle );
-    return this;
-  }
-
   @JsProperty(
       name = "screenX"
   )
@@ -195,13 +118,6 @@ public interface TouchInit {
   @JsProperty
   void setScreenX(double screenX);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit screenX(final double screenX) {
-    setScreenX( screenX );
-    return this;
-  }
-
   @JsProperty(
       name = "screenY"
   )
@@ -209,13 +125,6 @@ public interface TouchInit {
 
   @JsProperty
   void setScreenY(double screenY);
-
-  @JsOverlay
-  @Nonnull
-  default TouchInit screenY(final double screenY) {
-    setScreenY( screenY );
-    return this;
-  }
 
   @JsProperty(
       name = "target"
@@ -226,13 +135,6 @@ public interface TouchInit {
   @JsProperty
   void setTarget(@Nonnull EventTarget target);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit target(@Nonnull final EventTarget target) {
-    setTarget( target );
-    return this;
-  }
-
   @JsProperty(
       name = "touchType"
   )
@@ -242,10 +144,116 @@ public interface TouchInit {
   @JsProperty
   void setTouchType(@TouchType @Nonnull String touchType);
 
-  @JsOverlay
-  @Nonnull
-  default TouchInit touchType(@TouchType @Nonnull final String touchType) {
-    setTouchType( touchType );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TouchInit {
+    @JsOverlay
+    @Nonnull
+    default Builder altitudeAngle(final double altitudeAngle) {
+      setAltitudeAngle( altitudeAngle );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder azimuthAngle(final double azimuthAngle) {
+      setAzimuthAngle( azimuthAngle );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clientX(final double clientX) {
+      setClientX( clientX );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clientY(final double clientY) {
+      setClientY( clientY );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder force(final float force) {
+      setForce( force );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder identifier(final int identifier) {
+      setIdentifier( identifier );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder pageX(final double pageX) {
+      setPageX( pageX );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder pageY(final double pageY) {
+      setPageY( pageY );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder radiusX(final float radiusX) {
+      setRadiusX( radiusX );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder radiusY(final float radiusY) {
+      setRadiusY( radiusY );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rotationAngle(final float rotationAngle) {
+      setRotationAngle( rotationAngle );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder screenX(final double screenX) {
+      setScreenX( screenX );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder screenY(final double screenY) {
+      setScreenY( screenY );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder target(@Nonnull final EventTarget target) {
+      setTarget( target );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder touchType(@TouchType @Nonnull final String touchType) {
+      setTouchType( touchType );
+      return this;
+    }
   }
 }

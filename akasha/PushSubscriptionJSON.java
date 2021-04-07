@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushSubscriptionJSON {
   @JsOverlay
   @Nonnull
-  static PushSubscriptionJSON create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface PushSubscriptionJSON {
   @JsProperty
   void setEndpoint(@Nonnull String endpoint);
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionJSON endpoint(@Nonnull final String endpoint) {
-    setEndpoint( endpoint );
-    return this;
-  }
-
   @JsProperty(
       name = "expirationTime"
   )
@@ -47,13 +40,6 @@ public interface PushSubscriptionJSON {
   @JsProperty
   void setExpirationTime(@Nullable int expirationTime);
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionJSON expirationTime(final int expirationTime) {
-    setExpirationTime( expirationTime );
-    return this;
-  }
-
   @JsProperty(
       name = "keys"
   )
@@ -62,10 +48,32 @@ public interface PushSubscriptionJSON {
   @JsProperty
   void setKeys(@Nonnull JsPropertyMap<String> keys);
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionJSON keys(@Nonnull final JsPropertyMap<String> keys) {
-    setKeys( keys );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PushSubscriptionJSON {
+    @JsOverlay
+    @Nonnull
+    default Builder endpoint(@Nonnull final String endpoint) {
+      setEndpoint( endpoint );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder expirationTime(final int expirationTime) {
+      setExpirationTime( expirationTime );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keys(@Nonnull final JsPropertyMap<String> keys) {
+      setKeys( keys );
+      return this;
+    }
   }
 }

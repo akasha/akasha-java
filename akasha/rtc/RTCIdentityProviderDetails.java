@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityProviderDetails {
   @JsOverlay
   @Nonnull
-  static RTCIdentityProviderDetails create(@Nonnull final String domain) {
-    return Js.<RTCIdentityProviderDetails>uncheckedCast( JsPropertyMap.of() ).domain( domain );
+  static Builder create(@Nonnull final String domain) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).domain( domain );
   }
 
   @JsProperty(
@@ -31,13 +31,6 @@ public interface RTCIdentityProviderDetails {
   @JsProperty
   void setDomain(@Nonnull String domain);
 
-  @JsOverlay
-  @Nonnull
-  default RTCIdentityProviderDetails domain(@Nonnull final String domain) {
-    setDomain( domain );
-    return this;
-  }
-
   @JsProperty(
       name = "protocol"
   )
@@ -46,10 +39,25 @@ public interface RTCIdentityProviderDetails {
   @JsProperty
   void setProtocol(@Nonnull String protocol);
 
-  @JsOverlay
-  @Nonnull
-  default RTCIdentityProviderDetails protocol(@Nonnull final String protocol) {
-    setProtocol( protocol );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCIdentityProviderDetails {
+    @JsOverlay
+    @Nonnull
+    default Builder domain(@Nonnull final String domain) {
+      setDomain( domain );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder protocol(@Nonnull final String protocol) {
+      setProtocol( protocol );
+      return this;
+    }
   }
 }

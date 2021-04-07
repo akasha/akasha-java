@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   @JsOverlay
   @Nonnull
-  static RTCRemoteInboundRtpStreamStats create(@Nonnull final String id, final double timestamp,
+  static Builder create(@Nonnull final String id, final double timestamp,
       @RTCStatsType @Nonnull final String type, @Nonnull final String kind, final int ssrc) {
-    return Js.<RTCRemoteInboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
   @JsProperty(
@@ -31,13 +31,6 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   @JsProperty
   void setFractionLost(double fractionLost);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats fractionLost(final double fractionLost) {
-    setFractionLost( fractionLost );
-    return this;
-  }
-
   @JsProperty(
       name = "localId"
   )
@@ -45,13 +38,6 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
 
   @JsProperty
   void setLocalId(@Nonnull String localId);
-
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats localId(@Nonnull final String localId) {
-    setLocalId( localId );
-    return this;
-  }
 
   @JsProperty(
       name = "reportsReceived"
@@ -61,13 +47,6 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   @JsProperty
   void setReportsReceived(int reportsReceived);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats reportsReceived(final int reportsReceived) {
-    setReportsReceived( reportsReceived );
-    return this;
-  }
-
   @JsProperty(
       name = "roundTripTime"
   )
@@ -75,13 +54,6 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
 
   @JsProperty
   void setRoundTripTime(double roundTripTime);
-
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats roundTripTime(final double roundTripTime) {
-    setRoundTripTime( roundTripTime );
-    return this;
-  }
 
   @JsProperty(
       name = "roundTripTimeMeasurements"
@@ -91,14 +63,6 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   @JsProperty
   void setRoundTripTimeMeasurements(int roundTripTimeMeasurements);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats roundTripTimeMeasurements(
-      final int roundTripTimeMeasurements) {
-    setRoundTripTimeMeasurements( roundTripTimeMeasurements );
-    return this;
-  }
-
   @JsProperty(
       name = "totalRoundTripTime"
   )
@@ -107,227 +71,270 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats totalRoundTripTime(final double totalRoundTripTime) {
-    setTotalRoundTripTime( totalRoundTripTime );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRemoteInboundRtpStreamStats {
+    @JsOverlay
+    @Nonnull
+    default Builder fractionLost(final double fractionLost) {
+      setFractionLost( fractionLost );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats burstDiscardCount(final int burstDiscardCount) {
-    setBurstDiscardCount( burstDiscardCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder localId(@Nonnull final String localId) {
+      setLocalId( localId );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats burstDiscardRate(final double burstDiscardRate) {
-    setBurstDiscardRate( burstDiscardRate );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder reportsReceived(final int reportsReceived) {
+      setReportsReceived( reportsReceived );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats burstLossCount(final int burstLossCount) {
-    setBurstLossCount( burstLossCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder roundTripTime(final double roundTripTime) {
+      setRoundTripTime( roundTripTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats burstLossRate(final double burstLossRate) {
-    setBurstLossRate( burstLossRate );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder roundTripTimeMeasurements(final int roundTripTimeMeasurements) {
+      setRoundTripTimeMeasurements( roundTripTimeMeasurements );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats burstPacketsDiscarded(final int burstPacketsDiscarded) {
-    setBurstPacketsDiscarded( burstPacketsDiscarded );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder totalRoundTripTime(final double totalRoundTripTime) {
+      setTotalRoundTripTime( totalRoundTripTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats burstPacketsLost(final int burstPacketsLost) {
-    setBurstPacketsLost( burstPacketsLost );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder burstDiscardCount(final int burstDiscardCount) {
+      setBurstDiscardCount( burstDiscardCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats framesDropped(final int framesDropped) {
-    setFramesDropped( framesDropped );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder burstDiscardRate(final double burstDiscardRate) {
+      setBurstDiscardRate( burstDiscardRate );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats fullFramesLost(final int fullFramesLost) {
-    setFullFramesLost( fullFramesLost );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder burstLossCount(final int burstLossCount) {
+      setBurstLossCount( burstLossCount );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats gapDiscardRate(final double gapDiscardRate) {
-    setGapDiscardRate( gapDiscardRate );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder burstLossRate(final double burstLossRate) {
+      setBurstLossRate( burstLossRate );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats gapLossRate(final double gapLossRate) {
-    setGapLossRate( gapLossRate );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder burstPacketsDiscarded(final int burstPacketsDiscarded) {
+      setBurstPacketsDiscarded( burstPacketsDiscarded );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats jitter(final double jitter) {
-    setJitter( jitter );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder burstPacketsLost(final int burstPacketsLost) {
+      setBurstPacketsLost( burstPacketsLost );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats packetsDiscarded(final int packetsDiscarded) {
-    setPacketsDiscarded( packetsDiscarded );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder framesDropped(final int framesDropped) {
+      setFramesDropped( framesDropped );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats packetsLost(final int packetsLost) {
-    setPacketsLost( packetsLost );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder fullFramesLost(final int fullFramesLost) {
+      setFullFramesLost( fullFramesLost );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats packetsReceived(final int packetsReceived) {
-    setPacketsReceived( packetsReceived );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder gapDiscardRate(final double gapDiscardRate) {
+      setGapDiscardRate( gapDiscardRate );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats packetsRepaired(final int packetsRepaired) {
-    setPacketsRepaired( packetsRepaired );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder gapLossRate(final double gapLossRate) {
+      setGapLossRate( gapLossRate );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats partialFramesLost(final int partialFramesLost) {
-    setPartialFramesLost( partialFramesLost );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder jitter(final double jitter) {
+      setJitter( jitter );
+      return this;
+    }
 
-  /**
-   * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats codecId(@Nonnull final String codecId) {
-    setCodecId( codecId );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder packetsDiscarded(final int packetsDiscarded) {
+      setPacketsDiscarded( packetsDiscarded );
+      return this;
+    }
 
-  /**
-   * The kind property of the RTCRtpStreamStats dictionary is a string indicating whether the described RTP stream contains audio or video media.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/kind">RTCRtpStreamStats.kind - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-kind">RTCRtpStreamStats.kind - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats kind(@Nonnull final String kind) {
-    setKind( kind );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder packetsLost(final int packetsLost) {
+      setPacketsLost( packetsLost );
+      return this;
+    }
 
-  /**
-   * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc">RTCRtpStreamStats.ssrc - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats ssrc(final int ssrc) {
-    setSsrc( ssrc );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder packetsReceived(final int packetsReceived) {
+      setPacketsReceived( packetsReceived );
+      return this;
+    }
 
-  /**
-   * The RTCRtpStreamStats dictionary's transportId property is a string which uniquely identifies the object from which the statistics contained in the RTCTransportStats properties in the RTCStatsReport.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/transportId">RTCRtpStreamStats.transportId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-transportid">RTCRtpStreamStats.transportId - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats transportId(@Nonnull final String transportId) {
-    setTransportId( transportId );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder packetsRepaired(final int packetsRepaired) {
+      setPacketsRepaired( packetsRepaired );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats averageRTCPInterval(final double averageRTCPInterval) {
-    setAverageRTCPInterval( averageRTCPInterval );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder partialFramesLost(final int partialFramesLost) {
+      setPartialFramesLost( partialFramesLost );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats mediaType(@Nonnull final String mediaType) {
-    setMediaType( mediaType );
-    return this;
-  }
+    /**
+     * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder codecId(@Nonnull final String codecId) {
+      setCodecId( codecId );
+      return this;
+    }
 
-  /**
-   * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats id(@Nonnull final String id) {
-    setId( id );
-    return this;
-  }
+    /**
+     * The kind property of the RTCRtpStreamStats dictionary is a string indicating whether the described RTP stream contains audio or video media.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/kind">RTCRtpStreamStats.kind - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-kind">RTCRtpStreamStats.kind - Identifiers for WebRTC's Statistics API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder kind(@Nonnull final String kind) {
+      setKind( kind );
+      return this;
+    }
 
-  /**
-   * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">RTCStats.timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats timestamp(final double timestamp) {
-    setTimestamp( timestamp );
-    return this;
-  }
+    /**
+     * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc">RTCRtpStreamStats.ssrc - Identifiers for WebRTC's Statistics API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder ssrc(final int ssrc) {
+      setSsrc( ssrc );
+      return this;
+    }
 
-  /**
-   * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCRemoteInboundRtpStreamStats type(@RTCStatsType @Nonnull final String type) {
-    setType( type );
-    return this;
+    /**
+     * The RTCRtpStreamStats dictionary's transportId property is a string which uniquely identifies the object from which the statistics contained in the RTCTransportStats properties in the RTCStatsReport.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/transportId">RTCRtpStreamStats.transportId - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-transportid">RTCRtpStreamStats.transportId - Identifiers for WebRTC's Statistics API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder transportId(@Nonnull final String transportId) {
+      setTransportId( transportId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder averageRTCPInterval(final double averageRTCPInterval) {
+      setAverageRTCPInterval( averageRTCPInterval );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mediaType(@Nonnull final String mediaType) {
+      setMediaType( mediaType );
+      return this;
+    }
+
+    /**
+     * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
+      return this;
+    }
+
+    /**
+     * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">RTCStats.timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder timestamp(final double timestamp) {
+      setTimestamp( timestamp );
+      return this;
+    }
+
+    /**
+     * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder type(@RTCStatsType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

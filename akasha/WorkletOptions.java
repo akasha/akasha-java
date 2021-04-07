@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WorkletOptions {
   @JsOverlay
   @Nonnull
-  static WorkletOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,10 +31,18 @@ public interface WorkletOptions {
   @JsProperty
   void setCredentials(@RequestCredentials @Nonnull String credentials);
 
-  @JsOverlay
-  @Nonnull
-  default WorkletOptions credentials(@RequestCredentials @Nonnull final String credentials) {
-    setCredentials( credentials );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WorkletOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder credentials(@RequestCredentials @Nonnull final String credentials) {
+      setCredentials( credentials );
+      return this;
+    }
   }
 }

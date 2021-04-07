@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ImageBitmapOptions {
   @JsOverlay
   @Nonnull
-  static ImageBitmapOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,14 +31,6 @@ public interface ImageBitmapOptions {
   @JsProperty
   void setColorSpaceConversion(@ColorSpaceConversion @Nonnull String colorSpaceConversion);
 
-  @JsOverlay
-  @Nonnull
-  default ImageBitmapOptions colorSpaceConversion(
-      @ColorSpaceConversion @Nonnull final String colorSpaceConversion) {
-    setColorSpaceConversion( colorSpaceConversion );
-    return this;
-  }
-
   @JsProperty(
       name = "imageOrientation"
   )
@@ -47,14 +39,6 @@ public interface ImageBitmapOptions {
 
   @JsProperty
   void setImageOrientation(@ImageOrientation @Nonnull String imageOrientation);
-
-  @JsOverlay
-  @Nonnull
-  default ImageBitmapOptions imageOrientation(
-      @ImageOrientation @Nonnull final String imageOrientation) {
-    setImageOrientation( imageOrientation );
-    return this;
-  }
 
   @JsProperty(
       name = "premultiplyAlpha"
@@ -65,14 +49,6 @@ public interface ImageBitmapOptions {
   @JsProperty
   void setPremultiplyAlpha(@PremultiplyAlpha @Nonnull String premultiplyAlpha);
 
-  @JsOverlay
-  @Nonnull
-  default ImageBitmapOptions premultiplyAlpha(
-      @PremultiplyAlpha @Nonnull final String premultiplyAlpha) {
-    setPremultiplyAlpha( premultiplyAlpha );
-    return this;
-  }
-
   @JsProperty(
       name = "resizeHeight"
   )
@@ -80,13 +56,6 @@ public interface ImageBitmapOptions {
 
   @JsProperty
   void setResizeHeight(int resizeHeight);
-
-  @JsOverlay
-  @Nonnull
-  default ImageBitmapOptions resizeHeight(final int resizeHeight) {
-    setResizeHeight( resizeHeight );
-    return this;
-  }
 
   @JsProperty(
       name = "resizeQuality"
@@ -97,13 +66,6 @@ public interface ImageBitmapOptions {
   @JsProperty
   void setResizeQuality(@ResizeQuality @Nonnull String resizeQuality);
 
-  @JsOverlay
-  @Nonnull
-  default ImageBitmapOptions resizeQuality(@ResizeQuality @Nonnull final String resizeQuality) {
-    setResizeQuality( resizeQuality );
-    return this;
-  }
-
   @JsProperty(
       name = "resizeWidth"
   )
@@ -112,10 +74,54 @@ public interface ImageBitmapOptions {
   @JsProperty
   void setResizeWidth(int resizeWidth);
 
-  @JsOverlay
-  @Nonnull
-  default ImageBitmapOptions resizeWidth(final int resizeWidth) {
-    setResizeWidth( resizeWidth );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ImageBitmapOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder colorSpaceConversion(
+        @ColorSpaceConversion @Nonnull final String colorSpaceConversion) {
+      setColorSpaceConversion( colorSpaceConversion );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder imageOrientation(@ImageOrientation @Nonnull final String imageOrientation) {
+      setImageOrientation( imageOrientation );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder premultiplyAlpha(@PremultiplyAlpha @Nonnull final String premultiplyAlpha) {
+      setPremultiplyAlpha( premultiplyAlpha );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resizeHeight(final int resizeHeight) {
+      setResizeHeight( resizeHeight );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resizeQuality(@ResizeQuality @Nonnull final String resizeQuality) {
+      setResizeQuality( resizeQuality );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resizeWidth(final int resizeWidth) {
+      setResizeWidth( resizeWidth );
+      return this;
+    }
   }
 }

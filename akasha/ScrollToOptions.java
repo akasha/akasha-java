@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ScrollToOptions extends ScrollOptions {
   @JsOverlay
   @Nonnull
-  static ScrollToOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -51,19 +51,6 @@ public interface ScrollToOptions extends ScrollOptions {
   /**
    * A double.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/left">ScrollToOptions.left - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">left - CSS Object Model (CSSOM) View Module</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default ScrollToOptions left(final double left) {
-    setLeft( left );
-    return this;
-  }
-
-  /**
-   * A double.
-   *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top">ScrollToOptions.top - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">top - CSS Object Model (CSSOM) View Module</a>
    */
@@ -82,22 +69,49 @@ public interface ScrollToOptions extends ScrollOptions {
   void setTop(double top);
 
   /**
-   * A double.
+   * The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top">ScrollToOptions.top - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">top - CSS Object Model (CSSOM) View Module</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">ScrollToOptions - CSS Object Model (CSSOM) View Module</a>
    */
-  @JsOverlay
-  @Nonnull
-  default ScrollToOptions top(final double top) {
-    setTop( top );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ScrollToOptions {
+    /**
+     * A double.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/left">ScrollToOptions.left - MDN</a>
+     * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left">left - CSS Object Model (CSSOM) View Module</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder left(final double left) {
+      setLeft( left );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ScrollToOptions behavior(@ScrollBehavior @Nonnull final String behavior) {
-    setBehavior( behavior );
-    return this;
+    /**
+     * A double.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top">ScrollToOptions.top - MDN</a>
+     * @see <a href="https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top">top - CSS Object Model (CSSOM) View Module</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder top(final double top) {
+      setTop( top );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder behavior(@ScrollBehavior @Nonnull final String behavior) {
+      setBehavior( behavior );
+      return this;
+    }
   }
 }

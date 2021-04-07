@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
-  static GlobalDescriptor create(@ValueType @Nonnull final String value) {
-    return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
+  static Builder create(@ValueType @Nonnull final String value) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).value( value );
   }
 
   @JsProperty(
@@ -29,13 +29,6 @@ public interface GlobalDescriptor {
 
   @JsProperty
   void setMutable(boolean mutable);
-
-  @JsOverlay
-  @Nonnull
-  default GlobalDescriptor mutable(final boolean mutable) {
-    setMutable( mutable );
-    return this;
-  }
 
   @JsProperty(
       name = "value"
@@ -47,10 +40,25 @@ public interface GlobalDescriptor {
   @JsProperty
   void setValue(@ValueType @Nonnull String value);
 
-  @JsOverlay
-  @Nonnull
-  default GlobalDescriptor value(@ValueType @Nonnull final String value) {
-    setValue( value );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends GlobalDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder mutable(final boolean mutable) {
+      setMutable( mutable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder value(@ValueType @Nonnull final String value) {
+      setValue( value );
+      return this;
+    }
   }
 }

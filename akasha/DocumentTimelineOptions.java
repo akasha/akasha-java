@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DocumentTimelineOptions {
   @JsOverlay
   @Nonnull
-  static DocumentTimelineOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface DocumentTimelineOptions {
   @JsProperty
   void setOriginTime(double originTime);
 
-  @JsOverlay
-  @Nonnull
-  default DocumentTimelineOptions originTime(final double originTime) {
-    setOriginTime( originTime );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DocumentTimelineOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder originTime(final double originTime) {
+      setOriginTime( originTime );
+      return this;
+    }
   }
 }

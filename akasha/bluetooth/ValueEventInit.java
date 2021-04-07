@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ValueEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static ValueEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -35,31 +35,39 @@ public interface ValueEventInit extends EventInit {
   @JsProperty
   void setValue(@DoNotAutobox @Nullable Object value);
 
-  @JsOverlay
-  @Nonnull
-  default ValueEventInit value(@DoNotAutobox @Nullable final Object value) {
-    setValue( value );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ValueEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder value(@DoNotAutobox @Nullable final Object value) {
+      setValue( value );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ValueEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ValueEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ValueEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

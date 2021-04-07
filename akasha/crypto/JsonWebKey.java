@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface JsonWebKey {
   @JsOverlay
   @Nonnull
-  static JsonWebKey create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,13 +31,6 @@ public interface JsonWebKey {
   @JsProperty
   void setAlg(@Nonnull String alg);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey alg(@Nonnull final String alg) {
-    setAlg( alg );
-    return this;
-  }
-
   @JsProperty(
       name = "crv"
   )
@@ -45,13 +38,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setCrv(@Nonnull String crv);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey crv(@Nonnull final String crv) {
-    setCrv( crv );
-    return this;
-  }
 
   @JsProperty(
       name = "d"
@@ -61,13 +47,6 @@ public interface JsonWebKey {
   @JsProperty
   void setD(@Nonnull String d);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey d(@Nonnull final String d) {
-    setD( d );
-    return this;
-  }
-
   @JsProperty(
       name = "dp"
   )
@@ -75,13 +54,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setDp(@Nonnull String dp);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey dp(@Nonnull final String dp) {
-    setDp( dp );
-    return this;
-  }
 
   @JsProperty(
       name = "dq"
@@ -91,13 +63,6 @@ public interface JsonWebKey {
   @JsProperty
   void setDq(@Nonnull String dq);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey dq(@Nonnull final String dq) {
-    setDq( dq );
-    return this;
-  }
-
   @JsProperty(
       name = "e"
   )
@@ -105,13 +70,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setE(@Nonnull String e);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey e(@Nonnull final String e) {
-    setE( e );
-    return this;
-  }
 
   @JsProperty(
       name = "ext"
@@ -121,13 +79,6 @@ public interface JsonWebKey {
   @JsProperty
   void setExt(boolean ext);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey ext(final boolean ext) {
-    setExt( ext );
-    return this;
-  }
-
   @JsProperty(
       name = "k"
   )
@@ -135,13 +86,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setK(@Nonnull String k);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey k(@Nonnull final String k) {
-    setK( k );
-    return this;
-  }
 
   @JsProperty(
       name = "key_ops"
@@ -152,22 +96,8 @@ public interface JsonWebKey {
   void setKey_ops(@Nonnull JsArray<String> key_ops);
 
   @JsOverlay
-  @Nonnull
-  default JsonWebKey key_ops(@Nonnull final JsArray<String> key_ops) {
-    setKey_ops( key_ops );
-    return this;
-  }
-
-  @JsOverlay
   default void setKey_ops(@Nonnull final String... key_ops) {
     setKey_ops( Js.<JsArray<String>>uncheckedCast( key_ops ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey key_ops(@Nonnull final String... key_ops) {
-    setKey_ops( key_ops );
-    return this;
   }
 
   @JsProperty(
@@ -178,13 +108,6 @@ public interface JsonWebKey {
   @JsProperty
   void setKty(@Nonnull String kty);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey kty(@Nonnull final String kty) {
-    setKty( kty );
-    return this;
-  }
-
   @JsProperty(
       name = "n"
   )
@@ -192,13 +115,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setN(@Nonnull String n);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey n(@Nonnull final String n) {
-    setN( n );
-    return this;
-  }
 
   @JsProperty(
       name = "oth"
@@ -209,22 +125,8 @@ public interface JsonWebKey {
   void setOth(@Nonnull JsArray<RsaOtherPrimesInfo> oth);
 
   @JsOverlay
-  @Nonnull
-  default JsonWebKey oth(@Nonnull final JsArray<RsaOtherPrimesInfo> oth) {
-    setOth( oth );
-    return this;
-  }
-
-  @JsOverlay
   default void setOth(@Nonnull final RsaOtherPrimesInfo... oth) {
     setOth( Js.<JsArray<RsaOtherPrimesInfo>>uncheckedCast( oth ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey oth(@Nonnull final RsaOtherPrimesInfo... oth) {
-    setOth( oth );
-    return this;
   }
 
   @JsProperty(
@@ -235,13 +137,6 @@ public interface JsonWebKey {
   @JsProperty
   void setP(@Nonnull String p);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey p(@Nonnull final String p) {
-    setP( p );
-    return this;
-  }
-
   @JsProperty(
       name = "q"
   )
@@ -249,13 +144,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setQ(@Nonnull String q);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey q(@Nonnull final String q) {
-    setQ( q );
-    return this;
-  }
 
   @JsProperty(
       name = "qi"
@@ -265,13 +153,6 @@ public interface JsonWebKey {
   @JsProperty
   void setQi(@Nonnull String qi);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey qi(@Nonnull final String qi) {
-    setQi( qi );
-    return this;
-  }
-
   @JsProperty(
       name = "use"
   )
@@ -279,13 +160,6 @@ public interface JsonWebKey {
 
   @JsProperty
   void setUse(@Nonnull String use);
-
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey use(@Nonnull final String use) {
-    setUse( use );
-    return this;
-  }
 
   @JsProperty(
       name = "x"
@@ -295,13 +169,6 @@ public interface JsonWebKey {
   @JsProperty
   void setX(@Nonnull String x);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey x(@Nonnull final String x) {
-    setX( x );
-    return this;
-  }
-
   @JsProperty(
       name = "y"
   )
@@ -310,10 +177,151 @@ public interface JsonWebKey {
   @JsProperty
   void setY(@Nonnull String y);
 
-  @JsOverlay
-  @Nonnull
-  default JsonWebKey y(@Nonnull final String y) {
-    setY( y );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends JsonWebKey {
+    @JsOverlay
+    @Nonnull
+    default Builder alg(@Nonnull final String alg) {
+      setAlg( alg );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder crv(@Nonnull final String crv) {
+      setCrv( crv );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder d(@Nonnull final String d) {
+      setD( d );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder dp(@Nonnull final String dp) {
+      setDp( dp );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder dq(@Nonnull final String dq) {
+      setDq( dq );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder e(@Nonnull final String e) {
+      setE( e );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder ext(final boolean ext) {
+      setExt( ext );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder k(@Nonnull final String k) {
+      setK( k );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder key_ops(@Nonnull final JsArray<String> key_ops) {
+      setKey_ops( key_ops );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder key_ops(@Nonnull final String... key_ops) {
+      setKey_ops( key_ops );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder kty(@Nonnull final String kty) {
+      setKty( kty );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder n(@Nonnull final String n) {
+      setN( n );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder oth(@Nonnull final JsArray<RsaOtherPrimesInfo> oth) {
+      setOth( oth );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder oth(@Nonnull final RsaOtherPrimesInfo... oth) {
+      setOth( oth );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder p(@Nonnull final String p) {
+      setP( p );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder q(@Nonnull final String q) {
+      setQ( q );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder qi(@Nonnull final String qi) {
+      setQi( qi );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder use(@Nonnull final String use) {
+      setUse( use );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder x(@Nonnull final String x) {
+      setX( x );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder y(@Nonnull final String y) {
+      setY( y );
+      return this;
+    }
   }
 }

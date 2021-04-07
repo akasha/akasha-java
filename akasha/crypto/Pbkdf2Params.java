@@ -25,23 +25,23 @@ import jsinterop.base.JsPropertyMap;
 public interface Pbkdf2Params extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
+  static Builder create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
       final int iterations, @Nonnull final BufferSource salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
   }
 
   @JsOverlay
   @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final Object hash,
+  static Builder create(@Nonnull final String name, @Nonnull final Object hash,
       final int iterations, @Nonnull final BufferSource salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
   }
 
   @JsOverlay
   @Nonnull
-  static Pbkdf2Params create(@Nonnull final String name, @Nonnull final String hash,
+  static Builder create(@Nonnull final String name, @Nonnull final String hash,
       final int iterations, @Nonnull final BufferSource salt) {
-    return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
   }
 
   @JsProperty(
@@ -54,34 +54,13 @@ public interface Pbkdf2Params extends Algorithm {
   void setHash(@Nonnull AlgorithmIdentifier hash);
 
   @JsOverlay
-  @Nonnull
-  default Pbkdf2Params hash(@Nonnull final AlgorithmIdentifier hash) {
-    setHash( hash );
-    return this;
-  }
-
-  @JsOverlay
   default void setHash(@Nonnull final Object hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
   @JsOverlay
-  @Nonnull
-  default Pbkdf2Params hash(@Nonnull final Object hash) {
-    setHash( hash );
-    return this;
-  }
-
-  @JsOverlay
   default void setHash(@Nonnull final String hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default Pbkdf2Params hash(@Nonnull final String hash) {
-    setHash( hash );
-    return this;
   }
 
   @JsProperty(
@@ -92,13 +71,6 @@ public interface Pbkdf2Params extends Algorithm {
   @JsProperty
   void setIterations(int iterations);
 
-  @JsOverlay
-  @Nonnull
-  default Pbkdf2Params iterations(final int iterations) {
-    setIterations( iterations );
-    return this;
-  }
-
   @JsProperty(
       name = "salt"
   )
@@ -108,17 +80,59 @@ public interface Pbkdf2Params extends Algorithm {
   @JsProperty
   void setSalt(@Nonnull BufferSource salt);
 
-  @JsOverlay
-  @Nonnull
-  default Pbkdf2Params salt(@Nonnull final BufferSource salt) {
-    setSalt( salt );
-    return this;
-  }
+  /**
+   * The Pbkdf2Params dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the PBKDF2 algorithm.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params">SubtleCrypto.Pbkdf2Params - Web Cryptography API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Pbkdf2Params {
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final AlgorithmIdentifier hash) {
+      setHash( hash );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default Pbkdf2Params name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final Object hash) {
+      setHash( hash );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder hash(@Nonnull final String hash) {
+      setHash( hash );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder iterations(final int iterations) {
+      setIterations( iterations );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder salt(@Nonnull final BufferSource salt) {
+      setSalt( salt );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

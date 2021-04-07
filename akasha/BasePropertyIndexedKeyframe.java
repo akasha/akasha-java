@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BasePropertyIndexedKeyframe {
   @JsOverlay
   @Nonnull
-  static BasePropertyIndexedKeyframe create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,34 +39,13 @@ public interface BasePropertyIndexedKeyframe {
   }
 
   @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe composite(@Nonnull final String composite) {
-    setComposite( composite );
-    return this;
-  }
-
-  @JsOverlay
   default void setComposite(@Nonnull final JsArray<String> composite) {
     setComposite( CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion.of( composite ) );
   }
 
   @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe composite(@Nonnull final JsArray<String> composite) {
-    setComposite( composite );
-    return this;
-  }
-
-  @JsOverlay
   default void setComposite(@Nonnull final String... composite) {
     setComposite( CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion.of( composite ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe composite(@Nonnull final String... composite) {
-    setComposite( composite );
-    return this;
   }
 
   @JsProperty(
@@ -83,34 +62,13 @@ public interface BasePropertyIndexedKeyframe {
   }
 
   @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe easing(@Nonnull final String easing) {
-    setEasing( easing );
-    return this;
-  }
-
-  @JsOverlay
   default void setEasing(@Nonnull final JsArray<String> easing) {
     setEasing( StringOrStringArrayUnion.of( easing ) );
   }
 
   @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe easing(@Nonnull final JsArray<String> easing) {
-    setEasing( easing );
-    return this;
-  }
-
-  @JsOverlay
   default void setEasing(@Nonnull final String... easing) {
     setEasing( StringOrStringArrayUnion.of( easing ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe easing(@Nonnull final String... easing) {
-    setEasing( easing );
-    return this;
   }
 
   @JsProperty(
@@ -128,22 +86,8 @@ public interface BasePropertyIndexedKeyframe {
   }
 
   @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe offset(@Nullable final Double offset) {
-    setOffset( offset );
-    return this;
-  }
-
-  @JsOverlay
   default void setOffset(@Nonnull final JsArray<Double> offset) {
     setOffset( DoubleOrDoubleArrayUnion.of( offset ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe offset(@Nonnull final JsArray<Double> offset) {
-    setOffset( offset );
-    return this;
   }
 
   @JsOverlay
@@ -151,10 +95,74 @@ public interface BasePropertyIndexedKeyframe {
     setOffset( DoubleOrDoubleArrayUnion.of( offset ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default BasePropertyIndexedKeyframe offset(@Nonnull final double... offset) {
-    setOffset( offset );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends BasePropertyIndexedKeyframe {
+    @JsOverlay
+    @Nonnull
+    default Builder composite(@Nonnull final String composite) {
+      setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composite(@Nonnull final JsArray<String> composite) {
+      setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composite(@Nonnull final String... composite) {
+      setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nonnull final String easing) {
+      setEasing( easing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nonnull final JsArray<String> easing) {
+      setEasing( easing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nonnull final String... easing) {
+      setEasing( easing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offset(@Nullable final Double offset) {
+      setOffset( offset );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offset(@Nonnull final JsArray<Double> offset) {
+      setOffset( offset );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offset(@Nonnull final double... offset) {
+      setOffset( offset );
+      return this;
+    }
   }
 }

@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface MidiPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static MidiPermissionDescriptor create(@PermissionName @Nonnull final String name) {
-    return Js.<MidiPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@PermissionName @Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -30,17 +30,25 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setSysex(boolean sysex);
 
-  @JsOverlay
-  @Nonnull
-  default MidiPermissionDescriptor sysex(final boolean sysex) {
-    setSysex( sysex );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MidiPermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder sysex(final boolean sysex) {
+      setSysex( sysex );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default MidiPermissionDescriptor name(@PermissionName @Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@PermissionName @Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

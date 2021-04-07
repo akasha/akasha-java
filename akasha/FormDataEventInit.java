@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface FormDataEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static FormDataEventInit create(@Nonnull final FormData formData) {
-    return Js.<FormDataEventInit>uncheckedCast( JsPropertyMap.of() ).formData( formData );
+  static Builder create(@Nonnull final FormData formData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).formData( formData );
   }
 
   @JsProperty(
@@ -31,31 +31,39 @@ public interface FormDataEventInit extends EventInit {
   @JsProperty
   void setFormData(@Nonnull FormData formData);
 
-  @JsOverlay
-  @Nonnull
-  default FormDataEventInit formData(@Nonnull final FormData formData) {
-    setFormData( formData );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FormDataEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder formData(@Nonnull final FormData formData) {
+      setFormData( formData );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FormDataEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FormDataEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FormDataEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

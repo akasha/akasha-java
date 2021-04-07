@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface OfflineAudioCompletionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static OfflineAudioCompletionEventInit create(@Nonnull final AudioBuffer renderedBuffer) {
-    return Js.<OfflineAudioCompletionEventInit>uncheckedCast( JsPropertyMap.of() ).renderedBuffer( renderedBuffer );
+  static Builder create(@Nonnull final AudioBuffer renderedBuffer) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).renderedBuffer( renderedBuffer );
   }
 
   @JsProperty(
@@ -32,32 +32,39 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
   @JsProperty
   void setRenderedBuffer(@Nonnull AudioBuffer renderedBuffer);
 
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioCompletionEventInit renderedBuffer(
-      @Nonnull final AudioBuffer renderedBuffer) {
-    setRenderedBuffer( renderedBuffer );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OfflineAudioCompletionEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder renderedBuffer(@Nonnull final AudioBuffer renderedBuffer) {
+      setRenderedBuffer( renderedBuffer );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioCompletionEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioCompletionEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OfflineAudioCompletionEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

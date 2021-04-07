@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static PushSubscriptionChangeEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,14 +30,6 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsProperty
   void setNewSubscription(@Nonnull PushSubscription newSubscription);
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionChangeEventInit newSubscription(
-      @Nonnull final PushSubscription newSubscription) {
-    setNewSubscription( newSubscription );
-    return this;
-  }
-
   @JsProperty(
       name = "oldSubscription"
   )
@@ -46,32 +38,46 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsProperty
   void setOldSubscription(@Nonnull PushSubscription oldSubscription);
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionChangeEventInit oldSubscription(
-      @Nonnull final PushSubscription oldSubscription) {
-    setOldSubscription( oldSubscription );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PushSubscriptionChangeEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder newSubscription(@Nonnull final PushSubscription newSubscription) {
+      setNewSubscription( newSubscription );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionChangeEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder oldSubscription(@Nonnull final PushSubscription oldSubscription) {
+      setOldSubscription( oldSubscription );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionChangeEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PushSubscriptionChangeEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface NavigationPreloadState {
   @JsOverlay
   @Nonnull
-  static NavigationPreloadState create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface NavigationPreloadState {
   @JsProperty
   void setEnabled(boolean enabled);
 
-  @JsOverlay
-  @Nonnull
-  default NavigationPreloadState enabled(final boolean enabled) {
-    setEnabled( enabled );
-    return this;
-  }
-
   @JsProperty(
       name = "headerValue"
   )
@@ -45,10 +38,25 @@ public interface NavigationPreloadState {
   @JsProperty
   void setHeaderValue(@Nonnull String headerValue);
 
-  @JsOverlay
-  @Nonnull
-  default NavigationPreloadState headerValue(@Nonnull final String headerValue) {
-    setHeaderValue( headerValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends NavigationPreloadState {
+    @JsOverlay
+    @Nonnull
+    default Builder enabled(final boolean enabled) {
+      setEnabled( enabled );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder headerValue(@Nonnull final String headerValue) {
+      setHeaderValue( headerValue );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AnalyserOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static AnalyserOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface AnalyserOptions extends AudioNodeOptions {
   @JsProperty
   void setFftSize(int fftSize);
 
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions fftSize(final int fftSize) {
-    setFftSize( fftSize );
-    return this;
-  }
-
   @JsProperty(
       name = "maxDecibels"
   )
@@ -44,13 +37,6 @@ public interface AnalyserOptions extends AudioNodeOptions {
 
   @JsProperty
   void setMaxDecibels(double maxDecibels);
-
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions maxDecibels(final double maxDecibels) {
-    setMaxDecibels( maxDecibels );
-    return this;
-  }
 
   @JsProperty(
       name = "minDecibels"
@@ -60,13 +46,6 @@ public interface AnalyserOptions extends AudioNodeOptions {
   @JsProperty
   void setMinDecibels(double minDecibels);
 
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions minDecibels(final double minDecibels) {
-    setMinDecibels( minDecibels );
-    return this;
-  }
-
   @JsProperty(
       name = "smoothingTimeConstant"
   )
@@ -75,33 +54,61 @@ public interface AnalyserOptions extends AudioNodeOptions {
   @JsProperty
   void setSmoothingTimeConstant(double smoothingTimeConstant);
 
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions smoothingTimeConstant(final double smoothingTimeConstant) {
-    setSmoothingTimeConstant( smoothingTimeConstant );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AnalyserOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder fftSize(final int fftSize) {
+      setFftSize( fftSize );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder maxDecibels(final double maxDecibels) {
+      setMaxDecibels( maxDecibels );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder minDecibels(final double minDecibels) {
+      setMinDecibels( minDecibels );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnalyserOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder smoothingTimeConstant(final double smoothingTimeConstant) {
+      setSmoothingTimeConstant( smoothingTimeConstant );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

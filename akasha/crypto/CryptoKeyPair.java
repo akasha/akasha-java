@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CryptoKeyPair {
   @JsOverlay
   @Nonnull
-  static CryptoKeyPair create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -36,13 +36,6 @@ public interface CryptoKeyPair {
   @JsProperty
   void setPrivateKey(@Nonnull CryptoKey privateKey);
 
-  @JsOverlay
-  @Nonnull
-  default CryptoKeyPair privateKey(@Nonnull final CryptoKey privateKey) {
-    setPrivateKey( privateKey );
-    return this;
-  }
-
   @JsProperty(
       name = "publicKey"
   )
@@ -51,10 +44,31 @@ public interface CryptoKeyPair {
   @JsProperty
   void setPublicKey(@Nonnull CryptoKey publicKey);
 
-  @JsOverlay
-  @Nonnull
-  default CryptoKeyPair publicKey(@Nonnull final CryptoKey publicKey) {
-    setPublicKey( publicKey );
-    return this;
+  /**
+   * The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKeyPair">CryptoKeyPair - Web Cryptography API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CryptoKeyPair {
+    @JsOverlay
+    @Nonnull
+    default Builder privateKey(@Nonnull final CryptoKey privateKey) {
+      setPrivateKey( privateKey );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder publicKey(@Nonnull final CryptoKey publicKey) {
+      setPublicKey( publicKey );
+      return this;
+    }
   }
 }

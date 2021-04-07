@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RequestInit {
   @JsOverlay
   @Nonnull
-  static RequestInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -37,22 +37,8 @@ public interface RequestInit {
   void setBody(@Nullable BodyInit body);
 
   @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nullable final BodyInit body) {
-    setBody( body );
-    return this;
-  }
-
-  @JsOverlay
   default void setBody(@Nonnull final ReadableStream body) {
     setBody( BodyInit.of( body ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final ReadableStream body) {
-    setBody( body );
-    return this;
   }
 
   @JsOverlay
@@ -61,22 +47,8 @@ public interface RequestInit {
   }
 
   @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final XMLHttpRequestBodyInit body) {
-    setBody( body );
-    return this;
-  }
-
-  @JsOverlay
   default void setBody(@Nonnull final Blob body) {
     setBody( BodyInit.of( body ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final Blob body) {
-    setBody( body );
-    return this;
   }
 
   @JsOverlay
@@ -85,22 +57,8 @@ public interface RequestInit {
   }
 
   @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final BufferSource body) {
-    setBody( body );
-    return this;
-  }
-
-  @JsOverlay
   default void setBody(@Nonnull final FormData body) {
     setBody( BodyInit.of( body ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final FormData body) {
-    setBody( body );
-    return this;
   }
 
   @JsOverlay
@@ -109,22 +67,8 @@ public interface RequestInit {
   }
 
   @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final URLSearchParams body) {
-    setBody( body );
-    return this;
-  }
-
-  @JsOverlay
   default void setBody(@Nonnull final String body) {
     setBody( BodyInit.of( body ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit body(@Nonnull final String body) {
-    setBody( body );
-    return this;
   }
 
   @JsProperty(
@@ -136,13 +80,6 @@ public interface RequestInit {
   @JsProperty
   void setCache(@RequestCache @Nonnull String cache);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit cache(@RequestCache @Nonnull final String cache) {
-    setCache( cache );
-    return this;
-  }
-
   @JsProperty(
       name = "credentials"
   )
@@ -151,13 +88,6 @@ public interface RequestInit {
 
   @JsProperty
   void setCredentials(@RequestCredentials @Nonnull String credentials);
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit credentials(@RequestCredentials @Nonnull final String credentials) {
-    setCredentials( credentials );
-    return this;
-  }
 
   @JsProperty(
       name = "headers"
@@ -168,22 +98,8 @@ public interface RequestInit {
   void setHeaders(@Nonnull HeadersInit headers);
 
   @JsOverlay
-  @Nonnull
-  default RequestInit headers(@Nonnull final HeadersInit headers) {
-    setHeaders( headers );
-    return this;
-  }
-
-  @JsOverlay
   default void setHeaders(@Nonnull final JsArray<JsArray<String>> headers) {
     setHeaders( HeadersInit.of( headers ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit headers(@Nonnull final JsArray<JsArray<String>> headers) {
-    setHeaders( headers );
-    return this;
   }
 
   @JsOverlay
@@ -193,23 +109,8 @@ public interface RequestInit {
   }
 
   @JsOverlay
-  @Nonnull
-  @SuppressWarnings("unchecked")
-  default RequestInit headers(@Nonnull final JsArray<String>... headers) {
-    setHeaders( headers );
-    return this;
-  }
-
-  @JsOverlay
   default void setHeaders(@Nonnull final JsPropertyMap<String> headers) {
     setHeaders( HeadersInit.of( headers ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit headers(@Nonnull final JsPropertyMap<String> headers) {
-    setHeaders( headers );
-    return this;
   }
 
   @JsProperty(
@@ -220,13 +121,6 @@ public interface RequestInit {
   @JsProperty
   void setIntegrity(@Nonnull String integrity);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit integrity(@Nonnull final String integrity) {
-    setIntegrity( integrity );
-    return this;
-  }
-
   @JsProperty(
       name = "keepalive"
   )
@@ -235,13 +129,6 @@ public interface RequestInit {
   @JsProperty
   void setKeepalive(boolean keepalive);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit keepalive(final boolean keepalive) {
-    setKeepalive( keepalive );
-    return this;
-  }
-
   @JsProperty(
       name = "method"
   )
@@ -249,13 +136,6 @@ public interface RequestInit {
 
   @JsProperty
   void setMethod(@Nonnull String method);
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit method(@Nonnull final String method) {
-    setMethod( method );
-    return this;
-  }
 
   @JsProperty(
       name = "mode"
@@ -266,13 +146,6 @@ public interface RequestInit {
   @JsProperty
   void setMode(@RequestMode @Nonnull String mode);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit mode(@RequestMode @Nonnull final String mode) {
-    setMode( mode );
-    return this;
-  }
-
   @JsProperty(
       name = "redirect"
   )
@@ -282,13 +155,6 @@ public interface RequestInit {
   @JsProperty
   void setRedirect(@RequestRedirect @Nonnull String redirect);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit redirect(@RequestRedirect @Nonnull final String redirect) {
-    setRedirect( redirect );
-    return this;
-  }
-
   @JsProperty(
       name = "referrer"
   )
@@ -296,13 +162,6 @@ public interface RequestInit {
 
   @JsProperty
   void setReferrer(@Nonnull String referrer);
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit referrer(@Nonnull final String referrer) {
-    setReferrer( referrer );
-    return this;
-  }
 
   @JsProperty(
       name = "referrerPolicy"
@@ -313,13 +172,6 @@ public interface RequestInit {
   @JsProperty
   void setReferrerPolicy(@ReferrerPolicy @Nonnull String referrerPolicy);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit referrerPolicy(@ReferrerPolicy @Nonnull final String referrerPolicy) {
-    setReferrerPolicy( referrerPolicy );
-    return this;
-  }
-
   @JsProperty(
       name = "signal"
   )
@@ -328,13 +180,6 @@ public interface RequestInit {
 
   @JsProperty
   void setSignal(@Nullable AbortSignal signal);
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit signal(@Nullable final AbortSignal signal) {
-    setSignal( signal );
-    return this;
-  }
 
   @JsProperty(
       name = "window"
@@ -345,10 +190,173 @@ public interface RequestInit {
   @JsProperty
   void setWindow(@DoNotAutobox @Nullable Object window);
 
-  @JsOverlay
-  @Nonnull
-  default RequestInit window(@DoNotAutobox @Nullable final Object window) {
-    setWindow( window );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RequestInit {
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nullable final BodyInit body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final ReadableStream body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final XMLHttpRequestBodyInit body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final Blob body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final BufferSource body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final FormData body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final URLSearchParams body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder body(@Nonnull final String body) {
+      setBody( body );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cache(@RequestCache @Nonnull final String cache) {
+      setCache( cache );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder credentials(@RequestCredentials @Nonnull final String credentials) {
+      setCredentials( credentials );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder headers(@Nonnull final HeadersInit headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder headers(@Nonnull final JsArray<JsArray<String>> headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    @SuppressWarnings("unchecked")
+    default Builder headers(@Nonnull final JsArray<String>... headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder headers(@Nonnull final JsPropertyMap<String> headers) {
+      setHeaders( headers );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder integrity(@Nonnull final String integrity) {
+      setIntegrity( integrity );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keepalive(final boolean keepalive) {
+      setKeepalive( keepalive );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder method(@Nonnull final String method) {
+      setMethod( method );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mode(@RequestMode @Nonnull final String mode) {
+      setMode( mode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder redirect(@RequestRedirect @Nonnull final String redirect) {
+      setRedirect( redirect );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder referrer(@Nonnull final String referrer) {
+      setReferrer( referrer );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder referrerPolicy(@ReferrerPolicy @Nonnull final String referrerPolicy) {
+      setReferrerPolicy( referrerPolicy );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder signal(@Nullable final AbortSignal signal) {
+      setSignal( signal );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder window(@DoNotAutobox @Nullable final Object window) {
+      setWindow( window );
+      return this;
+    }
   }
 }

@@ -24,8 +24,8 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioParamDescriptor {
   @JsOverlay
   @Nonnull
-  static AudioParamDescriptor create(@Nonnull final String name) {
-    return Js.<AudioParamDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -37,14 +37,6 @@ public interface AudioParamDescriptor {
   @JsProperty
   void setAutomationRate(@AutomationRate @Nonnull String automationRate);
 
-  @JsOverlay
-  @Nonnull
-  default AudioParamDescriptor automationRate(
-      @AutomationRate @Nonnull final String automationRate) {
-    setAutomationRate( automationRate );
-    return this;
-  }
-
   @JsProperty(
       name = "defaultValue"
   )
@@ -52,13 +44,6 @@ public interface AudioParamDescriptor {
 
   @JsProperty
   void setDefaultValue(float defaultValue);
-
-  @JsOverlay
-  @Nonnull
-  default AudioParamDescriptor defaultValue(final float defaultValue) {
-    setDefaultValue( defaultValue );
-    return this;
-  }
 
   @JsProperty(
       name = "maxValue"
@@ -68,13 +53,6 @@ public interface AudioParamDescriptor {
   @JsProperty
   void setMaxValue(float maxValue);
 
-  @JsOverlay
-  @Nonnull
-  default AudioParamDescriptor maxValue(final float maxValue) {
-    setMaxValue( maxValue );
-    return this;
-  }
-
   @JsProperty(
       name = "minValue"
   )
@@ -82,13 +60,6 @@ public interface AudioParamDescriptor {
 
   @JsProperty
   void setMinValue(float minValue);
-
-  @JsOverlay
-  @Nonnull
-  default AudioParamDescriptor minValue(final float minValue) {
-    setMinValue( minValue );
-    return this;
-  }
 
   @JsProperty(
       name = "name"
@@ -99,10 +70,52 @@ public interface AudioParamDescriptor {
   @JsProperty
   void setName(@Nonnull String name);
 
-  @JsOverlay
-  @Nonnull
-  default AudioParamDescriptor name(@Nonnull final String name) {
-    setName( name );
-    return this;
+  /**
+   * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for an AudioParam objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamDescriptor">AudioParamDescriptor - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audioparamdescriptor">AudioParamDescriptor - Web Audio API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AudioParamDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder automationRate(@AutomationRate @Nonnull final String automationRate) {
+      setAutomationRate( automationRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder defaultValue(final float defaultValue) {
+      setDefaultValue( defaultValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder maxValue(final float maxValue) {
+      setMaxValue( maxValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder minValue(final float minValue) {
+      setMinValue( minValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

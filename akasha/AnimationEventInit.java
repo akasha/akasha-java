@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AnimationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static AnimationEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface AnimationEventInit extends EventInit {
   @JsProperty
   void setAnimationName(@Nonnull String animationName);
 
-  @JsOverlay
-  @Nonnull
-  default AnimationEventInit animationName(@Nonnull final String animationName) {
-    setAnimationName( animationName );
-    return this;
-  }
-
   @JsProperty(
       name = "elapsedTime"
   )
@@ -44,13 +37,6 @@ public interface AnimationEventInit extends EventInit {
 
   @JsProperty
   void setElapsedTime(double elapsedTime);
-
-  @JsOverlay
-  @Nonnull
-  default AnimationEventInit elapsedTime(final double elapsedTime) {
-    setElapsedTime( elapsedTime );
-    return this;
-  }
 
   @JsProperty(
       name = "pseudoElement"
@@ -60,31 +46,53 @@ public interface AnimationEventInit extends EventInit {
   @JsProperty
   void setPseudoElement(@Nonnull String pseudoElement);
 
-  @JsOverlay
-  @Nonnull
-  default AnimationEventInit pseudoElement(@Nonnull final String pseudoElement) {
-    setPseudoElement( pseudoElement );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AnimationEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder animationName(@Nonnull final String animationName) {
+      setAnimationName( animationName );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnimationEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder elapsedTime(final double elapsedTime) {
+      setElapsedTime( elapsedTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnimationEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder pseudoElement(@Nonnull final String pseudoElement) {
+      setPseudoElement( pseudoElement );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnimationEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

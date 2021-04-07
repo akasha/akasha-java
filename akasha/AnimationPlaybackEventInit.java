@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AnimationPlaybackEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static AnimationPlaybackEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface AnimationPlaybackEventInit extends EventInit {
   @JsProperty
   void setCurrentTime(@Nullable Double currentTime);
 
-  @JsOverlay
-  @Nonnull
-  default AnimationPlaybackEventInit currentTime(@Nullable final Double currentTime) {
-    setCurrentTime( currentTime );
-    return this;
-  }
-
   @JsProperty(
       name = "timelineTime"
   )
@@ -48,31 +41,46 @@ public interface AnimationPlaybackEventInit extends EventInit {
   @JsProperty
   void setTimelineTime(@Nullable Double timelineTime);
 
-  @JsOverlay
-  @Nonnull
-  default AnimationPlaybackEventInit timelineTime(@Nullable final Double timelineTime) {
-    setTimelineTime( timelineTime );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AnimationPlaybackEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder currentTime(@Nullable final Double currentTime) {
+      setCurrentTime( currentTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnimationPlaybackEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder timelineTime(@Nullable final Double timelineTime) {
+      setTimelineTime( timelineTime );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnimationPlaybackEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AnimationPlaybackEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

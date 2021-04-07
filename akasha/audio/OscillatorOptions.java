@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface OscillatorOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static OscillatorOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsProperty
   void setDetune(float detune);
 
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions detune(final float detune) {
-    setDetune( detune );
-    return this;
-  }
-
   @JsProperty(
       name = "frequency"
   )
@@ -45,13 +38,6 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsProperty
   void setFrequency(float frequency);
 
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions frequency(final float frequency) {
-    setFrequency( frequency );
-    return this;
-  }
-
   @JsProperty(
       name = "periodicWave"
   )
@@ -59,13 +45,6 @@ public interface OscillatorOptions extends AudioNodeOptions {
 
   @JsProperty
   void setPeriodicWave(@Nonnull PeriodicWave periodicWave);
-
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions periodicWave(@Nonnull final PeriodicWave periodicWave) {
-    setPeriodicWave( periodicWave );
-    return this;
-  }
 
   @JsProperty(
       name = "type"
@@ -76,33 +55,61 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsProperty
   void setType(@OscillatorType @Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions type(@OscillatorType @Nonnull final String type) {
-    setType( type );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OscillatorOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder detune(final float detune) {
+      setDetune( detune );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions channelCount(final int channelCount) {
-    setChannelCount( channelCount );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder frequency(final float frequency) {
+      setFrequency( frequency );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions channelCountMode(
-      @ChannelCountMode @Nonnull final String channelCountMode) {
-    setChannelCountMode( channelCountMode );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder periodicWave(@Nonnull final PeriodicWave periodicWave) {
+      setPeriodicWave( periodicWave );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OscillatorOptions channelInterpretation(
-      @ChannelInterpretation @Nonnull final String channelInterpretation) {
-    setChannelInterpretation( channelInterpretation );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder type(@OscillatorType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCount(final int channelCount) {
+      setChannelCount( channelCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelCountMode(@ChannelCountMode @Nonnull final String channelCountMode) {
+      setChannelCountMode( channelCountMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channelInterpretation(
+        @ChannelInterpretation @Nonnull final String channelInterpretation) {
+      setChannelInterpretation( channelInterpretation );
+      return this;
+    }
   }
 }

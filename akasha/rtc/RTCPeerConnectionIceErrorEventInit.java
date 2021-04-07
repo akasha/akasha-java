@@ -20,8 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static RTCPeerConnectionIceErrorEventInit create(final int errorCode) {
-    return Js.<RTCPeerConnectionIceErrorEventInit>uncheckedCast( JsPropertyMap.of() ).errorCode( errorCode );
+  static Builder create(final int errorCode) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).errorCode( errorCode );
   }
 
   @JsProperty(
@@ -33,13 +33,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsProperty
   void setAddress(@Nullable String address);
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit address(@Nullable final String address) {
-    setAddress( address );
-    return this;
-  }
-
   @JsProperty(
       name = "errorCode"
   )
@@ -48,13 +41,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsProperty
   void setErrorCode(int errorCode);
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit errorCode(final int errorCode) {
-    setErrorCode( errorCode );
-    return this;
-  }
-
   @JsProperty(
       name = "errorText"
   )
@@ -62,13 +48,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
 
   @JsProperty
   void setErrorText(@Nonnull String errorText);
-
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit errorText(@Nonnull final String errorText) {
-    setErrorText( errorText );
-    return this;
-  }
 
   @JsProperty(
       name = "port"
@@ -79,13 +58,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsProperty
   void setPort(@Nullable Double port);
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit port(@Nullable final Double port) {
-    setPort( port );
-    return this;
-  }
-
   @JsProperty(
       name = "url"
   )
@@ -94,31 +66,67 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsProperty
   void setUrl(@Nonnull String url);
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit url(@Nonnull final String url) {
-    setUrl( url );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCPeerConnectionIceErrorEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder address(@Nullable final String address) {
+      setAddress( address );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder errorCode(final int errorCode) {
+      setErrorCode( errorCode );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder errorText(@Nonnull final String errorText) {
+      setErrorText( errorText );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCPeerConnectionIceErrorEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder port(@Nullable final Double port) {
+      setPort( port );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder url(@Nonnull final String url) {
+      setUrl( url );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

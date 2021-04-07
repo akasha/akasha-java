@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface TableDescriptor {
   @JsOverlay
   @Nonnull
-  static TableDescriptor create(@TableKind @Nonnull final String element, final int initial) {
-    return Js.<TableDescriptor>uncheckedCast( JsPropertyMap.of() ).element( element ).initial( initial );
+  static Builder create(@TableKind @Nonnull final String element, final int initial) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).element( element ).initial( initial );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface TableDescriptor {
   @JsProperty
   void setElement(@TableKind @Nonnull String element);
 
-  @JsOverlay
-  @Nonnull
-  default TableDescriptor element(@TableKind @Nonnull final String element) {
-    setElement( element );
-    return this;
-  }
-
   @JsProperty(
       name = "initial"
   )
@@ -46,13 +39,6 @@ public interface TableDescriptor {
 
   @JsProperty
   void setInitial(int initial);
-
-  @JsOverlay
-  @Nonnull
-  default TableDescriptor initial(final int initial) {
-    setInitial( initial );
-    return this;
-  }
 
   @JsProperty(
       name = "maximum"
@@ -62,10 +48,32 @@ public interface TableDescriptor {
   @JsProperty
   void setMaximum(int maximum);
 
-  @JsOverlay
-  @Nonnull
-  default TableDescriptor maximum(final int maximum) {
-    setMaximum( maximum );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TableDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder element(@TableKind @Nonnull final String element) {
+      setElement( element );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder initial(final int initial) {
+      setInitial( initial );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder maximum(final int maximum) {
+      setMaximum( maximum );
+      return this;
+    }
   }
 }

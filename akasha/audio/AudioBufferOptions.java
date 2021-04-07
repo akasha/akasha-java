@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioBufferOptions {
   @JsOverlay
   @Nonnull
-  static AudioBufferOptions create(final int length, final float sampleRate) {
-    return Js.<AudioBufferOptions>uncheckedCast( JsPropertyMap.of() ).length( length ).sampleRate( sampleRate );
+  static Builder create(final int length, final float sampleRate) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).length( length ).sampleRate( sampleRate );
   }
 
   @JsProperty(
@@ -30,13 +30,6 @@ public interface AudioBufferOptions {
   @JsProperty
   void setLength(int length);
 
-  @JsOverlay
-  @Nonnull
-  default AudioBufferOptions length(final int length) {
-    setLength( length );
-    return this;
-  }
-
   @JsProperty(
       name = "numberOfChannels"
   )
@@ -44,13 +37,6 @@ public interface AudioBufferOptions {
 
   @JsProperty
   void setNumberOfChannels(int numberOfChannels);
-
-  @JsOverlay
-  @Nonnull
-  default AudioBufferOptions numberOfChannels(final int numberOfChannels) {
-    setNumberOfChannels( numberOfChannels );
-    return this;
-  }
 
   @JsProperty(
       name = "sampleRate"
@@ -60,10 +46,32 @@ public interface AudioBufferOptions {
   @JsProperty
   void setSampleRate(float sampleRate);
 
-  @JsOverlay
-  @Nonnull
-  default AudioBufferOptions sampleRate(final float sampleRate) {
-    setSampleRate( sampleRate );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AudioBufferOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder length(final int length) {
+      setLength( length );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder numberOfChannels(final int numberOfChannels) {
+      setNumberOfChannels( numberOfChannels );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sampleRate(final float sampleRate) {
+      setSampleRate( sampleRate );
+      return this;
+    }
   }
 }

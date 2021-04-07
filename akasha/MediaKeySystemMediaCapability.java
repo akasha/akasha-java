@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaKeySystemMediaCapability {
   @JsOverlay
   @Nonnull
-  static MediaKeySystemMediaCapability create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface MediaKeySystemMediaCapability {
   @JsProperty
   void setContentType(@Nonnull String contentType);
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeySystemMediaCapability contentType(@Nonnull final String contentType) {
-    setContentType( contentType );
-    return this;
-  }
-
   @JsProperty(
       name = "robustness"
   )
@@ -45,10 +38,25 @@ public interface MediaKeySystemMediaCapability {
   @JsProperty
   void setRobustness(@Nonnull String robustness);
 
-  @JsOverlay
-  @Nonnull
-  default MediaKeySystemMediaCapability robustness(@Nonnull final String robustness) {
-    setRobustness( robustness );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MediaKeySystemMediaCapability {
+    @JsOverlay
+    @Nonnull
+    default Builder contentType(@Nonnull final String contentType) {
+      setContentType( contentType );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder robustness(@Nonnull final String robustness) {
+      setRobustness( robustness );
+      return this;
+    }
   }
 }

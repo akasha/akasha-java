@@ -24,8 +24,8 @@ import jsinterop.base.JsPropertyMap;
 public interface NotificationAction {
   @JsOverlay
   @Nonnull
-  static NotificationAction create(@Nonnull final String action, @Nonnull final String title) {
-    return Js.<NotificationAction>uncheckedCast( JsPropertyMap.of() ).action( action ).title( title );
+  static Builder create(@Nonnull final String action, @Nonnull final String title) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).action( action ).title( title );
   }
 
   @JsProperty(
@@ -37,13 +37,6 @@ public interface NotificationAction {
   @JsProperty
   void setAction(@Nonnull String action);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationAction action(@Nonnull final String action) {
-    setAction( action );
-    return this;
-  }
-
   @JsProperty(
       name = "icon"
   )
@@ -51,13 +44,6 @@ public interface NotificationAction {
 
   @JsProperty
   void setIcon(@Nonnull String icon);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationAction icon(@Nonnull final String icon) {
-    setIcon( icon );
-    return this;
-  }
 
   @JsProperty(
       name = "title"
@@ -68,10 +54,38 @@ public interface NotificationAction {
   @JsProperty
   void setTitle(@Nonnull String title);
 
-  @JsOverlay
-  @Nonnull
-  default NotificationAction title(@Nonnull final String title) {
-    setTitle( title );
-    return this;
+  /**
+   * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction">NotificationAction - MDN</a>
+   * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends NotificationAction {
+    @JsOverlay
+    @Nonnull
+    default Builder action(@Nonnull final String action) {
+      setAction( action );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder icon(@Nonnull final String icon) {
+      setIcon( icon );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder title(@Nonnull final String title) {
+      setTitle( title );
+      return this;
+    }
   }
 }

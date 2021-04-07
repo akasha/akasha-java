@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ConstrainDoubleRange extends DoubleRange {
   @JsOverlay
   @Nonnull
-  static ConstrainDoubleRange create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ConstrainDoubleRange extends DoubleRange {
   @JsProperty
   void setExact(double exact);
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainDoubleRange exact(final double exact) {
-    setExact( exact );
-    return this;
-  }
-
   @JsProperty(
       name = "ideal"
   )
@@ -45,24 +38,39 @@ public interface ConstrainDoubleRange extends DoubleRange {
   @JsProperty
   void setIdeal(double ideal);
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainDoubleRange ideal(final double ideal) {
-    setIdeal( ideal );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ConstrainDoubleRange {
+    @JsOverlay
+    @Nonnull
+    default Builder exact(final double exact) {
+      setExact( exact );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainDoubleRange max(final double max) {
-    setMax( max );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder ideal(final double ideal) {
+      setIdeal( ideal );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ConstrainDoubleRange min(final double min) {
-    setMin( min );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder max(final double max) {
+      setMax( max );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder min(final double min) {
+      setMin( min );
+      return this;
+    }
   }
 }

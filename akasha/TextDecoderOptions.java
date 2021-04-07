@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TextDecoderOptions {
   @JsOverlay
   @Nonnull
-  static TextDecoderOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface TextDecoderOptions {
   @JsProperty
   void setFatal(boolean fatal);
 
-  @JsOverlay
-  @Nonnull
-  default TextDecoderOptions fatal(final boolean fatal) {
-    setFatal( fatal );
-    return this;
-  }
-
   @JsProperty(
       name = "ignoreBOM"
   )
@@ -45,10 +38,25 @@ public interface TextDecoderOptions {
   @JsProperty
   void setIgnoreBOM(boolean ignoreBOM);
 
-  @JsOverlay
-  @Nonnull
-  default TextDecoderOptions ignoreBOM(final boolean ignoreBOM) {
-    setIgnoreBOM( ignoreBOM );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends TextDecoderOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder fatal(final boolean fatal) {
+      setFatal( fatal );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder ignoreBOM(final boolean ignoreBOM) {
+      setIgnoreBOM( ignoreBOM );
+      return this;
+    }
   }
 }

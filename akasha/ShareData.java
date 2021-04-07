@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ShareData {
   @JsOverlay
   @Nonnull
-  static ShareData create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,22 +32,8 @@ public interface ShareData {
   void setFiles(@Nonnull JsArray<File> files);
 
   @JsOverlay
-  @Nonnull
-  default ShareData files(@Nonnull final JsArray<File> files) {
-    setFiles( files );
-    return this;
-  }
-
-  @JsOverlay
   default void setFiles(@Nonnull final File... files) {
     setFiles( Js.<JsArray<File>>uncheckedCast( files ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default ShareData files(@Nonnull final File... files) {
-    setFiles( files );
-    return this;
   }
 
   @JsProperty(
@@ -58,13 +44,6 @@ public interface ShareData {
   @JsProperty
   void setText(@Nonnull String text);
 
-  @JsOverlay
-  @Nonnull
-  default ShareData text(@Nonnull final String text) {
-    setText( text );
-    return this;
-  }
-
   @JsProperty(
       name = "title"
   )
@@ -72,13 +51,6 @@ public interface ShareData {
 
   @JsProperty
   void setTitle(@Nonnull String title);
-
-  @JsOverlay
-  @Nonnull
-  default ShareData title(@Nonnull final String title) {
-    setTitle( title );
-    return this;
-  }
 
   @JsProperty(
       name = "url"
@@ -88,10 +60,46 @@ public interface ShareData {
   @JsProperty
   void setUrl(@Nonnull String url);
 
-  @JsOverlay
-  @Nonnull
-  default ShareData url(@Nonnull final String url) {
-    setUrl( url );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ShareData {
+    @JsOverlay
+    @Nonnull
+    default Builder files(@Nonnull final JsArray<File> files) {
+      setFiles( files );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder files(@Nonnull final File... files) {
+      setFiles( files );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder text(@Nonnull final String text) {
+      setText( text );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder title(@Nonnull final String title) {
+      setTitle( title );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder url(@Nonnull final String url) {
+      setUrl( url );
+      return this;
+    }
   }
 }

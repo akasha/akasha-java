@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface QueuingStrategy {
   @JsOverlay
   @Nonnull
-  static QueuingStrategy create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface QueuingStrategy {
   @JsProperty
   void setHighWaterMark(double highWaterMark);
 
-  @JsOverlay
-  @Nonnull
-  default QueuingStrategy highWaterMark(final double highWaterMark) {
-    setHighWaterMark( highWaterMark );
-    return this;
-  }
-
   @JsProperty(
       name = "size"
   )
@@ -45,10 +38,25 @@ public interface QueuingStrategy {
   @JsProperty
   void setSize(@Nonnull QueuingStrategySize size);
 
-  @JsOverlay
-  @Nonnull
-  default QueuingStrategy size(@Nonnull final QueuingStrategySize size) {
-    setSize( size );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends QueuingStrategy {
+    @JsOverlay
+    @Nonnull
+    default Builder highWaterMark(final double highWaterMark) {
+      setHighWaterMark( highWaterMark );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder size(@Nonnull final QueuingStrategySize size) {
+      setSize( size );
+      return this;
+    }
   }
 }

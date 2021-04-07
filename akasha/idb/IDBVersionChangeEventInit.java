@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IDBVersionChangeEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static IDBVersionChangeEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,13 +33,6 @@ public interface IDBVersionChangeEventInit extends EventInit {
   @JsProperty
   void setNewVersion(@Nullable Double newVersion);
 
-  @JsOverlay
-  @Nonnull
-  default IDBVersionChangeEventInit newVersion(@Nullable final Double newVersion) {
-    setNewVersion( newVersion );
-    return this;
-  }
-
   @JsProperty(
       name = "oldVersion"
   )
@@ -48,31 +41,46 @@ public interface IDBVersionChangeEventInit extends EventInit {
   @JsProperty
   void setOldVersion(int oldVersion);
 
-  @JsOverlay
-  @Nonnull
-  default IDBVersionChangeEventInit oldVersion(final int oldVersion) {
-    setOldVersion( oldVersion );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IDBVersionChangeEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder newVersion(@Nullable final Double newVersion) {
+      setNewVersion( newVersion );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default IDBVersionChangeEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder oldVersion(final int oldVersion) {
+      setOldVersion( oldVersion );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default IDBVersionChangeEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default IDBVersionChangeEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

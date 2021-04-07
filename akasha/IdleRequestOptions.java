@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IdleRequestOptions {
   @JsOverlay
   @Nonnull
-  static IdleRequestOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface IdleRequestOptions {
   @JsProperty
   void setTimeout(int timeout);
 
-  @JsOverlay
-  @Nonnull
-  default IdleRequestOptions timeout(final int timeout) {
-    setTimeout( timeout );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IdleRequestOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder timeout(final int timeout) {
+      setTimeout( timeout );
+      return this;
+    }
   }
 }

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DragEventInit extends MouseEventInit {
   @JsOverlay
   @Nonnull
-  static DragEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,206 +32,214 @@ public interface DragEventInit extends MouseEventInit {
   @JsProperty
   void setDataTransfer(@Nullable DataTransfer dataTransfer);
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit dataTransfer(@Nullable final DataTransfer dataTransfer) {
-    setDataTransfer( dataTransfer );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DragEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder dataTransfer(@Nullable final DataTransfer dataTransfer) {
+      setDataTransfer( dataTransfer );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit button(final short button) {
-    setButton( button );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder button(final short button) {
+      setButton( button );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit buttons(final int buttons) {
-    setButtons( buttons );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder buttons(final int buttons) {
+      setButtons( buttons );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit relatedTarget(@Nullable final EventTarget relatedTarget) {
-    setRelatedTarget( relatedTarget );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder relatedTarget(@Nullable final EventTarget relatedTarget) {
+      setRelatedTarget( relatedTarget );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit clientX(final double clientX) {
-    setClientX( clientX );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder clientX(final double clientX) {
+      setClientX( clientX );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit clientY(final double clientY) {
-    setClientY( clientY );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder clientY(final double clientY) {
+      setClientY( clientY );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit screenX(final double screenX) {
-    setScreenX( screenX );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder screenX(final double screenX) {
+      setScreenX( screenX );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit screenY(final double screenY) {
-    setScreenY( screenY );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder screenY(final double screenY) {
+      setScreenY( screenY );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit movementX(final int movementX) {
-    setMovementX( movementX );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder movementX(final int movementX) {
+      setMovementX( movementX );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit movementY(final int movementY) {
-    setMovementY( movementY );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder movementY(final int movementY) {
+      setMovementY( movementY );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit altKey(final boolean altKey) {
-    setAltKey( altKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder altKey(final boolean altKey) {
+      setAltKey( altKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit ctrlKey(final boolean ctrlKey) {
-    setCtrlKey( ctrlKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder ctrlKey(final boolean ctrlKey) {
+      setCtrlKey( ctrlKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit metaKey(final boolean metaKey) {
-    setMetaKey( metaKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder metaKey(final boolean metaKey) {
+      setMetaKey( metaKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierAltGraph(final boolean modifierAltGraph) {
-    setModifierAltGraph( modifierAltGraph );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierAltGraph(final boolean modifierAltGraph) {
+      setModifierAltGraph( modifierAltGraph );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierCapsLock(final boolean modifierCapsLock) {
-    setModifierCapsLock( modifierCapsLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierCapsLock(final boolean modifierCapsLock) {
+      setModifierCapsLock( modifierCapsLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierFn(final boolean modifierFn) {
-    setModifierFn( modifierFn );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierFn(final boolean modifierFn) {
+      setModifierFn( modifierFn );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierFnLock(final boolean modifierFnLock) {
-    setModifierFnLock( modifierFnLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierFnLock(final boolean modifierFnLock) {
+      setModifierFnLock( modifierFnLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierHyper(final boolean modifierHyper) {
-    setModifierHyper( modifierHyper );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierHyper(final boolean modifierHyper) {
+      setModifierHyper( modifierHyper );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierNumLock(final boolean modifierNumLock) {
-    setModifierNumLock( modifierNumLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierNumLock(final boolean modifierNumLock) {
+      setModifierNumLock( modifierNumLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierScrollLock(final boolean modifierScrollLock) {
-    setModifierScrollLock( modifierScrollLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierScrollLock(final boolean modifierScrollLock) {
+      setModifierScrollLock( modifierScrollLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierSuper(final boolean modifierSuper) {
-    setModifierSuper( modifierSuper );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierSuper(final boolean modifierSuper) {
+      setModifierSuper( modifierSuper );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierSymbol(final boolean modifierSymbol) {
-    setModifierSymbol( modifierSymbol );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierSymbol(final boolean modifierSymbol) {
+      setModifierSymbol( modifierSymbol );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit modifierSymbolLock(final boolean modifierSymbolLock) {
-    setModifierSymbolLock( modifierSymbolLock );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder modifierSymbolLock(final boolean modifierSymbolLock) {
+      setModifierSymbolLock( modifierSymbolLock );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit shiftKey(final boolean shiftKey) {
-    setShiftKey( shiftKey );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder shiftKey(final boolean shiftKey) {
+      setShiftKey( shiftKey );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit detail(final int detail) {
-    setDetail( detail );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder detail(final int detail) {
+      setDetail( detail );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit view(@Nullable final Window view) {
-    setView( view );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nullable final Window view) {
+      setView( view );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default DragEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

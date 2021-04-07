@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityProvider {
   @JsOverlay
   @Nonnull
-  static RTCIdentityProvider create(@Nonnull final GenerateAssertionCallback generateAssertion,
+  static Builder create(@Nonnull final GenerateAssertionCallback generateAssertion,
       @Nonnull final ValidateAssertionCallback validateAssertion) {
-    return Js.<RTCIdentityProvider>uncheckedCast( JsPropertyMap.of() ).generateAssertion( generateAssertion ).validateAssertion( validateAssertion );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).generateAssertion( generateAssertion ).validateAssertion( validateAssertion );
   }
 
   @JsProperty(
@@ -32,14 +32,6 @@ public interface RTCIdentityProvider {
   @JsProperty
   void setGenerateAssertion(@Nonnull GenerateAssertionCallback generateAssertion);
 
-  @JsOverlay
-  @Nonnull
-  default RTCIdentityProvider generateAssertion(
-      @Nonnull final GenerateAssertionCallback generateAssertion) {
-    setGenerateAssertion( generateAssertion );
-    return this;
-  }
-
   @JsProperty(
       name = "validateAssertion"
   )
@@ -49,11 +41,25 @@ public interface RTCIdentityProvider {
   @JsProperty
   void setValidateAssertion(@Nonnull ValidateAssertionCallback validateAssertion);
 
-  @JsOverlay
-  @Nonnull
-  default RTCIdentityProvider validateAssertion(
-      @Nonnull final ValidateAssertionCallback validateAssertion) {
-    setValidateAssertion( validateAssertion );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCIdentityProvider {
+    @JsOverlay
+    @Nonnull
+    default Builder generateAssertion(@Nonnull final GenerateAssertionCallback generateAssertion) {
+      setGenerateAssertion( generateAssertion );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder validateAssertion(@Nonnull final ValidateAssertionCallback validateAssertion) {
+      setValidateAssertion( validateAssertion );
+      return this;
+    }
   }
 }

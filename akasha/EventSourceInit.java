@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EventSourceInit {
   @JsOverlay
   @Nonnull
-  static EventSourceInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface EventSourceInit {
   @JsProperty
   void setWithCredentials(boolean withCredentials);
 
-  @JsOverlay
-  @Nonnull
-  default EventSourceInit withCredentials(final boolean withCredentials) {
-    setWithCredentials( withCredentials );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends EventSourceInit {
+    @JsOverlay
+    @Nonnull
+    default Builder withCredentials(final boolean withCredentials) {
+      setWithCredentials( withCredentials );
+      return this;
+    }
   }
 }

@@ -25,7 +25,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIceCandidateInit {
   @JsOverlay
   @Nonnull
-  static RTCIceCandidateInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -50,19 +50,6 @@ public interface RTCIceCandidateInit {
   void setCandidate(@Nonnull String candidate);
 
   /**
-   * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">RTCIceCandidateInit.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCIceCandidateInit candidate(@Nonnull final String candidate) {
-    setCandidate( candidate );
-    return this;
-  }
-
-  /**
    * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
@@ -84,19 +71,6 @@ public interface RTCIceCandidateInit {
   void setSdpMLineIndex(@Nullable Double sdpMLineIndex);
 
   /**
-   * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">RTCIceCandidateInit.sdpMLineIndex - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCIceCandidateInit sdpMLineIndex(@Nullable final Double sdpMLineIndex) {
-    setSdpMLineIndex( sdpMLineIndex );
-    return this;
-  }
-
-  /**
    * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
@@ -114,18 +88,6 @@ public interface RTCIceCandidateInit {
    */
   @JsProperty
   void setSdpMid(@Nullable String sdpMid);
-
-  /**
-   * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCIceCandidateInit sdpMid(@Nullable final String sdpMid) {
-    setSdpMid( sdpMid );
-    return this;
-  }
 
   /**
    * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
@@ -149,15 +111,67 @@ public interface RTCIceCandidateInit {
   void setUsernameFragment(@Nullable String usernameFragment);
 
   /**
-   * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
+   * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">RTCIceCandidateInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @JsOverlay
-  @Nonnull
-  default RTCIceCandidateInit usernameFragment(@Nullable final String usernameFragment) {
-    setUsernameFragment( usernameFragment );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCIceCandidateInit {
+    /**
+     * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">RTCIceCandidateInit.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder candidate(@Nonnull final String candidate) {
+      setCandidate( candidate );
+      return this;
+    }
+
+    /**
+     * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">RTCIceCandidateInit.sdpMLineIndex - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder sdpMLineIndex(@Nullable final Double sdpMLineIndex) {
+      setSdpMLineIndex( sdpMLineIndex );
+      return this;
+    }
+
+    /**
+     * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder sdpMid(@Nullable final String sdpMid) {
+      setSdpMid( sdpMid );
+      return this;
+    }
+
+    /**
+     * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder usernameFragment(@Nullable final String usernameFragment) {
+      setUsernameFragment( usernameFragment );
+      return this;
+    }
   }
 }

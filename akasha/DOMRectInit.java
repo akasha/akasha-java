@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DOMRectInit {
   @JsOverlay
   @Nonnull
-  static DOMRectInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface DOMRectInit {
   @JsProperty
   void setHeight(double height);
 
-  @JsOverlay
-  @Nonnull
-  default DOMRectInit height(final double height) {
-    setHeight( height );
-    return this;
-  }
-
   @JsProperty(
       name = "width"
   )
@@ -44,13 +37,6 @@ public interface DOMRectInit {
 
   @JsProperty
   void setWidth(double width);
-
-  @JsOverlay
-  @Nonnull
-  default DOMRectInit width(final double width) {
-    setWidth( width );
-    return this;
-  }
 
   @JsProperty(
       name = "x"
@@ -60,13 +46,6 @@ public interface DOMRectInit {
   @JsProperty
   void setX(double x);
 
-  @JsOverlay
-  @Nonnull
-  default DOMRectInit x(final double x) {
-    setX( x );
-    return this;
-  }
-
   @JsProperty(
       name = "y"
   )
@@ -75,10 +54,39 @@ public interface DOMRectInit {
   @JsProperty
   void setY(double y);
 
-  @JsOverlay
-  @Nonnull
-  default DOMRectInit y(final double y) {
-    setY( y );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends DOMRectInit {
+    @JsOverlay
+    @Nonnull
+    default Builder height(final double height) {
+      setHeight( height );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder width(final double width) {
+      setWidth( width );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder x(final double x) {
+      setX( x );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder y(final double y) {
+      setY( y );
+      return this;
+    }
   }
 }

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FocusEventInit extends UIEventInit {
   @JsOverlay
   @Nonnull
-  static FocusEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,45 +32,53 @@ public interface FocusEventInit extends UIEventInit {
   @JsProperty
   void setRelatedTarget(@Nullable EventTarget relatedTarget);
 
-  @JsOverlay
-  @Nonnull
-  default FocusEventInit relatedTarget(@Nullable final EventTarget relatedTarget) {
-    setRelatedTarget( relatedTarget );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends FocusEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder relatedTarget(@Nullable final EventTarget relatedTarget) {
+      setRelatedTarget( relatedTarget );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FocusEventInit detail(final int detail) {
-    setDetail( detail );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder detail(final int detail) {
+      setDetail( detail );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FocusEventInit view(@Nullable final Window view) {
-    setView( view );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nullable final Window view) {
+      setView( view );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FocusEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FocusEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default FocusEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

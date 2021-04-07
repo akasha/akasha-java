@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ImageEncodeOptions {
   @JsOverlay
   @Nonnull
-  static ImageEncodeOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ImageEncodeOptions {
   @JsProperty
   void setQuality(double quality);
 
-  @JsOverlay
-  @Nonnull
-  default ImageEncodeOptions quality(final double quality) {
-    setQuality( quality );
-    return this;
-  }
-
   @JsProperty(
       name = "type"
   )
@@ -45,10 +38,25 @@ public interface ImageEncodeOptions {
   @JsProperty
   void setType(@Nonnull String type);
 
-  @JsOverlay
-  @Nonnull
-  default ImageEncodeOptions type(@Nonnull final String type) {
-    setType( type );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ImageEncodeOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder quality(final double quality) {
+      setQuality( quality );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder type(@Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface CameraDevicePermissionDescriptor extends DevicePermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static CameraDevicePermissionDescriptor create(@PermissionName @Nonnull final String name) {
-    return Js.<CameraDevicePermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@PermissionName @Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -30,24 +30,32 @@ public interface CameraDevicePermissionDescriptor extends DevicePermissionDescri
   @JsProperty
   void setPanTiltZoom(boolean panTiltZoom);
 
-  @JsOverlay
-  @Nonnull
-  default CameraDevicePermissionDescriptor panTiltZoom(final boolean panTiltZoom) {
-    setPanTiltZoom( panTiltZoom );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CameraDevicePermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder panTiltZoom(final boolean panTiltZoom) {
+      setPanTiltZoom( panTiltZoom );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CameraDevicePermissionDescriptor deviceId(@Nonnull final String deviceId) {
-    setDeviceId( deviceId );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder deviceId(@Nonnull final String deviceId) {
+      setDeviceId( deviceId );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CameraDevicePermissionDescriptor name(@PermissionName @Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@PermissionName @Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

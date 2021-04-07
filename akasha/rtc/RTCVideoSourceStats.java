@@ -18,10 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCVideoSourceStats extends RTCMediaSourceStats {
   @JsOverlay
   @Nonnull
-  static RTCVideoSourceStats create(@Nonnull final String id, final double timestamp,
+  static Builder create(@Nonnull final String id, final double timestamp,
       @RTCStatsType @Nonnull final String type, @Nonnull final String kind,
       @Nonnull final String trackIdentifier) {
-    return Js.<RTCVideoSourceStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).trackIdentifier( trackIdentifier );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).trackIdentifier( trackIdentifier );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
   @JsProperty
   void setBitDepth(int bitDepth);
 
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats bitDepth(final int bitDepth) {
-    setBitDepth( bitDepth );
-    return this;
-  }
-
   @JsProperty(
       name = "frames"
   )
@@ -46,13 +39,6 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
 
   @JsProperty
   void setFrames(int frames);
-
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats frames(final int frames) {
-    setFrames( frames );
-    return this;
-  }
 
   @JsProperty(
       name = "framesPerSecond"
@@ -62,13 +48,6 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
   @JsProperty
   void setFramesPerSecond(double framesPerSecond);
 
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats framesPerSecond(final double framesPerSecond) {
-    setFramesPerSecond( framesPerSecond );
-    return this;
-  }
-
   @JsProperty(
       name = "height"
   )
@@ -76,13 +55,6 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
 
   @JsProperty
   void setHeight(int height);
-
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats height(final int height) {
-    setHeight( height );
-    return this;
-  }
 
   @JsProperty(
       name = "width"
@@ -92,70 +64,106 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
   @JsProperty
   void setWidth(int width);
 
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats width(final int width) {
-    setWidth( width );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCVideoSourceStats {
+    @JsOverlay
+    @Nonnull
+    default Builder bitDepth(final int bitDepth) {
+      setBitDepth( bitDepth );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats kind(@Nonnull final String kind) {
-    setKind( kind );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder frames(final int frames) {
+      setFrames( frames );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats relayedSource(final boolean relayedSource) {
-    setRelayedSource( relayedSource );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder framesPerSecond(final double framesPerSecond) {
+      setFramesPerSecond( framesPerSecond );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats trackIdentifier(@Nonnull final String trackIdentifier) {
-    setTrackIdentifier( trackIdentifier );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder height(final int height) {
+      setHeight( height );
+      return this;
+    }
 
-  /**
-   * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats id(@Nonnull final String id) {
-    setId( id );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder width(final int width) {
+      setWidth( width );
+      return this;
+    }
 
-  /**
-   * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">RTCStats.timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats timestamp(final double timestamp) {
-    setTimestamp( timestamp );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder kind(@Nonnull final String kind) {
+      setKind( kind );
+      return this;
+    }
 
-  /**
-   * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default RTCVideoSourceStats type(@RTCStatsType @Nonnull final String type) {
-    setType( type );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder relayedSource(final boolean relayedSource) {
+      setRelayedSource( relayedSource );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder trackIdentifier(@Nonnull final String trackIdentifier) {
+      setTrackIdentifier( trackIdentifier );
+      return this;
+    }
+
+    /**
+     * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
+      return this;
+    }
+
+    /**
+     * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">RTCStats.timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder timestamp(final double timestamp) {
+      setTimestamp( timestamp );
+      return this;
+    }
+
+    /**
+     * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder type(@RTCStatsType @Nonnull final String type) {
+      setType( type );
+      return this;
+    }
   }
 }

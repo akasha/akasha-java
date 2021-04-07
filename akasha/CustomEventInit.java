@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CustomEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static CustomEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -34,31 +34,39 @@ public interface CustomEventInit extends EventInit {
   @JsProperty
   void setDetail(@DoNotAutobox @Nullable Object detail);
 
-  @JsOverlay
-  @Nonnull
-  default CustomEventInit detail(@DoNotAutobox @Nullable final Object detail) {
-    setDetail( detail );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends CustomEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder detail(@DoNotAutobox @Nullable final Object detail) {
+      setDetail( detail );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CustomEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CustomEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default CustomEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

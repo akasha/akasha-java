@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AuthenticationExtensionsClientInputs {
   @JsOverlay
   @Nonnull
-  static AuthenticationExtensionsClientInputs create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface AuthenticationExtensionsClientInputs {
   @JsProperty
   void setAppid(@Nonnull String appid);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs appid(@Nonnull final String appid) {
-    setAppid( appid );
-    return this;
-  }
-
   @JsProperty(
       name = "txAuthSimple"
   )
@@ -47,13 +40,6 @@ public interface AuthenticationExtensionsClientInputs {
   @JsProperty
   void setTxAuthSimple(@Nonnull String txAuthSimple);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs txAuthSimple(@Nonnull final String txAuthSimple) {
-    setTxAuthSimple( txAuthSimple );
-    return this;
-  }
-
   @JsProperty(
       name = "txAuthGeneric"
   )
@@ -61,14 +47,6 @@ public interface AuthenticationExtensionsClientInputs {
 
   @JsProperty
   void setTxAuthGeneric(@Nonnull TxAuthGenericArg txAuthGeneric);
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs txAuthGeneric(
-      @Nonnull final TxAuthGenericArg txAuthGeneric) {
-    setTxAuthGeneric( txAuthGeneric );
-    return this;
-  }
 
   @JsProperty(
       name = "authnSel"
@@ -79,23 +57,8 @@ public interface AuthenticationExtensionsClientInputs {
   void setAuthnSel(@Nonnull JsArray<BufferSource> authnSel);
 
   @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs authnSel(
-      @Nonnull final JsArray<BufferSource> authnSel) {
-    setAuthnSel( authnSel );
-    return this;
-  }
-
-  @JsOverlay
   default void setAuthnSel(@Nonnull final BufferSource... authnSel) {
     setAuthnSel( Js.<JsArray<BufferSource>>uncheckedCast( authnSel ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs authnSel(@Nonnull final BufferSource... authnSel) {
-    setAuthnSel( authnSel );
-    return this;
   }
 
   @JsProperty(
@@ -106,13 +69,6 @@ public interface AuthenticationExtensionsClientInputs {
   @JsProperty
   void setExts(boolean exts);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs exts(final boolean exts) {
-    setExts( exts );
-    return this;
-  }
-
   @JsProperty(
       name = "uvi"
   )
@@ -120,13 +76,6 @@ public interface AuthenticationExtensionsClientInputs {
 
   @JsProperty
   void setUvi(boolean uvi);
-
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs uvi(final boolean uvi) {
-    setUvi( uvi );
-    return this;
-  }
 
   @JsProperty(
       name = "loc"
@@ -136,13 +85,6 @@ public interface AuthenticationExtensionsClientInputs {
   @JsProperty
   void setLoc(boolean loc);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs loc(final boolean loc) {
-    setLoc( loc );
-    return this;
-  }
-
   @JsProperty(
       name = "uvm"
   )
@@ -151,10 +93,74 @@ public interface AuthenticationExtensionsClientInputs {
   @JsProperty
   void setUvm(boolean uvm);
 
-  @JsOverlay
-  @Nonnull
-  default AuthenticationExtensionsClientInputs uvm(final boolean uvm) {
-    setUvm( uvm );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AuthenticationExtensionsClientInputs {
+    @JsOverlay
+    @Nonnull
+    default Builder appid(@Nonnull final String appid) {
+      setAppid( appid );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder txAuthSimple(@Nonnull final String txAuthSimple) {
+      setTxAuthSimple( txAuthSimple );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder txAuthGeneric(@Nonnull final TxAuthGenericArg txAuthGeneric) {
+      setTxAuthGeneric( txAuthGeneric );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder authnSel(@Nonnull final JsArray<BufferSource> authnSel) {
+      setAuthnSel( authnSel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder authnSel(@Nonnull final BufferSource... authnSel) {
+      setAuthnSel( authnSel );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder exts(final boolean exts) {
+      setExts( exts );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uvi(final boolean uvi) {
+      setUvi( uvi );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder loc(final boolean loc) {
+      setLoc( loc );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uvm(final boolean uvm) {
+      setUvm( uvm );
+      return this;
+    }
   }
 }

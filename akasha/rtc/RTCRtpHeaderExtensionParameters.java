@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpHeaderExtensionParameters {
   @JsOverlay
   @Nonnull
-  static RTCRtpHeaderExtensionParameters create(final int id, @Nonnull final String uri) {
-    return Js.<RTCRtpHeaderExtensionParameters>uncheckedCast( JsPropertyMap.of() ).id( id ).uri( uri );
+  static Builder create(final int id, @Nonnull final String uri) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).uri( uri );
   }
 
   @JsProperty(
@@ -30,13 +30,6 @@ public interface RTCRtpHeaderExtensionParameters {
   @JsProperty
   void setEncrypted(boolean encrypted);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpHeaderExtensionParameters encrypted(final boolean encrypted) {
-    setEncrypted( encrypted );
-    return this;
-  }
-
   @JsProperty(
       name = "id"
   )
@@ -44,13 +37,6 @@ public interface RTCRtpHeaderExtensionParameters {
 
   @JsProperty
   void setId(int id);
-
-  @JsOverlay
-  @Nonnull
-  default RTCRtpHeaderExtensionParameters id(final int id) {
-    setId( id );
-    return this;
-  }
 
   @JsProperty(
       name = "uri"
@@ -61,10 +47,32 @@ public interface RTCRtpHeaderExtensionParameters {
   @JsProperty
   void setUri(@Nonnull String uri);
 
-  @JsOverlay
-  @Nonnull
-  default RTCRtpHeaderExtensionParameters uri(@Nonnull final String uri) {
-    setUri( uri );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCRtpHeaderExtensionParameters {
+    @JsOverlay
+    @Nonnull
+    default Builder encrypted(final boolean encrypted) {
+      setEncrypted( encrypted );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder id(final int id) {
+      setId( id );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder uri(@Nonnull final String uri) {
+      setUri( uri );
+      return this;
+    }
   }
 }

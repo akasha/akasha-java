@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface InputEventInit extends UIEventInit {
   @JsOverlay
   @Nonnull
-  static InputEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface InputEventInit extends UIEventInit {
   @JsProperty
   void setData(@Nullable String data);
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit data(@Nullable final String data) {
-    setData( data );
-    return this;
-  }
-
   @JsProperty(
       name = "inputType"
   )
@@ -46,13 +39,6 @@ public interface InputEventInit extends UIEventInit {
 
   @JsProperty
   void setInputType(@Nonnull String inputType);
-
-  @JsOverlay
-  @Nonnull
-  default InputEventInit inputType(@Nonnull final String inputType) {
-    setInputType( inputType );
-    return this;
-  }
 
   @JsProperty(
       name = "isComposing"
@@ -62,45 +48,67 @@ public interface InputEventInit extends UIEventInit {
   @JsProperty
   void setIsComposing(boolean isComposing);
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit isComposing(final boolean isComposing) {
-    setIsComposing( isComposing );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends InputEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nullable final String data) {
+      setData( data );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit detail(final int detail) {
-    setDetail( detail );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder inputType(@Nonnull final String inputType) {
+      setInputType( inputType );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit view(@Nullable final Window view) {
-    setView( view );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder isComposing(final boolean isComposing) {
+      setIsComposing( isComposing );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder detail(final int detail) {
+      setDetail( detail );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nullable final Window view) {
+      setView( view );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default InputEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

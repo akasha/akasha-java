@@ -25,9 +25,8 @@ import jsinterop.base.JsPropertyMap;
 public interface XRInputSourceEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static XRInputSourceEventInit create(@Nonnull final XRFrame frame,
-      @Nonnull final XRInputSource inputSource) {
-    return Js.<XRInputSourceEventInit>uncheckedCast( JsPropertyMap.of() ).frame( frame ).inputSource( inputSource );
+  static Builder create(@Nonnull final XRFrame frame, @Nonnull final XRInputSource inputSource) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).frame( frame ).inputSource( inputSource );
   }
 
   /**
@@ -52,19 +51,6 @@ public interface XRInputSourceEventInit extends EventInit {
   void setFrame(@Nonnull XRFrame frame);
 
   /**
-   * The XRInputSourceEventInit dictionary's property frame specifies an XRFrame providing information about the timestamp at which the new input source event took place, as well as access to the XRFrame method getPose() which can be used to map the coordinates of any XRReferenceSpace to the space in which the event took place.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/frame">XRInputSourceEventInit.frame - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-frame">XRInputSourceEventInit.frame - WebXR Device API</a>
-   */
-  @JsOverlay
-  @Nonnull
-  default XRInputSourceEventInit frame(@Nonnull final XRFrame frame) {
-    setFrame( frame );
-    return this;
-  }
-
-  /**
    * The XRInputSourceEventInit dictionary's inputSource property is used when calling the XRInputSourceEvent() constructor to specify the XRInputSource from which the newly-created event is being sent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource">XRInputSourceEventInit.inputSource - MDN</a>
@@ -86,36 +72,63 @@ public interface XRInputSourceEventInit extends EventInit {
   void setInputSource(@Nonnull XRInputSource inputSource);
 
   /**
-   * The XRInputSourceEventInit dictionary's inputSource property is used when calling the XRInputSourceEvent() constructor to specify the XRInputSource from which the newly-created event is being sent.
+   * The XRInputSourceEventInit dictionary is used when calling the XRInputSourceEvent() constructor to provide configuration options for the newly-created XRInputSourceEvent object to take on.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource">XRInputSourceEventInit.inputSource - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-inputsource">XRInputSourceEventInit.inputSource - WebXR Device API</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit">XRInputSourceEventInit - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrinputsourceeventinit">XRInputSourceEventInit - WebXR Device API</a>
    */
-  @JsOverlay
-  @Nonnull
-  default XRInputSourceEventInit inputSource(@Nonnull final XRInputSource inputSource) {
-    setInputSource( inputSource );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends XRInputSourceEventInit {
+    /**
+     * The XRInputSourceEventInit dictionary's property frame specifies an XRFrame providing information about the timestamp at which the new input source event took place, as well as access to the XRFrame method getPose() which can be used to map the coordinates of any XRReferenceSpace to the space in which the event took place.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/frame">XRInputSourceEventInit.frame - MDN</a>
+     * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-frame">XRInputSourceEventInit.frame - WebXR Device API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder frame(@Nonnull final XRFrame frame) {
+      setFrame( frame );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default XRInputSourceEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    /**
+     * The XRInputSourceEventInit dictionary's inputSource property is used when calling the XRInputSourceEvent() constructor to specify the XRInputSource from which the newly-created event is being sent.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource">XRInputSourceEventInit.inputSource - MDN</a>
+     * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-inputsource">XRInputSourceEventInit.inputSource - WebXR Device API</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder inputSource(@Nonnull final XRInputSource inputSource) {
+      setInputSource( inputSource );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default XRInputSourceEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default XRInputSourceEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

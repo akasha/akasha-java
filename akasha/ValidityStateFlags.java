@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ValidityStateFlags {
   @JsOverlay
   @Nonnull
-  static ValidityStateFlags create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ValidityStateFlags {
   @JsProperty
   void setBadInput(boolean badInput);
 
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags badInput(final boolean badInput) {
-    setBadInput( badInput );
-    return this;
-  }
-
   @JsProperty(
       name = "customError"
   )
@@ -44,13 +37,6 @@ public interface ValidityStateFlags {
 
   @JsProperty
   void setCustomError(boolean customError);
-
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags customError(final boolean customError) {
-    setCustomError( customError );
-    return this;
-  }
 
   @JsProperty(
       name = "patternMismatch"
@@ -60,13 +46,6 @@ public interface ValidityStateFlags {
   @JsProperty
   void setPatternMismatch(boolean patternMismatch);
 
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags patternMismatch(final boolean patternMismatch) {
-    setPatternMismatch( patternMismatch );
-    return this;
-  }
-
   @JsProperty(
       name = "rangeOverflow"
   )
@@ -74,13 +53,6 @@ public interface ValidityStateFlags {
 
   @JsProperty
   void setRangeOverflow(boolean rangeOverflow);
-
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags rangeOverflow(final boolean rangeOverflow) {
-    setRangeOverflow( rangeOverflow );
-    return this;
-  }
 
   @JsProperty(
       name = "rangeUnderflow"
@@ -90,13 +62,6 @@ public interface ValidityStateFlags {
   @JsProperty
   void setRangeUnderflow(boolean rangeUnderflow);
 
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags rangeUnderflow(final boolean rangeUnderflow) {
-    setRangeUnderflow( rangeUnderflow );
-    return this;
-  }
-
   @JsProperty(
       name = "stepMismatch"
   )
@@ -104,13 +69,6 @@ public interface ValidityStateFlags {
 
   @JsProperty
   void setStepMismatch(boolean stepMismatch);
-
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags stepMismatch(final boolean stepMismatch) {
-    setStepMismatch( stepMismatch );
-    return this;
-  }
 
   @JsProperty(
       name = "tooLong"
@@ -120,13 +78,6 @@ public interface ValidityStateFlags {
   @JsProperty
   void setTooLong(boolean tooLong);
 
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags tooLong(final boolean tooLong) {
-    setTooLong( tooLong );
-    return this;
-  }
-
   @JsProperty(
       name = "tooShort"
   )
@@ -134,13 +85,6 @@ public interface ValidityStateFlags {
 
   @JsProperty
   void setTooShort(boolean tooShort);
-
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags tooShort(final boolean tooShort) {
-    setTooShort( tooShort );
-    return this;
-  }
 
   @JsProperty(
       name = "typeMismatch"
@@ -150,13 +94,6 @@ public interface ValidityStateFlags {
   @JsProperty
   void setTypeMismatch(boolean typeMismatch);
 
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags typeMismatch(final boolean typeMismatch) {
-    setTypeMismatch( typeMismatch );
-    return this;
-  }
-
   @JsProperty(
       name = "valueMissing"
   )
@@ -165,10 +102,81 @@ public interface ValidityStateFlags {
   @JsProperty
   void setValueMissing(boolean valueMissing);
 
-  @JsOverlay
-  @Nonnull
-  default ValidityStateFlags valueMissing(final boolean valueMissing) {
-    setValueMissing( valueMissing );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ValidityStateFlags {
+    @JsOverlay
+    @Nonnull
+    default Builder badInput(final boolean badInput) {
+      setBadInput( badInput );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder customError(final boolean customError) {
+      setCustomError( customError );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder patternMismatch(final boolean patternMismatch) {
+      setPatternMismatch( patternMismatch );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rangeOverflow(final boolean rangeOverflow) {
+      setRangeOverflow( rangeOverflow );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder rangeUnderflow(final boolean rangeUnderflow) {
+      setRangeUnderflow( rangeUnderflow );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder stepMismatch(final boolean stepMismatch) {
+      setStepMismatch( stepMismatch );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder tooLong(final boolean tooLong) {
+      setTooLong( tooLong );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder tooShort(final boolean tooShort) {
+      setTooShort( tooShort );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder typeMismatch(final boolean typeMismatch) {
+      setTypeMismatch( typeMismatch );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder valueMissing(final boolean valueMissing) {
+      setValueMissing( valueMissing );
+      return this;
+    }
   }
 }

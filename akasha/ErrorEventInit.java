@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static ErrorEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,13 +33,6 @@ public interface ErrorEventInit extends EventInit {
   @JsProperty
   void setColno(int colno);
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit colno(final int colno) {
-    setColno( colno );
-    return this;
-  }
-
   @JsProperty(
       name = "error"
   )
@@ -49,13 +42,6 @@ public interface ErrorEventInit extends EventInit {
   @JsProperty
   void setError(@DoNotAutobox @Nullable Object error);
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit error(@DoNotAutobox @Nullable final Object error) {
-    setError( error );
-    return this;
-  }
-
   @JsProperty(
       name = "filename"
   )
@@ -63,13 +49,6 @@ public interface ErrorEventInit extends EventInit {
 
   @JsProperty
   void setFilename(@Nonnull String filename);
-
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit filename(@Nonnull final String filename) {
-    setFilename( filename );
-    return this;
-  }
 
   @JsProperty(
       name = "lineno"
@@ -79,13 +58,6 @@ public interface ErrorEventInit extends EventInit {
   @JsProperty
   void setLineno(int lineno);
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit lineno(final int lineno) {
-    setLineno( lineno );
-    return this;
-  }
-
   @JsProperty(
       name = "message"
   )
@@ -94,31 +66,67 @@ public interface ErrorEventInit extends EventInit {
   @JsProperty
   void setMessage(@Nonnull String message);
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit message(@Nonnull final String message) {
-    setMessage( message );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ErrorEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder colno(final int colno) {
+      setColno( colno );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder error(@DoNotAutobox @Nullable final Object error) {
+      setError( error );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder filename(@Nonnull final String filename) {
+      setFilename( filename );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder lineno(final int lineno) {
+      setLineno( lineno );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder message(@Nonnull final String message) {
+      setMessage( message );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

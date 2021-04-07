@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface ReadableWritablePair {
   @JsOverlay
   @Nonnull
-  static ReadableWritablePair create(@Nonnull final ReadableStream readable,
+  static Builder create(@Nonnull final ReadableStream readable,
       @Nonnull final WritableStream writable) {
-    return Js.<ReadableWritablePair>uncheckedCast( JsPropertyMap.of() ).readable( readable ).writable( writable );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).readable( readable ).writable( writable );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface ReadableWritablePair {
   @JsProperty
   void setReadable(@Nonnull ReadableStream readable);
 
-  @JsOverlay
-  @Nonnull
-  default ReadableWritablePair readable(@Nonnull final ReadableStream readable) {
-    setReadable( readable );
-    return this;
-  }
-
   @JsProperty(
       name = "writable"
   )
@@ -48,10 +41,25 @@ public interface ReadableWritablePair {
   @JsProperty
   void setWritable(@Nonnull WritableStream writable);
 
-  @JsOverlay
-  @Nonnull
-  default ReadableWritablePair writable(@Nonnull final WritableStream writable) {
-    setWritable( writable );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ReadableWritablePair {
+    @JsOverlay
+    @Nonnull
+    default Builder readable(@Nonnull final ReadableStream readable) {
+      setReadable( readable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder writable(@Nonnull final WritableStream writable) {
+      setWritable( writable );
+      return this;
+    }
   }
 }
