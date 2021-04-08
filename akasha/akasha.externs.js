@@ -79,10 +79,6 @@ var COSEAlgorithmIdentifier;
  */
 var VibratePattern;
 /**
- * @typedef {(!IntegerTypedArray|!Float32Array|!Float64Array)}
- */
-var TypedArray;
-/**
  * @typedef {(!Float32Array|!Array<!GLfloat>)}
  */
 var Float32List;
@@ -294,10 +290,6 @@ var AuthenticationExtensionsSupported;
  * @typedef {(!string|!Array<!string>|!ConstrainDOMStringParameters)}
  */
 var ConstrainDOMString;
-/**
- * @typedef {(!ArrayBuffer|!ImageBitmap|!MessagePort|!OffscreenCanvas|!ReadableStream|!TransformStream|!WritableStream)}
- */
-var Transferable;
 /**
  * @typedef {!number}
  */
@@ -1491,7 +1483,7 @@ var AesKeyGenParams;
  */
 var MouseEventInit;
 /**
- * @typedef {{}}
+ * @record
  */
 var RTCAnswerOptions;
 /**
@@ -2075,7 +2067,7 @@ var ChannelMergerOptions;
  */
 var DevicePermissionDescriptor;
 /**
- * @typedef {{}}
+ * @record
  */
 var RTCOfferAnswerOptions;
 /**
@@ -2419,10 +2411,6 @@ var RTCRtpTransceiverInit;
  */
 var AuthenticationExtensionsClientInputs;
 /**
- * @typedef {{configurable:(!boolean|undefined),enumerable:(!boolean|undefined),get:(!PropertyAccessorFunction|undefined),set:(!PropertyMutatorFunction|undefined),value:(*|undefined),writable:(!boolean|undefined)}}
- */
-var ObjectPropertyDescriptor;
-/**
  * @typedef {{is:(!string|undefined)}}
  */
 var ElementCreationOptions;
@@ -2635,6 +2623,7 @@ function PerformanceTiming() {}
 /** @type {!number} */ PerformanceTiming.prototype.unloadEventStart;
 /**
  * @return {!Object}
+ * @override
  */
 PerformanceTiming.prototype.toJSON = function() {}
 /**
@@ -2668,12 +2657,6 @@ function SVGForeignObjectElement() {}
 /** @type {!SVGAnimatedLength} */ SVGForeignObjectElement.prototype.y;
 /**
  * @constructor
- * @extends {Error}
- * @param {!string=} message
- */
-function ReferenceError(message) {}
-/**
- * @constructor
  * @private
  */
 function CSSFontFeatureValuesMap() {}
@@ -2703,12 +2686,6 @@ function PasswordCredential(arg0) {}
 /** @type {!string} */ PasswordCredential.prototype.password;
 /** @type {!string} */ PasswordCredential.prototype.iconURL;
 /** @type {!string} */ PasswordCredential.prototype.name;
-/**
- * @constructor
- * @extends {Error}
- * @param {!string=} message
- */
-function URIError(message) {}
 /**
  * @constructor
  * @private
@@ -2881,7 +2858,7 @@ function DOMParser() {}
  */
 DOMParser.prototype.parseFromString = function(string,type) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_compressed_texture_pvrtc() {}
@@ -2891,9 +2868,9 @@ function WEBGL_compressed_texture_pvrtc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_pvrtc.prototype.COMPRESSED_RGB_PVRTC_4BPPV1_IMG;
 /** @const {!string} */ WEBGL_compressed_texture_pvrtc.prototype.NAME;
 /**
- * @record
- * @extends {EventTarget}
+ * @constructor
  * @private
+ * @extends {EventTarget}
  */
 function SpeechRecognition() {}
 /** @type {!boolean} */ SpeechRecognition.prototype.continuous;
@@ -3071,7 +3048,7 @@ function HTMLOptionElement() {}
 /** @type {!string} */ HTMLOptionElement.prototype.text;
 /** @type {!string} */ HTMLOptionElement.prototype.value;
 /**
- * @record
+ * @constructor
  * @private
  */
 function SpeechGrammarList() {}
@@ -3146,7 +3123,7 @@ AudioParam.prototype.setTargetAtTime = function(target,startTime,timeConstant) {
  */
 AudioParam.prototype.linearRampToValueAtTime = function(value,endTime) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_vertex_array_object() {}
@@ -3875,6 +3852,7 @@ HTMLSelectElement.prototype.reportValidity = function() {}
 /**
  * @param {!number=} arg0
  * @return {undefined}
+ * @override
  */
 HTMLSelectElement.prototype.remove = function(arg0) {}
 /**
@@ -3953,7 +3931,7 @@ function HTMLHRElement() {}
 function AggregateError(errors,message) {}
 /** @type {!Array<*>} */ AggregateError.prototype.errors;
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_standard_derivatives() {}
@@ -4024,6 +4002,7 @@ function RTCSessionDescription(descriptionInitDict) {}
 /** @type {!string} */ RTCSessionDescription.prototype.type;
 /**
  * @return {!Object}
+ * @override
  */
 RTCSessionDescription.prototype.toJSON = function() {}
 /**
@@ -4452,43 +4431,13 @@ function PromiseRejectionEvent(type,eventInitDict) {}
 function XRBoundedReferenceSpace() {}
 /** @type {!Array<!DOMPointReadOnly>} */ XRBoundedReferenceSpace.prototype.boundsGeometry;
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_debug_renderer_info() {}
 /** @const {!GLenum} */ WEBGL_debug_renderer_info.prototype.UNMASKED_RENDERER_WEBGL;
 /** @const {!GLenum} */ WEBGL_debug_renderer_info.prototype.UNMASKED_VENDOR_WEBGL;
 /** @const {!string} */ WEBGL_debug_renderer_info.prototype.NAME;
-/**
- * @constructor
- * @param {!string} pattern
- * @param {!string=} flags
- */
-function RegExp(pattern,flags) {}
-/** @type {!string} */ RegExp.prototype.source;
-/** @type {!string} */ RegExp.prototype.flags;
-/** @type {!boolean} */ RegExp.prototype.dotAll;
-/** @type {!boolean} */ RegExp.prototype.global;
-/** @type {!boolean} */ RegExp.prototype.ignoreCase;
-/** @type {!boolean} */ RegExp.prototype.multiline;
-/** @type {!boolean} */ RegExp.prototype.sticky;
-/** @type {!boolean} */ RegExp.prototype.unicode;
-/** @type {!number} */ RegExp.prototype.lastIndex;
-/**
- * @param {!string} text
- * @return {!boolean}
- */
-RegExp.prototype.test = function(text) {}
-/**
- * @return {!string}
- * @override
- */
-RegExp.prototype.toString = function() {}
-/**
- * @param {!string} text
- * @return {?RegExpResult}
- */
-RegExp.prototype.exec = function(text) {}
 /**
  * @constructor
  * @private
@@ -5141,6 +5090,7 @@ function Report() {}
 /** @type {!string} */ Report.prototype.url;
 /**
  * @return {!Object}
+ * @override
  */
 Report.prototype.toJSON = function() {}
 /**
@@ -5208,7 +5158,7 @@ BluetoothRemoteGATTServer.prototype.connect = function() {}
 function ValueEvent(type,initDict) {}
 /** @type {*} */ ValueEvent.prototype.value;
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_texture_float_linear() {}
@@ -5269,6 +5219,7 @@ function PerformanceNavigationTiming() {}
 /** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.unloadEventStart;
 /**
  * @return {!Object}
+ * @override
  */
 PerformanceNavigationTiming.prototype.toJSON = function() {}
 /**
@@ -5413,6 +5364,7 @@ OVR_multiview2.prototype.framebufferTextureMultiviewOVR = function(target,attach
 function ReportBody() {}
 /**
  * @return {!Object}
+ * @override
  */
 ReportBody.prototype.toJSON = function() {}
 /**
@@ -5487,7 +5439,7 @@ function SVGGradientElement() {}
 /** @type {!SVGAnimatedEnumeration} */ SVGGradientElement.prototype.spreadMethod;
 /** @type {!SVGAnimatedString} */ SVGGradientElement.prototype.href;
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_texture_half_float() {}
@@ -7154,6 +7106,7 @@ function PerformanceEntry() {}
 /** @type {!DOMHighResTimeStamp} */ PerformanceEntry.prototype.startTime;
 /**
  * @return {!Object}
+ * @override
  */
 PerformanceEntry.prototype.toJSON = function() {}
 /**
@@ -7181,6 +7134,7 @@ function PerformanceResourceTiming() {}
 /** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.workerStart;
 /**
  * @return {!Object}
+ * @override
  */
 PerformanceResourceTiming.prototype.toJSON = function() {}
 /**
@@ -7242,7 +7196,7 @@ MimeTypeArray.prototype.item = function(index) {}
  */
 MimeTypeArray.prototype.namedItem = function(name) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_compressed_texture_etc() {}
@@ -7288,7 +7242,7 @@ function InputEvent(type,eventInitDict) {}
 /** @type {!string} */ InputEvent.prototype.inputType;
 /** @type {!boolean} */ InputEvent.prototype.isComposing;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_float_blend() {}
@@ -7373,7 +7327,7 @@ function StorageEvent(type,eventInitDict) {}
  */
 StorageEvent.prototype.initStorageEvent = function(type,bubbles,cancelable,key,oldValue,newValue,url,storageArea) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function Position() {}
@@ -7405,9 +7359,9 @@ function MutationRecord() {}
 /** @type {!Node} */ MutationRecord.prototype.target;
 /** @type {!string} */ MutationRecord.prototype.type;
 /**
- * @record
- * @extends {Event}
+ * @constructor
  * @private
+ * @extends {Event}
  */
 function SpeechRecognitionEvent() {}
 /** @type {!number} */ SpeechRecognitionEvent.prototype.resultIndex;
@@ -7437,7 +7391,7 @@ function SVGAnimatedNumberList() {}
 function HTMLDetailsElement() {}
 /** @type {!boolean} */ HTMLDetailsElement.prototype.open;
 /**
- * @record
+ * @constructor
  * @private
  */
 function SpeechRecognitionAlternative() {}
@@ -7540,7 +7494,7 @@ TouchList.prototype.item = function(index) {}
 function ClipboardEvent(type,eventInitDict) {}
 /** @type {?DataTransfer} */ ClipboardEvent.prototype.clipboardData;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_sRGB() {}
@@ -7638,6 +7592,7 @@ function URL(url,base) {}
 URL.revokeObjectURL = function(url) {}
 /**
  * @return {!string}
+ * @override
  */
 URL.prototype.toJSON = function() {}
 /**
@@ -7646,7 +7601,7 @@ URL.prototype.toJSON = function() {}
  */
 URL.createObjectURL = function(arg0) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_debug_shaders() {}
@@ -7819,7 +7774,7 @@ Worker.prototype.terminate = function() {}
  */
 function SVGDefsElement() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function SpeechRecognitionResultList() {}
@@ -8312,6 +8267,7 @@ function DOMRectReadOnly(x,y,width,height) {}
 DOMRectReadOnly.fromRect = function(other) {}
 /**
  * @return {!Object}
+ * @override
  */
 DOMRectReadOnly.prototype.toJSON = function() {}
 /**
@@ -8390,12 +8346,6 @@ function XMLHttpRequestEventTarget() {}
  * @private
  */
 function XMLHttpRequestUpload() {}
-/**
- * @constructor
- * @extends {Error}
- * @param {!string=} message
- */
-function EvalError(message) {}
 /**
  * @constructor
  * @extends {CharacterData}
@@ -8511,7 +8461,7 @@ function ServiceWorker() {}
  */
 ServiceWorker.prototype.postMessage = function(arg0,arg1) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_texture_half_float_linear() {}
@@ -8526,9 +8476,9 @@ function MediaQueryListEvent(type,eventInitDict) {}
 /** @type {!boolean} */ MediaQueryListEvent.prototype.matches;
 /** @type {!CSSOMString} */ MediaQueryListEvent.prototype.media;
 /**
- * @record
- * @extends {EventTarget}
+ * @constructor
  * @private
+ * @extends {EventTarget}
  */
 function Animation() {}
 /** @type {!Promise<!Animation>} */ Animation.prototype.finished;
@@ -8628,7 +8578,7 @@ function DelayNode(context,options) {}
 function IDBCursorWithValue() {}
 /** @type {*} */ IDBCursorWithValue.prototype.value;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_disjoint_timer_query() {}
@@ -8786,6 +8736,7 @@ function MediaDeviceInfo() {}
 /** @type {!string} */ MediaDeviceInfo.prototype.label;
 /**
  * @return {!Object}
+ * @override
  */
 MediaDeviceInfo.prototype.toJSON = function() {}
 /**
@@ -9253,6 +9204,7 @@ function PushSubscription() {}
 PushSubscription.prototype.getKey = function(name) {}
 /**
  * @return {!PushSubscriptionJSON}
+ * @override
  */
 PushSubscription.prototype.toJSON = function() {}
 /**
@@ -9393,18 +9345,6 @@ function CSSPageRule() {}
  */
 function SVGNumber() {}
 /** @type {!number} */ SVGNumber.prototype.value;
-/**
- * @constructor
- * @param {!number} length
- */
-function SharedArrayBuffer(length) {}
-/** @type {!number} */ SharedArrayBuffer.prototype.byteLength;
-/**
- * @param {!number=} begin
- * @param {!number=} end
- * @return {!SharedArrayBuffer}
- */
-SharedArrayBuffer.prototype.slice = function(begin,end) {}
 /**
  * @constructor
  * @extends {EventTarget}
@@ -9623,6 +9563,7 @@ function DOMQuad(p1,p2,p3,p4) {}
 DOMQuad.fromRect = function(other) {}
 /**
  * @return {!Object}
+ * @override
  */
 DOMQuad.prototype.toJSON = function() {}
 /**
@@ -9897,14 +9838,6 @@ function CSSRule() {}
 /** @type {?CSSStyleSheet} */ CSSRule.prototype.parentStyleSheet;
 /** @type {!number} */ CSSRule.prototype.type;
 /** @type {!CSSOMString} */ CSSRule.prototype.cssText;
-/**
- * @constructor
- * @param {!string=} message
- */
-function Error(message) {}
-/** @type {!string} */ Error.prototype.name;
-/** @type {!string} */ Error.prototype.message;
-/** @type {!string} */ Error.prototype.stack;
 /**
  * @constructor
  * @extends {PerformanceEntry}
@@ -10857,9 +10790,9 @@ function Attr() {}
  */
 function XMLDocument() {}
 /**
- * @record
- * @extends {EventTarget}
+ * @constructor
  * @private
+ * @extends {EventTarget}
  */
 function SpeechSynthesis() {}
 /** @type {!boolean} */ SpeechSynthesis.prototype.paused;
@@ -10991,7 +10924,7 @@ function HTMLModElement() {}
 /** @type {!string} */ HTMLModElement.prototype.cite;
 /** @type {!string} */ HTMLModElement.prototype.dateTime;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_texture_filter_anisotropic() {}
@@ -11006,9 +10939,9 @@ function EXT_texture_filter_anisotropic() {}
 function CSSMediaRule() {}
 /** @type {!MediaList} */ CSSMediaRule.prototype.media;
 /**
- * @record
- * @extends {WebGLObject}
+ * @constructor
  * @private
+ * @extends {WebGLObject}
  */
 function WebGLTimerQueryEXT() {}
 /**
@@ -11061,7 +10994,7 @@ function HTMLLIElement() {}
 /** @type {!number} */ HTMLLIElement.prototype.value;
 /** @type {!string} */ HTMLLIElement.prototype.type;
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_compressed_texture_s3tc() {}
@@ -11136,6 +11069,7 @@ function RTCIceCandidate(candidateInitDict) {}
 /** @type {?string} */ RTCIceCandidate.prototype.usernameFragment;
 /**
  * @return {!RTCIceCandidateInit}
+ * @override
  */
 RTCIceCandidate.prototype.toJSON = function() {}
 /**
@@ -11156,6 +11090,7 @@ function AudioBufferSourceNode(context,options) {}
  * @param {!number=} offset
  * @param {!number=} duration
  * @return {undefined}
+ * @override
  */
 AudioBufferSourceNode.prototype.start = function(when,offset,duration) {}
 /**
@@ -11167,12 +11102,6 @@ AudioBufferSourceNode.prototype.start = function(when,offset,duration) {}
 function SharedWorker(scriptURL,options) {}
 /** @type {!MessagePort} */ SharedWorker.prototype.port;
 /** @type {!NullableEventHandler} */ SharedWorker.prototype.onerror;
-/**
- * @constructor
- * @extends {Error}
- * @param {!string=} message
- */
-function TypeError(message) {}
 /**
  * @constructor
  * @extends {HTMLElement}
@@ -11217,7 +11146,7 @@ Bluetooth.prototype.getAvailability = function() {}
  */
 Bluetooth.prototype.requestDevice = function(options) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_frag_depth() {}
@@ -11414,7 +11343,7 @@ function GainNode(context,options) {}
  */
 function HTMLAudioElement() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_color_buffer_float() {}
@@ -12250,9 +12179,9 @@ function XPathExpression() {}
  */
 XPathExpression.prototype.evaluate = function(contextNode,type,result) {}
 /**
- * @record
- * @extends {BaseAudioContext}
+ * @constructor
  * @private
+ * @extends {BaseAudioContext}
  */
 function OfflineAudioContext() {}
 /** @type {!number} */ OfflineAudioContext.prototype.length;
@@ -12317,7 +12246,7 @@ HTMLTableRowElement.prototype.insertCell = function(index) {}
  */
 HTMLTableRowElement.prototype.deleteCell = function(index) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function Geolocation() {}
@@ -12582,10 +12511,11 @@ function PerformanceNavigation() {}
 /** @type {!number} */ PerformanceNavigation.prototype.type;
 /**
  * @return {!Object}
+ * @override
  */
 PerformanceNavigation.prototype.toJSON = function() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function SpeechRecognitionResult() {}
@@ -13130,6 +13060,7 @@ function DOMPointReadOnly(x,y,z,w) {}
 DOMPointReadOnly.prototype.matrixTransform = function(matrix) {}
 /**
  * @return {!Object}
+ * @override
  */
 DOMPointReadOnly.prototype.toJSON = function() {}
 /**
@@ -13233,7 +13164,7 @@ MediaKeySession.prototype.close = function() {}
  */
 MediaKeySession.prototype.remove = function() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_compressed_texture_etc1() {}
@@ -16791,9 +16722,9 @@ function HTMLSourceElement() {}
 /** @type {!string} */ HTMLSourceElement.prototype.type;
 /** @type {!number} */ HTMLSourceElement.prototype.width;
 /**
- * @record
- * @extends {BaseAudioContext}
+ * @constructor
  * @private
+ * @extends {BaseAudioContext}
  */
 function AudioContext() {}
 /** @type {!number} */ AudioContext.prototype.baseLatency;
@@ -16894,7 +16825,7 @@ function AudioWorklet() {}
 function HTMLParagraphElement() {}
 /** @type {!string} */ HTMLParagraphElement.prototype.align;
 /**
- * @record
+ * @constructor
  * @private
  */
 function ANGLE_instanced_arrays() {}
@@ -16948,7 +16879,7 @@ BroadcastChannel.prototype.close = function() {}
  */
 function SVGSwitchElement() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_fbo_render_mipmap() {}
@@ -17004,7 +16935,7 @@ Location.prototype.replace = function(url) {}
  */
 Location.prototype.assign = function(url) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function SpeechGrammar() {}
@@ -17317,7 +17248,7 @@ HTMLTableElement.prototype.createCaption = function() {}
  */
 HTMLTableElement.prototype.createTHead = function() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_element_index_uint() {}
@@ -17541,7 +17472,7 @@ HTMLElement.prototype.click = function() {}
  */
 function ChannelSplitterNode(context,options) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function SpeechSynthesisVoice() {}
@@ -17551,7 +17482,7 @@ function SpeechSynthesisVoice() {}
 /** @type {!string} */ SpeechSynthesisVoice.prototype.name;
 /** @type {!string} */ SpeechSynthesisVoice.prototype.voiceURI;
 /**
- * @record
+ * @constructor
  * @private
  */
 function Coordinates() {}
@@ -17697,6 +17628,7 @@ DOMMatrixReadOnly.prototype.scale = function(scaleX,scaleY,scaleZ,originX,origin
 DOMMatrixReadOnly.prototype.translate = function(tx,ty,tz) {}
 /**
  * @return {!Object}
+ * @override
  */
 DOMMatrixReadOnly.prototype.toJSON = function() {}
 /**
@@ -17847,7 +17779,7 @@ MediaStream.prototype.getAudioTracks = function() {}
  */
 MediaStream.prototype.getVideoTracks = function() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function RegExpGroups() {}
@@ -17943,6 +17875,7 @@ function Performance() {}
 Performance.prototype.getEntriesByName = function(name,type) {}
 /**
  * @return {!Object}
+ * @override
  */
 Performance.prototype.toJSON = function() {}
 /**
@@ -18039,7 +17972,7 @@ DeviceMotionEvent.requestPermission = function() {}
 function PopStateEvent(type,eventInitDict) {}
 /** @type {*} */ PopStateEvent.prototype.state;
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_lose_context() {}
@@ -18679,7 +18612,7 @@ DataTransferItem.prototype.getAsFile = function() {}
  */
 DataTransferItem.prototype.getAsString = function(_callback) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function PositionError() {}
@@ -18695,7 +18628,7 @@ function PositionError() {}
  */
 function WebGLTexture() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_compressed_texture_astc() {}
@@ -18926,12 +18859,6 @@ function RTCTrackEvent(type,eventInitDict) {}
 /** @type {!RTCRtpTransceiver} */ RTCTrackEvent.prototype.transceiver;
 /**
  * @constructor
- * @extends {Error}
- * @param {!string=} message
- */
-function SyntaxError(message) {}
-/**
- * @record
  * @private
  */
 function WEBGL_compressed_texture_s3tc_srgb() {}
@@ -18982,7 +18909,7 @@ function XRViewport() {}
 /** @type {!number} */ XRViewport.prototype.x;
 /** @type {!number} */ XRViewport.prototype.y;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_color_buffer_float() {}
@@ -19052,22 +18979,13 @@ SVGLengthList.prototype.initialize = function(newItem) {}
  */
 SVGLengthList.prototype.appendItem = function(newItem) {}
 /**
- * @record
- * @private
- */
-function RegExpResult() {}
-/** @type {!string} */ RegExpResult.prototype.input;
-/** @type {!number} */ RegExpResult.prototype.index;
-/** @type {?RegExpGroups} */ RegExpResult.prototype.groups;
-/** @type {!number} */ RegExpResult.prototype.length;
-/**
  * @constructor
  * @extends {SVGElement}
  * @private
  */
 function SVGDescElement() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_blend_minmax() {}
@@ -19136,7 +19054,7 @@ function FileList() {}
  */
 FileList.prototype.item = function(index) {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_depth_texture() {}
@@ -19337,7 +19255,7 @@ function SVGFETurbulenceElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFETurbulenceElement.prototype.x;
 /** @type {!SVGAnimatedLength} */ SVGFETurbulenceElement.prototype.y;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_shader_texture_lod() {}
@@ -19666,7 +19584,7 @@ function SVGAnimatedRect() {}
 /** @type {!DOMRectReadOnly} */ SVGAnimatedRect.prototype.animVal;
 /** @type {!DOMRect} */ SVGAnimatedRect.prototype.baseVal;
 /**
- * @record
+ * @constructor
  * @private
  */
 function WEBGL_draw_buffers() {}
@@ -19802,12 +19720,6 @@ function AbortSignal() {}
 AbortSignal.abort = function() {}
 /**
  * @constructor
- * @extends {Error}
- * @param {!string=} message
- */
-function RangeError(message) {}
-/**
- * @constructor
  * @private
  */
 function RTCCertificate() {}
@@ -19817,7 +19729,7 @@ function RTCCertificate() {}
  */
 RTCCertificate.prototype.getFingerprints = function() {}
 /**
- * @record
+ * @constructor
  * @private
  */
 function OES_texture_float() {}
@@ -19888,7 +19800,7 @@ function PermissionStatus() {}
 /** @type {!string} */ PermissionStatus.prototype.state;
 /** @type {!NullableEventHandler} */ PermissionStatus.prototype.onchange;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_disjoint_timer_query_webgl2() {}
@@ -20167,9 +20079,9 @@ CSSStyleSheet.prototype.deleteRule = function(index) {}
 function RTCDataChannelEvent(type,eventInitDict) {}
 /** @type {!RTCDataChannel} */ RTCDataChannelEvent.prototype.channel;
 /**
- * @record
- * @extends {WebGLObject}
+ * @constructor
  * @private
+ * @extends {WebGLObject}
  */
 function WebGLVertexArrayObjectOES() {}
 /**
@@ -20190,7 +20102,7 @@ function CSPViolationReportBody() {}
 /** @type {?string} */ CSPViolationReportBody.prototype.sourceFile;
 /** @type {!number} */ CSPViolationReportBody.prototype.statusCode;
 /**
- * @record
+ * @constructor
  * @private
  */
 function EXT_color_buffer_half_float() {}
