@@ -20142,3 +20142,345 @@ HTMLCanvasElement.prototype.toDataURL = function(type,quality) {}
  * @return {?RenderingContext}
  */
 HTMLCanvasElement.prototype.getContext = function(contextId,options) {}
+/** @type {!boolean} */ var closed;
+/** @type {!CustomElementRegistry} */ var customElements;
+/** @type {!Document} */ var document;
+/** @type {?Element} */ var frameElement;
+/** @type {!WindowProxy} */ var frames;
+/** @type {!History} */ var history;
+/** @type {!number} */ var length;
+/** @type {!Location} */ var location;
+/** @type {!BarProp} */ var locationbar;
+/** @type {!BarProp} */ var menubar;
+/** @type {!Navigator} */ var navigator;
+/** @type {!boolean} */ var originAgentCluster;
+/** @type {?WindowProxy} */ var parent;
+/** @type {!BarProp} */ var personalbar;
+/** @type {!BarProp} */ var scrollbars;
+/** @type {!WindowProxy} */ var self;
+/** @type {!BarProp} */ var statusbar;
+/** @type {!BarProp} */ var toolbar;
+/** @type {?WindowProxy} */ var top;
+/** @type {!WindowProxy} */ var window;
+/** @type {!string} */ var name;
+/** @type {*} */ var opener;
+/** @type {!string} */ var status;
+/** @type {!number} */ var devicePixelRatio;
+/** @type {!number} */ var innerHeight;
+/** @type {!number} */ var innerWidth;
+/** @type {!number} */ var outerHeight;
+/** @type {!number} */ var outerWidth;
+/** @type {!number} */ var pageXOffset;
+/** @type {!number} */ var pageYOffset;
+/** @type {!Screen} */ var screen;
+/** @type {!number} */ var screenLeft;
+/** @type {!number} */ var screenTop;
+/** @type {!number} */ var screenX;
+/** @type {!number} */ var screenY;
+/** @type {!number} */ var scrollX;
+/** @type {!number} */ var scrollY;
+/** @type {?DeviceOrientationEventHandler} */ var ondeviceorientation;
+/** @type {!NullableEventHandler} */ var ondeviceorientationabsolute;
+/** @type {!NullableEventHandler} */ var oncompassneedscalibration;
+/** @type {?DeviceMotionEventHandler} */ var ondevicemotion;
+/** @type {!SpeechSynthesis} */ var speechSynthesis;
+/** @type {!VisualViewport} */ var visualViewport;
+/** @type {!number} */ var orientation;
+/** @type {?EventHandler} */ var onorientationchange;
+/** @type {(!Event|undefined)} */ var event;
+/** @type {!boolean} */ var crossOriginIsolated;
+/** @type {!boolean} */ var isSecureContext;
+/** @type {!string} */ var origin;
+/** @type {!Performance} */ var performance;
+/** @type {!IDBFactory} */ var indexedDB;
+/** @type {!CacheStorage} */ var caches;
+/** @type {!Crypto} */ var crypto;
+/** @type {?EventHandler} */ var onafterprint;
+/** @type {?EventHandler} */ var onbeforeprint;
+/** @type {!NullableOnBeforeUnloadEventHandler} */ var onbeforeunload;
+/** @type {?HashChangeEventHandler} */ var onhashchange;
+/** @type {?EventHandler} */ var onlanguagechange;
+/** @type {?MessageEventHandler} */ var onmessage;
+/** @type {?MessageEventHandler} */ var onmessageerror;
+/** @type {?EventHandler} */ var onoffline;
+/** @type {?EventHandler} */ var ononline;
+/** @type {?PageTransitionEventHandler} */ var onpagehide;
+/** @type {?PageTransitionEventHandler} */ var onpageshow;
+/** @type {!NullableEventHandler} */ var onpopstate;
+/** @type {?PromiseRejectionEventHandler} */ var onrejectionhandled;
+/** @type {?StorageEventHandler} */ var onstorage;
+/** @type {?PromiseRejectionEventHandler} */ var onunhandledrejection;
+/** @type {?EventHandler} */ var onunload;
+/** @type {!Storage} */ var localStorage;
+/** @type {!NullableEventHandler} */ var onabort;
+/** @type {!NullableEventHandler} */ var onauxclick;
+/** @type {?FocusEventHandler} */ var onblur;
+/** @type {!NullableEventHandler} */ var oncancel;
+/** @type {!NullableEventHandler} */ var oncanplay;
+/** @type {!NullableEventHandler} */ var oncanplaythrough;
+/** @type {!NullableEventHandler} */ var onchange;
+/** @type {!NullableEventHandler} */ var onclick;
+/** @type {!NullableEventHandler} */ var onclose;
+/** @type {!NullableEventHandler} */ var oncontextmenu;
+/** @type {!NullableEventHandler} */ var oncuechange;
+/** @type {!NullableEventHandler} */ var ondblclick;
+/** @type {!NullableEventHandler} */ var ondrag;
+/** @type {!NullableEventHandler} */ var ondragend;
+/** @type {!NullableEventHandler} */ var ondragenter;
+/** @type {!NullableEventHandler} */ var ondragleave;
+/** @type {!NullableEventHandler} */ var ondragover;
+/** @type {!NullableEventHandler} */ var ondragstart;
+/** @type {!NullableEventHandler} */ var ondrop;
+/** @type {!NullableEventHandler} */ var ondurationchange;
+/** @type {!NullableEventHandler} */ var onemptied;
+/** @type {!NullableEventHandler} */ var onended;
+/** @type {!NullableOnErrorEventHandler} */ var onerror;
+/** @type {?FocusEventHandler} */ var onfocus;
+/** @type {!NullableEventHandler} */ var onformdata;
+/** @type {!NullableEventHandler} */ var oninput;
+/** @type {!NullableEventHandler} */ var oninvalid;
+/** @type {!NullableEventHandler} */ var onkeydown;
+/** @type {!NullableEventHandler} */ var onkeypress;
+/** @type {!NullableEventHandler} */ var onkeyup;
+/** @type {?EventHandler} */ var onload;
+/** @type {!NullableEventHandler} */ var onloadeddata;
+/** @type {!NullableEventHandler} */ var onloadedmetadata;
+/** @type {!NullableEventHandler} */ var onloadstart;
+/** @type {!NullableEventHandler} */ var onmousedown;
+/** @type {!NullableEventHandler} */ var onmouseenter;
+/** @type {!NullableEventHandler} */ var onmouseleave;
+/** @type {!NullableEventHandler} */ var onmousemove;
+/** @type {!NullableEventHandler} */ var onmouseout;
+/** @type {!NullableEventHandler} */ var onmouseover;
+/** @type {!NullableEventHandler} */ var onmouseup;
+/** @type {!NullableEventHandler} */ var onpause;
+/** @type {!NullableEventHandler} */ var onplay;
+/** @type {!NullableEventHandler} */ var onplaying;
+/** @type {!NullableEventHandler} */ var onprogress;
+/** @type {!NullableEventHandler} */ var onratechange;
+/** @type {!NullableEventHandler} */ var onreset;
+/** @type {?UIEventHandler} */ var onresize;
+/** @type {!NullableEventHandler} */ var onscroll;
+/** @type {!NullableEventHandler} */ var onsecuritypolicyviolation;
+/** @type {!NullableEventHandler} */ var onseeked;
+/** @type {!NullableEventHandler} */ var onseeking;
+/** @type {!NullableEventHandler} */ var onselect;
+/** @type {!NullableEventHandler} */ var onslotchange;
+/** @type {!NullableEventHandler} */ var onstalled;
+/** @type {!NullableEventHandler} */ var onsubmit;
+/** @type {!NullableEventHandler} */ var onsuspend;
+/** @type {!NullableEventHandler} */ var ontimeupdate;
+/** @type {!NullableEventHandler} */ var ontoggle;
+/** @type {!NullableEventHandler} */ var onvolumechange;
+/** @type {!NullableEventHandler} */ var onwaiting;
+/** @type {!NullableEventHandler} */ var onwebkitanimationend;
+/** @type {!NullableEventHandler} */ var onwebkitanimationiteration;
+/** @type {!NullableEventHandler} */ var onwebkitanimationstart;
+/** @type {!NullableEventHandler} */ var onwebkittransitionend;
+/** @type {!NullableEventHandler} */ var onwheel;
+/** @type {?AnimationEventHandler} */ var onanimationcancel;
+/** @type {?AnimationEventHandler} */ var onanimationend;
+/** @type {?AnimationEventHandler} */ var onanimationiteration;
+/** @type {?AnimationEventHandler} */ var onanimationstart;
+/** @type {?TransitionEventHandler} */ var ontransitioncancel;
+/** @type {?TransitionEventHandler} */ var ontransitionend;
+/** @type {?TransitionEventHandler} */ var ontransitionrun;
+/** @type {?TransitionEventHandler} */ var ontransitionstart;
+/** @type {!NullableEventHandler} */ var ongotpointercapture;
+/** @type {!NullableEventHandler} */ var onlostpointercapture;
+/** @type {!NullableEventHandler} */ var onpointercancel;
+/** @type {!NullableEventHandler} */ var onpointerdown;
+/** @type {!NullableEventHandler} */ var onpointerenter;
+/** @type {!NullableEventHandler} */ var onpointerleave;
+/** @type {!NullableEventHandler} */ var onpointermove;
+/** @type {!NullableEventHandler} */ var onpointerout;
+/** @type {!NullableEventHandler} */ var onpointerover;
+/** @type {!NullableEventHandler} */ var onpointerup;
+/** @type {!NullableEventHandler} */ var onselectionchange;
+/** @type {!NullableEventHandler} */ var onselectstart;
+/** @type {!NullableEventHandler} */ var ontouchcancel;
+/** @type {!NullableEventHandler} */ var ontouchend;
+/** @type {!NullableEventHandler} */ var ontouchmove;
+/** @type {!NullableEventHandler} */ var ontouchstart;
+/** @type {!Storage} */ var sessionStorage;
+/**
+ * @param {(!ScrollToOptions|!number)=} arg0
+ * @param {!number=} arg1
+ * @return {undefined}
+ */
+function scrollBy(arg0,arg1) {}
+/**
+ * @return {undefined}
+ */
+function focus() {}
+/**
+ * @return {undefined}
+ */
+function blur() {}
+/**
+ * @param {!VoidFunction} callback
+ * @return {undefined}
+ */
+function queueMicrotask(callback) {}
+/**
+ * @param {!string} data
+ * @return {!string}
+ */
+function btoa(data) {}
+/**
+ * @param {!Element} elt
+ * @param {?CSSOMString=} pseudoElt
+ * @return {!CSSStyleDeclaration}
+ */
+function getComputedStyle(elt,pseudoElt) {}
+/**
+ * @param {!FrameRequestCallback} callback
+ * @return {!number}
+ */
+function requestAnimationFrame(callback) {}
+/**
+ * @param {!number=} handle
+ * @return {undefined}
+ */
+function clearInterval(handle) {}
+/**
+ * @param {!TimerHandler} handler
+ * @param {!number=} timeout
+ * @return {!number}
+ */
+function setInterval(handler,timeout) {}
+/**
+ * @param {!string=} arg0
+ * @return {undefined}
+ */
+function alert(arg0) {}
+/**
+ * @param {!number} width
+ * @param {!number} height
+ * @return {undefined}
+ */
+function resizeTo(width,height) {}
+/**
+ * @param {!number=} handle
+ * @return {undefined}
+ */
+function clearTimeout(handle) {}
+/**
+ * @param {*} arg0
+ * @param {(!string|!WindowPostMessageOptions)=} arg1
+ * @param {!Array<!Transferable>=} arg2
+ * @return {undefined}
+ */
+function postMessage(arg0,arg1,arg2) {}
+/**
+ * @param {!number} x
+ * @param {!number} y
+ * @return {undefined}
+ */
+function moveBy(x,y) {}
+/**
+ * @param {!IdleRequestCallback} callback
+ * @param {!IdleRequestOptions=} options
+ * @return {!number}
+ */
+function requestIdleCallback(callback,options) {}
+/**
+ * @return {undefined}
+ */
+function close() {}
+/**
+ * @param {!number} handle
+ * @return {undefined}
+ */
+function cancelAnimationFrame(handle) {}
+/**
+ * @param {!ImageBitmapSource} arg0
+ * @param {(!ImageBitmapOptions|!number)=} arg1
+ * @param {!number=} arg2
+ * @param {!number=} arg3
+ * @param {!number=} arg4
+ * @param {!ImageBitmapOptions=} arg5
+ * @return {!Promise<!ImageBitmap>}
+ */
+function createImageBitmap(arg0,arg1,arg2,arg3,arg4,arg5) {}
+/**
+ * @param {(!ScrollToOptions|!number)=} arg0
+ * @param {!number=} arg1
+ * @return {undefined}
+ */
+function scroll(arg0,arg1) {}
+/**
+ * @param {!string} data
+ * @return {!string}
+ */
+function atob(data) {}
+/**
+ * @param {(!ScrollToOptions|!number)=} arg0
+ * @param {!number=} arg1
+ * @return {undefined}
+ */
+function scrollTo(arg0,arg1) {}
+/**
+ * @param {!string=} message
+ * @return {!boolean}
+ */
+function confirm(message) {}
+/**
+ * @param {!TimerHandler} handler
+ * @param {!number=} timeout
+ * @return {!number}
+ */
+function setTimeout(handler,timeout) {}
+/**
+ * @param {!number} x
+ * @param {!number} y
+ * @return {undefined}
+ */
+function resizeBy(x,y) {}
+/**
+ * @return {undefined}
+ */
+function print() {}
+/**
+ * @return {?Selection}
+ */
+function getSelection() {}
+/**
+ * @return {undefined}
+ */
+function stop() {}
+/**
+ * @param {!number} handle
+ * @return {undefined}
+ */
+function cancelIdleCallback(handle) {}
+/**
+ * @param {!RequestInfo} input
+ * @param {!RequestInit=} init
+ * @return {!Promise<!Response>}
+ */
+function fetch(input,init) {}
+/**
+ * @param {!CSSOMString} query
+ * @return {!MediaQueryList}
+ */
+function matchMedia(query) {}
+/**
+ * @param {!string=} message
+ * @param {!string=} default_
+ * @return {?string}
+ */
+function prompt(message,default_) {}
+/**
+ * @param {!string=} url
+ * @param {!string=} target
+ * @param {!string=} features
+ * @return {?WindowProxy}
+ */
+function open(url,target,features) {}
+/**
+ * @param {!number} x
+ * @param {!number} y
+ * @return {undefined}
+ */
+function moveTo(x,y) {}
