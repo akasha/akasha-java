@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.AddEventListenerOptions;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
+import akasha.MediaProvider;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -26,7 +27,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "MediaStream"
 )
-public class MediaStream extends EventTarget {
+public class MediaStream extends EventTarget implements MediaProvider {
   /**
    * The MediaStream.onaddtrack property is an EventHandler which specifies a function to be called when the addtrack event occurs on a MediaStream instance. This happens when a new track of any kind is added to the media stream.
    *

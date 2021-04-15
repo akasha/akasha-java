@@ -2,6 +2,7 @@ package akasha.media;
 
 import akasha.EventHandler;
 import akasha.EventTarget;
+import akasha.MediaProvider;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "MediaSource"
 )
-public class MediaSource extends EventTarget {
+public class MediaSource extends EventTarget implements MediaProvider {
   /**
    * The duration property of the MediaSource interface gets and sets the duration of the current media being presented.
    *

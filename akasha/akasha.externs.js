@@ -2431,170 +2431,152 @@ var RTCReceiverVideoTrackAttachmentStats;
  */
 var AudioWorkletNodeOptions;
 /**
- * @constructor
- * @private
+ * @const
  */
-function consoleInterface() {}
+var console;
 /**
  * @param {!string=} label
  * @return {undefined}
  */
-consoleInterface.prototype.timeEnd = function(label) {}
+console.timeEnd = function(label) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.debug = function(data) {}
+console.debug = function(data) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.log = function(data) {}
+console.log = function(data) {}
 /**
  * @param {!string=} label
  * @return {undefined}
  */
-consoleInterface.prototype.count = function(label) {}
+console.count = function(label) {}
 /**
  * @return {undefined}
  */
-consoleInterface.prototype.clear = function() {}
-/**
- * @param {...*} data
- * @return {undefined}
- */
-consoleInterface.prototype.dirxml = function(data) {}
+console.clear = function() {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.error = function(data) {}
+console.dirxml = function(data) {}
+/**
+ * @param {...*} data
+ * @return {undefined}
+ */
+console.error = function(data) {}
 /**
  * @param {*=} item
  * @param {?Object=} options
  * @return {undefined}
  */
-consoleInterface.prototype.dir = function(item,options) {}
+console.dir = function(item,options) {}
 /**
  * @param {!string=} label
  * @return {undefined}
  */
-consoleInterface.prototype.countReset = function(label) {}
+console.countReset = function(label) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.warn = function(data) {}
+console.warn = function(data) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.trace = function(data) {}
+console.trace = function(data) {}
 /**
  * @return {undefined}
  */
-consoleInterface.prototype.groupEnd = function() {}
+console.groupEnd = function() {}
 /**
  * @param {!boolean=} condition
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.assert = function(condition,data) {}
+console.assert = function(condition,data) {}
 /**
  * @param {!string=} label
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.timeLog = function(label,data) {}
+console.timeLog = function(label,data) {}
 /**
  * @param {!string=} label
  * @return {undefined}
  */
-consoleInterface.prototype.time = function(label) {}
+console.time = function(label) {}
 /**
  * @param {*=} tabularData
  * @param {!Array<!string>=} properties
  * @return {undefined}
  */
-consoleInterface.prototype.table = function(tabularData,properties) {}
+console.table = function(tabularData,properties) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.groupCollapsed = function(data) {}
+console.groupCollapsed = function(data) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.info = function(data) {}
+console.info = function(data) {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.group = function(data) {}
+console.group = function(data) {}
 /**
  * @const
- * @type {consoleInterface}
  */
-var console;
-/**
- * @constructor
- * @private
- */
-function CSSInterface() {}
+var CSS;
 /**
  * @param {!CSSOMString} arg0
  * @param {!CSSOMString=} arg1
  * @return {!boolean}
  */
-CSSInterface.prototype.supports = function(arg0,arg1) {}
+CSS.supports = function(arg0,arg1) {}
 /**
  * @param {!CSSOMString} ident
  * @return {!CSSOMString}
  */
-CSSInterface.prototype.escape = function(ident) {}
+CSS.escape = function(ident) {}
 /**
  * @const
- * @type {CSSInterface}
  */
-var CSS;
-/**
- * @constructor
- * @private
- */
-function WebAssemblyInterface() {}
+var WebAssembly;
 /**
  * @param {!BufferSource} bytes
  * @return {!Promise<!WebAssembly.Module>}
  */
-WebAssemblyInterface.prototype.compile = function(bytes) {}
+WebAssembly.compile = function(bytes) {}
 /**
  * @param {!Promise<!Response>} source
  * @param {!Object=} importObject
  * @return {!Promise<!WebAssemblyInstantiatedSource>}
  */
-WebAssemblyInterface.prototype.instantiateStreaming = function(source,importObject) {}
+WebAssembly.instantiateStreaming = function(source,importObject) {}
 /**
  * @param {(!BufferSource|!WebAssembly.Module)} arg0
  * @param {!Object=} arg1
  * @return {(!Promise<!WebAssemblyInstantiatedSource>|!Promise<!WebAssembly.Instance>)}
  */
-WebAssemblyInterface.prototype.instantiate = function(arg0,arg1) {}
+WebAssembly.instantiate = function(arg0,arg1) {}
 /**
  * @param {!Promise<!Response>} source
  * @return {!Promise<!WebAssembly.Module>}
  */
-WebAssemblyInterface.prototype.compileStreaming = function(source) {}
+WebAssembly.compileStreaming = function(source) {}
 /**
  * @param {!BufferSource} bytes
  * @return {!boolean}
  */
-WebAssemblyInterface.prototype.validate = function(bytes) {}
-/**
- * @const
- * @type {WebAssemblyInterface}
- */
-var WebAssembly;
+WebAssembly.validate = function(bytes) {}
 /**
  * @constructor
  * @private
