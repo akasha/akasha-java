@@ -250,28 +250,20 @@ public class JsNumber {
       namespace = JsPackage.GLOBAL
   )
   private static final class Constants {
-    @JsOverlay
     private static double EPSILON;
 
-    @JsOverlay
     private static double MAX_SAFE_INTEGER;
 
-    @JsOverlay
     private static double MAX_VALUE;
 
-    @JsOverlay
     private static double MIN_SAFE_INTEGER;
 
-    @JsOverlay
     private static double MIN_VALUE;
 
-    @JsOverlay
     private static double NEGATIVE_INFINITY;
 
-    @JsOverlay
     private static double NaN;
 
-    @JsOverlay
     private static double POSITIVE_INFINITY;
   }
 }
