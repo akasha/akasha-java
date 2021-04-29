@@ -2848,7 +2848,6 @@ function WEBGL_compressed_texture_pvrtc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_pvrtc.prototype.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG;
 /** @const {!GLenum} */ WEBGL_compressed_texture_pvrtc.prototype.COMPRESSED_RGB_PVRTC_2BPPV1_IMG;
 /** @const {!GLenum} */ WEBGL_compressed_texture_pvrtc.prototype.COMPRESSED_RGB_PVRTC_4BPPV1_IMG;
-/** @const {!string} */ WEBGL_compressed_texture_pvrtc.prototype.NAME;
 /**
  * @constructor
  * @private
@@ -2905,8 +2904,6 @@ function CSSNamespaceRule() {}
 function KHR_parallel_shader_compile() {}
 /** @const {!GLenum} */ KHR_parallel_shader_compile.COMPLETION_STATUS_KHR;
 /** @const {!GLenum} */ KHR_parallel_shader_compile.prototype.COMPLETION_STATUS_KHR;
-/** @const {!string} */ KHR_parallel_shader_compile.NAME;
-/** @const {!string} */ KHR_parallel_shader_compile.prototype.NAME;
 /**
  * @constructor
  * @extends {SVGElement}
@@ -3110,7 +3107,6 @@ AudioParam.prototype.linearRampToValueAtTime = function(value,endTime) {}
  */
 function OES_vertex_array_object() {}
 /** @const {!GLenum} */ OES_vertex_array_object.prototype.VERTEX_ARRAY_BINDING_OES;
-/** @const {!string} */ OES_vertex_array_object.prototype.NAME;
 /**
  * @param {?WebGLVertexArrayObjectOES} arrayObject
  * @return {undefined}
@@ -3918,7 +3914,6 @@ function AggregateError(errors,message) {}
  */
 function OES_standard_derivatives() {}
 /** @const {!GLenum} */ OES_standard_derivatives.prototype.FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
-/** @const {!string} */ OES_standard_derivatives.prototype.NAME;
 /**
  * @constructor
  * @private
@@ -4222,8 +4217,6 @@ function OCULUS_multiview() {}
 /** @const {!GLenum} */ OCULUS_multiview.prototype.FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR;
 /** @const {!GLenum} */ OCULUS_multiview.MAX_VIEWS_OVR;
 /** @const {!GLenum} */ OCULUS_multiview.prototype.MAX_VIEWS_OVR;
-/** @const {!string} */ OCULUS_multiview.NAME;
-/** @const {!string} */ OCULUS_multiview.prototype.NAME;
 /**
  * @param {!GLenum} target
  * @param {!GLenum} attachment
@@ -4419,7 +4412,6 @@ function XRBoundedReferenceSpace() {}
 function WEBGL_debug_renderer_info() {}
 /** @const {!GLenum} */ WEBGL_debug_renderer_info.prototype.UNMASKED_RENDERER_WEBGL;
 /** @const {!GLenum} */ WEBGL_debug_renderer_info.prototype.UNMASKED_VENDOR_WEBGL;
-/** @const {!string} */ WEBGL_debug_renderer_info.prototype.NAME;
 /**
  * @constructor
  * @private
@@ -5144,7 +5136,6 @@ function ValueEvent(type,initDict) {}
  * @private
  */
 function OES_texture_float_linear() {}
-/** @const {!string} */ OES_texture_float_linear.prototype.NAME;
 /**
  * @constructor
  * @private
@@ -5327,8 +5318,6 @@ function OVR_multiview2() {}
 /** @const {!GLenum} */ OVR_multiview2.prototype.FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR;
 /** @const {!GLenum} */ OVR_multiview2.MAX_VIEWS_OVR;
 /** @const {!GLenum} */ OVR_multiview2.prototype.MAX_VIEWS_OVR;
-/** @const {!string} */ OVR_multiview2.NAME;
-/** @const {!string} */ OVR_multiview2.prototype.NAME;
 /**
  * @param {!GLenum} target
  * @param {!GLenum} attachment
@@ -5426,7 +5415,6 @@ function SVGGradientElement() {}
  */
 function OES_texture_half_float() {}
 /** @const {!GLenum} */ OES_texture_half_float.prototype.HALF_FLOAT_OES;
-/** @const {!string} */ OES_texture_half_float.prototype.NAME;
 /**
  * @constructor
  * @extends {SVGGraphicsElement}
@@ -7192,7 +7180,6 @@ function WEBGL_compressed_texture_etc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_etc.prototype.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC;
 /** @const {!GLenum} */ WEBGL_compressed_texture_etc.prototype.COMPRESSED_SRGB8_ETC2;
 /** @const {!GLenum} */ WEBGL_compressed_texture_etc.prototype.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2;
-/** @const {!string} */ WEBGL_compressed_texture_etc.prototype.NAME;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -7228,7 +7215,6 @@ function InputEvent(type,eventInitDict) {}
  * @private
  */
 function EXT_float_blend() {}
-/** @const {!string} */ EXT_float_blend.prototype.NAME;
 /**
  * @constructor
  * @param {!Object=} transformer
@@ -7484,7 +7470,6 @@ function EXT_sRGB() {}
 /** @const {!GLenum} */ EXT_sRGB.prototype.SRGB8_ALPHA8_EXT;
 /** @const {!GLenum} */ EXT_sRGB.prototype.SRGB_ALPHA_EXT;
 /** @const {!GLenum} */ EXT_sRGB.prototype.SRGB_EXT;
-/** @const {!string} */ EXT_sRGB.prototype.NAME;
 /**
  * @constructor
  * @extends {WebGLObject}
@@ -7547,8 +7532,6 @@ function EXT_texture_compression_bptc() {}
 /** @const {!GLenum} */ EXT_texture_compression_bptc.prototype.COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT;
 /** @const {!GLenum} */ EXT_texture_compression_bptc.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT;
 /** @const {!GLenum} */ EXT_texture_compression_bptc.prototype.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT;
-/** @const {!string} */ EXT_texture_compression_bptc.NAME;
-/** @const {!string} */ EXT_texture_compression_bptc.prototype.NAME;
 /**
  * @constructor
  * @param {!string} url
@@ -7587,7 +7570,6 @@ URL.createObjectURL = function(arg0) {}
  * @private
  */
 function WEBGL_debug_shaders() {}
-/** @const {!string} */ WEBGL_debug_shaders.prototype.NAME;
 /**
  * @param {!WebGLShader} shader
  * @return {!string}
@@ -8307,8 +8289,6 @@ function EXT_texture_compression_rgtc() {}
 /** @const {!GLenum} */ EXT_texture_compression_rgtc.prototype.COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT;
 /** @const {!GLenum} */ EXT_texture_compression_rgtc.COMPRESSED_SIGNED_RED_RGTC1_EXT;
 /** @const {!GLenum} */ EXT_texture_compression_rgtc.prototype.COMPRESSED_SIGNED_RED_RGTC1_EXT;
-/** @const {!string} */ EXT_texture_compression_rgtc.NAME;
-/** @const {!string} */ EXT_texture_compression_rgtc.prototype.NAME;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -8447,7 +8427,6 @@ ServiceWorker.prototype.postMessage = function(arg0,arg1) {}
  * @private
  */
 function OES_texture_half_float_linear() {}
-/** @const {!string} */ OES_texture_half_float_linear.prototype.NAME;
 /**
  * @constructor
  * @extends {Event}
@@ -8571,7 +8550,6 @@ function EXT_disjoint_timer_query() {}
 /** @const {!GLenum} */ EXT_disjoint_timer_query.prototype.QUERY_RESULT_EXT;
 /** @const {!GLenum} */ EXT_disjoint_timer_query.prototype.TIMESTAMP_EXT;
 /** @const {!GLenum} */ EXT_disjoint_timer_query.prototype.TIME_ELAPSED_EXT;
-/** @const {!string} */ EXT_disjoint_timer_query.prototype.NAME;
 /**
  * @param {!GLenum} target
  * @return {undefined}
@@ -10912,7 +10890,6 @@ function HTMLModElement() {}
 function EXT_texture_filter_anisotropic() {}
 /** @const {!GLenum} */ EXT_texture_filter_anisotropic.prototype.MAX_TEXTURE_MAX_ANISOTROPY_EXT;
 /** @const {!GLenum} */ EXT_texture_filter_anisotropic.prototype.TEXTURE_MAX_ANISOTROPY_EXT;
-/** @const {!string} */ EXT_texture_filter_anisotropic.prototype.NAME;
 /**
  * @constructor
  * @extends {CSSConditionRule}
@@ -10984,7 +10961,6 @@ function WEBGL_compressed_texture_s3tc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc.prototype.COMPRESSED_RGBA_S3TC_DXT3_EXT;
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc.prototype.COMPRESSED_RGBA_S3TC_DXT5_EXT;
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc.prototype.COMPRESSED_RGB_S3TC_DXT1_EXT;
-/** @const {!string} */ WEBGL_compressed_texture_s3tc.prototype.NAME;
 /**
  * @constructor
  * @param {!string} idp
@@ -11132,7 +11108,6 @@ Bluetooth.prototype.requestDevice = function(options) {}
  * @private
  */
 function EXT_frag_depth() {}
-/** @const {!string} */ EXT_frag_depth.prototype.NAME;
 /**
  * @constructor
  * @extends {CSSRule}
@@ -11332,7 +11307,6 @@ function WEBGL_color_buffer_float() {}
 /** @const {!GLenum} */ WEBGL_color_buffer_float.prototype.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT;
 /** @const {!GLenum} */ WEBGL_color_buffer_float.prototype.RGBA32F_EXT;
 /** @const {!GLenum} */ WEBGL_color_buffer_float.prototype.UNSIGNED_NORMALIZED_EXT;
-/** @const {!string} */ WEBGL_color_buffer_float.prototype.NAME;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -13151,7 +13125,6 @@ MediaKeySession.prototype.remove = function() {}
  */
 function WEBGL_compressed_texture_etc1() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_etc1.prototype.COMPRESSED_RGB_ETC1_WEBGL;
-/** @const {!string} */ WEBGL_compressed_texture_etc1.prototype.NAME;
 /**
  * @constructor
  * @extends {HTMLElement}
@@ -16767,8 +16740,6 @@ function EXT_texture_norm16() {}
 /** @const {!GLenum} */ EXT_texture_norm16.prototype.RGBA16_EXT;
 /** @const {!GLenum} */ EXT_texture_norm16.RGBA16_SNORM_EXT;
 /** @const {!GLenum} */ EXT_texture_norm16.prototype.RGBA16_SNORM_EXT;
-/** @const {!string} */ EXT_texture_norm16.NAME;
-/** @const {!string} */ EXT_texture_norm16.prototype.NAME;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -16812,7 +16783,6 @@ function HTMLParagraphElement() {}
  */
 function ANGLE_instanced_arrays() {}
 /** @const {!GLenum} */ ANGLE_instanced_arrays.prototype.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
-/** @const {!string} */ ANGLE_instanced_arrays.prototype.NAME;
 /**
  * @param {!GLuint} index
  * @param {!GLuint} divisor
@@ -16865,7 +16835,6 @@ function SVGSwitchElement() {}
  * @private
  */
 function OES_fbo_render_mipmap() {}
-/** @const {!string} */ OES_fbo_render_mipmap.prototype.NAME;
 /**
  * @constructor
  * @extends {Event}
@@ -17234,7 +17203,6 @@ HTMLTableElement.prototype.createTHead = function() {}
  * @private
  */
 function OES_element_index_uint() {}
-/** @const {!string} */ OES_element_index_uint.prototype.NAME;
 /**
  * @constructor
  * @extends {AudioNode}
@@ -17770,8 +17738,6 @@ function RegExpGroups() {}
  * @private
  */
 function WEBGL_multi_draw() {}
-/** @const {!string} */ WEBGL_multi_draw.NAME;
-/** @const {!string} */ WEBGL_multi_draw.prototype.NAME;
 /**
  * @param {!GLenum} mode
  * @param {!Int32Array} countsList
@@ -17958,7 +17924,6 @@ function PopStateEvent(type,eventInitDict) {}
  * @private
  */
 function WEBGL_lose_context() {}
-/** @const {!string} */ WEBGL_lose_context.prototype.NAME;
 /**
  * @return {undefined}
  */
@@ -18642,7 +18607,6 @@ function WEBGL_compressed_texture_astc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_astc.prototype.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR;
 /** @const {!GLenum} */ WEBGL_compressed_texture_astc.prototype.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR;
 /** @const {!GLenum} */ WEBGL_compressed_texture_astc.prototype.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR;
-/** @const {!string} */ WEBGL_compressed_texture_astc.prototype.NAME;
 /**
  * @return {!Array<!string>}
  */
@@ -18848,7 +18812,6 @@ function WEBGL_compressed_texture_s3tc_srgb() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc_srgb.prototype.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT;
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc_srgb.prototype.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT;
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc_srgb.prototype.COMPRESSED_SRGB_S3TC_DXT1_EXT;
-/** @const {!string} */ WEBGL_compressed_texture_s3tc_srgb.prototype.NAME;
 /**
  * @constructor
  * @extends {EventTarget}
@@ -18895,7 +18858,6 @@ function XRViewport() {}
  * @private
  */
 function EXT_color_buffer_float() {}
-/** @const {!string} */ EXT_color_buffer_float.prototype.NAME;
 /**
  * @constructor
  * @extends {HTMLElement}
@@ -18973,7 +18935,6 @@ function SVGDescElement() {}
 function EXT_blend_minmax() {}
 /** @const {!GLenum} */ EXT_blend_minmax.prototype.MAX_EXT;
 /** @const {!GLenum} */ EXT_blend_minmax.prototype.MIN_EXT;
-/** @const {!string} */ EXT_blend_minmax.prototype.NAME;
 /**
  * @constructor
  * @param {!Array<!BlobPart>=} blobParts
@@ -19041,7 +19002,6 @@ FileList.prototype.item = function(index) {}
  */
 function WEBGL_depth_texture() {}
 /** @const {!GLenum} */ WEBGL_depth_texture.prototype.UNSIGNED_INT_24_8_WEBGL;
-/** @const {!string} */ WEBGL_depth_texture.prototype.NAME;
 /**
  * @constructor
  * @extends {Event}
@@ -19241,7 +19201,6 @@ function SVGFETurbulenceElement() {}
  * @private
  */
 function EXT_shader_texture_lod() {}
-/** @const {!string} */ EXT_shader_texture_lod.prototype.NAME;
 /**
  * @constructor
  * @param {!string=} label
@@ -19604,7 +19563,6 @@ function WEBGL_draw_buffers() {}
 /** @const {!GLenum} */ WEBGL_draw_buffers.prototype.DRAW_BUFFER9_WEBGL;
 /** @const {!GLenum} */ WEBGL_draw_buffers.prototype.MAX_COLOR_ATTACHMENTS_WEBGL;
 /** @const {!GLenum} */ WEBGL_draw_buffers.prototype.MAX_DRAW_BUFFERS_WEBGL;
-/** @const {!string} */ WEBGL_draw_buffers.prototype.NAME;
 /**
  * @param {!Array<!GLenum>} buffers
  * @return {undefined}
@@ -19790,7 +19748,6 @@ function EXT_disjoint_timer_query_webgl2() {}
 /** @const {!GLenum} */ EXT_disjoint_timer_query_webgl2.prototype.QUERY_COUNTER_BITS_EXT;
 /** @const {!GLenum} */ EXT_disjoint_timer_query_webgl2.prototype.TIMESTAMP_EXT;
 /** @const {!GLenum} */ EXT_disjoint_timer_query_webgl2.prototype.TIME_ELAPSED_EXT;
-/** @const {!string} */ EXT_disjoint_timer_query_webgl2.prototype.NAME;
 /**
  * @param {!WebGLQuery} query
  * @param {!GLenum} target
@@ -20092,7 +20049,6 @@ function EXT_color_buffer_half_float() {}
 /** @const {!GLenum} */ EXT_color_buffer_half_float.prototype.RGB16F_EXT;
 /** @const {!GLenum} */ EXT_color_buffer_half_float.prototype.RGBA16F_EXT;
 /** @const {!GLenum} */ EXT_color_buffer_half_float.prototype.UNSIGNED_NORMALIZED_EXT;
-/** @const {!string} */ EXT_color_buffer_half_float.prototype.NAME;
 /**
  * @constructor
  * @extends {HTMLElement}
