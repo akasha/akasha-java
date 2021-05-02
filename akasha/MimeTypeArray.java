@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -31,6 +32,7 @@ public class MimeTypeArray {
   @Nullable
   public native Object namedItem(@Nonnull String name);
 
+  @HasNoSideEffects
   @Nullable
   public native Object item(int index);
 }

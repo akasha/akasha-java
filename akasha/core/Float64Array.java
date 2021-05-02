@@ -1,6 +1,7 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -178,6 +179,7 @@ public class Float64Array implements TypedArray {
   @Nonnull
   public native Float64Array copyWithin(int target, int start);
 
+  @HasNoSideEffects
   public native double get(int index);
 
   /**

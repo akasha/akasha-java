@@ -6,6 +6,7 @@ import akasha.EventListener;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.lang.JsArray;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -87,6 +88,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://www.w3.org/TR/hr-time-2/#dom-performance-now">performance.now() - High Resolution Time Level 2</a>
    * @see <a href="https://www.w3.org/TR/hr-time-1/#dom-performance-now">performance.now() - High Resolution Time</a>
    */
+  @HasNoSideEffects
   public native double now();
 
   /**
@@ -105,6 +107,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performance-getentries">getEntries() - Performance Timeline Level 2</a>
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentries">getEntries() - Performance Timeline</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<PerformanceEntry> getEntries();
 
@@ -115,6 +118,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performance-getentriesbyname">getEntriesByName() - Performance Timeline Level 2</a>
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname">getEntriesByName() - Performance Timeline</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<PerformanceEntry> getEntriesByName(@Nonnull String name,
       @Nonnull String type);
@@ -126,6 +130,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performance-getentriesbyname">getEntriesByName() - Performance Timeline Level 2</a>
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname">getEntriesByName() - Performance Timeline</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<PerformanceEntry> getEntriesByName(@Nonnull String name);
 
@@ -136,6 +141,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performance-getentriesbytype">getEntriesByType() - Performance Timeline Level 2</a>
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbytype">getEntriesByType() - Performance Timeline</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<PerformanceEntry> getEntriesByType(@Nonnull String type);
 

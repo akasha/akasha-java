@@ -1,5 +1,6 @@
 package akasha.core;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -128,6 +129,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate">Date.getDate - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getdate">Date.prototype.getDate - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getDate();
 
   /**
@@ -136,6 +138,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay">Date.getDay - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getday">Date.prototype.getDay - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getDay();
 
   /**
@@ -144,6 +147,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear">Date.getFullYear - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getfullyear">Date.prototype.getFullYear - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getFullYear();
 
   /**
@@ -152,6 +156,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours">Date.getHours - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.gethours">Date.prototype.getHours - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getHours();
 
   /**
@@ -160,6 +165,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds">Date.getMilliseconds - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getmilliseconds">Date.prototype.getMilliseconds - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getMilliseconds();
 
   /**
@@ -168,6 +174,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes">Date.getMinutes - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getminutes">Date.prototype.getMinutes - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getMinutes();
 
   /**
@@ -176,6 +183,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth">Date.getMonth - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getmonth">Date.prototype.getMonth - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getMonth();
 
   /**
@@ -184,6 +192,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds">Date.getSeconds - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getseconds">Date.prototype.getSeconds - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getSeconds();
 
   /**
@@ -192,6 +201,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime">Date.getTime - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.gettime">Date.prototype.getTime - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native double getTime();
 
   /**
@@ -200,6 +210,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset">Date.getTimezoneOffset - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.gettimezoneoffset">Date.prototype.getTimezoneOffset - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getTimezoneOffset();
 
   /**
@@ -208,6 +219,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDate">Date.getUTCDate - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcdate">Date.prototype.getUTCDate - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCDate();
 
   /**
@@ -216,6 +228,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDay">Date.getUTCDay - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcday">Date.prototype.getUTCDay - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCDay();
 
   /**
@@ -224,6 +237,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear">Date.getUTCFullYear - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcfullyear">Date.prototype.getUTCFullYear - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCFullYear();
 
   /**
@@ -232,6 +246,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours">Date.getUTCHours - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutchours">Date.prototype.getUTCHours - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCHours();
 
   /**
@@ -240,6 +255,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds">Date.getUTCMilliseconds - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcmilliseconds">Date.prototype.getUTCMilliseconds - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCMilliseconds();
 
   /**
@@ -248,6 +264,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes">Date.getUTCMinutes - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcminutes">Date.prototype.getUTCMinutes - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCMinutes();
 
   /**
@@ -256,6 +273,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth">Date.getUTCMonth - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcmonth">Date.prototype.getUTCMonth - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCMonth();
 
   /**
@@ -264,6 +282,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds">Date.getUTCSeconds - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.getutcseconds">Date.prototype.getUTCSeconds - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int getUTCSeconds();
 
   /**
@@ -536,6 +555,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString">Date.toDateString - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.todatestring">Date.prototype.toDateString - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toDateString();
 
@@ -572,6 +592,7 @@ public class JsDate {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString">Date.toUTCString - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-date.prototype.toutcstring">Date.prototype.toUTCString - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toUTCString();
 

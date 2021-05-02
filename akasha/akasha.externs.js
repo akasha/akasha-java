@@ -2575,11 +2575,13 @@ WebAssembly.compileStreaming = function(source) {}
 /**
  * @param {!BufferSource} bytes
  * @return {!boolean}
+ * @nosideeffects
  */
 WebAssembly.validate = function(bytes) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PerformanceTiming() {}
 /** @type {!number} */ PerformanceTiming.prototype.connectEnd;
@@ -2610,8 +2612,9 @@ function PerformanceTiming() {}
 PerformanceTiming.prototype.toJSON = function() {}
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSImportRule() {}
 /** @type {!string} */ CSSImportRule.prototype.href;
@@ -2620,6 +2623,7 @@ function CSSImportRule() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WakeLock() {}
 /**
@@ -2629,8 +2633,9 @@ function WakeLock() {}
 WakeLock.prototype.request = function(type) {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGForeignObjectElement() {}
 /** @type {!SVGAnimatedLength} */ SVGForeignObjectElement.prototype.height;
@@ -2640,6 +2645,7 @@ function SVGForeignObjectElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CSSFontFeatureValuesMap() {}
 /**
@@ -2671,14 +2677,16 @@ function PasswordCredential(arg0) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedBoolean() {}
 /** @type {!boolean} */ SVGAnimatedBoolean.prototype.animVal;
 /** @type {!boolean} */ SVGAnimatedBoolean.prototype.baseVal;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEDiffuseLightingElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFEDiffuseLightingElement.prototype.diffuseConstant;
@@ -2694,6 +2702,7 @@ function SVGFEDiffuseLightingElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGPointList() {}
 /** @type {!number} */ SVGPointList.prototype.length;
@@ -2736,8 +2745,9 @@ SVGPointList.prototype.initialize = function(newItem) {}
 SVGPointList.prototype.appendItem = function(newItem) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEColorMatrixElement() {}
 /** @const {!number} */ SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_HUEROTATE;
@@ -2761,28 +2771,33 @@ function SVGFEColorMatrixElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function HTMLCollection() {}
 /** @type {!number} */ HTMLCollection.prototype.length;
 /**
  * @param {!string} name
  * @return {?Element}
+ * @nosideeffects
  */
 HTMLCollection.prototype.namedItem = function(name) {}
 /**
  * @param {!number} index
  * @return {?Element}
+ * @nosideeffects
  */
 HTMLCollection.prototype.item = function(index) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLSpanElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function GamepadTouch() {}
 /** @type {!Float32Array} */ GamepadTouch.prototype.position;
@@ -2799,8 +2814,9 @@ function XRSessionEvent(type,eventInitDict) {}
 /** @type {!XRSession} */ XRSessionEvent.prototype.session;
 /**
  * @constructor
- * @extends {PermissionStatus}
  * @private
+ * @extends {PermissionStatus}
+ * @nosideeffects
  */
 function XRPermissionStatus() {}
 /** @type {!Array<*>} */ XRPermissionStatus.prototype.granted;
@@ -2815,6 +2831,7 @@ function SpeechSynthesisErrorEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CanvasPattern() {}
 /**
@@ -2824,8 +2841,9 @@ function CanvasPattern() {}
 CanvasPattern.prototype.setTransform = function(transform) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDivElement() {}
 /** @type {!string} */ HTMLDivElement.prototype.align;
@@ -2842,6 +2860,7 @@ DOMParser.prototype.parseFromString = function(string,type) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_compressed_texture_pvrtc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_pvrtc.prototype.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG;
@@ -2852,6 +2871,7 @@ function WEBGL_compressed_texture_pvrtc() {}
  * @constructor
  * @private
  * @extends {EventTarget}
+ * @nosideeffects
  */
 function SpeechRecognition() {}
 /** @type {!boolean} */ SpeechRecognition.prototype.continuous;
@@ -2884,15 +2904,17 @@ SpeechRecognition.prototype.abort = function() {}
 SpeechRecognition.prototype.start = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTimeElement() {}
 /** @type {!string} */ HTMLTimeElement.prototype.dateTime;
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSNamespaceRule() {}
 /** @type {!CSSOMString} */ CSSNamespaceRule.prototype.namespaceURI;
@@ -2900,14 +2922,16 @@ function CSSNamespaceRule() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function KHR_parallel_shader_compile() {}
 /** @const {!GLenum} */ KHR_parallel_shader_compile.COMPLETION_STATUS_KHR;
 /** @const {!GLenum} */ KHR_parallel_shader_compile.prototype.COMPLETION_STATUS_KHR;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEDistantLightElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFEDistantLightElement.prototype.azimuth;
@@ -2924,14 +2948,16 @@ function MediaKeyMessageEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedInteger() {}
 /** @type {!number} */ SVGAnimatedInteger.prototype.animVal;
 /** @type {!number} */ SVGAnimatedInteger.prototype.baseVal;
 /**
  * @constructor
- * @extends {MediaDeviceInfo}
  * @private
+ * @extends {MediaDeviceInfo}
+ * @nosideeffects
  */
 function InputDeviceInfo() {}
 /**
@@ -2941,6 +2967,7 @@ InputDeviceInfo.prototype.getCapabilities = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Crypto() {}
 /** @type {!SubtleCrypto} */ Crypto.prototype.subtle;
@@ -2952,6 +2979,7 @@ Crypto.prototype.getRandomValues = function(array) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function StyleSheet() {}
 /** @type {?string} */ StyleSheet.prototype.href;
@@ -2963,8 +2991,9 @@ function StyleSheet() {}
 /** @type {!boolean} */ StyleSheet.prototype.disabled;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function IDBTransaction() {}
 /** @type {!IDBDatabase} */ IDBTransaction.prototype.db;
@@ -2990,8 +3019,9 @@ IDBTransaction.prototype.abort = function() {}
 IDBTransaction.prototype.commit = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLFrameSetElement() {}
 /** @type {!string} */ HTMLFrameSetElement.prototype.cols;
@@ -3014,8 +3044,9 @@ function HTMLFrameSetElement() {}
 /** @type {!NullableEventHandler} */ HTMLFrameSetElement.prototype.onunload;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLOptionElement() {}
 /** @type {?HTMLFormElement} */ HTMLOptionElement.prototype.form;
@@ -3029,6 +3060,7 @@ function HTMLOptionElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechGrammarList() {}
 /** @type {!number} */ SpeechGrammarList.prototype.length;
@@ -3052,6 +3084,7 @@ SpeechGrammarList.prototype.addFromString = function(string,weight) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AudioParam() {}
 /** @type {!number} */ AudioParam.prototype.defaultValue;
@@ -3104,6 +3137,7 @@ AudioParam.prototype.linearRampToValueAtTime = function(value,endTime) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_vertex_array_object() {}
 /** @const {!GLenum} */ OES_vertex_array_object.prototype.VERTEX_ARRAY_BINDING_OES;
@@ -3114,6 +3148,7 @@ function OES_vertex_array_object() {}
 OES_vertex_array_object.prototype.deleteVertexArrayOES = function(arrayObject) {}
 /**
  * @return {?WebGLVertexArrayObjectOES}
+ * @nosideeffects
  */
 OES_vertex_array_object.prototype.createVertexArrayOES = function() {}
 /**
@@ -3124,6 +3159,7 @@ OES_vertex_array_object.prototype.bindVertexArrayOES = function(arrayObject) {}
 /**
  * @param {?WebGLVertexArrayObjectOES} arrayObject
  * @return {!GLboolean}
+ * @nosideeffects
  */
 OES_vertex_array_object.prototype.isVertexArrayOES = function(arrayObject) {}
 /**
@@ -3135,6 +3171,7 @@ function StaticRange(init) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RTCRtpSender() {}
 /** @type {?MediaStreamTrack} */ RTCRtpSender.prototype.track;
@@ -3198,8 +3235,9 @@ function RTCError(init,message) {}
 /** @type {?number} */ RTCError.prototype.httpRequestStatusCode;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEFloodElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFEFloodElement.prototype.height;
@@ -3210,6 +3248,7 @@ function SVGFEFloodElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Selection() {}
 /** @type {?Node} */ Selection.prototype.anchorNode;
@@ -3222,6 +3261,7 @@ function Selection() {}
 /**
  * @param {!number} index
  * @return {!Range}
+ * @nosideeffects
  */
 Selection.prototype.getRangeAt = function(index) {}
 /**
@@ -3283,6 +3323,7 @@ Selection.prototype.deleteFromDocument = function() {}
  * @param {!Node} node
  * @param {!boolean=} allowPartialContainment
  * @return {!boolean}
+ * @nosideeffects
  */
 Selection.prototype.containsNode = function(node,allowPartialContainment) {}
 /**
@@ -3294,6 +3335,7 @@ Selection.prototype.collapse = function(node,offset) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CanvasRenderingContext2D() {}
 /** @type {!HTMLCanvasElement} */ CanvasRenderingContext2D.prototype.canvas;
@@ -3326,6 +3368,7 @@ CanvasRenderingContext2D.prototype.rotate = function(angle) {}
  * @param {(!number|!ImageData)} arg0
  * @param {!number=} arg1
  * @return {!ImageData}
+ * @nosideeffects
  */
 CanvasRenderingContext2D.prototype.createImageData = function(arg0,arg1) {}
 /**
@@ -3356,6 +3399,7 @@ CanvasRenderingContext2D.prototype.setLineDash = function(segments) {}
 /**
  * @param {!string} text
  * @return {!TextMetrics}
+ * @nosideeffects
  */
 CanvasRenderingContext2D.prototype.measureText = function(text) {}
 /**
@@ -3432,6 +3476,7 @@ CanvasRenderingContext2D.prototype.setTransform = function(arg0,arg1,arg2,arg3,a
  * @param {(!string|!number)=} arg2
  * @param {!string=} arg3
  * @return {!boolean}
+ * @nosideeffects
  */
 CanvasRenderingContext2D.prototype.isPointInPath = function(arg0,arg1,arg2,arg3) {}
 /**
@@ -3588,6 +3633,7 @@ CanvasRenderingContext2D.prototype.createPattern = function(image,repetition) {}
  * @param {!number} arg1
  * @param {!number=} arg2
  * @return {!boolean}
+ * @nosideeffects
  */
 CanvasRenderingContext2D.prototype.isPointInStroke = function(arg0,arg1,arg2) {}
 /**
@@ -3680,14 +3726,16 @@ function ChannelMergerNode(context,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedLengthList() {}
 /** @type {!SVGLengthList} */ SVGAnimatedLengthList.prototype.animVal;
 /** @type {!SVGLengthList} */ SVGAnimatedLengthList.prototype.baseVal;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function AudioTrackList() {}
 /** @type {!number} */ AudioTrackList.prototype.length;
@@ -3701,16 +3749,18 @@ function AudioTrackList() {}
 AudioTrackList.prototype.getTrackById = function(id) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLBaseElement() {}
 /** @type {!string} */ HTMLBaseElement.prototype.href;
 /** @type {!string} */ HTMLBaseElement.prototype.target;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLMapElement() {}
 /** @type {!HTMLCollection} */ HTMLMapElement.prototype.areas;
@@ -3718,6 +3768,7 @@ function HTMLMapElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRInputSourceArray() {}
 /** @type {!number} */ XRInputSourceArray.prototype.length;
@@ -3733,6 +3784,7 @@ XMLSerializer.prototype.serializeToString = function(root) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedPreserveAspectRatio() {}
 /** @type {!SVGPreserveAspectRatio} */ SVGAnimatedPreserveAspectRatio.prototype.animVal;
@@ -3770,19 +3822,22 @@ function MouseEvent(type,eventInitDict) {}
 MouseEvent.prototype.getModifierState = function(keyArg) {}
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLShader() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ObjectPropertyEntry() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLSelectElement() {}
 /** @type {?HTMLFormElement} */ HTMLSelectElement.prototype.form;
@@ -3847,14 +3902,16 @@ function SubmitEvent(type,eventInitDict) {}
 /** @type {?HTMLElement} */ SubmitEvent.prototype.submitter;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGMetadataElement() {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGUseElement() {}
 /** @type {?SVGElement} */ SVGUseElement.prototype.animatedInstanceRoot;
@@ -3866,8 +3923,9 @@ function SVGUseElement() {}
 /** @type {!SVGAnimatedString} */ SVGUseElement.prototype.href;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function WakeLockSentinel() {}
 /** @type {!boolean} */ WakeLockSentinel.prototype.released;
@@ -3879,8 +3937,9 @@ function WakeLockSentinel() {}
 WakeLockSentinel.prototype.release = function() {}
 /**
  * @constructor
- * @extends {SVGGradientElement}
  * @private
+ * @extends {SVGGradientElement}
+ * @nosideeffects
  */
 function SVGRadialGradientElement() {}
 /** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.cx;
@@ -3891,8 +3950,9 @@ function SVGRadialGradientElement() {}
 /** @type {!SVGAnimatedLength} */ SVGRadialGradientElement.prototype.r;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLHRElement() {}
 /** @type {!string} */ HTMLHRElement.prototype.align;
@@ -3911,12 +3971,14 @@ function AggregateError(errors,message) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_standard_derivatives() {}
 /** @const {!GLenum} */ OES_standard_derivatives.prototype.FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGTransform() {}
 /** @const {!number} */ SVGTransform.SVG_TRANSFORM_MATRIX;
@@ -3991,6 +4053,7 @@ function MessageChannel() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function VideoTrack() {}
 /** @type {!string} */ VideoTrack.prototype.id;
@@ -4001,21 +4064,24 @@ function VideoTrack() {}
 /** @type {?SourceBuffer} */ VideoTrack.prototype.sourceBuffer;
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSFontFaceRule() {}
 /** @type {!CSSStyleDeclaration} */ CSSFontFaceRule.prototype.style;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLVertexArrayObject() {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEMergeNodeElement() {}
 /** @type {!SVGAnimatedString} */ SVGFEMergeNodeElement.prototype.in1;
@@ -4027,14 +4093,16 @@ function SVGFEMergeNodeElement() {}
 function Audio(src) {}
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLTransformFeedback() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function AudioNode() {}
 /** @type {!BaseAudioContext} */ AudioNode.prototype.context;
@@ -4060,14 +4128,16 @@ AudioNode.prototype.connect = function(arg0,arg1,arg2) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRPose() {}
 /** @type {!boolean} */ XRPose.prototype.emulatedPosition;
 /** @type {!XRRigidTransform} */ XRPose.prototype.transform;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDialogElement() {}
 /** @type {!boolean} */ HTMLDialogElement.prototype.open;
@@ -4088,6 +4158,7 @@ HTMLDialogElement.prototype.close = function(returnValue) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMTokenList() {}
 /** @type {!number} */ DOMTokenList.prototype.length;
@@ -4100,11 +4171,13 @@ DOMTokenList.prototype.add = function(tokens) {}
 /**
  * @param {!number} index
  * @return {?string}
+ * @nosideeffects
  */
 DOMTokenList.prototype.item = function(index) {}
 /**
  * @param {!string} token
  * @return {!boolean}
+ * @nosideeffects
  */
 DOMTokenList.prototype.contains = function(token) {}
 /**
@@ -4116,6 +4189,7 @@ DOMTokenList.prototype.replace = function(token,newToken) {}
 /**
  * @param {!string} token
  * @return {!boolean}
+ * @nosideeffects
  */
 DOMTokenList.prototype.supports = function(token) {}
 /**
@@ -4131,15 +4205,17 @@ DOMTokenList.prototype.toggle = function(token,force) {}
 DOMTokenList.prototype.remove = function(tokens) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTemplateElement() {}
 /** @type {!DocumentFragment} */ HTMLTemplateElement.prototype.content;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDirectoryElement() {}
 /** @type {!boolean} */ HTMLDirectoryElement.prototype.compact;
@@ -4160,11 +4236,13 @@ function TouchEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMStringMap() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DeviceMotionEventRotationRate() {}
 /** @type {?number} */ DeviceMotionEventRotationRate.prototype.alpha;
@@ -4183,6 +4261,7 @@ function ProgressEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function GamepadHapticActuator() {}
 /** @type {!string} */ GamepadHapticActuator.prototype.type;
@@ -4207,6 +4286,7 @@ WebAssembly.Global.prototype.valueOf = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OCULUS_multiview() {}
 /** @const {!GLenum} */ OCULUS_multiview.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR;
@@ -4272,8 +4352,9 @@ DataTransfer.prototype.getData = function(format) {}
 DataTransfer.prototype.clearData = function(format) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLFormElement() {}
 /** @type {!HTMLFormControlsCollection} */ HTMLFormElement.prototype.elements;
@@ -4312,8 +4393,9 @@ HTMLFormElement.prototype.requestSubmit = function(submitter) {}
 HTMLFormElement.prototype.checkValidity = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLOutputElement() {}
 /** @type {?HTMLFormElement} */ HTMLOutputElement.prototype.form;
@@ -4352,11 +4434,13 @@ function ImageData(arg0,arg1,arg2) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothManufacturerDataMap() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RTCRtpTransceiver() {}
 /** @type {?string} */ RTCRtpTransceiver.prototype.currentDirection;
@@ -4375,8 +4459,9 @@ RTCRtpTransceiver.prototype.stop = function() {}
 RTCRtpTransceiver.prototype.setCodecPreferences = function(codecs) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLUListElement() {}
 /** @type {!boolean} */ HTMLUListElement.prototype.compact;
@@ -4400,14 +4485,16 @@ function PromiseRejectionEvent(type,eventInitDict) {}
 /** @type {*} */ PromiseRejectionEvent.prototype.reason;
 /**
  * @constructor
- * @extends {XRReferenceSpace}
  * @private
+ * @extends {XRReferenceSpace}
+ * @nosideeffects
  */
 function XRBoundedReferenceSpace() {}
 /** @type {!Array<!DOMPointReadOnly>} */ XRBoundedReferenceSpace.prototype.boundsGeometry;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_debug_renderer_info() {}
 /** @const {!GLenum} */ WEBGL_debug_renderer_info.prototype.UNMASKED_RENDERER_WEBGL;
@@ -4415,6 +4502,7 @@ function WEBGL_debug_renderer_info() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAngle() {}
 /** @const {!number} */ SVGAngle.SVG_ANGLETYPE_DEG;
@@ -4444,8 +4532,9 @@ SVGAngle.prototype.convertToSpecifiedUnits = function(unitType) {}
 SVGAngle.prototype.newValueSpecifiedUnits = function(unitType,valueInSpecifiedUnits) {}
 /**
  * @constructor
- * @extends {SVGComponentTransferFunctionElement}
  * @private
+ * @extends {SVGComponentTransferFunctionElement}
+ * @nosideeffects
  */
 function SVGFEFuncAElement() {}
 /**
@@ -4462,11 +4551,13 @@ URLSearchParams.prototype.set = function(name,value) {}
 /**
  * @param {!string} name
  * @return {!Array<!string>}
+ * @nosideeffects
  */
 URLSearchParams.prototype.getAll = function(name) {}
 /**
  * @param {!string} name
  * @return {?string}
+ * @nosideeffects
  */
 URLSearchParams.prototype.get = function(name) {}
 /**
@@ -4476,6 +4567,7 @@ URLSearchParams.prototype.sort = function() {}
 /**
  * @param {!string} name
  * @return {!boolean}
+ * @nosideeffects
  */
 URLSearchParams.prototype.has = function(name) {}
 /**
@@ -4492,6 +4584,7 @@ URLSearchParams.prototype.append = function(name,value) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Storage() {}
 /** @type {!number} */ Storage.prototype.length;
@@ -4523,6 +4616,7 @@ Storage.prototype.key = function(index) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IdleDeadline() {}
 /** @type {!boolean} */ IdleDeadline.prototype.didTimeout;
@@ -4587,6 +4681,7 @@ function AnimationPlaybackEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Cache() {}
 /**
@@ -4652,8 +4747,9 @@ ClipboardItem.prototype.getType = function(type) {}
 ClipboardItem.createDelayed = function(items,options) {}
 /**
  * @constructor
- * @extends {HTMLMediaElement}
  * @private
+ * @extends {HTMLMediaElement}
+ * @nosideeffects
  */
 function HTMLVideoElement() {}
 /** @type {!number} */ HTMLVideoElement.prototype.videoHeight;
@@ -4668,8 +4764,9 @@ function HTMLVideoElement() {}
 HTMLVideoElement.prototype.getVideoPlaybackQuality = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLIFrameElement() {}
 /** @type {?Document} */ HTMLIFrameElement.prototype.contentDocument;
@@ -4712,8 +4809,9 @@ function RTCDTMFToneChangeEvent(type,eventInitDict) {}
 /** @type {!string} */ RTCDTMFToneChangeEvent.prototype.tone;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function VideoTrackList() {}
 /** @type {!number} */ VideoTrackList.prototype.length;
@@ -4729,6 +4827,7 @@ VideoTrackList.prototype.getTrackById = function(id) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothUUID() {}
 /**
@@ -4754,6 +4853,7 @@ BluetoothUUID.getService = function(name) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Gamepad() {}
 /** @type {!Array<!number>} */ Gamepad.prototype.axes;
@@ -4793,6 +4893,7 @@ function SecurityPolicyViolationEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ReadableStreamDefaultController() {}
 /** @type {?number} */ ReadableStreamDefaultController.prototype.desiredSize;
@@ -4812,8 +4913,9 @@ ReadableStreamDefaultController.prototype.error = function(e) {}
 ReadableStreamDefaultController.prototype.close = function() {}
 /**
  * @constructor
- * @extends {SVGTextContentElement}
  * @private
+ * @extends {SVGTextContentElement}
+ * @nosideeffects
  */
 function SVGTextPathElement() {}
 /** @const {!number} */ SVGTextPathElement.TEXTPATH_METHODTYPE_ALIGN;
@@ -4835,6 +4937,7 @@ function SVGTextPathElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaKeys() {}
 /**
@@ -4868,15 +4971,17 @@ PerformanceObserver.prototype.takeRecords = function() {}
 PerformanceObserver.prototype.observe = function(options) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLBRElement() {}
 /** @type {!string} */ HTMLBRElement.prototype.clear;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function TextTrackCue() {}
 /** @type {?TextTrack} */ TextTrackCue.prototype.track;
@@ -4898,11 +5003,13 @@ function DocumentFragment() {}
 /**
  * @param {!string} elementId
  * @return {?Element}
+ * @nosideeffects
  */
 DocumentFragment.prototype.getElementById = function(elementId) {}
 /**
  * @param {!string} selectors
  * @return {!NodeList}
+ * @nosideeffects
  */
 DocumentFragment.prototype.querySelectorAll = function(selectors) {}
 /**
@@ -4913,6 +5020,7 @@ DocumentFragment.prototype.prepend = function(nodes) {}
 /**
  * @param {!string} selectors
  * @return {?Element}
+ * @nosideeffects
  */
 DocumentFragment.prototype.querySelector = function(selectors) {}
 /**
@@ -4941,12 +5049,14 @@ function DynamicsCompressorNode(context,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function NamedNodeMap() {}
 /** @type {!number} */ NamedNodeMap.prototype.length;
 /**
  * @param {!number} index
  * @return {?Attr}
+ * @nosideeffects
  */
 NamedNodeMap.prototype.item = function(index) {}
 /**
@@ -4968,6 +5078,7 @@ NamedNodeMap.prototype.getNamedItemNS = function(namespace,localName) {}
 /**
  * @param {!string} qualifiedName
  * @return {?Attr}
+ * @nosideeffects
  */
 NamedNodeMap.prototype.getNamedItem = function(qualifiedName) {}
 /**
@@ -4984,6 +5095,7 @@ NamedNodeMap.prototype.removeNamedItemNS = function(namespace,localName) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ElementInternals() {}
 /** @type {?HTMLFormElement} */ ElementInternals.prototype.form;
@@ -5057,6 +5169,7 @@ ElementInternals.prototype.checkValidity = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Report() {}
 /** @type {?ReportBody} */ Report.prototype.body;
@@ -5069,8 +5182,9 @@ function Report() {}
 Report.prototype.toJSON = function() {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEConvolveMatrixElement() {}
 /** @const {!number} */ SVGFEConvolveMatrixElement.SVG_EDGEMODE_DUPLICATE;
@@ -5101,6 +5215,7 @@ function SVGFEConvolveMatrixElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothRemoteGATTServer() {}
 /** @type {!boolean} */ BluetoothRemoteGATTServer.prototype.connected;
@@ -5134,11 +5249,13 @@ function ValueEvent(type,initDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_texture_float_linear() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function TextMetrics() {}
 /** @type {!number} */ TextMetrics.prototype.actualBoundingBoxAscent;
@@ -5155,29 +5272,33 @@ function TextMetrics() {}
 /** @type {!number} */ TextMetrics.prototype.width;
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGPolygonElement() {}
 /** @type {!SVGPointList} */ SVGPolygonElement.prototype.animatedPoints;
 /** @type {!SVGPointList} */ SVGPolygonElement.prototype.points;
 /**
  * @constructor
- * @extends {ShadowRoot}
  * @private
+ * @extends {ShadowRoot}
+ * @nosideeffects
  */
 function SVGUseElementShadowRoot() {}
 /**
  * @constructor
- * @extends {XRPose}
  * @private
+ * @extends {XRPose}
+ * @nosideeffects
  */
 function XRViewerPose() {}
 /** @type {!Array<!XRView>} */ XRViewerPose.prototype.views;
 /**
  * @constructor
- * @extends {PerformanceResourceTiming}
  * @private
+ * @extends {PerformanceResourceTiming}
+ * @nosideeffects
  */
 function PerformanceNavigationTiming() {}
 /** @type {!DOMHighResTimeStamp} */ PerformanceNavigationTiming.prototype.domComplete;
@@ -5198,6 +5319,7 @@ PerformanceNavigationTiming.prototype.toJSON = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRRenderState() {}
 /** @type {?XRWebGLLayer} */ XRRenderState.prototype.baseLayer;
@@ -5206,8 +5328,9 @@ function XRRenderState() {}
 /** @type {?number} */ XRRenderState.prototype.inlineVerticalFieldOfView;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLFrameElement() {}
 /** @type {?Document} */ HTMLFrameElement.prototype.contentDocument;
@@ -5259,14 +5382,16 @@ WebSocket.prototype.close = function(code,reason) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedTransformList() {}
 /** @type {!SVGTransformList} */ SVGAnimatedTransformList.prototype.animVal;
 /** @type {!SVGTransformList} */ SVGAnimatedTransformList.prototype.baseVal;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLAnchorElement() {}
 /** @type {!DOMTokenList} */ HTMLAnchorElement.prototype.relList;
@@ -5297,6 +5422,7 @@ function HTMLAnchorElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CanvasGradient() {}
 /**
@@ -5308,6 +5434,7 @@ CanvasGradient.prototype.addColorStop = function(offset,color) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OVR_multiview2() {}
 /** @const {!GLenum} */ OVR_multiview2.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR;
@@ -5331,6 +5458,7 @@ OVR_multiview2.prototype.framebufferTextureMultiviewOVR = function(target,attach
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ReportBody() {}
 /**
@@ -5340,8 +5468,9 @@ function ReportBody() {}
 ReportBody.prototype.toJSON = function() {}
 /**
  * @constructor
- * @extends {SVGGradientElement}
  * @private
+ * @extends {SVGGradientElement}
+ * @nosideeffects
  */
 function SVGLinearGradientElement() {}
 /** @type {!SVGAnimatedLength} */ SVGLinearGradientElement.prototype.x1;
@@ -5372,8 +5501,9 @@ function AnimationEvent(type,animationEventInitDict) {}
 /** @type {!CSSOMString} */ AnimationEvent.prototype.pseudoElement;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEComponentTransferElement() {}
 /** @type {!SVGAnimatedString} */ SVGFEComponentTransferElement.prototype.in1;
@@ -5393,8 +5523,9 @@ function WaveShaperNode(context,options) {}
 /** @type {!string} */ WaveShaperNode.prototype.oversample;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGGradientElement() {}
 /** @const {!number} */ SVGGradientElement.SVG_SPREADMETHOD_PAD;
@@ -5412,13 +5543,15 @@ function SVGGradientElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_texture_half_float() {}
 /** @const {!GLenum} */ OES_texture_half_float.prototype.HALF_FLOAT_OES;
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGTextContentElement() {}
 /** @const {!number} */ SVGTextContentElement.LENGTHADJUST_SPACING;
@@ -5477,6 +5610,7 @@ SVGTextContentElement.prototype.getNumberOfChars = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SubtleCrypto() {}
 /**
@@ -5574,6 +5708,7 @@ SubtleCrypto.prototype.wrapKey = function(format,key,wrappingKey,wrapAlgorithm) 
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLRenderingContext() {}
 /** @const {!GLenum} */ WebGLRenderingContext.ACTIVE_ATTRIBUTES;
@@ -6173,6 +6308,7 @@ function WebGLRenderingContext() {}
 /**
  * @param {?WebGLBuffer} buffer
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isBuffer = function(buffer) {}
 /**
@@ -6194,6 +6330,7 @@ WebGLRenderingContext.prototype.activeTexture = function(texture) {}
  * @param {!GLuint} index
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getVertexAttrib = function(index,pname) {}
 /**
@@ -6249,6 +6386,7 @@ WebGLRenderingContext.prototype.uniform1iv = function(location,v) {}
 WebGLRenderingContext.prototype.clearStencil = function(s) {}
 /**
  * @return {?WebGLTexture}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.createTexture = function() {}
 /**
@@ -6272,15 +6410,18 @@ WebGLRenderingContext.prototype.vertexAttrib2f = function(index,x,y) {}
 WebGLRenderingContext.prototype.copyTexSubImage2D = function(target,level,xoffset,yoffset,x,y,width,height) {}
 /**
  * @return {?Array<!string>}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getSupportedExtensions = function() {}
 /**
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getParameter = function(pname) {}
 /**
  * @return {?WebGLFramebuffer}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.createFramebuffer = function() {}
 /**
@@ -6304,15 +6445,18 @@ WebGLRenderingContext.prototype.uniform4fv = function(location,v) {}
 /**
  * @param {?WebGLFramebuffer} framebuffer
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isFramebuffer = function(framebuffer) {}
 /**
  * @return {!boolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isContextLost = function() {}
 /**
  * @param {!WebGLProgram} program
  * @return {?Array<!WebGLShader>}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getAttachedShaders = function(program) {}
 /**
@@ -6325,6 +6469,7 @@ WebGLRenderingContext.prototype.vertexAttrib1fv = function(index,values) {}
  * @param {!GLenum} shadertype
  * @param {!GLenum} precisiontype
  * @return {?WebGLShaderPrecisionFormat}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,precisiontype) {}
 /**
@@ -6335,10 +6480,12 @@ WebGLRenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,p
 WebGLRenderingContext.prototype.polygonOffset = function(factor,units) {}
 /**
  * @return {!GLenum}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getError = function() {}
 /**
  * @return {?WebGLContextAttributes}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getContextAttributes = function() {}
 /**
@@ -6358,22 +6505,26 @@ WebGLRenderingContext.prototype.texSubImage2D = function(arg0,arg1,arg2,arg3,arg
  * @param {!GLuint} index
  * @param {!GLenum} pname
  * @return {!GLintptr}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getVertexAttribOffset = function(index,pname) {}
 /**
  * @param {!GLenum} cap
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isEnabled = function(cap) {}
 /**
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getRenderbufferParameter = function(target,pname) {}
 /**
  * @param {!WebGLProgram} program
  * @return {?string}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getProgramInfoLog = function(program) {}
 /**
@@ -6398,6 +6549,7 @@ WebGLRenderingContext.prototype.cullFace = function(mode) {}
  * @param {!WebGLProgram} program
  * @param {!string} name
  * @return {!GLint}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getAttribLocation = function(program,name) {}
 /**
@@ -6461,6 +6613,7 @@ WebGLRenderingContext.prototype.compileShader = function(shader) {}
 /**
  * @param {!WebGLShader} shader
  * @return {?string}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getShaderSource = function(shader) {}
 /**
@@ -6519,6 +6672,7 @@ WebGLRenderingContext.prototype.deleteFramebuffer = function(framebuffer) {}
 /**
  * @param {!WebGLShader} shader
  * @return {?string}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getShaderInfoLog = function(shader) {}
 /**
@@ -6559,6 +6713,7 @@ WebGLRenderingContext.prototype.drawArrays = function(mode,first,count) {}
 /**
  * @param {?WebGLTexture} texture
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isTexture = function(texture) {}
 /**
@@ -6579,6 +6734,7 @@ WebGLRenderingContext.prototype.scissor = function(x,y,width,height) {}
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getBufferParameter = function(target,pname) {}
 /**
@@ -6650,6 +6806,7 @@ WebGLRenderingContext.prototype.uniform3i = function(location,x,y,z) {}
 WebGLRenderingContext.prototype.bufferData = function(arg0,arg1,arg2) {}
 /**
  * @return {?WebGLProgram}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.createProgram = function() {}
 /**
@@ -6675,6 +6832,7 @@ WebGLRenderingContext.prototype.detachShader = function(program,shader) {}
  * @param {!GLenum} attachment
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getFramebufferAttachmentParameter = function(target,attachment,pname) {}
 /**
@@ -6708,6 +6866,7 @@ WebGLRenderingContext.prototype.frontFace = function(mode) {}
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getTexParameter = function(target,pname) {}
 /**
@@ -6765,6 +6924,7 @@ WebGLRenderingContext.prototype.uniform4i = function(location,x,y,z,w) {}
  * @param {!WebGLProgram} program
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getProgramParameter = function(program,pname) {}
 /**
@@ -6808,6 +6968,7 @@ WebGLRenderingContext.prototype.blendFuncSeparate = function(srcRGB,dstRGB,srcAl
 WebGLRenderingContext.prototype.bindRenderbuffer = function(target,renderbuffer) {}
 /**
  * @return {?WebGLBuffer}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.createBuffer = function() {}
 /**
@@ -6824,6 +6985,7 @@ WebGLRenderingContext.prototype.linkProgram = function(program) {}
  * @param {!WebGLProgram} program
  * @param {!WebGLUniformLocation} location
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getUniform = function(program,location) {}
 /**
@@ -6853,11 +7015,13 @@ WebGLRenderingContext.prototype.flush = function() {}
  * @param {!WebGLProgram} program
  * @param {!GLuint} index
  * @return {?WebGLActiveInfo}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getActiveAttrib = function(program,index) {}
 /**
  * @param {?WebGLRenderbuffer} renderbuffer
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isRenderbuffer = function(renderbuffer) {}
 /**
@@ -6877,6 +7041,7 @@ WebGLRenderingContext.prototype.framebufferTexture2D = function(target,attachmen
 /**
  * @param {!GLenum} type
  * @return {?WebGLShader}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.createShader = function(type) {}
 /**
@@ -6919,6 +7084,7 @@ WebGLRenderingContext.prototype.uniform4iv = function(location,v) {}
  * @param {!WebGLProgram} program
  * @param {!GLuint} index
  * @return {?WebGLActiveInfo}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getActiveUniform = function(program,index) {}
 /**
@@ -6939,6 +7105,7 @@ WebGLRenderingContext.prototype.colorMask = function(red,green,blue,alpha) {}
 WebGLRenderingContext.prototype.renderbufferStorage = function(target,internalformat,width,height) {}
 /**
  * @return {?WebGLRenderbuffer}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.createRenderbuffer = function() {}
 /**
@@ -6978,6 +7145,7 @@ WebGLRenderingContext.prototype.viewport = function(x,y,width,height) {}
  * @param {!WebGLProgram} program
  * @param {!string} name
  * @return {?WebGLUniformLocation}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getUniformLocation = function(program,name) {}
 /**
@@ -6990,11 +7158,13 @@ WebGLRenderingContext.prototype.shaderSource = function(shader,source) {}
  * @param {!WebGLShader} shader
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.getShaderParameter = function(shader,pname) {}
 /**
  * @param {?WebGLProgram} program
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isProgram = function(program) {}
 /**
@@ -7026,6 +7196,7 @@ WebGLRenderingContext.prototype.uniform2f = function(location,x,y) {}
 /**
  * @param {?WebGLShader} shader
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGLRenderingContext.prototype.isShader = function(shader) {}
 /**
@@ -7057,6 +7228,7 @@ function Image(width,height) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGUnitTypes() {}
 /** @const {!number} */ SVGUnitTypes.SVG_UNIT_TYPE_OBJECTBOUNDINGBOX;
@@ -7068,6 +7240,7 @@ function SVGUnitTypes() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PerformanceEntry() {}
 /** @type {!DOMHighResTimeStamp} */ PerformanceEntry.prototype.duration;
@@ -7081,8 +7254,9 @@ function PerformanceEntry() {}
 PerformanceEntry.prototype.toJSON = function() {}
 /**
  * @constructor
- * @extends {PerformanceEntry}
  * @private
+ * @extends {PerformanceEntry}
+ * @nosideeffects
  */
 function PerformanceResourceTiming() {}
 /** @type {!DOMHighResTimeStamp} */ PerformanceResourceTiming.prototype.connectEnd;
@@ -7109,8 +7283,9 @@ function PerformanceResourceTiming() {}
 PerformanceResourceTiming.prototype.toJSON = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function XRSession() {}
 /** @type {!XRInputSourceArray} */ XRSession.prototype.inputSources;
@@ -7152,6 +7327,7 @@ XRSession.prototype.requestAnimationFrame = function(callback) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MimeTypeArray() {}
 /** @type {!number} */ MimeTypeArray.prototype.length;
@@ -7168,6 +7344,7 @@ MimeTypeArray.prototype.namedItem = function(name) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_compressed_texture_etc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_etc.prototype.COMPRESSED_R11_EAC;
@@ -7189,13 +7366,15 @@ function WEBGL_compressed_texture_etc() {}
 function MediaStreamTrackAudioSourceNode(context,options) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function XRLayer() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedLength() {}
 /** @type {!SVGLength} */ SVGAnimatedLength.prototype.animVal;
@@ -7213,6 +7392,7 @@ function InputEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_float_blend() {}
 /**
@@ -7227,6 +7407,7 @@ function TransformStream(transformer,writableStrategy,readableStrategy) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ReadableByteStreamController() {}
 /** @type {?ReadableStreamBYOBRequest} */ ReadableByteStreamController.prototype.byobRequest;
@@ -7247,15 +7428,17 @@ ReadableByteStreamController.prototype.error = function(e) {}
 ReadableByteStreamController.prototype.close = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTitleElement() {}
 /** @type {!string} */ HTMLTitleElement.prototype.text;
 /**
  * @constructor
- * @extends {IDBRequest}
  * @private
+ * @extends {IDBRequest}
+ * @nosideeffects
  */
 function IDBOpenDBRequest() {}
 /** @type {?IDBVersionChangeEventHandler} */ IDBOpenDBRequest.prototype.onblocked;
@@ -7297,24 +7480,28 @@ StorageEvent.prototype.initStorageEvent = function(type,bubbles,cancelable,key,o
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Position() {}
 /** @type {!Coordinates} */ Position.prototype.coords;
 /** @type {!DOMTimeStamp} */ Position.prototype.timestamp;
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGPathElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AudioParamMap() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MutationRecord() {}
 /** @type {!NodeList} */ MutationRecord.prototype.addedNodes;
@@ -7330,14 +7517,16 @@ function MutationRecord() {}
  * @constructor
  * @private
  * @extends {Event}
+ * @nosideeffects
  */
 function SpeechRecognitionEvent() {}
 /** @type {!number} */ SpeechRecognitionEvent.prototype.resultIndex;
 /** @type {!SpeechRecognitionResultList} */ SpeechRecognitionEvent.prototype.results;
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGEllipseElement() {}
 /** @type {!SVGAnimatedLength} */ SVGEllipseElement.prototype.cx;
@@ -7347,28 +7536,32 @@ function SVGEllipseElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedNumberList() {}
 /** @type {!SVGNumberList} */ SVGAnimatedNumberList.prototype.animVal;
 /** @type {!SVGNumberList} */ SVGAnimatedNumberList.prototype.baseVal;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDetailsElement() {}
 /** @type {!boolean} */ HTMLDetailsElement.prototype.open;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechRecognitionAlternative() {}
 /** @type {!number} */ SpeechRecognitionAlternative.prototype.confidence;
 /** @type {!string} */ SpeechRecognitionAlternative.prototype.transcript;
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSFontPaletteValuesRule() {}
 /** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.basePalette;
@@ -7426,6 +7619,7 @@ function DecompressionStream(format) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ImageBitmap() {}
 /** @type {!number} */ ImageBitmap.prototype.height;
@@ -7436,8 +7630,9 @@ function ImageBitmap() {}
 ImageBitmap.prototype.close = function() {}
 /**
  * @constructor
- * @extends {CharacterData}
  * @private
+ * @extends {CharacterData}
+ * @nosideeffects
  */
 function ProcessingInstruction() {}
 /** @type {!string} */ ProcessingInstruction.prototype.target;
@@ -7445,6 +7640,7 @@ function ProcessingInstruction() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function TouchList() {}
 /** @type {!number} */ TouchList.prototype.length;
@@ -7464,6 +7660,7 @@ function ClipboardEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_sRGB() {}
 /** @const {!GLenum} */ EXT_sRGB.prototype.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT;
@@ -7472,14 +7669,16 @@ function EXT_sRGB() {}
 /** @const {!GLenum} */ EXT_sRGB.prototype.SRGB_EXT;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLSampler() {}
 /**
  * @constructor
- * @extends {HTMLCollection}
  * @private
+ * @extends {HTMLCollection}
+ * @nosideeffects
  */
 function HTMLOptionsCollection() {}
 /** @type {!number} */ HTMLOptionsCollection.prototype.length;
@@ -7522,6 +7721,7 @@ MessageEvent.prototype.initMessageEvent = function(type,bubbles,cancelable,data,
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_texture_compression_bptc() {}
 /** @const {!GLenum} */ EXT_texture_compression_bptc.COMPRESSED_RGBA_BPTC_UNORM_EXT;
@@ -7568,17 +7768,20 @@ URL.createObjectURL = function(arg0) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_debug_shaders() {}
 /**
  * @param {!WebGLShader} shader
  * @return {!string}
+ * @nosideeffects
  */
 WEBGL_debug_shaders.prototype.getTranslatedShaderSource = function(shader) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFECompositeElement() {}
 /** @const {!number} */ SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_ARITHMETIC;
@@ -7609,16 +7812,18 @@ function SVGFECompositeElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFECompositeElement.prototype.y;
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSMarginRule() {}
 /** @type {!CSSOMString} */ CSSMarginRule.prototype.name;
 /** @type {!CSSStyleDeclaration} */ CSSMarginRule.prototype.style;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function ServiceWorkerRegistration() {}
 /** @type {?ServiceWorker} */ ServiceWorkerRegistration.prototype.active;
@@ -7651,8 +7856,9 @@ ServiceWorkerRegistration.prototype.update = function() {}
 ServiceWorkerRegistration.prototype.showNotification = function(title,options) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function VisualViewport() {}
 /** @type {!number} */ VisualViewport.prototype.height;
@@ -7666,8 +7872,9 @@ function VisualViewport() {}
 /** @type {?EventHandler} */ VisualViewport.prototype.onscroll;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGMarkerElement() {}
 /** @const {!number} */ SVGMarkerElement.SVG_MARKERUNITS_STROKEWIDTH;
@@ -7703,8 +7910,9 @@ SVGMarkerElement.prototype.setOrientToAngle = function(angle) {}
 SVGMarkerElement.prototype.setOrientToAuto = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLMetaElement() {}
 /** @type {!string} */ HTMLMetaElement.prototype.content;
@@ -7733,13 +7941,15 @@ Worker.prototype.postMessage = function(arg0,arg1) {}
 Worker.prototype.terminate = function() {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGDefsElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechRecognitionResultList() {}
 /** @type {!number} */ SpeechRecognitionResultList.prototype.length;
@@ -7750,14 +7960,16 @@ function SpeechRecognitionResultList() {}
 SpeechRecognitionResultList.prototype.item = function(index) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDataListElement() {}
 /** @type {!HTMLCollection} */ HTMLDataListElement.prototype.options;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OffscreenCanvasRenderingContext2D() {}
 /** @type {!OffscreenCanvas} */ OffscreenCanvasRenderingContext2D.prototype.canvas;
@@ -7790,6 +8002,7 @@ OffscreenCanvasRenderingContext2D.prototype.rotate = function(angle) {}
  * @param {(!number|!ImageData)} arg0
  * @param {!number=} arg1
  * @return {!ImageData}
+ * @nosideeffects
  */
 OffscreenCanvasRenderingContext2D.prototype.createImageData = function(arg0,arg1) {}
 /**
@@ -7819,6 +8032,7 @@ OffscreenCanvasRenderingContext2D.prototype.lineTo = function(x,y) {}
 /**
  * @param {!string} text
  * @return {!TextMetrics}
+ * @nosideeffects
  */
 OffscreenCanvasRenderingContext2D.prototype.measureText = function(text) {}
 /**
@@ -7895,6 +8109,7 @@ OffscreenCanvasRenderingContext2D.prototype.setTransform = function(arg0,arg1,ar
  * @param {(!string|!number)=} arg2
  * @param {!string=} arg3
  * @return {!boolean}
+ * @nosideeffects
  */
 OffscreenCanvasRenderingContext2D.prototype.isPointInPath = function(arg0,arg1,arg2,arg3) {}
 /**
@@ -8041,6 +8256,7 @@ OffscreenCanvasRenderingContext2D.prototype.createPattern = function(image,repet
  * @param {!number} arg1
  * @param {!number=} arg2
  * @return {!boolean}
+ * @nosideeffects
  */
 OffscreenCanvasRenderingContext2D.prototype.isPointInStroke = function(arg0,arg1,arg2) {}
 /**
@@ -8065,8 +8281,9 @@ OffscreenCanvasRenderingContext2D.prototype.moveTo = function(x,y) {}
 OffscreenCanvasRenderingContext2D.prototype.createLinearGradient = function(x0,y0,x1,y1) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFETileElement() {}
 /** @type {!SVGAnimatedString} */ SVGFETileElement.prototype.in1;
@@ -8206,6 +8423,7 @@ function UIEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLUniformLocation() {}
 /**
@@ -8237,6 +8455,7 @@ DOMRectReadOnly.prototype.toJSON = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGLength() {}
 /** @const {!number} */ SVGLength.SVG_LENGTHTYPE_CM;
@@ -8279,6 +8498,7 @@ SVGLength.prototype.newValueSpecifiedUnits = function(unitType,valueInSpecifiedU
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_texture_compression_rgtc() {}
 /** @const {!GLenum} */ EXT_texture_compression_rgtc.COMPRESSED_RED_GREEN_RGTC2_EXT;
@@ -8291,8 +8511,9 @@ function EXT_texture_compression_rgtc() {}
 /** @const {!GLenum} */ EXT_texture_compression_rgtc.prototype.COMPRESSED_SIGNED_RED_RGTC1_EXT;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function XMLHttpRequestEventTarget() {}
 /** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.onabort;
@@ -8304,8 +8525,9 @@ function XMLHttpRequestEventTarget() {}
 /** @type {!NullableEventHandler} */ XMLHttpRequestEventTarget.prototype.ontimeout;
 /**
  * @constructor
- * @extends {XMLHttpRequestEventTarget}
  * @private
+ * @extends {XMLHttpRequestEventTarget}
+ * @nosideeffects
  */
 function XMLHttpRequestUpload() {}
 /**
@@ -8350,12 +8572,14 @@ Text.prototype.splitText = function(offset) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AuthenticatorResponse() {}
 /** @type {!ArrayBuffer} */ AuthenticatorResponse.prototype.clientDataJSON;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGPreserveAspectRatio() {}
 /** @const {!number} */ SVGPreserveAspectRatio.SVG_MEETORSLICE_MEET;
@@ -8390,14 +8614,16 @@ function SVGPreserveAspectRatio() {}
 /** @type {!number} */ SVGPreserveAspectRatio.prototype.meetOrSlice;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDListElement() {}
 /** @type {!boolean} */ HTMLDListElement.prototype.compact;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CaretPosition() {}
 /** @type {!number} */ CaretPosition.prototype.offset;
@@ -8408,8 +8634,9 @@ function CaretPosition() {}
 CaretPosition.prototype.getClientRect = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function ServiceWorker() {}
 /** @type {!string} */ ServiceWorker.prototype.scriptURL;
@@ -8425,6 +8652,7 @@ ServiceWorker.prototype.postMessage = function(arg0,arg1) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_texture_half_float_linear() {}
 /**
@@ -8440,6 +8668,7 @@ function MediaQueryListEvent(type,eventInitDict) {}
  * @constructor
  * @private
  * @extends {EventTarget}
+ * @nosideeffects
  */
 function Animation() {}
 /** @type {!Promise<!Animation>} */ Animation.prototype.finished;
@@ -8482,6 +8711,7 @@ Animation.prototype.pause = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ImageBitmapRenderingContext() {}
 /** @type {(!HTMLCanvasElement|!OffscreenCanvas)} */ ImageBitmapRenderingContext.prototype.canvas;
@@ -8492,8 +8722,9 @@ function ImageBitmapRenderingContext() {}
 ImageBitmapRenderingContext.prototype.transferFromImageBitmap = function(bitmap) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Clipboard() {}
 /**
@@ -8516,8 +8747,9 @@ Clipboard.prototype.readText = function() {}
 Clipboard.prototype.write = function(data) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEPointLightElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFEPointLightElement.prototype.x;
@@ -8533,14 +8765,16 @@ function DelayNode(context,options) {}
 /** @type {!AudioParam} */ DelayNode.prototype.delayTime;
 /**
  * @constructor
- * @extends {IDBCursor}
  * @private
+ * @extends {IDBCursor}
+ * @nosideeffects
  */
 function IDBCursorWithValue() {}
 /** @type {*} */ IDBCursorWithValue.prototype.value;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_disjoint_timer_query() {}
 /** @const {!GLenum} */ EXT_disjoint_timer_query.prototype.CURRENT_QUERY_EXT;
@@ -8612,6 +8846,7 @@ CustomEvent.prototype.initCustomEvent = function(type,bubbles,cancelable,detail)
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaList() {}
 /** @type {!number} */ MediaList.prototype.length;
@@ -8634,12 +8869,14 @@ MediaList.prototype.appendMedium = function(medium) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function HTMLFormControlsCollection() {}
 /** @type {!number} */ HTMLFormControlsCollection.prototype.length;
 /**
  * @param {!string} name
  * @return {(!RadioNodeList|!Element)}
+ * @nosideeffects
  */
 HTMLFormControlsCollection.prototype.namedItem = function(name) {}
 /**
@@ -8649,8 +8886,9 @@ HTMLFormControlsCollection.prototype.namedItem = function(name) {}
 HTMLFormControlsCollection.prototype.item = function(index) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLOListElement() {}
 /** @type {!boolean} */ HTMLOListElement.prototype.reversed;
@@ -8659,8 +8897,9 @@ function HTMLOListElement() {}
 /** @type {!boolean} */ HTMLOListElement.prototype.compact;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLOptGroupElement() {}
 /** @type {!boolean} */ HTMLOptGroupElement.prototype.disabled;
@@ -8668,6 +8907,7 @@ function HTMLOptGroupElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PluginArray() {}
 /** @type {!number} */ PluginArray.prototype.length;
@@ -8688,6 +8928,7 @@ PluginArray.prototype.refresh = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaDeviceInfo() {}
 /** @type {!string} */ MediaDeviceInfo.prototype.deviceId;
@@ -8708,8 +8949,9 @@ function TextEncoderStream() {}
 /** @type {!WritableStream} */ TextEncoderStream.prototype.writable;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLFontElement() {}
 /** @type {!string} */ HTMLFontElement.prototype.color;
@@ -8717,14 +8959,16 @@ function HTMLFontElement() {}
 /** @type {!string} */ HTMLFontElement.prototype.size;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLPictureElement() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLLabelElement() {}
 /** @type {?HTMLElement} */ HTMLLabelElement.prototype.control;
@@ -8733,6 +8977,7 @@ function HTMLLabelElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGTransformList() {}
 /** @type {!number} */ SVGTransformList.prototype.length;
@@ -8784,8 +9029,9 @@ SVGTransformList.prototype.initialize = function(newItem) {}
 SVGTransformList.prototype.appendItem = function(newItem) {}
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGCircleElement() {}
 /** @type {!SVGAnimatedLength} */ SVGCircleElement.prototype.cx;
@@ -8809,14 +9055,16 @@ function RTCErrorEvent(type,eventInitDict) {}
 /** @type {!RTCError} */ RTCErrorEvent.prototype.error;
 /**
  * @constructor
- * @extends {Text}
  * @private
+ * @extends {Text}
+ * @nosideeffects
  */
 function CDATASection() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLImageElement() {}
 /** @type {!boolean} */ HTMLImageElement.prototype.complete;
@@ -8856,8 +9104,9 @@ HTMLImageElement.prototype.decode = function() {}
 function DocumentTimeline(options) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function RTCDTMFSender() {}
 /** @type {!boolean} */ RTCDTMFSender.prototype.canInsertDTMF;
@@ -8882,6 +9131,7 @@ function HashChangeEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PerformanceObserverEntryList() {}
 /**
@@ -8902,6 +9152,7 @@ PerformanceObserverEntryList.prototype.getEntriesByType = function(type) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CacheStorage() {}
 /**
@@ -8931,8 +9182,9 @@ CacheStorage.prototype.delete = function(cacheName) {}
 CacheStorage.prototype.open = function(cacheName) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function BluetoothRemoteGATTService() {}
 /** @type {!BluetoothDevice} */ BluetoothRemoteGATTService.prototype.device;
@@ -8965,6 +9217,7 @@ BluetoothRemoteGATTService.prototype.getCharacteristics = function(characteristi
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function TransformStreamDefaultController() {}
 /** @type {?number} */ TransformStreamDefaultController.prototype.desiredSize;
@@ -8985,6 +9238,7 @@ TransformStreamDefaultController.prototype.error = function(reason) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaError() {}
 /** @const {!number} */ MediaError.MEDIA_ERR_ABORTED;
@@ -8999,8 +9253,9 @@ function MediaError() {}
 /** @type {!string} */ MediaError.prototype.message;
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSGroupingRule() {}
 /** @type {!CSSRuleList} */ CSSGroupingRule.prototype.cssRules;
@@ -9018,6 +9273,7 @@ CSSGroupingRule.prototype.deleteRule = function(index) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PushSubscriptionOptions() {}
 /** @type {?ArrayBuffer} */ PushSubscriptionOptions.prototype.applicationServerKey;
@@ -9065,6 +9321,7 @@ Range.prototype.cloneContents = function() {}
 /**
  * @param {!Node} node
  * @return {!boolean}
+ * @nosideeffects
  */
 Range.prototype.intersectsNode = function(node) {}
 /**
@@ -9076,6 +9333,7 @@ Range.prototype.setStartAfter = function(node) {}
  * @param {!Node} node
  * @param {!number} offset
  * @return {!boolean}
+ * @nosideeffects
  */
 Range.prototype.isPointInRange = function(node,offset) {}
 /**
@@ -9095,6 +9353,7 @@ Range.prototype.deleteContents = function() {}
  * @param {!Node} node
  * @param {!number} offset
  * @return {!number}
+ * @nosideeffects
  */
 Range.prototype.comparePoint = function(node,offset) {}
 /**
@@ -9152,6 +9411,7 @@ Range.prototype.collapse = function(toStart) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PushSubscription() {}
 /** @type {!string} */ PushSubscription.prototype.endpoint;
@@ -9173,8 +9433,9 @@ PushSubscription.prototype.toJSON = function() {}
 PushSubscription.prototype.unsubscribe = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLMarqueeElement() {}
 /** @type {!string} */ HTMLMarqueeElement.prototype.behavior;
@@ -9199,6 +9460,7 @@ HTMLMarqueeElement.prototype.start = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRFrame() {}
 /** @type {!XRSession} */ XRFrame.prototype.session;
@@ -9216,6 +9478,7 @@ XRFrame.prototype.getViewerPose = function(referenceSpace) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function VideoPlaybackQuality() {}
 /** @type {!number} */ VideoPlaybackQuality.prototype.corruptedVideoFrames;
@@ -9224,8 +9487,9 @@ function VideoPlaybackQuality() {}
 /** @type {!number} */ VideoPlaybackQuality.prototype.totalVideoFrames;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEMorphologyElement() {}
 /** @const {!number} */ SVGFEMorphologyElement.SVG_MORPHOLOGY_OPERATOR_DILATE;
@@ -9246,11 +9510,13 @@ function SVGFEMorphologyElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RTCStatsReport() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AudioTrack() {}
 /** @type {!string} */ AudioTrack.prototype.id;
@@ -9270,8 +9536,9 @@ function AudioTrack() {}
 function Option(text,value,defaultSelected,selected) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function IDBRequest() {}
 /** @type {?DOMException} */ IDBRequest.prototype.error;
@@ -9293,8 +9560,9 @@ function File(fileBits,fileName,options) {}
 /** @type {!string} */ File.prototype.name;
 /**
  * @constructor
- * @extends {CSSGroupingRule}
  * @private
+ * @extends {CSSGroupingRule}
+ * @nosideeffects
  */
 function CSSPageRule() {}
 /** @type {!CSSStyleDeclaration} */ CSSPageRule.prototype.style;
@@ -9302,13 +9570,15 @@ function CSSPageRule() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGNumber() {}
 /** @type {!number} */ SVGNumber.prototype.value;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function IDBDatabase() {}
 /** @type {!string} */ IDBDatabase.prototype.name;
@@ -9352,8 +9622,9 @@ function XRInputSourcesChangeEvent(type,eventInitDict) {}
 /** @type {!XRSession} */ XRInputSourcesChangeEvent.prototype.session;
 /**
  * @constructor
- * @extends {AuthenticatorResponse}
  * @private
+ * @extends {AuthenticatorResponse}
+ * @nosideeffects
  */
 function AuthenticatorAssertionResponse() {}
 /** @type {!ArrayBuffer} */ AuthenticatorAssertionResponse.prototype.authenticatorData;
@@ -9427,6 +9698,7 @@ Headers.prototype.append = function(name,value) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMImplementation() {}
 /**
@@ -9436,6 +9708,7 @@ function DOMImplementation() {}
 DOMImplementation.prototype.createHTMLDocument = function(title) {}
 /**
  * @return {!boolean}
+ * @nosideeffects
  */
 DOMImplementation.prototype.hasFeature = function() {}
 /**
@@ -9443,6 +9716,7 @@ DOMImplementation.prototype.hasFeature = function() {}
  * @param {!string} publicId
  * @param {!string} systemId
  * @return {!DocumentType}
+ * @nosideeffects
  */
 DOMImplementation.prototype.createDocumentType = function(qualifiedName,publicId,systemId) {}
 /**
@@ -9450,6 +9724,7 @@ DOMImplementation.prototype.createDocumentType = function(qualifiedName,publicId
  * @param {!string} qualifiedName
  * @param {?DocumentType=} doctype
  * @return {!XMLDocument}
+ * @nosideeffects
  */
 DOMImplementation.prototype.createDocument = function(namespace,qualifiedName,doctype) {}
 /**
@@ -9500,8 +9775,9 @@ ReadableStreamBYOBReader.prototype.read = function(view) {}
 ReadableStreamBYOBReader.prototype.releaseLock = function() {}
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLFramebuffer() {}
 /**
@@ -9538,6 +9814,7 @@ DOMQuad.fromQuad = function(other) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBFactory() {}
 /**
@@ -9563,16 +9840,18 @@ IDBFactory.prototype.deleteDatabase = function(name) {}
 IDBFactory.prototype.open = function(name,version) {}
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSStyleRule() {}
 /** @type {!CSSStyleDeclaration} */ CSSStyleRule.prototype.style;
 /** @type {!CSSOMString} */ CSSStyleRule.prototype.selectorText;
 /**
  * @constructor
- * @extends {SVGTextContentElement}
  * @private
+ * @extends {SVGTextContentElement}
+ * @nosideeffects
  */
 function SVGTextPositioningElement() {}
 /** @type {!SVGAnimatedLengthList} */ SVGTextPositioningElement.prototype.dx;
@@ -9582,8 +9861,9 @@ function SVGTextPositioningElement() {}
 /** @type {!SVGAnimatedLengthList} */ SVGTextPositioningElement.prototype.y;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFilterElement() {}
 /** @type {!SVGAnimatedEnumeration} */ SVGFilterElement.prototype.filterUnits;
@@ -9596,6 +9876,7 @@ function SVGFilterElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AbstractRange() {}
 /** @type {!boolean} */ AbstractRange.prototype.collapsed;
@@ -9605,8 +9886,9 @@ function AbstractRange() {}
 /** @type {!number} */ AbstractRange.prototype.startOffset;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTextAreaElement() {}
 /** @type {?HTMLFormElement} */ HTMLTextAreaElement.prototype.form;
@@ -9675,6 +9957,7 @@ function ByteLengthQueuingStrategy(init) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function NodeIterator() {}
 /** @type {?NodeFilter} */ NodeIterator.prototype.filter;
@@ -9702,8 +9985,9 @@ NodeIterator.prototype.previousNode = function() {}
 function Comment(data) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGPatternElement() {}
 /** @type {!SVGAnimatedLength} */ SVGPatternElement.prototype.height;
@@ -9718,8 +10002,9 @@ function SVGPatternElement() {}
 /** @type {!SVGAnimatedString} */ SVGPatternElement.prototype.href;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLObjectElement() {}
 /** @type {?Document} */ HTMLObjectElement.prototype.contentDocument;
@@ -9764,6 +10049,7 @@ HTMLObjectElement.prototype.checkValidity = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CSSRule() {}
 /** @const {!number} */ CSSRule.CHARSET_RULE;
@@ -9800,14 +10086,16 @@ function CSSRule() {}
 /** @type {!CSSOMString} */ CSSRule.prototype.cssText;
 /**
  * @constructor
- * @extends {PerformanceEntry}
  * @private
+ * @extends {PerformanceEntry}
+ * @nosideeffects
  */
 function PerformanceMark() {}
 /**
  * @constructor
- * @extends {Credential}
  * @private
+ * @extends {Credential}
+ * @nosideeffects
  */
 function PublicKeyCredential() {}
 /** @type {!ArrayBuffer} */ PublicKeyCredential.prototype.rawId;
@@ -9822,13 +10110,15 @@ PublicKeyCredential.prototype.getClientExtensionResults = function() {}
 PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable = function() {}
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLSync() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGNumberList() {}
 /** @type {!number} */ SVGNumberList.prototype.length;
@@ -9871,8 +10161,9 @@ SVGNumberList.prototype.initialize = function(newItem) {}
 SVGNumberList.prototype.appendItem = function(newItem) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function ScreenOrientation() {}
 /** @type {!number} */ ScreenOrientation.prototype.angle;
@@ -9899,6 +10190,7 @@ function MediaEncryptedEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function VTTRegion() {}
 /** @type {!string} */ VTTRegion.prototype.id;
@@ -9912,6 +10204,7 @@ function VTTRegion() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRInputSource() {}
 /** @type {?XRSpace} */ XRInputSource.prototype.gripSpace;
@@ -9921,14 +10214,16 @@ function XRInputSource() {}
 /** @type {!XRSpace} */ XRInputSource.prototype.targetRaySpace;
 /**
  * @constructor
- * @extends {SVGTextPositioningElement}
  * @private
+ * @extends {SVGTextPositioningElement}
+ * @nosideeffects
  */
 function SVGTSpanElement() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLBodyElement() {}
 /** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onorientationchange;
@@ -9956,8 +10251,9 @@ function HTMLBodyElement() {}
 /** @type {!NullableEventHandler} */ HTMLBodyElement.prototype.onunload;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEMergeElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFEMergeElement.prototype.height;
@@ -9967,21 +10263,24 @@ function SVGFEMergeElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFEMergeElement.prototype.y;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function XRSpace() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLQuoteElement() {}
 /** @type {!string} */ HTMLQuoteElement.prototype.cite;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Node() {}
 /** @const {!number} */ Node.ATTRIBUTE_NODE;
@@ -10047,21 +10346,25 @@ Node.prototype.appendChild = function(node) {}
 Node.prototype.replaceChild = function(node,child) {}
 /**
  * @return {!boolean}
+ * @nosideeffects
  */
 Node.prototype.hasChildNodes = function() {}
 /**
  * @param {?string} namespace
  * @return {!boolean}
+ * @nosideeffects
  */
 Node.prototype.isDefaultNamespace = function(namespace) {}
 /**
  * @param {?string} namespace
  * @return {?string}
+ * @nosideeffects
  */
 Node.prototype.lookupPrefix = function(namespace) {}
 /**
  * @param {?string} prefix
  * @return {?string}
+ * @nosideeffects
  */
 Node.prototype.lookupNamespaceURI = function(prefix) {}
 /**
@@ -10072,11 +10375,13 @@ Node.prototype.removeChild = function(child) {}
 /**
  * @param {!boolean=} deep
  * @return {!Node}
+ * @nosideeffects
  */
 Node.prototype.cloneNode = function(deep) {}
 /**
  * @param {!Node} other
  * @return {!number}
+ * @nosideeffects
  */
 Node.prototype.compareDocumentPosition = function(other) {}
 /**
@@ -10088,11 +10393,13 @@ Node.prototype.insertBefore = function(node,child) {}
 /**
  * @param {?Node} other
  * @return {!boolean}
+ * @nosideeffects
  */
 Node.prototype.contains = function(other) {}
 /**
  * @param {?Node} otherNode
  * @return {!boolean}
+ * @nosideeffects
  */
 Node.prototype.isEqualNode = function(otherNode) {}
 /**
@@ -10102,6 +10409,7 @@ Node.prototype.normalize = function() {}
 /**
  * @param {?Node} otherNode
  * @return {!boolean}
+ * @nosideeffects
  */
 Node.prototype.isSameNode = function(otherNode) {}
 /**
@@ -10111,8 +10419,9 @@ Node.prototype.isSameNode = function(otherNode) {}
 Node.prototype.getRootNode = function(options) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLInputElement() {}
 /** @type {?HTMLFormElement} */ HTMLInputElement.prototype.form;
@@ -10235,8 +10544,9 @@ function KeyboardEvent(type,eventInitDict) {}
 KeyboardEvent.prototype.getModifierState = function(keyArg) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFESpecularLightingElement() {}
 /** @type {!SVGAnimatedString} */ SVGFESpecularLightingElement.prototype.in1;
@@ -10252,8 +10562,9 @@ function SVGFESpecularLightingElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFESpecularLightingElement.prototype.y;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function MediaQueryList() {}
 /** @type {!boolean} */ MediaQueryList.prototype.matches;
@@ -10469,6 +10780,7 @@ Document.prototype.replaceChildren = function(nodes) {}
  * @param {!number} x
  * @param {!number} y
  * @return {?Element}
+ * @nosideeffects
  */
 Document.prototype.elementFromPoint = function(x,y) {}
 /**
@@ -10484,6 +10796,7 @@ Document.prototype.getBoxQuads = function(options) {}
 /**
  * @param {!string} data
  * @return {!CDATASection}
+ * @nosideeffects
  */
 Document.prototype.createCDATASection = function(data) {}
 /**
@@ -10495,6 +10808,7 @@ Document.prototype.writeln = function(text) {}
  * @param {!string} localName
  * @param {(!string|!ElementCreationOptions)=} options
  * @return {!Element}
+ * @nosideeffects
  */
 Document.prototype.createElement = function(localName,options) {}
 /**
@@ -10502,6 +10816,7 @@ Document.prototype.createElement = function(localName,options) {}
  * @param {!number=} whatToShow
  * @param {?NodeFilter=} filter
  * @return {!TreeWalker}
+ * @nosideeffects
  */
 Document.prototype.createTreeWalker = function(root,whatToShow,filter) {}
 /**
@@ -10524,6 +10839,7 @@ Document.prototype.convertPointFromNode = function(point,from,options) {}
  * @param {!string} target
  * @param {!string} data
  * @return {!ProcessingInstruction}
+ * @nosideeffects
  */
 Document.prototype.createProcessingInstruction = function(target,data) {}
 /**
@@ -10538,16 +10854,19 @@ Document.prototype.evaluate = function(expression,contextNode,resolver,type,resu
 /**
  * @param {!string} elementId
  * @return {?Element}
+ * @nosideeffects
  */
 Document.prototype.getElementById = function(elementId) {}
 /**
  * @param {!string} data
  * @return {!Text}
+ * @nosideeffects
  */
 Document.prototype.createTextNode = function(data) {}
 /**
  * @param {!string} selectors
  * @return {!NodeList}
+ * @nosideeffects
  */
 Document.prototype.querySelectorAll = function(selectors) {}
 /**
@@ -10558,23 +10877,27 @@ Document.prototype.queryCommandState = function(commandId) {}
 /**
  * @param {!string} data
  * @return {!Comment}
+ * @nosideeffects
  */
 Document.prototype.createComment = function(data) {}
 /**
  * @param {!number} x
  * @param {!number} y
  * @return {!Array<!Element>}
+ * @nosideeffects
  */
 Document.prototype.elementsFromPoint = function(x,y) {}
 /**
  * @param {?string} namespace
  * @param {!string} localName
  * @return {!HTMLCollection}
+ * @nosideeffects
  */
 Document.prototype.getElementsByTagNameNS = function(namespace,localName) {}
 /**
  * @param {!string} elementName
  * @return {!NodeList}
+ * @nosideeffects
  */
 Document.prototype.getElementsByName = function(elementName) {}
 /**
@@ -10599,6 +10922,7 @@ Document.prototype.close = function() {}
 /**
  * @param {!string} qualifiedName
  * @return {!HTMLCollection}
+ * @nosideeffects
  */
 Document.prototype.getElementsByTagName = function(qualifiedName) {}
 /**
@@ -10631,6 +10955,7 @@ Document.prototype.convertRectFromNode = function(rect,from,options) {}
 /**
  * @param {!string} selectors
  * @return {?Element}
+ * @nosideeffects
  */
 Document.prototype.querySelector = function(selectors) {}
 /**
@@ -10638,6 +10963,7 @@ Document.prototype.querySelector = function(selectors) {}
  * @param {!number=} whatToShow
  * @param {?NodeFilter=} filter
  * @return {!NodeIterator}
+ * @nosideeffects
  */
 Document.prototype.createNodeIterator = function(root,whatToShow,filter) {}
 /**
@@ -10648,11 +10974,13 @@ Document.prototype.createNodeIterator = function(root,whatToShow,filter) {}
 Document.prototype.importNode = function(node,deep) {}
 /**
  * @return {?Selection}
+ * @nosideeffects
  */
 Document.prototype.getSelection = function() {}
 /**
  * @param {!string} localName
  * @return {!Attr}
+ * @nosideeffects
  */
 Document.prototype.createAttribute = function(localName) {}
 /**
@@ -10661,6 +10989,7 @@ Document.prototype.createAttribute = function(localName) {}
 Document.prototype.createRange = function() {}
 /**
  * @return {!DocumentFragment}
+ * @nosideeffects
  */
 Document.prototype.createDocumentFragment = function() {}
 /**
@@ -10675,6 +11004,7 @@ Document.prototype.exitPointerLock = function() {}
 /**
  * @param {!string} classNames
  * @return {!HTMLCollection}
+ * @nosideeffects
  */
 Document.prototype.getElementsByClassName = function(classNames) {}
 /**
@@ -10698,6 +11028,7 @@ Document.prototype.createExpression = function(expression,resolver) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function History() {}
 /** @type {!number} */ History.prototype.length;
@@ -10732,8 +11063,9 @@ History.prototype.back = function() {}
 History.prototype.replaceState = function(data,unused,url) {}
 /**
  * @constructor
- * @extends {Node}
  * @private
+ * @extends {Node}
+ * @nosideeffects
  */
 function Attr() {}
 /** @type {!string} */ Attr.prototype.localName;
@@ -10745,14 +11077,16 @@ function Attr() {}
 /** @type {!string} */ Attr.prototype.value;
 /**
  * @constructor
- * @extends {Document}
  * @private
+ * @extends {Document}
+ * @nosideeffects
  */
 function XMLDocument() {}
 /**
  * @constructor
  * @private
  * @extends {EventTarget}
+ * @nosideeffects
  */
 function SpeechSynthesis() {}
 /** @type {!boolean} */ SpeechSynthesis.prototype.paused;
@@ -10793,8 +11127,9 @@ function AudioWorkletNode(context,name,options) {}
 /** @type {!NullableEventHandler} */ AudioWorkletNode.prototype.onprocessorerror;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTableColElement() {}
 /** @type {!number} */ HTMLTableColElement.prototype.span;
@@ -10806,6 +11141,7 @@ function HTMLTableColElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DataTransferItemList() {}
 /** @type {!number} */ DataTransferItemList.prototype.length;
@@ -10846,14 +11182,16 @@ KeyframeEffect.prototype.setKeyframes = function(keyframes) {}
 KeyframeEffect.prototype.getKeyframes = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTableCaptionElement() {}
 /** @type {!string} */ HTMLTableCaptionElement.prototype.align;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function StyleSheetList() {}
 /** @type {!number} */ StyleSheetList.prototype.length;
@@ -10864,21 +11202,24 @@ function StyleSheetList() {}
 StyleSheetList.prototype.item = function(index) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLUnknownElement() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLMenuElement() {}
 /** @type {!boolean} */ HTMLMenuElement.prototype.compact;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLModElement() {}
 /** @type {!string} */ HTMLModElement.prototype.cite;
@@ -10886,14 +11227,16 @@ function HTMLModElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_texture_filter_anisotropic() {}
 /** @const {!GLenum} */ EXT_texture_filter_anisotropic.prototype.MAX_TEXTURE_MAX_ANISOTROPY_EXT;
 /** @const {!GLenum} */ EXT_texture_filter_anisotropic.prototype.TEXTURE_MAX_ANISOTROPY_EXT;
 /**
  * @constructor
- * @extends {CSSConditionRule}
  * @private
+ * @extends {CSSConditionRule}
+ * @nosideeffects
  */
 function CSSMediaRule() {}
 /** @type {!MediaList} */ CSSMediaRule.prototype.media;
@@ -10901,11 +11244,13 @@ function CSSMediaRule() {}
  * @constructor
  * @private
  * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLTimerQueryEXT() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WritableStreamDefaultController() {}
 /**
@@ -10916,6 +11261,7 @@ WritableStreamDefaultController.prototype.error = function(e) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AudioListener() {}
 /** @type {!AudioParam} */ AudioListener.prototype.forwardX;
@@ -10946,8 +11292,9 @@ AudioListener.prototype.setOrientation = function(x,y,z,xUp,yUp,zUp) {}
 AudioListener.prototype.setPosition = function(x,y,z) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLLIElement() {}
 /** @type {!number} */ HTMLLIElement.prototype.value;
@@ -10955,6 +11302,7 @@ function HTMLLIElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_compressed_texture_s3tc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc.prototype.COMPRESSED_RGBA_S3TC_DXT1_EXT;
@@ -10971,15 +11319,17 @@ function RTCIdentityAssertion(idp,name) {}
 /** @type {!string} */ RTCIdentityAssertion.prototype.name;
 /**
  * @constructor
- * @extends {CSSGroupingRule}
  * @private
+ * @extends {CSSGroupingRule}
+ * @nosideeffects
  */
 function CSSConditionRule() {}
 /** @type {!CSSOMString} */ CSSConditionRule.prototype.conditionText;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLStyleElement() {}
 /** @type {!string} */ HTMLStyleElement.prototype.media;
@@ -11062,8 +11412,9 @@ function SharedWorker(scriptURL,options) {}
 /** @type {!NullableEventHandler} */ SharedWorker.prototype.onerror;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLEmbedElement() {}
 /** @type {!string} */ HTMLEmbedElement.prototype.height;
@@ -11078,8 +11429,9 @@ function HTMLEmbedElement() {}
 HTMLEmbedElement.prototype.getSVGDocument = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Bluetooth() {}
 /** @type {?BluetoothDevice} */ Bluetooth.prototype.referringDevice;
@@ -11106,20 +11458,23 @@ Bluetooth.prototype.requestDevice = function(options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_frag_depth() {}
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSKeyframeRule() {}
 /** @type {!CSSStyleDeclaration} */ CSSKeyframeRule.prototype.style;
 /** @type {!CSSOMString} */ CSSKeyframeRule.prototype.keyText;
 /**
  * @constructor
- * @extends {Element}
  * @private
+ * @extends {Element}
+ * @nosideeffects
  */
 function SVGElement() {}
 /** @type {!SVGAnimatedString} */ SVGElement.prototype.className;
@@ -11237,13 +11592,15 @@ SVGElement.prototype.blur = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AnimationTimeline() {}
 /** @type {?number} */ AnimationTimeline.prototype.currentTime;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGMaskElement() {}
 /** @type {!SVGAnimatedLength} */ SVGMaskElement.prototype.height;
@@ -11254,8 +11611,9 @@ function SVGMaskElement() {}
 /** @type {!SVGAnimatedLength} */ SVGMaskElement.prototype.y;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function RTCDataChannel() {}
 /** @type {!number} */ RTCDataChannel.prototype.bufferedAmount;
@@ -11295,13 +11653,15 @@ function GainNode(context,options) {}
 /** @type {!AudioParam} */ GainNode.prototype.gain;
 /**
  * @constructor
- * @extends {HTMLMediaElement}
  * @private
+ * @extends {HTMLMediaElement}
+ * @nosideeffects
  */
 function HTMLAudioElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_color_buffer_float() {}
 /** @const {!GLenum} */ WEBGL_color_buffer_float.prototype.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT;
@@ -11309,8 +11669,9 @@ function WEBGL_color_buffer_float() {}
 /** @const {!GLenum} */ WEBGL_color_buffer_float.prototype.UNSIGNED_NORMALIZED_EXT;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function MessagePort() {}
 /** @type {?MessageEventHandler} */ MessagePort.prototype.onmessage;
@@ -11331,8 +11692,9 @@ MessagePort.prototype.start = function() {}
 MessagePort.prototype.close = function() {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGComponentTransferFunctionElement() {}
 /** @const {!number} */ SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE;
@@ -11365,35 +11727,40 @@ function SpeechRecognitionErrorEvent(type,eventInitDict) {}
 /** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGSymbolElement() {}
 /** @type {!SVGAnimatedPreserveAspectRatio} */ SVGSymbolElement.prototype.preserveAspectRatio;
 /** @type {!SVGAnimatedRect} */ SVGSymbolElement.prototype.viewBox;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLRenderbuffer() {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGUnknownElement() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLHtmlElement() {}
 /** @type {!string} */ HTMLHtmlElement.prototype.version;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Window() {}
 /** @type {!boolean} */ Window.prototype.closed;
@@ -11579,12 +11946,14 @@ Window.prototype.queueMicrotask = function(callback) {}
 /**
  * @param {!string} data
  * @return {!string}
+ * @nosideeffects
  */
 Window.prototype.btoa = function(data) {}
 /**
  * @param {!Element} elt
  * @param {?CSSOMString=} pseudoElt
  * @return {!CSSStyleDeclaration}
+ * @nosideeffects
  */
 Window.prototype.getComputedStyle = function(elt,pseudoElt) {}
 /**
@@ -11666,6 +12035,7 @@ Window.prototype.scroll = function(arg0,arg1) {}
 /**
  * @param {!string} data
  * @return {!string}
+ * @nosideeffects
  */
 Window.prototype.atob = function(data) {}
 /**
@@ -11697,6 +12067,7 @@ Window.prototype.resizeBy = function(x,y) {}
 Window.prototype.print = function() {}
 /**
  * @return {?Selection}
+ * @nosideeffects
  */
 Window.prototype.getSelection = function() {}
 /**
@@ -11741,14 +12112,16 @@ Window.prototype.moveTo = function(x,y) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Credential() {}
 /** @type {!string} */ Credential.prototype.id;
 /** @type {!string} */ Credential.prototype.type;
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGGeometryElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGGeometryElement.prototype.pathLength;
@@ -11774,6 +12147,7 @@ SVGGeometryElement.prototype.isPointInFill = function(point) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Navigator() {}
 /** @type {!Clipboard} */ Navigator.prototype.clipboard;
@@ -11854,6 +12228,7 @@ Navigator.prototype.getGamepads = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRView() {}
 /** @type {!string} */ XRView.prototype.eye;
@@ -11862,6 +12237,7 @@ function XRView() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothRemoteGATTDescriptor() {}
 /** @type {!BluetoothRemoteGATTCharacteristic} */ BluetoothRemoteGATTDescriptor.prototype.characteristic;
@@ -11878,8 +12254,9 @@ BluetoothRemoteGATTDescriptor.prototype.readValue = function() {}
 BluetoothRemoteGATTDescriptor.prototype.writeValue = function(value) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function XRSystem() {}
 /** @type {?EventHandler} */ XRSystem.prototype.ondevicechange;
@@ -11896,8 +12273,9 @@ XRSystem.prototype.isSessionSupported = function(mode) {}
 XRSystem.prototype.requestSession = function(mode,options) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEDropShadowElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFEDropShadowElement.prototype.dx;
@@ -11953,8 +12331,9 @@ PannerNode.prototype.setOrientation = function(x,y,z) {}
 PannerNode.prototype.setPosition = function(x,y,z) {}
 /**
  * @constructor
- * @extends {AudioNode}
  * @private
+ * @extends {AudioNode}
+ * @nosideeffects
  */
 function AudioScheduledSourceNode() {}
 /** @type {?EventHandler} */ AudioScheduledSourceNode.prototype.onended;
@@ -12021,6 +12400,7 @@ Event.prototype.preventDefault = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function TextTrackCueList() {}
 /** @type {!number} */ TextTrackCueList.prototype.length;
@@ -12096,8 +12476,9 @@ XMLHttpRequest.prototype.overrideMimeType = function(mime) {}
 XMLHttpRequest.prototype.open = function(arg0,arg1,arg2,arg3,arg4) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLProgressElement() {}
 /** @type {!NodeList} */ HTMLProgressElement.prototype.labels;
@@ -12125,6 +12506,7 @@ DOMRect.fromRect = function(other) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XPathExpression() {}
 /**
@@ -12138,6 +12520,7 @@ XPathExpression.prototype.evaluate = function(contextNode,type,result) {}
  * @constructor
  * @private
  * @extends {BaseAudioContext}
+ * @nosideeffects
  */
 function OfflineAudioContext() {}
 /** @type {!number} */ OfflineAudioContext.prototype.length;
@@ -12157,8 +12540,9 @@ OfflineAudioContext.prototype.resume = function() {}
 OfflineAudioContext.prototype.startRendering = function() {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGGraphicsElement() {}
 /** @type {!SVGAnimatedTransformList} */ SVGGraphicsElement.prototype.transform;
@@ -12179,8 +12563,9 @@ SVGGraphicsElement.prototype.getScreenCTM = function() {}
 SVGGraphicsElement.prototype.getCTM = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTableRowElement() {}
 /** @type {!HTMLCollection} */ HTMLTableRowElement.prototype.cells;
@@ -12204,6 +12589,7 @@ HTMLTableRowElement.prototype.deleteCell = function(index) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Geolocation() {}
 /**
@@ -12244,6 +12630,7 @@ TextEncoder.prototype.encodeInto = function(source,destination) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function StorageManager() {}
 /**
@@ -12260,8 +12647,9 @@ StorageManager.prototype.persisted = function() {}
 StorageManager.prototype.persist = function() {}
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSFontFeatureValuesRule() {}
 /** @type {!CSSFontFeatureValuesMap} */ CSSFontFeatureValuesRule.prototype.annotation;
@@ -12274,12 +12662,14 @@ function CSSFontFeatureValuesRule() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 WebAssembly.RuntimeError = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function BluetoothRemoteGATTCharacteristic() {}
 /** @type {!BluetoothCharacteristicProperties} */ BluetoothRemoteGATTCharacteristic.prototype.properties;
@@ -12326,15 +12716,17 @@ BluetoothRemoteGATTCharacteristic.prototype.writeValue = function(value) {}
 BluetoothRemoteGATTCharacteristic.prototype.stopNotifications = function() {}
 /**
  * @constructor
- * @extends {NodeList}
  * @private
+ * @extends {NodeList}
+ * @nosideeffects
  */
 function RadioNodeList() {}
 /** @type {!string} */ RadioNodeList.prototype.value;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function BaseAudioContext() {}
 /** @type {!AudioWorklet} */ BaseAudioContext.prototype.audioWorklet;
@@ -12439,8 +12831,9 @@ BaseAudioContext.prototype.createAnalyser = function() {}
 BaseAudioContext.prototype.createPeriodicWave = function(real,imag,constraints) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLMeterElement() {}
 /** @type {!NodeList} */ HTMLMeterElement.prototype.labels;
@@ -12453,6 +12846,7 @@ function HTMLMeterElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PerformanceNavigation() {}
 /** @const {!number} */ PerformanceNavigation.TYPE_BACK_FORWARD;
@@ -12473,6 +12867,7 @@ PerformanceNavigation.prototype.toJSON = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechRecognitionResult() {}
 /** @type {!boolean} */ SpeechRecognitionResult.prototype.isFinal;
@@ -12497,6 +12892,7 @@ function SpeechSynthesisEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBKeyRange() {}
 /** @type {*} */ IDBKeyRange.prototype.lower;
@@ -12544,6 +12940,7 @@ function ShadowAnimation(source,newTarget) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Permissions() {}
 /**
@@ -12569,8 +12966,9 @@ function OverconstrainedError(constraint,message) {}
 /** @type {!string} */ OverconstrainedError.prototype.constraint;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLButtonElement() {}
 /** @type {?HTMLFormElement} */ HTMLButtonElement.prototype.form;
@@ -12617,8 +13015,9 @@ function DeviceOrientationEvent(type,eventInitDict) {}
 DeviceOrientationEvent.requestPermission = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLHeadingElement() {}
 /** @type {!string} */ HTMLHeadingElement.prototype.align;
@@ -12664,6 +13063,7 @@ FormData.prototype.append = function(arg0,arg1,arg2) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBObjectStore() {}
 /** @type {!boolean} */ IDBObjectStore.prototype.autoIncrement;
@@ -12769,8 +13169,9 @@ ReadableStreamDefaultReader.prototype.read = function() {}
 ReadableStreamDefaultReader.prototype.releaseLock = function() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLLegendElement() {}
 /** @type {?HTMLFormElement} */ HTMLLegendElement.prototype.form;
@@ -12785,8 +13186,9 @@ function TrackEvent(type,eventInitDict) {}
 /** @type {(!VideoTrack|!AudioTrack|!TextTrack)} */ TrackEvent.prototype.track;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEOffsetElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFEOffsetElement.prototype.dx;
@@ -12800,6 +13202,7 @@ function SVGFEOffsetElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function TreeWalker() {}
 /** @type {?NodeFilter} */ TreeWalker.prototype.filter;
@@ -12836,8 +13239,9 @@ TreeWalker.prototype.nextSibling = function() {}
 TreeWalker.prototype.previousNode = function() {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGSVGElement() {}
 /** @const {!number} */ SVGSVGElement.SVG_ZOOMANDPAN_DISABLE;
@@ -12894,6 +13298,7 @@ SVGSVGElement.prototype.getEnclosureList = function(rect,referenceElement) {}
 /**
  * @param {!string} elementId
  * @return {!Element}
+ * @nosideeffects
  */
 SVGSVGElement.prototype.getElementById = function(elementId) {}
 /**
@@ -12958,12 +13363,14 @@ SVGSVGElement.prototype.getIntersectionList = function(rect,referenceElement) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLObject() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function RTCDtlsTransport() {}
 /** @type {!RTCIceTransport} */ RTCDtlsTransport.prototype.iceTransport;
@@ -13026,8 +13433,9 @@ DOMPointReadOnly.prototype.toJSON = function() {}
 DOMPointReadOnly.fromPoint = function(other) {}
 /**
  * @constructor
- * @extends {Node}
  * @private
+ * @extends {Node}
+ * @nosideeffects
  */
 function CharacterData() {}
 /** @type {!number} */ CharacterData.prototype.length;
@@ -13061,6 +13469,7 @@ CharacterData.prototype.before = function(nodes) {}
  * @param {!number} offset
  * @param {!number} count
  * @return {!string}
+ * @nosideeffects
  */
 CharacterData.prototype.substringData = function(offset,count) {}
 /**
@@ -13085,8 +13494,9 @@ CharacterData.prototype.remove = function() {}
 CharacterData.prototype.replaceWith = function(nodes) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function MediaKeySession() {}
 /** @type {!Promise<undefined>} */ MediaKeySession.prototype.closed;
@@ -13122,13 +13532,15 @@ MediaKeySession.prototype.remove = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_compressed_texture_etc1() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_etc1.prototype.COMPRESSED_RGB_ETC1_WEBGL;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLMediaElement() {}
 /** @const {!number} */ HTMLMediaElement.HAVE_CURRENT_DATA;
@@ -13200,6 +13612,7 @@ HTMLMediaElement.prototype.setMediaKeys = function(mediaKeys) {}
 /**
  * @param {!string} type
  * @return {!string}
+ * @nosideeffects
  */
 HTMLMediaElement.prototype.canPlayType = function(type) {}
 /**
@@ -13221,13 +13634,15 @@ HTMLMediaElement.prototype.fastSeek = function(time) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BarProp() {}
 /** @type {!boolean} */ BarProp.prototype.visible;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLFieldSetElement() {}
 /** @type {!HTMLCollection} */ HTMLFieldSetElement.prototype.elements;
@@ -13268,8 +13683,9 @@ function OscillatorNode(context,options) {}
 OscillatorNode.prototype.setPeriodicWave = function(periodicWave) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function TextTrackList() {}
 /** @type {!number} */ TextTrackList.prototype.length;
@@ -13284,6 +13700,7 @@ TextTrackList.prototype.getTrackById = function(id) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothCharacteristicProperties() {}
 /** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.authenticatedSignedWrites;
@@ -13297,13 +13714,15 @@ function BluetoothCharacteristicProperties() {}
 /** @type {!boolean} */ BluetoothCharacteristicProperties.prototype.writeWithoutResponse;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGTitleElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ValidityState() {}
 /** @type {!boolean} */ ValidityState.prototype.badInput;
@@ -13338,8 +13757,9 @@ MutationObserver.prototype.takeRecords = function() {}
 MutationObserver.prototype.observe = function(target,options) {}
 /**
  * @constructor
- * @extends {Node}
  * @private
+ * @extends {Node}
+ * @nosideeffects
  */
 function Element() {}
 /** @type {!NamedNodeMap} */ Element.prototype.attributes;
@@ -13477,6 +13897,7 @@ Element.prototype.insertAdjacentElement = function(where,element) {}
  * @param {?string} namespace
  * @param {!string} localName
  * @return {!boolean}
+ * @nosideeffects
  */
 Element.prototype.hasAttributeNS = function(namespace,localName) {}
 /**
@@ -13512,11 +13933,13 @@ Element.prototype.setAttributeNode = function(attr) {}
 /**
  * @param {!string} qualifiedName
  * @return {!boolean}
+ * @nosideeffects
  */
 Element.prototype.hasAttribute = function(qualifiedName) {}
 /**
  * @param {!string} selectors
  * @return {!boolean}
+ * @nosideeffects
  */
 Element.prototype.matches = function(selectors) {}
 /**
@@ -13546,6 +13969,7 @@ Element.prototype.insertAdjacentHTML = function(position,text) {}
  * @param {?string} namespace
  * @param {!string} localName
  * @return {?Attr}
+ * @nosideeffects
  */
 Element.prototype.getAttributeNodeNS = function(namespace,localName) {}
 /**
@@ -13565,6 +13989,7 @@ Element.prototype.requestPointerLock = function() {}
 /**
  * @param {!string} selectors
  * @return {!NodeList}
+ * @nosideeffects
  */
 Element.prototype.querySelectorAll = function(selectors) {}
 /**
@@ -13580,6 +14005,7 @@ Element.prototype.hasPointerCapture = function(pointerId) {}
  * @param {?string} namespace
  * @param {!string} localName
  * @return {!HTMLCollection}
+ * @nosideeffects
  */
 Element.prototype.getElementsByTagNameNS = function(namespace,localName) {}
 /**
@@ -13591,6 +14017,7 @@ Element.prototype.setAttribute = function(qualifiedName,value) {}
 /**
  * @param {!string} qualifiedName
  * @return {?string}
+ * @nosideeffects
  */
 Element.prototype.getAttribute = function(qualifiedName) {}
 /**
@@ -13601,10 +14028,12 @@ Element.prototype.scrollIntoView = function(arg) {}
 /**
  * @param {!string} selectors
  * @return {!boolean}
+ * @nosideeffects
  */
 Element.prototype.webkitMatchesSelector = function(selectors) {}
 /**
  * @return {!boolean}
+ * @nosideeffects
  */
 Element.prototype.hasAttributes = function() {}
 /**
@@ -13627,6 +14056,7 @@ Element.prototype.removeAttribute = function(qualifiedName) {}
 /**
  * @param {!string} qualifiedName
  * @return {!HTMLCollection}
+ * @nosideeffects
  */
 Element.prototype.getElementsByTagName = function(qualifiedName) {}
 /**
@@ -13650,6 +14080,7 @@ Element.prototype.convertRectFromNode = function(rect,from,options) {}
 /**
  * @param {!string} selectors
  * @return {?Element}
+ * @nosideeffects
  */
 Element.prototype.querySelector = function(selectors) {}
 /**
@@ -13659,6 +14090,7 @@ Element.prototype.getClientRects = function() {}
 /**
  * @param {!string} qualifiedName
  * @return {?Attr}
+ * @nosideeffects
  */
 Element.prototype.getAttributeNode = function(qualifiedName) {}
 /**
@@ -13670,11 +14102,13 @@ Element.prototype.setPointerCapture = function(pointerId) {}
  * @param {?string} namespace
  * @param {!string} localName
  * @return {?string}
+ * @nosideeffects
  */
 Element.prototype.getAttributeNS = function(namespace,localName) {}
 /**
  * @param {!string} classNames
  * @return {!HTMLCollection}
+ * @nosideeffects
  */
 Element.prototype.getElementsByClassName = function(classNames) {}
 /**
@@ -13690,6 +14124,7 @@ Element.prototype.append = function(nodes) {}
 /**
  * @param {!string} selectors
  * @return {?Element}
+ * @nosideeffects
  */
 Element.prototype.closest = function(selectors) {}
 /**
@@ -13760,8 +14195,9 @@ function DOMException(message,name) {}
 /** @type {!number} */ DOMException.prototype.code;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGStyleElement() {}
 /** @type {!string} */ SVGStyleElement.prototype.media;
@@ -13785,8 +14221,9 @@ function BluetoothAdvertisingEvent(type,init) {}
 /** @type {!Array<!UUID>} */ BluetoothAdvertisingEvent.prototype.uuids;
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGImageElement() {}
 /** @type {!SVGAnimatedLength} */ SVGImageElement.prototype.height;
@@ -13843,14 +14280,16 @@ FileReader.prototype.readAsText = function(blob,encoding) {}
 FileReader.prototype.readAsArrayBuffer = function(blob) {}
 /**
  * @constructor
- * @extends {PermissionStatus}
  * @private
+ * @extends {PermissionStatus}
+ * @nosideeffects
  */
 function BluetoothPermissionResult() {}
 /** @type {!Array<!BluetoothDevice>} */ BluetoothPermissionResult.prototype.devices;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RTCRtpReceiver() {}
 /** @type {!MediaStreamTrack} */ RTCRtpReceiver.prototype.track;
@@ -13878,15 +14317,17 @@ RTCRtpReceiver.getCapabilities = function(kind) {}
 RTCRtpReceiver.prototype.getContributingSources = function() {}
 /**
  * @constructor
- * @extends {AuthenticatorResponse}
  * @private
+ * @extends {AuthenticatorResponse}
+ * @nosideeffects
  */
 function AuthenticatorAttestationResponse() {}
 /** @type {!ArrayBuffer} */ AuthenticatorAttestationResponse.prototype.attestationObject;
 /**
  * @constructor
- * @extends {XRSpace}
  * @private
+ * @extends {XRSpace}
+ * @nosideeffects
  */
 function XRReferenceSpace() {}
 /** @type {?XRReferenceSpaceEventHandler} */ XRReferenceSpace.prototype.onreset;
@@ -13921,6 +14362,7 @@ EventTarget.prototype.addEventListener = function(type,callback,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGL2RenderingContext() {}
 /** @const {!GLenum} */ WebGL2RenderingContext.ACTIVE_ATTRIBUTES;
@@ -15046,6 +15488,7 @@ function WebGL2RenderingContext() {}
 /**
  * @param {?WebGLBuffer} buffer
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isBuffer = function(buffer) {}
 /**
@@ -15061,6 +15504,7 @@ WebGL2RenderingContext.prototype.pauseTransformFeedback = function() {}
  * @param {!GLuint} index
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getVertexAttrib = function(index,pname) {}
 /**
@@ -15109,6 +15553,7 @@ WebGL2RenderingContext.prototype.uniform1uiv = function(location,data,srcOffset,
  * @param {!WebGLProgram} program
  * @param {!string} uniformBlockName
  * @return {!GLuint}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getUniformBlockIndex = function(program,uniformBlockName) {}
 /**
@@ -15128,10 +15573,12 @@ WebGL2RenderingContext.prototype.vertexAttrib2f = function(index,x,y) {}
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {?WebGLQuery}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getQuery = function(target,pname) {}
 /**
  * @return {?Array<!string>}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getSupportedExtensions = function() {}
 /**
@@ -15158,6 +15605,7 @@ WebGL2RenderingContext.prototype.vertexAttribI4iv = function(index,values) {}
 WebGL2RenderingContext.prototype.uniform4fv = function(location,data,srcOffset,srcLength) {}
 /**
  * @return {!boolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isContextLost = function() {}
 /**
@@ -15168,6 +15616,7 @@ WebGL2RenderingContext.prototype.createTransformFeedback = function() {}
  * @param {!GLenum} shadertype
  * @param {!GLenum} precisiontype
  * @return {?WebGLShaderPrecisionFormat}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,precisiontype) {}
 /**
@@ -15178,10 +15627,12 @@ WebGL2RenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,
 WebGL2RenderingContext.prototype.polygonOffset = function(factor,units) {}
 /**
  * @return {!GLenum}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getError = function() {}
 /**
  * @return {?WebGLContextAttributes}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getContextAttributes = function() {}
 /**
@@ -15208,12 +15659,14 @@ WebGL2RenderingContext.prototype.texSubImage2D = function(arg0,arg1,arg2,arg3,ar
  * @param {!GLuint} index
  * @param {!GLenum} pname
  * @return {!GLintptr}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getVertexAttribOffset = function(index,pname) {}
 /**
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getRenderbufferParameter = function(target,pname) {}
 /**
@@ -15363,6 +15816,7 @@ WebGL2RenderingContext.prototype.deleteFramebuffer = function(framebuffer) {}
 /**
  * @param {!WebGLShader} shader
  * @return {?string}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getShaderInfoLog = function(shader) {}
 /**
@@ -15435,6 +15889,7 @@ WebGL2RenderingContext.prototype.drawArrays = function(mode,first,count) {}
 /**
  * @param {?WebGLTexture} texture
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isTexture = function(texture) {}
 /**
@@ -15494,6 +15949,7 @@ WebGL2RenderingContext.prototype.blendEquation = function(mode) {}
 WebGL2RenderingContext.prototype.finish = function() {}
 /**
  * @return {?WebGLProgram}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.createProgram = function() {}
 /**
@@ -15512,6 +15968,7 @@ WebGL2RenderingContext.prototype.isTransformFeedback = function(tf) {}
  * @param {!GLenum} attachment
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getFramebufferAttachmentParameter = function(target,attachment,pname) {}
 /**
@@ -15587,6 +16044,7 @@ WebGL2RenderingContext.prototype.getActiveUniformBlockParameter = function(progr
  * @param {!WebGLProgram} program
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getProgramParameter = function(program,pname) {}
 /**
@@ -15630,6 +16088,7 @@ WebGL2RenderingContext.prototype.getBufferSubData = function(target,srcByteOffse
 WebGL2RenderingContext.prototype.bindRenderbuffer = function(target,renderbuffer) {}
 /**
  * @return {?WebGLBuffer}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.createBuffer = function() {}
 /**
@@ -15659,6 +16118,7 @@ WebGL2RenderingContext.prototype.flush = function() {}
  * @param {!WebGLProgram} program
  * @param {!GLuint} index
  * @return {?WebGLActiveInfo}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getActiveAttrib = function(program,index) {}
 /**
@@ -15678,6 +16138,7 @@ WebGL2RenderingContext.prototype.framebufferTexture2D = function(target,attachme
 /**
  * @param {!GLenum} type
  * @return {?WebGLShader}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.createShader = function(type) {}
 /**
@@ -15700,6 +16161,7 @@ WebGL2RenderingContext.prototype.renderbufferStorage = function(target,internalf
  * @param {!WebGLSampler} sampler
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getSamplerParameter = function(sampler,pname) {}
 /**
@@ -15717,6 +16179,7 @@ WebGL2RenderingContext.prototype.createQuery = function() {}
 WebGL2RenderingContext.prototype.texStorage2D = function(target,levels,internalformat,width,height) {}
 /**
  * @return {?WebGLRenderbuffer}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.createRenderbuffer = function() {}
 /**
@@ -15742,6 +16205,7 @@ WebGL2RenderingContext.prototype.vertexAttrib4fv = function(index,values) {}
  * @param {!WebGLProgram} program
  * @param {!string} name
  * @return {?WebGLUniformLocation}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getUniformLocation = function(program,name) {}
 /**
@@ -15762,11 +16226,13 @@ WebGL2RenderingContext.prototype.shaderSource = function(shader,source) {}
  * @param {!WebGLShader} shader
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getShaderParameter = function(shader,pname) {}
 /**
  * @param {?WebGLProgram} program
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isProgram = function(program) {}
 /**
@@ -15780,6 +16246,7 @@ WebGL2RenderingContext.prototype.vertexAttrib1f = function(index,x) {}
  * @param {!GLenum} internalformat
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getInternalformatParameter = function(target,internalformat,pname) {}
 /**
@@ -15837,6 +16304,7 @@ WebGL2RenderingContext.prototype.createVertexArray = function() {}
  * @param {!WebGLProgram} program
  * @param {!GLuint} uniformBlockIndex
  * @return {?string}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getActiveUniformBlockName = function(program,uniformBlockIndex) {}
 /**
@@ -15870,6 +16338,7 @@ WebGL2RenderingContext.prototype.uniform1iv = function(location,data,srcOffset,s
 WebGL2RenderingContext.prototype.clearStencil = function(s) {}
 /**
  * @return {?WebGLTexture}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.createTexture = function() {}
 /**
@@ -15887,10 +16356,12 @@ WebGL2RenderingContext.prototype.copyTexSubImage2D = function(target,level,xoffs
 /**
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getParameter = function(pname) {}
 /**
  * @return {?WebGLFramebuffer}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.createFramebuffer = function() {}
 /**
@@ -15908,11 +16379,13 @@ WebGL2RenderingContext.prototype.copyTexImage2D = function(target,level,internal
 /**
  * @param {?WebGLFramebuffer} framebuffer
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isFramebuffer = function(framebuffer) {}
 /**
  * @param {!WebGLProgram} program
  * @return {?Array<!WebGLShader>}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getAttachedShaders = function(program) {}
 /**
@@ -15925,6 +16398,7 @@ WebGL2RenderingContext.prototype.vertexAttrib1fv = function(index,values) {}
  * @param {!WebGLProgram} program
  * @param {!GLuint} index
  * @return {?WebGLActiveInfo}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getTransformFeedbackVarying = function(program,index) {}
 /**
@@ -15991,6 +16465,7 @@ WebGL2RenderingContext.prototype.clearBufferfi = function(buffer,drawbuffer,dept
 /**
  * @param {!GLenum} cap
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isEnabled = function(cap) {}
 /**
@@ -16004,6 +16479,7 @@ WebGL2RenderingContext.prototype.clearBufferfv = function(buffer,drawbuffer,valu
 /**
  * @param {!WebGLProgram} program
  * @return {?string}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getProgramInfoLog = function(program) {}
 /**
@@ -16033,6 +16509,7 @@ WebGL2RenderingContext.prototype.cullFace = function(mode) {}
  * @param {!WebGLProgram} program
  * @param {!string} name
  * @return {!GLint}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getAttribLocation = function(program,name) {}
 /**
@@ -16105,6 +16582,7 @@ WebGL2RenderingContext.prototype.compressedTexSubImage2D = function(arg0,arg1,ar
 /**
  * @param {!WebGLShader} shader
  * @return {?string}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getShaderSource = function(shader) {}
 /**
@@ -16201,6 +16679,7 @@ WebGL2RenderingContext.prototype.scissor = function(x,y,width,height) {}
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getBufferParameter = function(target,pname) {}
 /**
@@ -16295,6 +16774,7 @@ WebGL2RenderingContext.prototype.uniform1ui = function(location,v0) {}
  * @param {!WebGLProgram} program
  * @param {!string} name
  * @return {!GLint}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getFragDataLocation = function(program,name) {}
 /**
@@ -16315,6 +16795,7 @@ WebGL2RenderingContext.prototype.frontFace = function(mode) {}
  * @param {!GLenum} target
  * @param {!GLenum} pname
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getTexParameter = function(target,pname) {}
 /**
@@ -16396,6 +16877,7 @@ WebGL2RenderingContext.prototype.deleteSync = function(sync) {}
  * @param {!WebGLProgram} program
  * @param {!WebGLUniformLocation} location
  * @return {*}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getUniform = function(program,location) {}
 /**
@@ -16421,6 +16903,7 @@ WebGL2RenderingContext.prototype.clearColor = function(red,green,blue,alpha) {}
 /**
  * @param {?WebGLRenderbuffer} renderbuffer
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isRenderbuffer = function(renderbuffer) {}
 /**
@@ -16486,6 +16969,7 @@ WebGL2RenderingContext.prototype.uniform2ui = function(location,v0,v1) {}
  * @param {!WebGLProgram} program
  * @param {!GLuint} index
  * @return {?WebGLActiveInfo}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.getActiveUniform = function(program,index) {}
 /**
@@ -16577,12 +17061,14 @@ WebGL2RenderingContext.prototype.uniform2f = function(location,x,y) {}
 /**
  * @param {?WebGLShader} shader
  * @return {!GLboolean}
+ * @nosideeffects
  */
 WebGL2RenderingContext.prototype.isShader = function(shader) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function SourceBufferList() {}
 /** @type {!number} */ SourceBufferList.prototype.length;
@@ -16637,8 +17123,9 @@ Request.prototype.formData = function() {}
 Request.prototype.text = function() {}
 /**
  * @constructor
- * @extends {Node}
  * @private
+ * @extends {Node}
+ * @nosideeffects
  */
 function DocumentType() {}
 /** @type {!string} */ DocumentType.prototype.name;
@@ -16665,8 +17152,9 @@ DocumentType.prototype.remove = function() {}
 DocumentType.prototype.replaceWith = function(nodes) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLSourceElement() {}
 /** @type {!number} */ HTMLSourceElement.prototype.height;
@@ -16680,6 +17168,7 @@ function HTMLSourceElement() {}
  * @constructor
  * @private
  * @extends {BaseAudioContext}
+ * @nosideeffects
  */
 function AudioContext() {}
 /** @type {!number} */ AudioContext.prototype.baseLatency;
@@ -16722,6 +17211,7 @@ AudioContext.prototype.createMediaStreamSource = function(mediaStream) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_texture_norm16() {}
 /** @const {!GLenum} */ EXT_texture_norm16.R16_EXT;
@@ -16766,20 +17256,23 @@ function FederatedCredential(data) {}
 /** @type {!string} */ FederatedCredential.prototype.name;
 /**
  * @constructor
- * @extends {Worklet}
  * @private
+ * @extends {Worklet}
+ * @nosideeffects
  */
 function AudioWorklet() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLParagraphElement() {}
 /** @type {!string} */ HTMLParagraphElement.prototype.align;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ANGLE_instanced_arrays() {}
 /** @const {!GLenum} */ ANGLE_instanced_arrays.prototype.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
@@ -16826,26 +17319,30 @@ BroadcastChannel.prototype.postMessage = function(message) {}
 BroadcastChannel.prototype.close = function() {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGSwitchElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_fbo_render_mipmap() {}
 /**
  * @constructor
- * @extends {Event}
  * @private
+ * @extends {Event}
+ * @nosideeffects
  */
 function BeforeUnloadEvent() {}
 /** @type {!string} */ BeforeUnloadEvent.prototype.returnValue;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEImageElement() {}
 /** @type {!SVGAnimatedString} */ SVGFEImageElement.prototype.crossOrigin;
@@ -16859,6 +17356,7 @@ function SVGFEImageElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Location() {}
 /** @type {!DOMStringList} */ Location.prototype.ancestorOrigins;
@@ -16888,6 +17386,7 @@ Location.prototype.assign = function(url) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechGrammar() {}
 /** @type {!string} */ SpeechGrammar.prototype.src;
@@ -16895,12 +17394,14 @@ function SpeechGrammar() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 WebAssembly.CompileError = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function TextTrack() {}
 /** @type {?TextTrackCueList} */ TextTrack.prototype.activeCues;
@@ -16925,8 +17426,9 @@ TextTrack.prototype.removeCue = function(cue) {}
 TextTrack.prototype.addCue = function(cue) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function CSSPseudoElement() {}
 /** @type {!Element} */ CSSPseudoElement.prototype.element;
@@ -16970,6 +17472,7 @@ CSSPseudoElement.prototype.animate = function(keyframes,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function HTMLAllCollection() {}
 /** @type {!number} */ HTMLAllCollection.prototype.length;
@@ -16986,6 +17489,7 @@ HTMLAllCollection.prototype.item = function(nameOrIndex) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CryptoKey() {}
 /** @type {!Object} */ CryptoKey.prototype.algorithm;
@@ -16994,8 +17498,9 @@ function CryptoKey() {}
 /** @type {!Object} */ CryptoKey.prototype.usages;
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGLineElement() {}
 /** @type {!SVGAnimatedLength} */ SVGLineElement.prototype.x1;
@@ -17005,6 +17510,7 @@ function SVGLineElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DeviceMotionEventAcceleration() {}
 /** @type {?number} */ DeviceMotionEventAcceleration.prototype.x;
@@ -17013,6 +17519,7 @@ function DeviceMotionEventAcceleration() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedNumber() {}
 /** @type {!number} */ SVGAnimatedNumber.prototype.animVal;
@@ -17020,6 +17527,7 @@ function SVGAnimatedNumber() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGStringList() {}
 /** @type {!number} */ SVGStringList.prototype.length;
@@ -17063,11 +17571,13 @@ SVGStringList.prototype.appendItem = function(newItem) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothServiceDataMap() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBCursor() {}
 /** @type {!string} */ IDBCursor.prototype.direction;
@@ -17102,8 +17612,9 @@ IDBCursor.prototype.delete = function() {}
 IDBCursor.prototype.advance = function(count) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function RTCSctpTransport() {}
 /** @type {?number} */ RTCSctpTransport.prototype.maxChannels;
@@ -17113,8 +17624,9 @@ function RTCSctpTransport() {}
 /** @type {!NullableEventHandler} */ RTCSctpTransport.prototype.onstatechange;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEGaussianBlurElement() {}
 /** @const {!number} */ SVGFEGaussianBlurElement.SVG_EDGEMODE_DUPLICATE;
@@ -17142,8 +17654,9 @@ function SVGFEGaussianBlurElement() {}
 SVGFEGaussianBlurElement.prototype.setStdDeviation = function(stdDeviationX,stdDeviationY) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTableElement() {}
 /** @type {!HTMLCollection} */ HTMLTableElement.prototype.rows;
@@ -17201,6 +17714,7 @@ HTMLTableElement.prototype.createTHead = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_element_index_uint() {}
 /**
@@ -17221,8 +17735,9 @@ function ConstantSourceNode(context,options) {}
 /** @type {!AudioParam} */ ConstantSourceNode.prototype.offset;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function RTCIceTransport() {}
 /** @type {!string} */ RTCIceTransport.prototype.component;
@@ -17254,8 +17769,9 @@ RTCIceTransport.prototype.getRemoteParameters = function() {}
 RTCIceTransport.prototype.getSelectedCandidatePair = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function BluetoothDevice() {}
 /** @type {?BluetoothRemoteGATTServer} */ BluetoothDevice.prototype.gatt;
@@ -17275,8 +17791,9 @@ function BluetoothDevice() {}
 BluetoothDevice.prototype.watchAdvertisements = function(options) {}
 /**
  * @constructor
- * @extends {Element}
  * @private
+ * @extends {Element}
+ * @nosideeffects
  */
 function HTMLElement() {}
 /** @type {!string} */ HTMLElement.prototype.accessKeyLabel;
@@ -17424,6 +17941,7 @@ function ChannelSplitterNode(context,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechSynthesisVoice() {}
 /** @type {!boolean} */ SpeechSynthesisVoice.prototype.default;
@@ -17434,6 +17952,7 @@ function SpeechSynthesisVoice() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Coordinates() {}
 /** @type {!number} */ Coordinates.prototype.accuracy;
@@ -17446,6 +17965,7 @@ function Coordinates() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function NodeList() {}
 /** @type {!number} */ NodeList.prototype.length;
@@ -17457,6 +17977,7 @@ NodeList.prototype.item = function(index) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SyncManager() {}
 /**
@@ -17659,8 +18180,9 @@ function BiquadFilterNode(context,options) {}
 BiquadFilterNode.prototype.getFrequencyResponse = function(frequencyHz,magResponse,phaseResponse) {}
 /**
  * @constructor
- * @extends {AudioNode}
  * @private
+ * @extends {AudioNode}
+ * @nosideeffects
  */
 function ScriptProcessorNode() {}
 /** @type {!number} */ ScriptProcessorNode.prototype.bufferSize;
@@ -17668,6 +18190,7 @@ function ScriptProcessorNode() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function NavigationPreloadManager() {}
 /**
@@ -17731,11 +18254,13 @@ MediaStream.prototype.getVideoTracks = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RegExpGroups() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_multi_draw() {}
 /**
@@ -17786,8 +18311,9 @@ WEBGL_multi_draw.prototype.multiDrawArraysInstancedWEBGL = function(mode,firstsL
 WEBGL_multi_draw.prototype.multiDrawArraysWEBGL = function(mode,firstsList,firstsOffset,countsList,countsOffset,drawcount) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTrackElement() {}
 /** @const {!number} */ HTMLTrackElement.ERROR;
@@ -17807,8 +18333,9 @@ function HTMLTrackElement() {}
 /** @type {!string} */ HTMLTrackElement.prototype.srclang;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Performance() {}
 /** @type {!DOMHighResTimeStamp} */ Performance.prototype.timeOrigin;
@@ -17819,6 +18346,7 @@ function Performance() {}
  * @param {!string} name
  * @param {!string=} type
  * @return {!PerformanceEntryList}
+ * @nosideeffects
  */
 Performance.prototype.getEntriesByName = function(name,type) {}
 /**
@@ -17850,15 +18378,18 @@ Performance.prototype.clearMeasures = function(measureName) {}
 Performance.prototype.clearMarks = function(markName) {}
 /**
  * @return {!PerformanceEntryList}
+ * @nosideeffects
  */
 Performance.prototype.getEntries = function() {}
 /**
  * @return {!DOMHighResTimeStamp}
+ * @nosideeffects
  */
 Performance.prototype.now = function() {}
 /**
  * @param {!string} type
  * @return {!PerformanceEntryList}
+ * @nosideeffects
  */
 Performance.prototype.getEntriesByType = function(type) {}
 /**
@@ -17873,6 +18404,7 @@ Performance.prototype.mark = function(markName) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 WebAssembly.LinkError = function() {}
 /**
@@ -17922,6 +18454,7 @@ function PopStateEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_lose_context() {}
 /**
@@ -17934,13 +18467,15 @@ WEBGL_lose_context.prototype.restoreContext = function() {}
 WEBGL_lose_context.prototype.loseContext = function() {}
 /**
  * @constructor
- * @extends {SVGTextPositioningElement}
  * @private
+ * @extends {SVGTextPositioningElement}
+ * @nosideeffects
  */
 function SVGTextElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ReadableStreamBYOBRequest() {}
 /** @type {?ArrayBufferView} */ ReadableStreamBYOBRequest.prototype.view;
@@ -18081,13 +18616,15 @@ function CompressionStream(format) {}
 /** @type {!WritableStream} */ CompressionStream.prototype.writable;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLBuffer() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaKeyStatusMap() {}
 /** @type {!number} */ MediaKeyStatusMap.prototype.size;
@@ -18104,6 +18641,7 @@ MediaKeyStatusMap.prototype.has = function(keyId) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function GamepadPose() {}
 /** @type {?Float32Array} */ GamepadPose.prototype.angularAcceleration;
@@ -18117,6 +18655,7 @@ function GamepadPose() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PushManager() {}
 /** @type {!Array<!string>} */ PushManager.supportedContentEncodings;
@@ -18182,15 +18721,17 @@ AudioBuffer.prototype.copyToChannel = function(source,channelNumber,bufferOffset
 AudioBuffer.prototype.copyFromChannel = function(destination,channelNumber,bufferOffset) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGStopElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGStopElement.prototype.offset;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGViewElement() {}
 /** @const {!number} */ SVGViewElement.SVG_ZOOMANDPAN_DISABLE;
@@ -18227,22 +18768,26 @@ WebAssembly.Table.prototype.get = function(index) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMStringList() {}
 /** @type {!number} */ DOMStringList.prototype.length;
 /**
  * @param {!number} index
  * @return {?string}
+ * @nosideeffects
  */
 DOMStringList.prototype.item = function(index) {}
 /**
  * @param {!string} string
  * @return {!boolean}
+ * @nosideeffects
  */
 DOMStringList.prototype.contains = function(string) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedString() {}
 /** @type {!string} */ SVGAnimatedString.prototype.animVal;
@@ -18259,6 +18804,7 @@ function BlobEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AnimationEffect() {}
 /**
@@ -18277,6 +18823,7 @@ AnimationEffect.prototype.updateTiming = function(timing) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLShaderPrecisionFormat() {}
 /** @type {!GLint} */ WebGLShaderPrecisionFormat.prototype.precision;
@@ -18285,6 +18832,7 @@ function WebGLShaderPrecisionFormat() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Worklet() {}
 /**
@@ -18296,6 +18844,7 @@ Worklet.prototype.addModule = function(moduleURL,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedAngle() {}
 /** @type {!SVGAngle} */ SVGAnimatedAngle.prototype.animVal;
@@ -18303,6 +18852,7 @@ function SVGAnimatedAngle() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CSSStyleDeclaration() {}
 /** @type {!number} */ CSSStyleDeclaration.prototype.length;
@@ -18347,6 +18897,7 @@ function MediaStreamAudioDestinationNode(context,options) {}
 /**
  * @constructor
  * @extends {EventTarget}
+ * @nosideeffects
  * @param {!number} width
  * @param {!number} height
  */
@@ -18370,8 +18921,9 @@ OffscreenCanvas.prototype.transferToImageBitmap = function() {}
 OffscreenCanvas.prototype.getContext = function(contextId,options) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGScriptElement() {}
 /** @type {?string} */ SVGScriptElement.prototype.crossOrigin;
@@ -18379,13 +18931,15 @@ function SVGScriptElement() {}
 /** @type {!SVGAnimatedString} */ SVGScriptElement.prototype.href;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLQuery() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function TimeRanges() {}
 /** @type {!number} */ TimeRanges.prototype.length;
@@ -18401,8 +18955,9 @@ TimeRanges.prototype.start = function(index) {}
 TimeRanges.prototype.end = function(index) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLScriptElement() {}
 /** @type {!boolean} */ HTMLScriptElement.prototype.async;
@@ -18449,8 +19004,9 @@ function ErrorEvent(type,eventInitDict) {}
 /** @type {!string} */ ErrorEvent.prototype.message;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLProgram() {}
 /**
@@ -18478,6 +19034,7 @@ VTTCue.prototype.getCueAsHTML = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CustomElementRegistry() {}
 /**
@@ -18545,12 +19102,14 @@ function RTCPeerConnectionIceEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DataTransferItem() {}
 /** @type {!string} */ DataTransferItem.prototype.kind;
 /** @type {!string} */ DataTransferItem.prototype.type;
 /**
  * @return {?File}
+ * @nosideeffects
  */
 DataTransferItem.prototype.getAsFile = function() {}
 /**
@@ -18561,6 +19120,7 @@ DataTransferItem.prototype.getAsString = function(_callback) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PositionError() {}
 /** @const {!number} */ PositionError.prototype.PERMISSION_DENIED;
@@ -18570,13 +19130,15 @@ function PositionError() {}
 /** @type {!string} */ PositionError.prototype.message;
 /**
  * @constructor
- * @extends {WebGLObject}
  * @private
+ * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLTexture() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_compressed_texture_astc() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_astc.prototype.COMPRESSED_RGBA_ASTC_10x10_KHR;
@@ -18613,8 +19175,9 @@ function WEBGL_compressed_texture_astc() {}
 WEBGL_compressed_texture_astc.prototype.getSupportedProfiles = function() {}
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGPolylineElement() {}
 /** @type {!SVGPointList} */ SVGPolylineElement.prototype.animatedPoints;
@@ -18627,8 +19190,9 @@ function SVGPolylineElement() {}
 function PeriodicWave(context,options) {}
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSKeyframesRule() {}
 /** @type {!CSSRuleList} */ CSSKeyframesRule.prototype.cssRules;
@@ -18650,8 +19214,9 @@ CSSKeyframesRule.prototype.deleteRule = function(select) {}
 CSSKeyframesRule.prototype.appendRule = function(rule) {}
 /**
  * @constructor
- * @extends {SVGComponentTransferFunctionElement}
  * @private
+ * @extends {SVGComponentTransferFunctionElement}
+ * @nosideeffects
  */
 function SVGFEFuncGElement() {}
 /**
@@ -18665,6 +19230,7 @@ function FocusEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CSSRuleList() {}
 /** @type {!number} */ CSSRuleList.prototype.length;
@@ -18675,13 +19241,15 @@ function CSSRuleList() {}
 CSSRuleList.prototype.item = function(index) {}
 /**
  * @constructor
- * @extends {SVGComponentTransferFunctionElement}
  * @private
+ * @extends {SVGComponentTransferFunctionElement}
+ * @nosideeffects
  */
 function SVGFEFuncRElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMRectList() {}
 /** @type {!number} */ DOMRectList.prototype.length;
@@ -18692,8 +19260,9 @@ function DOMRectList() {}
 DOMRectList.prototype.item = function(index) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEBlendElement() {}
 /** @const {!number} */ SVGFEBlendElement.SVG_FEBLEND_MODE_COLOR;
@@ -18740,8 +19309,9 @@ function SVGFEBlendElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFEBlendElement.prototype.y;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLParamElement() {}
 /** @type {!string} */ HTMLParamElement.prototype.name;
@@ -18750,8 +19320,9 @@ function HTMLParamElement() {}
 /** @type {!string} */ HTMLParamElement.prototype.valueType;
 /**
  * @constructor
- * @extends {SVGGeometryElement}
  * @private
+ * @extends {SVGGeometryElement}
+ * @nosideeffects
  */
 function SVGRectElement() {}
 /** @type {!SVGAnimatedLength} */ SVGRectElement.prototype.height;
@@ -18806,6 +19377,7 @@ function RTCTrackEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_compressed_texture_s3tc_srgb() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc_srgb.prototype.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT;
@@ -18814,8 +19386,9 @@ function WEBGL_compressed_texture_s3tc_srgb() {}
 /** @const {!GLenum} */ WEBGL_compressed_texture_s3tc_srgb.prototype.COMPRESSED_SRGB_S3TC_DXT1_EXT;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function MediaDevices() {}
 /** @type {!NullableEventHandler} */ MediaDevices.prototype.ondevicechange;
@@ -18840,6 +19413,7 @@ MediaDevices.prototype.getSupportedConstraints = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedEnumeration() {}
 /** @type {!number} */ SVGAnimatedEnumeration.prototype.animVal;
@@ -18847,6 +19421,7 @@ function SVGAnimatedEnumeration() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XRViewport() {}
 /** @type {!number} */ XRViewport.prototype.height;
@@ -18856,12 +19431,14 @@ function XRViewport() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_color_buffer_float() {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTableCellElement() {}
 /** @type {!number} */ HTMLTableCellElement.prototype.cellIndex;
@@ -18882,6 +19459,7 @@ function HTMLTableCellElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGLengthList() {}
 /** @type {!number} */ SVGLengthList.prototype.length;
@@ -18924,19 +19502,22 @@ SVGLengthList.prototype.initialize = function(newItem) {}
 SVGLengthList.prototype.appendItem = function(newItem) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGDescElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_blend_minmax() {}
 /** @const {!GLenum} */ EXT_blend_minmax.prototype.MAX_EXT;
 /** @const {!GLenum} */ EXT_blend_minmax.prototype.MIN_EXT;
 /**
  * @constructor
+ * @nosideeffects
  * @param {!Array<!BlobPart>=} blobParts
  * @param {!BlobPropertyBag=} options
  */
@@ -18945,6 +19526,7 @@ function Blob(blobParts,options) {}
 /** @type {!string} */ Blob.prototype.type;
 /**
  * @return {!Promise<!ArrayBuffer>}
+ * @nosideeffects
  */
 Blob.prototype.arrayBuffer = function() {}
 /**
@@ -18956,16 +19538,19 @@ Blob.prototype.stream = function() {}
  * @param {!number=} end
  * @param {!string=} contentType
  * @return {!Blob}
+ * @nosideeffects
  */
 Blob.prototype.slice = function(start,end,contentType) {}
 /**
  * @return {!Promise<!string>}
+ * @nosideeffects
  */
 Blob.prototype.text = function() {}
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGGElement() {}
 /**
@@ -18988,17 +19573,20 @@ function WheelEvent(type,eventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function FileList() {}
 /** @type {!number} */ FileList.prototype.length;
 /**
  * @param {!number} index
  * @return {?File}
+ * @nosideeffects
  */
 FileList.prototype.item = function(index) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_depth_texture() {}
 /** @const {!GLenum} */ WEBGL_depth_texture.prototype.UNSIGNED_INT_24_8_WEBGL;
@@ -19015,6 +19603,7 @@ function TransitionEvent(type,transitionEventInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaKeySystemAccess() {}
 /** @type {!string} */ MediaKeySystemAccess.prototype.keySystem;
@@ -19028,8 +19617,9 @@ MediaKeySystemAccess.prototype.createMediaKeys = function() {}
 MediaKeySystemAccess.prototype.getConfiguration = function() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function MediaStreamTrack() {}
 /** @type {!string} */ MediaStreamTrack.prototype.id;
@@ -19071,6 +19661,7 @@ MediaStreamTrack.prototype.getCapabilities = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function GamepadButton() {}
 /** @type {!boolean} */ GamepadButton.prototype.pressed;
@@ -19078,8 +19669,9 @@ function GamepadButton() {}
 /** @type {!number} */ GamepadButton.prototype.value;
 /**
  * @constructor
- * @extends {SVGGraphicsElement}
  * @private
+ * @extends {SVGGraphicsElement}
+ * @nosideeffects
  */
 function SVGAElement() {}
 /** @type {!DOMTokenList} */ SVGAElement.prototype.relList;
@@ -19104,8 +19696,9 @@ function SVGAElement() {}
 /** @type {!string} */ SVGAElement.prototype.href;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function SourceBuffer() {}
 /** @type {!AudioTrackList} */ SourceBuffer.prototype.audioTracks;
@@ -19139,8 +19732,9 @@ SourceBuffer.prototype.appendBuffer = function(data) {}
 SourceBuffer.prototype.remove = function(start,end) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLLinkElement() {}
 /** @type {!DOMTokenList} */ HTMLLinkElement.prototype.relList;
@@ -19163,14 +19757,16 @@ function HTMLLinkElement() {}
 /** @type {?CSSStyleSheet} */ HTMLLinkElement.prototype.sheet;
 /**
  * @constructor
- * @extends {CSSConditionRule}
  * @private
+ * @extends {CSSConditionRule}
+ * @nosideeffects
  */
 function CSSSupportsRule() {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFETurbulenceElement() {}
 /** @const {!number} */ SVGFETurbulenceElement.SVG_STITCHTYPE_NOSTITCH;
@@ -19199,6 +19795,7 @@ function SVGFETurbulenceElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_shader_texture_lod() {}
 /**
@@ -19350,8 +19947,9 @@ RTCPeerConnection.prototype.setConfiguration = function(configuration) {}
 RTCPeerConnection.prototype.close = function() {}
 /**
  * @constructor
- * @extends {DocumentFragment}
  * @private
+ * @extends {DocumentFragment}
+ * @nosideeffects
  */
 function ShadowRoot() {}
 /** @type {!Element} */ ShadowRoot.prototype.host;
@@ -19364,13 +19962,15 @@ function ShadowRoot() {}
 /** @type {!string} */ ShadowRoot.prototype.innerHTML;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLHeadElement() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBIndex() {}
 /** @type {*} */ IDBIndex.prototype.keyPath;
@@ -19419,8 +20019,9 @@ IDBIndex.prototype.count = function(query) {}
 IDBIndex.prototype.openKeyCursor = function(query,direction) {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFEDisplacementMapElement() {}
 /** @const {!number} */ SVGFEDisplacementMapElement.SVG_CHANNEL_A;
@@ -19472,14 +20073,16 @@ IntersectionObserver.prototype.takeRecords = function() {}
 IntersectionObserver.prototype.observe = function(target) {}
 /**
  * @constructor
- * @extends {AudioNode}
  * @private
+ * @extends {AudioNode}
+ * @nosideeffects
  */
 function AudioDestinationNode() {}
 /** @type {!number} */ AudioDestinationNode.prototype.maxChannelCount;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Screen() {}
 /** @type {!number} */ Screen.prototype.availHeight;
@@ -19492,6 +20095,7 @@ function Screen() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLActiveInfo() {}
 /** @type {!string} */ WebGLActiveInfo.prototype.name;
@@ -19520,6 +20124,7 @@ function Touch(touchInitDict) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SVGAnimatedRect() {}
 /** @type {!DOMRectReadOnly} */ SVGAnimatedRect.prototype.animVal;
@@ -19527,6 +20132,7 @@ function SVGAnimatedRect() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WEBGL_draw_buffers() {}
 /** @const {!GLenum} */ WEBGL_draw_buffers.prototype.COLOR_ATTACHMENT0_WEBGL;
@@ -19570,8 +20176,9 @@ function WEBGL_draw_buffers() {}
 WEBGL_draw_buffers.prototype.drawBuffersWEBGL = function(buffers) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLAreaElement() {}
 /** @type {!DOMTokenList} */ HTMLAreaElement.prototype.relList;
@@ -19597,8 +20204,9 @@ function HTMLAreaElement() {}
 /** @type {!string} */ HTMLAreaElement.prototype.href;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLTableSectionElement() {}
 /** @type {!HTMLCollection} */ HTMLTableSectionElement.prototype.rows;
@@ -19618,8 +20226,9 @@ HTMLTableSectionElement.prototype.deleteRow = function(index) {}
 HTMLTableSectionElement.prototype.insertRow = function(index) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function ServiceWorkerContainer() {}
 /** @type {?ServiceWorker} */ ServiceWorkerContainer.prototype.controller;
@@ -19648,8 +20257,9 @@ ServiceWorkerContainer.prototype.getRegistrations = function() {}
 ServiceWorkerContainer.prototype.register = function(scriptURL,options) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function AbortSignal() {}
 /** @type {!boolean} */ AbortSignal.prototype.aborted;
@@ -19661,6 +20271,7 @@ AbortSignal.abort = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RTCCertificate() {}
 /** @type {!DOMTimeStamp} */ RTCCertificate.prototype.expires;
@@ -19671,11 +20282,13 @@ RTCCertificate.prototype.getFingerprints = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OES_texture_float() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XPathResult() {}
 /** @const {!number} */ XPathResult.ANY_TYPE;
@@ -19716,8 +20329,9 @@ XPathResult.prototype.iterateNext = function() {}
 XPathResult.prototype.snapshotItem = function(index) {}
 /**
  * @constructor
- * @extends {CSSRule}
  * @private
+ * @extends {CSSRule}
+ * @nosideeffects
  */
 function CSSCounterStyleRule() {}
 /** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.additiveSymbols;
@@ -19733,8 +20347,9 @@ function CSSCounterStyleRule() {}
 /** @type {!CSSOMString} */ CSSCounterStyleRule.prototype.system;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function PermissionStatus() {}
 /** @type {!string} */ PermissionStatus.prototype.state;
@@ -19742,6 +20357,7 @@ function PermissionStatus() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_disjoint_timer_query_webgl2() {}
 /** @const {!GLenum} */ EXT_disjoint_timer_query_webgl2.prototype.GPU_DISJOINT_EXT;
@@ -19781,8 +20397,9 @@ function PointerEvent(type,eventInitDict) {}
 /** @type {!number} */ PointerEvent.prototype.width;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLSlotElement() {}
 /** @type {!string} */ HTMLSlotElement.prototype.name;
@@ -19798,15 +20415,17 @@ HTMLSlotElement.prototype.assignedNodes = function(options) {}
 HTMLSlotElement.prototype.assignedElements = function(options) {}
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLDataElement() {}
 /** @type {!string} */ HTMLDataElement.prototype.value;
 /**
  * @constructor
- * @extends {PerformanceEntry}
  * @private
+ * @extends {PerformanceEntry}
+ * @nosideeffects
  */
 function PerformanceMeasure() {}
 /**
@@ -19820,16 +20439,18 @@ function XRInputSourceEvent(type,eventInitDict) {}
 /** @type {!XRInputSource} */ XRInputSourceEvent.prototype.inputSource;
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGClipPathElement() {}
 /** @type {!SVGAnimatedEnumeration} */ SVGClipPathElement.prototype.clipPathUnits;
 /** @type {!SVGAnimatedTransformList} */ SVGClipPathElement.prototype.transform;
 /**
  * @constructor
- * @extends {SVGComponentTransferFunctionElement}
  * @private
+ * @extends {SVGComponentTransferFunctionElement}
+ * @nosideeffects
  */
 function SVGFEFuncBElement() {}
 /**
@@ -19892,6 +20513,7 @@ Response.error = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function CredentialsContainer() {}
 /**
@@ -19915,8 +20537,9 @@ CredentialsContainer.prototype.create = function(options) {}
 CredentialsContainer.prototype.store = function(credential) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function MediaSource() {}
 /** @type {!SourceBufferList} */ MediaSource.prototype.activeSourceBuffers;
@@ -19958,8 +20581,9 @@ MediaSource.isTypeSupported = function(type) {}
 MediaSource.prototype.clearLiveSeekableRange = function() {}
 /**
  * @constructor
- * @extends {SVGElement}
  * @private
+ * @extends {SVGElement}
+ * @nosideeffects
  */
 function SVGFESpotLightElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.limitingConeAngle;
@@ -19972,15 +20596,17 @@ function SVGFESpotLightElement() {}
 /** @type {!SVGAnimatedNumber} */ SVGFESpotLightElement.prototype.z;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLPreElement() {}
 /** @type {!number} */ HTMLPreElement.prototype.width;
 /**
  * @constructor
- * @extends {StyleSheet}
  * @private
+ * @extends {StyleSheet}
+ * @nosideeffects
  */
 function CSSStyleSheet() {}
 /** @type {!CSSRuleList} */ CSSStyleSheet.prototype.cssRules;
@@ -20021,12 +20647,14 @@ function RTCDataChannelEvent(type,eventInitDict) {}
  * @constructor
  * @private
  * @extends {WebGLObject}
+ * @nosideeffects
  */
 function WebGLVertexArrayObjectOES() {}
 /**
  * @constructor
- * @extends {ReportBody}
  * @private
+ * @extends {ReportBody}
+ * @nosideeffects
  */
 function CSPViolationReportBody() {}
 /** @type {?string} */ CSPViolationReportBody.prototype.blockedURL;
@@ -20043,6 +20671,7 @@ function CSPViolationReportBody() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_color_buffer_half_float() {}
 /** @const {!GLenum} */ EXT_color_buffer_half_float.prototype.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT;
@@ -20051,8 +20680,9 @@ function EXT_color_buffer_half_float() {}
 /** @const {!GLenum} */ EXT_color_buffer_half_float.prototype.UNSIGNED_NORMALIZED_EXT;
 /**
  * @constructor
- * @extends {HTMLElement}
  * @private
+ * @extends {HTMLElement}
+ * @nosideeffects
  */
 function HTMLCanvasElement() {}
 /** @type {!number} */ HTMLCanvasElement.prototype.height;
@@ -20263,12 +20893,14 @@ function queueMicrotask(callback) {}
 /**
  * @param {!string} data
  * @return {!string}
+ * @nosideeffects
  */
 function btoa(data) {}
 /**
  * @param {!Element} elt
  * @param {?CSSOMString=} pseudoElt
  * @return {!CSSStyleDeclaration}
+ * @nosideeffects
  */
 function getComputedStyle(elt,pseudoElt) {}
 /**
@@ -20350,6 +20982,7 @@ function scroll(arg0,arg1) {}
 /**
  * @param {!string} data
  * @return {!string}
+ * @nosideeffects
  */
 function atob(data) {}
 /**
@@ -20381,6 +21014,7 @@ function resizeBy(x,y) {}
 function print() {}
 /**
  * @return {?Selection}
+ * @nosideeffects
  */
 function getSelection() {}
 /**

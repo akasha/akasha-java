@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -279,6 +280,7 @@ public class Node extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4">Node.cloneNode() - Document Object Model (DOM) Level 3 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4">Node.cloneNode() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Node cloneNode(boolean deep);
 
@@ -290,6 +292,7 @@ public class Node extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4">Node.cloneNode() - Document Object Model (DOM) Level 3 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4">Node.cloneNode() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Node cloneNode();
 
@@ -300,6 +303,7 @@ public class Node extends EventTarget {
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-comparedocumentposition">Node.compareDocumentPosition() - DOM</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition">Node.compareDocumentPosition() - Document Object Model (DOM) Level 3 Core Specification</a>
    */
+  @HasNoSideEffects
   public native int compareDocumentPosition(@Nonnull Node other);
 
   /**
@@ -308,6 +312,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/contains">Node.contains - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-contains">Node.contains() - DOM</a>
    */
+  @HasNoSideEffects
   public native boolean contains(@Nullable Node other);
 
   /**
@@ -334,6 +339,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes">Node.hasChildNodes - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-haschildnodes">Node: hasChildNodes - DOM</a>
    */
+  @HasNoSideEffects
   public native boolean hasChildNodes();
 
   /**
@@ -355,6 +361,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace">Node.isDefaultNamespace - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-isdefaultnamespace">Node: isDefaultNamespace - DOM</a>
    */
+  @HasNoSideEffects
   public native boolean isDefaultNamespace(@Nullable String namespace);
 
   /**
@@ -363,6 +370,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode">Node.isEqualNode - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-isequalnode">Node.isEqualNode - DOM</a>
    */
+  @HasNoSideEffects
   public native boolean isEqualNode(@Nullable Node otherNode);
 
   /**
@@ -372,6 +380,7 @@ public class Node extends EventTarget {
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-issamenode">Node: isSameNode - DOM</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isSameNode">Node.isSameNode() - Document Object Model (DOM) Level 3 Core Specification</a>
    */
+  @HasNoSideEffects
   public native boolean isSameNode(@Nullable Node otherNode);
 
   /**
@@ -380,6 +389,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI">Node.lookupNamespaceURI - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-lookupnamespaceuri">Node: lookupNamespaceURI - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String lookupNamespaceURI(@Nullable String prefix);
 
@@ -388,6 +398,7 @@ public class Node extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix">Node.lookupPrefix - MDN</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String lookupPrefix(@Nullable String namespace);
 

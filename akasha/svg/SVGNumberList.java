@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -51,6 +52,7 @@ public class SVGNumberList {
   @Nonnull
   public native SVGNumber replaceItem(@Nonnull SVGNumber newItem, int index);
 
+  @HasNoSideEffects
   @Nonnull
   public native SVGNumber getItem(int index);
 

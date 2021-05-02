@@ -2,6 +2,7 @@ package akasha.audio;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -31,17 +32,22 @@ public class AudioParamMap {
   )
   public native int size();
 
+  @HasNoSideEffects
   public native boolean has(@Nonnull String key);
 
+  @HasNoSideEffects
   @Nullable
   public native AudioParam get(@Nonnull String key);
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<AudioParam> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

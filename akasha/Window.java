@@ -9,6 +9,7 @@ import akasha.promise.Promise;
 import akasha.speech.SpeechSynthesis;
 import akasha.svg.SVGImageElement;
 import javaemul.internal.annotations.DoNotAutobox;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -1618,6 +1619,7 @@ public class Window extends EventTarget {
    * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">getComputedStyle() - CSS Object Model (CSSOM)</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">getComputedStyle() - Document Object Model (DOM) Level 2 Style Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt,
       @Nonnull String pseudoElt);
@@ -1629,6 +1631,7 @@ public class Window extends EventTarget {
    * @see <a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">getComputedStyle() - CSS Object Model (CSSOM)</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">getComputedStyle() - Document Object Model (DOM) Level 2 Style Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt);
 
@@ -1767,6 +1770,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection">Window.getSelection - MDN</a>
    * @see <a href="https://w3c.github.io/selection-api/#extensions-to-window-interface">Window.getSelection() - Selection API</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Selection getSelection();
 
@@ -1778,6 +1782,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-atob">WindowBase64.atob() - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-atob">WindowBase64.atob() - HTML5</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String atob(@Nonnull String data);
 
@@ -1789,6 +1794,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/html51/#dom-windowbase64-btoa">WindowBase64.btoa() - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-btoa">WindowBase64.btoa() - HTML5</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String btoa(@Nonnull String data);
 

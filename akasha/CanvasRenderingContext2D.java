@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.svg.SVGImageElement;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -225,6 +226,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native ImageData createImageData(int sw, int sh);
 
@@ -234,6 +236,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native ImageData createImageData(@Nonnull ImageData imagedata);
 
@@ -585,6 +588,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText">CanvasRenderingContext2D.measureText - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-measuretext">CanvasRenderingContext2D.measureText - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native TextMetrics measureText(@Nonnull String text);
 
@@ -950,6 +954,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">CanvasRenderingContext2D.isPointInPath - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinpath">CanvasRenderingContext2D.isPointInPath - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInPath(double x, double y, @CanvasFillRule @Nonnull String fillRule);
 
   /**
@@ -958,6 +963,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">CanvasRenderingContext2D.isPointInPath - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinpath">CanvasRenderingContext2D.isPointInPath - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInPath(double x, double y);
 
   /**
@@ -966,6 +972,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">CanvasRenderingContext2D.isPointInPath - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinpath">CanvasRenderingContext2D.isPointInPath - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y,
       @CanvasFillRule @Nonnull String fillRule);
 
@@ -975,6 +982,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">CanvasRenderingContext2D.isPointInPath - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinpath">CanvasRenderingContext2D.isPointInPath - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y);
 
   /**
@@ -983,6 +991,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInStroke">CanvasRenderingContext2D.isPointInStroke - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinstroke">CanvasRenderingContext2D.isPointInStroke - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInStroke(double x, double y);
 
   /**
@@ -991,6 +1000,7 @@ public class CanvasRenderingContext2D implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInStroke">CanvasRenderingContext2D.isPointInStroke - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinstroke">CanvasRenderingContext2D.isPointInStroke - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInStroke(@Nonnull Path2D path, double x, double y);
 
   /**

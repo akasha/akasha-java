@@ -5,6 +5,7 @@ import akasha.clipboard.ClipboardEventListener;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import akasha.svg.SVGSVGElement;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -1344,6 +1345,7 @@ public class Document extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttribute">Document.createAttribute - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Attr createAttribute(@Nonnull String localName);
 
@@ -1356,6 +1358,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createCDATASection">Document.createCDATASection - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createcdatasection">document.createCDATASection - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native CDATASection createCDATASection(@Nonnull String data);
 
@@ -1365,6 +1368,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createComment">Document.createComment - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createcomment">document.createComment - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Comment createComment(@Nonnull String data);
 
@@ -1374,6 +1378,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment">Document.createDocumentFragment - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createdocumentfragment">Document.createDocumentFragment() - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native DocumentFragment createDocumentFragment();
 
@@ -1383,6 +1388,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">Document.createElement - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Element createElement(@Nonnull String localName, @Nonnull String options);
 
@@ -1392,6 +1398,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">Document.createElement - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Element createElement(@Nonnull String localName,
       @Nonnull ElementCreationOptions options);
@@ -1402,6 +1409,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createelement">Document.createElement - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Element createElement(@Nonnull String localName);
 
@@ -1448,6 +1456,7 @@ public class Document extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createNodeIterator">Document.createNodeIterator - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeIterator createNodeIterator(@Nonnull Node root, int whatToShow,
       @Nullable NodeFilter filter);
@@ -1457,6 +1466,7 @@ public class Document extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createNodeIterator">Document.createNodeIterator - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeIterator createNodeIterator(@Nonnull Node root, int whatToShow);
 
@@ -1465,6 +1475,7 @@ public class Document extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createNodeIterator">Document.createNodeIterator - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeIterator createNodeIterator(@Nonnull Node root);
 
@@ -1478,6 +1489,7 @@ public class Document extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-135944439">createProcessingInstruction() - Document Object Model (DOM) Level 2 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-135944439">createProcessingInstruction() - Document Object Model (DOM) Level 1 Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native ProcessingInstruction createProcessingInstruction(@Nonnull String target,
       @Nonnull String data);
@@ -1496,6 +1508,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode">Document.createTextNode - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtextnode">Document: createTextNode - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Text createTextNode(@Nonnull String data);
 
@@ -1506,6 +1519,7 @@ public class Document extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtreewalker">Document.createTreeWalker - DOM</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker">Document.createTreeWalker - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native TreeWalker createTreeWalker(@Nonnull Node root, int whatToShow,
       @Nullable NodeFilter filter);
@@ -1517,6 +1531,7 @@ public class Document extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtreewalker">Document.createTreeWalker - DOM</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker">Document.createTreeWalker - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native TreeWalker createTreeWalker(@Nonnull Node root, int whatToShow);
 
@@ -1527,6 +1542,7 @@ public class Document extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-createtreewalker">Document.createTreeWalker - DOM</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker">Document.createTreeWalker - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native TreeWalker createTreeWalker(@Nonnull Node root);
 
@@ -1536,6 +1552,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">Document.getElementsByClassName - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbyclassname">document.getElementsByClassName - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native HTMLCollection getElementsByClassName(@Nonnull String classNames);
 
@@ -1545,6 +1562,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName">Document.getElementsByTagName - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-document-getelementsbytagname">document.getElementsByTagName - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native HTMLCollection getElementsByTagName(@Nonnull String qualifiedName);
 
@@ -1553,6 +1571,7 @@ public class Document extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagNameNS">Document.getElementsByTagNameNS - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native HTMLCollection getElementsByTagNameNS(@Nullable String namespace,
       @Nonnull String localName);
@@ -1580,9 +1599,11 @@ public class Document extends Node {
   @Nullable
   public native CaretPosition caretPositionFromPoint(double x, double y);
 
+  @HasNoSideEffects
   @Nullable
   public native Element elementFromPoint(double x, double y);
 
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<Element> elementsFromPoint(double x, double y);
 
@@ -1594,6 +1615,7 @@ public class Document extends Node {
    */
   public native void exitPointerLock();
 
+  @HasNoSideEffects
   @Nullable
   public native Selection getSelection();
 
@@ -1656,6 +1678,7 @@ public class Document extends Node {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-getelementsbyname">Document.getElementsByName() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259">Document.getElementsByName() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeList getElementsByName(@Nonnull String elementName);
 
@@ -1787,6 +1810,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">Document.querySelector - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-parentnode-queryselector">document.querySelector() - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
 
@@ -1799,6 +1823,7 @@ public class Document extends Node {
    * @see <a href="https://www.w3.org/TR/dom/#dom-parentnode-queryselectorall">ParentNode.querySelectorAll() - DOM4</a>
    * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">document.querySelector() - Selectors API Level 1</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
 
@@ -1886,6 +1911,7 @@ public class Document extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Document.getElementById - MDN</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element getElementById(@Nonnull String elementId);
 

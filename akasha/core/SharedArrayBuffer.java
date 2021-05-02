@@ -1,5 +1,6 @@
 package akasha.core;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -47,6 +48,7 @@ public class SharedArrayBuffer {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice">SharedArrayBuffer.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.slice - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native SharedArrayBuffer slice(int begin, int end);
 
@@ -57,6 +59,7 @@ public class SharedArrayBuffer {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice">SharedArrayBuffer.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.slice - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native SharedArrayBuffer slice(int begin);
 
@@ -67,6 +70,7 @@ public class SharedArrayBuffer {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice">SharedArrayBuffer.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.slice - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native SharedArrayBuffer slice();
 }

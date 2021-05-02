@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -63,6 +64,7 @@ public class MediaKeyStatusMap {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/keys">MediaKeyStatusMap.keys - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<BufferSource> keys();
 
@@ -72,6 +74,7 @@ public class MediaKeyStatusMap {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/values">MediaKeyStatusMap.values - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
@@ -81,6 +84,7 @@ public class MediaKeyStatusMap {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/entries">MediaKeyStatusMap.entries - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

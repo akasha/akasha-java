@@ -1,6 +1,7 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -177,6 +178,7 @@ public class Int8Array implements IntegerTypedArray {
   @Nonnull
   public native Int8Array copyWithin(int target, int start);
 
+  @HasNoSideEffects
   public native byte get(int index);
 
   /**

@@ -1,6 +1,7 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -178,6 +179,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
   @Nonnull
   public native Uint8ClampedArray copyWithin(int target, int start);
 
+  @HasNoSideEffects
   public native short get(int index);
 
   /**

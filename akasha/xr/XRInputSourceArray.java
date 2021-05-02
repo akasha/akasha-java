@@ -2,6 +2,7 @@ package akasha.xr;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
@@ -50,6 +51,7 @@ public class XRInputSourceArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys">XRInputSourceArray.keys - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> keys();
 
@@ -59,6 +61,7 @@ public class XRInputSourceArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values">XRInputSourceArray.values - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<XRInputSource> values();
 
@@ -68,6 +71,7 @@ public class XRInputSourceArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries">XRInputSourceArray.entries - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourcearray">XRInputSourceArray - WebXR Device API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

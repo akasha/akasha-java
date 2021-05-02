@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -51,9 +52,11 @@ public class NamedNodeMap {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItem">NamedNodeMap.getNamedItem - MDN</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Attr getNamedItem(@Nonnull String qualifiedName);
 
+  @HasNoSideEffects
   @Nullable
   public native Attr item(int index);
 }

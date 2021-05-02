@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -31,6 +32,7 @@ public class WEBGL_debug_shaders implements WebGLCommonExtension {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_shaders/getTranslatedShaderSource">WEBGL_debug_shaders.getTranslatedShaderSource - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_shaders/">WEBGL_debug_shaders.getTranslatedShaderSource - WEBGL_debug_shaders</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String getTranslatedShaderSource(@Nonnull WebGLShader shader);
 }

@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -41,6 +42,7 @@ public class MediaList {
 
   public native void deleteMedium(@Nonnull String medium);
 
+  @HasNoSideEffects
   @Nullable
   public native String item(int index);
 }

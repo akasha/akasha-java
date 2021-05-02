@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.promise.Promise;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -365,6 +366,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-canplaytype">canplaytype - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">HTMLMediaElement.canplaytype - HTML5</a>
    */
+  @HasNoSideEffects
   @CanPlayTypeResult
   @Nonnull
   public native String canPlayType(@Nonnull String type);

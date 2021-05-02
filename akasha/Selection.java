@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -149,6 +150,7 @@ public class Selection {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/containsNode">Selection.containsNode - MDN</a>
    * @see <a href="https://w3c.github.io/selection-api/#dom-selection-containsnode">Selection.containsNode() - Selection API</a>
    */
+  @HasNoSideEffects
   public native boolean containsNode(@Nonnull Node node, boolean allowPartialContainment);
 
   /**
@@ -157,6 +159,7 @@ public class Selection {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/containsNode">Selection.containsNode - MDN</a>
    * @see <a href="https://w3c.github.io/selection-api/#dom-selection-containsnode">Selection.containsNode() - Selection API</a>
    */
+  @HasNoSideEffects
   public native boolean containsNode(@Nonnull Node node);
 
   /**
@@ -197,6 +200,7 @@ public class Selection {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt">Selection.getRangeAt - MDN</a>
    * @see <a href="https://w3c.github.io/selection-api/#dom-selection-getrangeat">Selection: getRangeAt() - Selection API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Range getRangeAt(int index);
 

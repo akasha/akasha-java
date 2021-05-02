@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,8 +29,10 @@ public class DOMStringList {
   )
   public native int length();
 
+  @HasNoSideEffects
   public native boolean contains(@Nonnull String string);
 
+  @HasNoSideEffects
   @Nullable
   public native String item(int index);
 }

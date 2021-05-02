@@ -1,6 +1,7 @@
 package akasha.svg;
 
 import akasha.DOMMatrixReadOnly;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -61,6 +62,7 @@ public class SVGTransformList {
   @Nonnull
   public native SVGTransform replaceItem(@Nonnull SVGTransform newItem, int index);
 
+  @HasNoSideEffects
   @Nonnull
   public native SVGTransform getItem(int index);
 

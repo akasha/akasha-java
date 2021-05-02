@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.ArrayBuffer;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -91,6 +92,7 @@ public class Blob implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/arrayBuffer">Blob.arrayBuffer - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dom-blob-arraybuffer">Blob.arrayBuffer() - File API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Promise<ArrayBuffer> arrayBuffer();
 
@@ -100,6 +102,7 @@ public class Blob implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice">Blob.slice - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Blob slice(int start, int end, @Nonnull String contentType);
 
@@ -109,6 +112,7 @@ public class Blob implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice">Blob.slice - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Blob slice(int start, int end);
 
@@ -118,6 +122,7 @@ public class Blob implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice">Blob.slice - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Blob slice(int start);
 
@@ -127,6 +132,7 @@ public class Blob implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice">Blob.slice - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Blob slice();
 
@@ -145,6 +151,7 @@ public class Blob implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/text">Blob.text - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dom-blob-text">Blob.text() - File API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native Promise<String> text();
 }

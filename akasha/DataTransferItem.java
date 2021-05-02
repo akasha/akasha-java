@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -58,6 +59,7 @@ public class DataTransferItem {
    * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitem-getasfile">getAsFile() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitem-getasfile">getAsFile() - HTML 5.1</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native File getAsFile();
 

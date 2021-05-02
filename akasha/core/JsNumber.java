@@ -1,5 +1,6 @@
 package akasha.core;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -164,6 +165,7 @@ public class JsNumber {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential">Number.toExponential - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.toexponential">Number.prototype.toExponential - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toExponential(int fractionDigits);
 
@@ -173,6 +175,7 @@ public class JsNumber {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential">Number.toExponential - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.toexponential">Number.prototype.toExponential - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toExponential();
 
@@ -182,6 +185,7 @@ public class JsNumber {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">Number.toFixed - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.tofixed">Number.prototype.toFixed - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toFixed(int digits);
 
@@ -191,6 +195,7 @@ public class JsNumber {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">Number.toFixed - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.tofixed">Number.prototype.toFixed - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toFixed();
 
@@ -200,6 +205,7 @@ public class JsNumber {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision">Number.toPrecision - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.toprecision">Number.prototype.toPrecision - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toPrecision(int precision);
 
@@ -209,6 +215,7 @@ public class JsNumber {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision">Number.toPrecision - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.toprecision">Number.prototype.toPrecision - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toPrecision();
 

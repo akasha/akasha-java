@@ -1,6 +1,7 @@
 package akasha.svg;
 
 import akasha.DOMPoint;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -47,6 +48,7 @@ public class SVGPointList {
   @Nonnull
   public native DOMPoint replaceItem(@Nonnull DOMPoint newItem, int index);
 
+  @HasNoSideEffects
   @Nonnull
   public native DOMPoint getItem(int index);
 

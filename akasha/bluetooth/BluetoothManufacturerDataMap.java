@@ -3,6 +3,7 @@ package akasha.bluetooth;
 import akasha.core.DataView;
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -27,17 +28,22 @@ public class BluetoothManufacturerDataMap {
   )
   public native int size();
 
+  @HasNoSideEffects
   public native boolean has(int key);
 
+  @HasNoSideEffects
   @Nullable
   public native DataView get(int key);
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<DataView> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

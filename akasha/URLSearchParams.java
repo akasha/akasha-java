@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -91,6 +92,7 @@ public class URLSearchParams {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get">URLSearchParams.get - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-get">get() - URL</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String get(@Nonnull String name);
 
@@ -100,6 +102,7 @@ public class URLSearchParams {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/getAll">URLSearchParams.getAll - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-getall">getAll() - URL</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<String> getAll(@Nonnull String name);
 
@@ -109,6 +112,7 @@ public class URLSearchParams {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/has">URLSearchParams.has - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-has">has() - URL</a>
    */
+  @HasNoSideEffects
   public native boolean has(@Nonnull String name);
 
   /**
@@ -133,6 +137,7 @@ public class URLSearchParams {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/keys">URLSearchParams.keys - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">keys() (see &quot;iterable&quot;) - URL</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
@@ -142,6 +147,7 @@ public class URLSearchParams {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/values">URLSearchParams.values - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">values() (see &quot;iterable&quot;) - URL</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
@@ -151,6 +157,7 @@ public class URLSearchParams {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/entries">URLSearchParams.entries - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">entries() (see &quot;iterable&quot;) - URL</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

@@ -7,6 +7,7 @@ import akasha.core.Float32Array;
 import akasha.core.Int32Array;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -1361,6 +1362,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">createBuffer - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">glGenBuffers - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLBuffer createBuffer();
 
@@ -1371,6 +1373,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">createFramebuffer - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">glGenFramebuffers - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLFramebuffer createFramebuffer();
 
@@ -1381,6 +1384,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createProgram - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">glCreateProgram - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLProgram createProgram();
 
@@ -1391,6 +1395,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">createRenderbuffer - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">glGenRenderbuffers - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLRenderbuffer createRenderbuffer();
 
@@ -1401,6 +1406,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createShader - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">glCreateShader - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLShader createShader(int type);
 
@@ -1411,6 +1417,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">createTexture - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">glGenTextures - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLTexture createTexture();
 
@@ -1635,6 +1642,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">glGetActiveAttrib - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLActiveInfo getActiveAttrib(@Nonnull WebGLProgram program, int index);
 
@@ -1645,6 +1653,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveUniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">glGetActiveUniform - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLActiveInfo getActiveUniform(@Nonnull WebGLProgram program, int index);
 
@@ -1655,6 +1664,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getAttachedShaders - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">glGetAttachedShaders - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native JsArray<WebGLShader> getAttachedShaders(@Nonnull WebGLProgram program);
 
@@ -1665,6 +1675,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getAttribLocation - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttribLocation.xml">glGetAttribLocation - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native int getAttribLocation(@Nonnull WebGLProgram program, @Nonnull String name);
 
   /**
@@ -1676,6 +1687,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferParameter - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">glGetBufferParameter - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getBufferParameter(int target, int pname);
 
@@ -1685,6 +1697,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes">WebGLRenderingContext.getContextAttributes - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">WebGLRenderingContext.getContextAttributes - WebGL 1.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLContextAttributes getContextAttributes();
 
@@ -1695,6 +1708,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getError - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetError.xml">glGetError - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native int getError();
 
   /**
@@ -1715,6 +1729,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">getFramebufferAttachmentParameter - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml">glGetFramebufferAttachmentParameteriv - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getFramebufferAttachmentParameter(int target, int attachment, int pname);
 
@@ -1726,6 +1741,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">getParameter - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml">glGet - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getParameter(int pname);
 
@@ -1736,6 +1752,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramInfoLog - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">glGetProgramInfoLog - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String getProgramInfoLog(@Nonnull WebGLProgram program);
 
@@ -1747,6 +1764,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramiv.xml">glGetProgramiv - OpenGL ES 2.0</a>
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">getProgramParameter - WebGL 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getProgramParameter(@Nonnull WebGLProgram program, int pname);
 
@@ -1759,6 +1777,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">glGetRenderbufferParameteriv - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getRenderbufferParameter(int target, int pname);
 
@@ -1769,6 +1788,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderInfoLog - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">glGetShaderInfoLog - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String getShaderInfoLog(@Nonnull WebGLShader shader);
 
@@ -1779,6 +1799,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderParameter - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">glGetShaderiv - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getShaderParameter(@Nonnull WebGLShader shader, int pname);
 
@@ -1789,6 +1810,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderPrecisionFormat - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">glGetShaderPrecisionFormat - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(int shadertype,
       int precisiontype);
@@ -1801,6 +1823,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml">glGetShaderSource - OpenGL ES 2.0</a>
    */
   @GLSL
+  @HasNoSideEffects
   @Nullable
   public native String getShaderSource(@Nonnull WebGLShader shader);
 
@@ -1810,6 +1833,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions">WebGLRenderingContext.getSupportedExtensions - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getSupportedExtensions - WebGL 1.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native JsArray<String> getSupportedExtensions();
 
@@ -1822,6 +1846,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">getTexParameter - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml">glGetTexParameter - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getTexParameter(int target, int pname);
 
@@ -1834,6 +1859,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getUniform - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml">glGetUniform - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getUniform(@Nonnull WebGLProgram program,
       @Nonnull WebGLUniformLocation location);
@@ -1845,6 +1871,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniformLocation - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">glGetUniformLocation - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLUniformLocation getUniformLocation(@Nonnull WebGLProgram program,
       @Nonnull String name);
@@ -1858,6 +1885,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getVertexAttrib - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">glGetVertexAttrib - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Any getVertexAttrib(int index, int pname);
 
@@ -1868,6 +1896,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttribOffset - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml">glGetVertexAttribPointerv - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native int getVertexAttribOffset(int index, int pname);
 
   /**
@@ -1886,6 +1915,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">isBuffer - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsBuffer.xml">glIsBuffer - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native boolean isBuffer(@Nullable WebGLBuffer buffer);
 
   /**
@@ -1894,6 +1924,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost">WebGLRenderingContext.isContextLost - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13">WebGLRenderingContext.isContextLost - WebGL 1.0</a>
    */
+  @HasNoSideEffects
   public native boolean isContextLost();
 
   /**
@@ -1905,6 +1936,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">isEnabled - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsEnabled.xhtml">glIsEnabled - OpenGL ES 3.0</a>
    */
+  @HasNoSideEffects
   public native boolean isEnabled(int cap);
 
   /**
@@ -1914,6 +1946,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">isFramebuffer - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsFramebuffer.xml">glIsFramebuffer - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native boolean isFramebuffer(@Nullable WebGLFramebuffer framebuffer);
 
   /**
@@ -1923,6 +1956,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isProgram - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml">glIsProgram - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native boolean isProgram(@Nullable WebGLProgram program);
 
   /**
@@ -1932,6 +1966,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">isRenderbuffer - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsRenderbuffer.xml">glIsRenderbuffer - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native boolean isRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
 
   /**
@@ -1941,6 +1976,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isShader - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml">glIsShader - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native boolean isShader(@Nullable WebGLShader shader);
 
   /**
@@ -1950,6 +1986,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">isTexture - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml">glIsTexture - OpenGL ES 2.0</a>
    */
+  @HasNoSideEffects
   public native boolean isTexture(@Nullable WebGLTexture texture);
 
   /**

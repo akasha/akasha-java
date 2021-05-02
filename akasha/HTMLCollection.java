@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -33,9 +34,11 @@ public class HTMLCollection {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item">HTMLCollection.item - MDN</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element item(int index);
 
+  @HasNoSideEffects
   @Nullable
   public native Element namedItem(@Nonnull String name);
 }

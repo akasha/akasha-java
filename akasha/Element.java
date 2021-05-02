@@ -3,6 +3,7 @@ package akasha;
 import akasha.clipboard.ClipboardEventListener;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -492,6 +493,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">Element.closest - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-closest">Element.closest() - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element closest(@Nonnull String selectors);
 
@@ -501,6 +503,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">Element.getAttribute - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattribute">getAttribute() - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String getAttribute(@Nonnull String qualifiedName);
 
@@ -512,6 +515,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/#ID-ElGetAttrNS">Element.getAttributeNS() - Document Object Model (DOM) Level 3 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#ID-ElGetAttrNS">Element.getAttributeNS() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String getAttributeNS(@Nullable String namespace, @Nonnull String localName);
 
@@ -530,6 +534,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNode">Element.getAttributeNode - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattributenode">getAttributeNode() - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Attr getAttributeNode(@Nonnull String qualifiedName);
 
@@ -539,6 +544,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNodeNS">Element.getAttributeNodeNS - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattributenodens">getAttributeNodeNS() - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Attr getAttributeNodeNS(@Nullable String namespace, @Nonnull String localName);
 
@@ -548,6 +554,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName">Element.getElementsByClassName - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">Element.getElementsByClassName() - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native HTMLCollection getElementsByClassName(@Nonnull String classNames);
 
@@ -560,6 +567,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1938918D">Element.getElementsByTagName() - Document Object Model (DOM) Level 2 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1938918D">Element.getElementsByTagName() - Document Object Model (DOM) Level 1 Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native HTMLCollection getElementsByTagName(@Nonnull String qualifiedName);
 
@@ -571,6 +579,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-A6C90942">Element.getElementsByTagNameNS() - Document Object Model (DOM) Level 3 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">Element.getElementsByTagNameNS() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native HTMLCollection getElementsByTagNameNS(@Nullable String namespace,
       @Nonnull String localName);
@@ -583,6 +592,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-ElHasAttr">Element.hasAttribute() - Document Object Model (DOM) Level 3 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr">Element.hasAttribute() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
+  @HasNoSideEffects
   public native boolean hasAttribute(@Nonnull String qualifiedName);
 
   /**
@@ -590,6 +600,7 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributeNS">Element.hasAttributeNS - MDN</a>
    */
+  @HasNoSideEffects
   public native boolean hasAttributeNS(@Nullable String namespace, @Nonnull String localName);
 
   /**
@@ -600,6 +611,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/#ID-NodeHasAttrs">hasAttributes() - Document Object Model (DOM) Level 3 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#ID-NodeHasAttrs">hasAttributes() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
+  @HasNoSideEffects
   public native boolean hasAttributes();
 
   /**
@@ -622,6 +634,7 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches">Element.matches - MDN</a>
    */
+  @HasNoSideEffects
   public native boolean matches(@Nonnull String selectors);
 
   /**
@@ -693,6 +706,7 @@ public class Element extends Node {
    */
   public native boolean toggleAttribute(@Nonnull String qualifiedName);
 
+  @HasNoSideEffects
   public native boolean webkitMatchesSelector(@Nonnull String selectors);
 
   @Nullable
@@ -901,6 +915,7 @@ public class Element extends Node {
    * @see <a href="https://dev.w3.org/2006/webapi/selectors-api2/#queryselectorall">querySelectorAll() - Selectors API Level 2</a>
    * @see <a href="https://www.w3.org/TR/selectors-api/#queryselectorall">querySelectorAll() - Selectors API Level 1</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
 
@@ -913,6 +928,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/dom/#dom-parentnode-queryselectorall">ParentNode.querySelectorAll() - DOM4</a>
    * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">document.querySelector() - Selectors API Level 1</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
 

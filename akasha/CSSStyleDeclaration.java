@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -97,6 +98,7 @@ public class CSSStyleDeclaration {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/item">CSSStyleDeclaration.item - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String item(int index);
 }

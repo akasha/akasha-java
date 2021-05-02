@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -115,6 +116,7 @@ public class Headers {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/keys">Headers.keys - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
@@ -123,6 +125,7 @@ public class Headers {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/values">Headers.values - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
@@ -131,6 +134,7 @@ public class Headers {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/entries">Headers.entries - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

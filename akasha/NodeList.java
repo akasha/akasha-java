@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -47,6 +48,7 @@ public class NodeList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/item">NodeList.item - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-nodelist-item">NodeList: item - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Node item(int index);
 
@@ -55,6 +57,7 @@ public class NodeList {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/keys">NodeList.keys - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> keys();
 
@@ -63,6 +66,7 @@ public class NodeList {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/values">NodeList.values - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Node> values();
 
@@ -71,6 +75,7 @@ public class NodeList {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/entries">NodeList.entries - MDN</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

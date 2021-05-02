@@ -2,6 +2,7 @@ package akasha.core;
 
 import akasha.Transferable;
 import javaemul.internal.annotations.DoNotAutobox;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -64,6 +65,7 @@ public class ArrayBuffer implements BufferSource, Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice">ArrayBuffer.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-arraybuffer.prototype.slice">ArrayBuffer.slice - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native ArrayBuffer slice(int begin, int end);
 
@@ -74,6 +76,7 @@ public class ArrayBuffer implements BufferSource, Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice">ArrayBuffer.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-arraybuffer.prototype.slice">ArrayBuffer.slice - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native ArrayBuffer slice(int begin);
 }

@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -31,6 +32,7 @@ public class HTMLAllCollection {
   @Nullable
   public native HTMLCollectionOrElementUnion item();
 
+  @HasNoSideEffects
   @Nullable
   public native HTMLCollectionOrElementUnion namedItem(@Nonnull String name);
 

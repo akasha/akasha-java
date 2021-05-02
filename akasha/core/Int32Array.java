@@ -1,6 +1,7 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -135,6 +136,7 @@ public class Int32Array implements IntegerTypedArray {
   @Nonnull
   public native Int32Array copyWithin(int target, int start);
 
+  @HasNoSideEffects
   public native int get(int index);
 
   /**

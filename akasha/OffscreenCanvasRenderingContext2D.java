@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.svg.SVGImageElement;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -103,26 +104,34 @@ public class OffscreenCanvasRenderingContext2D {
 
   public native void fill(@Nonnull Path2D path);
 
+  @HasNoSideEffects
   public native boolean isPointInPath(double x, double y, @CanvasFillRule @Nonnull String fillRule);
 
+  @HasNoSideEffects
   public native boolean isPointInPath(double x, double y);
 
+  @HasNoSideEffects
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y,
       @CanvasFillRule @Nonnull String fillRule);
 
+  @HasNoSideEffects
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y);
 
+  @HasNoSideEffects
   public native boolean isPointInStroke(double x, double y);
 
+  @HasNoSideEffects
   public native boolean isPointInStroke(@Nonnull Path2D path, double x, double y);
 
   public native void stroke();
 
   public native void stroke(@Nonnull Path2D path);
 
+  @HasNoSideEffects
   @Nonnull
   public native ImageData createImageData(int sw, int sh);
 
+  @HasNoSideEffects
   @Nonnull
   public native ImageData createImageData(@Nonnull ImageData imagedata);
 
@@ -238,6 +247,7 @@ public class OffscreenCanvasRenderingContext2D {
 
   public native void fillText(@Nonnull String text, double x, double y);
 
+  @HasNoSideEffects
   @Nonnull
   public native TextMetrics measureText(@Nonnull String text);
 

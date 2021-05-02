@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -57,6 +58,7 @@ public class Storage {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem">Storage.getItem - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-getitem">Storage.getItem - HTML Living Standard</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String getItem(@Nonnull String key);
 

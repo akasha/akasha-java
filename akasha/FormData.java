@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -130,6 +131,7 @@ public class FormData {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/keys">FormData.keys - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">keys() (as iterator&lt;&gt;) - XMLHttpRequest</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
@@ -139,6 +141,7 @@ public class FormData {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/values">FormData.values - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">values() (as iterator&lt;&gt;) - XMLHttpRequest</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<FormDataEntryValue> values();
 
@@ -148,6 +151,7 @@ public class FormData {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/entries">FormData.entries - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">entries() (as iterator&lt;&gt;) - XMLHttpRequest</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

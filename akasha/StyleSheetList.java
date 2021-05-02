@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
@@ -27,6 +28,7 @@ public class StyleSheetList {
   )
   public native int length();
 
+  @HasNoSideEffects
   @Nullable
   public native CSSStyleSheet item(int index);
 }

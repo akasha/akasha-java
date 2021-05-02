@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -66,6 +67,7 @@ public final class Global {
    * @deprecated
    */
   @Deprecated
+  @HasNoSideEffects
   @Nonnull
   public static native String escape(@Nonnull String str);
 
@@ -86,6 +88,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite">isFinite - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-isfinite-number">isFinite() - ECMA</a>
    */
+  @HasNoSideEffects
   public static native boolean isFinite(double num);
 
   /**
@@ -95,6 +98,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-isnan-number">isNaN() - ECMA</a>
    */
+  @HasNoSideEffects
   public static native boolean isNaN(double value);
 
   /**
@@ -104,6 +108,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat">parseFloat - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-parsefloat-string">parseFloat() - ECMA</a>
    */
+  @HasNoSideEffects
   public static native double parseFloat(@Nonnull String string);
 
   /**
@@ -113,6 +118,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-parseint-string-radix">parseInt() - ECMA</a>
    */
+  @HasNoSideEffects
   public static native int parseInt(@Nonnull String string, int radix);
 
   /**
@@ -124,6 +130,7 @@ public final class Global {
    * @deprecated
    */
   @Deprecated
+  @HasNoSideEffects
   @Nonnull
   public static native String unescape(@Nonnull String str);
 }

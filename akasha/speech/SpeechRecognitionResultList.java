@@ -1,5 +1,6 @@
 package akasha.speech;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -39,6 +40,7 @@ public class SpeechRecognitionResultList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/item">SpeechRecognitionResultList.item - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognitionresultlist-item">item() - Web Speech API</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native SpeechRecognitionResult item(int index);
 }

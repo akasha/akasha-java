@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -108,6 +109,7 @@ public class DocumentFragment extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector">DocumentFragment.querySelector - MDN</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
 
@@ -117,6 +119,7 @@ public class DocumentFragment extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll">DocumentFragment.querySelectorAll - MDN</a>
    * @see <a href="https://www.w3.org/TR/selectors-api/#queryselector">DocumentFragment.querySelectorAll - Selectors API Level 1</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
 
@@ -134,6 +137,7 @@ public class DocumentFragment extends Node {
    */
   public native void replaceChildren(@Nonnull String... nodes);
 
+  @HasNoSideEffects
   @Nullable
   public native Element getElementById(@Nonnull String elementId);
 }

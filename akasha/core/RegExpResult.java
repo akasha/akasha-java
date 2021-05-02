@@ -2,6 +2,7 @@ package akasha.core;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -51,12 +52,15 @@ public class RegExpResult {
     return Js.<JsArrayLike<String>>cast( this ).getAt( index );
   }
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

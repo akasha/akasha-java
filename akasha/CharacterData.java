@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -66,6 +67,7 @@ public class CharacterData extends Node {
 
   public native void replaceData(int offset, int count, @Nonnull String data);
 
+  @HasNoSideEffects
   @Nonnull
   public native String substringData(int offset, int count);
 

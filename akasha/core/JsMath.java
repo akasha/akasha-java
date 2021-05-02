@@ -1,5 +1,6 @@
 package akasha.core;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -99,6 +100,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs">Math.abs - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.abs">Math.abs - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double abs(double x);
 
   /**
@@ -107,6 +109,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/acos">Math.acos - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.acos">Math.acos - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double acos(double x);
 
   /**
@@ -115,6 +118,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh">Math.acosh - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.acosh">Math.acosh - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double acosh(double x);
 
   /**
@@ -123,6 +127,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/asin">Math.asin - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.asin">Math.asin - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double asin(double x);
 
   /**
@@ -131,6 +136,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/asinh">Math.asinh - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.asinh">Math.asinh - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double asinh(double x);
 
   /**
@@ -139,6 +145,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan">Math.atan - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.atan">Math.atan - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double atan(double x);
 
   /**
@@ -147,6 +154,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2">Math.atan2 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.atan2">Math.atan2 - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double atan2(double y, double x);
 
   /**
@@ -155,6 +163,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atanh">Math.atanh - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.atanh">Math.atanh - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double atanh(double x);
 
   /**
@@ -163,6 +172,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt">Math.cbrt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.cbrt">Math.cbrt - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double cbrt(double x);
 
   /**
@@ -171,6 +181,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.ceil">Math.ceil - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native int ceil(double x);
 
   /**
@@ -179,6 +190,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32">Math.clz32 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.clz32">Math.clz32 - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native int clz32(int x);
 
   /**
@@ -187,6 +199,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos">Math.cos - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.cos">Math.cos - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double cos(double x);
 
   /**
@@ -195,6 +208,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cosh">Math.cosh - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.cosh">Math.cosh - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double cosh(double x);
 
   /**
@@ -203,6 +217,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/exp">Math.exp - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.exp">Math.exp - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double exp(double x);
 
   /**
@@ -211,6 +226,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1">Math.expm1 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.expm1">Math.expm1 - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double expm1(double x);
 
   /**
@@ -219,6 +235,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.floor">Math.floor - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native int floor(double x);
 
   /**
@@ -227,6 +244,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround">Math.fround - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.fround">Math.fround - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native float fround(double x);
 
   /**
@@ -235,6 +253,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot">Math.hypot - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.hypot">Math.hypot - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double hypot(double... value);
 
   /**
@@ -243,6 +262,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul">Math.imul - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.imul">Math.imul - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double imul(double... value);
 
   /**
@@ -251,6 +271,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul">Math.imul - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.imul">Math.imul - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native int imul(int value1, int value2);
 
   /**
@@ -259,6 +280,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log">Math.log - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.log">Math.log - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double log(double x);
 
   /**
@@ -267,6 +289,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log10">Math.log10 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.log10">Math.log10 - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double log10(double x);
 
   /**
@@ -275,6 +298,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p">Math.log1p - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.log1p">Math.log1p - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double log1p(double x);
 
   /**
@@ -283,6 +307,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log2">Math.log2 - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.log2">Math.log2 - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double log2(double x);
 
   /**
@@ -291,6 +316,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.max">Math.max - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double max(double... values);
 
   /**
@@ -299,6 +325,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.min">Math.min - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double min(double... values);
 
   /**
@@ -307,6 +334,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.pow">Math.pow - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double pow(double x, double y);
 
   /**
@@ -315,6 +343,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.random">Math.random - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double random();
 
   /**
@@ -323,6 +352,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.round">Math.round - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native int round(double x);
 
   /**
@@ -331,6 +361,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign">Math.sign - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.sign">Math.sign - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double sign(double x);
 
   /**
@@ -339,6 +370,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin">Math.sin - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.sin">Math.sin - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double sin(double x);
 
   /**
@@ -347,6 +379,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sinh">Math.sinh - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.sinh">Math.sinh - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double sinh(double x);
 
   /**
@@ -355,6 +388,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.sqrt">Math.sqrt - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double sqrt(double x);
 
   /**
@@ -363,6 +397,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan">Math.tan - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.tan">Math.tan - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double tan(double x);
 
   /**
@@ -371,6 +406,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tanh">Math.tanh - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.tanh">Math.tanh - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native double tanh(double x);
 
   /**
@@ -379,6 +415,7 @@ public final class JsMath {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc">Math.trunc - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-math.trunc">Math.trunc - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public static native int trunc(double x);
 
   @JsType(

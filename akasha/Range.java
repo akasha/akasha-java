@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -102,6 +103,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/comparePoint">Range.comparePoint - MDN</a>
    */
+  @HasNoSideEffects
   public native short comparePoint(@Nonnull Node node, int offset);
 
   /**
@@ -146,6 +148,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/intersectsNode">Range.intersectsNode - MDN</a>
    */
+  @HasNoSideEffects
   public native boolean intersectsNode(@Nonnull Node node);
 
   /**
@@ -153,6 +156,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/isPointInRange">Range.isPointInRange - MDN</a>
    */
+  @HasNoSideEffects
   public native boolean isPointInRange(@Nonnull Node node, int offset);
 
   /**

@@ -3,6 +3,7 @@ package akasha.wasm;
 import akasha.Response;
 import akasha.core.BufferSource;
 import akasha.promise.Promise;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -78,6 +79,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate">WebAssembly.validate - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/js-api/#dom-webassembly-validate">validate() - WebAssembly JavaScript Interface</a>
    */
+  @HasNoSideEffects
   public static native boolean validate(@Nonnull BufferSource bytes);
 
   /**

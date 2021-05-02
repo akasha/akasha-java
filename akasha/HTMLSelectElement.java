@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -274,6 +275,7 @@ public class HTMLSelectElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-item">HTMLSelectElement.item() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-item">HTMLSelectElement.item() - HTML5</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Element item(int index);
 

@@ -2,6 +2,7 @@ package akasha.core;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -26,17 +27,22 @@ public class RegExpGroups {
   )
   public native int size();
 
+  @HasNoSideEffects
   public native boolean has(@Nonnull String key);
 
+  @HasNoSideEffects
   @Nullable
   public native String get(@Nonnull String key);
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

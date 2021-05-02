@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -29,6 +30,7 @@ public class HTMLFormControlsCollection {
   )
   public native int length();
 
+  @HasNoSideEffects
   @Nullable
   public native RadioNodeListOrElementUnion item(int index);
 
@@ -39,6 +41,7 @@ public class HTMLFormControlsCollection {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-htmlformcontrolscollection-nameditem">HTMLFormControlsCollection.namedItem() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML5</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native RadioNodeListOrElementUnion namedItem(@Nonnull String name);
 }

@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -33,6 +34,7 @@ public class PluginArray {
 
   public native void refresh();
 
+  @HasNoSideEffects
   @Nullable
   public native Object item(int index);
 }

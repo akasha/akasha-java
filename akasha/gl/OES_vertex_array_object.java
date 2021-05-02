@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
@@ -42,6 +43,7 @@ public class OES_vertex_array_object implements WebGL1Extension {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/createVertexArrayOES">OES_vertex_array_object.createVertexArrayOES - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/">OES_vertex_array_object - OES_vertex_array_object</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native WebGLVertexArrayObjectOES createVertexArrayOES();
 
@@ -59,5 +61,6 @@ public class OES_vertex_array_object implements WebGL1Extension {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/isVertexArrayOES">OES_vertex_array_object.isVertexArrayOES - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/">OES_vertex_array_object - OES_vertex_array_object</a>
    */
+  @HasNoSideEffects
   public native boolean isVertexArrayOES(@Nullable WebGLVertexArrayObjectOES arrayObject);
 }

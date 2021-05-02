@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
@@ -42,6 +43,7 @@ public class TouchList {
    * @see <a href="https://w3c.github.io/touch-events/#dom-touchlist-item">Touch Events – Level 2</a>
    * @see <a href="https://www.w3.org/TR/touch-events/#widl-TouchList-item-getter-Touch-unsigned-long-index">Touch Events</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native Touch item(int index);
 }

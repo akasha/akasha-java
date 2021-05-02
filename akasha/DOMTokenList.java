@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -61,6 +62,7 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains">DOMTokenList.contains - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-contains">contains() - DOM</a>
    */
+  @HasNoSideEffects
   public native boolean contains(@Nonnull String token);
 
   /**
@@ -85,6 +87,7 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/supports">DOMTokenList.supports - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
+  @HasNoSideEffects
   public native boolean supports(@Nonnull String token);
 
   /**
@@ -109,6 +112,7 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/item">DOMTokenList.item - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-item">item() - DOM</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native String item(int index);
 
@@ -118,6 +122,7 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/keys">DOMTokenList.keys - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">keys() (as iterable&lt;Node&gt;) - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> keys();
 
@@ -127,6 +132,7 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/values">DOMTokenList.values - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">values() (as iterable&lt;Node&gt;) - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
@@ -136,6 +142,7 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/entries">DOMTokenList.entries - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">entries() (as iterable&lt;Node&gt;) - DOM</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

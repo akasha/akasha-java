@@ -10,6 +10,7 @@ import akasha.Element;
 import akasha.EventHandler;
 import akasha.NodeList;
 import akasha.OnBeforeUnloadEventHandler;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -244,6 +245,7 @@ public class SVGSVGElement extends SVGGraphicsElement {
 
   public native void forceRedraw();
 
+  @HasNoSideEffects
   @Nonnull
   public native Element getElementById(@Nonnull String elementId);
 

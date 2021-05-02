@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -51,6 +52,7 @@ public class SVGLengthList {
   @Nonnull
   public native SVGLength replaceItem(@Nonnull SVGLength newItem, int index);
 
+  @HasNoSideEffects
   @Nonnull
   public native SVGLength getItem(int index);
 

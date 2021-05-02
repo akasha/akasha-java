@@ -1,6 +1,8 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -65,6 +67,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt">String.charCodeAt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.charcodeat">String.prototype.charCodeAt - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int charCodeAt();
 
   /**
@@ -73,6 +76,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt">String.charCodeAt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.charcodeat">String.prototype.charCodeAt - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int charCodeAt(int index);
 
   /**
@@ -81,6 +85,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt">String.codePointAt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.codepointat">String.prototype.codePointAt - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int codePointAt(int index);
 
   /**
@@ -89,6 +94,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat">String.concat - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.concat">String.prototype.concat - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String concat(@Nonnull String... strings);
 
@@ -98,6 +104,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith">String.endsWith - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.endswith">String.prototype.endsWith - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native boolean endsWith(@Nonnull String searchString, int position);
 
   /**
@@ -106,6 +113,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith">String.endsWith - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.endswith">String.prototype.endsWith - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native boolean endsWith(@Nonnull String searchString);
 
   /**
@@ -114,6 +122,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.includes - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.includes">String.prototype.includes - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native boolean includes(@Nonnull String searchString, int position);
 
   /**
@@ -122,6 +131,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.includes - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.includes">String.prototype.includes - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native boolean includes(@Nonnull String searchString);
 
   /**
@@ -130,6 +140,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">String.indexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.indexof">String.prototype.indexOf - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int indexOf(@Nonnull String searchValue, int fromIndex);
 
   /**
@@ -138,6 +149,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">String.indexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.indexof">String.prototype.indexOf - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int indexOf(@Nonnull String searchValue);
 
   /**
@@ -146,6 +158,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">String.lastIndexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.lastindexof">String.prototype.lastIndexOf - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int lastIndexOf(@Nonnull String searchValue, int fromIndex);
 
   /**
@@ -154,6 +167,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">String.lastIndexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.lastindexof">String.prototype.lastIndexOf - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native int lastIndexOf(@Nonnull String searchValue);
 
   /**
@@ -163,6 +177,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString, @Nonnull String locales,
       @Nonnull Object options);
 
@@ -173,6 +188,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString, @Nonnull JsArray<String> locales,
       @Nonnull Object options);
 
@@ -183,6 +199,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString, @Nonnull String[] locales,
       @Nonnull Object options);
 
@@ -193,6 +210,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString, @Nonnull String locales);
 
   /**
@@ -202,6 +220,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString, @Nonnull JsArray<String> locales);
 
   /**
@@ -211,6 +230,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString, @Nonnull String[] locales);
 
   /**
@@ -220,6 +240,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.localecompare">String.prototype.localeCompare - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   public native int localeCompare(@Nonnull String compareString);
 
   /**
@@ -239,6 +260,26 @@ public class JsString {
    */
   @Nonnull
   public native JsArray<String> match(@Nonnull String regexp);
+
+  /**
+   * The matchAll() method returns an iterator of all results matching a string against a regular expression, including capturing groups.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">String.matchAll - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.matchall">String.prototype.matchAll - ECMAScript (ECMA-262)</a>
+   */
+  @HasNoSideEffects
+  @Nonnull
+  public native JsIterator<RegExpResult> matchAll(@Nonnull RegExp regexp);
+
+  /**
+   * The matchAll() method returns an iterator of all results matching a string against a regular expression, including capturing groups.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">String.matchAll - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.matchall">String.prototype.matchAll - ECMAScript (ECMA-262)</a>
+   */
+  @HasNoSideEffects
+  @Nonnull
+  public native JsIterator<RegExpResult> matchAll(@Nonnull String regexp);
 
   /**
    * The normalize() method returns the Unicode Normalization Form of the string.
@@ -264,6 +305,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">String.padEnd - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.padend">String.prototype.padEnd - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String padEnd(int targetLength, @Nonnull String padString);
 
@@ -273,6 +315,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">String.padEnd - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.padend">String.prototype.padEnd - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String padEnd(int targetLength);
 
@@ -282,6 +325,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart">String.padStart - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.padstart">String.prototype.padStart - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String padStart(int targetLength, @Nonnull String padString);
 
@@ -291,6 +335,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart">String.padStart - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.padstart">String.prototype.padStart - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String padStart(int targetLength);
 
@@ -300,6 +345,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat">String.repeat - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.repeat">String.prototype.repeat - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String repeat(int count);
 
@@ -343,6 +389,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">String.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.slice">String.prototype.slice - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String slice(int begin, int end);
 
@@ -352,6 +399,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">String.slice - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.slice">String.prototype.slice - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String slice(int begin);
 
@@ -361,6 +409,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.split - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.split">String.prototype.split - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<String> split(@Nonnull RegExp separator, int limit);
 
@@ -370,6 +419,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.split - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.split">String.prototype.split - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<String> split(@Nonnull String separator, int limit);
 
@@ -379,6 +429,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.split - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.split">String.prototype.split - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<String> split(@Nonnull RegExp separator);
 
@@ -388,6 +439,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.split - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.split">String.prototype.split - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<String> split(@Nonnull String separator);
 
@@ -397,6 +449,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.split - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.split">String.prototype.split - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<String> split();
 
@@ -406,6 +459,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith">String.startsWith - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.startswith">String.prototype.startsWith - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native boolean startsWith(@Nonnull String searchString, int position);
 
   /**
@@ -414,6 +468,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith">String.startsWith - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.startswith">String.prototype.startsWith - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   public native boolean startsWith(@Nonnull String searchString);
 
   /**
@@ -422,6 +477,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring">String.substring - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.substring">String.prototype.substring - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String substring(int start, int end);
 
@@ -431,6 +487,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring">String.substring - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.substring">String.prototype.substring - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String substring(int start);
 
@@ -441,6 +498,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolocalelowercase">String.prototype.toLocaleLowerCase - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">String.prototype.toLocaleLowerCase - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLocaleLowerCase(@Nonnull JsArray<String> locales);
 
@@ -451,6 +509,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolocalelowercase">String.prototype.toLocaleLowerCase - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">String.prototype.toLocaleLowerCase - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLocaleLowerCase(@Nonnull String[] locales);
 
@@ -461,6 +520,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolocalelowercase">String.prototype.toLocaleLowerCase - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">String.prototype.toLocaleLowerCase - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLocaleLowerCase();
 
@@ -471,6 +531,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolocaleuppercase">String.prototype.toLocaleUpperCase - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">String.prototype.toLocaleUpperCase - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLocaleUpperCase(@Nonnull JsArray<String> locales);
 
@@ -481,6 +542,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolocaleuppercase">String.prototype.toLocaleUpperCase - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">String.prototype.toLocaleUpperCase - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLocaleUpperCase(@Nonnull String[] locales);
 
@@ -491,6 +553,7 @@ public class JsString {
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolocaleuppercase">String.prototype.toLocaleUpperCase - ECMAScript (ECMA-262)</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">String.prototype.toLocaleUpperCase - ECMAScript Internationalization API (ECMA-402)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLocaleUpperCase();
 
@@ -500,6 +563,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">String.toLowerCase - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.tolowercase">String.prototype.toLowerCase - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toLowerCase();
 
@@ -509,6 +573,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">String.toUpperCase - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.touppercase">String.prototype.toUpperCase - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String toUpperCase();
 
@@ -518,6 +583,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim">String.trim - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.trim">String.prototype.trim - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String trim();
 
@@ -527,12 +593,15 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">String.trimEnd - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.trimend">String.prototype.trimEnd - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String trimEnd();
 
+  @HasNoSideEffects
   @Nonnull
   public native String trimLeft();
 
+  @HasNoSideEffects
   @Nonnull
   public native String trimRight();
 
@@ -542,6 +611,7 @@ public class JsString {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">String.trimStart - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-string.prototype.trimstart"> String.prototype.trimStart - ECMAScript (ECMA-262)</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String trimStart();
 
