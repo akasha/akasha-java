@@ -2654,6 +2654,54 @@ function CSSFontFeatureValuesMap() {}
  * @return {undefined}
  */
 CSSFontFeatureValuesMap.prototype.set = function(featureValueName,values) {}
+/** @const {number} */ CSSFontFeatureValuesMap.prototype.size;
+/**
+ * @param {!CSSOMString} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+CSSFontFeatureValuesMap.prototype.has = function(key) {}
+/**
+ * @param {!CSSOMString} key
+ * @return {?Array<!number>}
+ * @nosideeffects
+ */
+CSSFontFeatureValuesMap.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!CSSOMString>}
+ * @nosideeffects
+ */
+CSSFontFeatureValuesMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!Array<!number>>}
+ * @nosideeffects
+ */
+CSSFontFeatureValuesMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!CSSOMString|!Array<!number>>>}
+ * @nosideeffects
+ */
+CSSFontFeatureValuesMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!CSSOMString|!Array<!number>>>}
+ * @nosideeffects
+ */
+CSSFontFeatureValuesMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!Array<!number>, !CSSOMString, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+CSSFontFeatureValuesMap.prototype.forEach = function(callback) {};
+/**
+ * @param {!CSSOMString} key
+ * @return {!boolean}
+ */
+CSSFontFeatureValuesMap.prototype.delete = function(key) {}
+/**
+ * @return {undefined}
+ */
+CSSFontFeatureValuesMap.prototype.clear = function() {}
 /**
  * @constructor
  * @param {!MemoryDescriptor} descriptor
@@ -3773,6 +3821,32 @@ function HTMLMapElement() {}
 function XRInputSourceArray() {}
 /** @type {!number} */ XRInputSourceArray.prototype.length;
 /**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+XRInputSourceArray.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!XRInputSource>}
+ * @nosideeffects
+ */
+XRInputSourceArray.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!XRInputSource>>}
+ * @nosideeffects
+ */
+XRInputSourceArray.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!XRInputSource>>}
+ * @nosideeffects
+ */
+XRInputSourceArray.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!XRInputSource, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+XRInputSourceArray.prototype.forEach = function(callback) {};
+/**
  * @constructor
  */
 function XMLSerializer() {}
@@ -3963,11 +4037,11 @@ function HTMLHRElement() {}
 /**
  * @constructor
  * @extends {Error}
- * @param {!Array<*>} errors
+ * @param {!Iterable<*>} errors
  * @param {!string=} message
  */
 function AggregateError(errors,message) {}
-/** @type {!Array<*>} */ AggregateError.prototype.errors;
+/** @type {!Iterable<*>} */ AggregateError.prototype.errors;
 /**
  * @constructor
  * @private
@@ -4204,6 +4278,32 @@ DOMTokenList.prototype.toggle = function(token,force) {}
  */
 DOMTokenList.prototype.remove = function(tokens) {}
 /**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+DOMTokenList.prototype.forEach = function(callback) {};
+/**
  * @constructor
  * @private
  * @extends {HTMLElement}
@@ -4437,6 +4537,45 @@ function ImageData(arg0,arg1,arg2) {}
  * @nosideeffects
  */
 function BluetoothManufacturerDataMap() {}
+/** @const {number} */ BluetoothManufacturerDataMap.prototype.size;
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+BluetoothManufacturerDataMap.prototype.has = function(key) {}
+/**
+ * @param {!number} key
+ * @return {!DataView}
+ * @nosideeffects
+ */
+BluetoothManufacturerDataMap.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+BluetoothManufacturerDataMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!DataView>}
+ * @nosideeffects
+ */
+BluetoothManufacturerDataMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!DataView>>}
+ * @nosideeffects
+ */
+BluetoothManufacturerDataMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!DataView>>}
+ * @nosideeffects
+ */
+BluetoothManufacturerDataMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!DataView, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+BluetoothManufacturerDataMap.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -4581,6 +4720,32 @@ URLSearchParams.prototype.delete = function(name) {}
  * @return {undefined}
  */
 URLSearchParams.prototype.append = function(name,value) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+URLSearchParams.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+URLSearchParams.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+URLSearchParams.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+URLSearchParams.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+URLSearchParams.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -7498,6 +7663,45 @@ function SVGPathElement() {}
  * @nosideeffects
  */
 function AudioParamMap() {}
+/** @const {number} */ AudioParamMap.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+AudioParamMap.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {!AudioParam}
+ * @nosideeffects
+ */
+AudioParamMap.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+AudioParamMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!AudioParam>}
+ * @nosideeffects
+ */
+AudioParamMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!AudioParam>>}
+ * @nosideeffects
+ */
+AudioParamMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!AudioParam>>}
+ * @nosideeffects
+ */
+AudioParamMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!AudioParam, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+AudioParamMap.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -7566,6 +7770,60 @@ function SpeechRecognitionAlternative() {}
 function CSSFontPaletteValuesRule() {}
 /** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.basePalette;
 /** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.fontFamily;
+/** @const {number} */ CSSFontPaletteValuesRule.prototype.size;
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.has = function(key) {}
+/**
+ * @param {!number} key
+ * @return {!CSSOMString}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!CSSOMString>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!CSSOMString>>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!CSSOMString>>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!CSSOMString, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+CSSFontPaletteValuesRule.prototype.forEach = function(callback) {};
+/**
+ * @param {!number} key
+ * @param {!CSSOMString} value
+ * @return {undefined}
+ */
+CSSFontPaletteValuesRule.prototype.set = function(key,value) {}
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ */
+CSSFontPaletteValuesRule.prototype.delete = function(key) {}
+/**
+ * @return {undefined}
+ */
+CSSFontPaletteValuesRule.prototype.clear = function() {}
 /**
  * @constructor
  * @extends {Event}
@@ -9513,6 +9771,45 @@ function SVGFEMorphologyElement() {}
  * @nosideeffects
  */
 function RTCStatsReport() {}
+/** @const {number} */ RTCStatsReport.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {?Object}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!Object>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!Object>>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!Object>>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!Object, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+RTCStatsReport.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -9695,6 +9992,32 @@ Headers.prototype.delete = function(name) {}
  * @return {undefined}
  */
 Headers.prototype.append = function(name,value) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+Headers.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+Headers.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+Headers.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+Headers.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+Headers.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -13060,6 +13383,32 @@ FormData.prototype.delete = function(name) {}
  * @return {undefined}
  */
 FormData.prototype.append = function(arg0,arg1,arg2) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+FormData.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!FormDataEntryValue>}
+ * @nosideeffects
+ */
+FormData.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!FormDataEntryValue>>}
+ * @nosideeffects
+ */
+FormData.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!FormDataEntryValue>>}
+ * @nosideeffects
+ */
+FormData.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!FormDataEntryValue, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+FormData.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -17574,6 +17923,45 @@ SVGStringList.prototype.appendItem = function(newItem) {}
  * @nosideeffects
  */
 function BluetoothServiceDataMap() {}
+/** @const {number} */ BluetoothServiceDataMap.prototype.size;
+/**
+ * @param {!UUID} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+BluetoothServiceDataMap.prototype.has = function(key) {}
+/**
+ * @param {!UUID} key
+ * @return {!DataView}
+ * @nosideeffects
+ */
+BluetoothServiceDataMap.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!UUID>}
+ * @nosideeffects
+ */
+BluetoothServiceDataMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!DataView>}
+ * @nosideeffects
+ */
+BluetoothServiceDataMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!UUID|!DataView>>}
+ * @nosideeffects
+ */
+BluetoothServiceDataMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!UUID|!DataView>>}
+ * @nosideeffects
+ */
+BluetoothServiceDataMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!DataView, !UUID, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+BluetoothServiceDataMap.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -17975,6 +18363,32 @@ function NodeList() {}
  */
 NodeList.prototype.item = function(index) {}
 /**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+NodeList.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!Node>}
+ * @nosideeffects
+ */
+NodeList.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!Node>>}
+ * @nosideeffects
+ */
+NodeList.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!Node>>}
+ * @nosideeffects
+ */
+NodeList.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!Node, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+NodeList.prototype.forEach = function(callback) {};
+/**
  * @constructor
  * @private
  * @nosideeffects
@@ -18257,6 +18671,45 @@ MediaStream.prototype.getVideoTracks = function() {}
  * @nosideeffects
  */
 function RegExpGroups() {}
+/** @const {number} */ RegExpGroups.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+RegExpGroups.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {?string}
+ * @nosideeffects
+ */
+RegExpGroups.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+RegExpGroups.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+RegExpGroups.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+RegExpGroups.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+RegExpGroups.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+RegExpGroups.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -18638,6 +19091,32 @@ MediaKeyStatusMap.prototype.get = function(keyId) {}
  * @return {!boolean}
  */
 MediaKeyStatusMap.prototype.has = function(keyId) {}
+/**
+ * @return {!Iterator<!BufferSource>}
+ * @nosideeffects
+ */
+MediaKeyStatusMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+MediaKeyStatusMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!BufferSource|!string>>}
+ * @nosideeffects
+ */
+MediaKeyStatusMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!BufferSource|!string>>}
+ * @nosideeffects
+ */
+MediaKeyStatusMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !BufferSource, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+MediaKeyStatusMap.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
