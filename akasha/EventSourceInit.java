@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EventSourceInit"
 )
 public interface EventSourceInit {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface EventSourceInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EventSourceInit"
   )
   interface Builder extends EventSourceInit {
     @JsOverlay

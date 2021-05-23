@@ -1,5 +1,6 @@
 package akasha.bluetooth;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "BluetoothUUID"
 )
-public class BluetoothUUID {
+public class BluetoothUUID extends JsObject {
   protected BluetoothUUID() {
   }
 

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DataView"
 )
-public class DataView implements ArrayBufferView {
+public class DataView extends JsObject implements ArrayBufferView {
   /**
    * The DataView() constructor is used to create DataView objects.
    *
@@ -109,10 +109,11 @@ public class DataView implements ArrayBufferView {
   )
   public native int byteOffset();
 
-  @JsProperty(
-      name = "length"
+  @JsMethod(
+      name = "toString"
   )
-  public native int length();
+  @Nonnull
+  public native String toString_();
 
   /**
    * The getInt8() method gets a signed 8-bit integer (byte) at the specified byte offset from the start of the DataView.
@@ -337,10 +338,4 @@ public class DataView implements ArrayBufferView {
    * @see <a href="https://tc39.es/ecma262/#sec-dataview.prototype.setfloat64">DataView.prototype.setFloat64 - ECMAScript (ECMA-262)</a>
    */
   public native void setFloat64(int byteOffset, double value);
-
-  @JsMethod(
-      name = "toString"
-  )
-  @Nonnull
-  public native String toString_();
 }

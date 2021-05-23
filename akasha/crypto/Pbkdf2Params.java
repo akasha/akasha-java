@@ -1,6 +1,7 @@
 package akasha.crypto;
 
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -20,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Pbkdf2Params"
 )
 public interface Pbkdf2Params extends Algorithm {
   @JsOverlay
@@ -32,7 +33,7 @@ public interface Pbkdf2Params extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final Object hash,
+  static Builder create(@Nonnull final String name, @Nonnull final JsObject hash,
       final int iterations, @Nonnull final BufferSource salt) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
   }
@@ -54,7 +55,7 @@ public interface Pbkdf2Params extends Algorithm {
   void setHash(@Nonnull AlgorithmIdentifier hash);
 
   @JsOverlay
-  default void setHash(@Nonnull final Object hash) {
+  default void setHash(@Nonnull final JsObject hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
@@ -90,7 +91,7 @@ public interface Pbkdf2Params extends Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Pbkdf2Params"
   )
   interface Builder extends Pbkdf2Params {
     @JsOverlay
@@ -102,7 +103,7 @@ public interface Pbkdf2Params extends Algorithm {
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final Object hash) {
+    default Builder hash(@Nonnull final JsObject hash) {
       setHash( hash );
       return this;
     }

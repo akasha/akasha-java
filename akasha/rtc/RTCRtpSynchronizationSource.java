@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCRtpSynchronizationSource"
 )
 public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
   @JsOverlay
@@ -37,7 +37,7 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCRtpSynchronizationSource"
   )
   interface Builder extends RTCRtpSynchronizationSource {
     /**

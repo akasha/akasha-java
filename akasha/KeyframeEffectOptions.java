@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "KeyframeEffectOptions"
 )
 public interface KeyframeEffectOptions extends EffectTiming {
   @JsOverlay
@@ -58,7 +58,7 @@ public interface KeyframeEffectOptions extends EffectTiming {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "KeyframeEffectOptions"
   )
   interface Builder extends KeyframeEffectOptions {
     @JsOverlay

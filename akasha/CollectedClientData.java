@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "CollectedClientData"
 )
 public interface CollectedClientData {
   @JsOverlay
@@ -62,7 +62,7 @@ public interface CollectedClientData {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "CollectedClientData"
   )
   interface Builder extends CollectedClientData {
     @JsOverlay

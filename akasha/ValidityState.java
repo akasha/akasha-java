@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ValidityState"
 )
-public class ValidityState {
+public class ValidityState extends JsObject {
   protected ValidityState() {
   }
 

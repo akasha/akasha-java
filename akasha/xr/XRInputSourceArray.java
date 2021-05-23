@@ -1,6 +1,8 @@
 package akasha.xr;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -25,7 +27,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "XRInputSourceArray"
 )
-public class XRInputSourceArray {
+public class XRInputSourceArray extends JsObject implements JsIterable<XRInputSourceArray.Entry> {
   protected XRInputSourceArray() {
   }
 

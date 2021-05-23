@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.media.MediaStreamTrack;
 import akasha.promise.Promise;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCRtpReceiver"
 )
-public class RTCRtpReceiver {
+public class RTCRtpReceiver extends JsObject {
   protected RTCRtpReceiver() {
   }
 

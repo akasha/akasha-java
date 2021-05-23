@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -15,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStreamDefaultReader"
 )
-public class ReadableStreamDefaultReader {
+public class ReadableStreamDefaultReader extends JsObject {
   public ReadableStreamDefaultReader(@Nonnull final ReadableStream stream) {
   }
 

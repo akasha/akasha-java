@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_sRGB"
 )
-public class EXT_sRGB implements WebGL1Extension {
+public class EXT_sRGB extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final int FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT = 0x8210;
 

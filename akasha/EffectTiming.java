@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EffectTiming"
 )
 public interface EffectTiming {
   @JsOverlay
@@ -222,7 +222,7 @@ public interface EffectTiming {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EffectTiming"
   )
   interface Builder extends EffectTiming {
     /**

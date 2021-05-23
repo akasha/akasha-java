@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ImageBitmapRenderingContextSettings"
 )
 public interface ImageBitmapRenderingContextSettings {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface ImageBitmapRenderingContextSettings {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ImageBitmapRenderingContextSettings"
   )
   interface Builder extends ImageBitmapRenderingContextSettings {
     /**

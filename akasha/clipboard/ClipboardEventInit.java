@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ClipboardEventInit"
 )
 public interface ClipboardEventInit extends EventInit {
   @JsOverlay
@@ -38,7 +38,7 @@ public interface ClipboardEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ClipboardEventInit"
   )
   interface Builder extends ClipboardEventInit {
     @JsOverlay

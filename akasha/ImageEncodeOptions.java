@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ImageEncodeOptions"
 )
 public interface ImageEncodeOptions {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface ImageEncodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ImageEncodeOptions"
   )
   interface Builder extends ImageEncodeOptions {
     @JsOverlay

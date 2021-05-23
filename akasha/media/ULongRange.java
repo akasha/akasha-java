@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ULongRange"
 )
 public interface ULongRange {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface ULongRange {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ULongRange"
   )
   interface Builder extends ULongRange {
     @JsOverlay

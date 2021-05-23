@@ -2,6 +2,7 @@ package akasha.bluetooth;
 
 import akasha.core.BufferSource;
 import akasha.core.DataView;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "BluetoothRemoteGATTDescriptor"
 )
-public class BluetoothRemoteGATTDescriptor {
+public class BluetoothRemoteGATTDescriptor extends JsObject {
   protected BluetoothRemoteGATTDescriptor() {
   }
 

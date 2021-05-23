@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.gl.TexImageSource;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmap"
 )
-public class ImageBitmap implements TexImageSource, Transferable {
+public class ImageBitmap extends JsObject implements TexImageSource, Transferable {
   protected ImageBitmap() {
   }
 

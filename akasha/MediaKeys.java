@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "MediaKeys"
 )
-public class MediaKeys {
+public class MediaKeys extends JsObject {
   protected MediaKeys() {
   }
 

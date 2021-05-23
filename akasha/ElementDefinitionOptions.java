@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ElementDefinitionOptions"
 )
 public interface ElementDefinitionOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ElementDefinitionOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ElementDefinitionOptions"
   )
   interface Builder extends ElementDefinitionOptions {
     @JsOverlay

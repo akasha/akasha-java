@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "TextDecoder"
 )
-public class TextDecoder {
+public class TextDecoder extends JsObject {
   /**
    * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
    *

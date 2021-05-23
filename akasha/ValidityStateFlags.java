@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ValidityStateFlags"
 )
 public interface ValidityStateFlags {
   @JsOverlay
@@ -106,7 +106,7 @@ public interface ValidityStateFlags {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ValidityStateFlags"
   )
   interface Builder extends ValidityStateFlags {
     @JsOverlay

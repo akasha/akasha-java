@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PushSubscriptionJSON"
 )
 public interface PushSubscriptionJSON {
   @JsOverlay
@@ -52,7 +52,7 @@ public interface PushSubscriptionJSON {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PushSubscriptionJSON"
   )
   interface Builder extends PushSubscriptionJSON {
     @JsOverlay

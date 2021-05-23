@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -16,9 +17,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Position"
 )
-public class Position {
+public class Position extends JsObject {
   protected Position() {
   }
 

@@ -1,5 +1,6 @@
 package akasha.crypto;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -19,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RsaHashedImportParams"
 )
 public interface RsaHashedImportParams extends Algorithm {
   @JsOverlay
@@ -30,7 +31,7 @@ public interface RsaHashedImportParams extends Algorithm {
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final Object hash) {
+  static Builder create(@Nonnull final String name, @Nonnull final JsObject hash) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash );
   }
 
@@ -50,7 +51,7 @@ public interface RsaHashedImportParams extends Algorithm {
   void setHash(@Nonnull AlgorithmIdentifier hash);
 
   @JsOverlay
-  default void setHash(@Nonnull final Object hash) {
+  default void setHash(@Nonnull final JsObject hash) {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
@@ -69,7 +70,7 @@ public interface RsaHashedImportParams extends Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RsaHashedImportParams"
   )
   interface Builder extends RsaHashedImportParams {
     @JsOverlay
@@ -81,7 +82,7 @@ public interface RsaHashedImportParams extends Algorithm {
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final Object hash) {
+    default Builder hash(@Nonnull final JsObject hash) {
       setHash( hash );
       return this;
     }

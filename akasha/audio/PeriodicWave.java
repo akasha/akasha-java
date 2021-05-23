@@ -1,5 +1,6 @@
 package akasha.audio;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "PeriodicWave"
 )
-public class PeriodicWave {
+public class PeriodicWave extends JsObject {
   /**
    * The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance.
    *

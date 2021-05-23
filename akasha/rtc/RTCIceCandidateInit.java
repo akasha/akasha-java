@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCIceCandidateInit"
 )
 public interface RTCIceCandidateInit {
   @JsOverlay
@@ -120,7 +120,7 @@ public interface RTCIceCandidateInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCIceCandidateInit"
   )
   interface Builder extends RTCIceCandidateInit {
     /**

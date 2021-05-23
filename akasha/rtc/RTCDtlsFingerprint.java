@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCDtlsFingerprint"
 )
 public interface RTCDtlsFingerprint {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface RTCDtlsFingerprint {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCDtlsFingerprint"
   )
   interface Builder extends RTCDtlsFingerprint {
     @JsOverlay

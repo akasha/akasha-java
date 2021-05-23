@@ -1,5 +1,6 @@
 package akasha.xr;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRFrame"
 )
-public class XRFrame {
+public class XRFrame extends JsObject {
   protected XRFrame() {
   }
 

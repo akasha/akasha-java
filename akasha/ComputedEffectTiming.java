@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ComputedEffectTiming"
 )
 public interface ComputedEffectTiming extends EffectTiming {
   @JsOverlay
@@ -70,7 +70,7 @@ public interface ComputedEffectTiming extends EffectTiming {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ComputedEffectTiming"
   )
   interface Builder extends ComputedEffectTiming {
     @JsOverlay

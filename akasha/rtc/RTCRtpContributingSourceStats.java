@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCRtpContributingSourceStats"
 )
 public interface RTCRtpContributingSourceStats extends RTCStats {
   @JsOverlay
@@ -61,7 +61,7 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCRtpContributingSourceStats"
   )
   interface Builder extends RTCRtpContributingSourceStats {
     @JsOverlay

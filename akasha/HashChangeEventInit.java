@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "HashChangeEventInit"
 )
 public interface HashChangeEventInit extends EventInit {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface HashChangeEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "HashChangeEventInit"
   )
   interface Builder extends HashChangeEventInit {
     @JsOverlay

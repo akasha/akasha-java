@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGAnimatedString"
 )
-public class SVGAnimatedString {
+public class SVGAnimatedString extends JsObject {
   /**
    * BaseVal gets or sets the base value of the given attribute before any animations are applied.The base value of the given attribute before applying any animations. Setter throws DOMException.
    *

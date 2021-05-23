@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCTrackEventInit"
 )
 public interface RTCTrackEventInit extends EventInit {
   @JsOverlay
@@ -125,7 +125,7 @@ public interface RTCTrackEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCTrackEventInit"
   )
   interface Builder extends RTCTrackEventInit {
     /**

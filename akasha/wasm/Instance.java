@@ -1,5 +1,6 @@
 package akasha.wasm;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,8 +19,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly.Instance"
 )
-public class Instance {
-  public Instance(@Nonnull final Module module, @Nonnull final Object importObject) {
+public class Instance extends JsObject {
+  public Instance(@Nonnull final Module module, @Nonnull final JsObject importObject) {
   }
 
   public Instance(@Nonnull final Module module) {
@@ -34,5 +35,5 @@ public class Instance {
       name = "exports"
   )
   @Nonnull
-  public native Object exports();
+  public native JsObject exports();
 }

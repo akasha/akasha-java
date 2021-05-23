@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Number"
 )
-public class JsNumber {
+public class JsNumber extends JsObject {
   /**
    * The Number.EPSILON property represents the difference between 1 and the smallest floating point number greater than 1.
    *

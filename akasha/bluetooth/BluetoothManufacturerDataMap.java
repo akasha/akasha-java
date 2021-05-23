@@ -1,7 +1,9 @@
 package akasha.bluetooth;
 
 import akasha.core.DataView;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -19,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "BluetoothManufacturerDataMap"
 )
-public class BluetoothManufacturerDataMap {
+public class BluetoothManufacturerDataMap extends JsObject implements JsIterable<BluetoothManufacturerDataMap.Entry> {
   protected BluetoothManufacturerDataMap() {
   }
 

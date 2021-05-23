@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ClipboardPermissionDescriptor"
 )
 public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ClipboardPermissionDescriptor"
   )
   interface Builder extends ClipboardPermissionDescriptor {
     @JsOverlay

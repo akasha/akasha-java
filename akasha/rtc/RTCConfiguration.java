@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCConfiguration"
 )
 public interface RTCConfiguration {
   @JsOverlay
@@ -168,7 +168,7 @@ public interface RTCConfiguration {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCConfiguration"
   )
   interface Builder extends RTCConfiguration {
     /**

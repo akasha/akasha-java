@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "DataTransferItemList"
 )
-public class DataTransferItemList {
+public class DataTransferItemList extends JsObject {
   protected DataTransferItemList() {
   }
 

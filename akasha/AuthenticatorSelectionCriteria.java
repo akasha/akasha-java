@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AuthenticatorSelectionCriteria"
 )
 public interface AuthenticatorSelectionCriteria {
   @JsOverlay
@@ -52,7 +52,7 @@ public interface AuthenticatorSelectionCriteria {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AuthenticatorSelectionCriteria"
   )
   interface Builder extends AuthenticatorSelectionCriteria {
     @JsOverlay

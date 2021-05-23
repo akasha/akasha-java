@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,9 +18,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_debug_shaders"
 )
-public class WEBGL_debug_shaders implements WebGLCommonExtension {
+public class WEBGL_debug_shaders extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final String NAME = "WEBGL_debug_shaders";
 

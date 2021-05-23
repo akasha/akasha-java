@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TouchInit"
 )
 public interface TouchInit {
   @JsOverlay
@@ -148,7 +148,7 @@ public interface TouchInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TouchInit"
   )
   interface Builder extends TouchInit {
     @JsOverlay

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCDataChannelEventInit"
 )
 public interface RTCDataChannelEventInit extends EventInit {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface RTCDataChannelEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCDataChannelEventInit"
   )
   interface Builder extends RTCDataChannelEventInit {
     @JsOverlay

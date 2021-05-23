@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EcdhKeyDeriveParams"
 )
 public interface EcdhKeyDeriveParams extends Algorithm {
   @JsOverlay
@@ -47,7 +47,7 @@ public interface EcdhKeyDeriveParams extends Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EcdhKeyDeriveParams"
   )
   interface Builder extends EcdhKeyDeriveParams {
     @JsOverlay

@@ -1,5 +1,6 @@
 package akasha.perf;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "PerformanceNavigation"
 )
-public class PerformanceNavigation {
+public class PerformanceNavigation extends JsObject {
   @JsOverlay
   public static final int TYPE_BACK_FORWARD = 2;
 
@@ -59,5 +60,5 @@ public class PerformanceNavigation {
   public native int type();
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 }

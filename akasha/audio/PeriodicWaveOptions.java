@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PeriodicWaveOptions"
 )
 public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   @JsOverlay
@@ -53,7 +53,7 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PeriodicWaveOptions"
   )
   interface Builder extends PeriodicWaveOptions {
     @JsOverlay

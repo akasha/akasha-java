@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AnimationTimeline"
 )
-public class AnimationTimeline {
+public class AnimationTimeline extends JsObject {
   protected AnimationTimeline() {
   }
 

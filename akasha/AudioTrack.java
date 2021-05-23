@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.media.SourceBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AudioTrack"
 )
-public class AudioTrack {
+public class AudioTrack extends JsObject {
   /**
    * The AudioTrack property enabled specifies whether or not the described audio track is currently enabled for use. If the track is disabled by setting enabled to false, the track is muted and does not produce audio.
    *

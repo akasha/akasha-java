@@ -1,6 +1,7 @@
 package akasha.wasm;
 
 import akasha.Function;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly.Table"
 )
-public class Table {
+public class Table extends JsObject {
   public Table(@Nonnull final TableDescriptor descriptor) {
   }
 

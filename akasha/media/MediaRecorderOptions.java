@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaRecorderOptions"
 )
 public interface MediaRecorderOptions {
   @JsOverlay
@@ -67,7 +67,7 @@ public interface MediaRecorderOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaRecorderOptions"
   )
   interface Builder extends MediaRecorderOptions {
     @JsOverlay

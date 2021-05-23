@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "NodeIterator"
 )
-public class NodeIterator {
+public class NodeIterator extends JsObject {
   protected NodeIterator() {
   }
 

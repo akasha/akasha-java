@@ -1,6 +1,8 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -24,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "URLSearchParams"
 )
-public class URLSearchParams {
+public class URLSearchParams extends JsObject implements JsIterable<URLSearchParams.Entry> {
   /**
    * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
    *

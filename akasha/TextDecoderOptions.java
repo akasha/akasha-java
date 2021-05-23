@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TextDecoderOptions"
 )
 public interface TextDecoderOptions {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface TextDecoderOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TextDecoderOptions"
   )
   interface Builder extends TextDecoderOptions {
     @JsOverlay

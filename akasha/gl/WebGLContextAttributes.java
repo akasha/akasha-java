@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WebGLContextAttributes"
 )
 public interface WebGLContextAttributes {
   @JsOverlay
@@ -207,7 +207,7 @@ public interface WebGLContextAttributes {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WebGLContextAttributes"
   )
   interface Builder extends WebGLContextAttributes {
     /**

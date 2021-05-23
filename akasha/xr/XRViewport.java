@@ -1,5 +1,6 @@
 package akasha.xr;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRViewport"
 )
-public class XRViewport {
+public class XRViewport extends JsObject {
   protected XRViewport() {
   }
 

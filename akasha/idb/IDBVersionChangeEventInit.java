@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IDBVersionChangeEventInit"
 )
 public interface IDBVersionChangeEventInit extends EventInit {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface IDBVersionChangeEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IDBVersionChangeEventInit"
   )
   interface Builder extends IDBVersionChangeEventInit {
     @JsOverlay

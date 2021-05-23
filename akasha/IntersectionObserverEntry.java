@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "IntersectionObserverEntry"
 )
-public class IntersectionObserverEntry {
+public class IntersectionObserverEntry extends JsObject {
   public IntersectionObserverEntry(
       @Nonnull final IntersectionObserverEntryInit intersectionObserverEntryInit) {
   }

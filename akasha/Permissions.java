@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Permissions"
 )
-public class Permissions {
+public class Permissions extends JsObject {
   protected Permissions() {
   }
 
@@ -28,5 +29,5 @@ public class Permissions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions/query">Permissions.query - MDN</a>
    */
   @Nonnull
-  public native Promise<PermissionStatus> query(@Nonnull Object permissionDesc);
+  public native Promise<PermissionStatus> query(@Nonnull JsObject permissionDesc);
 }

@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DOMRectReadOnly"
 )
-public class DOMRectReadOnly {
+public class DOMRectReadOnly extends JsObject {
   /**
    * The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.
    *
@@ -165,5 +166,5 @@ public class DOMRectReadOnly {
   public static native DOMRectReadOnly fromRect();
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 }

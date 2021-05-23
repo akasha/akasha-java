@@ -12,7 +12,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "HTMLOrSVGScriptElement"
 )
 public interface HTMLOrSVGScriptElement {
   @JsOverlay

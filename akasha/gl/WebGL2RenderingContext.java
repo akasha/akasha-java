@@ -5,6 +5,7 @@ import akasha.core.ArrayBufferView;
 import akasha.core.BufferSource;
 import akasha.core.Float32Array;
 import akasha.core.Int32Array;
+import akasha.core.JsObject;
 import akasha.core.Uint32Array;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
@@ -30,7 +31,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "WebGL2RenderingContext"
 )
-public class WebGL2RenderingContext implements RenderingContext {
+public class WebGL2RenderingContext extends JsObject implements RenderingContext {
   @JsOverlay
   public static final int ACTIVE_ATTRIBUTES = 0x8B89;
 

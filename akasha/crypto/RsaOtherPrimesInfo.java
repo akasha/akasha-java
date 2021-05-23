@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RsaOtherPrimesInfo"
 )
 public interface RsaOtherPrimesInfo {
   @JsOverlay
@@ -50,7 +50,7 @@ public interface RsaOtherPrimesInfo {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RsaOtherPrimesInfo"
   )
   interface Builder extends RsaOtherPrimesInfo {
     @JsOverlay

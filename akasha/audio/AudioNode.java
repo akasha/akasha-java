@@ -1,8 +1,11 @@
 package akasha.audio;
 
+import akasha.AudioNodeOrUndefinedUnion;
 import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -85,15 +88,12 @@ public class AudioNode extends EventTarget {
   )
   public native int numberOfOutputs();
 
-  /**
-   * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect">AudioNode.connect - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
-   */
+  @JsMethod(
+      name = "connect"
+  )
   @Nonnull
-  public native AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input);
+  public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode, int output,
+      int input);
 
   /**
    * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
@@ -102,18 +102,17 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
+  @JsOverlay
   @Nonnull
-  public native AudioNode connect(@Nonnull AudioNode destinationNode, int output);
+  public final AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input) {
+    return _connect( destinationNode, output, input ).asAudioNode();
+  }
 
-  /**
-   * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect">AudioNode.connect - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
-   */
+  @JsMethod(
+      name = "connect"
+  )
   @Nonnull
-  public native AudioNode connect(@Nonnull AudioNode destinationNode);
+  public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode, int output);
 
   /**
    * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
@@ -122,7 +121,17 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
-  public native void connect(@Nonnull AudioParam destinationParam, int output);
+  @JsOverlay
+  @Nonnull
+  public final AudioNode connect(@Nonnull AudioNode destinationNode, int output) {
+    return _connect( destinationNode, output ).asAudioNode();
+  }
+
+  @JsMethod(
+      name = "connect"
+  )
+  @Nonnull
+  public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode);
 
   /**
    * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
@@ -131,7 +140,48 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
-  public native void connect(@Nonnull AudioParam destinationParam);
+  @JsOverlay
+  @Nonnull
+  public final AudioNode connect(@Nonnull AudioNode destinationNode) {
+    return _connect( destinationNode ).asAudioNode();
+  }
+
+  @JsMethod(
+      name = "connect"
+  )
+  @Nonnull
+  public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioParam destinationParam,
+      int output);
+
+  /**
+   * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect">AudioNode.connect - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
+   */
+  @JsOverlay
+  public final void connect(@Nonnull AudioParam destinationParam, int output) {
+    _connect( destinationParam, output );
+  }
+
+  @JsMethod(
+      name = "connect"
+  )
+  @Nonnull
+  public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioParam destinationParam);
+
+  /**
+   * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect">AudioNode.connect - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
+   */
+  @JsOverlay
+  public final void connect(@Nonnull AudioParam destinationParam) {
+    _connect( destinationParam );
+  }
 
   /**
    * undefined

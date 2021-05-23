@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WatchAdvertisementsOptions"
 )
 public interface WatchAdvertisementsOptions {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface WatchAdvertisementsOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WatchAdvertisementsOptions"
   )
   interface Builder extends WatchAdvertisementsOptions {
     @JsOverlay

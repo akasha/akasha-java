@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PublicKeyCredentialCreationOptions"
 )
 public interface PublicKeyCredentialCreationOptions {
   @JsOverlay
@@ -261,7 +261,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PublicKeyCredentialCreationOptions"
   )
   interface Builder extends PublicKeyCredentialCreationOptions {
     /**

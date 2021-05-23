@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DataTransfer"
 )
-public class DataTransfer {
+public class DataTransfer extends JsObject {
   /**
    * The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur.
    *

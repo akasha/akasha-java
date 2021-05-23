@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaTrackSettings"
 )
 public interface MediaTrackSettings {
   @JsOverlay
@@ -376,7 +376,7 @@ public interface MediaTrackSettings {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaTrackSettings"
   )
   interface Builder extends MediaTrackSettings {
     /**

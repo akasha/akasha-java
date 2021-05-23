@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_float_blend"
 )
-public class EXT_float_blend implements WebGLCommonExtension {
+public class EXT_float_blend extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final String NAME = "EXT_float_blend";
 

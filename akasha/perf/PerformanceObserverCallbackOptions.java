@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PerformanceObserverCallbackOptions"
 )
 public interface PerformanceObserverCallbackOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface PerformanceObserverCallbackOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PerformanceObserverCallbackOptions"
   )
   interface Builder extends PerformanceObserverCallbackOptions {
     @JsOverlay

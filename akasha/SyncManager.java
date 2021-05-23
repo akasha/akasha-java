@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SyncManager"
 )
-public class SyncManager {
+public class SyncManager extends JsObject {
   protected SyncManager() {
   }
 

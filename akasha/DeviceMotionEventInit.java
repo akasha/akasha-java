@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DeviceMotionEventInit"
 )
 public interface DeviceMotionEventInit extends EventInit {
   @JsOverlay
@@ -59,7 +59,7 @@ public interface DeviceMotionEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DeviceMotionEventInit"
   )
   interface Builder extends DeviceMotionEventInit {
     @JsOverlay

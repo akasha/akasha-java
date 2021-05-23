@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConstrainULongRange"
 )
 public interface ConstrainULongRange extends ULongRange {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface ConstrainULongRange extends ULongRange {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConstrainULongRange"
   )
   interface Builder extends ConstrainULongRange {
     @JsOverlay

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ResponseInit"
 )
 public interface ResponseInit {
   @JsOverlay
@@ -67,7 +67,7 @@ public interface ResponseInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ResponseInit"
   )
   interface Builder extends ResponseInit {
     @JsOverlay

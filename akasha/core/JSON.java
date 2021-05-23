@@ -22,7 +22,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "JSON"
 )
-public class JSON {
+public class JSON extends JsObject {
   protected JSON() {
   }
 

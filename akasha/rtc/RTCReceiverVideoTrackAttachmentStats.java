@@ -12,7 +12,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCReceiverVideoTrackAttachmentStats"
 )
 public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverStats {
   @JsOverlay
@@ -26,7 +26,7 @@ public interface RTCReceiverVideoTrackAttachmentStats extends RTCVideoReceiverSt
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCReceiverVideoTrackAttachmentStats"
   )
   interface Builder extends RTCReceiverVideoTrackAttachmentStats {
     @JsOverlay

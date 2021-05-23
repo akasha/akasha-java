@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import akasha.media.MediaStream;
 import akasha.media.MediaStreamTrack;
 import akasha.promise.Promise;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCRtpSender"
 )
-public class RTCRtpSender {
+public class RTCRtpSender extends JsObject {
   protected RTCRtpSender() {
   }
 

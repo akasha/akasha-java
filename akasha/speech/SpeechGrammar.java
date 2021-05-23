@@ -1,5 +1,6 @@
 package akasha.speech;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechGrammar"
 )
-public class SpeechGrammar {
+public class SpeechGrammar extends JsObject {
   /**
    * The src property of the SpeechGrammar interface sets and returns a string containing the grammar from within in the SpeechGrammar object.
    *

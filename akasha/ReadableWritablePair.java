@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ReadableWritablePair"
 )
 public interface ReadableWritablePair {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface ReadableWritablePair {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ReadableWritablePair"
   )
   interface Builder extends ReadableWritablePair {
     @JsOverlay

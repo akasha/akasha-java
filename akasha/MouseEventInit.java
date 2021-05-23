@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MouseEventInit"
 )
 public interface MouseEventInit extends EventModifierInit {
   @JsOverlay
@@ -100,7 +100,7 @@ public interface MouseEventInit extends EventModifierInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MouseEventInit"
   )
   interface Builder extends MouseEventInit {
     @JsOverlay

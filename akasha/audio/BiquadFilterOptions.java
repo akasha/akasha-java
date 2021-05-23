@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BiquadFilterOptions"
 )
 public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsOverlay
@@ -67,7 +67,7 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BiquadFilterOptions"
   )
   interface Builder extends BiquadFilterOptions {
     @JsOverlay

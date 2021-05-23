@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TableDescriptor"
 )
 public interface TableDescriptor {
   @JsOverlay
@@ -52,7 +52,7 @@ public interface TableDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TableDescriptor"
   )
   interface Builder extends TableDescriptor {
     @JsOverlay

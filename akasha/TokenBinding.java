@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TokenBinding"
 )
 public interface TokenBinding {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface TokenBinding {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TokenBinding"
   )
   interface Builder extends TokenBinding {
     @JsOverlay

@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "MediaError"
 )
-public class MediaError {
+public class MediaError extends JsObject {
   @JsOverlay
   public static final int MEDIA_ERR_ABORTED = 1;
 

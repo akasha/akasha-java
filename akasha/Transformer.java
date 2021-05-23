@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Transformer"
 )
 public interface Transformer {
   @JsOverlay
@@ -71,7 +71,7 @@ public interface Transformer {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Transformer"
   )
   interface Builder extends Transformer {
     @JsOverlay

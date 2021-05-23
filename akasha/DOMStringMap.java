@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -20,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "DOMStringMap"
 )
-public class DOMStringMap {
+public class DOMStringMap extends JsObject {
   protected DOMStringMap() {
   }
 

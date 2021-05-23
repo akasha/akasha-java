@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RsaPssParams"
 )
 public interface RsaPssParams extends Algorithm {
   @JsOverlay
@@ -46,7 +46,7 @@ public interface RsaPssParams extends Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RsaPssParams"
   )
   interface Builder extends RsaPssParams {
     @JsOverlay

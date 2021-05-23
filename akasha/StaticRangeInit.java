@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "StaticRangeInit"
 )
 public interface StaticRangeInit {
   @JsOverlay
@@ -61,7 +61,7 @@ public interface StaticRangeInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "StaticRangeInit"
   )
   interface Builder extends StaticRangeInit {
     @JsOverlay

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCDTMFToneChangeEventInit"
 )
 public interface RTCDTMFToneChangeEventInit extends EventInit {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface RTCDTMFToneChangeEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCDTMFToneChangeEventInit"
   )
   interface Builder extends RTCDTMFToneChangeEventInit {
     @JsOverlay

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioTimestamp"
 )
 public interface AudioTimestamp {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface AudioTimestamp {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AudioTimestamp"
   )
   interface Builder extends AudioTimestamp {
     @JsOverlay

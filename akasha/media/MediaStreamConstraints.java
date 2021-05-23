@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaStreamConstraints"
 )
 public interface MediaStreamConstraints {
   @JsOverlay
@@ -80,7 +80,7 @@ public interface MediaStreamConstraints {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaStreamConstraints"
   )
   interface Builder extends MediaStreamConstraints {
     @JsOverlay

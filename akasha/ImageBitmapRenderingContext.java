@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmapRenderingContext"
 )
-public class ImageBitmapRenderingContext implements RenderingContext {
+public class ImageBitmapRenderingContext extends JsObject implements RenderingContext {
   protected ImageBitmapRenderingContext() {
   }
 

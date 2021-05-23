@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaKeyMessageEventInit"
 )
 public interface MediaKeyMessageEventInit extends EventInit {
   @JsOverlay
@@ -47,7 +47,7 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaKeyMessageEventInit"
   )
   interface Builder extends MediaKeyMessageEventInit {
     @JsOverlay

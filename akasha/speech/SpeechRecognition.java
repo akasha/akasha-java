@@ -23,7 +23,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechRecognition"
 )
 public class SpeechRecognition extends EventTarget {
   /**

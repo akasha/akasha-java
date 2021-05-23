@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGLength"
 )
-public class SVGLength {
+public class SVGLength extends JsObject {
   @JsOverlay
   public static final int SVG_LENGTHTYPE_CM = 6;
 

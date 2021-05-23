@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.clipboard.ClipboardEventHandler;
 import akasha.clipboard.ClipboardEventListener;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import akasha.svg.SVGSVGElement;
@@ -9,6 +10,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -1689,45 +1691,82 @@ public class Document extends Node {
    */
   public native boolean hasFocus();
 
-  /**
-   * The Document.open() method opens a document for writing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
-   */
-  @Nonnull
-  public native Document open(@Nonnull String unused1, @Nonnull String unused2);
-
-  /**
-   * The Document.open() method opens a document for writing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
-   */
-  @Nonnull
-  public native Document open(@Nonnull String unused1);
-
-  /**
-   * The Document.open() method opens a document for writing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
-   */
-  @Nonnull
-  public native Document open();
-
-  /**
-   * The Document.open() method opens a document for writing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
-   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
-   */
+  @JsMethod(
+      name = "open"
+  )
   @Nullable
-  public native Window open(@Nonnull String url, @Nonnull String name, @Nonnull String features);
+  public native DocumentOrWindowProxyUnion _open(@Nonnull String unused1, @Nonnull String unused2);
+
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   */
+  @JsOverlay
+  @Nonnull
+  public final Document open(@Nonnull String unused1, @Nonnull String unused2) {
+    return _open( unused1, unused2 ).asDocument();
+  }
+
+  @JsMethod(
+      name = "open"
+  )
+  @Nullable
+  public native DocumentOrWindowProxyUnion _open(@Nonnull String unused1);
+
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   */
+  @JsOverlay
+  @Nonnull
+  public final Document open(@Nonnull String unused1) {
+    return _open( unused1 ).asDocument();
+  }
+
+  @JsMethod(
+      name = "open"
+  )
+  @Nullable
+  public native DocumentOrWindowProxyUnion _open();
+
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   */
+  @JsOverlay
+  @Nonnull
+  public final Document open() {
+    return _open().asDocument();
+  }
+
+  @JsMethod(
+      name = "open"
+  )
+  @Nullable
+  public native DocumentOrWindowProxyUnion _open(@Nonnull String url, @Nonnull String name,
+      @Nonnull String features);
+
+  /**
+   * The Document.open() method opens a document for writing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/open">Document.open - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
+   */
+  @JsOverlay
+  @Nullable
+  public final Window open(@Nonnull String url, @Nonnull String name, @Nonnull String features) {
+    return _open( url, name, features ).asWindowProxy();
+  }
 
   /**
    * The Document.queryCommandEnabled() method reports whether or not the specified editor command is enabled by the browser.
@@ -1772,8 +1811,8 @@ public class Document extends Node {
 
   @JsOverlay
   @Nonnull
-  public final Object get(@Nonnull final String name) {
-    return Js.<JsPropertyMap<Object>>cast( this ).get( name );
+  public final JsObject get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<JsObject>>cast( this ).get( name );
   }
 
   /**

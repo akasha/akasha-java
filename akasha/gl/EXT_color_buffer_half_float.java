@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_color_buffer_half_float"
 )
-public class EXT_color_buffer_half_float implements WebGLCommonExtension {
+public class EXT_color_buffer_half_float extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT = 0x8211;
 

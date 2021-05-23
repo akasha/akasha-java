@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "GenerateTestReportParameters"
 )
 public interface GenerateTestReportParameters {
   @JsOverlay
@@ -43,7 +43,7 @@ public interface GenerateTestReportParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "GenerateTestReportParameters"
   )
   interface Builder extends GenerateTestReportParameters {
     @JsOverlay

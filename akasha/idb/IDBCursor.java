@@ -1,5 +1,6 @@
 package akasha.idb;
 
+import akasha.core.JsObject;
 import akasha.indexeddb.IDBObjectStoreOrIDBIndexUnion;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -24,7 +25,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "IDBCursor"
 )
-public class IDBCursor {
+public class IDBCursor extends JsObject {
   protected IDBCursor() {
   }
 

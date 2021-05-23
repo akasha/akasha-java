@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioNodeOptions"
 )
 public interface AudioNodeOptions {
   @JsOverlay
@@ -64,7 +64,7 @@ public interface AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AudioNodeOptions"
   )
   interface Builder extends AudioNodeOptions {
     @JsOverlay

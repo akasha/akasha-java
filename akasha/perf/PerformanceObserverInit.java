@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PerformanceObserverInit"
 )
 public interface PerformanceObserverInit {
   @JsOverlay
@@ -56,7 +56,7 @@ public interface PerformanceObserverInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PerformanceObserverInit"
   )
   interface Builder extends PerformanceObserverInit {
     @JsOverlay

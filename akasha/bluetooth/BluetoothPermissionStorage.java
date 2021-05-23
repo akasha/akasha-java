@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BluetoothPermissionStorage"
 )
 public interface BluetoothPermissionStorage {
   @JsOverlay
@@ -47,7 +47,7 @@ public interface BluetoothPermissionStorage {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BluetoothPermissionStorage"
   )
   interface Builder extends BluetoothPermissionStorage {
     @JsOverlay

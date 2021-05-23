@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IDBDatabaseInfo"
 )
 public interface IDBDatabaseInfo {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface IDBDatabaseInfo {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IDBDatabaseInfo"
   )
   interface Builder extends IDBDatabaseInfo {
     @JsOverlay

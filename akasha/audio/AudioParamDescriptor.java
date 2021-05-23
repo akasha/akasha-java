@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioParamDescriptor"
 )
 public interface AudioParamDescriptor {
   @JsOverlay
@@ -80,7 +80,7 @@ public interface AudioParamDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AudioParamDescriptor"
   )
   interface Builder extends AudioParamDescriptor {
     @JsOverlay

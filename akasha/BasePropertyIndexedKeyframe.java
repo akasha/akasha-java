@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BasePropertyIndexedKeyframe"
 )
 public interface BasePropertyIndexedKeyframe {
   @JsOverlay
@@ -99,7 +99,7 @@ public interface BasePropertyIndexedKeyframe {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BasePropertyIndexedKeyframe"
   )
   interface Builder extends BasePropertyIndexedKeyframe {
     @JsOverlay

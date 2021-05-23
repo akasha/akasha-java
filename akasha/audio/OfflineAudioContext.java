@@ -22,7 +22,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OfflineAudioContext"
 )
 public class OfflineAudioContext extends BaseAudioContext {
   /**

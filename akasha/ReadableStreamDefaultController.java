@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
@@ -13,7 +14,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStreamDefaultController"
 )
-public class ReadableStreamDefaultController {
+public class ReadableStreamDefaultController extends JsObject {
   protected ReadableStreamDefaultController() {
   }
 

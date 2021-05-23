@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Date"
 )
-public class JsDate {
+public class JsDate extends JsObject {
   public JsDate() {
   }
 
@@ -49,63 +49,6 @@ public class JsDate {
 
   public JsDate(final int year, final int month) {
   }
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year, int month, int date, int hours, int minute, int second,
-      int ms);
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year, int month, int date, int hours, int minute, int second);
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year, int month, int date, int hours, int minute);
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year, int month, int date, int hours);
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year, int month, int date);
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year, int month);
-
-  /**
-   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
-   */
-  public static native double UTC(int year);
 
   /**
    * The static Date.now() method returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
@@ -615,4 +558,53 @@ public class JsDate {
   )
   @Nonnull
   public native String toString_();
+
+  /**
+   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
+   */
+  public static native double UTC(int year, int month, int date, int hours, int minute, int second,
+      int ms);
+
+  /**
+   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
+   */
+  public static native double UTC(int year, int month, int date, int hours, int minute, int second);
+
+  /**
+   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
+   */
+  public static native double UTC(int year, int month, int date, int hours, int minute);
+
+  /**
+   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
+   */
+  public static native double UTC(int year, int month, int date, int hours);
+
+  /**
+   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
+   */
+  public static native double UTC(int year, int month, int date);
+
+  /**
+   * The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC">Date.UTC - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-date.utc">Date.UTC - ECMAScript (ECMA-262)</a>
+   */
+  public static native double UTC(int year, int month);
 }

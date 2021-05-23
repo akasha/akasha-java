@@ -2,6 +2,7 @@ package akasha.wasm;
 
 import akasha.Response;
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -42,7 +43,7 @@ public final class WebAssembly {
    */
   @Nonnull
   public static native Promise<WebAssemblyInstantiatedSource> instantiate(
-      @Nonnull BufferSource bytes, @Nonnull Object importObject);
+      @Nonnull BufferSource bytes, @Nonnull JsObject importObject);
 
   /**
    * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
@@ -62,7 +63,7 @@ public final class WebAssembly {
    */
   @Nonnull
   public static native Promise<Instance> instantiate(@Nonnull Module moduleObject,
-      @Nonnull Object importObject);
+      @Nonnull JsObject importObject);
 
   /**
    * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
@@ -99,7 +100,7 @@ public final class WebAssembly {
    */
   @Nonnull
   public static native Promise<WebAssemblyInstantiatedSource> instantiateStreaming(
-      @Nonnull Promise<Response> source, @Nonnull Object importObject);
+      @Nonnull Promise<Response> source, @Nonnull JsObject importObject);
 
   /**
    * The WebAssembly.instantiateStreaming() function compiles and instantiates a WebAssembly module directly from a streamed underlying source. This is the most efficient, optimized way to load wasm code.

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SVGBoundingBoxOptions"
 )
 public interface SVGBoundingBoxOptions {
   @JsOverlay
@@ -58,7 +58,7 @@ public interface SVGBoundingBoxOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "SVGBoundingBoxOptions"
   )
   interface Builder extends SVGBoundingBoxOptions {
     @JsOverlay

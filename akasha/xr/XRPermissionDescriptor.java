@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "XRPermissionDescriptor"
 )
 public interface XRPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
@@ -125,7 +125,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "XRPermissionDescriptor"
   )
   interface Builder extends XRPermissionDescriptor {
     /**

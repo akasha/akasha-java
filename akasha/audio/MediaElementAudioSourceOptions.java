@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaElementAudioSourceOptions"
 )
 public interface MediaElementAudioSourceOptions {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface MediaElementAudioSourceOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaElementAudioSourceOptions"
   )
   interface Builder extends MediaElementAudioSourceOptions {
     @JsOverlay

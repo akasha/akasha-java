@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Event"
 )
-public class Event {
+public class Event extends JsObject {
   @JsOverlay
   public static final int AT_TARGET = 2;
 

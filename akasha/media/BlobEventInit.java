@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BlobEventInit"
 )
 public interface BlobEventInit {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface BlobEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BlobEventInit"
   )
   interface Builder extends BlobEventInit {
     @JsOverlay

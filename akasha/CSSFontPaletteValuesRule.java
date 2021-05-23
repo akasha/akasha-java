@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CSSFontPaletteValuesRule"
 )
-public class CSSFontPaletteValuesRule extends CSSRule {
+public class CSSFontPaletteValuesRule extends CSSRule implements JsIterable<CSSFontPaletteValuesRule.Entry> {
   @Nonnull
   public String basePalette;
 

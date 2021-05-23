@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "UnderlyingSink"
 )
 public interface UnderlyingSink {
   @JsOverlay
@@ -70,7 +70,7 @@ public interface UnderlyingSink {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "UnderlyingSink"
   )
   interface Builder extends UnderlyingSink {
     @JsOverlay

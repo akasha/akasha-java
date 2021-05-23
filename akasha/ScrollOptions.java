@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ScrollOptions"
 )
 public interface ScrollOptions {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface ScrollOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ScrollOptions"
   )
   interface Builder extends ScrollOptions {
     @JsOverlay

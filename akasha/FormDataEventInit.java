@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FormDataEventInit"
 )
 public interface FormDataEventInit extends EventInit {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface FormDataEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FormDataEventInit"
   )
   interface Builder extends FormDataEventInit {
     @JsOverlay

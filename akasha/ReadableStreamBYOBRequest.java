@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.ArrayBufferView;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -14,7 +15,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStreamBYOBRequest"
 )
-public class ReadableStreamBYOBRequest {
+public class ReadableStreamBYOBRequest extends JsObject {
   protected ReadableStreamBYOBRequest() {
   }
 

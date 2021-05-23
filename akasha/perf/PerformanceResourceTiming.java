@@ -1,5 +1,6 @@
 package akasha.perf;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -218,5 +219,5 @@ public class PerformanceResourceTiming extends PerformanceEntry {
    * @see <a href="https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-tojson">toJSON - Resource Timing Level 2</a>
    */
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 }

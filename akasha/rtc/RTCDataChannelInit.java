@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCDataChannelInit"
 )
 public interface RTCDataChannelInit {
   @JsOverlay
@@ -83,7 +83,7 @@ public interface RTCDataChannelInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCDataChannelInit"
   )
   interface Builder extends RTCDataChannelInit {
     @JsOverlay

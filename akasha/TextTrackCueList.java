@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "TextTrackCueList"
 )
-public class TextTrackCueList {
+public class TextTrackCueList extends JsObject {
   protected TextTrackCueList() {
   }
 

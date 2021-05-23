@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.core.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "TextEncoder"
 )
-public class TextEncoder {
+public class TextEncoder extends JsObject {
   /**
    * The TextEncoder() constructor returns a newly created utf-8 TextEncoder object.
    *

@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.media.MediaSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "URL"
 )
-public class URL {
+public class URL extends JsObject {
   /**
    * The hash property of the URL interface is a USVString containing a '#' followed by the fragment identifier of the URL.
    *

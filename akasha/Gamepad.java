@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Gamepad"
 )
-public class Gamepad {
+public class Gamepad extends JsObject {
   protected Gamepad() {
   }
 

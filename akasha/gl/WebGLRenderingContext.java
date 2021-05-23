@@ -5,6 +5,7 @@ import akasha.core.ArrayBufferView;
 import akasha.core.BufferSource;
 import akasha.core.Float32Array;
 import akasha.core.Int32Array;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.HasNoSideEffects;
@@ -29,7 +30,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "WebGLRenderingContext"
 )
-public class WebGLRenderingContext implements RenderingContext {
+public class WebGLRenderingContext extends JsObject implements RenderingContext {
   @JsOverlay
   public static final int ACTIVE_ATTRIBUTES = 0x8B89;
 
@@ -1718,7 +1719,7 @@ public class WebGLRenderingContext implements RenderingContext {
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getExtension - WebGL 1.0</a>
    */
   @Nullable
-  public native Object getExtension(@Nonnull String name);
+  public native JsObject getExtension(@Nonnull String name);
 
   /**
    * The WebGLRenderingContext.getFramebufferAttachmentParameter() method of the WebGL API returns information about a framebuffer's attachment.

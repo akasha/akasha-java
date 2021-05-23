@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PushSubscriptionChangeEventInit"
 )
 public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PushSubscriptionChangeEventInit"
   )
   interface Builder extends PushSubscriptionChangeEventInit {
     @JsOverlay

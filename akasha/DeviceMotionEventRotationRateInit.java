@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DeviceMotionEventRotationRateInit"
 )
 public interface DeviceMotionEventRotationRateInit {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface DeviceMotionEventRotationRateInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DeviceMotionEventRotationRateInit"
   )
   interface Builder extends DeviceMotionEventRotationRateInit {
     @JsOverlay

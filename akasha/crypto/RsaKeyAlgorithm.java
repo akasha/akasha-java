@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RsaKeyAlgorithm"
 )
 public interface RsaKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface RsaKeyAlgorithm extends KeyAlgorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RsaKeyAlgorithm"
   )
   interface Builder extends RsaKeyAlgorithm {
     @JsOverlay

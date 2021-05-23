@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WorkletOptions"
 )
 public interface WorkletOptions {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface WorkletOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WorkletOptions"
   )
   interface Builder extends WorkletOptions {
     @JsOverlay

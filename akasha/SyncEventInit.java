@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SyncEventInit"
 )
 public interface SyncEventInit extends ExtendableEventInit {
   @JsOverlay
@@ -43,7 +43,7 @@ public interface SyncEventInit extends ExtendableEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "SyncEventInit"
   )
   interface Builder extends SyncEventInit {
     @JsOverlay

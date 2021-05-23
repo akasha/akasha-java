@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TextEncoderEncodeIntoResult"
 )
 public interface TextEncoderEncodeIntoResult {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface TextEncoderEncodeIntoResult {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TextEncoderEncodeIntoResult"
   )
   interface Builder extends TextEncoderEncodeIntoResult {
     @JsOverlay

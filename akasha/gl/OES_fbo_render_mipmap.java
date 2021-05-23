@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OES_fbo_render_mipmap"
 )
-public class OES_fbo_render_mipmap implements WebGL1Extension {
+public class OES_fbo_render_mipmap extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final String NAME = "OES_fbo_render_mipmap";
 

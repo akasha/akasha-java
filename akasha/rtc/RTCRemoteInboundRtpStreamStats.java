@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCRemoteInboundRtpStreamStats"
 )
 public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   @JsOverlay
@@ -75,7 +75,7 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCRemoteInboundRtpStreamStats"
   )
   interface Builder extends RTCRemoteInboundRtpStreamStats {
     @JsOverlay

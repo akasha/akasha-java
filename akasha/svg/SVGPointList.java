@@ -1,6 +1,7 @@
 package akasha.svg;
 
 import akasha.DOMPoint;
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,7 +18,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "SVGPointList"
 )
-public class SVGPointList {
+public class SVGPointList extends JsObject {
   protected SVGPointList() {
   }
 

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FocusEventInit"
 )
 public interface FocusEventInit extends UIEventInit {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface FocusEventInit extends UIEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FocusEventInit"
   )
   interface Builder extends FocusEventInit {
     @JsOverlay

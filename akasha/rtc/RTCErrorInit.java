@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCErrorInit"
 )
 public interface RTCErrorInit {
   @JsOverlay
@@ -76,7 +76,7 @@ public interface RTCErrorInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCErrorInit"
   )
   interface Builder extends RTCErrorInit {
     @JsOverlay

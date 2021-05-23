@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaTrackSupportedConstraints"
 )
 public interface MediaTrackSupportedConstraints {
   @JsOverlay
@@ -380,7 +380,7 @@ public interface MediaTrackSupportedConstraints {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaTrackSupportedConstraints"
   )
   interface Builder extends MediaTrackSupportedConstraints {
     /**

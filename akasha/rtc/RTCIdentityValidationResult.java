@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCIdentityValidationResult"
 )
 public interface RTCIdentityValidationResult {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface RTCIdentityValidationResult {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCIdentityValidationResult"
   )
   interface Builder extends RTCIdentityValidationResult {
     @JsOverlay

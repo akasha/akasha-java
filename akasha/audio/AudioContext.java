@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioContext"
 )
 public class AudioContext extends BaseAudioContext {
   /**

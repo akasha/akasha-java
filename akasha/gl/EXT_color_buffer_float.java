@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_color_buffer_float"
 )
-public class EXT_color_buffer_float implements WebGLExtension {
+public class EXT_color_buffer_float extends JsObject implements WebGLExtension {
   @JsOverlay
   public static final String NAME = "EXT_color_buffer_float";
 

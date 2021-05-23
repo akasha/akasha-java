@@ -1,5 +1,6 @@
 package akasha.perf;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "PerformanceObserverEntryList"
 )
-public class PerformanceObserverEntryList {
+public class PerformanceObserverEntryList extends JsObject {
   protected PerformanceObserverEntryList() {
   }
 

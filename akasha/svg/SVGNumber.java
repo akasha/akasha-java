@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGNumber"
 )
-public class SVGNumber {
+public class SVGNumber extends JsObject {
   public float value;
 
   protected SVGNumber() {

@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,9 +18,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_draw_buffers"
 )
-public class WEBGL_draw_buffers implements WebGL1Extension {
+public class WEBGL_draw_buffers extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final int COLOR_ATTACHMENT0_WEBGL = 0x8CE0;
 

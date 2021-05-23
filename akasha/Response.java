@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.core.ArrayBuffer;
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -24,7 +25,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "Response"
 )
-public class Response {
+public class Response extends JsObject {
   /**
    * The Response() constructor creates a new Response object.
    *

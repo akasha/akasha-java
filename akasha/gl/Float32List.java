@@ -13,7 +13,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "Float32List"
 )
 public interface Float32List {
   @JsOverlay

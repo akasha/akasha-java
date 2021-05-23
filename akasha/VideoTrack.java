@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.media.SourceBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "VideoTrack"
 )
-public class VideoTrack {
+public class VideoTrack extends JsObject {
   /**
    * The VideoTrack property selected controls whether or not a particular video track is active.
    *

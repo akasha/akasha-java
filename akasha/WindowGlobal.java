@@ -1,6 +1,8 @@
 package akasha;
 
 import akasha.clipboard.ClipboardEventListener;
+import akasha.core.JsObject;
+import akasha.core.Symbol;
 import akasha.crypto.Crypto;
 import akasha.idb.IDBFactory;
 import akasha.lang.JsArray;
@@ -13,6 +15,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -3749,4 +3752,65 @@ public final class WindowGlobal {
    */
   public static native void removeEventListener(@Nonnull String type,
       @Nullable EventListener callback);
+
+  /**
+   * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
+   */
+  @HasNoSideEffects
+  public static native boolean hasOwnProperty(@Nonnull Symbol prop);
+
+  /**
+   * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
+   */
+  @HasNoSideEffects
+  public static native boolean hasOwnProperty(@Nonnull String prop);
+
+  /**
+   * The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable and is the object's own property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">Object.propertyIsEnumerable - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable">Object.prototype.propertyIsEnumerable - ECMAScript (ECMA-262)</a>
+   */
+  @HasNoSideEffects
+  public static native boolean propertyIsEnumerable(@Nonnull String prop);
+
+  /**
+   * The isPrototypeOf() method checks if an object exists in another object's prototype chain.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf">Object.isPrototypeOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.isprototypeof">Object.prototype.isPrototypeOf - ECMAScript (ECMA-262)</a>
+   */
+  @HasNoSideEffects
+  public static native boolean isPrototypeOf(@Nonnull JsObject obj);
+
+  /**
+   * The valueOf() method returns the primitive value of the specified object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
+   */
+  @JsMethod(
+      name = "valueOf"
+  )
+  @Nullable
+  public static native Any valueOf_();
+
+  /**
+   * The toString() method returns a string representing the object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.toString - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.tostring">Object.prototype.toString - ECMAScript (ECMA-262)</a>
+   */
+  @JsMethod(
+      name = "toString"
+  )
+  @HasNoSideEffects
+  @Nonnull
+  public static native String toString_();
 }

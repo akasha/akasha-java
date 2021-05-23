@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "InputEventInit"
 )
 public interface InputEventInit extends UIEventInit {
   @JsOverlay
@@ -52,7 +52,7 @@ public interface InputEventInit extends UIEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "InputEventInit"
   )
   interface Builder extends InputEventInit {
     @JsOverlay

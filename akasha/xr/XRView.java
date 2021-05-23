@@ -1,6 +1,7 @@
 package akasha.xr;
 
 import akasha.core.Float32Array;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRView"
 )
-public class XRView {
+public class XRView extends JsObject {
   protected XRView() {
   }
 

@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_compressed_texture_etc1"
 )
-public class WEBGL_compressed_texture_etc1 implements WebGLCommonExtension {
+public class WEBGL_compressed_texture_etc1 extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final int COMPRESSED_RGB_ETC1_WEBGL = 0x8D64;
 

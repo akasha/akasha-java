@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "XRReferenceSpaceEventInit"
 )
 public interface XRReferenceSpaceEventInit extends EventInit {
   @JsOverlay
@@ -82,7 +82,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "XRReferenceSpaceEventInit"
   )
   interface Builder extends XRReferenceSpaceEventInit {
     /**

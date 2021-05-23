@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PushEventInit"
 )
 public interface PushEventInit extends ExtendableEventInit {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface PushEventInit extends ExtendableEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PushEventInit"
   )
   interface Builder extends PushEventInit {
     @JsOverlay

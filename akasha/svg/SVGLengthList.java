@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -21,7 +22,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "SVGLengthList"
 )
-public class SVGLengthList {
+public class SVGLengthList extends JsObject {
   protected SVGLengthList() {
   }
 

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PublicKeyCredentialEntity"
 )
 public interface PublicKeyCredentialEntity {
   @JsOverlay
@@ -43,7 +43,7 @@ public interface PublicKeyCredentialEntity {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PublicKeyCredentialEntity"
   )
   interface Builder extends PublicKeyCredentialEntity {
     @JsOverlay

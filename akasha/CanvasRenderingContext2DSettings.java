@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "CanvasRenderingContext2DSettings"
 )
 public interface CanvasRenderingContext2DSettings {
   @JsOverlay
@@ -72,7 +72,7 @@ public interface CanvasRenderingContext2DSettings {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "CanvasRenderingContext2DSettings"
   )
   interface Builder extends CanvasRenderingContext2DSettings {
     /**

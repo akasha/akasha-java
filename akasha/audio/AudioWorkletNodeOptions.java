@@ -1,5 +1,6 @@
 package akasha.audio;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioWorkletNodeOptions"
 )
 public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   @JsOverlay
@@ -69,10 +70,10 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   @JsProperty(
       name = "processorOptions"
   )
-  Object processorOptions();
+  JsObject processorOptions();
 
   @JsProperty
-  void setProcessorOptions(@Nonnull Object processorOptions);
+  void setProcessorOptions(@Nonnull JsObject processorOptions);
 
   /**
    * The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing.
@@ -84,7 +85,7 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AudioWorkletNodeOptions"
   )
   interface Builder extends AudioWorkletNodeOptions {
     @JsOverlay
@@ -124,7 +125,7 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
 
     @JsOverlay
     @Nonnull
-    default Builder processorOptions(@Nonnull final Object processorOptions) {
+    default Builder processorOptions(@Nonnull final JsObject processorOptions) {
       setProcessorOptions( processorOptions );
       return this;
     }

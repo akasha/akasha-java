@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ModuleImportDescriptor"
 )
 public interface ModuleImportDescriptor {
   @JsOverlay
@@ -55,7 +55,7 @@ public interface ModuleImportDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ModuleImportDescriptor"
   )
   interface Builder extends ModuleImportDescriptor {
     @JsOverlay

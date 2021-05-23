@@ -1,6 +1,7 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -16,9 +17,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RegExpGroups"
 )
-public class RegExpGroups {
+public class RegExpGroups extends JsObject implements JsIterable<RegExpGroups.Entry> {
   protected RegExpGroups() {
   }
 

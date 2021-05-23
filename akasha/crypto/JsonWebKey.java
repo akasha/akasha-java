@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "JsonWebKey"
 )
 public interface JsonWebKey {
   @JsOverlay
@@ -181,7 +181,7 @@ public interface JsonWebKey {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "JsonWebKey"
   )
   interface Builder extends JsonWebKey {
     @JsOverlay

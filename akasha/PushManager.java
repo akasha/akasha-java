@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "PushManager"
 )
-public class PushManager {
+public class PushManager extends JsObject {
   protected PushManager() {
   }
 

@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCRtpTransceiver"
 )
-public class RTCRtpTransceiver {
+public class RTCRtpTransceiver extends JsObject {
   /**
    * The RTCRtpTransceiver property direction is a string which indicates the transceiver's preferred directionality.
    *

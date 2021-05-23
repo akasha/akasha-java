@@ -1,5 +1,6 @@
 package akasha.wasm;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly.RuntimeError"
 )
-public class RuntimeError {
+public class RuntimeError extends JsObject {
   protected RuntimeError() {
   }
 }

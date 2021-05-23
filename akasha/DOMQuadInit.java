@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DOMQuadInit"
 )
 public interface DOMQuadInit {
   @JsOverlay
@@ -58,7 +58,7 @@ public interface DOMQuadInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DOMQuadInit"
   )
   interface Builder extends DOMQuadInit {
     @JsOverlay

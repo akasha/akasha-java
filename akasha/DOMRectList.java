@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
@@ -13,7 +14,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DOMRectList"
 )
-public class DOMRectList {
+public class DOMRectList extends JsObject {
   protected DOMRectList() {
   }
 

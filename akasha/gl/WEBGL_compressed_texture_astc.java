@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,9 +18,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_compressed_texture_astc"
 )
-public class WEBGL_compressed_texture_astc implements WebGLCommonExtension {
+public class WEBGL_compressed_texture_astc extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final int COMPRESSED_RGBA_ASTC_10x10_KHR = 0x93BB;
 

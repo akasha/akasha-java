@@ -5,6 +5,7 @@ import akasha.EventHandler;
 import akasha.EventListener;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -98,7 +99,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://www.w3.org/TR/hr-time-2/#dom-performance-tojson">toJSON() serializer - High Resolution Time Level 2</a>
    */
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 
   /**
    * The getEntries() method returns a list of all PerformanceEntry objects for the page. The list's members (entries) can be created by making performance marks or measures (for example by calling the mark() method) at explicit points in time. If you are only interested in performance entries of certain types or that have certain names, see getEntriesByType() and getEntriesByName().

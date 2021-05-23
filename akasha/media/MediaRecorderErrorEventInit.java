@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaRecorderErrorEventInit"
 )
 public interface MediaRecorderErrorEventInit extends EventInit {
   @JsOverlay
@@ -37,7 +37,7 @@ public interface MediaRecorderErrorEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaRecorderErrorEventInit"
   )
   interface Builder extends MediaRecorderErrorEventInit {
     @JsOverlay

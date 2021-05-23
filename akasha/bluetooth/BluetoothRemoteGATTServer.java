@@ -1,5 +1,6 @@
 package akasha.bluetooth;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "BluetoothRemoteGATTServer"
 )
-public class BluetoothRemoteGATTServer {
+public class BluetoothRemoteGATTServer extends JsObject {
   protected BluetoothRemoteGATTServer() {
   }
 

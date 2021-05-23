@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OES_texture_half_float_linear"
 )
-public class OES_texture_half_float_linear implements WebGLCommonExtension {
+public class OES_texture_half_float_linear extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final String NAME = "OES_texture_half_float_linear";
 

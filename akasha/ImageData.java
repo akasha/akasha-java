@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.core.Uint8ClampedArray;
 import akasha.gl.TexImageSource;
 import javax.annotation.Generated;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageData"
 )
-public class ImageData implements TexImageSource {
+public class ImageData extends JsObject implements TexImageSource {
   /**
    * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
    *

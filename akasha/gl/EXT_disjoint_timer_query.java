@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -18,9 +19,9 @@ import jsinterop.base.Any;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_disjoint_timer_query"
 )
-public class EXT_disjoint_timer_query implements WebGL1Extension {
+public class EXT_disjoint_timer_query extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final int CURRENT_QUERY_EXT = 0x8865;
 

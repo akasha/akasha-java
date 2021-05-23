@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReportingObserver"
 )
-public class ReportingObserver {
+public class ReportingObserver extends JsObject {
   /**
    * The ReportingObserver() constructor of the Reporting API creates a new ReportingObserver object instance, which can be used to collect and access reports.
    *

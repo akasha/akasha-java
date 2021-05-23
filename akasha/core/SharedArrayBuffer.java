@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SharedArrayBuffer"
 )
-public class SharedArrayBuffer {
+public class SharedArrayBuffer extends JsObject {
   /**
    * The SharedArrayBuffer() constructor is used to create a SharedArrayBuffer object representing a generic, fixed-length raw binary data buffer, similar to the ArrayBuffer object.
    *
@@ -62,15 +62,4 @@ public class SharedArrayBuffer {
   @HasNoSideEffects
   @Nonnull
   public native SharedArrayBuffer slice(int begin);
-
-  /**
-   * The SharedArrayBuffer.prototype.slice() method returns a new SharedArrayBuffer whose contents are a copy of this SharedArrayBuffer's bytes from begin, inclusive, up to end, exclusive. If either begin or end is negative, it refers to an index from the end of the array, as opposed to from the beginning. This method has the same algorithm as Array.prototype.slice().
-   *
-   * @return A new SharedArrayBuffer containing the extracted elements.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice">SharedArrayBuffer.slice - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.slice - ECMA</a>
-   */
-  @HasNoSideEffects
-  @Nonnull
-  public native SharedArrayBuffer slice();
 }

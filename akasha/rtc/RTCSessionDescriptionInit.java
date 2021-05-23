@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCSessionDescriptionInit"
 )
 public interface RTCSessionDescriptionInit {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface RTCSessionDescriptionInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCSessionDescriptionInit"
   )
   interface Builder extends RTCSessionDescriptionInit {
     @JsOverlay

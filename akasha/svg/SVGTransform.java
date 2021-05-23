@@ -2,6 +2,7 @@ package akasha.svg;
 
 import akasha.DOMMatrix;
 import akasha.DOMMatrixReadOnly;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGTransform"
 )
-public class SVGTransform {
+public class SVGTransform extends JsObject {
   @JsOverlay
   public static final int SVG_TRANSFORM_MATRIX = 1;
 

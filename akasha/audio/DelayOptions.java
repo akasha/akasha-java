@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DelayOptions"
 )
 public interface DelayOptions extends AudioNodeOptions {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface DelayOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DelayOptions"
   )
   interface Builder extends DelayOptions {
     @JsOverlay

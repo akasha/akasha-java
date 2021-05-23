@@ -1,5 +1,6 @@
 package akasha.xr;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRInputSource"
 )
-public class XRInputSource {
+public class XRInputSource extends JsObject {
   protected XRInputSource() {
   }
 

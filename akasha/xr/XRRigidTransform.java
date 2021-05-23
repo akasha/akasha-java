@@ -3,6 +3,7 @@ package akasha.xr;
 import akasha.DOMPointInit;
 import akasha.DOMPointReadOnly;
 import akasha.core.Float32Array;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRRigidTransform"
 )
-public class XRRigidTransform {
+public class XRRigidTransform extends JsObject {
   /**
    * The XRRigidTransform() constructor creates and returns a new XRRigidTransform object, representing the position and orientation of a point or object.
    *

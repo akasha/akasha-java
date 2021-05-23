@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ClientQueryOptions"
 )
 public interface ClientQueryOptions {
   @JsOverlay
@@ -43,7 +43,7 @@ public interface ClientQueryOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ClientQueryOptions"
   )
   interface Builder extends ClientQueryOptions {
     @JsOverlay

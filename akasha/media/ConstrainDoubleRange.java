@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConstrainDoubleRange"
 )
 public interface ConstrainDoubleRange extends DoubleRange {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface ConstrainDoubleRange extends DoubleRange {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConstrainDoubleRange"
   )
   interface Builder extends ConstrainDoubleRange {
     @JsOverlay

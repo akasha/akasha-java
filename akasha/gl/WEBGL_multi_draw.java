@@ -1,6 +1,7 @@
 package akasha.gl;
 
 import akasha.core.Int32Array;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WEBGL_multi_draw"
 )
-public class WEBGL_multi_draw implements WebGLCommonExtension {
+public class WEBGL_multi_draw extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final String NAME = "WEBGL_multi_draw";
 

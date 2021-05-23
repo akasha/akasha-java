@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "QueuingStrategy"
 )
 public interface QueuingStrategy {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface QueuingStrategy {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "QueuingStrategy"
   )
   interface Builder extends QueuingStrategy {
     @JsOverlay

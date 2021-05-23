@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
@@ -22,14 +23,14 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStream"
 )
-public class ReadableStream implements Transferable {
+public class ReadableStream extends JsObject implements Transferable {
   /**
    * The ReadableStream() constructor creates and returns a readable stream object from the given handlers.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/ReadableStream">ReadableStream.ReadableStream - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-constructor">ReadableStream() - Streams</a>
    */
-  public ReadableStream(@Nonnull final Object underlyingSource,
+  public ReadableStream(@Nonnull final JsObject underlyingSource,
       @Nonnull final QueuingStrategy strategy) {
   }
 
@@ -39,7 +40,7 @@ public class ReadableStream implements Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/ReadableStream">ReadableStream.ReadableStream - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-constructor">ReadableStream() - Streams</a>
    */
-  public ReadableStream(@Nonnull final Object underlyingSource) {
+  public ReadableStream(@Nonnull final JsObject underlyingSource) {
   }
 
   /**

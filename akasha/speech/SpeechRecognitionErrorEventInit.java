@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechRecognitionErrorEventInit"
 )
 public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "SpeechRecognitionErrorEventInit"
   )
   interface Builder extends SpeechRecognitionErrorEventInit {
     @JsOverlay

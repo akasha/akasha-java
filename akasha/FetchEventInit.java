@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FetchEventInit"
 )
 public interface FetchEventInit extends ExtendableEventInit {
   @JsOverlay
@@ -77,7 +77,7 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FetchEventInit"
   )
   interface Builder extends FetchEventInit {
     @JsOverlay

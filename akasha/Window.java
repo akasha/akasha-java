@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.clipboard.ClipboardEventListener;
+import akasha.core.JsObject;
 import akasha.crypto.Crypto;
 import akasha.idb.IDBFactory;
 import akasha.lang.JsArray;
@@ -1608,8 +1609,8 @@ public class Window extends EventTarget {
 
   @JsOverlay
   @Nonnull
-  public final Object get(@Nonnull final String name) {
-    return Js.<JsPropertyMap<Object>>cast( this ).get( name );
+  public final JsObject get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<JsObject>>cast( this ).get( name );
   }
 
   /**

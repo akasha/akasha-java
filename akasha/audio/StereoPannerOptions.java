@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "StereoPannerOptions"
 )
 public interface StereoPannerOptions extends AudioNodeOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface StereoPannerOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "StereoPannerOptions"
   )
   interface Builder extends StereoPannerOptions {
     @JsOverlay

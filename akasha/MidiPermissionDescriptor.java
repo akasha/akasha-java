@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MidiPermissionDescriptor"
 )
 public interface MidiPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MidiPermissionDescriptor"
   )
   interface Builder extends MidiPermissionDescriptor {
     @JsOverlay

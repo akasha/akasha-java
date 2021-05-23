@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WritableStreamDefaultController"
 )
-public class WritableStreamDefaultController {
+public class WritableStreamDefaultController extends JsObject {
   protected WritableStreamDefaultController() {
   }
 

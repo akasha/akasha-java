@@ -13,7 +13,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "OffscreenRenderingContext"
 )
 public interface OffscreenRenderingContext {
   @JsOverlay

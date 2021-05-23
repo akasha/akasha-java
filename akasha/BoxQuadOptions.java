@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BoxQuadOptions"
 )
 public interface BoxQuadOptions {
   @JsOverlay
@@ -63,7 +63,7 @@ public interface BoxQuadOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BoxQuadOptions"
   )
   interface Builder extends BoxQuadOptions {
     @JsOverlay

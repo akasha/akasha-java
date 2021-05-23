@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FederatedCredentialRequestOptions"
 )
 public interface FederatedCredentialRequestOptions {
   @JsOverlay
@@ -53,7 +53,7 @@ public interface FederatedCredentialRequestOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FederatedCredentialRequestOptions"
   )
   interface Builder extends FederatedCredentialRequestOptions {
     @JsOverlay

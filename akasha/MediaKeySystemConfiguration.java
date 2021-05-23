@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaKeySystemConfiguration"
 )
 public interface MediaKeySystemConfiguration {
   @JsOverlay
@@ -197,7 +197,7 @@ public interface MediaKeySystemConfiguration {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaKeySystemConfiguration"
   )
   interface Builder extends MediaKeySystemConfiguration {
     /**

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SecurityPolicyViolationEventInit"
 )
 public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsOverlay
@@ -121,7 +121,7 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "SecurityPolicyViolationEventInit"
   )
   interface Builder extends SecurityPolicyViolationEventInit {
     @JsOverlay

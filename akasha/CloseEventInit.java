@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "CloseEventInit"
 )
 public interface CloseEventInit extends EventInit {
   @JsOverlay
@@ -50,7 +50,7 @@ public interface CloseEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "CloseEventInit"
   )
   interface Builder extends CloseEventInit {
     @JsOverlay

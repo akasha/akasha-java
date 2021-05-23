@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MultiCacheQueryOptions"
 )
 public interface MultiCacheQueryOptions extends CacheQueryOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MultiCacheQueryOptions"
   )
   interface Builder extends MultiCacheQueryOptions {
     @JsOverlay

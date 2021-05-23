@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ChannelSplitterOptions"
 )
 public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ChannelSplitterOptions"
   )
   interface Builder extends ChannelSplitterOptions {
     @JsOverlay

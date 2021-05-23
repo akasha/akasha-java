@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaStreamTrackEventInit"
 )
 public interface MediaStreamTrackEventInit extends EventInit {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface MediaStreamTrackEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaStreamTrackEventInit"
   )
   interface Builder extends MediaStreamTrackEventInit {
     @JsOverlay

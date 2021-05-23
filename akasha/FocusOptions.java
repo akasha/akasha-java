@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FocusOptions"
 )
 public interface FocusOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface FocusOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FocusOptions"
   )
   interface Builder extends FocusOptions {
     @JsOverlay

@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.ArrayBufferView;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -16,7 +17,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStreamBYOBReader"
 )
-public class ReadableStreamBYOBReader {
+public class ReadableStreamBYOBReader extends JsObject {
   public ReadableStreamBYOBReader(@Nonnull final ReadableStream stream) {
   }
 

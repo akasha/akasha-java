@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConvertCoordinateOptions"
 )
 public interface ConvertCoordinateOptions {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface ConvertCoordinateOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConvertCoordinateOptions"
   )
   interface Builder extends ConvertCoordinateOptions {
     @JsOverlay

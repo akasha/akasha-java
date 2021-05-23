@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ShadowRootInit"
 )
 public interface ShadowRootInit {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface ShadowRootInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ShadowRootInit"
   )
   interface Builder extends ShadowRootInit {
     @JsOverlay

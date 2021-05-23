@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConstrainBooleanParameters"
 )
 public interface ConstrainBooleanParameters {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface ConstrainBooleanParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConstrainBooleanParameters"
   )
   interface Builder extends ConstrainBooleanParameters {
     @JsOverlay

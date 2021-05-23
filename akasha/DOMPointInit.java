@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DOMPointInit"
 )
 public interface DOMPointInit {
   @JsOverlay
@@ -118,7 +118,7 @@ public interface DOMPointInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DOMPointInit"
   )
   interface Builder extends DOMPointInit {
     /**

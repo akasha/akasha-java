@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCRtpParameters"
 )
 public interface RTCRtpParameters {
   @JsOverlay
@@ -103,7 +103,7 @@ public interface RTCRtpParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCRtpParameters"
   )
   interface Builder extends RTCRtpParameters {
     @JsOverlay

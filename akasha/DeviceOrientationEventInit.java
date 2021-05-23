@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DeviceOrientationEventInit"
 )
 public interface DeviceOrientationEventInit extends EventInit {
   @JsOverlay
@@ -62,7 +62,7 @@ public interface DeviceOrientationEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DeviceOrientationEventInit"
   )
   interface Builder extends DeviceOrientationEventInit {
     @JsOverlay

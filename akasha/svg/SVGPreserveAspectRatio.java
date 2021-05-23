@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -16,7 +17,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGPreserveAspectRatio"
 )
-public class SVGPreserveAspectRatio {
+public class SVGPreserveAspectRatio extends JsObject {
   @JsOverlay
   public static final int SVG_MEETORSLICE_MEET = 1;
 

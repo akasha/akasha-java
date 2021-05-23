@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IDBObjectStoreParameters"
 )
 public interface IDBObjectStoreParameters {
   @JsOverlay
@@ -61,7 +61,7 @@ public interface IDBObjectStoreParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IDBObjectStoreParameters"
   )
   interface Builder extends IDBObjectStoreParameters {
     @JsOverlay

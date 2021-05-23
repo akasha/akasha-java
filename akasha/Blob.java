@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.ArrayBuffer;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.HasNoSideEffects;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Blob"
 )
-public class Blob implements MediaProvider {
+public class Blob extends JsObject implements MediaProvider {
   /**
    * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
    *

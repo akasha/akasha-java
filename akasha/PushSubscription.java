@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.ArrayBuffer;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "PushSubscription"
 )
-public class PushSubscription {
+public class PushSubscription extends JsObject {
   protected PushSubscription() {
   }
 

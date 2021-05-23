@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,17 +19,17 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "TransformStream"
 )
-public class TransformStream implements Transferable {
-  public TransformStream(@Nonnull final Object transformer,
+public class TransformStream extends JsObject implements Transferable {
+  public TransformStream(@Nonnull final JsObject transformer,
       @Nonnull final QueuingStrategy writableStrategy,
       @Nonnull final QueuingStrategy readableStrategy) {
   }
 
-  public TransformStream(@Nonnull final Object transformer,
+  public TransformStream(@Nonnull final JsObject transformer,
       @Nonnull final QueuingStrategy writableStrategy) {
   }
 
-  public TransformStream(@Nonnull final Object transformer) {
+  public TransformStream(@Nonnull final JsObject transformer) {
   }
 
   public TransformStream() {

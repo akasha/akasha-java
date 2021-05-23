@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FilePropertyBag"
 )
 public interface FilePropertyBag extends BlobPropertyBag {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface FilePropertyBag extends BlobPropertyBag {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FilePropertyBag"
   )
   interface Builder extends FilePropertyBag {
     @JsOverlay

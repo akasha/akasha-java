@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AnimationPlaybackEventInit"
 )
 public interface AnimationPlaybackEventInit extends EventInit {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface AnimationPlaybackEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AnimationPlaybackEventInit"
   )
   interface Builder extends AnimationPlaybackEventInit {
     @JsOverlay

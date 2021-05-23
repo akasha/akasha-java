@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "TextEncoderStream"
 )
-public class TextEncoderStream {
+public class TextEncoderStream extends JsObject {
   public TextEncoderStream() {
   }
 

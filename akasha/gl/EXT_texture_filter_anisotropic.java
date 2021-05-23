@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_texture_filter_anisotropic"
 )
-public class EXT_texture_filter_anisotropic implements WebGLCommonExtension {
+public class EXT_texture_filter_anisotropic extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final int MAX_TEXTURE_MAX_ANISOTROPY_EXT = 0x84FF;
 

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RequestInit"
 )
 public interface RequestInit {
   @JsOverlay
@@ -194,7 +194,7 @@ public interface RequestInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RequestInit"
   )
   interface Builder extends RequestInit {
     @JsOverlay

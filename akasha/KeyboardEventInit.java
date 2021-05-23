@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "KeyboardEventInit"
 )
 public interface KeyboardEventInit extends EventModifierInit {
   @JsOverlay
@@ -67,7 +67,7 @@ public interface KeyboardEventInit extends EventModifierInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "KeyboardEventInit"
   )
   interface Builder extends KeyboardEventInit {
     @JsOverlay

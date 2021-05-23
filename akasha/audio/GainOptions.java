@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "GainOptions"
 )
 public interface GainOptions extends AudioNodeOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface GainOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "GainOptions"
   )
   interface Builder extends GainOptions {
     @JsOverlay

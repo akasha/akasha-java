@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.core.Float32Array;
 import akasha.core.Float64Array;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DOMMatrixReadOnly"
 )
-public class DOMMatrixReadOnly {
+public class DOMMatrixReadOnly extends JsObject {
   /**
    * The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations.
    *
@@ -355,7 +356,7 @@ public class DOMMatrixReadOnly {
   public native Float64Array toFloat64Array();
 
   @Nonnull
-  public native Object toJSON();
+  public native JsObject toJSON();
 
   @Nonnull
   public native DOMPoint transformPoint(@Nonnull DOMPointInit point);

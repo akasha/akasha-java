@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_blend_minmax"
 )
-public class EXT_blend_minmax implements WebGL1Extension {
+public class EXT_blend_minmax extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final int MAX_EXT = 0x8008;
 

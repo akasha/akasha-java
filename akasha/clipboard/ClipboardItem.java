@@ -1,6 +1,7 @@
 package akasha.clipboard;
 
 import akasha.Blob;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
@@ -22,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "ClipboardItem"
 )
-public class ClipboardItem {
+public class ClipboardItem extends JsObject {
   public ClipboardItem(@Nonnull final JsPropertyMap<Promise<ClipboardItemDataType>> items,
       @Nonnull final ClipboardItemOptions options) {
   }

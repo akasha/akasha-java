@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaEncryptedEventInit"
 )
 public interface MediaEncryptedEventInit extends EventInit {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface MediaEncryptedEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaEncryptedEventInit"
   )
   interface Builder extends MediaEncryptedEventInit {
     @JsOverlay

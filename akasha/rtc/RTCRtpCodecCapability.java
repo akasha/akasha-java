@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCRtpCodecCapability"
 )
 public interface RTCRtpCodecCapability {
   @JsOverlay
@@ -71,7 +71,7 @@ public interface RTCRtpCodecCapability {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCRtpCodecCapability"
   )
   interface Builder extends RTCRtpCodecCapability {
     @JsOverlay

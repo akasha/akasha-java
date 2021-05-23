@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGAnimatedNumberList"
 )
-public class SVGAnimatedNumberList {
+public class SVGAnimatedNumberList extends JsObject {
   protected SVGAnimatedNumberList() {
   }
 

@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TouchEventInit"
 )
 public interface TouchEventInit extends EventModifierInit {
   @JsOverlay
@@ -67,7 +67,7 @@ public interface TouchEventInit extends EventModifierInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TouchEventInit"
   )
   interface Builder extends TouchEventInit {
     @JsOverlay

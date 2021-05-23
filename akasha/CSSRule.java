@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CSSRule"
 )
-public class CSSRule {
+public class CSSRule extends JsObject {
   @JsOverlay
   public static final int CHARSET_RULE = 2;
 

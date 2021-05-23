@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "NavigationPreloadState"
 )
 public interface NavigationPreloadState {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface NavigationPreloadState {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "NavigationPreloadState"
   )
   interface Builder extends NavigationPreloadState {
     @JsOverlay

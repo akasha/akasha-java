@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Algorithm"
 )
 public interface Algorithm {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Algorithm"
   )
   interface Builder extends Algorithm {
     @JsOverlay

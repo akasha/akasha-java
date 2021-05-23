@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "XRRenderStateInit"
 )
 public interface XRRenderStateInit {
   @JsOverlay
@@ -87,7 +87,7 @@ public interface XRRenderStateInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "XRRenderStateInit"
   )
   interface Builder extends XRRenderStateInit {
     @JsOverlay

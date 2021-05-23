@@ -1,5 +1,6 @@
 package akasha.xr;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XRPose"
 )
-public class XRPose {
+public class XRPose extends JsObject {
   protected XRPose() {
   }
 

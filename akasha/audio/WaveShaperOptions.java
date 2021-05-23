@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WaveShaperOptions"
 )
 public interface WaveShaperOptions extends AudioNodeOptions {
   @JsOverlay
@@ -49,7 +49,7 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WaveShaperOptions"
   )
   interface Builder extends WaveShaperOptions {
     @JsOverlay

@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechRecognitionEvent"
 )
 public class SpeechRecognitionEvent extends Event {
   public SpeechRecognitionEvent(@Nonnull final String type,

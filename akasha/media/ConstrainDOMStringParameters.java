@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConstrainDOMStringParameters"
 )
 public interface ConstrainDOMStringParameters {
   @JsOverlay
@@ -86,7 +86,7 @@ public interface ConstrainDOMStringParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConstrainDOMStringParameters"
   )
   interface Builder extends ConstrainDOMStringParameters {
     @JsOverlay

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DocumentTimelineOptions"
 )
 public interface DocumentTimelineOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface DocumentTimelineOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DocumentTimelineOptions"
   )
   interface Builder extends DocumentTimelineOptions {
     @JsOverlay

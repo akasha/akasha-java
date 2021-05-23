@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "GlobalDescriptor"
 )
 public interface GlobalDescriptor {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface GlobalDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "GlobalDescriptor"
   )
   interface Builder extends GlobalDescriptor {
     @JsOverlay

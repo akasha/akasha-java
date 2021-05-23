@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PopStateEventInit"
 )
 public interface PopStateEventInit extends EventInit {
   @JsOverlay
@@ -38,7 +38,7 @@ public interface PopStateEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PopStateEventInit"
   )
   interface Builder extends PopStateEventInit {
     @JsOverlay

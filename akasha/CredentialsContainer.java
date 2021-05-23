@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CredentialsContainer"
 )
-public class CredentialsContainer {
+public class CredentialsContainer extends JsObject {
   protected CredentialsContainer() {
   }
 

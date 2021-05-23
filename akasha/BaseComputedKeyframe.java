@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BaseComputedKeyframe"
 )
 public interface BaseComputedKeyframe {
   @JsOverlay
@@ -61,7 +61,7 @@ public interface BaseComputedKeyframe {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BaseComputedKeyframe"
   )
   interface Builder extends BaseComputedKeyframe {
     @JsOverlay

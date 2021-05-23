@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCIceCandidate"
 )
-public class RTCIceCandidate {
+public class RTCIceCandidate extends JsObject {
   /**
    * The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate.
    *

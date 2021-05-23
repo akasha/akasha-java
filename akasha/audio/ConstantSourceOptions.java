@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConstantSourceOptions"
 )
 public interface ConstantSourceOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ConstantSourceOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConstantSourceOptions"
   )
   interface Builder extends ConstantSourceOptions {
     @JsOverlay

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PermissionSetParameters"
 )
 public interface PermissionSetParameters {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface PermissionSetParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PermissionSetParameters"
   )
   interface Builder extends PermissionSetParameters {
     @JsOverlay

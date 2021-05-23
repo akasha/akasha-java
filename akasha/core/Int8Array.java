@@ -1,7 +1,6 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
-import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -9,6 +8,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The Int8Array typed array represents an array of twos-complement 8-bit signed integers.
@@ -26,7 +28,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Int8Array"
 )
-public class Int8Array implements IntegerTypedArray {
+public class Int8Array extends JsObject implements IntegerTypedArray {
   /**
    * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
    *
@@ -178,16 +180,15 @@ public class Int8Array implements IntegerTypedArray {
   @Nonnull
   public native Int8Array copyWithin(int target, int start);
 
-  @HasNoSideEffects
-  public native byte get(int index);
+  @JsOverlay
+  public final byte getAt(final int index) {
+    return Js.<JsArrayLike<Any>>cast( this ).getAt( index ).asByte();
+  }
 
-  /**
-   * The set() method stores multiple values in the typed array, reading input values from a specified array.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.set-array-offset">TypedArray.prototype.set - ECMAScript (ECMA-262)</a>
-   */
-  public native void set(int index, byte value);
+  @JsOverlay
+  public final void setAt(final int index, final byte value) {
+    Js.<JsArrayLike<Byte>>cast( this ).setAt( index, value );
+  }
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.

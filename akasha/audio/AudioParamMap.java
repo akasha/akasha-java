@@ -1,6 +1,8 @@
 package akasha.audio;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -23,7 +25,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AudioParamMap"
 )
-public class AudioParamMap {
+public class AudioParamMap extends JsObject implements JsIterable<AudioParamMap.Entry> {
   protected AudioParamMap() {
   }
 

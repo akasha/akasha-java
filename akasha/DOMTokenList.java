@@ -1,6 +1,8 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -24,7 +26,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DOMTokenList"
 )
-public class DOMTokenList {
+public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.Entry> {
   /**
    * The value property of the DOMTokenList interface is a stringifier that returns the value of the list as a DOMString, or clears and sets the list to the given value.
    *

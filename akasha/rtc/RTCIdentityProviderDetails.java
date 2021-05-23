@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCIdentityProviderDetails"
 )
 public interface RTCIdentityProviderDetails {
   @JsOverlay
@@ -43,7 +43,7 @@ public interface RTCIdentityProviderDetails {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCIdentityProviderDetails"
   )
   interface Builder extends RTCIdentityProviderDetails {
     @JsOverlay

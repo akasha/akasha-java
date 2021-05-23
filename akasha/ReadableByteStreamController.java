@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.ArrayBufferView;
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -15,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableByteStreamController"
 )
-public class ReadableByteStreamController {
+public class ReadableByteStreamController extends JsObject {
   protected ReadableByteStreamController() {
   }
 

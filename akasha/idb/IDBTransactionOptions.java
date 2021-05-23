@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IDBTransactionOptions"
 )
 public interface IDBTransactionOptions {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface IDBTransactionOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IDBTransactionOptions"
   )
   interface Builder extends IDBTransactionOptions {
     @JsOverlay

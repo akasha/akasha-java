@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCAnswerOptions"
 )
 public interface RTCAnswerOptions extends RTCOfferAnswerOptions {
   @JsOverlay
@@ -37,7 +37,7 @@ public interface RTCAnswerOptions extends RTCOfferAnswerOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCAnswerOptions"
   )
   interface Builder extends RTCAnswerOptions {
   }

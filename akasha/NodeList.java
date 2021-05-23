@@ -1,6 +1,8 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -27,7 +29,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "NodeList"
 )
-public class NodeList {
+public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
   protected NodeList() {
   }
 

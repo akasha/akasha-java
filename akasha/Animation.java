@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Animation"
 )
 public class Animation extends EventTarget {
   /**

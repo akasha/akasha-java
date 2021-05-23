@@ -1,6 +1,7 @@
 package akasha.wasm;
 
 import akasha.core.ArrayBuffer;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly.Memory"
 )
-public class Memory {
+public class Memory extends JsObject {
   public Memory(@Nonnull final MemoryDescriptor descriptor) {
   }
 

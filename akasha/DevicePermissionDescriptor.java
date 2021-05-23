@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DevicePermissionDescriptor"
 )
 public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DevicePermissionDescriptor"
   )
   interface Builder extends DevicePermissionDescriptor {
     @JsOverlay

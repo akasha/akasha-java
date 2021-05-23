@@ -1,5 +1,6 @@
 package akasha.speech;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,9 +18,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechRecognitionResultList"
 )
-public class SpeechRecognitionResultList {
+public class SpeechRecognitionResultList extends JsObject {
   protected SpeechRecognitionResultList() {
   }
 

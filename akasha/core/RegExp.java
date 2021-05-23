@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RegExp"
 )
-public class RegExp {
+public class RegExp extends JsObject {
   public int lastIndex;
 
   public RegExp(@RegExpLanguage @Nonnull final String pattern,

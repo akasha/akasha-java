@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "XPathResult"
 )
-public class XPathResult {
+public class XPathResult extends JsObject {
   @JsOverlay
   public static final int ANY_TYPE = 0;
 

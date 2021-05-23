@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ModuleExportDescriptor"
 )
 public interface ModuleExportDescriptor {
   @JsOverlay
@@ -45,7 +45,7 @@ public interface ModuleExportDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ModuleExportDescriptor"
   )
   interface Builder extends ModuleExportDescriptor {
     @JsOverlay

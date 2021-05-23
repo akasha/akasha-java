@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -10,7 +11,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebGLObject"
 )
-public class WebGLObject {
+public class WebGLObject extends JsObject {
   protected WebGLObject() {
   }
 }

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ShareData"
 )
 public interface ShareData {
   @JsOverlay
@@ -64,7 +64,7 @@ public interface ShareData {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ShareData"
   )
   interface Builder extends ShareData {
     @JsOverlay

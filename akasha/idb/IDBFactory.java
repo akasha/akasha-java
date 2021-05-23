@@ -1,5 +1,6 @@
 package akasha.idb;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "IDBFactory"
 )
-public class IDBFactory {
+public class IDBFactory extends JsObject {
   protected IDBFactory() {
   }
 

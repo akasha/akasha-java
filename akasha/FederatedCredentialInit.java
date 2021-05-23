@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FederatedCredentialInit"
 )
 public interface FederatedCredentialInit extends CredentialData {
   @JsOverlay
@@ -69,7 +69,7 @@ public interface FederatedCredentialInit extends CredentialData {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FederatedCredentialInit"
   )
   interface Builder extends FederatedCredentialInit {
     @JsOverlay

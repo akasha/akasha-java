@@ -1,5 +1,6 @@
 package akasha.idb;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +23,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "IDBKeyRange"
 )
-public class IDBKeyRange {
+public class IDBKeyRange extends JsObject {
   protected IDBKeyRange() {
   }
 

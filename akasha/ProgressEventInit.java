@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ProgressEventInit"
 )
 public interface ProgressEventInit extends EventInit {
   @JsOverlay
@@ -50,7 +50,7 @@ public interface ProgressEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ProgressEventInit"
   )
   interface Builder extends ProgressEventInit {
     @JsOverlay

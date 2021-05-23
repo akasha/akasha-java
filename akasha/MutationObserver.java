@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "MutationObserver"
 )
-public class MutationObserver {
+public class MutationObserver extends JsObject {
   /**
    * The DOM MutationObserver() constructor &mdash; part of the MutationObserver interface &mdash; creates and returns a new observer which invokes a specified callback when DOM events occur.
    *

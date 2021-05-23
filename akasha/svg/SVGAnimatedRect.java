@@ -2,6 +2,7 @@ package akasha.svg;
 
 import akasha.DOMRect;
 import akasha.DOMRectReadOnly;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGAnimatedRect"
 )
-public class SVGAnimatedRect {
+public class SVGAnimatedRect extends JsObject {
   protected SVGAnimatedRect() {
   }
 

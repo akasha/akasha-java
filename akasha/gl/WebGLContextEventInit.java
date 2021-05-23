@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WebGLContextEventInit"
 )
 public interface WebGLContextEventInit extends EventInit {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface WebGLContextEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WebGLContextEventInit"
   )
   interface Builder extends WebGLContextEventInit {
     @JsOverlay

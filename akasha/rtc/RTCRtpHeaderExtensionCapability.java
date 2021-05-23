@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCRtpHeaderExtensionCapability"
 )
 public interface RTCRtpHeaderExtensionCapability {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface RTCRtpHeaderExtensionCapability {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCRtpHeaderExtensionCapability"
   )
   interface Builder extends RTCRtpHeaderExtensionCapability {
     @JsOverlay

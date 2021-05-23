@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
@@ -16,9 +17,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Coordinates"
 )
-public class Coordinates {
+public class Coordinates extends JsObject {
   protected Coordinates() {
   }
 

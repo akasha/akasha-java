@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SubmitEventInit"
 )
 public interface SubmitEventInit extends EventInit {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface SubmitEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "SubmitEventInit"
   )
   interface Builder extends SubmitEventInit {
     @JsOverlay

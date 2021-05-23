@@ -1,6 +1,7 @@
 package akasha.idb;
 
 import akasha.DOMStringList;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -24,7 +25,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "IDBObjectStore"
 )
-public class IDBObjectStore {
+public class IDBObjectStore extends JsObject {
   /**
    * A DOMString containing the object store's name.
    *

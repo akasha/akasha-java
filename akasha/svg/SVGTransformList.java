@@ -1,6 +1,7 @@
 package akasha.svg;
 
 import akasha.DOMMatrixReadOnly;
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -25,7 +26,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "SVGTransformList"
 )
-public class SVGTransformList {
+public class SVGTransformList extends JsObject {
   protected SVGTransformList() {
   }
 

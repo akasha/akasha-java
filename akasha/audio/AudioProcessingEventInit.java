@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioProcessingEventInit"
 )
 public interface AudioProcessingEventInit extends EventInit {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AudioProcessingEventInit"
   )
   interface Builder extends AudioProcessingEventInit {
     @JsOverlay

@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
@@ -13,7 +14,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "TransformStreamDefaultController"
 )
-public class TransformStreamDefaultController {
+public class TransformStreamDefaultController extends JsObject {
   protected TransformStreamDefaultController() {
   }
 

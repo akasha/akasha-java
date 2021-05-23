@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCPeerConnectionIceErrorEventInit"
 )
 public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsOverlay
@@ -70,7 +70,7 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCPeerConnectionIceErrorEventInit"
   )
   interface Builder extends RTCPeerConnectionIceErrorEventInit {
     @JsOverlay

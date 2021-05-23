@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PasswordCredentialData"
 )
 public interface PasswordCredentialData extends CredentialData {
   @JsOverlay
@@ -61,7 +61,7 @@ public interface PasswordCredentialData extends CredentialData {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PasswordCredentialData"
   )
   interface Builder extends PasswordCredentialData {
     @JsOverlay

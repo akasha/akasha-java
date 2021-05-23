@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "XRSessionEventInit"
 )
 public interface XRSessionEventInit extends EventInit {
   @JsOverlay
@@ -60,7 +60,7 @@ public interface XRSessionEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "XRSessionEventInit"
   )
   interface Builder extends XRSessionEventInit {
     /**

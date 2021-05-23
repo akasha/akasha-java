@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.svg.SVGImageElement;
 import javaemul.internal.annotations.HasNoSideEffects;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CanvasRenderingContext2D"
 )
-public class CanvasRenderingContext2D implements RenderingContext {
+public class CanvasRenderingContext2D extends JsObject implements RenderingContext {
   /**
    * The CanvasRenderingContext2D.direction property of the Canvas 2D API specifies the current text direction used to draw text.
    *

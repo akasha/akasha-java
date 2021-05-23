@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaQueryListEventInit"
 )
 public interface MediaQueryListEventInit extends EventInit {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface MediaQueryListEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaQueryListEventInit"
   )
   interface Builder extends MediaQueryListEventInit {
     @JsOverlay

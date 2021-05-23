@@ -66,7 +66,7 @@ public final class Atomics {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree">MDN - Atomics.isLockFree</a>
    * @see <a href="https://tc39.es/ecma262/#sec-atomics.isLockFree">Atomics.isLockFree() - ECMA</a>
    */
-  public static native int isLockFree(int size);
+  public static native boolean isLockFree(int size);
 
   /**
    * Returns the value at the specified index of the array.
@@ -105,6 +105,15 @@ public final class Atomics {
   public static native int sub(@Nonnull IntegerTypedArray typedArray, int index, int value);
 
   /**
+   * Computes a bitwise XOR on the value at the specified index of the array with the provided value.
+   *
+   * @return the old value at the position.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor">Atomics.xor() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-atomics.xor">Atomics.xor() - ECMA</a>
+   */
+  public static native int xor(@Nonnull IntegerTypedArray typedArray, int index, int value);
+
+  /**
    * Verifies that the specified index of the array still contains a value and sleeps awaiting or times out.
    * Returns either "ok", "not-equal", or "timed-out".
    * If waiting is not allowed in the calling agent then it throws an Error exception. Most browsers will not
@@ -117,9 +126,8 @@ public final class Atomics {
   @JsMethod(
       name = "wait"
   )
-  @AtomicWaitResult
   @Nonnull
-  public static native String wait_(@Nonnull IntegerTypedArray typedArray, int index, int value,
+  public static native JsString wait_(@Nonnull IntegerTypedArray typedArray, int index, int value,
       int timeout);
 
   /**
@@ -135,16 +143,6 @@ public final class Atomics {
   @JsMethod(
       name = "wait"
   )
-  @AtomicWaitResult
   @Nonnull
-  public static native String wait_(@Nonnull IntegerTypedArray typedArray, int index, int value);
-
-  /**
-   * Computes a bitwise XOR on the value at the specified index of the array with the provided value.
-   *
-   * @return the old value at the position.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor">Atomics.xor() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-atomics.xor">Atomics.xor() - ECMA</a>
-   */
-  public static native int xor(@Nonnull IntegerTypedArray typedArray, int index, int value);
+  public static native JsString wait_(@Nonnull IntegerTypedArray typedArray, int index, int value);
 }

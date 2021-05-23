@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "HmacKeyAlgorithm"
 )
 public interface HmacKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "HmacKeyAlgorithm"
   )
   interface Builder extends HmacKeyAlgorithm {
     @JsOverlay

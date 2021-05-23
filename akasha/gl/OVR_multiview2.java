@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "OVR_multiview2"
 )
-public class OVR_multiview2 implements WebGLExtension {
+public class OVR_multiview2 extends JsObject implements WebGLExtension {
   @JsOverlay
   public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR = 0x9632;
 

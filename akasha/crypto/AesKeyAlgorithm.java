@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AesKeyAlgorithm"
 )
 public interface AesKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface AesKeyAlgorithm extends KeyAlgorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AesKeyAlgorithm"
   )
   interface Builder extends AesKeyAlgorithm {
     @JsOverlay

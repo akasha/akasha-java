@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MemoryDescriptor"
 )
 public interface MemoryDescriptor {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface MemoryDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MemoryDescriptor"
   )
   interface Builder extends MemoryDescriptor {
     @JsOverlay

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MediaStreamTrackAudioSourceOptions"
 )
 public interface MediaStreamTrackAudioSourceOptions {
   @JsOverlay
@@ -60,7 +60,7 @@ public interface MediaStreamTrackAudioSourceOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MediaStreamTrackAudioSourceOptions"
   )
   interface Builder extends MediaStreamTrackAudioSourceOptions {
     /**

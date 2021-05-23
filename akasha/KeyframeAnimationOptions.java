@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "KeyframeAnimationOptions"
 )
 public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "KeyframeAnimationOptions"
   )
   interface Builder extends KeyframeAnimationOptions {
     @JsOverlay

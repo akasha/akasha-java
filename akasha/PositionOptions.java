@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PositionOptions"
 )
 public interface PositionOptions {
   @JsOverlay
@@ -98,7 +98,7 @@ public interface PositionOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PositionOptions"
   )
   interface Builder extends PositionOptions {
     /**

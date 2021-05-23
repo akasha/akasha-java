@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "TreeWalker"
 )
-public class TreeWalker {
+public class TreeWalker extends JsObject {
   /**
    * The TreeWalker.currentNode property represents the Node on which the TreeWalker is currently pointing at.
    *

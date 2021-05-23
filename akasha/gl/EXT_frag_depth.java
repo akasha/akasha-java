@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EXT_frag_depth"
 )
-public class EXT_frag_depth implements WebGL1Extension {
+public class EXT_frag_depth extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final String NAME = "EXT_frag_depth";
 

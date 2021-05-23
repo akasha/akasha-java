@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AuthenticationExtensionsClientOutputs"
 )
 public interface AuthenticationExtensionsClientOutputs {
   @JsOverlay
@@ -103,7 +103,7 @@ public interface AuthenticationExtensionsClientOutputs {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AuthenticationExtensionsClientOutputs"
   )
   interface Builder extends AuthenticationExtensionsClientOutputs {
     @JsOverlay

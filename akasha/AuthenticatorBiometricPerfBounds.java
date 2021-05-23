@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "authenticatorBiometricPerfBounds"
 )
 public interface AuthenticatorBiometricPerfBounds {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface AuthenticatorBiometricPerfBounds {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "authenticatorBiometricPerfBounds"
   )
   interface Builder extends AuthenticatorBiometricPerfBounds {
     @JsOverlay

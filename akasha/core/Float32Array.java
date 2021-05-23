@@ -1,7 +1,6 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
-import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
@@ -9,6 +8,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
+import jsinterop.base.Js;
+import jsinterop.base.JsArrayLike;
 
 /**
  * The Float32Array typed array represents an array of 32-bit floating point numbers (corresponding to
@@ -26,7 +28,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Float32Array"
 )
-public class Float32Array implements TypedArray {
+public class Float32Array extends JsObject implements TypedArray {
   /**
    * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
    *
@@ -178,16 +180,15 @@ public class Float32Array implements TypedArray {
   @Nonnull
   public native Float32Array copyWithin(int target, int start);
 
-  @HasNoSideEffects
-  public native float get(int index);
+  @JsOverlay
+  public final float getAt(final int index) {
+    return Js.<JsArrayLike<Any>>cast( this ).getAt( index ).asFloat();
+  }
 
-  /**
-   * The set() method stores multiple values in the typed array, reading input values from a specified array.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.set-array-offset">TypedArray.prototype.set - ECMAScript (ECMA-262)</a>
-   */
-  public native void set(int index, float value);
+  @JsOverlay
+  public final void setAt(final int index, final float value) {
+    Js.<JsArrayLike<Float>>cast( this ).setAt( index, value );
+  }
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.

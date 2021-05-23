@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AssignedNodesOptions"
 )
 public interface AssignedNodesOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface AssignedNodesOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AssignedNodesOptions"
   )
   interface Builder extends AssignedNodesOptions {
     @JsOverlay

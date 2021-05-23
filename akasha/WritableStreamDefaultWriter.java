@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -15,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WritableStreamDefaultWriter"
 )
-public class WritableStreamDefaultWriter {
+public class WritableStreamDefaultWriter extends JsObject {
   public WritableStreamDefaultWriter(@Nonnull final WritableStream stream) {
   }
 

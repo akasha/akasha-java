@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ReadableStreamIteratorOptions"
 )
 public interface ReadableStreamIteratorOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ReadableStreamIteratorOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ReadableStreamIteratorOptions"
   )
   interface Builder extends ReadableStreamIteratorOptions {
     @JsOverlay

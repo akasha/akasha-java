@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "EventTarget"
 )
-public class EventTarget {
+public class EventTarget extends JsObject {
   /**
    * The EventTarget() constructor creates a new EventTarget object instance.
    *

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "FullscreenOptions"
 )
 public interface FullscreenOptions {
   @JsOverlay
@@ -57,7 +57,7 @@ public interface FullscreenOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "FullscreenOptions"
   )
   interface Builder extends FullscreenOptions {
     /**

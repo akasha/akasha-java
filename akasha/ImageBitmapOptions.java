@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ImageBitmapOptions"
 )
 public interface ImageBitmapOptions {
   @JsOverlay
@@ -78,7 +78,7 @@ public interface ImageBitmapOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ImageBitmapOptions"
   )
   interface Builder extends ImageBitmapOptions {
     @JsOverlay

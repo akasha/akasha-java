@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BluetoothPermissionDescriptor"
 )
 public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
@@ -71,7 +71,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BluetoothPermissionDescriptor"
   )
   interface Builder extends BluetoothPermissionDescriptor {
     @JsOverlay

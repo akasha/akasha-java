@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RegistrationOptions"
 )
 public interface RegistrationOptions {
   @JsOverlay
@@ -52,7 +52,7 @@ public interface RegistrationOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RegistrationOptions"
   )
   interface Builder extends RegistrationOptions {
     @JsOverlay

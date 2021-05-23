@@ -1,6 +1,7 @@
 package akasha.audio;
 
 import akasha.core.Float32Array;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AudioBuffer"
 )
-public class AudioBuffer {
+public class AudioBuffer extends JsObject {
   /**
    * The AudioBuffer constructor of the Web Audio API creates a new AudioBuffer object.
    *

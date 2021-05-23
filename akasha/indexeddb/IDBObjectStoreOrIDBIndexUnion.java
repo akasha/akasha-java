@@ -13,7 +13,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "IDBObjectStoreOrIDBIndexUnion"
 )
 public interface IDBObjectStoreOrIDBIndexUnion {
   @JsOverlay

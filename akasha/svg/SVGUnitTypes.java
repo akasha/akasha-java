@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGUnitTypes"
 )
-public class SVGUnitTypes {
+public class SVGUnitTypes extends JsObject {
   @JsOverlay
   public static final int SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
 

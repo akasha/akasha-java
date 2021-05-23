@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_debug_renderer_info"
 )
-public class WEBGL_debug_renderer_info implements WebGLCommonExtension {
+public class WEBGL_debug_renderer_info extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final String NAME = "WEBGL_debug_renderer_info";
 

@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ANGLE_instanced_arrays"
 )
-public class ANGLE_instanced_arrays implements WebGL1Extension {
+public class ANGLE_instanced_arrays extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final String NAME = "ANGLE_instanced_arrays";
 

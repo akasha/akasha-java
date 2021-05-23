@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "StyleSheet"
 )
-public class StyleSheet {
+public class StyleSheet extends JsObject {
   /**
    * The disabled property of the StyleSheet interface determines whether the style sheet is prevented from applying to the document.
    *

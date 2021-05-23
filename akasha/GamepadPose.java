@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.Float32Array;
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "GamepadPose"
 )
-public class GamepadPose {
+public class GamepadPose extends JsObject {
   protected GamepadPose() {
   }
 

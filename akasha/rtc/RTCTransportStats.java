@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCTransportStats"
 )
 public interface RTCTransportStats extends RTCStats {
   @JsOverlay
@@ -168,7 +168,7 @@ public interface RTCTransportStats extends RTCStats {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCTransportStats"
   )
   interface Builder extends RTCTransportStats {
     @JsOverlay

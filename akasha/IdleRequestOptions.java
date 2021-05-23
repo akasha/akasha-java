@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IdleRequestOptions"
 )
 public interface IdleRequestOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface IdleRequestOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IdleRequestOptions"
   )
   interface Builder extends IdleRequestOptions {
     @JsOverlay

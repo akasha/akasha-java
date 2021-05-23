@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "NotificationEventInit"
 )
 public interface NotificationEventInit extends ExtendableEventInit {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface NotificationEventInit extends ExtendableEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "NotificationEventInit"
   )
   interface Builder extends NotificationEventInit {
     @JsOverlay

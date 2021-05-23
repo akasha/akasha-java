@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "StorageEstimate"
 )
 public interface StorageEstimate {
   @JsOverlay
@@ -78,7 +78,7 @@ public interface StorageEstimate {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "StorageEstimate"
   )
   interface Builder extends StorageEstimate {
     /**

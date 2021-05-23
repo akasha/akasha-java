@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DecompressionStream"
 )
-public class DecompressionStream {
+public class DecompressionStream extends JsObject {
   public DecompressionStream(@Nonnull final String format) {
   }
 

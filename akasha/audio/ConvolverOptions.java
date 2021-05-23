@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ConvolverOptions"
 )
 public interface ConvolverOptions extends AudioNodeOptions {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface ConvolverOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ConvolverOptions"
   )
   interface Builder extends ConvolverOptions {
     @JsOverlay

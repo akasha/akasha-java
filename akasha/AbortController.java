@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AbortController"
 )
-public class AbortController {
+public class AbortController extends JsObject {
   /**
    * The AbortController() constructor creates a new AbortController object instance.
    *

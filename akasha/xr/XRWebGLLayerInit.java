@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "XRWebGLLayerInit"
 )
 public interface XRWebGLLayerInit {
   @JsOverlay
@@ -158,7 +158,7 @@ public interface XRWebGLLayerInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "XRWebGLLayerInit"
   )
   interface Builder extends XRWebGLLayerInit {
     /**

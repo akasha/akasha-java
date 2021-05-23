@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PannerOptions"
 )
 public interface PannerOptions extends AudioNodeOptions {
   @JsOverlay
@@ -140,7 +140,7 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PannerOptions"
   )
   interface Builder extends PannerOptions {
     @JsOverlay

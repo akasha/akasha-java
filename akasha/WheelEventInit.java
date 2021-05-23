@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WheelEventInit"
 )
 public interface WheelEventInit extends MouseEventInit {
   @JsOverlay
@@ -59,7 +59,7 @@ public interface WheelEventInit extends MouseEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WheelEventInit"
   )
   interface Builder extends WheelEventInit {
     @JsOverlay

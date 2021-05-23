@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "MessageChannel"
 )
-public class MessageChannel {
+public class MessageChannel extends JsObject {
   /**
    * The MessageChannel() constructor of the MessageChannel interface returns a new MessageChannel object with two new MessagePort objects.
    *

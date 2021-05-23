@@ -2,6 +2,7 @@ package akasha.wasm;
 
 import akasha.core.ArrayBuffer;
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly.Module"
 )
-public class Module {
+public class Module extends JsObject {
   public Module(@Nonnull final BufferSource bytes) {
   }
 

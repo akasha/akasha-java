@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DragEventInit"
 )
 public interface DragEventInit extends MouseEventInit {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface DragEventInit extends MouseEventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DragEventInit"
   )
   interface Builder extends DragEventInit {
     @JsOverlay

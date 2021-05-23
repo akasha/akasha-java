@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AesGcmParams"
 )
 public interface AesGcmParams extends Algorithm {
   @JsOverlay
@@ -64,7 +64,7 @@ public interface AesGcmParams extends Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AesGcmParams"
   )
   interface Builder extends AesGcmParams {
     @JsOverlay

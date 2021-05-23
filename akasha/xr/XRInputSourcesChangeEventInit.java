@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "XRInputSourcesChangeEventInit"
 )
 public interface XRInputSourcesChangeEventInit extends EventInit {
   @JsOverlay
@@ -104,7 +104,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "XRInputSourcesChangeEventInit"
   )
   interface Builder extends XRInputSourcesChangeEventInit {
     /**

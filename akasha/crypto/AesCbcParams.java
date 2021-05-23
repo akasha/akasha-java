@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AesCbcParams"
 )
 public interface AesCbcParams extends Algorithm {
   @JsOverlay
@@ -48,7 +48,7 @@ public interface AesCbcParams extends Algorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AesCbcParams"
   )
   interface Builder extends AesCbcParams {
     @JsOverlay

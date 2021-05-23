@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "StreamPipeOptions"
 )
 public interface StreamPipeOptions {
   @JsOverlay
@@ -58,7 +58,7 @@ public interface StreamPipeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "StreamPipeOptions"
   )
   interface Builder extends StreamPipeOptions {
     @JsOverlay

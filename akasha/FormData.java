@@ -1,6 +1,8 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -23,7 +25,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "FormData"
 )
-public class FormData {
+public class FormData extends JsObject implements JsIterable<FormData.Entry> {
   /**
    * The FormData() constructor creates a new FormData object.
    *

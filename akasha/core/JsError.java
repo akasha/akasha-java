@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Error"
 )
-public class JsError {
+public class JsError extends JsObject {
   /**
    * The Error constructor creates an error object.
    *

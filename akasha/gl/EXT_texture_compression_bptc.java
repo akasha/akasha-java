@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "EXT_texture_compression_bptc"
 )
-public class EXT_texture_compression_bptc implements WebGLCommonExtension {
+public class EXT_texture_compression_bptc extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final int COMPRESSED_RGBA_BPTC_UNORM_EXT = 0x8E8C;
 

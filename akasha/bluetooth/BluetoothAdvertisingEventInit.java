@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BluetoothAdvertisingEventInit"
 )
 public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
@@ -99,7 +99,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BluetoothAdvertisingEventInit"
   )
   interface Builder extends BluetoothAdvertisingEventInit {
     @JsOverlay

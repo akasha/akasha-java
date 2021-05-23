@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.svg.SVGImageElement;
 import javaemul.internal.annotations.HasNoSideEffects;
@@ -16,7 +17,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "OffscreenCanvasRenderingContext2D"
 )
-public class OffscreenCanvasRenderingContext2D {
+public class OffscreenCanvasRenderingContext2D extends JsObject {
   @Nonnull
   @CanvasDirection
   public String direction;

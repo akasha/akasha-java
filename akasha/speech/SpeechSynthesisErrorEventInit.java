@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechSynthesisErrorEventInit"
 )
 public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit {
   @JsOverlay
@@ -37,7 +37,7 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "SpeechSynthesisErrorEventInit"
   )
   interface Builder extends SpeechSynthesisErrorEventInit {
     @JsOverlay

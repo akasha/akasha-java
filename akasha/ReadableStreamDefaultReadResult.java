@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ReadableStreamDefaultReadResult"
 )
 public interface ReadableStreamDefaultReadResult {
   @JsOverlay
@@ -46,7 +46,7 @@ public interface ReadableStreamDefaultReadResult {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ReadableStreamDefaultReadResult"
   )
   interface Builder extends ReadableStreamDefaultReadResult {
     @JsOverlay

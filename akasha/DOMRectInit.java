@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DOMRectInit"
 )
 public interface DOMRectInit {
   @JsOverlay
@@ -58,7 +58,7 @@ public interface DOMRectInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DOMRectInit"
   )
   interface Builder extends DOMRectInit {
     @JsOverlay

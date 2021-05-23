@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Boolean"
 )
-public class JsBoolean {
+public class JsBoolean extends JsObject {
   /**
    * The Boolean() constructor is used to create Boolean objects.
    *

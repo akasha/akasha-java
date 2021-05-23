@@ -1,5 +1,6 @@
 package akasha.audio;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AudioParam"
 )
-public class AudioParam {
+public class AudioParam extends JsObject {
   @Nonnull
   @AutomationRate
   public String automationRate;

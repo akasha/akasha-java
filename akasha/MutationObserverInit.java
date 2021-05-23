@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MutationObserverInit"
 )
 public interface MutationObserverInit {
   @JsOverlay
@@ -190,7 +190,7 @@ public interface MutationObserverInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MutationObserverInit"
   )
   interface Builder extends MutationObserverInit {
     /**

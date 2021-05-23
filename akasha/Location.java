@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Location"
 )
-public class Location {
+public class Location extends JsObject {
   /**
    * The hash property of the Location interface returns a USVString containing a '#' followed by the fragment identifier of the URL.
    *

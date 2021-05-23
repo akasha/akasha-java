@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "GetRootNodeOptions"
 )
 public interface GetRootNodeOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface GetRootNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "GetRootNodeOptions"
   )
   interface Builder extends GetRootNodeOptions {
     @JsOverlay

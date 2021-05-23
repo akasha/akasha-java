@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.ArrayBuffer;
+import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -23,7 +24,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "Request"
 )
-public class Request {
+public class Request extends JsObject {
   /**
    * The Request() constructor creates a new Request object.
    *

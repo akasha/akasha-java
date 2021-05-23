@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CompressionStream"
 )
-public class CompressionStream {
+public class CompressionStream extends JsObject {
   public CompressionStream(@Nonnull final String format) {
   }
 

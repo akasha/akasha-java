@@ -1,5 +1,6 @@
 package akasha.wasm;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -20,7 +21,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly.Global"
 )
-public class Global {
+public class Global extends JsObject {
   @Nullable
   public Any value;
 

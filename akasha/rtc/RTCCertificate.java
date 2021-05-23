@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCCertificate"
 )
-public class RTCCertificate {
+public class RTCCertificate extends JsObject {
   protected RTCCertificate() {
   }
 

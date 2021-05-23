@@ -1,6 +1,8 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -24,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "Headers"
 )
-public class Headers {
+public class Headers extends JsObject implements JsIterable<Headers.Entry> {
   /**
    * The Headers() constructor creates a new Headers object.
    *

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DOMMatrix2DInit"
 )
 public interface DOMMatrix2DInit {
   @JsOverlay
@@ -122,7 +122,7 @@ public interface DOMMatrix2DInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DOMMatrix2DInit"
   )
   interface Builder extends DOMMatrix2DInit {
     @JsOverlay

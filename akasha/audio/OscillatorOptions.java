@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OscillatorOptions"
 )
 public interface OscillatorOptions extends AudioNodeOptions {
   @JsOverlay
@@ -59,7 +59,7 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "OscillatorOptions"
   )
   interface Builder extends OscillatorOptions {
     @JsOverlay

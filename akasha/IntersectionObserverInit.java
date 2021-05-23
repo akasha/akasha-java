@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IntersectionObserverInit"
 )
 public interface IntersectionObserverInit {
   @JsOverlay
@@ -78,7 +78,7 @@ public interface IntersectionObserverInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IntersectionObserverInit"
   )
   interface Builder extends IntersectionObserverInit {
     @JsOverlay

@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CSSStyleDeclaration"
 )
-public class CSSStyleDeclaration {
+public class CSSStyleDeclaration extends JsObject {
   @Nonnull
   public String cssFloat;
 

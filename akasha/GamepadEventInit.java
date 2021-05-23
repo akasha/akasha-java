@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "GamepadEventInit"
 )
 public interface GamepadEventInit extends EventInit {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface GamepadEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "GamepadEventInit"
   )
   interface Builder extends GamepadEventInit {
     @JsOverlay

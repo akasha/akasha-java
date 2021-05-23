@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EcKeyAlgorithm"
 )
 public interface EcKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface EcKeyAlgorithm extends KeyAlgorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EcKeyAlgorithm"
   )
   interface Builder extends EcKeyAlgorithm {
     @JsOverlay

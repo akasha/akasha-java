@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +23,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "History"
 )
-public class History {
+public class History extends JsObject {
   /**
    * The scrollRestoration property of History interface allows web applications to explicitly set default scroll restoration behavior on history navigation.
    *

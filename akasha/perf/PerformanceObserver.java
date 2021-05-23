@@ -1,5 +1,6 @@
 package akasha.perf;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "PerformanceObserver"
 )
-public class PerformanceObserver {
+public class PerformanceObserver extends JsObject {
   /**
    * The PerformanceObserver() constructor creates a new PerformanceObserver object with the given observer callback. The observer callback is invoked when performance entry events are recorded for the entry types that have been registered, via the observe() method.
    *

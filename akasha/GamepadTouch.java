@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.Float32Array;
+import akasha.core.JsObject;
 import akasha.core.Uint32Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -15,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "GamepadTouch"
 )
-public class GamepadTouch {
+public class GamepadTouch extends JsObject {
   protected GamepadTouch() {
   }
 

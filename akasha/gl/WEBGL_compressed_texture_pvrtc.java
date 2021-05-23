@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_compressed_texture_pvrtc"
 )
-public class WEBGL_compressed_texture_pvrtc implements WebGLCommonExtension {
+public class WEBGL_compressed_texture_pvrtc extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final int COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 0x8C03;
 

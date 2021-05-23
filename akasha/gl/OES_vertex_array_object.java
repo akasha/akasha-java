@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
@@ -17,9 +18,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OES_vertex_array_object"
 )
-public class OES_vertex_array_object implements WebGL1Extension {
+public class OES_vertex_array_object extends JsObject implements WebGL1Extension {
   @JsOverlay
   public static final String NAME = "OES_vertex_array_object";
 

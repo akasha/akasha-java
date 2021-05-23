@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IIRFilterOptions"
 )
 public interface IIRFilterOptions extends AudioNodeOptions {
   @JsOverlay
@@ -76,7 +76,7 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IIRFilterOptions"
   )
   interface Builder extends IIRFilterOptions {
     @JsOverlay

@@ -3,6 +3,7 @@ package akasha;
 import akasha.bluetooth.Bluetooth;
 import akasha.clipboard.Clipboard;
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.media.MediaDevices;
 import akasha.promise.Promise;
@@ -26,7 +27,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Navigator"
 )
-public class Navigator {
+public class Navigator extends JsObject {
   protected Navigator() {
   }
 

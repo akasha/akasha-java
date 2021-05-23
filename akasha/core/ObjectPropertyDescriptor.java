@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ObjectPropertyDescriptor"
 )
 public interface ObjectPropertyDescriptor {
   @JsOverlay
@@ -78,7 +78,7 @@ public interface ObjectPropertyDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ObjectPropertyDescriptor"
   )
   interface Builder extends ObjectPropertyDescriptor {
     @JsOverlay

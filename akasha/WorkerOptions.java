@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WorkerOptions"
 )
 public interface WorkerOptions {
   @JsOverlay
@@ -52,7 +52,7 @@ public interface WorkerOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WorkerOptions"
   )
   interface Builder extends WorkerOptions {
     @JsOverlay

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "CryptoKeyPair"
 )
 public interface CryptoKeyPair {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface CryptoKeyPair {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "CryptoKeyPair"
   )
   interface Builder extends CryptoKeyPair {
     @JsOverlay

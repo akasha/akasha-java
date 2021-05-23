@@ -1,5 +1,6 @@
 package akasha.bluetooth;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "BluetoothCharacteristicProperties"
 )
-public class BluetoothCharacteristicProperties {
+public class BluetoothCharacteristicProperties extends JsObject {
   protected BluetoothCharacteristicProperties() {
   }
 

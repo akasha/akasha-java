@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCErrorEventInit"
 )
 public interface RTCErrorEventInit extends EventInit {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface RTCErrorEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCErrorEventInit"
   )
   interface Builder extends RTCErrorEventInit {
     @JsOverlay

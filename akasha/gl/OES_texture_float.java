@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -14,9 +15,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OES_texture_float"
 )
-public class OES_texture_float implements WebGL1Extension {
+public class OES_texture_float extends JsObject implements WebGL1Extension {
   protected OES_texture_float() {
   }
 }

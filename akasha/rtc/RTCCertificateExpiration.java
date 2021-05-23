@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCCertificateExpiration"
 )
 public interface RTCCertificateExpiration {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface RTCCertificateExpiration {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCCertificateExpiration"
   )
   interface Builder extends RTCCertificateExpiration {
     @JsOverlay

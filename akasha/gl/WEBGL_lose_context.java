@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -15,9 +16,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_lose_context"
 )
-public class WEBGL_lose_context implements WebGLCommonExtension {
+public class WEBGL_lose_context extends JsObject implements WebGLCommonExtension {
   @JsOverlay
   public static final String NAME = "WEBGL_lose_context";
 

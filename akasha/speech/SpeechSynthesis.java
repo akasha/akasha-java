@@ -25,7 +25,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechSynthesis"
 )
 public class SpeechSynthesis extends EventTarget {
   /**

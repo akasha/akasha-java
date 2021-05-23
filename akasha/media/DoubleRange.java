@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "DoubleRange"
 )
 public interface DoubleRange {
   @JsOverlay
@@ -54,7 +54,7 @@ public interface DoubleRange {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "DoubleRange"
   )
   interface Builder extends DoubleRange {
     @JsOverlay

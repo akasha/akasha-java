@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RequestDeviceOptions"
 )
 public interface RequestDeviceOptions {
   @JsOverlay
@@ -61,7 +61,7 @@ public interface RequestDeviceOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RequestDeviceOptions"
   )
   interface Builder extends RequestDeviceOptions {
     @JsOverlay

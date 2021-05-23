@@ -1,5 +1,6 @@
 package akasha.rtc;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCIdentityAssertion"
 )
-public class RTCIdentityAssertion {
+public class RTCIdentityAssertion extends JsObject {
   @Nonnull
   public String idp;
 

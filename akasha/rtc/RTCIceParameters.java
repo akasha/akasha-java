@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCIceParameters"
 )
 public interface RTCIceParameters {
   @JsOverlay
@@ -78,7 +78,7 @@ public interface RTCIceParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCIceParameters"
   )
   interface Builder extends RTCIceParameters {
     /**

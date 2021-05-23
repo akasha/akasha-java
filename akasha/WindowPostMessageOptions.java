@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WindowPostMessageOptions"
 )
 public interface WindowPostMessageOptions extends PostMessageOptions {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface WindowPostMessageOptions extends PostMessageOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WindowPostMessageOptions"
   )
   interface Builder extends WindowPostMessageOptions {
     @JsOverlay

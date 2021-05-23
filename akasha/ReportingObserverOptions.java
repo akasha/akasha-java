@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ReportingObserverOptions"
 )
 public interface ReportingObserverOptions {
   @JsOverlay
@@ -60,7 +60,7 @@ public interface ReportingObserverOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ReportingObserverOptions"
   )
   interface Builder extends ReportingObserverOptions {
     @JsOverlay

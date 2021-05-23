@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RsaHashedKeyAlgorithm"
 )
 public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsOverlay
@@ -37,7 +37,7 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RsaHashedKeyAlgorithm"
   )
   interface Builder extends RsaHashedKeyAlgorithm {
     @JsOverlay

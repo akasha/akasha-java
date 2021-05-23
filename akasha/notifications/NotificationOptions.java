@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "NotificationOptions"
 )
 public interface NotificationOptions {
   @JsOverlay
@@ -165,7 +165,7 @@ public interface NotificationOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "NotificationOptions"
   )
   interface Builder extends NotificationOptions {
     @JsOverlay

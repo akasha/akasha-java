@@ -1,7 +1,9 @@
 package akasha;
 
 import akasha.core.BufferSource;
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
@@ -26,7 +28,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "MediaKeyStatusMap"
 )
-public class MediaKeyStatusMap {
+public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeyStatusMap.Entry> {
   protected MediaKeyStatusMap() {
   }
 

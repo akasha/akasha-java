@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ChannelMergerOptions"
 )
 public interface ChannelMergerOptions extends AudioNodeOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ChannelMergerOptions extends AudioNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ChannelMergerOptions"
   )
   interface Builder extends ChannelMergerOptions {
     @JsOverlay
