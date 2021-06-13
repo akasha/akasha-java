@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The AudioContext interface represents an audio-processing graph built from audio modules linked together, each represented by an AudioNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext">AudioContext - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContext">AudioContext - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContext"># AudioContext</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

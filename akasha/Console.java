@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The console object provides access to the browser's debugging console (e.g. the Web Console in Firefox). The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console - MDN</a>
- * @see <a href="https://console.spec.whatwg.org/">Console API</a>
+ * @see <a href="https://console.spec.whatwg.org/#console-namespace">(Console) # console-namespace</a>
  */
 @JsType(
     isNative = true,

@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The AnimationTimeline interface of the Web Animations API represents the timeline of an animation. This interface exists to define timeline features (inherited by DocumentTimeline and future timeline types) and is not itself directly used by developers. Anywhere you see AnimationTimeline, you should use DocumentTimeline or any other timeline type instead.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline">AnimationTimeline - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations-1/#the-animationtimeline-interface">AnimationTimeline - Web Animations</a>
+ * @see <a href="https://drafts.csswg.org/web-animations/#the-animationtimeline-interface">(Web Animations 2) # the-animationtimeline-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,4 +35,11 @@ public class AnimationTimeline extends JsObject {
   )
   @Nullable
   public native Double currentTime();
+
+  @JsProperty(
+      name = "phase"
+  )
+  @Nonnull
+  @TimelinePhase
+  public native String phase();
 }

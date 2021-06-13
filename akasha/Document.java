@@ -1622,15 +1622,6 @@ public class Document extends Node {
   public native Selection getSelection();
 
   /**
-   * The getAnimations() method of the Document interface returns an array of all Animation objects currently in effect whose target elements are descendants of the document. This array includes CSS Animations, CSS Transitions, and Web Animations.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-documentorshadowroot-getanimations">The definition of 'document.getAnimations()' in Web Animations.</a>
-   */
-  @Nonnull
-  public native JsArray<Animation> getAnimations();
-
-  /**
    * The Document method exitFullscreen() requests that the element on this document which is currently being presented in full-screen mode be taken out of full-screen mode, restoring the previous state of the screen.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen">Document.exitFullscreen - MDN</a>
@@ -1954,121 +1945,14 @@ public class Document extends Node {
   @Nullable
   public native Element getElementById(@Nonnull String elementId);
 
+  /**
+   * The getAnimations() method of the Document interface returns an array of all Animation objects currently in effect whose target elements are descendants of the document. This array includes CSS Animations, CSS Transitions, and Web Animations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-documentorshadowroot-getanimations">The definition of 'document.getAnimations()' in Web Animations.</a>
+   */
   @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads(@Nonnull BoxQuadOptions options);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads();
+  public native JsArray<Animation> getAnimations();
 
   @JsOverlay
   public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,

@@ -13,9 +13,9 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "authenticatorBiometricPerfBounds"
+    name = "AudioEncoderSupport"
 )
-public interface AuthenticatorBiometricPerfBounds {
+public interface AudioEncoderSupport {
   @JsOverlay
   @Nonnull
   static Builder create() {
@@ -23,39 +23,39 @@ public interface AuthenticatorBiometricPerfBounds {
   }
 
   @JsProperty(
-      name = "FAR"
+      name = "config"
   )
-  float FAR();
+  AudioEncoderConfig config();
 
   @JsProperty
-  void setFAR(float FAR);
+  void setConfig(@Nonnull AudioEncoderConfig config);
 
   @JsProperty(
-      name = "FRR"
+      name = "supported"
   )
-  float FRR();
+  boolean supported();
 
   @JsProperty
-  void setFRR(float FRR);
+  void setSupported(boolean supported);
 
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "authenticatorBiometricPerfBounds"
+      name = "AudioEncoderSupport"
   )
-  interface Builder extends AuthenticatorBiometricPerfBounds {
+  interface Builder extends AudioEncoderSupport {
     @JsOverlay
     @Nonnull
-    default Builder FAR(final float FAR) {
-      setFAR( FAR );
+    default Builder config(@Nonnull final AudioEncoderConfig config) {
+      setConfig( config );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder FRR(final float FRR) {
-      setFRR( FRR );
+    default Builder supported(final boolean supported) {
+      setSupported( supported );
       return this;
     }
   }

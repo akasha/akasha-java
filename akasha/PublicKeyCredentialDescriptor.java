@@ -20,8 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BufferSource id,
-      @PublicKeyCredentialType @Nonnull final String type) {
+  static Builder create(@Nonnull final BufferSource id, @Nonnull final String type) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
@@ -50,12 +49,11 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty(
       name = "type"
   )
-  @PublicKeyCredentialType
   @Nonnull
   String type();
 
   @JsProperty
-  void setType(@PublicKeyCredentialType @Nonnull String type);
+  void setType(@Nonnull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -87,7 +85,7 @@ public interface PublicKeyCredentialDescriptor {
 
     @JsOverlay
     @Nonnull
-    default Builder type(@PublicKeyCredentialType @Nonnull final String type) {
+    default Builder type(@Nonnull final String type) {
       setType( type );
       return this;
     }

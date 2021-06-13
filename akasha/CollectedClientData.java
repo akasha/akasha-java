@@ -33,6 +33,14 @@ public interface CollectedClientData {
   void setChallenge(@Nonnull String challenge);
 
   @JsProperty(
+      name = "crossOrigin"
+  )
+  boolean crossOrigin();
+
+  @JsProperty
+  void setCrossOrigin(boolean crossOrigin);
+
+  @JsProperty(
       name = "origin"
   )
   @Nonnull
@@ -69,6 +77,13 @@ public interface CollectedClientData {
     @Nonnull
     default Builder challenge(@Nonnull final String challenge) {
       setChallenge( challenge );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder crossOrigin(final boolean crossOrigin) {
+      setCrossOrigin( crossOrigin );
       return this;
     }
 

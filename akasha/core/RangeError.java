@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The RangeError object indicates an error when a value is not in the set or range of allowed values.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError">RangeError - MDN</a>
- * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-rangeerror">RangeError - ECMAScript (ECMA-262)</a>
+ * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-rangeerror">(ECMAScript) # sec-native-error-types-used-in-this-standard-rangeerror</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

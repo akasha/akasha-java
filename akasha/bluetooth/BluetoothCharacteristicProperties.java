@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The BluetoothCharacteristicProperties interface of the Web Bluetooth API provides the operations that are valid on the given BluetoothRemoteGATTCharacteristic.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties">BluetoothCharacteristicProperties - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#characteristicproperties-interface">BluetoothCharacteristicProperties - Web Bluetooth</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#characteristicproperties-interface"># characteristicproperties-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

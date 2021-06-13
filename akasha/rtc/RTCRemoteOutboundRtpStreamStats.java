@@ -87,6 +87,30 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   @JsProperty
   void setReportsSent(int reportsSent);
 
+  @JsProperty(
+      name = "roundTripTime"
+  )
+  double roundTripTime();
+
+  @JsProperty
+  void setRoundTripTime(double roundTripTime);
+
+  @JsProperty(
+      name = "roundTripTimeMeasurements"
+  )
+  int roundTripTimeMeasurements();
+
+  @JsProperty
+  void setRoundTripTimeMeasurements(int roundTripTimeMeasurements);
+
+  @JsProperty(
+      name = "totalRoundTripTime"
+  )
+  double totalRoundTripTime();
+
+  @JsProperty
+  void setTotalRoundTripTime(double totalRoundTripTime);
+
   /**
    * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
    *
@@ -135,6 +159,27 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     @Nonnull
     default Builder reportsSent(final int reportsSent) {
       setReportsSent( reportsSent );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder roundTripTime(final double roundTripTime) {
+      setRoundTripTime( roundTripTime );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder roundTripTimeMeasurements(final int roundTripTimeMeasurements) {
+      setRoundTripTimeMeasurements( roundTripTimeMeasurements );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder totalRoundTripTime(final double totalRoundTripTime) {
+      setTotalRoundTripTime( totalRoundTripTime );
       return this;
     }
 

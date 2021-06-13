@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -11,30 +12,18 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GeometryNode"
+    name = "ImageBufferSource"
 )
-public interface GeometryNode {
+public interface ImageBufferSource {
   @JsOverlay
   @Nonnull
-  static GeometryNode of(@Nonnull final Text value) {
+  static ImageBufferSource of(@Nonnull final BufferSource value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static GeometryNode of(@Nonnull final Element value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static GeometryNode of(@Nonnull final CSSPseudoElement value) {
-    return Js.cast( value );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static GeometryNode of(@Nonnull final Document value) {
+  static ImageBufferSource of(@Nonnull final ReadableStream value) {
     return Js.cast( value );
   }
 }

@@ -20,7 +20,7 @@ import jsinterop.base.Js;
  * The Bluetooth interface of the Web Bluetooth API returns a Promise to a BluetoothDevice object with the specified options.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth">Bluetooth - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">Bluetooth - Web Bluetooth</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth"># bluetooth</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

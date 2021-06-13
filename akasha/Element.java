@@ -18,9 +18,7 @@ import jsinterop.base.Js;
  * Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-pseudo-4/#window-interface">Element - CSS Pseudo-Elements Level 4</a>
  * @see <a href="https://drafts.csswg.org/web-animations-1/">Web Animations</a>
- * @see <a href="https://dvcs.w3.org/hg/undomanager/raw-file/tip/undomanager.html">Element - UndoManager and DOMTransaction</a>
  * @see <a href="https://www.w3.org/TR/pointerevents2/#extensions-to-the-element-interface">Element - Pointer Events &ndash; Level 2</a>
  * @see <a href="https://www.w3.org/TR/pointerevents1/#extensions-to-the-element-interface">Element - Pointer Events</a>
  * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">Element - Selectors API Level 1</a>
@@ -947,122 +945,6 @@ public class Element extends Node {
    */
   public native void replaceChildren(@Nonnull String... nodes);
 
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMPoint convertPointFromNode(@Nonnull DOMPointInit point, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertQuadFromNode(@Nonnull DOMQuadInit quad, @Nonnull Document from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from, @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from,
-      @Nonnull ConvertCoordinateOptions options);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull GeometryNode from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Text from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Element from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect,
-      @Nonnull CSSPseudoElement from);
-
-  @Nonnull
-  public native DOMQuad convertRectFromNode(@Nonnull DOMRectReadOnly rect, @Nonnull Document from);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads(@Nonnull BoxQuadOptions options);
-
-  @Nonnull
-  public native JsArray<DOMQuad> getBoxQuads();
-
   /**
    * The ChildNode.after() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just after this ChildNode. DOMString objects are inserted as equivalent Text nodes.
    *
@@ -1143,6 +1025,15 @@ public class Element extends Node {
    */
   @Nonnull
   public native Animation animate(@Nullable JsObject keyframes);
+
+  /**
+   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
+   */
+  @Nonnull
+  public native JsArray<Animation> getAnimations(@Nonnull GetAnimationsOptions options);
 
   /**
    * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.

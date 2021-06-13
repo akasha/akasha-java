@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLOptionElement interface represents &lt;option&gt; elements and inherits all classes and methods of the HTMLElement interface.
+ * The HTMLOptionElement interface represents &lt;option&gt; elements and inherits all properties and methods of the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement">HTMLOptionElement - MDN</a>
  * @see <a href="https://html.spec.whatwg.org/multipage/#htmloptionelement">HTMLOptionElement - HTML Living Standard</a>

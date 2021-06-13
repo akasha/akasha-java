@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The ChannelSplitterNode interface, often used in conjunction with its opposite, ChannelMergerNode, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelSplitterNode">ChannelSplitterNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#channelsplitternode">ChannelSplitterNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#ChannelSplitterNode"># ChannelSplitterNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -349,6 +349,24 @@ public final class WindowGlobal {
   public static EventHandler onformdata;
 
   /**
+   * The ongamepadconnected property of the Window interface represents an event handler that will run when a gamepad is connected (when the gamepadconnected event fires).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepadconnected">Window.ongamepadconnected - MDN</a>
+   * @see <a href="https://w3c.github.io/gamepad/#event-gamepadconnected">gamepadconnected event - Gamepad</a>
+   */
+  @Nullable
+  public static GamepadEventHandler ongamepadconnected;
+
+  /**
+   * The ongamepaddisconnected property of the Window interface represents an event handler that will run when a gamepad is disconnected (when the gamepaddisconnected event fires).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepaddisconnected">Window.ongamepaddisconnected - MDN</a>
+   * @see <a href="https://w3c.github.io/gamepad/#event-gamepaddisconnected">gamepaddisconnected event - Gamepad</a>
+   */
+  @Nullable
+  public static GamepadEventHandler ongamepaddisconnected;
+
+  /**
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
@@ -3757,7 +3775,7 @@ public final class WindowGlobal {
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty">(ECMAScript) # sec-object.prototype.hasownproperty</a>
    */
   @HasNoSideEffects
   public static native boolean hasOwnProperty(@Nonnull Symbol prop);
@@ -3766,7 +3784,7 @@ public final class WindowGlobal {
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty">(ECMAScript) # sec-object.prototype.hasownproperty</a>
    */
   @HasNoSideEffects
   public static native boolean hasOwnProperty(@Nonnull String prop);
@@ -3775,7 +3793,7 @@ public final class WindowGlobal {
    * The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable and is the object's own property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">Object.propertyIsEnumerable - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable">Object.prototype.propertyIsEnumerable - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable">(ECMAScript) # sec-object.prototype.propertyisenumerable</a>
    */
   @HasNoSideEffects
   public static native boolean propertyIsEnumerable(@Nonnull String prop);
@@ -3784,7 +3802,7 @@ public final class WindowGlobal {
    * The isPrototypeOf() method checks if an object exists in another object's prototype chain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf">Object.isPrototypeOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.isprototypeof">Object.prototype.isPrototypeOf - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.isprototypeof">(ECMAScript) # sec-object.prototype.isprototypeof</a>
    */
   @HasNoSideEffects
   public static native boolean isPrototypeOf(@Nonnull JsObject obj);
@@ -3793,7 +3811,7 @@ public final class WindowGlobal {
    * The valueOf() method returns the primitive value of the specified object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.valueof">(ECMAScript) # sec-object.prototype.valueof</a>
    */
   @JsMethod(
       name = "valueOf"
@@ -3805,7 +3823,7 @@ public final class WindowGlobal {
    * The toString() method returns a string representing the object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.toString - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.tostring">Object.prototype.toString - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.tostring">(ECMAScript) # sec-object.prototype.tostring</a>
    */
   @JsMethod(
       name = "toString"

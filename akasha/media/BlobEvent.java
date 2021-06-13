@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The BlobEvent interface represents events associated with a Blob. These blobs are typically, but not necessarily, associated with media content.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent">BlobEvent - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-record/#blobevent-section">BlobEvent - MediaStream Recording</a>
+ * @see <a href="https://w3c.github.io/mediacapture-record/#blobevent-section"># blobevent-section</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

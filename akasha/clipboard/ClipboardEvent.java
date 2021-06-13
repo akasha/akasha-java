@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The ClipboardEvent interface represents events providing information related to modification of the clipboard, that is cut, copy, and paste events.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent">ClipboardEvent - MDN</a>
- * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces">ClipboardEvent - Clipboard API and events</a>
+ * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces"># clipboard-event-interfaces</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

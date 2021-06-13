@@ -33,6 +33,10 @@ public class HTMLSlotElement extends HTMLElement {
   protected HTMLSlotElement() {
   }
 
+  public native void assign(@Nonnull Element... nodes);
+
+  public native void assign(@Nonnull Text... nodes);
+
   /**
    * The assignedElements() property of the HTMLSlotElement interface returns a sequence of the elements assigned to this slot (and no other nodes). If the flatten option is set to true, it also returns the assigned elements of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.
    *

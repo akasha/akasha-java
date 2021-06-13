@@ -45,6 +45,19 @@ public interface RequestDeviceOptions {
   }
 
   @JsProperty(
+      name = "optionalManufacturerData"
+  )
+  JsArray<Double> optionalManufacturerData();
+
+  @JsProperty
+  void setOptionalManufacturerData(@Nonnull JsArray<Double> optionalManufacturerData);
+
+  @JsOverlay
+  default void setOptionalManufacturerData(@Nonnull final double... optionalManufacturerData) {
+    setOptionalManufacturerData( Js.<JsArray<Double>>uncheckedCast( optionalManufacturerData ) );
+  }
+
+  @JsProperty(
       name = "optionalServices"
   )
   JsArray<BluetoothServiceUUID> optionalServices();
@@ -82,6 +95,21 @@ public interface RequestDeviceOptions {
     @Nonnull
     default Builder filters(@Nonnull final BluetoothLEScanFilterInit... filters) {
       setFilters( filters );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalManufacturerData(
+        @Nonnull final JsArray<Double> optionalManufacturerData) {
+      setOptionalManufacturerData( optionalManufacturerData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalManufacturerData(@Nonnull final double... optionalManufacturerData) {
+      setOptionalManufacturerData( optionalManufacturerData );
       return this;
     }
 

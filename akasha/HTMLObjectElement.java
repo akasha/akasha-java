@@ -12,7 +12,6 @@ import jsinterop.annotations.JsType;
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement">HTMLObjectElement - MDN</a>
  * @see <a href="https://html.spec.whatwg.org/multipage/#htmlobjectelement">HTMLObjectElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#the-object-element">HTMLObjectElement - HTML5</a>
  * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9893177">HTMLObjectElement - Document Object Model (DOM) Level 2 HTML Specification</a>
  * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-9893177">HTMLObjectElement - Document Object Model (DOM) Level 1 Specification</a>
  */

@@ -152,7 +152,6 @@ public interface PublicKeyCredentialRequestOptions {
   @JsProperty(
       name = "userVerification"
   )
-  @UserVerificationRequirement
   String userVerification();
 
   /**
@@ -162,7 +161,7 @@ public interface PublicKeyCredentialRequestOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification">userVerification - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setUserVerification(@UserVerificationRequirement @Nonnull String userVerification);
+  void setUserVerification(@Nonnull String userVerification);
 
   /**
    * The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.
@@ -265,8 +264,7 @@ public interface PublicKeyCredentialRequestOptions {
      */
     @JsOverlay
     @Nonnull
-    default Builder userVerification(
-        @UserVerificationRequirement @Nonnull final String userVerification) {
+    default Builder userVerification(@Nonnull final String userVerification) {
       setUserVerification( userVerification );
       return this;
     }

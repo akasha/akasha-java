@@ -45,6 +45,15 @@ public interface CanvasRenderingContext2DSettings {
   @JsProperty
   void setAlpha(boolean alpha);
 
+  @JsProperty(
+      name = "colorSpace"
+  )
+  @PredefinedColorSpace
+  String colorSpace();
+
+  @JsProperty
+  void setColorSpace(@PredefinedColorSpace @Nonnull String colorSpace);
+
   /**
    * A flag that provides a hint to the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
    *
@@ -84,6 +93,13 @@ public interface CanvasRenderingContext2DSettings {
     @Nonnull
     default Builder alpha(final boolean alpha) {
       setAlpha( alpha );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder colorSpace(@PredefinedColorSpace @Nonnull final String colorSpace) {
+      setColorSpace( colorSpace );
       return this;
     }
 

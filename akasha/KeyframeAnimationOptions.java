@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,6 +31,15 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsProperty
   void setId(@Nonnull String id);
 
+  @JsProperty(
+      name = "timeline"
+  )
+  @Nullable
+  AnimationTimeline timeline();
+
+  @JsProperty
+  void setTimeline(@Nullable AnimationTimeline timeline);
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -46,6 +56,13 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
 
     @JsOverlay
     @Nonnull
+    default Builder timeline(@Nullable final AnimationTimeline timeline) {
+      setTimeline( timeline );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder composite(@CompositeOperation @Nonnull final String composite) {
       setComposite( composite );
       return this;
@@ -53,9 +70,8 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
 
     @JsOverlay
     @Nonnull
-    default Builder iterationComposite(
-        @IterationCompositeOperation @Nonnull final String iterationComposite) {
-      setIterationComposite( iterationComposite );
+    default Builder pseudoElement(@Nonnull final String pseudoElement) {
+      setPseudoElement( pseudoElement );
       return this;
     }
 

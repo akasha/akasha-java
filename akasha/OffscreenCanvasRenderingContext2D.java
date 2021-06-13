@@ -31,6 +31,18 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
   @Nonnull
   public String font;
 
+  @Nonnull
+  @CanvasFontKerning
+  public String fontKerning;
+
+  @Nonnull
+  @CanvasFontStretch
+  public String fontStretch;
+
+  @Nonnull
+  @CanvasFontVariantCaps
+  public String fontVariantCaps;
+
   public double globalAlpha;
 
   @Nonnull
@@ -75,6 +87,14 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
   @Nonnull
   @CanvasTextBaseline
   public String textBaseline;
+
+  public double textLetterSpacing;
+
+  @Nonnull
+  @CanvasTextRendering
+  public String textRendering;
+
+  public double textWordSpacing;
 
   protected OffscreenCanvasRenderingContext2D() {
   }
@@ -130,11 +150,19 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
 
   @HasNoSideEffects
   @Nonnull
+  public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
+
+  @HasNoSideEffects
+  @Nonnull
   public native ImageData createImageData(int sw, int sh);
 
   @HasNoSideEffects
   @Nonnull
   public native ImageData createImageData(@Nonnull ImageData imagedata);
+
+  @Nonnull
+  public native ImageData getImageData(int sx, int sy, int sw, int sh,
+      @Nonnull ImageDataSettings settings);
 
   @Nonnull
   public native ImageData getImageData(int sx, int sy, int sw, int sh);
@@ -143,6 +171,8 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
 
   public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy, int dirtyX,
       int dirtyY, int dirtyWidth, int dirtyHeight);
+
+  public native void reset();
 
   public native void restore();
 
@@ -153,6 +183,9 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
   public native void fillRect(double x, double y, double w, double h);
 
   public native void strokeRect(double x, double y, double w, double h);
+
+  @Nonnull
+  public native CanvasGradient createConicGradient(double startAngle, double x, double y);
 
   @Nonnull
   public native CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);

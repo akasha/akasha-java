@@ -49,6 +49,12 @@ public class HTMLFrameSetElement extends HTMLElement {
   @Nullable
   public OnBeforeUnloadEventHandler onbeforeunload;
 
+  @Nullable
+  public EventHandler ongamepadconnected;
+
+  @Nullable
+  public EventHandler ongamepaddisconnected;
+
   /**
    * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
    *

@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
  * The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively. You wouldn't use BaseAudioContext directly &mdash; you'd use its features via one of these two inheriting interfaces.The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext">BaseAudioContext - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#BaseAudioContext">BaseAudioContext - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#BaseAudioContext"># BaseAudioContext</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

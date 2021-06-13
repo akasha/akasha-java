@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -10,7 +11,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
+ * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffectOptions">KeyframeEffectOptions - MDN</a>
  * @see <a href="https://drafts.csswg.org/web-animations-2/#the-keyframeeffectoptions-dictionary">KeyframeEffectOptions - Web Animations Level 2</a>
@@ -39,16 +40,16 @@ public interface KeyframeEffectOptions extends EffectTiming {
   void setComposite(@CompositeOperation @Nonnull String composite);
 
   @JsProperty(
-      name = "iterationComposite"
+      name = "pseudoElement"
   )
-  @IterationCompositeOperation
-  String iterationComposite();
+  @Nullable
+  String pseudoElement();
 
   @JsProperty
-  void setIterationComposite(@IterationCompositeOperation @Nonnull String iterationComposite);
+  void setPseudoElement(@Nullable String pseudoElement);
 
   /**
-   * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
+   * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffectOptions">KeyframeEffectOptions - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-2/#the-keyframeeffectoptions-dictionary">KeyframeEffectOptions - Web Animations Level 2</a>
@@ -70,9 +71,8 @@ public interface KeyframeEffectOptions extends EffectTiming {
 
     @JsOverlay
     @Nonnull
-    default Builder iterationComposite(
-        @IterationCompositeOperation @Nonnull final String iterationComposite) {
-      setIterationComposite( iterationComposite );
+    default Builder pseudoElement(@Nonnull final String pseudoElement) {
+      setPseudoElement( pseudoElement );
       return this;
     }
 

@@ -19,7 +19,7 @@ import jsinterop.base.Js;
  * The BluetoothDevice interface of the Web Bluetooth API represents a Bluetooth device inside a particular script execution environment.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice">BluetoothDevice - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice">BluetoothDevice - Web Bluetooth</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice-interface"># bluetoothdevice-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions">AudioNodeOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audionodeoptions">AudioNodeOptions - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNodeOptions"># AudioNodeOptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -58,7 +58,7 @@ public interface AudioNodeOptions {
    * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions">AudioNodeOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audionodeoptions">AudioNodeOptions - Web Audio API</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNodeOptions"># AudioNodeOptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

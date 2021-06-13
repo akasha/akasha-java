@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLStyleElement interface represents a &lt;style&gt; element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle.
+ * The HTMLStyleElement interface represents a &lt;style&gt; element. It inherits properties and methods from its parent, HTMLElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement">HTMLStyleElement - MDN</a>
  * @see <a href="https://html.spec.whatwg.org/multipage/#htmlstyleelement">HTMLStyleElement - HTML Living Standard</a>

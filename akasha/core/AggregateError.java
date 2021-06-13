@@ -12,7 +12,6 @@ import jsinterop.base.Any;
  * The AggregateError object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by Promise.any(), when all promises passed to it reject.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError">AggregateError - MDN</a>
- * @see <a href="https://tc39.es/ecma262/#sec-aggregate-error-objects">AggregateError - ECMAScript (ECMA-262)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

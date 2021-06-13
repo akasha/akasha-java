@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The BluetoothRemoteGATTDescriptor interface of the Web Bluetooth API provides a GATT Descriptor, which provides further information about a characteristic&rsquo;s value.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor">BluetoothRemoteGATTDescriptor - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattdescriptor">BluetoothRemoteGATTDescriptor - Web Bluetooth</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothgattdescriptor-interface"># bluetoothgattdescriptor-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

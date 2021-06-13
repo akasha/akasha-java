@@ -8,5 +8,5 @@ import jsinterop.annotations.JsFunction;
 @JsFunction
 @FunctionalInterface
 public interface PositionCallback {
-  void onInvoke(@Nonnull Position position);
+  void onInvoke(@Nonnull GeolocationPosition position);
 }

@@ -65,13 +65,6 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
 
     @JsOverlay
     @Nonnull
-    default Builder icon(@Nonnull final String icon) {
-      setIcon( icon );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder name(@Nonnull final String name) {
       setName( name );
       return this;

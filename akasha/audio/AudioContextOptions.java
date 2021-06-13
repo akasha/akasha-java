@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions">AudioContextOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions">AudioContextOptions - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions"># AudioContextOptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -94,7 +94,7 @@ public interface AudioContextOptions {
    * The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions">AudioContextOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions">AudioContextOptions - Web Audio API</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions"># AudioContextOptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

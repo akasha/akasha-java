@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The Web Audio API's AudioParam interface represents an audio-related parameter, usually a parameter of an AudioNode (such as GainNode.gain).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam">AudioParam - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioParam">AudioParam - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioParam"># AudioParam</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

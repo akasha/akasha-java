@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -37,7 +38,7 @@ public class Geolocation extends JsObject {
    * @see <a href="https://w3c.github.io/geolocation-api/">Geolocation API</a>
    */
   public native void getCurrentPosition(@Nonnull PositionCallback successCallback,
-      @Nonnull PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
+      @Nullable PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
 
   /**
    * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
@@ -46,7 +47,7 @@ public class Geolocation extends JsObject {
    * @see <a href="https://w3c.github.io/geolocation-api/">Geolocation API</a>
    */
   public native void getCurrentPosition(@Nonnull PositionCallback successCallback,
-      @Nonnull PositionErrorCallback errorCallback);
+      @Nullable PositionErrorCallback errorCallback);
 
   /**
    * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
@@ -63,7 +64,7 @@ public class Geolocation extends JsObject {
    * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">watchPosition() - Geolocation API</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback,
-      @Nonnull PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
+      @Nullable PositionErrorCallback errorCallback, @Nonnull PositionOptions options);
 
   /**
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.
@@ -72,7 +73,7 @@ public class Geolocation extends JsObject {
    * @see <a href="https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition">watchPosition() - Geolocation API</a>
    */
   public native int watchPosition(@Nonnull PositionCallback successCallback,
-      @Nonnull PositionErrorCallback errorCallback);
+      @Nullable PositionErrorCallback errorCallback);
 
   /**
    * The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.

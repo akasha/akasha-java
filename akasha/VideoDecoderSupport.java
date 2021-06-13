@@ -13,9 +13,9 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "ConvertCoordinateOptions"
+    name = "VideoDecoderSupport"
 )
-public interface ConvertCoordinateOptions {
+public interface VideoDecoderSupport {
   @JsOverlay
   @Nonnull
   static Builder create() {
@@ -23,41 +23,39 @@ public interface ConvertCoordinateOptions {
   }
 
   @JsProperty(
-      name = "fromBox"
+      name = "config"
   )
-  @CSSBoxType
-  String fromBox();
+  VideoDecoderConfig config();
 
   @JsProperty
-  void setFromBox(@CSSBoxType @Nonnull String fromBox);
+  void setConfig(@Nonnull VideoDecoderConfig config);
 
   @JsProperty(
-      name = "toBox"
+      name = "supported"
   )
-  @CSSBoxType
-  String toBox();
+  boolean supported();
 
   @JsProperty
-  void setToBox(@CSSBoxType @Nonnull String toBox);
+  void setSupported(boolean supported);
 
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "ConvertCoordinateOptions"
+      name = "VideoDecoderSupport"
   )
-  interface Builder extends ConvertCoordinateOptions {
+  interface Builder extends VideoDecoderSupport {
     @JsOverlay
     @Nonnull
-    default Builder fromBox(@CSSBoxType @Nonnull final String fromBox) {
-      setFromBox( fromBox );
+    default Builder config(@Nonnull final VideoDecoderConfig config) {
+      setConfig( config );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder toBox(@CSSBoxType @Nonnull final String toBox) {
-      setToBox( toBox );
+    default Builder supported(final boolean supported) {
+      setSupported( supported );
       return this;
     }
   }

@@ -25,11 +25,10 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty(
       name = "authenticatorAttachment"
   )
-  @AuthenticatorAttachment
   String authenticatorAttachment();
 
   @JsProperty
-  void setAuthenticatorAttachment(@AuthenticatorAttachment @Nonnull String authenticatorAttachment);
+  void setAuthenticatorAttachment(@Nonnull String authenticatorAttachment);
 
   @JsProperty(
       name = "requireResidentKey"
@@ -40,13 +39,20 @@ public interface AuthenticatorSelectionCriteria {
   void setRequireResidentKey(boolean requireResidentKey);
 
   @JsProperty(
+      name = "residentKey"
+  )
+  String residentKey();
+
+  @JsProperty
+  void setResidentKey(@Nonnull String residentKey);
+
+  @JsProperty(
       name = "userVerification"
   )
-  @UserVerificationRequirement
   String userVerification();
 
   @JsProperty
-  void setUserVerification(@UserVerificationRequirement @Nonnull String userVerification);
+  void setUserVerification(@Nonnull String userVerification);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -57,8 +63,7 @@ public interface AuthenticatorSelectionCriteria {
   interface Builder extends AuthenticatorSelectionCriteria {
     @JsOverlay
     @Nonnull
-    default Builder authenticatorAttachment(
-        @AuthenticatorAttachment @Nonnull final String authenticatorAttachment) {
+    default Builder authenticatorAttachment(@Nonnull final String authenticatorAttachment) {
       setAuthenticatorAttachment( authenticatorAttachment );
       return this;
     }
@@ -72,8 +77,14 @@ public interface AuthenticatorSelectionCriteria {
 
     @JsOverlay
     @Nonnull
-    default Builder userVerification(
-        @UserVerificationRequirement @Nonnull final String userVerification) {
+    default Builder residentKey(@Nonnull final String residentKey) {
+      setResidentKey( residentKey );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder userVerification(@Nonnull final String userVerification) {
       setUserVerification( userVerification );
       return this;
     }

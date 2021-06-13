@@ -371,6 +371,14 @@ public interface MediaTrackSupportedConstraints {
   @JsProperty
   void setRestrictOwnAudio(boolean restrictOwnAudio);
 
+  @JsProperty(
+      name = "suppressLocalAudioPlayback"
+  )
+  boolean suppressLocalAudioPlayback();
+
+  @JsProperty
+  void setSuppressLocalAudioPlayback(boolean suppressLocalAudioPlayback);
+
   /**
    * The MediaTrackSupportedConstraints dictionary establishes the list of constrainable properties recognized by the user agent or browser in its implementation of the MediaStreamTrack object. An object conforming to MediaTrackSupportedConstraints is returned by MediaDevices.getSupportedConstraints().
    *
@@ -609,6 +617,13 @@ public interface MediaTrackSupportedConstraints {
     @Nonnull
     default Builder restrictOwnAudio(final boolean restrictOwnAudio) {
       setRestrictOwnAudio( restrictOwnAudio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(final boolean suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
       return this;
     }
   }

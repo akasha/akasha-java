@@ -51,7 +51,6 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty(
       name = "attestation"
   )
-  @AttestationConveyancePreference
   String attestation();
 
   /**
@@ -61,7 +60,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">attestation - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setAttestation(@AttestationConveyancePreference @Nonnull String attestation);
+  void setAttestation(@Nonnull String attestation);
 
   /**
    * authenticatorSelection, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object giving criteria to filter out the authenticators to be used for the creation operation.
@@ -272,8 +271,7 @@ public interface PublicKeyCredentialCreationOptions {
      */
     @JsOverlay
     @Nonnull
-    default Builder attestation(
-        @AttestationConveyancePreference @Nonnull final String attestation) {
+    default Builder attestation(@Nonnull final String attestation) {
       setAttestation( attestation );
       return this;
     }

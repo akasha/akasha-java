@@ -8,5 +8,5 @@ import jsinterop.annotations.JsFunction;
 @JsFunction
 @FunctionalInterface
 public interface PositionErrorCallback {
-  void onInvoke(@Nonnull PositionError positionError);
+  void onInvoke(@Nonnull GeolocationPositionError positionError);
 }

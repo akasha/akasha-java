@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The URIError object represents an error when a global URI handling function was used in a wrong way.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError">URIError - MDN</a>
- * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-urierror">URIError - ECMAScript (ECMA-262)</a>
+ * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-urierror">(ECMAScript) # sec-native-error-types-used-in-this-standard-urierror</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

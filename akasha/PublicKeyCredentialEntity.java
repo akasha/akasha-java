@@ -23,14 +23,6 @@ public interface PublicKeyCredentialEntity {
   }
 
   @JsProperty(
-      name = "icon"
-  )
-  String icon();
-
-  @JsProperty
-  void setIcon(@Nonnull String icon);
-
-  @JsProperty(
       name = "name"
   )
   @Nonnull
@@ -46,13 +38,6 @@ public interface PublicKeyCredentialEntity {
       name = "PublicKeyCredentialEntity"
   )
   interface Builder extends PublicKeyCredentialEntity {
-    @JsOverlay
-    @Nonnull
-    default Builder icon(@Nonnull final String icon) {
-      setIcon( icon );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder name(@Nonnull final String name) {

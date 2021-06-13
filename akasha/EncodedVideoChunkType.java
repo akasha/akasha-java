@@ -8,20 +8,20 @@ import org.intellij.lang.annotations.MagicConstant;
 @Generated("org.realityforge.webtack")
 @Documented
 @MagicConstant(
-    valuesFromClass = IterationCompositeOperation.class
+    valuesFromClass = EncodedVideoChunkType.class
 )
-public @interface IterationCompositeOperation {
+public @interface EncodedVideoChunkType {
   @Nonnull
-  String accumulate = "accumulate";
+  String delta = "delta";
 
   @Nonnull
-  String replace = "replace";
+  String key = "key";
 
   final class Util {
     private Util() {
     }
 
-    @IterationCompositeOperation
+    @EncodedVideoChunkType
     public static String requireValid(final String value) {
       assertValid( value );
       return value;
@@ -32,7 +32,7 @@ public @interface IterationCompositeOperation {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return IterationCompositeOperation.accumulate.equals( value ) || IterationCompositeOperation.replace.equals( value );
+      return EncodedVideoChunkType.delta.equals( value ) || EncodedVideoChunkType.key.equals( value );
     }
   }
 }

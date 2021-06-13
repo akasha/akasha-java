@@ -1,8 +1,10 @@
 package akasha;
 
 import akasha.core.ArrayBuffer;
+import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The AuthenticatorAttestationResponse interface of the Web Authentication API is returned by CredentialsContainer.create() when a PublicKeyCredential is passed, and provides a cryptographic root of trust for the new key pair that has been generated. This response should be sent to the relying party's server to complete the creation of the credential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#authenticatorattestationresponse">AuthenticatorAttestationResponse interface - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
+ * @see <a href="https://w3c.github.io/webauthn/#authenticatorattestationresponse">(Web Authentication) # authenticatorattestationresponse</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,4 +36,21 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
   )
   @Nonnull
   public native ArrayBuffer attestationObject();
+
+  @Nonnull
+  public native ArrayBuffer getAuthenticatorData();
+
+  @Nullable
+  public native ArrayBuffer getPublicKey();
+
+  public native int getPublicKeyAlgorithm();
+
+  /**
+   * getTransports() is a method of the AuthenticatorAttestationResponse interface that returns an Array containing strings describing the different transports which may be used by the authenticator.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports">AuthenticatorAttestationResponse.getTransports - MDN</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-gettransports">getTransports() - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
+   */
+  @Nonnull
+  public native JsArray<String> getTransports();
 }

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard">Clipboard - MDN</a>
- * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-interface">Clipboard - Clipboard API and events</a>
+ * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-interface"># clipboard-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

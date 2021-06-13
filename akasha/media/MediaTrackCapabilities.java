@@ -168,6 +168,35 @@ public interface MediaTrackCapabilities {
   @JsProperty
   void setWidth(@Nonnull ULongRange width);
 
+  @JsProperty(
+      name = "cursor"
+  )
+  JsArray<String> cursor();
+
+  @JsProperty
+  void setCursor(@Nonnull JsArray<String> cursor);
+
+  @JsOverlay
+  default void setCursor(@Nonnull final String... cursor) {
+    setCursor( Js.<JsArray<String>>uncheckedCast( cursor ) );
+  }
+
+  @JsProperty(
+      name = "displaySurface"
+  )
+  String displaySurface();
+
+  @JsProperty
+  void setDisplaySurface(@Nonnull String displaySurface);
+
+  @JsProperty(
+      name = "logicalSurface"
+  )
+  boolean logicalSurface();
+
+  @JsProperty
+  void setLogicalSurface(boolean logicalSurface);
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -312,6 +341,34 @@ public interface MediaTrackCapabilities {
     @Nonnull
     default Builder width(@Nonnull final ULongRange width) {
       setWidth( width );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cursor(@Nonnull final JsArray<String> cursor) {
+      setCursor( cursor );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cursor(@Nonnull final String... cursor) {
+      setCursor( cursor );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder displaySurface(@Nonnull final String displaySurface) {
+      setDisplaySurface( displaySurface );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder logicalSurface(final boolean logicalSurface) {
+      setLogicalSurface( logicalSurface );
       return this;
     }
   }

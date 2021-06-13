@@ -354,6 +354,24 @@ public class Window extends EventTarget {
   public EventHandler onformdata;
 
   /**
+   * The ongamepadconnected property of the Window interface represents an event handler that will run when a gamepad is connected (when the gamepadconnected event fires).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepadconnected">Window.ongamepadconnected - MDN</a>
+   * @see <a href="https://w3c.github.io/gamepad/#event-gamepadconnected">gamepadconnected event - Gamepad</a>
+   */
+  @Nullable
+  public GamepadEventHandler ongamepadconnected;
+
+  /**
+   * The ongamepaddisconnected property of the Window interface represents an event handler that will run when a gamepad is disconnected (when the gamepaddisconnected event fires).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepaddisconnected">Window.ongamepaddisconnected - MDN</a>
+   * @see <a href="https://w3c.github.io/gamepad/#event-gamepaddisconnected">gamepaddisconnected event - Gamepad</a>
+   */
+  @Nullable
+  public GamepadEventHandler ongamepaddisconnected;
+
+  /**
    * The ongotpointercapture property of the GlobalEventHandlers mixin is an EventHandler that processes gotpointercapture events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>

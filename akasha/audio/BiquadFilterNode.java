@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The BiquadFilterNode interface represents a simple low-order filter, and is created using the BaseAudioContext/createBiquadFilter method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode">BiquadFilterNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#biquadfilternode">BiquadFilterNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#BiquadFilterNode"># BiquadFilterNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

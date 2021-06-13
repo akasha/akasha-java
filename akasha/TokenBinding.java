@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TokenBinding {
   @JsOverlay
   @Nonnull
-  static Builder create(@TokenBindingStatus @Nonnull final String status) {
+  static Builder create(@Nonnull final String status) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).status( status );
   }
 
@@ -33,12 +33,11 @@ public interface TokenBinding {
   @JsProperty(
       name = "status"
   )
-  @TokenBindingStatus
   @Nonnull
   String status();
 
   @JsProperty
-  void setStatus(@TokenBindingStatus @Nonnull String status);
+  void setStatus(@Nonnull String status);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -56,7 +55,7 @@ public interface TokenBinding {
 
     @JsOverlay
     @Nonnull
-    default Builder status(@TokenBindingStatus @Nonnull final String status) {
+    default Builder status(@Nonnull final String status) {
       setStatus( status );
       return this;
     }

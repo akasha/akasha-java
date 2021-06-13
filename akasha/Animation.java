@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation">Animation - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations-1/#the-animation-interface">Animation - Web Animations</a>
+ * @see <a href="https://drafts.csswg.org/web-animations/#the-animation-interface">(Web Animations 2) # the-animation-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -65,6 +65,15 @@ public class Animation extends EventTarget {
    */
   @Nullable
   public EventHandler onfinish;
+
+  /**
+   * The Animation interface's onremove property (from the Web Animations API) is the event handler for the remove event. This event is sent when the animation is removed (i.e., put into an active replace state).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/onremove">Animation.onremove - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-onremove">Animation.onremove - Web Animations</a>
+   */
+  @Nullable
+  public EventHandler onremove;
 
   /**
    * The Animation.playbackRate property of the Web Animations API returns or sets the playback rate of the animation.
@@ -169,12 +178,33 @@ public class Animation extends EventTarget {
   public native Promise<Animation> ready();
 
   /**
+   * The read-only Animation.replaceState property of the Web Animations API returns the replace state of the animation. This will be active if the animation has been removed, or persisted if Animation.persist() has been invoked on it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/replaceState">Animation.replaceState - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-replacestate">Animation.replaceState - Web Animations</a>
+   */
+  @JsProperty(
+      name = "replaceState"
+  )
+  @Nonnull
+  @AnimationReplaceState
+  public native String replaceState();
+
+  /**
    * The Web Animations API's cancel() method of the Animation interface clears all KeyframeEffects caused by this animation and aborts its playback.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel">Animation.cancel - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-cancel">Animation.cancel() - Web Animations</a>
    */
   public native void cancel();
+
+  /**
+   * None.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/commitStyles">Animation.commitStyles - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-commitstyles">commitStyles() - Web Animations</a>
+   */
+  public native void commitStyles();
 
   /**
    * The finish() method of the Web Animations API's Animation Interface sets the current playback time to the end of the animation corresponding to the current playback direction.
@@ -191,6 +221,14 @@ public class Animation extends EventTarget {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-pause">play() - Web Animations</a>
    */
   public native void pause();
+
+  /**
+   * None.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/persist">Animation.persist - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-persist">persist() - Web Animations</a>
+   */
+  public native void persist();
 
   /**
    * The play() method of the Web Animations API's Animation Interface starts or resumes playing of an animation. If the animation is finished, calling play() restarts the animation, playing it from the beginning.

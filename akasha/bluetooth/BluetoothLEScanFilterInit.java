@@ -1,6 +1,5 @@
 package akasha.bluetooth;
 
-import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -27,10 +26,16 @@ public interface BluetoothLEScanFilterInit {
   @JsProperty(
       name = "manufacturerData"
   )
-  JsObject manufacturerData();
+  JsArray<BluetoothManufacturerDataFilterInit> manufacturerData();
 
   @JsProperty
-  void setManufacturerData(@Nonnull JsObject manufacturerData);
+  void setManufacturerData(@Nonnull JsArray<BluetoothManufacturerDataFilterInit> manufacturerData);
+
+  @JsOverlay
+  default void setManufacturerData(
+      @Nonnull final BluetoothManufacturerDataFilterInit... manufacturerData) {
+    setManufacturerData( Js.<JsArray<BluetoothManufacturerDataFilterInit>>uncheckedCast( manufacturerData ) );
+  }
 
   @JsProperty(
       name = "name"
@@ -51,10 +56,15 @@ public interface BluetoothLEScanFilterInit {
   @JsProperty(
       name = "serviceData"
   )
-  JsObject serviceData();
+  JsArray<BluetoothServiceDataFilterInit> serviceData();
 
   @JsProperty
-  void setServiceData(@Nonnull JsObject serviceData);
+  void setServiceData(@Nonnull JsArray<BluetoothServiceDataFilterInit> serviceData);
+
+  @JsOverlay
+  default void setServiceData(@Nonnull final BluetoothServiceDataFilterInit... serviceData) {
+    setServiceData( Js.<JsArray<BluetoothServiceDataFilterInit>>uncheckedCast( serviceData ) );
+  }
 
   @JsProperty(
       name = "services"
@@ -78,7 +88,16 @@ public interface BluetoothLEScanFilterInit {
   interface Builder extends BluetoothLEScanFilterInit {
     @JsOverlay
     @Nonnull
-    default Builder manufacturerData(@Nonnull final JsObject manufacturerData) {
+    default Builder manufacturerData(
+        @Nonnull final JsArray<BluetoothManufacturerDataFilterInit> manufacturerData) {
+      setManufacturerData( manufacturerData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder manufacturerData(
+        @Nonnull final BluetoothManufacturerDataFilterInit... manufacturerData) {
       setManufacturerData( manufacturerData );
       return this;
     }
@@ -99,7 +118,15 @@ public interface BluetoothLEScanFilterInit {
 
     @JsOverlay
     @Nonnull
-    default Builder serviceData(@Nonnull final JsObject serviceData) {
+    default Builder serviceData(
+        @Nonnull final JsArray<BluetoothServiceDataFilterInit> serviceData) {
+      setServiceData( serviceData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder serviceData(@Nonnull final BluetoothServiceDataFilterInit... serviceData) {
       setServiceData( serviceData );
       return this;
     }

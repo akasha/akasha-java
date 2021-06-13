@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent">CloseEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/web-sockets.html#the-closeevent-interface">CloseEvent - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-sockets.html#the-closeevent-interface">(HTML) # the-closeevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

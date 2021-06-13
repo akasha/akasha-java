@@ -10,10 +10,9 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for an AudioParam objects.
+ * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for AudioParam objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamDescriptor">AudioParamDescriptor - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audioparamdescriptor">AudioParamDescriptor - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -71,10 +70,9 @@ public interface AudioParamDescriptor {
   void setName(@Nonnull String name);
 
   /**
-   * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for an AudioParam objects.
+   * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for AudioParam objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamDescriptor">AudioParamDescriptor - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-audioparamdescriptor">AudioParamDescriptor - Web Audio API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

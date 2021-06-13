@@ -812,6 +812,14 @@ public class HTMLElement extends Element {
   @Nullable
   public WheelEventHandler onwheel;
 
+  /**
+   * HTMLElement.outerText is a non-standard property. As a getter, it returns the same value as Node.innerText. As a setter, it removes the current node and replaces it with the given text.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/outerText">HTMLElement.outerText - MDN</a>
+   */
+  @Nonnull
+  public String outerText;
+
   public boolean spellcheck;
 
   public int tabIndex;

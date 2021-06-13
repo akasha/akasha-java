@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The BluetoothRemoteGATTServer interface of the Web Bluetooth API represents a GATT Server on a remote device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer">BluetoothRemoteGATTServer - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattserver">BluetoothRemoteGATTServer - Web Bluetooth</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothgattremoteserver-interface"># bluetoothgattremoteserver-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

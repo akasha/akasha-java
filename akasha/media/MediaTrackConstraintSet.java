@@ -425,6 +425,25 @@ public interface MediaTrackConstraintSet {
     setRestrictOwnAudio( ConstrainBoolean.of( restrictOwnAudio ) );
   }
 
+  @JsProperty(
+      name = "suppressLocalAudioPlayback"
+  )
+  ConstrainBoolean suppressLocalAudioPlayback();
+
+  @JsProperty
+  void setSuppressLocalAudioPlayback(@Nonnull ConstrainBoolean suppressLocalAudioPlayback);
+
+  @JsOverlay
+  default void setSuppressLocalAudioPlayback(final boolean suppressLocalAudioPlayback) {
+    setSuppressLocalAudioPlayback( ConstrainBoolean.of( suppressLocalAudioPlayback ) );
+  }
+
+  @JsOverlay
+  default void setSuppressLocalAudioPlayback(
+      @Nonnull final ConstrainBooleanParameters suppressLocalAudioPlayback) {
+    setSuppressLocalAudioPlayback( ConstrainBoolean.of( suppressLocalAudioPlayback ) );
+  }
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -912,6 +931,29 @@ public interface MediaTrackConstraintSet {
     @Nonnull
     default Builder restrictOwnAudio(@Nonnull final ConstrainBooleanParameters restrictOwnAudio) {
       setRestrictOwnAudio( restrictOwnAudio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(
+        @Nonnull final ConstrainBoolean suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(final boolean suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(
+        @Nonnull final ConstrainBooleanParameters suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
       return this;
     }
   }

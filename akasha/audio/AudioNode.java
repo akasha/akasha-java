@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The AudioNode interface is a generic interface for representing an audio processing module.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode">AudioNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#audionode">AudioNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNode"># AudioNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

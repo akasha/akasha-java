@@ -14,7 +14,6 @@ import jsinterop.base.JsPropertyMap;
  * The AesCbcParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCbcParams">AesCbcParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCbcParams">SubtleCrypto.AesCbcParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -42,7 +41,6 @@ public interface AesCbcParams extends Algorithm {
    * The AesCbcParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCbcParams">AesCbcParams - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCbcParams">SubtleCrypto.AesCbcParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

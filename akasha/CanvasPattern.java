@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CanvasPattern interface represents an opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern">CanvasPattern - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/the-canvas-element.html#canvaspattern">CanvasPattern - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#canvaspattern">(HTML) # canvaspattern</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

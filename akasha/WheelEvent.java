@@ -11,8 +11,7 @@ import jsinterop.annotations.JsType;
  * The WheelEvent interface represents events that occur due to the user moving a mouse wheel or similar input device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent">WheelEvent - MDN</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-wheelevent">The WheelEvent interface - UI Events</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-wheelevent">WheelEvent - Document Object Model (DOM) Level 3 Events Specification</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-wheelevent"># interface-wheelevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

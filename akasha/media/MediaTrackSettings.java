@@ -365,6 +365,14 @@ public interface MediaTrackSettings {
   @JsProperty
   void setLogicalSurface(boolean logicalSurface);
 
+  @JsProperty(
+      name = "restrictOwnAudio"
+  )
+  boolean restrictOwnAudio();
+
+  @JsProperty
+  void setRestrictOwnAudio(boolean restrictOwnAudio);
+
   /**
    * The MediaTrackSettings dictionary is used to return the current values configured for each of a MediaStreamTrack's settings. These values will adhere as closely as possible to any constraints previously described using a MediaTrackConstraints object and set using applyConstraints(), and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched.
    *
@@ -598,6 +606,13 @@ public interface MediaTrackSettings {
     @Nonnull
     default Builder logicalSurface(final boolean logicalSurface) {
       setLogicalSurface( logicalSurface );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder restrictOwnAudio(final boolean restrictOwnAudio) {
+      setRestrictOwnAudio( restrictOwnAudio );
       return this;
     }
   }

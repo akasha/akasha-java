@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The DOM CompositionEvent represents events that occur due to the user indirectly entering text.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent">CompositionEvent - MDN</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-compositionevent">CompositionEvent - UI Events</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-compositionevent">CompositionEvent - Document Object Model (DOM) Level 3 Events Specification</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-compositionevent"># interface-compositionevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

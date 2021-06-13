@@ -8,26 +8,20 @@ import org.intellij.lang.annotations.MagicConstant;
 @Generated("org.realityforge.webtack")
 @Documented
 @MagicConstant(
-    valuesFromClass = CSSBoxType.class
+    valuesFromClass = LargeBlobSupport.class
 )
-public @interface CSSBoxType {
+public @interface LargeBlobSupport {
   @Nonnull
-  String border = "border";
+  String preferred = "preferred";
 
   @Nonnull
-  String content = "content";
-
-  @Nonnull
-  String margin = "margin";
-
-  @Nonnull
-  String padding = "padding";
+  String required = "required";
 
   final class Util {
     private Util() {
     }
 
-    @CSSBoxType
+    @LargeBlobSupport
     public static String requireValid(final String value) {
       assertValid( value );
       return value;
@@ -38,7 +32,7 @@ public @interface CSSBoxType {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return CSSBoxType.border.equals( value ) || CSSBoxType.content.equals( value ) || CSSBoxType.margin.equals( value ) || CSSBoxType.padding.equals( value );
+      return LargeBlobSupport.preferred.equals( value ) || LargeBlobSupport.required.equals( value );
     }
   }
 }

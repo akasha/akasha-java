@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The Blob object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a ReadableStream so its methods can be used for processing the data.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob - MDN</a>
- * @see <a href="https://w3c.github.io/FileAPI/#blob-section">The Blob interface - File API</a>
+ * @see <a href="https://w3c.github.io/FileAPI/#blob-section"># blob-section</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

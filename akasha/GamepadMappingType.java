@@ -17,6 +17,9 @@ public @interface GamepadMappingType {
   @Nonnull
   String standard = "standard";
 
+  @Nonnull
+  String xr_standard = "xr-standard";
+
   final class Util {
     private Util() {
     }
@@ -32,7 +35,7 @@ public @interface GamepadMappingType {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GamepadMappingType.unknown.equals( value ) || GamepadMappingType.standard.equals( value );
+      return GamepadMappingType.unknown.equals( value ) || GamepadMappingType.standard.equals( value ) || GamepadMappingType.xr_standard.equals( value );
     }
   }
 }

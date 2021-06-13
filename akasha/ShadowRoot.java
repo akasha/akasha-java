@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -45,6 +46,16 @@ public class ShadowRoot extends DocumentFragment {
   )
   @Nullable
   public native Element activeElement();
+
+  /**
+   * The delegatesFocus read-only property of the ShadowRoot interface returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see Element.attachShadow()).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus">ShadowRoot.delegatesFocus - MDN</a>
+   */
+  @JsProperty(
+      name = "delegatesFocus"
+  )
+  public native boolean delegatesFocus();
 
   /**
    * The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use.
@@ -95,6 +106,13 @@ public class ShadowRoot extends DocumentFragment {
   @Nullable
   public native Element pointerLockElement();
 
+  @JsProperty(
+      name = "slotAssignment"
+  )
+  @Nonnull
+  @SlotAssignmentMode
+  public native String slotAssignment();
+
   /**
    * The styleSheets read-only property of the DocumentOrShadowRoot interface returns a StyleSheetList of CSSStyleSheet objects, for stylesheets explicitly linked into or embedded in a document.
    *
@@ -106,4 +124,13 @@ public class ShadowRoot extends DocumentFragment {
   )
   @Nonnull
   public native StyleSheetList styleSheets();
+
+  /**
+   * The getAnimations() method of the Document interface returns an array of all Animation objects currently in effect whose target elements are descendants of the document. This array includes CSS Animations, CSS Transitions, and Web Animations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">DocumentOrShadowRoot.getAnimations - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-documentorshadowroot-getanimations">document.getAnimations() - Web Animations</a>
+   */
+  @Nonnull
+  public native JsArray<Animation> getAnimations();
 }

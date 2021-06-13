@@ -12,10 +12,7 @@ import jsinterop.annotations.JsType;
  * The CharacterData abstract interface represents a Node object that contains characters. This is an abstract interface, meaning there aren't any objects of type CharacterData: it is implemented by other interfaces like Text, Comment, or ProcessingInstruction, which aren't abstract.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData">CharacterData - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#characterdata">CharacterData - DOM</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-FF21A306">CharacterData - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-FF21A306">CharacterData - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-FF21A306">CharacterData - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-characterdata">(DOM) # interface-characterdata</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

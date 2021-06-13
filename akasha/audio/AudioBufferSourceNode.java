@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The AudioBufferSourceNode interface is an AudioScheduledSourceNode which represents an audio source consisting of in-memory audio data, stored in an AudioBuffer. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode">AudioBufferSourceNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode">AudioBufferSourceNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode"># AudioBufferSourceNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

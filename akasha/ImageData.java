@@ -27,7 +27,24 @@ public class ImageData extends JsObject implements TexImageSource {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
    */
+  public ImageData(final int sw, final int sh, @Nonnull final ImageDataSettings settings) {
+  }
+
+  /**
+   * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   */
   public ImageData(final int sw, final int sh) {
+  }
+
+  /**
+   * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   */
+  public ImageData(@Nonnull final Uint8ClampedArray data, final int sw, final int sh,
+      @Nonnull final ImageDataSettings settings) {
   }
 
   /**
@@ -45,6 +62,13 @@ public class ImageData extends JsObject implements TexImageSource {
    */
   public ImageData(@Nonnull final Uint8ClampedArray data, final int sw) {
   }
+
+  @JsProperty(
+      name = "colorSpace"
+  )
+  @Nonnull
+  @PredefinedColorSpace
+  public native String colorSpace();
 
   /**
    * The readonly ImageData.data property returns a Uint8ClampedArray that contains the ImageData object's pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer values between 0 and 255 (inclusive).

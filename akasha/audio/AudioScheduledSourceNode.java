@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The AudioScheduledSourceNode interface&mdash;part of the Web Audio API&mdash;is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the start() and stop() methods, as well as the onended event handler.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode">AudioScheduledSourceNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioScheduledSourceNode">AudioScheduledSourceNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioScheduledSourceNode"># AudioScheduledSourceNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

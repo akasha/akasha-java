@@ -15,6 +15,9 @@ public @interface AttestationConveyancePreference {
   String direct = "direct";
 
   @Nonnull
+  String enterprise = "enterprise";
+
+  @Nonnull
   String indirect = "indirect";
 
   @Nonnull
@@ -35,7 +38,7 @@ public @interface AttestationConveyancePreference {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return AttestationConveyancePreference.direct.equals( value ) || AttestationConveyancePreference.indirect.equals( value ) || AttestationConveyancePreference.none.equals( value );
+      return AttestationConveyancePreference.direct.equals( value ) || AttestationConveyancePreference.enterprise.equals( value ) || AttestationConveyancePreference.indirect.equals( value ) || AttestationConveyancePreference.none.equals( value );
     }
   }
 }

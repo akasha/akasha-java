@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The CacheStorage interface represents the storage for Cache objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">CacheStorage - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#cachestorage">CacheStorage - Service Workers</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#cachestorage-interface"># cachestorage-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

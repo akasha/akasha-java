@@ -14,8 +14,7 @@ import jsinterop.base.JsArrayLike;
  * The AudioTrackList interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate AudioTrack object in the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList">AudioTrackList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist">AudioTrackList - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#audiotracklist">AudioTrackList - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects">(HTML) # audiotracklist-and-videotracklist-objects</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

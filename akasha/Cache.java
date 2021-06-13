@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The Cache interface provides a persistent storage mechanism for Request / Response object pairs that are cached in long lived memory. How long a Cache lives is browser dependent, but a single origin's scripts can typically rely on the presence of a previously populated Cache. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#cache">Cache - Service Workers</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#cache-interface"># cache-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

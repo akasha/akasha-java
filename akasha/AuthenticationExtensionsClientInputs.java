@@ -1,7 +1,5 @@
 package akasha;
 
-import akasha.core.BufferSource;
-import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -33,57 +31,12 @@ public interface AuthenticationExtensionsClientInputs {
   void setAppid(@Nonnull String appid);
 
   @JsProperty(
-      name = "txAuthSimple"
+      name = "appidExclude"
   )
-  String txAuthSimple();
+  String appidExclude();
 
   @JsProperty
-  void setTxAuthSimple(@Nonnull String txAuthSimple);
-
-  @JsProperty(
-      name = "txAuthGeneric"
-  )
-  TxAuthGenericArg txAuthGeneric();
-
-  @JsProperty
-  void setTxAuthGeneric(@Nonnull TxAuthGenericArg txAuthGeneric);
-
-  @JsProperty(
-      name = "authnSel"
-  )
-  JsArray<BufferSource> authnSel();
-
-  @JsProperty
-  void setAuthnSel(@Nonnull JsArray<BufferSource> authnSel);
-
-  @JsOverlay
-  default void setAuthnSel(@Nonnull final BufferSource... authnSel) {
-    setAuthnSel( Js.<JsArray<BufferSource>>uncheckedCast( authnSel ) );
-  }
-
-  @JsProperty(
-      name = "exts"
-  )
-  boolean exts();
-
-  @JsProperty
-  void setExts(boolean exts);
-
-  @JsProperty(
-      name = "uvi"
-  )
-  boolean uvi();
-
-  @JsProperty
-  void setUvi(boolean uvi);
-
-  @JsProperty(
-      name = "loc"
-  )
-  boolean loc();
-
-  @JsProperty
-  void setLoc(boolean loc);
+  void setAppidExclude(@Nonnull String appidExclude);
 
   @JsProperty(
       name = "uvm"
@@ -92,6 +45,22 @@ public interface AuthenticationExtensionsClientInputs {
 
   @JsProperty
   void setUvm(boolean uvm);
+
+  @JsProperty(
+      name = "credProps"
+  )
+  boolean credProps();
+
+  @JsProperty
+  void setCredProps(boolean credProps);
+
+  @JsProperty(
+      name = "largeBlob"
+  )
+  AuthenticationExtensionsLargeBlobInputs largeBlob();
+
+  @JsProperty
+  void setLargeBlob(@Nonnull AuthenticationExtensionsLargeBlobInputs largeBlob);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -109,50 +78,8 @@ public interface AuthenticationExtensionsClientInputs {
 
     @JsOverlay
     @Nonnull
-    default Builder txAuthSimple(@Nonnull final String txAuthSimple) {
-      setTxAuthSimple( txAuthSimple );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder txAuthGeneric(@Nonnull final TxAuthGenericArg txAuthGeneric) {
-      setTxAuthGeneric( txAuthGeneric );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder authnSel(@Nonnull final JsArray<BufferSource> authnSel) {
-      setAuthnSel( authnSel );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder authnSel(@Nonnull final BufferSource... authnSel) {
-      setAuthnSel( authnSel );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder exts(final boolean exts) {
-      setExts( exts );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder uvi(final boolean uvi) {
-      setUvi( uvi );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loc(final boolean loc) {
-      setLoc( loc );
+    default Builder appidExclude(@Nonnull final String appidExclude) {
+      setAppidExclude( appidExclude );
       return this;
     }
 
@@ -160,6 +87,20 @@ public interface AuthenticationExtensionsClientInputs {
     @Nonnull
     default Builder uvm(final boolean uvm) {
       setUvm( uvm );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder credProps(final boolean credProps) {
+      setCredProps( credProps );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder largeBlob(@Nonnull final AuthenticationExtensionsLargeBlobInputs largeBlob) {
+      setLargeBlob( largeBlob );
       return this;
     }
   }

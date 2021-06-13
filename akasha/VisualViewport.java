@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -108,6 +109,12 @@ public class VisualViewport extends EventTarget {
       name = "scale"
   )
   public native double scale();
+
+  @JsProperty(
+      name = "segments"
+  )
+  @Nonnull
+  public native JsArray<DOMRect> segments();
 
   /**
    * The width read-only property of the VisualViewport interface returns the width of the visual viewport, in CSS pixels.

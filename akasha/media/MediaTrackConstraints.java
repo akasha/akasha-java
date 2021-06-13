@@ -553,5 +553,28 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
       setRestrictOwnAudio( restrictOwnAudio );
       return this;
     }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(
+        @Nonnull final ConstrainBoolean suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(final boolean suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder suppressLocalAudioPlayback(
+        @Nonnull final ConstrainBooleanParameters suppressLocalAudioPlayback) {
+      setSuppressLocalAudioPlayback( suppressLocalAudioPlayback );
+      return this;
+    }
   }
 }

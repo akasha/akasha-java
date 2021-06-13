@@ -40,6 +40,15 @@ public interface ShadowRootInit {
   @JsProperty
   void setMode(@ShadowRootMode @Nonnull String mode);
 
+  @JsProperty(
+      name = "slotAssignment"
+  )
+  @SlotAssignmentMode
+  String slotAssignment();
+
+  @JsProperty
+  void setSlotAssignment(@SlotAssignmentMode @Nonnull String slotAssignment);
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -58,6 +67,13 @@ public interface ShadowRootInit {
     @Nonnull
     default Builder mode(@ShadowRootMode @Nonnull final String mode) {
       setMode( mode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder slotAssignment(@SlotAssignmentMode @Nonnull final String slotAssignment) {
+      setSlotAssignment( slotAssignment );
       return this;
     }
   }

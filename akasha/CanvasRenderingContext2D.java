@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a &lt;canvas&gt; element. It is used for drawing shapes, text, images, and other objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#2dcontext">CanvasRenderingContext2D - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#2dcontext">(HTML) # 2dcontext</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -60,6 +60,18 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   @Nonnull
   public String font;
+
+  @Nonnull
+  @CanvasFontKerning
+  public String fontKerning;
+
+  @Nonnull
+  @CanvasFontStretch
+  public String fontStretch;
+
+  @Nonnull
+  @CanvasFontVariantCaps
+  public String fontVariantCaps;
 
   /**
    * The CanvasRenderingContext2D.globalAlpha property of the Canvas 2D API specifies the alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas.
@@ -203,6 +215,14 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @CanvasTextBaseline
   public String textBaseline;
 
+  public double textLetterSpacing;
+
+  @Nonnull
+  @CanvasTextRendering
+  public String textRendering;
+
+  public double textWordSpacing;
+
   protected CanvasRenderingContext2D() {
   }
 
@@ -229,6 +249,16 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   @HasNoSideEffects
   @Nonnull
+  public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
+
+  /**
+   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
+   */
+  @HasNoSideEffects
+  @Nonnull
   public native ImageData createImageData(int sw, int sh);
 
   /**
@@ -240,6 +270,16 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @HasNoSideEffects
   @Nonnull
   public native ImageData createImageData(@Nonnull ImageData imagedata);
+
+  /**
+   * The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
+   */
+  @Nonnull
+  public native ImageData getImageData(int sx, int sy, int sw, int sh,
+      @Nonnull ImageDataSettings settings);
 
   /**
    * The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas.
@@ -633,6 +673,8 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   public native void strokeRect(double x, double y, double w, double h);
 
+  public native void reset();
+
   /**
    * The CanvasRenderingContext2D.restore() method of the Canvas 2D API restores the most recently saved canvas state by popping the top entry in the drawing state stack. If there is no saved state, this method does nothing.
    *
@@ -778,6 +820,9 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-translate">CanvasRenderingContext2D.translate - HTML Living Standard</a>
    */
   public native void translate(double x, double y);
+
+  @Nonnull
+  public native CanvasGradient createConicGradient(double startAngle, double x, double y);
 
   /**
    * The CanvasRenderingContext2D.createLinearGradient() method of the Canvas 2D API creates a gradient along the line connecting two given coordinates.

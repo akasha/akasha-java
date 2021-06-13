@@ -20,7 +20,7 @@ import jsinterop.base.Js;
  * The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService">BluetoothRemoteGATTService - MDN</a>
- * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattservice">BluetoothRemoteGATTService - Web Bluetooth</a>
+ * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothgattservice-interface"># bluetoothgattservice-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
