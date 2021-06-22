@@ -148,36 +148,6 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
 
   public native void stroke(@Nonnull Path2D path);
 
-  @HasNoSideEffects
-  @Nonnull
-  public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
-
-  @HasNoSideEffects
-  @Nonnull
-  public native ImageData createImageData(int sw, int sh);
-
-  @HasNoSideEffects
-  @Nonnull
-  public native ImageData createImageData(@Nonnull ImageData imagedata);
-
-  @Nonnull
-  public native ImageData getImageData(int sx, int sy, int sw, int sh,
-      @Nonnull ImageDataSettings settings);
-
-  @Nonnull
-  public native ImageData getImageData(int sx, int sy, int sw, int sh);
-
-  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy);
-
-  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy, int dirtyX,
-      int dirtyY, int dirtyWidth, int dirtyHeight);
-
-  public native void reset();
-
-  public native void restore();
-
-  public native void save();
-
   public native void clearRect(double x, double y, double w, double h);
 
   public native void fillRect(double x, double y, double w, double h);
@@ -231,32 +201,6 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
   public native void setLineDash(@Nonnull JsArray<Double> segments);
 
   public native void setLineDash(@Nonnull double[] segments);
-
-  public native void arc(double x, double y, double radius, double startAngle, double endAngle,
-      boolean counterclockwise);
-
-  public native void arc(double x, double y, double radius, double startAngle, double endAngle);
-
-  public native void arcTo(double x1, double y1, double x2, double y2, double radius);
-
-  public native void bezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x,
-      double y);
-
-  public native void closePath();
-
-  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
-      double startAngle, double endAngle, boolean counterclockwise);
-
-  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
-      double startAngle, double endAngle);
-
-  public native void lineTo(double x, double y);
-
-  public native void moveTo(double x, double y);
-
-  public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
-
-  public native void rect(double x, double y, double w, double h);
 
   @Nonnull
   public native DOMMatrix getTransform();
@@ -352,4 +296,60 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
 
   public native void drawImage(@Nonnull OffscreenCanvas image, double sx, double sy, double sw,
       double sh, double dx, double dy, double dw, double dh);
+
+  @HasNoSideEffects
+  @Nonnull
+  public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
+
+  @HasNoSideEffects
+  @Nonnull
+  public native ImageData createImageData(int sw, int sh);
+
+  @HasNoSideEffects
+  @Nonnull
+  public native ImageData createImageData(@Nonnull ImageData imagedata);
+
+  @Nonnull
+  public native ImageData getImageData(int sx, int sy, int sw, int sh,
+      @Nonnull ImageDataSettings settings);
+
+  @Nonnull
+  public native ImageData getImageData(int sx, int sy, int sw, int sh);
+
+  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy);
+
+  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy, int dirtyX,
+      int dirtyY, int dirtyWidth, int dirtyHeight);
+
+  public native void reset();
+
+  public native void restore();
+
+  public native void save();
+
+  public native void arc(double x, double y, double radius, double startAngle, double endAngle,
+      boolean counterclockwise);
+
+  public native void arc(double x, double y, double radius, double startAngle, double endAngle);
+
+  public native void arcTo(double x1, double y1, double x2, double y2, double radius);
+
+  public native void bezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x,
+      double y);
+
+  public native void closePath();
+
+  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
+      double startAngle, double endAngle, boolean counterclockwise);
+
+  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
+      double startAngle, double endAngle);
+
+  public native void lineTo(double x, double y);
+
+  public native void moveTo(double x, double y);
+
+  public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
+
+  public native void rect(double x, double y, double w, double h);
 }

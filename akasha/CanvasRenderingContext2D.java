@@ -242,164 +242,6 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   public native CanvasRenderingContext2DSettings getContextAttributes();
 
   /**
-   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
-   */
-  @HasNoSideEffects
-  @Nonnull
-  public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
-
-  /**
-   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
-   */
-  @HasNoSideEffects
-  @Nonnull
-  public native ImageData createImageData(int sw, int sh);
-
-  /**
-   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
-   */
-  @HasNoSideEffects
-  @Nonnull
-  public native ImageData createImageData(@Nonnull ImageData imagedata);
-
-  /**
-   * The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
-   */
-  @Nonnull
-  public native ImageData getImageData(int sx, int sy, int sw, int sh,
-      @Nonnull ImageDataSettings settings);
-
-  /**
-   * The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
-   */
-  @Nonnull
-  public native ImageData getImageData(int sx, int sy, int sw, int sh);
-
-  /**
-   * The CanvasRenderingContext2D.putImageData() method of the Canvas 2D API paints data from the given ImageData object onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle are painted. This method is not affected by the canvas transformation matrix.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">CanvasRenderingContext2D.putImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-putimagedata">CanvasRenderingContext2D.putImageData - HTML Living Standard</a>
-   */
-  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy);
-
-  /**
-   * The CanvasRenderingContext2D.putImageData() method of the Canvas 2D API paints data from the given ImageData object onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle are painted. This method is not affected by the canvas transformation matrix.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">CanvasRenderingContext2D.putImageData - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-putimagedata">CanvasRenderingContext2D.putImageData - HTML Living Standard</a>
-   */
-  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy, int dirtyX,
-      int dirtyY, int dirtyWidth, int dirtyHeight);
-
-  /**
-   * The CanvasRenderingContext2D.arc() method of the Canvas 2D API adds a circular arc to the current sub-path.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc">CanvasRenderingContext2D.arc - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc">CanvasRenderingContext2D.arc - HTML Living Standard</a>
-   */
-  public native void arc(double x, double y, double radius, double startAngle, double endAngle,
-      boolean counterclockwise);
-
-  /**
-   * The CanvasRenderingContext2D.arc() method of the Canvas 2D API adds a circular arc to the current sub-path.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc">CanvasRenderingContext2D.arc - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc">CanvasRenderingContext2D.arc - HTML Living Standard</a>
-   */
-  public native void arc(double x, double y, double radius, double startAngle, double endAngle);
-
-  /**
-   * The CanvasRenderingContext2D.arcTo() method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius. The arc is automatically connected to the path's latest point with a straight line, if necessary for the specified parameters.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo">CanvasRenderingContext2D.arcTo - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arcto">CanvasRenderingContext2D.arcTo - HTML Living Standard</a>
-   */
-  public native void arcTo(double x1, double y1, double x2, double y2, double radius);
-
-  /**
-   * The CanvasRenderingContext2D.bezierCurveTo() method of the Canvas 2D API adds a cubic B&eacute;zier curve to the current sub-path. It requires three points: the first two are control points and the third one is the end point. The starting point is the latest point in the current path, which can be changed using moveTo() before creating the B&eacute;zier curve.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo">CanvasRenderingContext2D.bezierCurveTo - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-beziercurveto">CanvasRenderingContext2D.beziercurveto - HTML Living Standard</a>
-   */
-  public native void bezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x,
-      double y);
-
-  /**
-   * The CanvasRenderingContext2D.closePath() method of the Canvas 2D API attempts to add a straight line from the current point to the start of the current sub-path. If the shape has already been closed or has only one point, this function does nothing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath">CanvasRenderingContext2D.closePath - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-closepath">CanvasRenderingContext2D.closePath - HTML Living Standard</a>
-   */
-  public native void closePath();
-
-  /**
-   * The CanvasRenderingContext2D.ellipse() method of the Canvas 2D API adds an elliptical arc to the current sub-path.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse">CanvasRenderingContext2D.ellipse - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ellipse">CanvasRenderingContext2D.ellipse - HTML Living Standard</a>
-   */
-  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
-      double startAngle, double endAngle, boolean counterclockwise);
-
-  /**
-   * The CanvasRenderingContext2D.ellipse() method of the Canvas 2D API adds an elliptical arc to the current sub-path.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse">CanvasRenderingContext2D.ellipse - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ellipse">CanvasRenderingContext2D.ellipse - HTML Living Standard</a>
-   */
-  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
-      double startAngle, double endAngle);
-
-  /**
-   * The CanvasRenderingContext2D method lineTo(), part of the Canvas 2D API, adds a straight line to the current sub-path by connecting the sub-path's last point to the specified (x, y) coordinates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo">CanvasRenderingContext2D.lineTo - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-lineto">CanvasRenderingContext2D.lineTo - HTML Living Standard</a>
-   */
-  public native void lineTo(double x, double y);
-
-  /**
-   * The CanvasRenderingContext2D.moveTo() method of the Canvas 2D API begins a new sub-path at the point specified by the given (x, y) coordinates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo">CanvasRenderingContext2D.moveTo - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-moveto">CanvasRenderingContext2D.moveTo - HTML Living Standard</a>
-   */
-  public native void moveTo(double x, double y);
-
-  /**
-   * The CanvasRenderingContext2D.quadraticCurveTo() method of the Canvas 2D API adds a quadratic B&eacute;zier curve to the current sub-path. It requires two points: the first one is a control point and the second one is the end point. The starting point is the latest point in the current path, which can be changed using moveTo() before creating the quadratic B&eacute;zier curve.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo">CanvasRenderingContext2D.quadraticCurveTo - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-quadraticcurveto">CanvasRenderingContext2D.quadraticCurveTo - HTML Living Standard</a>
-   */
-  public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
-
-  /**
-   * The CanvasRenderingContext2D.rect() method of the Canvas 2D API adds a rectangle to the current path.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect">CanvasRenderingContext2D.rect - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-rect">CanvasRenderingContext2D.rect - HTML Living Standard</a>
-   */
-  public native void rect(double x, double y, double w, double h);
-
-  /**
    * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
@@ -649,178 +491,6 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   public native void strokeText(@Nonnull String text, double x, double y);
 
-  /**
-   * The CanvasRenderingContext2D.clearRect() method of the Canvas 2D API erases the pixels in a rectangular area by setting them to transparent black.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect">CanvasRenderingContext2D.clearRect - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-clearrect">CanvasRenderingContext2D.clearRect - HTML Living Standard</a>
-   */
-  public native void clearRect(double x, double y, double w, double h);
-
-  /**
-   * The CanvasRenderingContext2D.fillRect() method of the Canvas 2D API draws a rectangle that is filled according to the current fillStyle.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">CanvasRenderingContext2D.fillRect - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-fillrect">CanvasRenderingContext2D.fillRect - HTML Living Standard</a>
-   */
-  public native void fillRect(double x, double y, double w, double h);
-
-  /**
-   * The CanvasRenderingContext2D.strokeRect() method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to the current strokeStyle and other context settings.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeRect">CanvasRenderingContext2D.strokeRect - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-strokerect">CanvasRenderingContext2D.strokeRect - HTML Living Standard</a>
-   */
-  public native void strokeRect(double x, double y, double w, double h);
-
-  public native void reset();
-
-  /**
-   * The CanvasRenderingContext2D.restore() method of the Canvas 2D API restores the most recently saved canvas state by popping the top entry in the drawing state stack. If there is no saved state, this method does nothing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/restore">CanvasRenderingContext2D.restore - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-restore">CanvasRenderingContext2D.restore - HTML Living Standard</a>
-   */
-  public native void restore();
-
-  /**
-   * The CanvasRenderingContext2D.save() method of the Canvas 2D API saves the entire state of the canvas by pushing the current state onto a stack.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save">CanvasRenderingContext2D.save - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-save">CanvasRenderingContext2D.save - HTML Living Standard</a>
-   */
-  public native void save();
-
-  /**
-   * The getLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface gets the current line dash pattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash">CanvasRenderingContext2D.getLineDash - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getlinedash">CanvasRenderingContext2D.getLineDash - HTML Living Standard</a>
-   */
-  @Nonnull
-  public native JsArray<Double> getLineDash();
-
-  /**
-   * The setLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface sets the line dash pattern used when stroking lines. It uses an array of values that specify alternating lengths of lines and gaps which describe the pattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash">CanvasRenderingContext2D.setLineDash - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-setlinedash">CanvasRenderingContext2D.setLineDash - HTML Living Standard</a>
-   */
-  public native void setLineDash(@Nonnull JsArray<Double> segments);
-
-  /**
-   * The setLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface sets the line dash pattern used when stroking lines. It uses an array of values that specify alternating lengths of lines and gaps which describe the pattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash">CanvasRenderingContext2D.setLineDash - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-setlinedash">CanvasRenderingContext2D.setLineDash - HTML Living Standard</a>
-   */
-  public native void setLineDash(@Nonnull double[] segments);
-
-  /**
-   * The CanvasRenderingContext2D.drawFocusIfNeeded() method of the Canvas 2D API draws a focus ring around the current or given path, if the specified element is focused.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded">CanvasRenderingContext2D.drawFocusIfNeeded - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-drawfocusifneeded">CanvasRenderingContext2D.drawFocusIfNeeded - HTML Living Standard</a>
-   */
-  public native void drawFocusIfNeeded(@Nonnull Element element);
-
-  /**
-   * The CanvasRenderingContext2D.drawFocusIfNeeded() method of the Canvas 2D API draws a focus ring around the current or given path, if the specified element is focused.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded">CanvasRenderingContext2D.drawFocusIfNeeded - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-drawfocusifneeded">CanvasRenderingContext2D.drawFocusIfNeeded - HTML Living Standard</a>
-   */
-  public native void drawFocusIfNeeded(@Nonnull Path2D path, @Nonnull Element element);
-
-  /**
-   * The CanvasRenderingContext2D.scrollPathIntoView() method of the Canvas 2D API scrolls the current or given path into view. It is similar to Element.scrollIntoView().
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView">CanvasRenderingContext2D.scrollPathIntoView - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-scrollpathintoview">CanvasRenderingContext2D.scrollPathIntoView - HTML Living Standard</a>
-   */
-  public native void scrollPathIntoView();
-
-  /**
-   * The CanvasRenderingContext2D.scrollPathIntoView() method of the Canvas 2D API scrolls the current or given path into view. It is similar to Element.scrollIntoView().
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView">CanvasRenderingContext2D.scrollPathIntoView - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-scrollpathintoview">CanvasRenderingContext2D.scrollPathIntoView - HTML Living Standard</a>
-   */
-  public native void scrollPathIntoView(@Nonnull Path2D path);
-
-  /**
-   * The CanvasRenderingContext2D.getTransform() method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getTransform">CanvasRenderingContext2D.getTransform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-gettransform">CanvasRenderingContext2D.getTransform - HTML Living Standard</a>
-   */
-  @Nonnull
-  public native DOMMatrix getTransform();
-
-  /**
-   * The CanvasRenderingContext2D.resetTransform() method of the Canvas 2D API resets the current transform to the identity matrix.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform">CanvasRenderingContext2D.resetTransform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-resettransform">CanvasRenderingContext2D.resetTransform - HTML Living Standard</a>
-   */
-  public native void resetTransform();
-
-  /**
-   * The CanvasRenderingContext2D.rotate() method of the Canvas 2D API adds a rotation to the transformation matrix.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate">CanvasRenderingContext2D.rotate - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-rotate">CanvasRenderingContext2D.rotate - HTML Living Standard</a>
-   */
-  public native void rotate(double angle);
-
-  /**
-   * The CanvasRenderingContext2D.scale() method of the Canvas 2D API adds a scaling transformation to the canvas units horizontally and/or vertically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scale">CanvasRenderingContext2D.scale - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-scale">CanvasRenderingContext2D.scale - HTML Living Standard</a>
-   */
-  public native void scale(double x, double y);
-
-  /**
-   * The CanvasRenderingContext2D.setTransform() method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform">CanvasRenderingContext2D.setTransform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-settransform">CanvasRenderingContext2D.setTransform - HTML Living Standard</a>
-   */
-  public native void setTransform(double a, double b, double c, double d, double e, double f);
-
-  /**
-   * The CanvasRenderingContext2D.setTransform() method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform">CanvasRenderingContext2D.setTransform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-settransform">CanvasRenderingContext2D.setTransform - HTML Living Standard</a>
-   */
-  public native void setTransform(@Nonnull DOMMatrix2DInit transform);
-
-  /**
-   * The CanvasRenderingContext2D.setTransform() method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform">CanvasRenderingContext2D.setTransform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-settransform">CanvasRenderingContext2D.setTransform - HTML Living Standard</a>
-   */
-  public native void setTransform();
-
-  /**
-   * The CanvasRenderingContext2D.transform() method of the Canvas 2D API multiplies the current transformation with the matrix described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform">CanvasRenderingContext2D.transform - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-transform">CanvasRenderingContext2D.transform - HTML Living Standard</a>
-   */
-  public native void transform(double a, double b, double c, double d, double e, double f);
-
-  /**
-   * The CanvasRenderingContext2D.translate() method of the Canvas 2D API adds a translation transformation to the current matrix.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/translate">CanvasRenderingContext2D.translate - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-translate">CanvasRenderingContext2D.translate - HTML Living Standard</a>
-   */
-  public native void translate(double x, double y);
-
   @Nonnull
   public native CanvasGradient createConicGradient(double startAngle, double x, double y);
 
@@ -1064,4 +734,334 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-stroke">CanvasRenderingContext2D.stroke - HTML Living Standard</a>
    */
   public native void stroke(@Nonnull Path2D path);
+
+  /**
+   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
+   */
+  @HasNoSideEffects
+  @Nonnull
+  public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
+
+  /**
+   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
+   */
+  @HasNoSideEffects
+  @Nonnull
+  public native ImageData createImageData(int sw, int sh);
+
+  /**
+   * The CanvasRenderingContext2D.createImageData() method of the Canvas 2D API creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData">CanvasRenderingContext2D.createImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
+   */
+  @HasNoSideEffects
+  @Nonnull
+  public native ImageData createImageData(@Nonnull ImageData imagedata);
+
+  /**
+   * The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
+   */
+  @Nonnull
+  public native ImageData getImageData(int sx, int sy, int sw, int sh,
+      @Nonnull ImageDataSettings settings);
+
+  /**
+   * The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
+   */
+  @Nonnull
+  public native ImageData getImageData(int sx, int sy, int sw, int sh);
+
+  /**
+   * The CanvasRenderingContext2D.putImageData() method of the Canvas 2D API paints data from the given ImageData object onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle are painted. This method is not affected by the canvas transformation matrix.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">CanvasRenderingContext2D.putImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-putimagedata">CanvasRenderingContext2D.putImageData - HTML Living Standard</a>
+   */
+  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy);
+
+  /**
+   * The CanvasRenderingContext2D.putImageData() method of the Canvas 2D API paints data from the given ImageData object onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle are painted. This method is not affected by the canvas transformation matrix.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">CanvasRenderingContext2D.putImageData - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-putimagedata">CanvasRenderingContext2D.putImageData - HTML Living Standard</a>
+   */
+  public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy, int dirtyX,
+      int dirtyY, int dirtyWidth, int dirtyHeight);
+
+  /**
+   * The CanvasRenderingContext2D.arc() method of the Canvas 2D API adds a circular arc to the current sub-path.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc">CanvasRenderingContext2D.arc - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc">CanvasRenderingContext2D.arc - HTML Living Standard</a>
+   */
+  public native void arc(double x, double y, double radius, double startAngle, double endAngle,
+      boolean counterclockwise);
+
+  /**
+   * The CanvasRenderingContext2D.arc() method of the Canvas 2D API adds a circular arc to the current sub-path.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc">CanvasRenderingContext2D.arc - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc">CanvasRenderingContext2D.arc - HTML Living Standard</a>
+   */
+  public native void arc(double x, double y, double radius, double startAngle, double endAngle);
+
+  /**
+   * The CanvasRenderingContext2D.arcTo() method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius. The arc is automatically connected to the path's latest point with a straight line, if necessary for the specified parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo">CanvasRenderingContext2D.arcTo - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arcto">CanvasRenderingContext2D.arcTo - HTML Living Standard</a>
+   */
+  public native void arcTo(double x1, double y1, double x2, double y2, double radius);
+
+  /**
+   * The CanvasRenderingContext2D.bezierCurveTo() method of the Canvas 2D API adds a cubic B&eacute;zier curve to the current sub-path. It requires three points: the first two are control points and the third one is the end point. The starting point is the latest point in the current path, which can be changed using moveTo() before creating the B&eacute;zier curve.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo">CanvasRenderingContext2D.bezierCurveTo - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-beziercurveto">CanvasRenderingContext2D.beziercurveto - HTML Living Standard</a>
+   */
+  public native void bezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x,
+      double y);
+
+  /**
+   * The CanvasRenderingContext2D.closePath() method of the Canvas 2D API attempts to add a straight line from the current point to the start of the current sub-path. If the shape has already been closed or has only one point, this function does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath">CanvasRenderingContext2D.closePath - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-closepath">CanvasRenderingContext2D.closePath - HTML Living Standard</a>
+   */
+  public native void closePath();
+
+  /**
+   * The CanvasRenderingContext2D.ellipse() method of the Canvas 2D API adds an elliptical arc to the current sub-path.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse">CanvasRenderingContext2D.ellipse - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ellipse">CanvasRenderingContext2D.ellipse - HTML Living Standard</a>
+   */
+  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
+      double startAngle, double endAngle, boolean counterclockwise);
+
+  /**
+   * The CanvasRenderingContext2D.ellipse() method of the Canvas 2D API adds an elliptical arc to the current sub-path.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse">CanvasRenderingContext2D.ellipse - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ellipse">CanvasRenderingContext2D.ellipse - HTML Living Standard</a>
+   */
+  public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation,
+      double startAngle, double endAngle);
+
+  /**
+   * The CanvasRenderingContext2D method lineTo(), part of the Canvas 2D API, adds a straight line to the current sub-path by connecting the sub-path's last point to the specified (x, y) coordinates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo">CanvasRenderingContext2D.lineTo - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-lineto">CanvasRenderingContext2D.lineTo - HTML Living Standard</a>
+   */
+  public native void lineTo(double x, double y);
+
+  /**
+   * The CanvasRenderingContext2D.moveTo() method of the Canvas 2D API begins a new sub-path at the point specified by the given (x, y) coordinates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo">CanvasRenderingContext2D.moveTo - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-moveto">CanvasRenderingContext2D.moveTo - HTML Living Standard</a>
+   */
+  public native void moveTo(double x, double y);
+
+  /**
+   * The CanvasRenderingContext2D.quadraticCurveTo() method of the Canvas 2D API adds a quadratic B&eacute;zier curve to the current sub-path. It requires two points: the first one is a control point and the second one is the end point. The starting point is the latest point in the current path, which can be changed using moveTo() before creating the quadratic B&eacute;zier curve.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo">CanvasRenderingContext2D.quadraticCurveTo - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-quadraticcurveto">CanvasRenderingContext2D.quadraticCurveTo - HTML Living Standard</a>
+   */
+  public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
+
+  /**
+   * The CanvasRenderingContext2D.rect() method of the Canvas 2D API adds a rectangle to the current path.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect">CanvasRenderingContext2D.rect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-rect">CanvasRenderingContext2D.rect - HTML Living Standard</a>
+   */
+  public native void rect(double x, double y, double w, double h);
+
+  /**
+   * The CanvasRenderingContext2D.clearRect() method of the Canvas 2D API erases the pixels in a rectangular area by setting them to transparent black.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect">CanvasRenderingContext2D.clearRect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-clearrect">CanvasRenderingContext2D.clearRect - HTML Living Standard</a>
+   */
+  public native void clearRect(double x, double y, double w, double h);
+
+  /**
+   * The CanvasRenderingContext2D.fillRect() method of the Canvas 2D API draws a rectangle that is filled according to the current fillStyle.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">CanvasRenderingContext2D.fillRect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-fillrect">CanvasRenderingContext2D.fillRect - HTML Living Standard</a>
+   */
+  public native void fillRect(double x, double y, double w, double h);
+
+  /**
+   * The CanvasRenderingContext2D.strokeRect() method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to the current strokeStyle and other context settings.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeRect">CanvasRenderingContext2D.strokeRect - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-strokerect">CanvasRenderingContext2D.strokeRect - HTML Living Standard</a>
+   */
+  public native void strokeRect(double x, double y, double w, double h);
+
+  public native void reset();
+
+  /**
+   * The CanvasRenderingContext2D.restore() method of the Canvas 2D API restores the most recently saved canvas state by popping the top entry in the drawing state stack. If there is no saved state, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/restore">CanvasRenderingContext2D.restore - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-restore">CanvasRenderingContext2D.restore - HTML Living Standard</a>
+   */
+  public native void restore();
+
+  /**
+   * The CanvasRenderingContext2D.save() method of the Canvas 2D API saves the entire state of the canvas by pushing the current state onto a stack.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save">CanvasRenderingContext2D.save - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-save">CanvasRenderingContext2D.save - HTML Living Standard</a>
+   */
+  public native void save();
+
+  /**
+   * The getLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface gets the current line dash pattern.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash">CanvasRenderingContext2D.getLineDash - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getlinedash">CanvasRenderingContext2D.getLineDash - HTML Living Standard</a>
+   */
+  @Nonnull
+  public native JsArray<Double> getLineDash();
+
+  /**
+   * The setLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface sets the line dash pattern used when stroking lines. It uses an array of values that specify alternating lengths of lines and gaps which describe the pattern.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash">CanvasRenderingContext2D.setLineDash - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-setlinedash">CanvasRenderingContext2D.setLineDash - HTML Living Standard</a>
+   */
+  public native void setLineDash(@Nonnull JsArray<Double> segments);
+
+  /**
+   * The setLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface sets the line dash pattern used when stroking lines. It uses an array of values that specify alternating lengths of lines and gaps which describe the pattern.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash">CanvasRenderingContext2D.setLineDash - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-setlinedash">CanvasRenderingContext2D.setLineDash - HTML Living Standard</a>
+   */
+  public native void setLineDash(@Nonnull double[] segments);
+
+  /**
+   * The CanvasRenderingContext2D.drawFocusIfNeeded() method of the Canvas 2D API draws a focus ring around the current or given path, if the specified element is focused.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded">CanvasRenderingContext2D.drawFocusIfNeeded - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-drawfocusifneeded">CanvasRenderingContext2D.drawFocusIfNeeded - HTML Living Standard</a>
+   */
+  public native void drawFocusIfNeeded(@Nonnull Element element);
+
+  /**
+   * The CanvasRenderingContext2D.drawFocusIfNeeded() method of the Canvas 2D API draws a focus ring around the current or given path, if the specified element is focused.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded">CanvasRenderingContext2D.drawFocusIfNeeded - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-drawfocusifneeded">CanvasRenderingContext2D.drawFocusIfNeeded - HTML Living Standard</a>
+   */
+  public native void drawFocusIfNeeded(@Nonnull Path2D path, @Nonnull Element element);
+
+  /**
+   * The CanvasRenderingContext2D.scrollPathIntoView() method of the Canvas 2D API scrolls the current or given path into view. It is similar to Element.scrollIntoView().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView">CanvasRenderingContext2D.scrollPathIntoView - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-scrollpathintoview">CanvasRenderingContext2D.scrollPathIntoView - HTML Living Standard</a>
+   */
+  public native void scrollPathIntoView();
+
+  /**
+   * The CanvasRenderingContext2D.scrollPathIntoView() method of the Canvas 2D API scrolls the current or given path into view. It is similar to Element.scrollIntoView().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView">CanvasRenderingContext2D.scrollPathIntoView - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-scrollpathintoview">CanvasRenderingContext2D.scrollPathIntoView - HTML Living Standard</a>
+   */
+  public native void scrollPathIntoView(@Nonnull Path2D path);
+
+  /**
+   * The CanvasRenderingContext2D.getTransform() method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getTransform">CanvasRenderingContext2D.getTransform - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-gettransform">CanvasRenderingContext2D.getTransform - HTML Living Standard</a>
+   */
+  @Nonnull
+  public native DOMMatrix getTransform();
+
+  /**
+   * The CanvasRenderingContext2D.resetTransform() method of the Canvas 2D API resets the current transform to the identity matrix.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform">CanvasRenderingContext2D.resetTransform - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-resettransform">CanvasRenderingContext2D.resetTransform - HTML Living Standard</a>
+   */
+  public native void resetTransform();
+
+  /**
+   * The CanvasRenderingContext2D.rotate() method of the Canvas 2D API adds a rotation to the transformation matrix.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate">CanvasRenderingContext2D.rotate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-rotate">CanvasRenderingContext2D.rotate - HTML Living Standard</a>
+   */
+  public native void rotate(double angle);
+
+  /**
+   * The CanvasRenderingContext2D.scale() method of the Canvas 2D API adds a scaling transformation to the canvas units horizontally and/or vertically.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/scale">CanvasRenderingContext2D.scale - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-scale">CanvasRenderingContext2D.scale - HTML Living Standard</a>
+   */
+  public native void scale(double x, double y);
+
+  /**
+   * The CanvasRenderingContext2D.setTransform() method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform">CanvasRenderingContext2D.setTransform - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-settransform">CanvasRenderingContext2D.setTransform - HTML Living Standard</a>
+   */
+  public native void setTransform(double a, double b, double c, double d, double e, double f);
+
+  /**
+   * The CanvasRenderingContext2D.setTransform() method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform">CanvasRenderingContext2D.setTransform - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-settransform">CanvasRenderingContext2D.setTransform - HTML Living Standard</a>
+   */
+  public native void setTransform(@Nonnull DOMMatrix2DInit transform);
+
+  /**
+   * The CanvasRenderingContext2D.setTransform() method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform">CanvasRenderingContext2D.setTransform - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-settransform">CanvasRenderingContext2D.setTransform - HTML Living Standard</a>
+   */
+  public native void setTransform();
+
+  /**
+   * The CanvasRenderingContext2D.transform() method of the Canvas 2D API multiplies the current transformation with the matrix described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform">CanvasRenderingContext2D.transform - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-transform">CanvasRenderingContext2D.transform - HTML Living Standard</a>
+   */
+  public native void transform(double a, double b, double c, double d, double e, double f);
+
+  /**
+   * The CanvasRenderingContext2D.translate() method of the Canvas 2D API adds a translation transformation to the current matrix.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/translate">CanvasRenderingContext2D.translate - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-translate">CanvasRenderingContext2D.translate - HTML Living Standard</a>
+   */
+  public native void translate(double x, double y);
 }

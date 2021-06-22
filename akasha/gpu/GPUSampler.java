@@ -1,17 +1,21 @@
-package akasha.gl;
+package akasha.gpu;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-/**
- * Extension available in both WebGL1 and WebGL2.
- */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "GPUSampler"
 )
-public interface WebGLCommonExtension extends WebGLExtension, WebGL1Extension {
+public class GPUSampler extends JsObject {
+  @Nullable
+  public String label;
+
+  protected GPUSampler() {
+  }
 }

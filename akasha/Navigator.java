@@ -4,6 +4,7 @@ import akasha.bluetooth.Bluetooth;
 import akasha.clipboard.Clipboard;
 import akasha.core.BufferSource;
 import akasha.core.JsObject;
+import akasha.gpu.GPU;
 import akasha.lang.JsArray;
 import akasha.media.MediaDevices;
 import akasha.promise.Promise;
@@ -119,6 +120,12 @@ public class Navigator extends JsObject {
   )
   @Nonnull
   public native Geolocation geolocation();
+
+  @JsProperty(
+      name = "gpu"
+  )
+  @Nonnull
+  public native GPU gpu();
 
   /**
    * The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer.
@@ -518,16 +525,6 @@ public class Navigator extends JsObject {
   public native Promise<Void> share();
 
   /**
-   * The Navigator method registerProtocolHandler() lets web sites register their ability to open or handle particular URL schemes (aka protocols).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler">Navigator.registerProtocolHandler - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#custom-handlers">registerProtocolHandler() - HTML Living Standard</a>
-   */
-  public native void registerProtocolHandler(@Nonnull String scheme, @Nonnull String url);
-
-  public native void unregisterProtocolHandler(@Nonnull String scheme, @Nonnull String url);
-
-  /**
    * The NavigatorID.taintEnabled() method always returns false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/taintEnabled">Navigator.taintEnabled - MDN</a>
@@ -542,4 +539,14 @@ public class Navigator extends JsObject {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-navigator-javaenabled">NavigatorPlugins.javaEnabled - HTML Living Standard</a>
    */
   public native boolean javaEnabled();
+
+  /**
+   * The Navigator method registerProtocolHandler() lets web sites register their ability to open or handle particular URL schemes (aka protocols).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler">Navigator.registerProtocolHandler - MDN</a>
+   * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#custom-handlers">registerProtocolHandler() - HTML Living Standard</a>
+   */
+  public native void registerProtocolHandler(@Nonnull String scheme, @Nonnull String url);
+
+  public native void unregisterProtocolHandler(@Nonnull String scheme, @Nonnull String url);
 }

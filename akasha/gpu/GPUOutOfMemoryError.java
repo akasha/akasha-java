@@ -1,17 +1,17 @@
-package akasha.gl;
+package akasha.gpu;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-/**
- * Extension available in both WebGL1 and WebGL2.
- */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "GPUOutOfMemoryError"
 )
-public interface WebGLCommonExtension extends WebGLExtension, WebGL1Extension {
+public class GPUOutOfMemoryError extends JsObject {
+  public GPUOutOfMemoryError() {
+  }
 }

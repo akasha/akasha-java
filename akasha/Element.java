@@ -946,6 +946,55 @@ public class Element extends Node {
   public native void replaceChildren(@Nonnull String... nodes);
 
   /**
+   * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
+   */
+  @Nonnull
+  public native Animation animate(@Nullable JsObject keyframes, double options);
+
+  /**
+   * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
+   */
+  @Nonnull
+  public native Animation animate(@Nullable JsObject keyframes,
+      @Nonnull KeyframeAnimationOptions options);
+
+  /**
+   * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
+   */
+  @Nonnull
+  public native Animation animate(@Nullable JsObject keyframes);
+
+  /**
+   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
+   */
+  @Nonnull
+  public native JsArray<Animation> getAnimations(@Nonnull GetAnimationsOptions options);
+
+  /**
+   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
+   */
+  @Nonnull
+  public native JsArray<Animation> getAnimations();
+
+  /**
    * The ChildNode.after() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just after this ChildNode. DOMString objects are inserted as equivalent Text nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/after">ChildNode.after - MDN</a>
@@ -994,55 +1043,6 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith">ChildNode.replaceWith - MDN</a>
    */
   public native void replaceWith(@Nonnull String... nodes);
-
-  /**
-   * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
-   */
-  @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes, double options);
-
-  /**
-   * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
-   */
-  @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes,
-      @Nonnull KeyframeAnimationOptions options);
-
-  /**
-   * The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">Element.animate - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
-   */
-  @Nonnull
-  public native Animation animate(@Nullable JsObject keyframes);
-
-  /**
-   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
-   */
-  @Nonnull
-  public native JsArray<Animation> getAnimations(@Nonnull GetAnimationsOptions options);
-
-  /**
-   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
-   */
-  @Nonnull
-  public native JsArray<Animation> getAnimations();
 
   @JsOverlay
   public final void addCancelListener(@Nonnull final EventListener callback,

@@ -1735,1302 +1735,6 @@ public class WebGL2RenderingContext extends JsObject implements RenderingContext
   public native int drawingBufferWidth();
 
   /**
-   * The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture">WebGLRenderingContext.activeTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">activeTexture - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glActiveTexture.xml">glActiveTexture - OpenGL ES 2.0</a>
-   */
-  public native void activeTexture(int texture);
-
-  /**
-   * The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader">WebGLRenderingContext.attachShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">attachShader - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glAttachShader.xml">glAttachShader - OpenGL ES 2.0</a>
-   */
-  public native void attachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation">WebGLRenderingContext.bindAttribLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">bindAttribLocation - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindAttribLocation.xml">glBindAttribLocation - OpenGL ES 2.0</a>
-   */
-  public native void bindAttribLocation(@Nonnull WebGLProgram program, @AttributeIndex int index,
-      @Nonnull String name);
-
-  /**
-   * The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer">WebGLRenderingContext.bindBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bindBuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindBuffer.xml">glBindBuffer - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindBuffer - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBuffer.xhtml">glBindBuffer - OpenGL ES 3.0</a>
-   */
-  public native void bindBuffer(@BufferTargetType int target, @Nullable WebGLBuffer buffer);
-
-  /**
-   * The WebGLRenderingContext.bindFramebuffer() method of the WebGL API binds a given WebGLFramebuffer to a target.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">WebGLRenderingContext.bindFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">bindFramebuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindFramebuffer.xml">glBindFramebuffer - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindFrameBuffer - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindFramebuffer.xhtml">glBindFramebuffer - OpenGL ES 3.0</a>
-   */
-  public native void bindFramebuffer(@FramebufferTargetType int target,
-      @Nullable WebGLFramebuffer framebuffer);
-
-  /**
-   * The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer">WebGLRenderingContext.bindRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">bindRenderbuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml">glBindRenderbuffer - OpenGL ES 2.0</a>
-   */
-  public native void bindRenderbuffer(@RenderbufferTargetType int target,
-      @Nullable WebGLRenderbuffer renderbuffer);
-
-  /**
-   * The WebGLRenderingContext.bindTexture() method of the WebGL API binds a given WebGLTexture to a target (binding point).
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture">WebGLRenderingContext.bindTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">bindTexture - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindTexture.xml">glBindTexture - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindTexture - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTexture.xhtml">glBindTexture - OpenGL ES 3.0</a>
-   */
-  public native void bindTexture(@TextureTargetType int target, @Nullable WebGLTexture texture);
-
-  /**
-   * The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor">WebGLRenderingContext.blendColor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendColor - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendColor.xml">glBlendColor - OpenGL ES 2.0</a>
-   */
-  public native void blendColor(float red, float green, float blue, float alpha);
-
-  /**
-   * The WebGLRenderingContext.blendEquation() method of the WebGL API is used to set both the RGB blend equation and alpha blend equation to a single equation.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquation">WebGLRenderingContext.blendEquation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendEquation - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquation.xml">glBlendEquation - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquation.xml">glBlendEquation - OpenGL ES 3.0</a>
-   */
-  public native void blendEquation(int mode);
-
-  /**
-   * The WebGLRenderingContext.blendEquationSeparate() method of the WebGL API is used to set the RGB blend equation and alpha blend equation separately.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquationSeparate">WebGLRenderingContext.blendEquationSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendEquationSeparate - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquationSeparate.xml">glBlendEquationSeparate - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquationSeparate.xhtml">glBlendEquationSeparate - OpenGL ES 3.0</a>
-   */
-  public native void blendEquationSeparate(int modeRGB, int modeAlpha);
-
-  /**
-   * The WebGLRenderingContext.blendFunc() method of the WebGL API defines which function is used for blending pixel arithmetic.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFunc">WebGLRenderingContext.blendFunc - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendFunc - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">glBlendFunc - OpenGL ES 2.0</a>
-   */
-  public native void blendFunc(@BlendFactor int sfactor, @BlendFactor int dfactor);
-
-  /**
-   * The WebGLRenderingContext.blendFuncSeparate() method of the WebGL API defines which function is used for blending pixel arithmetic for RGB and alpha components separately.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFuncSeparate">WebGLRenderingContext.blendFuncSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendFunc - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">glBlendFunc - OpenGL ES 2.0</a>
-   */
-  public native void blendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
-
-  /**
-   * The WebGLRenderingContext.checkFramebufferStatus() method of the WebGL API returns the completeness status of the WebGLFramebuffer object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus">WebGLRenderingContext.checkFramebufferStatus - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">checkFramebufferStatus - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCheckFramebufferStatus.xml">glCheckFramebufferStatus - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">checkFramebufferStatus - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCheckFramebufferStatus.xhtml">glCheckFramebufferStatus - OpenGL ES 3.0</a>
-   */
-  public native int checkFramebufferStatus(int target);
-
-  /**
-   * The WebGLRenderingContext.clear() method of the WebGL API clears buffers to preset values.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear">WebGLRenderingContext.clear - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">clear - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClear.xml">glClear - OpenGL ES 2.0</a>
-   */
-  public native void clear(int mask);
-
-  /**
-   * The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor">WebGLRenderingContext.clearColor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearColor - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearColor.xml">glClearColor - OpenGL ES 2.0</a>
-   */
-  public native void clearColor(float red, float green, float blue, float alpha);
-
-  /**
-   * The WebGLRenderingContext.clearDepth() method of the WebGL API specifies the clear value for the depth buffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearDepth">WebGLRenderingContext.clearDepth - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearDepth - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearDepthf.xml">glClearDepthf - OpenGL ES 2.0</a>
-   */
-  public native void clearDepth(float depth);
-
-  /**
-   * The WebGLRenderingContext.clearStencil() method of the WebGL API specifies the clear value for the stencil buffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearStencil">WebGLRenderingContext.clearStencil - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearStencil - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearStencil.xml">glClearStencil - OpenGL ES 2.0</a>
-   */
-  public native void clearStencil(int s);
-
-  /**
-   * The WebGLRenderingContext.colorMask() method of the WebGL API sets which color components to enable or to disable when drawing or rendering to a WebGLFramebuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/colorMask">WebGLRenderingContext.colorMask - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">colorMask - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glColorMask.xml">glColorMask - OpenGL ES 2.0</a>
-   */
-  public native void colorMask(boolean red, boolean green, boolean blue, boolean alpha);
-
-  /**
-   * The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compileShader">WebGLRenderingContext.compileShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">compileShader - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompileShader.xml">glCompileShader - OpenGL ES 2.0</a>
-   */
-  public native void compileShader(@Nonnull WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D">WebGLRenderingContext.copyTexImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">copyTexImage2D - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexImage2D.xml">glCopyTexImage2D - OpenGL ES 2.0</a>
-   */
-  public native void copyTexImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int internalformat, int x, int y, int width, int height, int border);
-
-  /**
-   * The WebGLRenderingContext.copyTexSubImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into an existing 2D texture sub-image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D">WebGLRenderingContext.copyTexSubImage2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">copyTexSubImage2D - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexSubImage2D.xml">glCopyTexSubImage2D - OpenGL ES 2.0</a>
-   */
-  public native void copyTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
-      int xoffset, int yoffset, int x, int y, int width, int height);
-
-  /**
-   * The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createBuffer">WebGLRenderingContext.createBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">createBuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">glGenBuffers - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLBuffer createBuffer();
-
-  /**
-   * The WebGLRenderingContext.createFramebuffer() method of the WebGL API creates and initializes a WebGLFramebuffer object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createFramebuffer">WebGLRenderingContext.createFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">createFramebuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">glGenFramebuffers - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLFramebuffer createFramebuffer();
-
-  /**
-   * The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram">WebGLRenderingContext.createProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createProgram - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">glCreateProgram - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLProgram createProgram();
-
-  /**
-   * The WebGLRenderingContext.createRenderbuffer() method of the WebGL API creates and initializes a WebGLRenderbuffer object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer">WebGLRenderingContext.createRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">createRenderbuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">glGenRenderbuffers - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLRenderbuffer createRenderbuffer();
-
-  /**
-   * The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader().
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader">WebGLRenderingContext.createShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createShader - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">glCreateShader - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLShader createShader(@ShaderType int type);
-
-  /**
-   * The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture">WebGLRenderingContext.createTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">createTexture - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">glGenTextures - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLTexture createTexture();
-
-  /**
-   * The WebGLRenderingContext.cullFace() method of the WebGL API specifies whether or not front- and/or back-facing polygons can be culled.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/cullFace">WebGLRenderingContext.cullFace - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">cullFace - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCullFace.xml">glCullFace - OpenGL ES 2.0</a>
-   */
-  public native void cullFace(int mode);
-
-  /**
-   * The WebGLRenderingContext.deleteBuffer() method of the WebGL API deletes a given WebGLBuffer. This method has no effect if the buffer has already been deleted.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteBuffer">WebGLRenderingContext.deleteBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">deleteBuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteBuffers.xml">glDeleteBuffers - OpenGL ES 2.0</a>
-   */
-  public native void deleteBuffer(@Nullable WebGLBuffer buffer);
-
-  /**
-   * The WebGLRenderingContext.deleteFramebuffer() method of the WebGL API deletes a given WebGLFramebuffer object. This method has no effect if the frame buffer has already been deleted.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteFramebuffer">WebGLRenderingContext.deleteFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">deleteFramebuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteFramebuffers.xml">glDeleteFramebuffers - OpenGL ES 2.0</a>
-   */
-  public native void deleteFramebuffer(@Nullable WebGLFramebuffer framebuffer);
-
-  /**
-   * The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram">WebGLRenderingContext.deleteProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">deleteProgram - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteProgram.xml">glDeleteProgram - OpenGL ES 2.0</a>
-   */
-  public native void deleteProgram(@Nullable WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.deleteRenderbuffer() method of the WebGL API deletes a given WebGLRenderbuffer object. This method has no effect if the render buffer has already been deleted.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteRenderbuffer">WebGLRenderingContext.deleteRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">deleteRenderbuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteRenderbuffers.xml">glDeleteRenderbuffers - OpenGL ES 2.0</a>
-   */
-  public native void deleteRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
-
-  /**
-   * The WebGLRenderingContext.deleteShader() method of the WebGL API marks a given WebGLShader object for deletion. It will then be deleted whenever the shader is no longer in use. This method has no effect if the shader has already been deleted, and the WebGLShader is automatically marked for deletion when it is destroyed by the garbage collector.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteShader">WebGLRenderingContext.deleteShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">deleteShader - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteShader.xml">glDeleteShader - OpenGL ES 2.0</a>
-   */
-  public native void deleteShader(@Nullable WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture">WebGLRenderingContext.deleteTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">deleteTexture - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteTextures.xml">glDeleteTextures - OpenGL ES 2.0</a>
-   */
-  public native void deleteTexture(@Nullable WebGLTexture texture);
-
-  /**
-   * The WebGLRenderingContext.depthFunc() method of the WebGL API specifies a function that compares incoming pixel depth to the current depth buffer value.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthFunc">WebGLRenderingContext.depthFunc - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthFunc - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthFunc.xml">glDepthFunc - OpenGL ES 2.0</a>
-   */
-  public native void depthFunc(int func);
-
-  /**
-   * The WebGLRenderingContext.depthMask() method of the WebGL API sets whether writing into the depth buffer is enabled or disabled.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthMask">WebGLRenderingContext.depthMask - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthMask - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthMask.xml">glDepthMask - OpenGL ES 2.0</a>
-   */
-  public native void depthMask(boolean flag);
-
-  /**
-   * The WebGLRenderingContext.depthRange() method of the WebGL API specifies the depth range mapping from normalized device coordinates to window or viewport coordinates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthRange">WebGLRenderingContext.depthRange - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthRange - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthRangef.xml">glDepthRangef - OpenGL ES 2.0</a>
-   */
-  public native void depthRange(float zNear, float zFar);
-
-  /**
-   * The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached WebGLShader from a WebGLProgram.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/detachShader">WebGLRenderingContext.detachShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">detachShader - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDetachShader.xml">glDetachShader - OpenGL ES 2.0</a>
-   */
-  public native void detachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.disable() method of the WebGL API disables specific WebGL capabilities for this context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable">WebGLRenderingContext.disable - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">disable - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDisable.xml">glDisable - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">glDisable - OpenGL ES 3.0</a>
-   */
-  public native void disable(@Capability int cap);
-
-  /**
-   * The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray">WebGLRenderingContext.disableVertexAttribArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">disableVertexAttribArray - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">glDisableVertexAttribArray - OpenGL ES 2.0</a>
-   */
-  public native void disableVertexAttribArray(@AttributeIndex int index);
-
-  /**
-   * The WebGLRenderingContext.drawArrays() method of the WebGL API renders primitives from array data.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">WebGLRenderingContext.drawArrays - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">drawArrays - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawArrays.xml">glDrawArrays - OpenGL ES 2.0</a>
-   */
-  public native void drawArrays(@DrawMode int mode, int first, int count);
-
-  /**
-   * The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">WebGLRenderingContext.drawElements - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">drawElements - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawElements.xml">glDrawElements - OpenGL ES 2.0</a>
-   */
-  public native void drawElements(@DrawMode int mode, int count, @DrawElementsDataType int type,
-      int offset);
-
-  /**
-   * The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable">WebGLRenderingContext.enable - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">enable - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnable.xml">glEnable - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">glEnable - OpenGL ES 3.0</a>
-   */
-  public native void enable(@Capability int cap);
-
-  /**
-   * The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray">WebGLRenderingContext.enableVertexAttribArray - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">enableVertexAttribArray - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">glEnableVertexAttribArray - OpenGL ES 2.0</a>
-   */
-  public native void enableVertexAttribArray(@AttributeIndex int index);
-
-  /**
-   * The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">finish - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">glFinish - OpenGL ES 2.0</a>
-   */
-  public native void finish();
-
-  /**
-   * The WebGLRenderingContext.flush() method of the WebGL API empties different buffer commands, causing all commands to be executed as quickly as possible.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush">WebGLRenderingContext.flush - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">flush - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFlush.xml">glFlush - OpenGL ES 2.0</a>
-   */
-  public native void flush();
-
-  /**
-   * The WebGLRenderingContext.framebufferRenderbuffer() method of the WebGL API attaches a WebGLRenderbuffer object to a WebGLFramebuffer object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer">WebGLRenderingContext.framebufferRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">framebufferRenderbuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferRenderbuffer.xml">glFramebufferRenderbuffer - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferRenderbuffer.xhtml">glFramebufferRenderbuffer - OpenGL ES 3.0</a>
-   */
-  public native void framebufferRenderbuffer(@FramebufferTargetType int target,
-      @FramebufferAttachment int attachment, int renderbuffertarget,
-      @Nullable WebGLRenderbuffer renderbuffer);
-
-  /**
-   * The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D">WebGLRenderingContext.framebufferTexture2D - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">framebufferTexture2D - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml">glFramebufferTexture2D - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml">glFramebufferTexture2D - OpenGL ES 3.0</a>
-   */
-  public native void framebufferTexture2D(@FramebufferTargetType int target,
-      @FramebufferAttachment int attachment, @Texture2DSurfaceTargetType int textarget,
-      @Nullable WebGLTexture texture, @FramebufferMipmapLevel int level);
-
-  /**
-   * The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace">WebGLRenderingContext.frontFace - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">frontFace - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFrontFace.xml">glFrontFace - OpenGL ES 2.0</a>
-   */
-  public native void frontFace(@Winding int mode);
-
-  /**
-   * The WebGLRenderingContext.generateMipmap() method of the WebGL API generates a set of mipmaps for a WebGLTexture object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap">WebGLRenderingContext.generateMipmap - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">generateMipmap - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenerateMipmap.xml">glGenerateMipmap - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenerateMipmap.xhtml">glGenerateMipmap - OpenGL ES 3.0</a>
-   */
-  public native void generateMipmap(@TextureTargetType int target);
-
-  /**
-   * The WebGLRenderingContext.getActiveAttrib() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a vertex attribute. It is generally used when querying unknown attributes either for debugging or generic library creation.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveAttrib">WebGLRenderingContext.getActiveAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">glGetActiveAttrib - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLActiveInfo getActiveAttrib(@Nonnull WebGLProgram program,
-      @AttributeIndex int index);
-
-  /**
-   * The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform">WebGLRenderingContext.getActiveUniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveUniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">glGetActiveUniform - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLActiveInfo getActiveUniform(@Nonnull WebGLProgram program, int index);
-
-  /**
-   * The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders">WebGLRenderingContext.getAttachedShaders - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getAttachedShaders - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">glGetAttachedShaders - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native JsArray<WebGLShader> getAttachedShaders(@Nonnull WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.getAttribLocation() method of the WebGL API returns the location of an attribute variable in a given WebGLProgram.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttribLocation">WebGLRenderingContext.getAttribLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getAttribLocation - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttribLocation.xml">glGetAttribLocation - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native int getAttribLocation(@Nonnull WebGLProgram program, @Nonnull String name);
-
-  /**
-   * The WebGLRenderingContext.getBufferParameter() method of the WebGL API returns information about the buffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter">WebGLRenderingContext.getBufferParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">getBufferParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetBufferParameteriv.xml">glGetBufferParameteriv - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferParameter - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">glGetBufferParameter - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getBufferParameter(@BufferTargetType int target, int pname);
-
-  /**
-   * The WebGLRenderingContext.getContextAttributes() method returns a WebGLContextAttributes object that contains the actual context parameters. Might return null, if the context is lost.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes">WebGLRenderingContext.getContextAttributes - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">WebGLRenderingContext.getContextAttributes - WebGL 1.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLContextAttributes getContextAttributes();
-
-  /**
-   * The WebGLRenderingContext.getError() method of the WebGL API returns error information.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getError">WebGLRenderingContext.getError - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getError - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetError.xml">glGetError - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @WebGLContextError
-  @Nonnull
-  public native int getError();
-
-  /**
-   * The WebGLRenderingContext.getExtension() method enables a WebGL extension.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension">WebGLRenderingContext.getExtension - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getExtension - WebGL 1.0</a>
-   */
-  @Nullable
-  public native WebGLExtension getExtension(@WebGLExtensionName @Nonnull String name);
-
-  /**
-   * The WebGLRenderingContext.getFramebufferAttachmentParameter() method of the WebGL API returns information about a framebuffer's attachment.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter">WebGLRenderingContext.getFramebufferAttachmentParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">getFramebufferAttachmentParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetFramebufferAttachmentParameteriv.xml">glGetFramebufferAttachmentParameteriv - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">getFramebufferAttachmentParameter - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml">glGetFramebufferAttachmentParameteriv - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getFramebufferAttachmentParameter(int target, int attachment, int pname);
-
-  /**
-   * The WebGLRenderingContext.getParameter() method of the WebGL API returns a value for the passed parameter name.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter">WebGLRenderingContext.getParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">getParameter - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml">glGet - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getParameter(@WebGLParameterName int pname);
-
-  /**
-   * The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog">WebGLRenderingContext.getProgramInfoLog - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramInfoLog - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">glGetProgramInfoLog - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native String getProgramInfoLog(@Nonnull WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramParameter">WebGLRenderingContext.getProgramParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramiv.xml">glGetProgramiv - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">getProgramParameter - WebGL 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getProgramParameter(@Nonnull WebGLProgram program,
-      @ProgramParameterType int pname);
-
-  /**
-   * The WebGLRenderingContext.getRenderbufferParameter() method of the WebGL API returns information about the renderbuffer.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getRenderbufferParameter">WebGLRenderingContext.getRenderbufferParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">getRenderbufferParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetRenderbufferParameteriv.xml">glGetRenderbufferParameteriv - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">glGetRenderbufferParameteriv - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getRenderbufferParameter(int target, int pname);
-
-  /**
-   * The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderInfoLog">WebGLRenderingContext.getShaderInfoLog - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderInfoLog - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">glGetShaderInfoLog - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native String getShaderInfoLog(@Nonnull WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderParameter">WebGLRenderingContext.getShaderParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">glGetShaderiv - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getShaderParameter(@Nonnull WebGLShader shader, @ShaderParameterType int pname);
-
-  /**
-   * The WebGLRenderingContext.getShaderPrecisionFormat() method of the WebGL API returns a new WebGLShaderPrecisionFormat object describing the range and precision for the specified shader numeric format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderPrecisionFormat">WebGLRenderingContext.getShaderPrecisionFormat - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderPrecisionFormat - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">glGetShaderPrecisionFormat - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(int shadertype,
-      int precisiontype);
-
-  /**
-   * The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource">WebGLRenderingContext.getShaderSource - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderSource - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml">glGetShaderSource - OpenGL ES 2.0</a>
-   */
-  @GLSL
-  @HasNoSideEffects
-  @Nullable
-  public native String getShaderSource(@Nonnull WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions">WebGLRenderingContext.getSupportedExtensions - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getSupportedExtensions - WebGL 1.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native JsArray<String> getSupportedExtensions();
-
-  /**
-   * The WebGLRenderingContext.getTexParameter() method of the WebGL API returns information about the given texture.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getTexParameter">WebGLRenderingContext.getTexParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">getTexParameter - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetTexParameter.xml">glGetTexParameter - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">getTexParameter - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml">glGetTexParameter - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getTexParameter(@TextureTargetType int target,
-      @ReadableTextureParameter int pname);
-
-  /**
-   * The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniform">WebGLRenderingContext.getUniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniform.xml">glGetUniform - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getUniform - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml">glGetUniform - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getUniform(@Nonnull WebGLProgram program,
-      @Nonnull WebGLUniformLocation location);
-
-  /**
-   * Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation">WebGLRenderingContext.getUniformLocation - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniformLocation - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">glGetUniformLocation - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native WebGLUniformLocation getUniformLocation(@Nonnull WebGLProgram program,
-      @Nonnull String name);
-
-  /**
-   * The WebGLRenderingContext.getVertexAttrib() method of the WebGL API returns information about a vertex attribute at a given position.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttrib">WebGLRenderingContext.getVertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml">glGetVertexAttrib - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getVertexAttrib - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">glGetVertexAttrib - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  @Nullable
-  public native Any getVertexAttrib(@AttributeIndex int index, int pname);
-
-  /**
-   * The WebGLRenderingContext.getVertexAttribOffset() method of the WebGL API returns the address of a specified vertex attribute.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttribOffset">WebGLRenderingContext.getVertexAttribOffset - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttribOffset - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml">glGetVertexAttribPointerv - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native int getVertexAttribOffset(@AttributeIndex int index,
-      @VertexAttribOffsetParameterName int pname);
-
-  /**
-   * The WebGLRenderingContext.hint() method of the WebGL API specifies hints for certain behaviors. The interpretation of these hints depend on the implementation.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/hint">WebGLRenderingContext.hint - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">hint - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glHint.xml">glHint - OpenGL ES 2.0</a>
-   */
-  public native void hint(int target, int mode);
-
-  /**
-   * The WebGLRenderingContext.isBuffer() method of the WebGL API returns true if the passed WebGLBuffer is valid and false otherwise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isBuffer">WebGLRenderingContext.isBuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">isBuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsBuffer.xml">glIsBuffer - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isBuffer(@Nullable WebGLBuffer buffer);
-
-  /**
-   * The WebGLRenderingContext.isContextLost() method returns a Boolean indicating whether or not the WebGL context has been lost and must be re-established before rendering can resume.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost">WebGLRenderingContext.isContextLost - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13">WebGLRenderingContext.isContextLost - WebGL 1.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isContextLost();
-
-  /**
-   * The WebGLRenderingContext.isEnabled() method of the WebGL API tests whether a specific WebGL capability is enabled or not for this context.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isEnabled">WebGLRenderingContext.isEnabled - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">isEnabled - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsEnabled.xml">glIsEnabled - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">isEnabled - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsEnabled.xhtml">glIsEnabled - OpenGL ES 3.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isEnabled(@Capability int cap);
-
-  /**
-   * The WebGLRenderingContext.isFramebuffer() method of the WebGL API returns true if the passed WebGLFramebuffer is valid and false otherwise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isFramebuffer">WebGLRenderingContext.isFramebuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">isFramebuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsFramebuffer.xml">glIsFramebuffer - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isFramebuffer(@Nullable WebGLFramebuffer framebuffer);
-
-  /**
-   * The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isProgram">WebGLRenderingContext.isProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isProgram - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml">glIsProgram - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isProgram(@Nullable WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.isRenderbuffer() method of the WebGL API returns true if the passed WebGLRenderbuffer is valid and false otherwise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isRenderbuffer">WebGLRenderingContext.isRenderbuffer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">isRenderbuffer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsRenderbuffer.xml">glIsRenderbuffer - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
-
-  /**
-   * The WebGLRenderingContext.isShader() method of the WebGL API returns true if the passed WebGLShader is valid, false otherwise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isShader">WebGLRenderingContext.isShader - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isShader - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml">glIsShader - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isShader(@Nullable WebGLShader shader);
-
-  /**
-   * The WebGLRenderingContext.isTexture() method of the WebGL API returns true if the passed WebGLTexture is valid and false otherwise.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isTexture">WebGLRenderingContext.isTexture - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">isTexture - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml">glIsTexture - OpenGL ES 2.0</a>
-   */
-  @HasNoSideEffects
-  public native boolean isTexture(@Nullable WebGLTexture texture);
-
-  /**
-   * The WebGLRenderingContext.lineWidth() method of the WebGL API sets the line width of rasterized lines.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth">WebGLRenderingContext.lineWidth - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">lineWidth - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLineWidth.xml">glLineWidth - OpenGL ES 2.0</a>
-   */
-  public native void lineWidth(float width);
-
-  /**
-   * The WebGLRenderingContext interface's linkProgram() method links a given WebGLProgram, completing the process of preparing the GPU code for the program's fragment and vertex shaders.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/linkProgram">WebGLRenderingContext.linkProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">linkProgram - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLinkProgram.xml">glLinkProgram - OpenGL ES 2.0</a>
-   */
-  public native void linkProgram(@Nonnull WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.pixelStorei() method of the WebGL API specifies the pixel storage modes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei">WebGLRenderingContext.pixelStorei - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">pixelStorei - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#PIXEL_STORAGE_PARAMETERS">Pixel Storage Parameters - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml">glPixelStorei - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">pixelStorei - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glPixelStorei.xhtml">glPixelStorei - OpenGL ES 3.0</a>
-   */
-  public native void pixelStorei(@PixelStorageParameter int pname, int param);
-
-  /**
-   * The WebGLRenderingContext.polygonOffset() method of the WebGL API specifies the scale factors and units to calculate depth values.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset">WebGLRenderingContext.polygonOffset - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">polygonOffset - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPolygonOffset.xml">glPolygonOffset - OpenGL ES 2.0</a>
-   */
-  public native void polygonOffset(float factor, float units);
-
-  /**
-   * The WebGLRenderingContext.renderbufferStorage() method of the WebGL API creates and initializes a renderbuffer object's data store.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/renderbufferStorage">WebGLRenderingContext.renderbufferStorage - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">renderbufferStorage - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glRenderbufferStorage.xml">glRenderbufferStorage - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorage.xhtml">glRenderbufferStorage - OpenGL ES 3.0</a>
-   */
-  public native void renderbufferStorage(@RenderbufferStorageTarget int target,
-      @RenderbufferStorageInternalFormat int internalformat, int width, int height);
-
-  /**
-   * The WebGLRenderingContext.sampleCoverage() method of the WebGL API specifies multi-sample coverage parameters for anti-aliasing effects.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/sampleCoverage">WebGLRenderingContext.sampleCoverage - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">sampleCoverage - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glSampleCoverage.xml">glSampleCoverage - OpenGL ES 2.0</a>
-   */
-  public native void sampleCoverage(float value, boolean invert);
-
-  /**
-   * The WebGLRenderingContext.scissor() method of the WebGL API sets a scissor box, which limits the drawing to a specified rectangle.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/scissor">WebGLRenderingContext.scissor - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">scissor - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glScissor.xml">glScissor - OpenGL ES 2.0</a>
-   */
-  public native void scissor(int x, int y, int width, int height);
-
-  /**
-   * The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource">WebGLRenderingContext.shaderSource - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">shaderSource - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glShaderSource.xml">glShaderSource - OpenGL ES 2.0</a>
-   */
-  public native void shaderSource(@Nonnull WebGLShader shader, @GLSL @Nonnull String source);
-
-  /**
-   * The WebGLRenderingContext.stencilFunc() method of the WebGL API sets the front and back function and reference value for stencil testing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFunc">WebGLRenderingContext.stencilFunc - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilFunc - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFunc.xml">glStencilFunc - OpenGL ES 2.0</a>
-   */
-  public native void stencilFunc(int func, int ref, int mask);
-
-  /**
-   * The WebGLRenderingContext.stencilFuncSeparate() method of the WebGL API sets the front and/or back function and reference value for stencil testing.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate">WebGLRenderingContext.stencilFuncSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilFuncSeparate - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFuncSeparate.xml">glStencilFuncSeparate - OpenGL ES 2.0</a>
-   */
-  public native void stencilFuncSeparate(int face, int func, int ref, int mask);
-
-  /**
-   * The WebGLRenderingContext.stencilMask() method of the WebGL API controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMask">WebGLRenderingContext.stencilMask - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilMask - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMask.xml">glStencilMask - OpenGL ES 2.0</a>
-   */
-  public native void stencilMask(int mask);
-
-  /**
-   * The WebGLRenderingContext.stencilMaskSeparate() method of the WebGL API controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate">WebGLRenderingContext.stencilMaskSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilMaskSeparate - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMaskSeparate.xml">glStencilMaskSeparate - OpenGL ES 2.0</a>
-   */
-  public native void stencilMaskSeparate(int face, int mask);
-
-  /**
-   * The WebGLRenderingContext.stencilOp() method of the WebGL API sets both the front and back-facing stencil test actions.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOp">WebGLRenderingContext.stencilOp - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilOp - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOp.xml">glStencilOp - OpenGL ES 2.0</a>
-   */
-  public native void stencilOp(int fail, int zfail, int zpass);
-
-  /**
-   * The WebGLRenderingContext.stencilOpSeparate() method of the WebGL API sets the front and/or back-facing stencil test actions.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOpSeparate">WebGLRenderingContext.stencilOpSeparate - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilOpSeparate - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOpSeparate.xml">glStencilOpSeparate - OpenGL ES 2.0</a>
-   */
-  public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
-
-  /**
-   * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texParameter[fi] - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">glTexParameter - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texParameter[fi] - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">glTexParameter - OpenGL ES 3.0</a>
-   */
-  public native void texParameterf(@TextureTargetType int target, @TextureParameter int pname,
-      float param);
-
-  /**
-   * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texParameter[fi] - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">glTexParameter - OpenGL ES 2.0</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texParameter[fi] - WebGL 2.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">glTexParameter - OpenGL ES 3.0</a>
-   */
-  public native void texParameteri(@TextureTargetType int target, @TextureParameter int pname,
-      int param);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform1f(@Nullable WebGLUniformLocation location, float x);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform1i(@Nullable WebGLUniformLocation location, int x);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform2f(@Nullable WebGLUniformLocation location, float x, float y);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform2i(@Nullable WebGLUniformLocation location, int x, int y);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform3f(@Nullable WebGLUniformLocation location, float x, float y, float z);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform3i(@Nullable WebGLUniformLocation location, int x, int y, int z);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform4f(@Nullable WebGLUniformLocation location, float x, float y, float z,
-      float w);
-
-  /**
-   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
-   */
-  public native void uniform4i(@Nullable WebGLUniformLocation location, int x, int y, int z, int w);
-
-  /**
-   * The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram">WebGLRenderingContext.useProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">useProgram - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUseProgram.xml">glUseProgram - OpenGL ES 2.0</a>
-   */
-  public native void useProgram(@Nullable WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/validateProgram">WebGLRenderingContext.validateProgram - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">validateProgram - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glValidateProgram.xml">glValidateProgram - OpenGL ES 2.0</a>
-   */
-  public native void validateProgram(@Nonnull WebGLProgram program);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib1f(@AttributeIndex int index, float x);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull Float32List values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull Float32Array values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull double[] values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib2f(@AttributeIndex int index, float x, float y);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull Float32List values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull Float32Array values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull double[] values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib3f(@AttributeIndex int index, float x, float y, float z);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull Float32List values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull Float32Array values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull double[] values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib4f(@AttributeIndex int index, float x, float y, float z, float w);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull Float32List values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull Float32Array values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull double[] values);
-
-  /**
-   * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttribPointer - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml">glVertexAttribPointer - OpenGL ES 2.0</a>
-   */
-  public native void vertexAttribPointer(@AttributeIndex int index, @VertexDimensions int size,
-      @AttributeComponentDataType int type, boolean normalized, int stride, int offset);
-
-  /**
-   * The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport">WebGLRenderingContext.viewport - MDN</a>
-   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">viewport - WebGL 1.0</a>
-   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glViewport.xml">glViewport - OpenGL ES 2.0</a>
-   */
-  public native void viewport(int x, int y, int width, int height);
-
-  @Nonnull
-  public native Promise<Void> makeXRCompatible();
-
-  /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
@@ -4625,6 +3329,1302 @@ public class WebGL2RenderingContext extends JsObject implements RenderingContext
    */
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
+
+  /**
+   * The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture">WebGLRenderingContext.activeTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">activeTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glActiveTexture.xml">glActiveTexture - OpenGL ES 2.0</a>
+   */
+  public native void activeTexture(int texture);
+
+  /**
+   * The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader">WebGLRenderingContext.attachShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">attachShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glAttachShader.xml">glAttachShader - OpenGL ES 2.0</a>
+   */
+  public native void attachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation">WebGLRenderingContext.bindAttribLocation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">bindAttribLocation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindAttribLocation.xml">glBindAttribLocation - OpenGL ES 2.0</a>
+   */
+  public native void bindAttribLocation(@Nonnull WebGLProgram program, @AttributeIndex int index,
+      @Nonnull String name);
+
+  /**
+   * The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer">WebGLRenderingContext.bindBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">bindBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindBuffer.xml">glBindBuffer - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindBuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBuffer.xhtml">glBindBuffer - OpenGL ES 3.0</a>
+   */
+  public native void bindBuffer(@BufferTargetType int target, @Nullable WebGLBuffer buffer);
+
+  /**
+   * The WebGLRenderingContext.bindFramebuffer() method of the WebGL API binds a given WebGLFramebuffer to a target.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">WebGLRenderingContext.bindFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">bindFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindFramebuffer.xml">glBindFramebuffer - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindFrameBuffer - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindFramebuffer.xhtml">glBindFramebuffer - OpenGL ES 3.0</a>
+   */
+  public native void bindFramebuffer(@FramebufferTargetType int target,
+      @Nullable WebGLFramebuffer framebuffer);
+
+  /**
+   * The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer">WebGLRenderingContext.bindRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">bindRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml">glBindRenderbuffer - OpenGL ES 2.0</a>
+   */
+  public native void bindRenderbuffer(@RenderbufferTargetType int target,
+      @Nullable WebGLRenderbuffer renderbuffer);
+
+  /**
+   * The WebGLRenderingContext.bindTexture() method of the WebGL API binds a given WebGLTexture to a target (binding point).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture">WebGLRenderingContext.bindTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">bindTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindTexture.xml">glBindTexture - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1">bindTexture - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBindTexture.xhtml">glBindTexture - OpenGL ES 3.0</a>
+   */
+  public native void bindTexture(@TextureTargetType int target, @Nullable WebGLTexture texture);
+
+  /**
+   * The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor">WebGLRenderingContext.blendColor - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendColor - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendColor.xml">glBlendColor - OpenGL ES 2.0</a>
+   */
+  public native void blendColor(float red, float green, float blue, float alpha);
+
+  /**
+   * The WebGLRenderingContext.blendEquation() method of the WebGL API is used to set both the RGB blend equation and alpha blend equation to a single equation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquation">WebGLRenderingContext.blendEquation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendEquation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquation.xml">glBlendEquation - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquation.xml">glBlendEquation - OpenGL ES 3.0</a>
+   */
+  public native void blendEquation(int mode);
+
+  /**
+   * The WebGLRenderingContext.blendEquationSeparate() method of the WebGL API is used to set the RGB blend equation and alpha blend equation separately.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquationSeparate">WebGLRenderingContext.blendEquationSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendEquationSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquationSeparate.xml">glBlendEquationSeparate - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquationSeparate.xhtml">glBlendEquationSeparate - OpenGL ES 3.0</a>
+   */
+  public native void blendEquationSeparate(int modeRGB, int modeAlpha);
+
+  /**
+   * The WebGLRenderingContext.blendFunc() method of the WebGL API defines which function is used for blending pixel arithmetic.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFunc">WebGLRenderingContext.blendFunc - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">glBlendFunc - OpenGL ES 2.0</a>
+   */
+  public native void blendFunc(@BlendFactor int sfactor, @BlendFactor int dfactor);
+
+  /**
+   * The WebGLRenderingContext.blendFuncSeparate() method of the WebGL API defines which function is used for blending pixel arithmetic for RGB and alpha components separately.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFuncSeparate">WebGLRenderingContext.blendFuncSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">blendFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendFunc.xml">glBlendFunc - OpenGL ES 2.0</a>
+   */
+  public native void blendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
+
+  /**
+   * The WebGLRenderingContext.checkFramebufferStatus() method of the WebGL API returns the completeness status of the WebGLFramebuffer object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus">WebGLRenderingContext.checkFramebufferStatus - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">checkFramebufferStatus - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCheckFramebufferStatus.xml">glCheckFramebufferStatus - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">checkFramebufferStatus - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glCheckFramebufferStatus.xhtml">glCheckFramebufferStatus - OpenGL ES 3.0</a>
+   */
+  public native int checkFramebufferStatus(int target);
+
+  /**
+   * The WebGLRenderingContext.clear() method of the WebGL API clears buffers to preset values.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear">WebGLRenderingContext.clear - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">clear - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClear.xml">glClear - OpenGL ES 2.0</a>
+   */
+  public native void clear(int mask);
+
+  /**
+   * The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor">WebGLRenderingContext.clearColor - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearColor - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearColor.xml">glClearColor - OpenGL ES 2.0</a>
+   */
+  public native void clearColor(float red, float green, float blue, float alpha);
+
+  /**
+   * The WebGLRenderingContext.clearDepth() method of the WebGL API specifies the clear value for the depth buffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearDepth">WebGLRenderingContext.clearDepth - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearDepth - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearDepthf.xml">glClearDepthf - OpenGL ES 2.0</a>
+   */
+  public native void clearDepth(float depth);
+
+  /**
+   * The WebGLRenderingContext.clearStencil() method of the WebGL API specifies the clear value for the stencil buffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearStencil">WebGLRenderingContext.clearStencil - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">clearStencil - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearStencil.xml">glClearStencil - OpenGL ES 2.0</a>
+   */
+  public native void clearStencil(int s);
+
+  /**
+   * The WebGLRenderingContext.colorMask() method of the WebGL API sets which color components to enable or to disable when drawing or rendering to a WebGLFramebuffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/colorMask">WebGLRenderingContext.colorMask - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">colorMask - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glColorMask.xml">glColorMask - OpenGL ES 2.0</a>
+   */
+  public native void colorMask(boolean red, boolean green, boolean blue, boolean alpha);
+
+  /**
+   * The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compileShader">WebGLRenderingContext.compileShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">compileShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompileShader.xml">glCompileShader - OpenGL ES 2.0</a>
+   */
+  public native void compileShader(@Nonnull WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D">WebGLRenderingContext.copyTexImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">copyTexImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexImage2D.xml">glCopyTexImage2D - OpenGL ES 2.0</a>
+   */
+  public native void copyTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int x, int y, int width, int height, int border);
+
+  /**
+   * The WebGLRenderingContext.copyTexSubImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into an existing 2D texture sub-image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D">WebGLRenderingContext.copyTexSubImage2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">copyTexSubImage2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexSubImage2D.xml">glCopyTexSubImage2D - OpenGL ES 2.0</a>
+   */
+  public native void copyTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int x, int y, int width, int height);
+
+  /**
+   * The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createBuffer">WebGLRenderingContext.createBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">createBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">glGenBuffers - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLBuffer createBuffer();
+
+  /**
+   * The WebGLRenderingContext.createFramebuffer() method of the WebGL API creates and initializes a WebGLFramebuffer object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createFramebuffer">WebGLRenderingContext.createFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">createFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">glGenFramebuffers - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLFramebuffer createFramebuffer();
+
+  /**
+   * The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram">WebGLRenderingContext.createProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">glCreateProgram - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLProgram createProgram();
+
+  /**
+   * The WebGLRenderingContext.createRenderbuffer() method of the WebGL API creates and initializes a WebGLRenderbuffer object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer">WebGLRenderingContext.createRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">createRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">glGenRenderbuffers - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLRenderbuffer createRenderbuffer();
+
+  /**
+   * The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader">WebGLRenderingContext.createShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">createShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">glCreateShader - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLShader createShader(@ShaderType int type);
+
+  /**
+   * The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture">WebGLRenderingContext.createTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">createTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">glGenTextures - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLTexture createTexture();
+
+  /**
+   * The WebGLRenderingContext.cullFace() method of the WebGL API specifies whether or not front- and/or back-facing polygons can be culled.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/cullFace">WebGLRenderingContext.cullFace - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">cullFace - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCullFace.xml">glCullFace - OpenGL ES 2.0</a>
+   */
+  public native void cullFace(int mode);
+
+  /**
+   * The WebGLRenderingContext.deleteBuffer() method of the WebGL API deletes a given WebGLBuffer. This method has no effect if the buffer has already been deleted.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteBuffer">WebGLRenderingContext.deleteBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">deleteBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteBuffers.xml">glDeleteBuffers - OpenGL ES 2.0</a>
+   */
+  public native void deleteBuffer(@Nullable WebGLBuffer buffer);
+
+  /**
+   * The WebGLRenderingContext.deleteFramebuffer() method of the WebGL API deletes a given WebGLFramebuffer object. This method has no effect if the frame buffer has already been deleted.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteFramebuffer">WebGLRenderingContext.deleteFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">deleteFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteFramebuffers.xml">glDeleteFramebuffers - OpenGL ES 2.0</a>
+   */
+  public native void deleteFramebuffer(@Nullable WebGLFramebuffer framebuffer);
+
+  /**
+   * The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram">WebGLRenderingContext.deleteProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">deleteProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteProgram.xml">glDeleteProgram - OpenGL ES 2.0</a>
+   */
+  public native void deleteProgram(@Nullable WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.deleteRenderbuffer() method of the WebGL API deletes a given WebGLRenderbuffer object. This method has no effect if the render buffer has already been deleted.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteRenderbuffer">WebGLRenderingContext.deleteRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">deleteRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteRenderbuffers.xml">glDeleteRenderbuffers - OpenGL ES 2.0</a>
+   */
+  public native void deleteRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
+
+  /**
+   * The WebGLRenderingContext.deleteShader() method of the WebGL API marks a given WebGLShader object for deletion. It will then be deleted whenever the shader is no longer in use. This method has no effect if the shader has already been deleted, and the WebGLShader is automatically marked for deletion when it is destroyed by the garbage collector.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteShader">WebGLRenderingContext.deleteShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">deleteShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteShader.xml">glDeleteShader - OpenGL ES 2.0</a>
+   */
+  public native void deleteShader(@Nullable WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture">WebGLRenderingContext.deleteTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">deleteTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteTextures.xml">glDeleteTextures - OpenGL ES 2.0</a>
+   */
+  public native void deleteTexture(@Nullable WebGLTexture texture);
+
+  /**
+   * The WebGLRenderingContext.depthFunc() method of the WebGL API specifies a function that compares incoming pixel depth to the current depth buffer value.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthFunc">WebGLRenderingContext.depthFunc - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthFunc.xml">glDepthFunc - OpenGL ES 2.0</a>
+   */
+  public native void depthFunc(int func);
+
+  /**
+   * The WebGLRenderingContext.depthMask() method of the WebGL API sets whether writing into the depth buffer is enabled or disabled.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthMask">WebGLRenderingContext.depthMask - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthMask - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthMask.xml">glDepthMask - OpenGL ES 2.0</a>
+   */
+  public native void depthMask(boolean flag);
+
+  /**
+   * The WebGLRenderingContext.depthRange() method of the WebGL API specifies the depth range mapping from normalized device coordinates to window or viewport coordinates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthRange">WebGLRenderingContext.depthRange - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">depthRange - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthRangef.xml">glDepthRangef - OpenGL ES 2.0</a>
+   */
+  public native void depthRange(float zNear, float zFar);
+
+  /**
+   * The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached WebGLShader from a WebGLProgram.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/detachShader">WebGLRenderingContext.detachShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">detachShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDetachShader.xml">glDetachShader - OpenGL ES 2.0</a>
+   */
+  public native void detachShader(@Nonnull WebGLProgram program, @Nonnull WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.disable() method of the WebGL API disables specific WebGL capabilities for this context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable">WebGLRenderingContext.disable - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">disable - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDisable.xml">glDisable - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">glDisable - OpenGL ES 3.0</a>
+   */
+  public native void disable(@Capability int cap);
+
+  /**
+   * The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray">WebGLRenderingContext.disableVertexAttribArray - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">disableVertexAttribArray - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">glDisableVertexAttribArray - OpenGL ES 2.0</a>
+   */
+  public native void disableVertexAttribArray(@AttributeIndex int index);
+
+  /**
+   * The WebGLRenderingContext.drawArrays() method of the WebGL API renders primitives from array data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">WebGLRenderingContext.drawArrays - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">drawArrays - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawArrays.xml">glDrawArrays - OpenGL ES 2.0</a>
+   */
+  public native void drawArrays(@DrawMode int mode, int first, int count);
+
+  /**
+   * The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">WebGLRenderingContext.drawElements - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">drawElements - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDrawElements.xml">glDrawElements - OpenGL ES 2.0</a>
+   */
+  public native void drawElements(@DrawMode int mode, int count, @DrawElementsDataType int type,
+      int offset);
+
+  /**
+   * The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable">WebGLRenderingContext.enable - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">enable - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnable.xml">glEnable - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml">glEnable - OpenGL ES 3.0</a>
+   */
+  public native void enable(@Capability int cap);
+
+  /**
+   * The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray">WebGLRenderingContext.enableVertexAttribArray - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">enableVertexAttribArray - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml">glEnableVertexAttribArray - OpenGL ES 2.0</a>
+   */
+  public native void enableVertexAttribArray(@AttributeIndex int index);
+
+  /**
+   * The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">finish - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">glFinish - OpenGL ES 2.0</a>
+   */
+  public native void finish();
+
+  /**
+   * The WebGLRenderingContext.flush() method of the WebGL API empties different buffer commands, causing all commands to be executed as quickly as possible.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush">WebGLRenderingContext.flush - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">flush - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFlush.xml">glFlush - OpenGL ES 2.0</a>
+   */
+  public native void flush();
+
+  /**
+   * The WebGLRenderingContext.framebufferRenderbuffer() method of the WebGL API attaches a WebGLRenderbuffer object to a WebGLFramebuffer object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer">WebGLRenderingContext.framebufferRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">framebufferRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferRenderbuffer.xml">glFramebufferRenderbuffer - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferRenderbuffer.xhtml">glFramebufferRenderbuffer - OpenGL ES 3.0</a>
+   */
+  public native void framebufferRenderbuffer(@FramebufferTargetType int target,
+      @FramebufferAttachment int attachment, int renderbuffertarget,
+      @Nullable WebGLRenderbuffer renderbuffer);
+
+  /**
+   * The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D">WebGLRenderingContext.framebufferTexture2D - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">framebufferTexture2D - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml">glFramebufferTexture2D - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml">glFramebufferTexture2D - OpenGL ES 3.0</a>
+   */
+  public native void framebufferTexture2D(@FramebufferTargetType int target,
+      @FramebufferAttachment int attachment, @Texture2DSurfaceTargetType int textarget,
+      @Nullable WebGLTexture texture, @FramebufferMipmapLevel int level);
+
+  /**
+   * The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace">WebGLRenderingContext.frontFace - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">frontFace - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFrontFace.xml">glFrontFace - OpenGL ES 2.0</a>
+   */
+  public native void frontFace(@Winding int mode);
+
+  /**
+   * The WebGLRenderingContext.generateMipmap() method of the WebGL API generates a set of mipmaps for a WebGLTexture object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap">WebGLRenderingContext.generateMipmap - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">generateMipmap - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenerateMipmap.xml">glGenerateMipmap - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGenerateMipmap.xhtml">glGenerateMipmap - OpenGL ES 3.0</a>
+   */
+  public native void generateMipmap(@TextureTargetType int target);
+
+  /**
+   * The WebGLRenderingContext.getActiveAttrib() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a vertex attribute. It is generally used when querying unknown attributes either for debugging or generic library creation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveAttrib">WebGLRenderingContext.getActiveAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">glGetActiveAttrib - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLActiveInfo getActiveAttrib(@Nonnull WebGLProgram program,
+      @AttributeIndex int index);
+
+  /**
+   * The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform">WebGLRenderingContext.getActiveUniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getActiveUniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">glGetActiveUniform - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLActiveInfo getActiveUniform(@Nonnull WebGLProgram program, int index);
+
+  /**
+   * The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders">WebGLRenderingContext.getAttachedShaders - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getAttachedShaders - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">glGetAttachedShaders - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native JsArray<WebGLShader> getAttachedShaders(@Nonnull WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.getAttribLocation() method of the WebGL API returns the location of an attribute variable in a given WebGLProgram.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttribLocation">WebGLRenderingContext.getAttribLocation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getAttribLocation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttribLocation.xml">glGetAttribLocation - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native int getAttribLocation(@Nonnull WebGLProgram program, @Nonnull String name);
+
+  /**
+   * The WebGLRenderingContext.getBufferParameter() method of the WebGL API returns information about the buffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter">WebGLRenderingContext.getBufferParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">getBufferParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetBufferParameteriv.xml">glGetBufferParameteriv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3">getBufferParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">glGetBufferParameter - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getBufferParameter(@BufferTargetType int target, int pname);
+
+  /**
+   * The WebGLRenderingContext.getContextAttributes() method returns a WebGLContextAttributes object that contains the actual context parameters. Might return null, if the context is lost.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes">WebGLRenderingContext.getContextAttributes - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">WebGLRenderingContext.getContextAttributes - WebGL 1.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLContextAttributes getContextAttributes();
+
+  /**
+   * The WebGLRenderingContext.getError() method of the WebGL API returns error information.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getError">WebGLRenderingContext.getError - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getError - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetError.xml">glGetError - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @WebGLContextError
+  @Nonnull
+  public native int getError();
+
+  /**
+   * The WebGLRenderingContext.getExtension() method enables a WebGL extension.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension">WebGLRenderingContext.getExtension - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getExtension - WebGL 1.0</a>
+   */
+  @Nullable
+  public native WebGLExtension getExtension(@WebGLExtensionName @Nonnull String name);
+
+  /**
+   * The WebGLRenderingContext.getFramebufferAttachmentParameter() method of the WebGL API returns information about a framebuffer's attachment.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter">WebGLRenderingContext.getFramebufferAttachmentParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">getFramebufferAttachmentParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetFramebufferAttachmentParameteriv.xml">glGetFramebufferAttachmentParameteriv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">getFramebufferAttachmentParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml">glGetFramebufferAttachmentParameteriv - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getFramebufferAttachmentParameter(int target, int attachment, int pname);
+
+  /**
+   * The WebGLRenderingContext.getParameter() method of the WebGL API returns a value for the passed parameter name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter">WebGLRenderingContext.getParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">getParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">getParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml">glGet - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getParameter(@WebGLParameterName int pname);
+
+  /**
+   * The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog">WebGLRenderingContext.getProgramInfoLog - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramInfoLog - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">glGetProgramInfoLog - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native String getProgramInfoLog(@Nonnull WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramParameter">WebGLRenderingContext.getProgramParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getProgramParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramiv.xml">glGetProgramiv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">getProgramParameter - WebGL 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getProgramParameter(@Nonnull WebGLProgram program,
+      @ProgramParameterType int pname);
+
+  /**
+   * The WebGLRenderingContext.getRenderbufferParameter() method of the WebGL API returns information about the renderbuffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getRenderbufferParameter">WebGLRenderingContext.getRenderbufferParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">getRenderbufferParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetRenderbufferParameteriv.xml">glGetRenderbufferParameteriv - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">glGetRenderbufferParameteriv - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getRenderbufferParameter(int target, int pname);
+
+  /**
+   * The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderInfoLog">WebGLRenderingContext.getShaderInfoLog - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderInfoLog - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">glGetShaderInfoLog - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native String getShaderInfoLog(@Nonnull WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderParameter">WebGLRenderingContext.getShaderParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">glGetShaderiv - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getShaderParameter(@Nonnull WebGLShader shader, @ShaderParameterType int pname);
+
+  /**
+   * The WebGLRenderingContext.getShaderPrecisionFormat() method of the WebGL API returns a new WebGLShaderPrecisionFormat object describing the range and precision for the specified shader numeric format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderPrecisionFormat">WebGLRenderingContext.getShaderPrecisionFormat - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderPrecisionFormat - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">glGetShaderPrecisionFormat - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(int shadertype,
+      int precisiontype);
+
+  /**
+   * The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource">WebGLRenderingContext.getShaderSource - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">getShaderSource - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml">glGetShaderSource - OpenGL ES 2.0</a>
+   */
+  @GLSL
+  @HasNoSideEffects
+  @Nullable
+  public native String getShaderSource(@Nonnull WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions">WebGLRenderingContext.getSupportedExtensions - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getSupportedExtensions - WebGL 1.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native JsArray<String> getSupportedExtensions();
+
+  /**
+   * The WebGLRenderingContext.getTexParameter() method of the WebGL API returns information about the given texture.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getTexParameter">WebGLRenderingContext.getTexParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">getTexParameter - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetTexParameter.xml">glGetTexParameter - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">getTexParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml">glGetTexParameter - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getTexParameter(@TextureTargetType int target,
+      @ReadableTextureParameter int pname);
+
+  /**
+   * The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniform">WebGLRenderingContext.getUniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniform.xml">glGetUniform - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getUniform - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml">glGetUniform - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getUniform(@Nonnull WebGLProgram program,
+      @Nonnull WebGLUniformLocation location);
+
+  /**
+   * Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation">WebGLRenderingContext.getUniformLocation - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getUniformLocation - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">glGetUniformLocation - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native WebGLUniformLocation getUniformLocation(@Nonnull WebGLProgram program,
+      @Nonnull String name);
+
+  /**
+   * The WebGLRenderingContext.getVertexAttrib() method of the WebGL API returns information about a vertex attribute at a given position.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttrib">WebGLRenderingContext.getVertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml">glGetVertexAttrib - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8">getVertexAttrib - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">glGetVertexAttrib - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  @Nullable
+  public native Any getVertexAttrib(@AttributeIndex int index, int pname);
+
+  /**
+   * The WebGLRenderingContext.getVertexAttribOffset() method of the WebGL API returns the address of a specified vertex attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttribOffset">WebGLRenderingContext.getVertexAttribOffset - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">getVertexAttribOffset - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml">glGetVertexAttribPointerv - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native int getVertexAttribOffset(@AttributeIndex int index,
+      @VertexAttribOffsetParameterName int pname);
+
+  /**
+   * The WebGLRenderingContext.hint() method of the WebGL API specifies hints for certain behaviors. The interpretation of these hints depend on the implementation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/hint">WebGLRenderingContext.hint - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">hint - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glHint.xml">glHint - OpenGL ES 2.0</a>
+   */
+  public native void hint(int target, int mode);
+
+  /**
+   * The WebGLRenderingContext.isBuffer() method of the WebGL API returns true if the passed WebGLBuffer is valid and false otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isBuffer">WebGLRenderingContext.isBuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5">isBuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsBuffer.xml">glIsBuffer - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isBuffer(@Nullable WebGLBuffer buffer);
+
+  /**
+   * The WebGLRenderingContext.isContextLost() method returns a Boolean indicating whether or not the WebGL context has been lost and must be re-established before rendering can resume.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost">WebGLRenderingContext.isContextLost - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13">WebGLRenderingContext.isContextLost - WebGL 1.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isContextLost();
+
+  /**
+   * The WebGLRenderingContext.isEnabled() method of the WebGL API tests whether a specific WebGL capability is enabled or not for this context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isEnabled">WebGLRenderingContext.isEnabled - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">isEnabled - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsEnabled.xml">glIsEnabled - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">isEnabled - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glIsEnabled.xhtml">glIsEnabled - OpenGL ES 3.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isEnabled(@Capability int cap);
+
+  /**
+   * The WebGLRenderingContext.isFramebuffer() method of the WebGL API returns true if the passed WebGLFramebuffer is valid and false otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isFramebuffer">WebGLRenderingContext.isFramebuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6">isFramebuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsFramebuffer.xml">glIsFramebuffer - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isFramebuffer(@Nullable WebGLFramebuffer framebuffer);
+
+  /**
+   * The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isProgram">WebGLRenderingContext.isProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml">glIsProgram - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isProgram(@Nullable WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.isRenderbuffer() method of the WebGL API returns true if the passed WebGLRenderbuffer is valid and false otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isRenderbuffer">WebGLRenderingContext.isRenderbuffer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">isRenderbuffer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsRenderbuffer.xml">glIsRenderbuffer - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isRenderbuffer(@Nullable WebGLRenderbuffer renderbuffer);
+
+  /**
+   * The WebGLRenderingContext.isShader() method of the WebGL API returns true if the passed WebGLShader is valid, false otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isShader">WebGLRenderingContext.isShader - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">isShader - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml">glIsShader - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isShader(@Nullable WebGLShader shader);
+
+  /**
+   * The WebGLRenderingContext.isTexture() method of the WebGL API returns true if the passed WebGLTexture is valid and false otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isTexture">WebGLRenderingContext.isTexture - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">isTexture - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml">glIsTexture - OpenGL ES 2.0</a>
+   */
+  @HasNoSideEffects
+  public native boolean isTexture(@Nullable WebGLTexture texture);
+
+  /**
+   * The WebGLRenderingContext.lineWidth() method of the WebGL API sets the line width of rasterized lines.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth">WebGLRenderingContext.lineWidth - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">lineWidth - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLineWidth.xml">glLineWidth - OpenGL ES 2.0</a>
+   */
+  public native void lineWidth(float width);
+
+  /**
+   * The WebGLRenderingContext interface's linkProgram() method links a given WebGLProgram, completing the process of preparing the GPU code for the program's fragment and vertex shaders.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/linkProgram">WebGLRenderingContext.linkProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">linkProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glLinkProgram.xml">glLinkProgram - OpenGL ES 2.0</a>
+   */
+  public native void linkProgram(@Nonnull WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.pixelStorei() method of the WebGL API specifies the pixel storage modes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei">WebGLRenderingContext.pixelStorei - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">pixelStorei - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#PIXEL_STORAGE_PARAMETERS">Pixel Storage Parameters - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml">glPixelStorei - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2">pixelStorei - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glPixelStorei.xhtml">glPixelStorei - OpenGL ES 3.0</a>
+   */
+  public native void pixelStorei(@PixelStorageParameter int pname, int param);
+
+  /**
+   * The WebGLRenderingContext.polygonOffset() method of the WebGL API specifies the scale factors and units to calculate depth values.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset">WebGLRenderingContext.polygonOffset - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">polygonOffset - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPolygonOffset.xml">glPolygonOffset - OpenGL ES 2.0</a>
+   */
+  public native void polygonOffset(float factor, float units);
+
+  /**
+   * The WebGLRenderingContext.renderbufferStorage() method of the WebGL API creates and initializes a renderbuffer object's data store.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/renderbufferStorage">WebGLRenderingContext.renderbufferStorage - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7">renderbufferStorage - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glRenderbufferStorage.xml">glRenderbufferStorage - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5">getRenderbufferParameter - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorage.xhtml">glRenderbufferStorage - OpenGL ES 3.0</a>
+   */
+  public native void renderbufferStorage(@RenderbufferStorageTarget int target,
+      @RenderbufferStorageInternalFormat int internalformat, int width, int height);
+
+  /**
+   * The WebGLRenderingContext.sampleCoverage() method of the WebGL API specifies multi-sample coverage parameters for anti-aliasing effects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/sampleCoverage">WebGLRenderingContext.sampleCoverage - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">sampleCoverage - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glSampleCoverage.xml">glSampleCoverage - OpenGL ES 2.0</a>
+   */
+  public native void sampleCoverage(float value, boolean invert);
+
+  /**
+   * The WebGLRenderingContext.scissor() method of the WebGL API sets a scissor box, which limits the drawing to a specified rectangle.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/scissor">WebGLRenderingContext.scissor - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">scissor - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glScissor.xml">glScissor - OpenGL ES 2.0</a>
+   */
+  public native void scissor(int x, int y, int width, int height);
+
+  /**
+   * The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource">WebGLRenderingContext.shaderSource - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">shaderSource - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glShaderSource.xml">glShaderSource - OpenGL ES 2.0</a>
+   */
+  public native void shaderSource(@Nonnull WebGLShader shader, @GLSL @Nonnull String source);
+
+  /**
+   * The WebGLRenderingContext.stencilFunc() method of the WebGL API sets the front and back function and reference value for stencil testing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFunc">WebGLRenderingContext.stencilFunc - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilFunc - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFunc.xml">glStencilFunc - OpenGL ES 2.0</a>
+   */
+  public native void stencilFunc(int func, int ref, int mask);
+
+  /**
+   * The WebGLRenderingContext.stencilFuncSeparate() method of the WebGL API sets the front and/or back function and reference value for stencil testing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate">WebGLRenderingContext.stencilFuncSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilFuncSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFuncSeparate.xml">glStencilFuncSeparate - OpenGL ES 2.0</a>
+   */
+  public native void stencilFuncSeparate(int face, int func, int ref, int mask);
+
+  /**
+   * The WebGLRenderingContext.stencilMask() method of the WebGL API controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMask">WebGLRenderingContext.stencilMask - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilMask - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMask.xml">glStencilMask - OpenGL ES 2.0</a>
+   */
+  public native void stencilMask(int mask);
+
+  /**
+   * The WebGLRenderingContext.stencilMaskSeparate() method of the WebGL API controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate">WebGLRenderingContext.stencilMaskSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilMaskSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMaskSeparate.xml">glStencilMaskSeparate - OpenGL ES 2.0</a>
+   */
+  public native void stencilMaskSeparate(int face, int mask);
+
+  /**
+   * The WebGLRenderingContext.stencilOp() method of the WebGL API sets both the front and back-facing stencil test actions.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOp">WebGLRenderingContext.stencilOp - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilOp - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOp.xml">glStencilOp - OpenGL ES 2.0</a>
+   */
+  public native void stencilOp(int fail, int zfail, int zpass);
+
+  /**
+   * The WebGLRenderingContext.stencilOpSeparate() method of the WebGL API sets the front and/or back-facing stencil test actions.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOpSeparate">WebGLRenderingContext.stencilOpSeparate - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3">stencilOpSeparate - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOpSeparate.xml">glStencilOpSeparate - OpenGL ES 2.0</a>
+   */
+  public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
+
+  /**
+   * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texParameter[fi] - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">glTexParameter - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texParameter[fi] - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">glTexParameter - OpenGL ES 3.0</a>
+   */
+  public native void texParameterf(@TextureTargetType int target, @TextureParameter int pname,
+      float param);
+
+  /**
+   * The WebGLRenderingContext.texParameter[fi]() methods of the WebGL API set texture parameters.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texParameter">WebGLRenderingContext.texParameter - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8">texParameter[fi] - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexParameter.xml">glTexParameter - OpenGL ES 2.0</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6">texParameter[fi] - WebGL 2.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glTexParameter.xhtml">glTexParameter - OpenGL ES 3.0</a>
+   */
+  public native void texParameteri(@TextureTargetType int target, @TextureParameter int pname,
+      int param);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform1f(@Nullable WebGLUniformLocation location, float x);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform1i(@Nullable WebGLUniformLocation location, int x);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform2f(@Nullable WebGLUniformLocation location, float x, float y);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform2i(@Nullable WebGLUniformLocation location, int x, int y);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform3f(@Nullable WebGLUniformLocation location, float x, float y, float z);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform3i(@Nullable WebGLUniformLocation location, int x, int y, int z);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform4f(@Nullable WebGLUniformLocation location, float x, float y, float z,
+      float w);
+
+  /**
+   * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
+   */
+  public native void uniform4i(@Nullable WebGLUniformLocation location, int x, int y, int z, int w);
+
+  /**
+   * The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram">WebGLRenderingContext.useProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">useProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUseProgram.xml">glUseProgram - OpenGL ES 2.0</a>
+   */
+  public native void useProgram(@Nullable WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/validateProgram">WebGLRenderingContext.validateProgram - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9">validateProgram - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glValidateProgram.xml">glValidateProgram - OpenGL ES 2.0</a>
+   */
+  public native void validateProgram(@Nonnull WebGLProgram program);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib1f(@AttributeIndex int index, float x);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull Float32List values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull Float32Array values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull double[] values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib2f(@AttributeIndex int index, float x, float y);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull Float32List values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull Float32Array values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull double[] values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib3f(@AttributeIndex int index, float x, float y, float z);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull Float32List values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull Float32Array values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull double[] values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib4f(@AttributeIndex int index, float x, float y, float z, float w);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull Float32List values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull Float32Array values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull JsArray<Double> values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib">WebGLRenderingContext.vertexAttrib - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull double[] values);
+
+  /**
+   * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttribPointer - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml">glVertexAttribPointer - OpenGL ES 2.0</a>
+   */
+  public native void vertexAttribPointer(@AttributeIndex int index, @VertexDimensions int size,
+      @AttributeComponentDataType int type, boolean normalized, int stride, int offset);
+
+  /**
+   * The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport">WebGLRenderingContext.viewport - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4">viewport - WebGL 1.0</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glViewport.xml">glViewport - OpenGL ES 2.0</a>
+   */
+  public native void viewport(int x, int y, int width, int height);
+
+  @Nonnull
+  public native Promise<Void> makeXRCompatible();
 
   /**
    * The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query. The target parameter indicates which kind of query to begin.
