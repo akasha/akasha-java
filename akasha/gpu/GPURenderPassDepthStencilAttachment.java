@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPURenderPassDepthStencilAttachment"
 )
+@ApiStatus.Experimental
 public interface GPURenderPassDepthStencilAttachment {
   @JsOverlay
   @Nonnull
@@ -137,6 +139,7 @@ public interface GPURenderPassDepthStencilAttachment {
       namespace = JsPackage.GLOBAL,
       name = "GPURenderPassDepthStencilAttachment"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPURenderPassDepthStencilAttachment {
     @JsOverlay
     @Nonnull

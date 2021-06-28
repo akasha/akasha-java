@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUBufferDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -52,6 +54,7 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
       namespace = JsPackage.GLOBAL,
       name = "GPUBufferDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUBufferDescriptor {
     @JsOverlay
     @Nonnull

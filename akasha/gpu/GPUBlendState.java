@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUBlendState"
 )
+@ApiStatus.Experimental
 public interface GPUBlendState {
   @JsOverlay
   @Nonnull
@@ -47,6 +49,7 @@ public interface GPUBlendState {
       namespace = JsPackage.GLOBAL,
       name = "GPUBlendState"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUBlendState {
     @JsOverlay
     @Nonnull

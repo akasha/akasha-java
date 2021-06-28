@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUTextureViewDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -87,6 +89,7 @@ public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
       namespace = JsPackage.GLOBAL,
       name = "GPUTextureViewDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUTextureViewDescriptor {
     @JsOverlay
     @Nonnull

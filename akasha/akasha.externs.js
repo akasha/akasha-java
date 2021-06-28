@@ -159,7 +159,7 @@ var ConstrainBoolean;
  */
 var StringifySpaceUnionType;
 /**
- * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext)}
+ * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUPresentationContext)}
  */
 var RenderingContext;
 /**

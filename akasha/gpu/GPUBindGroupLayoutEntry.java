@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUBindGroupLayoutEntry"
 )
+@ApiStatus.Experimental
 public interface GPUBindGroupLayoutEntry {
   @JsOverlay
   @Nonnull
@@ -84,6 +86,7 @@ public interface GPUBindGroupLayoutEntry {
       namespace = JsPackage.GLOBAL,
       name = "GPUBindGroupLayoutEntry"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUBindGroupLayoutEntry {
     @JsOverlay
     @Nonnull

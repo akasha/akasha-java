@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -16,6 +17,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUQuerySetDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -60,6 +62,7 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
       namespace = JsPackage.GLOBAL,
       name = "GPUQuerySetDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUQuerySetDescriptor {
     @JsOverlay
     @Nonnull

@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUVertexAttribute"
 )
+@ApiStatus.Experimental
 public interface GPUVertexAttribute {
   @JsOverlay
   @Nonnull
@@ -55,6 +57,7 @@ public interface GPUVertexAttribute {
       namespace = JsPackage.GLOBAL,
       name = "GPUVertexAttribute"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUVertexAttribute {
     @JsOverlay
     @Nonnull

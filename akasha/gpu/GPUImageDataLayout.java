@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUImageDataLayout"
 )
+@ApiStatus.Experimental
 public interface GPUImageDataLayout {
   @JsOverlay
   @Nonnull
@@ -52,6 +54,7 @@ public interface GPUImageDataLayout {
       namespace = JsPackage.GLOBAL,
       name = "GPUImageDataLayout"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUImageDataLayout {
     @JsOverlay
     @Nonnull

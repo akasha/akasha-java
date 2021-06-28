@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUOrigin3DDict"
 )
+@ApiStatus.Experimental
 public interface GPUOrigin3DDict {
   @JsOverlay
   @Nonnull
@@ -52,6 +54,7 @@ public interface GPUOrigin3DDict {
       namespace = JsPackage.GLOBAL,
       name = "GPUOrigin3DDict"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUOrigin3DDict {
     @JsOverlay
     @Nonnull

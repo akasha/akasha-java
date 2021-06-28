@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUImageCopyBuffer"
 )
+@ApiStatus.Experimental
 public interface GPUImageCopyBuffer extends GPUImageDataLayout {
   @JsOverlay
   @Nonnull
@@ -37,6 +39,7 @@ public interface GPUImageCopyBuffer extends GPUImageDataLayout {
       namespace = JsPackage.GLOBAL,
       name = "GPUImageCopyBuffer"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUImageCopyBuffer {
     @JsOverlay
     @Nonnull

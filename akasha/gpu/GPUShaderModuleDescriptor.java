@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -16,6 +17,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUShaderModuleDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -26,11 +28,12 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "code"
   )
+  @WGSL
   @Nonnull
   String code();
 
   @JsProperty
-  void setCode(@Nonnull String code);
+  void setCode(@WGSL @Nonnull String code);
 
   @JsProperty(
       name = "sourceMap"
@@ -46,10 +49,11 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
       namespace = JsPackage.GLOBAL,
       name = "GPUShaderModuleDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUShaderModuleDescriptor {
     @JsOverlay
     @Nonnull
-    default Builder code(@Nonnull final String code) {
+    default Builder code(@WGSL @Nonnull final String code) {
       setCode( code );
       return this;
     }

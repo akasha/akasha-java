@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.jetbrains.annotations.ApiStatus;
 
 /**
  * The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
@@ -124,6 +125,7 @@ public class Navigator extends JsObject {
   @JsProperty(
       name = "gpu"
   )
+  @ApiStatus.Experimental
   @Nonnull
   public native GPU gpu();
 

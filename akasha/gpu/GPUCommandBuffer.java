@@ -8,8 +8,10 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
+@ApiStatus.Experimental
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,

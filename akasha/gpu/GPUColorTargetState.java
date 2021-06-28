@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUColorTargetState"
 )
+@ApiStatus.Experimental
 public interface GPUColorTargetState {
   @JsOverlay
   @Nonnull
@@ -54,6 +56,7 @@ public interface GPUColorTargetState {
       namespace = JsPackage.GLOBAL,
       name = "GPUColorTargetState"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUColorTargetState {
     @JsOverlay
     @Nonnull

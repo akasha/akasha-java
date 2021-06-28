@@ -13,6 +13,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,6 +21,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUImageCopyExternalImage"
 )
+@ApiStatus.Experimental
 public interface GPUImageCopyExternalImage {
   @JsOverlay
   @Nonnull
@@ -92,6 +94,7 @@ public interface GPUImageCopyExternalImage {
       namespace = JsPackage.GLOBAL,
       name = "GPUImageCopyExternalImage"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUImageCopyExternalImage {
     @JsOverlay
     @Nonnull

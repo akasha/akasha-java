@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -16,6 +17,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPURenderBundleEncoderDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPURenderBundleEncoderDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -66,6 +68,7 @@ public interface GPURenderBundleEncoderDescriptor extends GPUObjectDescriptorBas
       namespace = JsPackage.GLOBAL,
       name = "GPURenderBundleEncoderDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPURenderBundleEncoderDescriptor {
     @JsOverlay
     @Nonnull

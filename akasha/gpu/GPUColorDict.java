@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUColorDict"
 )
+@ApiStatus.Experimental
 public interface GPUColorDict {
   @JsOverlay
   @Nonnull
@@ -60,6 +62,7 @@ public interface GPUColorDict {
       namespace = JsPackage.GLOBAL,
       name = "GPUColorDict"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUColorDict {
     @JsOverlay
     @Nonnull

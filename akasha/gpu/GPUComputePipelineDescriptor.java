@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUComputePipelineDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -37,6 +39,7 @@ public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase 
       namespace = JsPackage.GLOBAL,
       name = "GPUComputePipelineDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUComputePipelineDescriptor {
     @JsOverlay
     @Nonnull

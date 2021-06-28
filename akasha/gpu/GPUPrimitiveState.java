@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUPrimitiveState"
 )
+@ApiStatus.Experimental
 public interface GPUPrimitiveState {
   @JsOverlay
   @Nonnull
@@ -72,6 +74,7 @@ public interface GPUPrimitiveState {
       namespace = JsPackage.GLOBAL,
       name = "GPUPrimitiveState"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUPrimitiveState {
     @JsOverlay
     @Nonnull

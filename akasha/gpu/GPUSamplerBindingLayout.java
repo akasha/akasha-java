@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPUSamplerBindingLayout"
 )
+@ApiStatus.Experimental
 public interface GPUSamplerBindingLayout {
   @JsOverlay
   @Nonnull
@@ -37,6 +39,7 @@ public interface GPUSamplerBindingLayout {
       namespace = JsPackage.GLOBAL,
       name = "GPUSamplerBindingLayout"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPUSamplerBindingLayout {
     @JsOverlay
     @Nonnull

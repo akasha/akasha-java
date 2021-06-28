@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -16,6 +17,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "GPURenderPassDescriptor"
 )
+@ApiStatus.Experimental
 public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
@@ -67,6 +69,7 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
       namespace = JsPackage.GLOBAL,
       name = "GPURenderPassDescriptor"
   )
+  @ApiStatus.Experimental
   interface Builder extends GPURenderPassDescriptor {
     @JsOverlay
     @Nonnull
