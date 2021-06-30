@@ -14,7 +14,7 @@ import org.jetbrains.annotations.ApiStatus;
 )
 public @interface GPUStoreOp {
   @Nonnull
-  String discard = "discard";
+  String clear = "clear";
 
   @Nonnull
   String store = "store";
@@ -34,7 +34,7 @@ public @interface GPUStoreOp {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUStoreOp.discard.equals( value ) || GPUStoreOp.store.equals( value );
+      return GPUStoreOp.clear.equals( value ) || GPUStoreOp.store.equals( value );
     }
   }
 }

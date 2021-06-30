@@ -71,13 +71,6 @@ public interface GPUFragmentState extends GPUProgrammableStage {
 
     @JsOverlay
     @Nonnull
-    default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {
-      setConstants( constants );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder entryPoint(@Nonnull final String entryPoint) {
       setEntryPoint( entryPoint );
       return this;

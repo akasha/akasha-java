@@ -1,9 +1,9 @@
 package akasha.gpu;
 
-import akasha.RenderingContext;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -13,20 +13,15 @@ import org.jetbrains.annotations.ApiStatus;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GPUPresentationContext"
+    name = "GPUSwapChain"
 )
-public class GPUPresentationContext extends JsObject implements RenderingContext {
-  protected GPUPresentationContext() {
-  }
+public class GPUSwapChain extends JsObject {
+  @Nullable
+  public String label;
 
-  public native void configure(@Nonnull GPUPresentationConfiguration configuration);
+  protected GPUSwapChain() {
+  }
 
   @Nonnull
   public native GPUTexture getCurrentTexture();
-
-  @GPUTextureFormat
-  @Nonnull
-  public native String getPreferredFormat(@Nonnull GPUAdapter adapter);
-
-  public native void unconfigure();
 }

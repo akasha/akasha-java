@@ -15,10 +15,10 @@ import org.jetbrains.annotations.ApiStatus;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GPUPresentationConfiguration"
+    name = "GPUSwapChainDescriptor"
 )
 @ApiStatus.Experimental
-public interface GPUPresentationConfiguration extends GPUObjectDescriptorBase {
+public interface GPUSwapChainDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUDevice device,
@@ -89,10 +89,10 @@ public interface GPUPresentationConfiguration extends GPUObjectDescriptorBase {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "GPUPresentationConfiguration"
+      name = "GPUSwapChainDescriptor"
   )
   @ApiStatus.Experimental
-  interface Builder extends GPUPresentationConfiguration {
+  interface Builder extends GPUSwapChainDescriptor {
     @JsOverlay
     @Nonnull
     default Builder compositingAlphaMode(
