@@ -24,6 +24,21 @@ public class GPUSupportedLimits extends JsObject {
   public native int maxBindGroups();
 
   @JsProperty(
+      name = "maxComputePerDimensionDispatchSize"
+  )
+  public native int maxComputePerDimensionDispatchSize();
+
+  @JsProperty(
+      name = "maxComputeWorkgroupInvocations"
+  )
+  public native int maxComputeWorkgroupInvocations();
+
+  @JsProperty(
+      name = "maxComputeWorkgroupStorageSize"
+  )
+  public native int maxComputeWorkgroupStorageSize();
+
+  @JsProperty(
       name = "maxDynamicStorageBuffersPerPipelineLayout"
   )
   public native int maxDynamicStorageBuffersPerPipelineLayout();
@@ -32,6 +47,11 @@ public class GPUSupportedLimits extends JsObject {
       name = "maxDynamicUniformBuffersPerPipelineLayout"
   )
   public native int maxDynamicUniformBuffersPerPipelineLayout();
+
+  @JsProperty(
+      name = "maxInterStageShaderComponents"
+  )
+  public native int maxInterStageShaderComponents();
 
   @JsProperty(
       name = "maxSampledTexturesPerShaderStage"
@@ -102,4 +122,14 @@ public class GPUSupportedLimits extends JsObject {
       name = "maxVertexBuffers"
   )
   public native int maxVertexBuffers();
+
+  @JsProperty(
+      name = "minStorageBufferOffsetAlignment"
+  )
+  public native int minStorageBufferOffsetAlignment();
+
+  @JsProperty(
+      name = "minUniformBufferOffsetAlignment"
+  )
+  public native int minUniformBufferOffsetAlignment();
 }

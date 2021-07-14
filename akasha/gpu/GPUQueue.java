@@ -26,16 +26,16 @@ public class GPUQueue extends JsObject {
   }
 
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
-      @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3D copySize);
+      @Nonnull GPUImageCopyTextureTagged destination, @Nonnull GPUExtent3D copySize);
 
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
-      @Nonnull GPUImageCopyTexture destination, @Nonnull JsArray<Double> copySize);
+      @Nonnull GPUImageCopyTextureTagged destination, @Nonnull JsArray<Double> copySize);
 
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
-      @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
+      @Nonnull GPUImageCopyTextureTagged destination, @Nonnull double[] copySize);
 
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
-      @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3DDict copySize);
+      @Nonnull GPUImageCopyTextureTagged destination, @Nonnull GPUExtent3DDict copySize);
 
   @Nonnull
   public native Promise<Void> onSubmittedWorkDone();

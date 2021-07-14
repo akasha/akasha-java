@@ -28,7 +28,7 @@ public @interface RenderContextType {
   String bitmaprenderer = "bitmaprenderer";
 
   /**
-   * The context type designates a {@link akasha.GPUPresentationContext}, a WenGPU rendering context.
+   * The context type designates a {@link akasha.gpu.GPUPresentationContext}, a WenGPU rendering context.
    * This context is only available on browsers that implement WebGPU specification.
    */
   @Nonnull

@@ -15,16 +15,25 @@ import org.jetbrains.annotations.ApiStatus;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GPUSwapChainDescriptor"
+    name = "GPUPresentationConfiguration"
 )
 @ApiStatus.Experimental
-public interface GPUSwapChainDescriptor extends GPUObjectDescriptorBase {
+public interface GPUPresentationConfiguration {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUDevice device,
       @GPUTextureFormat @Nonnull final String format) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).device( device ).format( format );
   }
+
+  @JsProperty(
+      name = "colorSpace"
+  )
+  @GPUPredefinedColorSpace
+  String colorSpace();
+
+  @JsProperty
+  void setColorSpace(@GPUPredefinedColorSpace @Nonnull String colorSpace);
 
   @JsProperty(
       name = "compositingAlphaMode"
@@ -89,10 +98,17 @@ public interface GPUSwapChainDescriptor extends GPUObjectDescriptorBase {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "GPUSwapChainDescriptor"
+      name = "GPUPresentationConfiguration"
   )
   @ApiStatus.Experimental
-  interface Builder extends GPUSwapChainDescriptor {
+  interface Builder extends GPUPresentationConfiguration {
+    @JsOverlay
+    @Nonnull
+    default Builder colorSpace(@GPUPredefinedColorSpace @Nonnull final String colorSpace) {
+      setColorSpace( colorSpace );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder compositingAlphaMode(
@@ -147,13 +163,6 @@ public interface GPUSwapChainDescriptor extends GPUObjectDescriptorBase {
     @Nonnull
     default Builder usage(final int usage) {
       setUsage( usage );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder label(@Nonnull final String label) {
-      setLabel( label );
       return this;
     }
   }

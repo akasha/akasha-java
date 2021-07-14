@@ -26,25 +26,25 @@ public interface GPUDeviceDescriptor extends GPUObjectDescriptorBase {
   }
 
   @JsProperty(
-      name = "nonGuaranteedFeatures"
+      name = "requiredFeatures"
   )
-  JsArray<String> nonGuaranteedFeatures();
+  JsArray<String> requiredFeatures();
 
   @JsProperty
-  void setNonGuaranteedFeatures(@Nonnull JsArray<String> nonGuaranteedFeatures);
+  void setRequiredFeatures(@Nonnull JsArray<String> requiredFeatures);
 
   @JsOverlay
-  default void setNonGuaranteedFeatures(@Nonnull final String... nonGuaranteedFeatures) {
-    setNonGuaranteedFeatures( Js.<JsArray<String>>uncheckedCast( nonGuaranteedFeatures ) );
+  default void setRequiredFeatures(@Nonnull final String... requiredFeatures) {
+    setRequiredFeatures( Js.<JsArray<String>>uncheckedCast( requiredFeatures ) );
   }
 
   @JsProperty(
-      name = "nonGuaranteedLimits"
+      name = "requiredLimits"
   )
-  JsPropertyMap<Double> nonGuaranteedLimits();
+  JsPropertyMap<Double> requiredLimits();
 
   @JsProperty
-  void setNonGuaranteedLimits(@Nonnull JsPropertyMap<Double> nonGuaranteedLimits);
+  void setRequiredLimits(@Nonnull JsPropertyMap<Double> requiredLimits);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -56,22 +56,22 @@ public interface GPUDeviceDescriptor extends GPUObjectDescriptorBase {
   interface Builder extends GPUDeviceDescriptor {
     @JsOverlay
     @Nonnull
-    default Builder nonGuaranteedFeatures(@Nonnull final JsArray<String> nonGuaranteedFeatures) {
-      setNonGuaranteedFeatures( nonGuaranteedFeatures );
+    default Builder requiredFeatures(@Nonnull final JsArray<String> requiredFeatures) {
+      setRequiredFeatures( requiredFeatures );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder nonGuaranteedFeatures(@Nonnull final String... nonGuaranteedFeatures) {
-      setNonGuaranteedFeatures( nonGuaranteedFeatures );
+    default Builder requiredFeatures(@Nonnull final String... requiredFeatures) {
+      setRequiredFeatures( requiredFeatures );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder nonGuaranteedLimits(@Nonnull final JsPropertyMap<Double> nonGuaranteedLimits) {
-      setNonGuaranteedLimits( nonGuaranteedLimits );
+    default Builder requiredLimits(@Nonnull final JsPropertyMap<Double> requiredLimits) {
+      setRequiredLimits( requiredLimits );
       return this;
     }
 

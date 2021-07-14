@@ -25,6 +25,14 @@ public interface GPUProgrammableStage {
   }
 
   @JsProperty(
+      name = "constants"
+  )
+  JsPropertyMap<Double> constants();
+
+  @JsProperty
+  void setConstants(@Nonnull JsPropertyMap<Double> constants);
+
+  @JsProperty(
       name = "entryPoint"
   )
   @Nonnull
@@ -50,6 +58,13 @@ public interface GPUProgrammableStage {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUProgrammableStage {
+    @JsOverlay
+    @Nonnull
+    default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {
+      setConstants( constants );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder entryPoint(@Nonnull final String entryPoint) {

@@ -159,7 +159,7 @@ var ConstrainBoolean;
  */
 var StringifySpaceUnionType;
 /**
- * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUCanvasContext)}
+ * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUPresentationContext)}
  */
 var RenderingContext;
 /**
@@ -378,6 +378,10 @@ var GLbyte;
  * @typedef {!number}
  */
 var GLuint64EXT;
+/**
+ * @typedef {!number}
+ */
+var GPUPipelineConstantValue;
 /**
  * @typedef {!number}
  */
@@ -1391,6 +1395,10 @@ var MouseEventInit;
  */
 var CredentialData;
 /**
+ * @typedef {{colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),device:!GPUDevice,format:!string,size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined)}}
+ */
+var GPUPresentationConfiguration;
+/**
  * @typedef {{ignoreMethod:(!boolean|undefined),ignoreSearch:(!boolean|undefined),ignoreVary:(!boolean|undefined)}}
  */
 var CacheQueryOptions;
@@ -1435,7 +1443,7 @@ var RTCIceCandidateInit;
  */
 var FederatedCredentialInit;
 /**
- * @typedef {{targets:!Array<!GPUColorTargetState>,entryPoint:!string,module:!GPUShaderModule}}
+ * @typedef {{targets:!Array<!GPUColorTargetState>,constants:(!Object<!string,!GPUPipelineConstantValue>|undefined),entryPoint:!string,module:!GPUShaderModule}}
  */
 var GPUFragmentState;
 /**
@@ -1947,7 +1955,11 @@ var RsaOtherPrimesInfo;
  */
 var MediaEncryptedEventInit;
 /**
- * @typedef {{entryPoint:!string,module:!GPUShaderModule}}
+ * @typedef {{colorSpace:(!string|undefined),premultipliedAlpha:(!boolean|undefined),aspect:(!string|undefined),mipLevel:(!GPUIntegerCoordinate|undefined),origin:(!GPUOrigin3D|undefined),texture:!GPUTexture}}
+ */
+var GPUImageCopyTextureTagged;
+/**
+ * @typedef {{constants:(!Object<!string,!GPUPipelineConstantValue>|undefined),entryPoint:!string,module:!GPUShaderModule}}
  */
 var GPUProgrammableStage;
 /**
@@ -2343,10 +2355,6 @@ var EffectTiming;
  */
 var RsaHashedKeyGenParams;
 /**
- * @typedef {{compositingAlphaMode:(!string|undefined),device:!GPUDevice,format:!string,size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined),label:(!string|undefined)}}
- */
-var GPUSwapChainDescriptor;
-/**
  * @typedef {{colorFormats:!Array<!string>,depthStencilFormat:(!string|undefined),sampleCount:(!GPUSize32|undefined),label:(!string|undefined)}}
  */
 var GPURenderBundleEncoderDescriptor;
@@ -2487,7 +2495,7 @@ var QueuingStrategy;
  */
 var WheelEventInit;
 /**
- * @typedef {{buffers:(!Array<?GPUVertexBufferLayout>|undefined),entryPoint:!string,module:!GPUShaderModule}}
+ * @typedef {{buffers:(!Array<?GPUVertexBufferLayout>|undefined),constants:(!Object<!string,!GPUPipelineConstantValue>|undefined),entryPoint:!string,module:!GPUShaderModule}}
  */
 var GPUVertexState;
 /**
@@ -2739,7 +2747,7 @@ var IDBTransactionOptions;
  */
 var GPUBindGroupLayoutEntry;
 /**
- * @typedef {{nonGuaranteedFeatures:(!Array<!string>|undefined),nonGuaranteedLimits:(!Object<!string,!GPUSize32>|undefined),label:(!string|undefined)}}
+ * @typedef {{requiredFeatures:(!Array<!string>|undefined),requiredLimits:(!Object<!string,!GPUSize32>|undefined),label:(!string|undefined)}}
  */
 var GPUDeviceDescriptor;
 /**
@@ -9712,23 +9720,6 @@ function UIEvent(type,eventInitDict) {}
 function WebGLUniformLocation() {}
 /**
  * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUCanvasContext() {}
-/**
- * @param {!GPUAdapter} adapter
- * @return {!string}
- */
-GPUCanvasContext.prototype.getSwapChainPreferredFormat = function(adapter) {}
-/**
- * @param {!GPUSwapChainDescriptor} descriptor
- * @return {!GPUSwapChain}
- */
-GPUCanvasContext.prototype.configureSwapChain = function(descriptor) {}
-/**
- * @constructor
  * @extends {Object}
  * @param {!number=} x
  * @param {!number=} y
@@ -11800,18 +11791,6 @@ function XRInputSource() {}
 /** @type {!Array<!string>} */ XRInputSource.prototype.profiles;
 /** @type {!string} */ XRInputSource.prototype.targetRayMode;
 /** @type {!XRSpace} */ XRInputSource.prototype.targetRaySpace;
-/**
- * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUSwapChain() {}
-/** @type {?string} */ GPUSwapChain.prototype.label;
-/**
- * @return {!GPUTexture}
- */
-GPUSwapChain.prototype.getCurrentTexture = function() {}
 /**
  * @constructor
  * @private
@@ -15478,6 +15457,39 @@ OscillatorNode.prototype.setPeriodicWave = function(periodicWave) {}
  * @nosideeffects
  */
 function GPUSupportedFeatures() {}
+/** @const {number} */ GPUSupportedFeatures.prototype.size;
+/**
+ * @param {!string} value
+ * @return {!boolean}
+ * @nosideeffects
+ */
+GPUSupportedFeatures.prototype.has = function(value) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+GPUSupportedFeatures.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+GPUSupportedFeatures.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+GPUSupportedFeatures.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+GPUSupportedFeatures.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+GPUSupportedFeatures.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -19028,8 +19040,12 @@ function HTMLSourceElement() {}
  */
 function GPUSupportedLimits() {}
 /** @type {!number} */ GPUSupportedLimits.prototype.maxBindGroups;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputePerDimensionDispatchSize;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupInvocations;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupStorageSize;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxInterStageShaderComponents;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxSamplersPerShaderStage;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxStorageBufferBindingSize;
@@ -19044,6 +19060,8 @@ function GPUSupportedLimits() {}
 /** @type {!number} */ GPUSupportedLimits.prototype.maxVertexAttributes;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxVertexBufferArrayStride;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxVertexBuffers;
+/** @type {!number} */ GPUSupportedLimits.prototype.minStorageBufferOffsetAlignment;
+/** @type {!number} */ GPUSupportedLimits.prototype.minUniformBufferOffsetAlignment;
 /**
  * @constructor
  * @private
@@ -19208,7 +19226,7 @@ function GPUQueue() {}
 /** @type {?string} */ GPUQueue.prototype.label;
 /**
  * @param {!GPUImageCopyExternalImage} source
- * @param {!GPUImageCopyTexture} destination
+ * @param {!GPUImageCopyTextureTagged} destination
  * @param {!GPUExtent3D} copySize
  * @return {undefined}
  */
@@ -19316,6 +19334,32 @@ function SpeechGrammar() {}
  * @nosideeffects
  */
 WebAssembly.CompileError = function() {}
+/**
+ * @constructor
+ * @private
+ * @extends {Object}
+ * @nosideeffects
+ */
+function GPUPresentationContext() {}
+/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ GPUPresentationContext.prototype.canvas;
+/**
+ * @param {!GPUAdapter} adapter
+ * @return {!string}
+ */
+GPUPresentationContext.prototype.getPreferredFormat = function(adapter) {}
+/**
+ * @return {!GPUTexture}
+ */
+GPUPresentationContext.prototype.getCurrentTexture = function() {}
+/**
+ * @param {!GPUPresentationConfiguration} configuration
+ * @return {undefined}
+ */
+GPUPresentationContext.prototype.configure = function(configuration) {}
+/**
+ * @return {undefined}
+ */
+GPUPresentationContext.prototype.unconfigure = function() {}
 /**
  * @constructor
  * @private
