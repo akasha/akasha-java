@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Geolocation interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">Geolocation - MDN</a>
- * @see <a href="https://w3c.github.io/geolocation-api/#geolocation_interface">Geolocation API</a>
+ * @see <a href="https://w3c.github.io/geolocation-api/#geolocation_interface"># geolocation_interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtpContributingSource dictionary of the WebRTC API is used by getContributingSources() to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource">RTCRtpContributingSource - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource">RTCRtpContributingSource - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource">(WebRTC 1.0) # dom-rtcrtpcontributingsource</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -112,7 +112,7 @@ public interface RTCRtpContributingSource {
    * The RTCRtpContributingSource dictionary of the WebRTC API is used by getContributingSources() to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource">RTCRtpContributingSource - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource">RTCRtpContributingSource - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource">(WebRTC 1.0) # dom-rtcrtpcontributingsource</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

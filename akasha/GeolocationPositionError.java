@@ -8,6 +8,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationPositionError">GeolocationPositionError - MDN</a>
+ * @see <a href="https://w3c.github.io/geolocation-api/#position_error_interface"># position_error_interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

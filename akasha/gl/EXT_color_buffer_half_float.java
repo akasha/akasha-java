@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The EXT_color_buffer_half_float extension is part of the WebGL API and adds the ability to render to 16-bit floating-point color buffers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_color_buffer_half_float">EXT_color_buffer_half_float - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/">EXT_color_buffer_half_float - EXT_color_buffer_half_float</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/">(WebGL EXT_color_buffer_half_float Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

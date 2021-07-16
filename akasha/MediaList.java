@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The MediaList interface represents the media queries of a stylesheet, e.g. those set using a &lt;link&gt; element's media attribute.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList">MediaList - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-medialist-interface">MediaList - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-medialist-interface">(CSSOM) # the-medialist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

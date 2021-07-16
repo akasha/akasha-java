@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The ULongRange dictionary is used to define a range of permitted integer values for a property, with either or both a maximum and minimum value specified. The ConstrainULongRange dictionary is based on this, augmenting it to support exact and ideal values as well.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ULongRange">ULongRange - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange">ULongRange - Media Capture and Streams</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange"># dom-ulongrange</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -48,7 +48,7 @@ public interface ULongRange {
    * The ULongRange dictionary is used to define a range of permitted integer values for a property, with either or both a maximum and minimum value specified. The ConstrainULongRange dictionary is based on this, augmenting it to support exact and ideal values as well.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ULongRange">ULongRange - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange">ULongRange - Media Capture and Streams</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange"># dom-ulongrange</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

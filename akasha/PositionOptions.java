@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions">PositionOptions - MDN</a>
- * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface">PositionOptions - Geolocation API</a>
+ * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface"># position_options_interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -92,7 +92,7 @@ public interface PositionOptions {
    * The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions">PositionOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface">PositionOptions - Geolocation API</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface"># position_options_interface</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

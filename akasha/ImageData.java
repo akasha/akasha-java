@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">ImageData - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">ImageData - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">(HTML) # imagedata</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageData"
 )
-public class ImageData extends JsObject implements TexImageSource {
+public class ImageData extends JsObject implements TexImageSource, ImageBitmapSource {
   /**
    * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
    *

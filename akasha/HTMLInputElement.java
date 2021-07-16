@@ -14,10 +14,7 @@ import jsinterop.base.Js;
  * The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of &lt;input&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlinputelement">HTMLInputElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-input-element">HTMLInputElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6043025">HTMLInputElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-6043025">HTMLInputElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/input.html#htmlinputelement">(HTML) # htmlinputelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

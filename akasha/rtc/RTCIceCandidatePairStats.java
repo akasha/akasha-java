@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">RTCIceCandidatePairStats - Identifiers for WebRTC's Statistics API</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">(WebRTC Statistics) # dom-rtcicecandidatepairstats</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -645,7 +645,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">RTCIceCandidatePairStats - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">(WebRTC Statistics) # dom-rtcicecandidatepairstats</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats">RTCRtpStreamStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*">RTCRtpStreamStats - Identifiers for WebRTC's Statistics API</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*">(WebRTC Statistics) # streamstats-dict*</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -130,7 +130,7 @@ public interface RTCRtpStreamStats extends RTCStats {
    * The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats">RTCRtpStreamStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*">RTCRtpStreamStats - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*">(WebRTC Statistics) # streamstats-dict*</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

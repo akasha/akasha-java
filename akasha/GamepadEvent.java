@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent">GamepadEvent - MDN</a>
- * @see <a href="https://w3c.github.io/gamepad/#gamepadevent-interface">GamepadEvent - Gamepad</a>
+ * @see <a href="https://w3c.github.io/gamepad/#gamepadevent-interface"># gamepadevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

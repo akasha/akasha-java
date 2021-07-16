@@ -8,6 +8,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ElementInternals interface of the Document_Object_Model gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the Accessibility Object Model to the element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals">ElementInternals - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#the-elementinternals-interface">(HTML) # the-elementinternals-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">ScrollToOptions - CSS Object Model (CSSOM) View Module</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">(CSSOM View) # dictdef-scrolltooptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -72,7 +72,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">ScrollToOptions - CSS Object Model (CSSOM) View Module</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">(CSSOM View) # dictdef-scrolltooptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

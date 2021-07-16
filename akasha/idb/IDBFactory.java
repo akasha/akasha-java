@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The IDBFactory interface of the IndexedDB API lets applications asynchronously access the indexed databases. The object that implements the interface is window.indexedDB. You open &mdash; that is, create and access &mdash; and delete a database with this object, and not directly with IDBFactory.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory">IDBFactory - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#factory-interface">IDBFactory - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#factory-interface">(Indexed DB 3.0) # factory-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

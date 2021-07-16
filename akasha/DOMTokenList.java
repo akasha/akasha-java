@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
  * The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList">DOMTokenList - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-domtokenlist">DOMTokenList - DOM</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-domtokenlist">(DOM) # interface-domtokenlist</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

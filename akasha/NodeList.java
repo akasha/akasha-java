@@ -18,10 +18,7 @@ import jsinterop.annotations.JsType;
  * NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList">NodeList - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-nodelist">NodeList - DOM</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-536297177">NodeList - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177">NodeList - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-536297177">NodeList - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-nodelist">(DOM) # interface-nodelist</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

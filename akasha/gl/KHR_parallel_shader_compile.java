@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The KHR_parallel_shader_compile extension is part of the WebGL API and enables a non-blocking poll operation, so that compile/link status availability (COMPLETION_STATUS_KHR) can be queried without potentially incurring stalls. In other words you can check the status of your shaders compiling without blocking the runtime.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KHR_parallel_shader_compile">KHR_parallel_shader_compile - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/">KHR_parallel_shader_compile - KHR_parallel_shader_compile</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/">(WebGL KHR_parallel_shader_compile Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

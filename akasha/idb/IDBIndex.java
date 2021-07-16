@@ -14,8 +14,7 @@ import jsinterop.base.Any;
  * IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex">IDBIndex - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbindex">IDBIndex - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#index-interface">IDBIndex - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#index-interface">(Indexed DB 3.0) # index-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

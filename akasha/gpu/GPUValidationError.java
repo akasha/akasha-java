@@ -15,7 +15,7 @@ import org.jetbrains.annotations.ApiStatus;
     namespace = JsPackage.GLOBAL,
     name = "GPUValidationError"
 )
-public class GPUValidationError extends JsObject {
+public class GPUValidationError extends JsObject implements GPUError {
   public GPUValidationError(@Nonnull final String message) {
   }
 

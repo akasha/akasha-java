@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker">SharedWorker - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#sharedworker">SharedWorker - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface">(HTML) # shared-workers-and-the-sharedworker-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

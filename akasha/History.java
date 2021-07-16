@@ -14,8 +14,7 @@ import jsinterop.base.Any;
  * The History interface allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History">History - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#the-history-interface">History - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/browsers.html#the-history-interface">History - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-history-interface">(HTML) # the-history-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

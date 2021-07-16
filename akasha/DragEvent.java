@@ -11,8 +11,7 @@ import jsinterop.annotations.JsType;
  * The DragEvent interface is a DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent">DragEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#dragevent">DragEvent - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/editing.html#the-dragevent-interface">DragEvent - HTML 5.1</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dnd.html#the-dragevent-interface">(HTML) # the-dragevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

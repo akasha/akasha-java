@@ -10,9 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLProgressElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;progress&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement">HTMLProgressElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlprogresselement">HTMLProgressElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/forms.html#the-progress-element">HTMLProgressElement - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-progress-element">HTMLProgressElement - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlprogresselement">(HTML) # htmlprogresselement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

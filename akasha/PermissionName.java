@@ -30,16 +30,13 @@ public @interface PermissionName {
   String camera = "camera";
 
   @Nonnull
-  String clipboard_read = "clipboard-read";
-
-  @Nonnull
-  String clipboard_write = "clipboard-write";
-
-  @Nonnull
   String device_info = "device-info";
 
   @Nonnull
   String display_capture = "display-capture";
+
+  @Nonnull
+  String gamepad = "gamepad";
 
   @Nonnull
   String geolocation = "geolocation";
@@ -69,7 +66,10 @@ public @interface PermissionName {
   String push = "push";
 
   @Nonnull
-  String speaker = "speaker";
+  String screen_wake_lock = "screen-wake-lock";
+
+  @Nonnull
+  String speaker_selection = "speaker-selection";
 
   final class Util {
     private Util() {
@@ -86,7 +86,7 @@ public @interface PermissionName {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return PermissionName.accelerometer.equals( value ) || PermissionName.ambient_light_sensor.equals( value ) || PermissionName.background_fetch.equals( value ) || PermissionName.background_sync.equals( value ) || PermissionName.bluetooth.equals( value ) || PermissionName.camera.equals( value ) || PermissionName.clipboard_read.equals( value ) || PermissionName.clipboard_write.equals( value ) || PermissionName.device_info.equals( value ) || PermissionName.display_capture.equals( value ) || PermissionName.geolocation.equals( value ) || PermissionName.gyroscope.equals( value ) || PermissionName.magnetometer.equals( value ) || PermissionName.microphone.equals( value ) || PermissionName.midi.equals( value ) || PermissionName.nfc.equals( value ) || PermissionName.notifications.equals( value ) || PermissionName.persistent_storage.equals( value ) || PermissionName.push.equals( value ) || PermissionName.speaker.equals( value );
+      return PermissionName.accelerometer.equals( value ) || PermissionName.ambient_light_sensor.equals( value ) || PermissionName.background_fetch.equals( value ) || PermissionName.background_sync.equals( value ) || PermissionName.bluetooth.equals( value ) || PermissionName.camera.equals( value ) || PermissionName.device_info.equals( value ) || PermissionName.display_capture.equals( value ) || PermissionName.gamepad.equals( value ) || PermissionName.geolocation.equals( value ) || PermissionName.gyroscope.equals( value ) || PermissionName.magnetometer.equals( value ) || PermissionName.microphone.equals( value ) || PermissionName.midi.equals( value ) || PermissionName.nfc.equals( value ) || PermissionName.notifications.equals( value ) || PermissionName.persistent_storage.equals( value ) || PermissionName.push.equals( value ) || PermissionName.screen_wake_lock.equals( value ) || PermissionName.speaker_selection.equals( value );
     }
   }
 }

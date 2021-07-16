@@ -10,11 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLBodyElement interface provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating &lt;body&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement">HTMLBodyElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlbodyelement">HTMLBodyElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/sections.html#the-body-element">HTMLBodyElement - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/sections.html#the-body-element">HTMLBodyElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-62018039">HTMLBodyElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-62018039">HTMLBodyElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/sections.html#htmlbodyelement">(HTML) # htmlbodyelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

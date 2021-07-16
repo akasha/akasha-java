@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">GamepadPose - MDN</a>
- * @see <a href="https://w3c.github.io/gamepad/extensions.html#gamepadpose-interface">GamepadPose - Gamepad Extensions</a>
+ * @see <a href="https://w3c.github.io/gamepad/extensions.html#gamepadpose-interface"># gamepadpose-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

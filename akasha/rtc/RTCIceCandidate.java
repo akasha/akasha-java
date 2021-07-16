@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidate-interface">RTCIceCandidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidate-interface">(WebRTC 1.0) # rtcicecandidate-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

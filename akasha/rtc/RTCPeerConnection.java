@@ -25,7 +25,7 @@ import jsinterop.base.Js;
  * The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection">RTCPeerConnection - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#interface-definition">RTCPeerConnection - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#interface-definition">(WebRTC 1.0) # interface-definition</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

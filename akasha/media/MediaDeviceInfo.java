@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MediaDeviceInfo interface contains information that describes a single media input or output device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo">MediaDeviceInfo - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadeviceinfo">MediaDevicesInfo - Media Capture and Streams</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#device-info"># device-info</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

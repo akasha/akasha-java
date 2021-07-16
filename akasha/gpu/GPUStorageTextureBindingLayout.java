@@ -20,16 +20,14 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUStorageTextureBindingLayout {
   @JsOverlay
   @Nonnull
-  static Builder create(@GPUStorageTextureAccess @Nonnull final String access,
-      @GPUTextureFormat @Nonnull final String format) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).access( access ).format( format );
+  static Builder create(@GPUTextureFormat @Nonnull final String format) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format );
   }
 
   @JsProperty(
       name = "access"
   )
   @GPUStorageTextureAccess
-  @Nonnull
   String access();
 
   @JsProperty

@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -11,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The CSSStyleSheet interface represents a single CSS stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">CSSStyleSheet - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#cssstylesheet">CSSStyleSheet - CSS Object Model (CSSOM)</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet">CSSStyleSheet - Document Object Model (DOM) Level 2 Style Specification</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssstylesheet-interface">(CSSOM) # the-cssstylesheet-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,7 +21,10 @@ import jsinterop.annotations.JsType;
     name = "CSSStyleSheet"
 )
 public class CSSStyleSheet extends StyleSheet {
-  protected CSSStyleSheet() {
+  public CSSStyleSheet(@Nonnull final CSSStyleSheetInit options) {
+  }
+
+  public CSSStyleSheet() {
   }
 
   /**
@@ -79,6 +82,11 @@ public class CSSStyleSheet extends StyleSheet {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-insertRule">CSSStyleSheet.insertRule - Document Object Model (DOM) Level 2 Style Specification</a>
    */
   public native int insertRule(@Nonnull String rule);
+
+  @Nonnull
+  public native Promise<CSSStyleSheet> replace(@Nonnull String text);
+
+  public native void replaceSync(@Nonnull String text);
 
   public native int addRule(@Nonnull String selector, @Nonnull String style, int index);
 

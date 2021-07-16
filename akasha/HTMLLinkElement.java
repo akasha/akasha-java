@@ -11,12 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLLinkElement interface represents reference information for external resources and the relationship of those resources to a document and vice-versa (corresponds to &lt;link&gt; element; not to be confused with &lt;a&gt;, which is represented by HTMLAnchorElement). This object inherits all of the properties and methods of the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement">HTMLLinkElement - MDN</a>
- * @see <a href="https://w3c.github.io/preload/">Preload</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmllinkelement">HTMLLinkElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/document-metadata.html#the-link-element">HTMLLinkElement - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/document-metadata.html#the-link-element">HTMLLinkElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-35143001">HTMLLinkElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-35143001">HTMLLinkElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmllinkelement">(HTML) # htmllinkelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

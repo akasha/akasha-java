@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices">MediaDevices - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#mediadevices">MediaDevices - Media Capture and Streams</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#mediadevices"># mediadevices</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

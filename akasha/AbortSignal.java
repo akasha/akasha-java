@@ -10,9 +10,10 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The AbortSignal interface represents a signal object that allows you to communicate with a DOM request (such as a Fetch) and abort it if required via an AbortController object.
+ * The AbortSignal interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an AbortController object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal">AbortSignal - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-AbortSignal">(DOM) # interface-AbortSignal</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

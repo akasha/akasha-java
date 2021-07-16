@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement">CSSPseudoElement - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface">CSSPseudoElement - CSS Pseudo-Elements Level 4</a>
+ * @see <a href="https://drafts.csswg.org/css-pseudo/#CSSPseudoElement-interface">(CSS Pseudo-Elements 4) # CSSPseudoElement-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

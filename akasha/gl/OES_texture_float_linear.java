@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The OES_texture_float_linear extension is part of the WebGL API and allows linear filtering with floating-point pixel types for textures.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_float_linear">OES_texture_float_linear - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_texture_float_linear/">OES_texture_float_linear - OES_texture_float_linear</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_texture_float_linear/">(WebGL OES_texture_float_linear Khronos Ratified Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

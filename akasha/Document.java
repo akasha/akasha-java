@@ -22,17 +22,12 @@ import jsinterop.base.JsPropertyMap;
  * The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-document">Document - DOM</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-document-object">Document - HTML Living Standard</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface">Document - CSS Object Model (CSSOM) View Module</a>
- * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface">Document - Pointer Lock</a>
- * @see <a href="https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface">Document - Page Visibility (Second Edition)</a>
- * @see <a href="https://w3c.github.io/selection-api/#extensions-to-document-interface">Document - Selection API</a>
- * @see <a href="https://www.w3.org/TR/dom/#interface-document">Document - DOM4</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/#i-Document">Document - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator">XPathEvaluator - Document Object Model (DOM) Level 3 XPath Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#i-Document">Document - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/#i-Document">Document - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-document">(DOM) # interface-document</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-document-object">(HTML) # the-document-object</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface">(CSSOM View) # extensions-to-the-document-interface</a>
+ * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface"># extensions-to-the-document-interface</a>
+ * @see <a href="https://w3c.github.io/page-visibility/#extensions-to-the-document-interface">(Page Visibility 2) # extensions-to-the-document-interface</a>
+ * @see <a href="https://w3c.github.io/selection-api/#extensions-to-document-interface"># extensions-to-document-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

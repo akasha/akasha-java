@@ -15,10 +15,10 @@ import org.jetbrains.annotations.ApiStatus;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GPUPresentationConfiguration"
+    name = "GPUCanvasConfiguration"
 )
 @ApiStatus.Experimental
-public interface GPUPresentationConfiguration {
+public interface GPUCanvasConfiguration {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUDevice device,
@@ -98,10 +98,10 @@ public interface GPUPresentationConfiguration {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "GPUPresentationConfiguration"
+      name = "GPUCanvasConfiguration"
   )
   @ApiStatus.Experimental
-  interface Builder extends GPUPresentationConfiguration {
+  interface Builder extends GPUCanvasConfiguration {
     @JsOverlay
     @Nonnull
     default Builder colorSpace(@GPUPredefinedColorSpace @Nonnull final String colorSpace) {

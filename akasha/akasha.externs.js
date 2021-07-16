@@ -7,7 +7,7 @@
  */
 var HashAlgorithmIdentifier;
 /**
- * @typedef {(!OffscreenCanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext)}
+ * @typedef {(!OffscreenCanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUCanvasContext)}
  */
 var OffscreenRenderingContext;
 /**
@@ -159,7 +159,7 @@ var ConstrainBoolean;
  */
 var StringifySpaceUnionType;
 /**
- * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUPresentationContext)}
+ * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUCanvasContext)}
  */
 var RenderingContext;
 /**
@@ -1251,6 +1251,10 @@ var GPUBindGroupDescriptor;
  */
 var PopStateEventInit;
 /**
+ * @typedef {{colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),device:!GPUDevice,format:!string,size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined)}}
+ */
+var GPUCanvasConfiguration;
+/**
  * @typedef {{lastModified:(!number|undefined),endings:(!string|undefined),type:(!string|undefined)}}
  */
 var FilePropertyBag;
@@ -1394,10 +1398,6 @@ var MouseEventInit;
  * @typedef {{id:!string}}
  */
 var CredentialData;
-/**
- * @typedef {{colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),device:!GPUDevice,format:!string,size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined)}}
- */
-var GPUPresentationConfiguration;
 /**
  * @typedef {{ignoreMethod:(!boolean|undefined),ignoreSearch:(!boolean|undefined),ignoreVary:(!boolean|undefined)}}
  */
@@ -1611,7 +1611,7 @@ var GPUBindGroupLayoutDescriptor;
  */
 var RTCIdentityProviderDetails;
 /**
- * @typedef {{blockedURL:(!string|undefined),colno:(!number|undefined),disposition:!string,documentURL:!string,effectiveDirective:!string,lineno:(!number|undefined),originalPolicy:!string,referrer:(!string|undefined),sample:(!string|undefined),sourceFile:(!string|undefined),statusCode:!number,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{blockedURI:(!string|undefined),columnNumber:(!number|undefined),disposition:!string,documentURI:!string,effectiveDirective:!string,lineNumber:(!number|undefined),originalPolicy:!string,referrer:(!string|undefined),sample:(!string|undefined),sourceFile:(!string|undefined),statusCode:!number,violatedDirective:!string,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var SecurityPolicyViolationEventInit;
 /**
@@ -1659,7 +1659,7 @@ var GPUCommandBufferDescriptor;
  */
 var AuthenticationExtensionsLargeBlobOutputs;
 /**
- * @typedef {{decoderConfig:(!VideoDecoderConfig|undefined),temporalLayerId:(!number|undefined)}}
+ * @typedef {{decoderConfig:(!VideoDecoderConfig|undefined),svc:(!SvcOutputMetadata|undefined)}}
  */
 var EncodedVideoChunkMetadata;
 /**
@@ -1927,7 +1927,7 @@ var ValidityStateFlags;
  */
 var CameraDevicePermissionDescriptor;
 /**
- * @typedef {{access:!string,format:!string,viewDimension:(!string|undefined)}}
+ * @typedef {{access:(!string|undefined),format:!string,viewDimension:(!string|undefined)}}
  */
 var GPUStorageTextureBindingLayout;
 /**
@@ -2058,6 +2058,10 @@ var AesCbcParams;
  * @typedef {{acceptAllDevices:(!boolean|undefined),filters:(!Array<!BluetoothLEScanFilterInit>|undefined),optionalManufacturerData:(!Array<!number>|undefined),optionalServices:(!Array<!BluetoothServiceUUID>|undefined)}}
  */
 var RequestDeviceOptions;
+/**
+ * @typedef {{temporalLayerId:(!number|undefined)}}
+ */
+var SvcOutputMetadata;
 /**
  * @typedef {{rid:(!string|undefined)}}
  */
@@ -2379,7 +2383,7 @@ var TextDecoderOptions;
  */
 var DragEventInit;
 /**
- * @typedef {{alpha:(!boolean|undefined),colorSpace:(!string|undefined),desynchronized:(!boolean|undefined)}}
+ * @typedef {{alpha:(!boolean|undefined),colorSpace:(!string|undefined),desynchronized:(!boolean|undefined),willReadFrequently:(!boolean|undefined)}}
  */
 var CanvasRenderingContext2DSettings;
 /**
@@ -2794,6 +2798,10 @@ var GPUImageCopyExternalImage;
  * @typedef {{data:(!string|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var CompositionEventInit;
+/**
+ * @typedef {{baseURL:(!string|undefined),disabled:(!boolean|undefined),media:(!MediaListOrStringUnion|undefined)}}
+ */
+var CSSStyleSheetInit;
 /**
  * @typedef {{aspect:(!string|undefined),mipLevel:(!GPUIntegerCoordinate|undefined),origin:(!GPUOrigin3D|undefined),texture:!GPUTexture}}
  */
@@ -4109,6 +4117,15 @@ CanvasRenderingContext2D.prototype.fillText = function(text,x,y,maxWidth) {}
  */
 CanvasRenderingContext2D.prototype.getTransform = function() {}
 /**
+ * @param {!number} x
+ * @param {!number} y
+ * @param {!number} w
+ * @param {!number} h
+ * @param {!Array<UnrestrictedDoubleOrDOMPointInitUnion>} radii
+ * @return {undefined}
+ */
+CanvasRenderingContext2D.prototype.roundRect = function(x,y,w,h,radii) {}
+/**
  * @param {!number} x1
  * @param {!number} y1
  * @param {!number} x2
@@ -4496,7 +4513,7 @@ function HTMLSelectElement() {}
 HTMLSelectElement.prototype.add = function(element,before) {}
 /**
  * @param {!number} index
- * @return {?Element}
+ * @return {?HTMLOptionElement}
  */
 HTMLSelectElement.prototype.item = function(index) {}
 /**
@@ -5726,15 +5743,11 @@ function Gamepad() {}
  */
 function SecurityPolicyViolationEvent(type,eventInitDict) {}
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.blockedURI;
-/** @type {!string} */ SecurityPolicyViolationEvent.prototype.blockedURL;
-/** @type {!number} */ SecurityPolicyViolationEvent.prototype.colno;
 /** @type {!number} */ SecurityPolicyViolationEvent.prototype.columnNumber;
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.disposition;
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.documentURI;
-/** @type {!string} */ SecurityPolicyViolationEvent.prototype.documentURL;
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.effectiveDirective;
 /** @type {!number} */ SecurityPolicyViolationEvent.prototype.lineNumber;
-/** @type {!number} */ SecurityPolicyViolationEvent.prototype.lineno;
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.originalPolicy;
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.referrer;
 /** @type {!string} */ SecurityPolicyViolationEvent.prototype.sample;
@@ -8470,15 +8483,15 @@ XRSession.prototype.requestAnimationFrame = function(callback) {}
 function MimeTypeArray() {}
 /** @type {!number} */ MimeTypeArray.prototype.length;
 /**
- * @param {!number} index
- * @return {?Object}
- */
-MimeTypeArray.prototype.item = function(index) {}
-/**
  * @param {!string} name
- * @return {?Object}
+ * @return {?MimeType}
  */
 MimeTypeArray.prototype.namedItem = function(name) {}
+/**
+ * @param {!number} index
+ * @return {?MimeType}
+ */
+MimeTypeArray.prototype.item = function(index) {}
 /**
  * @constructor
  * @private
@@ -9001,6 +9014,17 @@ function EXT_texture_compression_bptc() {}
 /** @const {!GLenum} */ EXT_texture_compression_bptc.prototype.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT;
 /**
  * @constructor
+ * @private
+ * @extends {Object}
+ * @nosideeffects
+ */
+function MimeType() {}
+/** @type {!string} */ MimeType.prototype.description;
+/** @type {!Plugin} */ MimeType.prototype.enabledPlugin;
+/** @type {!string} */ MimeType.prototype.suffixes;
+/** @type {!string} */ MimeType.prototype.type;
+/**
+ * @constructor
  * @extends {Object}
  * @param {!string} url
  * @param {!string=} base
@@ -9187,6 +9211,7 @@ SVGMarkerElement.prototype.setOrientToAuto = function() {}
 function HTMLMetaElement() {}
 /** @type {!string} */ HTMLMetaElement.prototype.content;
 /** @type {!string} */ HTMLMetaElement.prototype.httpEquiv;
+/** @type {!string} */ HTMLMetaElement.prototype.media;
 /** @type {!string} */ HTMLMetaElement.prototype.name;
 /** @type {!string} */ HTMLMetaElement.prototype.scheme;
 /**
@@ -9433,6 +9458,15 @@ OffscreenCanvasRenderingContext2D.prototype.fillText = function(text,x,y,maxWidt
  * @return {!DOMMatrix}
  */
 OffscreenCanvasRenderingContext2D.prototype.getTransform = function() {}
+/**
+ * @param {!number} x
+ * @param {!number} y
+ * @param {!number} w
+ * @param {!number} h
+ * @param {!Array<UnrestrictedDoubleOrDOMPointInitUnion>} radii
+ * @return {undefined}
+ */
+OffscreenCanvasRenderingContext2D.prototype.roundRect = function(x,y,w,h,radii) {}
 /**
  * @param {!number} x1
  * @param {!number} y1
@@ -9718,6 +9752,32 @@ function UIEvent(type,eventInitDict) {}
  * @nosideeffects
  */
 function WebGLUniformLocation() {}
+/**
+ * @constructor
+ * @private
+ * @extends {Object}
+ * @nosideeffects
+ */
+function GPUCanvasContext() {}
+/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ GPUCanvasContext.prototype.canvas;
+/**
+ * @param {!GPUAdapter} adapter
+ * @return {!string}
+ */
+GPUCanvasContext.prototype.getPreferredFormat = function(adapter) {}
+/**
+ * @return {!GPUTexture}
+ */
+GPUCanvasContext.prototype.getCurrentTexture = function() {}
+/**
+ * @param {!GPUCanvasConfiguration} configuration
+ * @return {undefined}
+ */
+GPUCanvasContext.prototype.configure = function(configuration) {}
+/**
+ * @return {undefined}
+ */
+GPUCanvasContext.prototype.unconfigure = function() {}
 /**
  * @constructor
  * @extends {Object}
@@ -10232,15 +10292,15 @@ function HTMLOptGroupElement() {}
 function PluginArray() {}
 /** @type {!number} */ PluginArray.prototype.length;
 /**
- * @param {!number} index
- * @return {?Object}
- */
-PluginArray.prototype.item = function(index) {}
-/**
  * @param {!string} name
- * @return {?Object}
+ * @return {?Plugin}
  */
 PluginArray.prototype.namedItem = function(name) {}
+/**
+ * @param {!number} index
+ * @return {?Plugin}
+ */
+PluginArray.prototype.item = function(index) {}
 /**
  * @return {undefined}
  */
@@ -10979,8 +11039,8 @@ function GPUTextureUsage() {}
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.COPY_SRC;
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.RENDER_ATTACHMENT;
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.RENDER_ATTACHMENT;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.SAMPLED;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.SAMPLED;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.SHADER_READ;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.SHADER_READ;
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.STORAGE;
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.STORAGE;
 /**
@@ -11931,6 +11991,27 @@ GPUCommandEncoder.prototype.beginComputePass = function(descriptor) {}
  * @nosideeffects
  */
 function XRSpace() {}
+/**
+ * @constructor
+ * @private
+ * @extends {Object}
+ * @nosideeffects
+ */
+function Plugin() {}
+/** @type {!string} */ Plugin.prototype.description;
+/** @type {!string} */ Plugin.prototype.filename;
+/** @type {!number} */ Plugin.prototype.length;
+/** @type {!string} */ Plugin.prototype.name;
+/**
+ * @param {!string} name
+ * @return {?MimeType}
+ */
+Plugin.prototype.namedItem = function(name) {}
+/**
+ * @param {!number} index
+ * @return {?MimeType}
+ */
+Plugin.prototype.item = function(index) {}
 /**
  * @constructor
  * @private
@@ -13453,6 +13534,7 @@ function HTMLHtmlElement() {}
  * @nosideeffects
  */
 function Window() {}
+/** @type {!Navigator} */ Window.prototype.clientInformation;
 /** @type {!boolean} */ Window.prototype.closed;
 /** @type {!CustomElementRegistry} */ Window.prototype.customElements;
 /** @type {!Document} */ Window.prototype.document;
@@ -13868,6 +13950,7 @@ function Navigator() {}
 /** @type {!string} */ Navigator.prototype.vendorSub;
 /** @type {!string} */ Navigator.prototype.oscpu;
 /** @type {!MimeTypeArray} */ Navigator.prototype.mimeTypes;
+/** @type {!boolean} */ Navigator.prototype.pdfViewerEnabled;
 /** @type {!PluginArray} */ Navigator.prototype.plugins;
 /** @type {!boolean} */ Navigator.prototype.onLine;
 /** @type {!GPU} */ Navigator.prototype.gpu;
@@ -19042,6 +19125,7 @@ function GPUSupportedLimits() {}
 /** @type {!number} */ GPUSupportedLimits.prototype.maxBindGroups;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxComputePerDimensionDispatchSize;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupInvocations;
+/** @type {!GPUExtent3D} */ GPUSupportedLimits.prototype.maxComputeWorkgroupSize;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupStorageSize;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout;
@@ -19334,32 +19418,6 @@ function SpeechGrammar() {}
  * @nosideeffects
  */
 WebAssembly.CompileError = function() {}
-/**
- * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUPresentationContext() {}
-/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ GPUPresentationContext.prototype.canvas;
-/**
- * @param {!GPUAdapter} adapter
- * @return {!string}
- */
-GPUPresentationContext.prototype.getPreferredFormat = function(adapter) {}
-/**
- * @return {!GPUTexture}
- */
-GPUPresentationContext.prototype.getCurrentTexture = function() {}
-/**
- * @param {!GPUPresentationConfiguration} configuration
- * @return {undefined}
- */
-GPUPresentationContext.prototype.configure = function(configuration) {}
-/**
- * @return {undefined}
- */
-GPUPresentationContext.prototype.unconfigure = function() {}
 /**
  * @constructor
  * @private
@@ -20667,6 +20725,15 @@ function XRRigidTransform(position,orientation) {}
  * @param {(!Path2D|!string)=} path
  */
 function Path2D(path) {}
+/**
+ * @param {!number} x
+ * @param {!number} y
+ * @param {!number} w
+ * @param {!number} h
+ * @param {!Array<UnrestrictedDoubleOrDOMPointInitUnion>} radii
+ * @return {undefined}
+ */
+Path2D.prototype.roundRect = function(x,y,w,h,radii) {}
 /**
  * @param {!number} x
  * @param {!number} y
@@ -23028,11 +23095,10 @@ function HTMLPreElement() {}
 /** @type {!number} */ HTMLPreElement.prototype.width;
 /**
  * @constructor
- * @private
  * @extends {StyleSheet}
- * @nosideeffects
+ * @param {!CSSStyleSheetInit=} options
  */
-function CSSStyleSheet() {}
+function CSSStyleSheet(options) {}
 /** @type {!CSSRuleList} */ CSSStyleSheet.prototype.cssRules;
 /** @type {?CSSRule} */ CSSStyleSheet.prototype.ownerRule;
 /** @type {!CSSRuleList} */ CSSStyleSheet.prototype.rules;
@@ -23050,6 +23116,11 @@ CSSStyleSheet.prototype.insertRule = function(rule,index) {}
  */
 CSSStyleSheet.prototype.addRule = function(selector,style,index) {}
 /**
+ * @param {!string} text
+ * @return {!Promise<!CSSStyleSheet>}
+ */
+CSSStyleSheet.prototype.replace = function(text) {}
+/**
  * @param {!number=} index
  * @return {undefined}
  */
@@ -23059,6 +23130,11 @@ CSSStyleSheet.prototype.removeRule = function(index) {}
  * @return {undefined}
  */
 CSSStyleSheet.prototype.deleteRule = function(index) {}
+/**
+ * @param {!string} text
+ * @return {undefined}
+ */
+CSSStyleSheet.prototype.replaceSync = function(text) {}
 /**
  * @constructor
  * @extends {Event}
@@ -23136,6 +23212,10 @@ HTMLCanvasElement.prototype.toDataURL = function(type,quality) {}
  */
 HTMLCanvasElement.prototype.getContext = function(contextId,options) {}
 /**
+ * @typedef {(!number|!DOMPointInit)}
+ */
+var UnrestrictedDoubleOrDOMPointInitUnion;
+/**
  * @typedef {(!IDBObjectStore|!IDBIndex)}
  */
 var IDBObjectStoreOrIDBIndexUnion;
@@ -23191,6 +23271,10 @@ var GPULoadOpOrGPUStencilValueUnion;
  * @typedef {(!CustomElementConstructor|undefined)}
  */
 var CustomElementConstructorOrUndefinedUnion;
+/**
+ * @typedef {(!MediaList|!string)}
+ */
+var MediaListOrStringUnion;
 /**
  * @typedef {(!Response|undefined)}
  */
@@ -23259,6 +23343,7 @@ var DocumentOrWindowProxyUnion;
  * @typedef {(!HTMLCanvasElement|!OffscreenCanvas)}
  */
 var HTMLCanvasElementOrOffscreenCanvasUnion;
+/** @type {!Navigator} */ var clientInformation;
 /** @type {!boolean} */ var closed;
 /** @type {!CustomElementRegistry} */ var customElements;
 /** @type {!Document} */ var document;

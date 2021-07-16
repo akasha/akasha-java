@@ -14,11 +14,7 @@ import jsinterop.base.Js;
  * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-htmlelement-interface">HTMLElement - CSS Object Model (CSSOM) View Module</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/elements.html#htmlelement">HTMLElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/dom.html#htmlelement">HTMLElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-011100101">HTMLElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-011100101">HTMLElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#htmlelement">(HTML) # htmlelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

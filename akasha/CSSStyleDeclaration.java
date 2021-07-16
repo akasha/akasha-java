@@ -13,8 +13,7 @@ import jsinterop.annotations.JsType;
  * The CSSStyleDeclaration interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration">CSSStyleDeclaration - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface">CSSStyleDeclaration - CSS Object Model (CSSOM)</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">CSSStyleDeclaration - Document Object Model (DOM) Level 2 Style Specification</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface">(CSSOM) # the-cssstyledeclaration-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

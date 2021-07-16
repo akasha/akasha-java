@@ -16,10 +16,10 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The MediaStream interface represents a stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack.
+ * The MediaStream interface represents a stream of media content. A stream consists of several tracks, such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream">MediaStream - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastream">MediaStream - Media Capture and Streams</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#mediastream"># mediastream</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

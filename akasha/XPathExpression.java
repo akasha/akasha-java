@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathExpression">XPathExpression - MDN</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression">XPathExpression - Document Object Model (DOM) Level 3 XPath Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-xpathexpression">(DOM) # interface-xpathexpression</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

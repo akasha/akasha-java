@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The TextDecoder interface represents a decoder for a specific text encoding, such as UTF-8, ISO-8859-2, KOI8-R, GBK, etc. A decoder takes a stream of bytes as input and emits a stream of code points.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder">TextDecoder - MDN</a>
- * @see <a href="https://encoding.spec.whatwg.org/#interface-textdecoder">TextDecoder - Encoding</a>
+ * @see <a href="https://encoding.spec.whatwg.org/#interface-textdecoder"># interface-textdecoder</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

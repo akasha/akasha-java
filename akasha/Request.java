@@ -16,7 +16,7 @@ import jsinterop.base.Any;
  * The Request interface of the Fetch API represents a resource request.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request">Request - MDN</a>
- * @see <a href="https://fetch.spec.whatwg.org/#request-class">Request - Fetch</a>
+ * @see <a href="https://fetch.spec.whatwg.org/#request-class">(Fetch) # request-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -12,7 +12,6 @@ import jsinterop.annotations.JsType;
  * The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation">PerformanceNavigation - MDN</a>
- * @see <a href="https://www.w3.org/TR/navigation-timing/#performancenavigation">PerformanceNavigation - Navigation Timing</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

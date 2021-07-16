@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The RTCDataChannelEvent() constructor returns a new RTCDataChannelEvent object, which represents a datachannel event. These events sent to an RTCPeerConnection when its remote peer is asking to open an RTCDataChannel between the two peers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent">RTCDataChannelEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdatachannelevent">RTCDataChannelEvent - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdatachannelevent">(WebRTC 1.0) # rtcdatachannelevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

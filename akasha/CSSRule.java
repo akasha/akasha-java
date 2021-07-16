@@ -13,12 +13,7 @@ import jsinterop.annotations.JsType;
  * The CSSRule interface represents a single CSS rule. There are several types of rules which inherit properties from CSSRule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule">CSSRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#css-rules">CSSRule - CSS Object Model (CSSOM)</a>
- * @see <a href="https://drafts.csswg.org/css-animations-1/#interface-cssrule">CSSRule - CSS Animations Level 1</a>
- * @see <a href="https://drafts.csswg.org/css-fonts-4/#om-fontfeaturevalues">CSSRule - CSS Fonts Module Level 4</a>
- * @see <a href="https://drafts.csswg.org/css-counter-styles-3/#extensions-to-cssrule-interface">CSSRule - CSS Counter Styles Level 3</a>
- * @see <a href="https://drafts.csswg.org/css-conditional-3/#extensions-to-cssrule-interface">CSSRule - CSS Conditional Rules Module Level 3</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule">CSSRule - Document Object Model (DOM) Level 2 Style Specification</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssrule-interface">(CSSOM) # the-cssrule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

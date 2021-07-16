@@ -11,9 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;object&gt; element, representing external resources.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement">HTMLObjectElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlobjectelement">HTMLObjectElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9893177">HTMLObjectElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-9893177">HTMLObjectElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlobjectelement">(HTML) # htmlobjectelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -16,8 +16,7 @@ import jsinterop.base.Js;
  * The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of &lt;canvas&gt; elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement">HTMLCanvasElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlcanvaselement">HTMLCanvasElement - HTML Living Standard</a>
- * @see <a href="https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions">HTMLCanvasElement - Media Capture from DOM Elements</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#htmlcanvaselement">(HTML) # htmlcanvaselement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,7 +24,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "HTMLCanvasElement"
 )
-public class HTMLCanvasElement extends HTMLElement implements TexImageSource {
+public class HTMLCanvasElement extends HTMLElement implements TexImageSource, CanvasImageSource {
   /**
    * The HTMLCanvasElement.height property is a positive integer reflecting the height HTML attribute of the canvas element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of 150 is used.
    *

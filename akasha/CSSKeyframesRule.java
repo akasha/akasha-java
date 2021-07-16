@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The CSSKeyframesRule interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole @keyframes at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframesRule">CSSKeyframesRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-animations-1/#interface-csskeyframesrule">CSSKeyframesRule - CSS Animations Level 1</a>
+ * @see <a href="https://drafts.csswg.org/css-animations/#interface-csskeyframesrule">(CSS Animations 2) # interface-csskeyframesrule</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

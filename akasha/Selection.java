@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * A Selection object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or manipulation, call window.getSelection().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection - MDN</a>
- * @see <a href="https://w3c.github.io/selection-api/#selection-interface">Selection - Selection API</a>
+ * @see <a href="https://w3c.github.io/selection-api/#selection-interface"># selection-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

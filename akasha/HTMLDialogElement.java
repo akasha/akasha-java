@@ -11,8 +11,7 @@ import jsinterop.base.Js;
  * The HTMLDialogElement interface provides methods to manipulate &lt;dialog&gt; elements. It inherits properties and methods from the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement">HTMLDialogElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmldialogelement">HTMLDialogElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/interactive-elements.html#the-dialog-element">&lt;dialog&gt; - HTML 5.2</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldialogelement">(HTML) # htmldialogelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

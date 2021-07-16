@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_lose_context extension is part of the WebGL API and exposes functions to simulate losing and restoring a WebGLRenderingContext.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context">WEBGL_lose_context - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_lose_context/">WEBGL_lose_context - WEBGL_lose_context</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_lose_context/">(WebGL WEBGL_lose_context Khronos Ratified Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

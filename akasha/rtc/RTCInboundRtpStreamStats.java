@@ -13,7 +13,6 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats">RTCInboundRtpStreamStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#inboundrtpstats-dict*">RTCInboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -607,7 +606,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    * The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats">RTCInboundRtpStreamStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#inboundrtpstats-dict*">RTCInboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

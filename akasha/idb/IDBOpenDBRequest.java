@@ -14,8 +14,7 @@ import jsinterop.base.Js;
  * The IDBOpenDBRequest interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using IDBFactory.open and IDBFactory.deleteDatabase), using specific event handler attributes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest">IDBOpenDBRequest - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbopendbrequest">IDBOpenDBRequest - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbopendbrequest">IDBOpenDBRequest - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#idbopendbrequest">(Indexed DB 3.0) # idbopendbrequest</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

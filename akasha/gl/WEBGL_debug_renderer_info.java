@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_debug_renderer_info extension is part of the WebGL API and exposes two constants with information about the graphics driver for debugging purposes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info">WEBGL_debug_renderer_info - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_renderer_info/">WEBGL_debug_renderer_info - WEBGL_debug_renderer_info</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_renderer_info/">(WebGL WEBGL_debug_renderer_info Khronos Ratified Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

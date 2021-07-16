@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The EXT_blend_minmax extension is part of the WebGL API and extends blending capabilities by adding two new blend equations: the minimum or maximum color components of the source and destination colors.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_blend_minmax">EXT_blend_minmax - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_blend_minmax/">EXT_blend_minmax - EXT_blend_minmax</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_blend_minmax/">(WebGL EXT_blend_minmax Khronos Ratified Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

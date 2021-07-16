@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Location interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the Document and Window interface have such a linked Location, accessible via Document.location and Window.location respectively.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location">Location - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#the-location-interface">Location - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/history.html#the-location-interface">(HTML) # the-location-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

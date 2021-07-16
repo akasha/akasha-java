@@ -23,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStream"
 )
-public class ReadableStream extends JsObject implements Transferable {
+public class ReadableStream extends JsObject implements ImageBufferSource, Transferable {
   /**
    * The ReadableStream() constructor creates and returns a readable stream object from the given handlers.
    *

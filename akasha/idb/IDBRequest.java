@@ -21,8 +21,7 @@ import jsinterop.base.Js;
  * The IDBRequest interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest">IDBRequest - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbrequest">IDBRequest - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#request-api">IDBRequest - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#request-api">(Indexed DB 3.0) # request-api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

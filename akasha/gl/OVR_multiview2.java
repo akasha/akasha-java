@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The OVR_multiview2 extension is part of the WebGL API and adds support for rendering into multiple views simultaneously. This especially useful for virtual reality (VR) and WebXR.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OVR_multiview2">OVR_multiview2 - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/">OVR_multiview2</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/">(WebGL OVR_multiview2 Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

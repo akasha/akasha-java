@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The EXT_texture_norm16 extension is part of the WebGL API and provides a set of new 16-bit signed normalized and unsigned normalized formats (fixed-point texture, renderbuffer and texture buffer).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_norm16">EXT_texture_norm16 - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_texture_norm16/">EXT_texture_norm16 - EXT_texture_norm16</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_texture_norm16/">(WebGL EXT_texture_norm16 Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

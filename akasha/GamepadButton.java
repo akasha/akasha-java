@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton">GamepadButton - MDN</a>
- * @see <a href="https://w3c.github.io/gamepad/#gamepadbutton-interface">GamepadButton - Gamepad</a>
+ * @see <a href="https://w3c.github.io/gamepad/#gamepadbutton-interface"># gamepadbutton-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

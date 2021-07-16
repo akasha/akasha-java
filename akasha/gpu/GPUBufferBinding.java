@@ -17,7 +17,7 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUBufferBinding"
 )
 @ApiStatus.Experimental
-public interface GPUBufferBinding {
+public interface GPUBufferBinding extends GPUBindingResource {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUBuffer buffer) {

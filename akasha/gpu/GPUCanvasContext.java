@@ -1,6 +1,7 @@
 package akasha.gpu;
 
 import akasha.HTMLCanvasElementOrOffscreenCanvasUnion;
+import akasha.OffscreenRenderingContext;
 import akasha.RenderingContext;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
@@ -15,10 +16,10 @@ import org.jetbrains.annotations.ApiStatus;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GPUPresentationContext"
+    name = "GPUCanvasContext"
 )
-public class GPUPresentationContext extends JsObject implements RenderingContext {
-  protected GPUPresentationContext() {
+public class GPUCanvasContext extends JsObject implements OffscreenRenderingContext, RenderingContext {
+  protected GPUCanvasContext() {
   }
 
   @JsProperty(
@@ -27,7 +28,7 @@ public class GPUPresentationContext extends JsObject implements RenderingContext
   @Nonnull
   public native HTMLCanvasElementOrOffscreenCanvasUnion canvas();
 
-  public native void configure(@Nonnull GPUPresentationConfiguration configuration);
+  public native void configure(@Nonnull GPUCanvasConfiguration configuration);
 
   @Nonnull
   public native GPUTexture getCurrentTexture();

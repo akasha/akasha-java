@@ -10,9 +10,9 @@ import org.jetbrains.annotations.ApiStatus;
 @ApiStatus.Experimental
 @Documented
 @MagicConstant(
-    valuesFromClass = GPUInputStepMode.class
+    valuesFromClass = GPUVertexStepMode.class
 )
-public @interface GPUInputStepMode {
+public @interface GPUVertexStepMode {
   @Nonnull
   String instance = "instance";
 
@@ -23,7 +23,7 @@ public @interface GPUInputStepMode {
     private Util() {
     }
 
-    @GPUInputStepMode
+    @GPUVertexStepMode
     public static String requireValid(final String value) {
       assertValid( value );
       return value;
@@ -34,7 +34,7 @@ public @interface GPUInputStepMode {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUInputStepMode.instance.equals( value ) || GPUInputStepMode.vertex.equals( value );
+      return GPUVertexStepMode.instance.equals( value ) || GPUVertexStepMode.vertex.equals( value );
     }
   }
 }

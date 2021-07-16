@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The WakeLockSentinel interface of the Screen Wake Lock API provides a handle to the underlying platform wake lock and can be manually released and reacquired. An Object representing the wake lock is returned via the navigator.wakelock.request() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel">WakeLockSentinel - MDN</a>
- * @see <a href="https://w3c.github.io/screen-wake-lock/#the-wakelocksentinel-interface">WakeLockSentinel - Screen Wake Lock API</a>
+ * @see <a href="https://w3c.github.io/screen-wake-lock/#the-wakelocksentinel-interface"># the-wakelocksentinel-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

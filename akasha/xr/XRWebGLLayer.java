@@ -1,8 +1,6 @@
 package akasha.xr;
 
-import akasha.gl.WebGL2RenderingContext;
 import akasha.gl.WebGLFramebuffer;
-import akasha.gl.WebGLRenderingContext;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -40,47 +38,7 @@ public class XRWebGLLayer extends XRLayer {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer">XRWebGLLayer() - WebXR Device API</a>
    */
   public XRWebGLLayer(@Nonnull final XRSession session,
-      @Nonnull final WebGLRenderingContext context, @Nonnull final XRWebGLLayerInit layerInit) {
-  }
-
-  /**
-   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer">XRWebGLLayer() - WebXR Device API</a>
-   */
-  public XRWebGLLayer(@Nonnull final XRSession session,
-      @Nonnull final WebGL2RenderingContext context, @Nonnull final XRWebGLLayerInit layerInit) {
-  }
-
-  /**
-   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer">XRWebGLLayer() - WebXR Device API</a>
-   */
-  public XRWebGLLayer(@Nonnull final XRSession session,
       @Nonnull final XRWebGLRenderingContext context) {
-  }
-
-  /**
-   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer">XRWebGLLayer() - WebXR Device API</a>
-   */
-  public XRWebGLLayer(@Nonnull final XRSession session,
-      @Nonnull final WebGLRenderingContext context) {
-  }
-
-  /**
-   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">XRWebGLLayer.XRWebGLLayer - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer">XRWebGLLayer() - WebXR Device API</a>
-   */
-  public XRWebGLLayer(@Nonnull final XRSession session,
-      @Nonnull final WebGL2RenderingContext context) {
   }
 
   /**

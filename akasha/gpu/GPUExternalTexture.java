@@ -14,7 +14,7 @@ import org.jetbrains.annotations.ApiStatus;
     namespace = JsPackage.GLOBAL,
     name = "GPUExternalTexture"
 )
-public class GPUExternalTexture extends JsObject {
+public class GPUExternalTexture extends JsObject implements GPUBindingResource {
   @Nullable
   public String label;
 

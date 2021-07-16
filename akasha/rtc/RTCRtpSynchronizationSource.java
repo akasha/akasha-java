@@ -12,7 +12,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtpSynchronizationSource dictionary of the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource">RTCRtpSynchronizationSource - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource">RTCRtpSynchronizationSource - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource">(WebRTC 1.0) # dom-rtcrtpsynchronizationsource</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +31,7 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
    * The RTCRtpSynchronizationSource dictionary of the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource">RTCRtpSynchronizationSource - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource">RTCRtpSynchronizationSource - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource">(WebRTC 1.0) # dom-rtcrtpsynchronizationsource</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

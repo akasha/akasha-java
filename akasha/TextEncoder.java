@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * TextEncoder takes a stream of code points as input and emits a stream of UTF-8 bytes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder">TextEncoder - MDN</a>
- * @see <a href="https://encoding.spec.whatwg.org/#interface-textencoder">TextEncoder - Encoding</a>
+ * @see <a href="https://encoding.spec.whatwg.org/#interface-textencoder"># interface-textencoder</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

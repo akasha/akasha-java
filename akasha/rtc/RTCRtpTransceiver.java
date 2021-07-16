@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver">RTCRtpTransceiver - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtptransceiver-interface">RTCRtpTransceiver - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtptransceiver-interface">(WebRTC 1.0) # rtcrtptransceiver-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

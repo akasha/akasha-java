@@ -11,8 +11,7 @@ import jsinterop.base.Any;
  * The IDBCursorWithValue interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue">IDBCursorWithValue - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue">IDBCursorWithValue - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue">IDBCursorWithValue - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#ref-for-idbcursorwithvalue%E2%91%A1">(Indexed DB 3.0) # ref-for-idbcursorwithvalue②</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

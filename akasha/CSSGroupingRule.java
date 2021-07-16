@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSSGroupingRule interface of the CSS Object Model represents any CSS at-rule that contains other rules nested within it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule">CSSGroupingRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#cssgroupingrule">CSSGroupingRule - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssgroupingrule-interface">(CSSOM) # the-cssgroupingrule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

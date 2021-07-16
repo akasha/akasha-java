@@ -11,10 +11,7 @@ import jsinterop.annotations.JsType;
  * The Text interface represents the textual content of Element or Attr.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">Text - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#text">Text - DOM</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1312295772">Text - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1312295772">Text - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1312295772">Text - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-text">(DOM) # interface-text</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

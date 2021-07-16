@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming">PerformanceNavigationTiming - MDN</a>
- * @see <a href="https://w3c.github.io/navigation-timing/#sec-PerformanceNavigationTiming">PerformanceNavigationTiming - Navigation Timing Level 2</a>
+ * @see <a href="https://w3c.github.io/navigation-timing/#sec-PerformanceNavigationTiming">(Navigation Timing 2) # sec-PerformanceNavigationTiming</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

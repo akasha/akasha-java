@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSSStyleRule interface represents a single CSS style rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule">CSSStyleRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssstylerule-interface">CSSStyleRule - CSS Object Model (CSSOM)</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleRule">CSSRule - Document Object Model (DOM) Level 2 Style Specification</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssstylerule-interface">(CSSOM) # the-cssstylerule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

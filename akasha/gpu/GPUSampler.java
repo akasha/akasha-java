@@ -14,7 +14,7 @@ import org.jetbrains.annotations.ApiStatus;
     namespace = JsPackage.GLOBAL,
     name = "GPUSampler"
 )
-public class GPUSampler extends JsObject {
+public class GPUSampler extends JsObject implements GPUBindingResource {
   @Nullable
   public String label;
 

@@ -10,9 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTML &lt;meter&gt; elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of &lt;meter&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement">HTMLMeterElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlmeterelement">HTMLMeterElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/forms.html#the-meter-element">HTMLMeterElement - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-meter-element">HTMLMeterElement - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlmeterelement">(HTML) # htmlmeterelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -9,8 +9,7 @@ import jsinterop.annotations.JsType;
  * The DOM StaticRange interface extends AbstractRange to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange">StaticRange - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-staticrange">StaticRange - DOM</a>
- * @see <a href="https://w3c.github.io/staticrange/#interface-staticrange">StaticRange - Static Range</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-staticrange">(DOM) # interface-staticrange</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

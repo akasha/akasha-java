@@ -10,10 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating &lt;frameset&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement">HTMLFrameSetElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlframesetelement">HTMLFrameSetElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/obsolete.html#htmlframesetelement">HTMLFrameSetElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-43829095">HTMLBodyElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-43829095">HTMLBodyElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlframesetelement">(HTML) # htmlframesetelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -13,7 +13,6 @@ import jsinterop.base.JsPropertyMap;
  * The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats">RTCOutboundRtpStreamStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#outboundrtpstats-dict*">RTCOutboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -507,7 +506,6 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats">RTCOutboundRtpStreamStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#outboundrtpstats-dict*">RTCOutboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

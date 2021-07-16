@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The ImageBitmapRenderingContext interface is a canvas rendering context that provides the functionality to replace the canvas's contents with the given ImageBitmap. Its context id (the first argument to HTMLCanvasElement.getContext() or OffscreenCanvas.getContext()) is &quot;bitmaprenderer&quot;.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext">ImageBitmapRenderingContext - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#the-imagebitmaprenderingcontext-interface">ImageBitmapRenderingContext - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#the-imagebitmaprenderingcontext-interface">(HTML) # the-imagebitmaprenderingcontext-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmapRenderingContext"
 )
-public class ImageBitmapRenderingContext extends JsObject implements RenderingContext {
+public class ImageBitmapRenderingContext extends JsObject implements OffscreenRenderingContext, RenderingContext {
   protected ImageBitmapRenderingContext() {
   }
 

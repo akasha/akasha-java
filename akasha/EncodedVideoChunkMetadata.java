@@ -31,12 +31,12 @@ public interface EncodedVideoChunkMetadata {
   void setDecoderConfig(@Nonnull VideoDecoderConfig decoderConfig);
 
   @JsProperty(
-      name = "temporalLayerId"
+      name = "svc"
   )
-  int temporalLayerId();
+  SvcOutputMetadata svc();
 
   @JsProperty
-  void setTemporalLayerId(int temporalLayerId);
+  void setSvc(@Nonnull SvcOutputMetadata svc);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -54,8 +54,8 @@ public interface EncodedVideoChunkMetadata {
 
     @JsOverlay
     @Nonnull
-    default Builder temporalLayerId(final int temporalLayerId) {
-      setTemporalLayerId( temporalLayerId );
+    default Builder svc(@Nonnull final SvcOutputMetadata svc) {
+      setSvc( svc );
       return this;
     }
   }

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MutationObserver interface provides the ability to watch for changes being made to the DOM tree. It is designed as a replacement for the older Mutation Events feature, which was part of the DOM3 Events specification.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">MutationObserver - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-mutationobserver">MutationObserver - DOM</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-mutationobserver">(DOM) # interface-mutationobserver</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * A DeviceMotionEventAcceleration object provides information about the amount of acceleration the device is experiencing along all three axes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventAcceleration">DeviceMotionEventAcceleration - MDN</a>
- * @see <a href="https://w3c.github.io/deviceorientation/#devicemotioneventacceleration">DeviceMotionEventAcceleration - DeviceOrientation Event Specification</a>
+ * @see <a href="https://w3c.github.io/deviceorientation/#devicemotioneventacceleration">(DeviceOrientation Event) # devicemotioneventacceleration</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

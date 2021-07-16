@@ -9,6 +9,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * An XSLTProcessor applies an XSLT stylesheet transformation to an XML document to produce a new XML document as output. It has methods to load the XSLT stylesheet, to manipulate &lt;xsl:param&gt; parameter values, and to apply the transformation to documents.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor">XSLTProcessor - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

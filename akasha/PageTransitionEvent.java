@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The PageTransitionEvent event object is available inside handler functions for the pageshow and pagehide events, fired when a document is being loaded or unloaded.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#the-pagetransitionevent-interface">PageTransitionEvent - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-pagetransitionevent-interface">(HTML) # the-pagetransitionevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

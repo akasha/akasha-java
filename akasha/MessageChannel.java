@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MessageChannel interface of the Channel Messaging API allows us to create a new message channel and send data through it via its two MessagePort properties.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel">MessageChannel - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#message-channels">Message channels - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#message-channels">(HTML) # message-channels</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

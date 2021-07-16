@@ -13,7 +13,7 @@ import jsinterop.base.Any;
  * The CustomEvent interface represents events initialized by an application for any purpose.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">CustomEvent - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-customevent">CustomEvent - DOM</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-customevent">(DOM) # interface-customevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

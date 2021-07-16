@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSSFontFaceRule interface represents an @font-face at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFaceRule">CSSFontFaceRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-fonts-4/#om-fontface">CSSFontFaceRule - CSS Fonts Module Level 4</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSFontFaceRule">CSSFontFaceRule - Document Object Model (DOM) Level 2 Style Specification</a>
+ * @see <a href="https://drafts.csswg.org/css-fonts/#om-fontface">(CSS Fonts 5) # om-fontface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

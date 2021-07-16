@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSSNamespaceRule interface describes an object representing a single CSS @namespace at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSNamespaceRule">CSSNamespaceRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssnamespacerule-interface">CSSNamespaceRule - CSS Object Model (CSSOM)</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssnamespacerule-interface">(CSSOM) # the-cssnamespacerule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

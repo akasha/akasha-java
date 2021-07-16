@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit">RTCRtpTransceiverInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">RTCRtpTransceiverInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">(WebRTC 1.0) # dom-rtcrtptransceiverinit</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -69,7 +69,7 @@ public interface RTCRtpTransceiverInit {
    * The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit">RTCRtpTransceiverInit - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">RTCRtpTransceiverInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">(WebRTC 1.0) # dom-rtcrtptransceiverinit</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

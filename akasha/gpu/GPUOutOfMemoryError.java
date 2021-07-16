@@ -13,7 +13,7 @@ import org.jetbrains.annotations.ApiStatus;
     namespace = JsPackage.GLOBAL,
     name = "GPUOutOfMemoryError"
 )
-public class GPUOutOfMemoryError extends JsObject {
+public class GPUOutOfMemoryError extends JsObject implements GPUError {
   public GPUOutOfMemoryError() {
   }
 }

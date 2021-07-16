@@ -14,7 +14,7 @@ import jsinterop.base.Js;
  * The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort">MessagePort - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports">Message ports - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports">(HTML) # message-ports</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -22,7 +22,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "MessagePort"
 )
-public class MessagePort extends EventTarget implements Transferable {
+public class MessagePort extends EventTarget implements MessageEventSource, Transferable {
   /**
    * The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port &mdash; that is, when the port receives a message.
    *

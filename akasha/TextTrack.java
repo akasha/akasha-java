@@ -14,7 +14,7 @@ import jsinterop.base.Js;
  * The TextTrack interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes and controls the text track associated with a particular &lt;track&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack">TextTrack - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#texttrack">TextTrack - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#texttrack">(HTML) # texttrack</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

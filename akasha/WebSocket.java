@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#network">WebSocket - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface">(HTML) # the-websocket-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

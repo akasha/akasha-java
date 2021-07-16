@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The RTCDTMFSender interface provides a mechanism for transmitting DTMF codes on a WebRTC RTCPeerConnection. You gain access to the connection's RTCDTMFSender through the RTCRtpSender.dtmf property on the audio track you wish to send DTMF with.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender">RTCDTMFSender - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdtmfsender">RTCDTMFSender - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdtmfsender">(WebRTC 1.0) # rtcdtmfsender</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

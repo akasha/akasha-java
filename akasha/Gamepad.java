@@ -13,9 +13,8 @@ import jsinterop.annotations.JsType;
  * The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad">Gamepad - MDN</a>
- * @see <a href="https://w3c.github.io/gamepad/#gamepad-interface">Gamepad - Gamepad</a>
- * @see <a href="https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute">displayId - WebVR 1.1</a>
- * @see <a href="https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface">Gamepad extensions - Gamepad Extensions</a>
+ * @see <a href="https://w3c.github.io/gamepad/#gamepad-interface"># gamepad-interface</a>
+ * @see <a href="https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface"># partial-gamepad-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats">RTCIceCandidateStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#icecandidate-dict*">RTCIceCandidateStats - Identifiers for WebRTC's Statistics API</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#icecandidate-dict*">(WebRTC Statistics) # icecandidate-dict*</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -227,7 +227,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats">RTCIceCandidateStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#icecandidate-dict*">RTCIceCandidateStats - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#icecandidate-dict*">(WebRTC Statistics) # icecandidate-dict*</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

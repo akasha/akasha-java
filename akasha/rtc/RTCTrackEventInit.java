@@ -17,7 +17,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit">RTCTrackEventInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">RTCTrackEventInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">(WebRTC 1.0) # dom-rtctrackeventinit</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -119,7 +119,7 @@ public interface RTCTrackEventInit extends EventInit {
    * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit">RTCTrackEventInit - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">RTCTrackEventInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">(WebRTC 1.0) # dom-rtctrackeventinit</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

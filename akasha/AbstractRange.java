@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The AbstractRange abstract interface is the base class upon which all DOM range types are defined. A range is an object that indicates the start and end points of a section of content within the document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange">AbstractRange - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-abstractrange">(DOM) # interface-abstractrange</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

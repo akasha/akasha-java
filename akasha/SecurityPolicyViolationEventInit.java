@@ -19,26 +19,27 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder create(@SecurityPolicyViolationEventDisposition @Nonnull final String disposition,
-      @Nonnull final String documentURL, @Nonnull final String effectiveDirective,
-      @Nonnull final String originalPolicy, final int statusCode) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).disposition( disposition ).documentURL( documentURL ).effectiveDirective( effectiveDirective ).originalPolicy( originalPolicy ).statusCode( statusCode );
+      @Nonnull final String documentURI, @Nonnull final String effectiveDirective,
+      @Nonnull final String originalPolicy, final int statusCode,
+      @Nonnull final String violatedDirective) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).disposition( disposition ).documentURI( documentURI ).effectiveDirective( effectiveDirective ).originalPolicy( originalPolicy ).statusCode( statusCode ).violatedDirective( violatedDirective );
   }
 
   @JsProperty(
-      name = "blockedURL"
+      name = "blockedURI"
   )
-  String blockedURL();
+  String blockedURI();
 
   @JsProperty
-  void setBlockedURL(@Nonnull String blockedURL);
+  void setBlockedURI(@Nonnull String blockedURI);
 
   @JsProperty(
-      name = "colno"
+      name = "columnNumber"
   )
-  int colno();
+  int columnNumber();
 
   @JsProperty
-  void setColno(int colno);
+  void setColumnNumber(int columnNumber);
 
   @JsProperty(
       name = "disposition"
@@ -51,13 +52,13 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   void setDisposition(@SecurityPolicyViolationEventDisposition @Nonnull String disposition);
 
   @JsProperty(
-      name = "documentURL"
+      name = "documentURI"
   )
   @Nonnull
-  String documentURL();
+  String documentURI();
 
   @JsProperty
-  void setDocumentURL(@Nonnull String documentURL);
+  void setDocumentURI(@Nonnull String documentURI);
 
   @JsProperty(
       name = "effectiveDirective"
@@ -69,12 +70,12 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   void setEffectiveDirective(@Nonnull String effectiveDirective);
 
   @JsProperty(
-      name = "lineno"
+      name = "lineNumber"
   )
-  int lineno();
+  int lineNumber();
 
   @JsProperty
-  void setLineno(int lineno);
+  void setLineNumber(int lineNumber);
 
   @JsProperty(
       name = "originalPolicy"
@@ -117,6 +118,15 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsProperty
   void setStatusCode(int statusCode);
 
+  @JsProperty(
+      name = "violatedDirective"
+  )
+  @Nonnull
+  String violatedDirective();
+
+  @JsProperty
+  void setViolatedDirective(@Nonnull String violatedDirective);
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -126,15 +136,15 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   interface Builder extends SecurityPolicyViolationEventInit {
     @JsOverlay
     @Nonnull
-    default Builder blockedURL(@Nonnull final String blockedURL) {
-      setBlockedURL( blockedURL );
+    default Builder blockedURI(@Nonnull final String blockedURI) {
+      setBlockedURI( blockedURI );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder colno(final int colno) {
-      setColno( colno );
+    default Builder columnNumber(final int columnNumber) {
+      setColumnNumber( columnNumber );
       return this;
     }
 
@@ -148,8 +158,8 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
 
     @JsOverlay
     @Nonnull
-    default Builder documentURL(@Nonnull final String documentURL) {
-      setDocumentURL( documentURL );
+    default Builder documentURI(@Nonnull final String documentURI) {
+      setDocumentURI( documentURI );
       return this;
     }
 
@@ -162,8 +172,8 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
 
     @JsOverlay
     @Nonnull
-    default Builder lineno(final int lineno) {
-      setLineno( lineno );
+    default Builder lineNumber(final int lineNumber) {
+      setLineNumber( lineNumber );
       return this;
     }
 
@@ -199,6 +209,13 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
     @Nonnull
     default Builder statusCode(final int statusCode) {
       setStatusCode( statusCode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder violatedDirective(@Nonnull final String violatedDirective) {
+      setViolatedDirective( violatedDirective );
       return this;
     }
 

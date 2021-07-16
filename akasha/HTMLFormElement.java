@@ -15,8 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The HTMLFormElement interface represents a &lt;form&gt; element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlformelement">HTMLFormElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/sec-forms.html#htmlformelement">HTMLFormElement - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">(HTML) # htmlformelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -24,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "HTMLFormElement"
 )
-public class HTMLFormElement extends HTMLElement {
+public class HTMLFormElement extends HTMLElement implements PasswordCredentialInit {
   /**
    * The HTMLFormElement.acceptCharset property represents a list of the supported character encodings for the given form element. This list can be comma-separated or space-separated.
    *

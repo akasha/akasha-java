@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "PasswordCredentialData"
 )
-public interface PasswordCredentialData extends CredentialData {
+public interface PasswordCredentialData extends CredentialData, PasswordCredentialInit {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String id, @Nonnull final String origin,

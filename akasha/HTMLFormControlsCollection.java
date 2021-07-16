@@ -13,8 +13,7 @@ import jsinterop.annotations.JsType;
  * The HTMLFormControlsCollection interface represents a collection of HTML form control elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection">HTMLFormControlsCollection - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlformcontrolscollection">(HTML) # htmlformcontrolscollection</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

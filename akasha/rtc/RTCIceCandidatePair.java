@@ -13,7 +13,6 @@ import jsinterop.base.JsPropertyMap;
  * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair">RTCIceCandidatePair - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidatepair">RTCIceCandidatePair - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -72,7 +71,6 @@ public interface RTCIceCandidatePair {
    * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair">RTCIceCandidatePair - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidatepair">RTCIceCandidatePair - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

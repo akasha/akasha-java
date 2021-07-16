@@ -11,11 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLStyleElement interface represents a &lt;style&gt; element. It inherits properties and methods from its parent, HTMLElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement">HTMLStyleElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlstyleelement">HTMLStyleElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/document-metadata.html#the-style-element">HTMLStyleElement - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/document-metadata.html#the-style-element">HTMLStyleElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-16428977">HTMLStyleElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-16428977">HTMLStyleElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmlstyleelement">(HTML) # htmlstyleelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

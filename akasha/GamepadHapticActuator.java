@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">GamepadHapticActuator - MDN</a>
- * @see <a href="https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuator-interface">GamepadHapticActuator - Gamepad Extensions</a>
+ * @see <a href="https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuator-interface"># gamepadhapticactuator-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

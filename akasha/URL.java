@@ -12,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL">URL - MDN</a>
- * @see <a href="https://w3c.github.io/FileAPI/#creating-revoking">URL - File API</a>
- * @see <a href="https://url.spec.whatwg.org/#api">API - URL</a>
+ * @see <a href="https://url.spec.whatwg.org/#api">(URL) # api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

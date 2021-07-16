@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to &lt;a&gt; element; not to be confused with &lt;link&gt;, which is represented by HTMLLinkElement)
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement">HTMLAnchorElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlanchorelement">HTMLAnchorElement - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement">(HTML) # htmlanchorelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

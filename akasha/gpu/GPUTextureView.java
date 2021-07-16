@@ -14,7 +14,7 @@ import org.jetbrains.annotations.ApiStatus;
     namespace = JsPackage.GLOBAL,
     name = "GPUTextureView"
 )
-public class GPUTextureView extends JsObject {
+public class GPUTextureView extends JsObject implements GPUBindingResource {
   @Nullable
   public String label;
 

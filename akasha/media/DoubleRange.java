@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The DoubleRange dictionary is used to define a range of permitted double-precision floating-point values for a property, with either or both a maximum and minimum value specified. The ConstrainDouble dictionary is based on this, augmenting it to support exact and ideal values as well.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DoubleRange">DoubleRange - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-doublerange">DoubleRange - Media Capture and Streams</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#dom-doublerange"># dom-doublerange</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -48,7 +48,7 @@ public interface DoubleRange {
    * The DoubleRange dictionary is used to define a range of permitted double-precision floating-point values for a property, with either or both a maximum and minimum value specified. The ConstrainDouble dictionary is based on this, augmenting it to support exact and ideal values as well.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DoubleRange">DoubleRange - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-doublerange">DoubleRange - Media Capture and Streams</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-doublerange"># dom-doublerange</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

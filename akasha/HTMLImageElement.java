@@ -13,11 +13,7 @@ import jsinterop.annotations.JsType;
  * The HTMLImageElement interface represents an HTML &lt;img&gt; element, providing the properties and methods used to manipulate image elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement">HTMLImageElement - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-htmlimageelement-interface">Extensions to HTMLImageElement - CSS Object Model (CSSOM) View Module</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlimageelement">HTMLImageElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#the-img-element">HTMLImageElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-17701901">HTMLImgElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-17701901">HTMLImgElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement">(HTML) # htmlimageelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "HTMLImageElement"
 )
-public class HTMLImageElement extends HTMLElement implements TexImageSource {
+public class HTMLImageElement extends HTMLElement implements TexImageSource, HTMLOrSVGImageElement {
   @Nonnull
   public String align;
 

@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStreamDefaultReader"
 )
-public class ReadableStreamDefaultReader extends JsObject {
+public class ReadableStreamDefaultReader extends JsObject implements ReadableStreamReader {
   public ReadableStreamDefaultReader(@Nonnull final ReadableStream stream) {
   }
 

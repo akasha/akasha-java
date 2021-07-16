@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The PushSubscription interface of the Push API provides a subcription's URL endpoint and allows unsubscription from a push service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription">PushSubscription - MDN</a>
- * @see <a href="https://w3c.github.io/push-api/#pushsubscription-interface">PushSubscription - Push API</a>
+ * @see <a href="https://w3c.github.io/push-api/#pushsubscription-interface"># pushsubscription-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

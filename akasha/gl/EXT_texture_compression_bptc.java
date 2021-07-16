@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The EXT_texture_compression_bptc extension is part of the WebGL API and exposes 4 BPTC compressed texture formats. These compression formats are called BC7 and BC6H in Microsoft's DirectX API.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_compression_bptc">EXT_texture_compression_bptc - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_bptc/">EXT_texture_compression_bptc</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_bptc/">(WebGL EXT_texture_compression_bptc Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

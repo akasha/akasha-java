@@ -7,6 +7,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The GeolocationCoordinates interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates">GeolocationCoordinates - MDN</a>
+ * @see <a href="https://w3c.github.io/geolocation-api/#coordinates_interface"># coordinates_interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

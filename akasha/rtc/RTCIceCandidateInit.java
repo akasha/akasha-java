@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">RTCIceCandidateInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">(WebRTC 1.0) # dom-rtcicecandidateinit</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -114,7 +114,7 @@ public interface RTCIceCandidateInit {
    * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">RTCIceCandidateInit - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">(WebRTC 1.0) # dom-rtcicecandidateinit</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

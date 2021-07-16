@@ -20,8 +20,7 @@ import jsinterop.base.Js;
  * The IDBTransaction interface of the IndexedDB API provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use IDBDatabase to start transactions, IDBTransaction to set the mode of the transaction (e.g. is it readonly or readwrite), and you access an IDBObjectStore to make a request. You can also use an IDBTransaction object to abort transactions.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction">IDBTransaction - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#transaction">IDBTransaction - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#transaction">IDBTransaction - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#transaction">(Indexed DB 3.0) # transaction</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

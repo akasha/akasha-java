@@ -15,7 +15,7 @@ import jsinterop.base.Js;
  * The ServiceWorkerContainer interface of the Service Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer">ServiceWorkerContainer - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkercontainer">ServiceWorkerContainer - Service Workers</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkercontainer-interface"># serviceworkercontainer-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The ImageBitmap interface represents a bitmap image which can be drawn to a &lt;canvas&gt; without undue latency. It can be created from a variety of source objects using the createImageBitmap() factory method. ImageBitmap provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap">ImageBitmap - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#imagebitmap">ImageBitmap - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmap">(HTML) # imagebitmap</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmap"
 )
-public class ImageBitmap extends JsObject implements TexImageSource, Transferable {
+public class ImageBitmap extends JsObject implements TexImageSource, CanvasImageSource, Transferable {
   protected ImageBitmap() {
   }
 

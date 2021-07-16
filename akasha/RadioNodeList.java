@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The RadioNodeList interface represents a collection of radio elements in a &lt;form&gt; or a &lt;fieldset&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RadioNodeList">RadioNodeList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#radionodelist">RadioNodeList - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#radionodelist">(HTML) # radionodelist</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

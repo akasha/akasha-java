@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
  * The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#the-navigator-object">the Navigator object - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object">(HTML) # the-navigator-object</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -221,6 +221,11 @@ public class Navigator extends JsObject {
   )
   @Nonnull
   public native String oscpu();
+
+  @JsProperty(
+      name = "pdfViewerEnabled"
+  )
+  public native boolean pdfViewerEnabled();
 
   /**
    * The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API.

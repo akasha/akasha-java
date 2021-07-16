@@ -12,7 +12,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCAnswerOptions dictionary is used to provide optional settings when creating an SDP answer using RTCPeerConnection.createOffer() after receiving an offer from a remote peer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAnswerOptions">RTCAnswerOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcansweroptions">RTCAnswerOptions - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcansweroptions">(WebRTC 1.0) # dom-rtcansweroptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +31,7 @@ public interface RTCAnswerOptions extends RTCOfferAnswerOptions {
    * The RTCAnswerOptions dictionary is used to provide optional settings when creating an SDP answer using RTCPeerConnection.createOffer() after receiving an offer from a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAnswerOptions">RTCAnswerOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcansweroptions">RTCAnswerOptions - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcansweroptions">(WebRTC 1.0) # dom-rtcansweroptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

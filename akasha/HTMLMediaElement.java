@@ -16,9 +16,7 @@ import jsinterop.base.Js;
  * The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#introduction">Encrypted Media Extensions - Encrypted Media Extensions</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/the-video-element.html#htmlmediaelement">HTMLMediaElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">HTMLMediaElement - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#htmlmediaelement">(HTML) # htmlmediaelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -9,8 +9,7 @@ import jsinterop.annotations.JsType;
  * The EventListener interface represents an object that can handle an event dispatched by an EventTarget object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener">EventListener - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#callbackdef-eventlistener">EventListener - DOM</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener">EventListener - Document Object Model (DOM) Level 2 Events Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#callbackdef-eventlistener">(DOM) # callbackdef-eventlistener</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

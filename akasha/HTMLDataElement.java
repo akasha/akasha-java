@@ -9,8 +9,7 @@ import jsinterop.annotations.JsType;
  * The HTMLDataElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;data&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataElement">HTMLDataElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmldataelement">HTMLDataElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/text-level-semantics.html#the-data-element">HTMLDataElement - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmldataelement">(HTML) # htmldataelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

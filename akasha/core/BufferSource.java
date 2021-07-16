@@ -1,5 +1,6 @@
 package akasha.core;
 
+import akasha.ImageBufferSource;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -10,5 +11,5 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface BufferSource {
+public interface BufferSource extends ImageBufferSource {
 }

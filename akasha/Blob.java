@@ -23,7 +23,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Blob"
 )
-public class Blob extends JsObject implements MediaProvider {
+public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
   /**
    * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
    *

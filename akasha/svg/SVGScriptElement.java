@@ -1,5 +1,6 @@
 package akasha.svg;
 
+import akasha.HTMLOrSVGScriptElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SVGScriptElement"
 )
-public class SVGScriptElement extends SVGElement {
+public class SVGScriptElement extends SVGElement implements HTMLOrSVGScriptElement {
   @Nullable
   public String crossOrigin;
 

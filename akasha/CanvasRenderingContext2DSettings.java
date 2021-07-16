@@ -72,6 +72,14 @@ public interface CanvasRenderingContext2DSettings {
   @JsProperty
   void setDesynchronized(boolean desynchronized);
 
+  @JsProperty(
+      name = "willReadFrequently"
+  )
+  boolean willReadFrequently();
+
+  @JsProperty
+  void setWillReadFrequently(boolean willReadFrequently);
+
   /**
    * Attributes that control the characteristics of the {@link akasha.gl.WebGLRenderingContext} created. This should only be supplied when creating a {@link akasha.gl.WebGLRenderingContext} context.
    *
@@ -112,6 +120,13 @@ public interface CanvasRenderingContext2DSettings {
     @Nonnull
     default Builder desynchronized(final boolean desynchronized) {
       setDesynchronized( desynchronized );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder willReadFrequently(final boolean willReadFrequently) {
+      setWillReadFrequently( willReadFrequently );
       return this;
     }
   }

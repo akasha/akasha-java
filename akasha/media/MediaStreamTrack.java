@@ -20,8 +20,7 @@ import jsinterop.base.Js;
  * The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack">MediaStreamTrack - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-identity/#isolated-track">Isolated tracks - Identity for WebRTC</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#mediastreamtrack">MediaStreamTrack - Media Capture and Streams</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#mediastreamtrack"># mediastreamtrack</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

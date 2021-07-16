@@ -25,18 +25,6 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUOutOfMemoryError error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUValidationError error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
-  }
-
   @JsProperty(
       name = "error"
   )
@@ -45,16 +33,6 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
 
   @JsProperty
   void setError(@Nonnull GPUError error);
-
-  @JsOverlay
-  default void setError(@Nonnull final GPUOutOfMemoryError error) {
-    setError( GPUError.of( error ) );
-  }
-
-  @JsOverlay
-  default void setError(@Nonnull final GPUValidationError error) {
-    setError( GPUError.of( error ) );
-  }
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -67,20 +45,6 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
     @JsOverlay
     @Nonnull
     default Builder error(@Nonnull final GPUError error) {
-      setError( error );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final GPUOutOfMemoryError error) {
-      setError( error );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final GPUValidationError error) {
       setError( error );
       return this;
     }

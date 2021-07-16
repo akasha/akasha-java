@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">IntersectionObserver - MDN</a>
- * @see <a href="https://w3c.github.io/IntersectionObserver/#intersection-observer-interface">IntersectionObserver - Intersection Observer</a>
+ * @see <a href="https://w3c.github.io/IntersectionObserver/#intersection-observer-interface"># intersection-observer-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The OES_vertex_array_object extension is part of the WebGL API and provides vertex array objects (VAOs) which encapsulate vertex array states. These objects keep pointers to vertex data and provide names for different sets of vertex data.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object">OES_vertex_array_object - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/">OES_vertex_array_object - OES_vertex_array_object</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/">(WebGL OES_vertex_array_object Khronos Ratified Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The EXT_color_buffer_float extension is part of WebGL and adds the ability to render a variety of floating point formats.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_color_buffer_float">EXT_color_buffer_float - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_float/">EXT_color_buffer_float - EXT_color_buffer_float</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_float/">(WebGL EXT_color_buffer_float Extension)</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

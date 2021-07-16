@@ -14,9 +14,6 @@ import org.jetbrains.annotations.ApiStatus;
 )
 public @interface GPUStorageTextureAccess {
   @Nonnull
-  String read_only = "read-only";
-
-  @Nonnull
   String write_only = "write-only";
 
   final class Util {
@@ -34,7 +31,7 @@ public @interface GPUStorageTextureAccess {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUStorageTextureAccess.read_only.equals( value ) || GPUStorageTextureAccess.write_only.equals( value );
+      return GPUStorageTextureAccess.write_only.equals( value );
     }
   }
 }

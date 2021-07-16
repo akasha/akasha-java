@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableStreamDefaultController"
 )
-public class ReadableStreamDefaultController extends JsObject {
+public class ReadableStreamDefaultController extends JsObject implements ReadableStreamController {
   protected ReadableStreamDefaultController() {
   }
 

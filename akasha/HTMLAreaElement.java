@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;area&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement">HTMLAreaElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlareaelement">HTMLAreaElement - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/image-maps.html#htmlareaelement">(HTML) # htmlareaelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

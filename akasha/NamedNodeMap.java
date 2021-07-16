@@ -13,10 +13,7 @@ import jsinterop.annotations.JsType;
  * The NamedNodeMap interface represents a collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap">NamedNodeMap - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-namednodemap">NamedNodeMap - DOM</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1780488922">NamedNodeMap - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922">NamedNodeMap - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/core.html#ID-1780488922">NamedNodeMap - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-namednodemap">(DOM) # interface-namednodemap</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

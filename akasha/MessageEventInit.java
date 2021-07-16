@@ -73,21 +73,6 @@ public interface MessageEventInit extends EventInit {
   @JsProperty
   void setSource(@Nullable MessageEventSource source);
 
-  @JsOverlay
-  default void setSource(@Nonnull final Window source) {
-    setSource( MessageEventSource.of( source ) );
-  }
-
-  @JsOverlay
-  default void setSource(@Nonnull final MessagePort source) {
-    setSource( MessageEventSource.of( source ) );
-  }
-
-  @JsOverlay
-  default void setSource(@Nonnull final ServiceWorker source) {
-    setSource( MessageEventSource.of( source ) );
-  }
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -133,27 +118,6 @@ public interface MessageEventInit extends EventInit {
     @JsOverlay
     @Nonnull
     default Builder source(@Nullable final MessageEventSource source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final Window source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final MessagePort source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final ServiceWorker source) {
       setSource( source );
       return this;
     }

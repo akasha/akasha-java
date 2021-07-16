@@ -23,6 +23,9 @@ public @interface OffscreenRenderingContextId {
   @Nonnull
   String webgl2 = "webgl2";
 
+  @Nonnull
+  String webgpu = "webgpu";
+
   final class Util {
     private Util() {
     }
@@ -38,7 +41,7 @@ public @interface OffscreenRenderingContextId {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return OffscreenRenderingContextId._2d.equals( value ) || OffscreenRenderingContextId.bitmaprenderer.equals( value ) || OffscreenRenderingContextId.webgl.equals( value ) || OffscreenRenderingContextId.webgl2.equals( value );
+      return OffscreenRenderingContextId._2d.equals( value ) || OffscreenRenderingContextId.bitmaprenderer.equals( value ) || OffscreenRenderingContextId.webgl.equals( value ) || OffscreenRenderingContextId.webgl2.equals( value ) || OffscreenRenderingContextId.webgpu.equals( value );
     }
   }
 }

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver">PerformanceObserver - MDN</a>
- * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver">PerformanceObserver - Performance Timeline Level 2</a>
+ * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver">(Performance Timeline 2) # dom-performanceobserver</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

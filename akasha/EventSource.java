@@ -13,7 +13,7 @@ import jsinterop.base.Js;
  * The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface">EventSource - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface">(HTML) # the-eventsource-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

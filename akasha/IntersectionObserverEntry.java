@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The IntersectionObserverEntry interface of the Intersection Observer API describes the intersection between the target element and its root container at a specific moment of transition.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry">IntersectionObserverEntry - MDN</a>
- * @see <a href="https://w3c.github.io/IntersectionObserver/#intersection-observer-entry">IntersectionObserverEntry - Intersection Observer</a>
+ * @see <a href="https://w3c.github.io/IntersectionObserver/#intersection-observer-entry"># intersection-observer-entry</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

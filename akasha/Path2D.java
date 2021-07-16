@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.core.JsObject;
+import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -10,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Path2D interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D">Path2D - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#path2d-objects">Path2D - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#path2d-objects">(HTML) # path2d-objects</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -84,4 +85,10 @@ public class Path2D extends JsObject {
   public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
 
   public native void rect(double x, double y, double w, double h);
+
+  public native void roundRect(double x, double y, double w, double h,
+      @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);
+
+  public native void roundRect(double x, double y, double w, double h,
+      @Nonnull UnrestrictedDoubleOrDOMPointInitUnion[] radii);
 }

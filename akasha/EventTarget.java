@@ -11,9 +11,7 @@ import jsinterop.annotations.JsType;
  * EventTarget is a DOM interface implemented by objects that can receive events and may have listeners for them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-eventtarget">EventTarget - DOM</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/DOM3-Events.html#interface-EventTarget">EventTarget - Document Object Model (DOM) Level 3 Events Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.htmlevents.html#Events-EventTarget">EventTarget - Document Object Model (DOM) Level 2 Events Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-eventtarget">(DOM) # interface-eventtarget</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

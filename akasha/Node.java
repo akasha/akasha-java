@@ -10,14 +10,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably.
+ * The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably. As an abstract class, there is no such thing as a plain Node object. All objects that implement Node functionality are based on one of its subclasses. Most notable are Document, Element, and DocumentFragment.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node">Node - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-node">Node - DOM</a>
- * @see <a href="https://www.w3.org/TR/dom/#interface-node">Node - DOM4</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247">Node - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247">Node - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247">Node - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-node">(DOM) # interface-node</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

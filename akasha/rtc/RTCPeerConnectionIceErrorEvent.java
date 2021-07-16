@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The RTCPeerConnectionIceErrorEvent interface&mdash;based upon the Event interface&mdash;provides details pertaining to an ICE error announced by sending an icecandidateerror event to the RTCPeerConnection object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent">RTCPeerConnectionIceErrorEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceerrorevent">RTCPeerConnectionIceErrorEvent - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceerrorevent">(WebRTC 1.0) # rtcpeerconnectioniceerrorevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

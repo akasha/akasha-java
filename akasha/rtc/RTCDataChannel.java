@@ -24,7 +24,7 @@ import jsinterop.base.Js;
  * The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">RTCDataChannel - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdatachannel">RTCDataChannel - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdatachannel">(WebRTC 1.0) # rtcdatachannel</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

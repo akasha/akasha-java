@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The ScreenOrientation interface of the Screen Orientation API provides information about the current orientation of the document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation">ScreenOrientation - MDN</a>
- * @see <a href="https://w3c.github.io/screen-orientation/#screenorientation-interface">ScreenOrientation - Screen Orientation API</a>
+ * @see <a href="https://w3c.github.io/screen-orientation/#screenorientation-interface"># screenorientation-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

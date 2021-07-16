@@ -5,7 +5,6 @@ import akasha.core.JsObject;
 import akasha.gl.TexImageSource;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
-import akasha.svg.SVGImageElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -24,50 +23,7 @@ public class VideoFrame extends JsObject implements TexImageSource {
   public VideoFrame(@Nonnull final CanvasImageSource image, @Nonnull final VideoFrameInit init) {
   }
 
-  public VideoFrame(@Nonnull final HTMLOrSVGImageElement image,
-      @Nonnull final VideoFrameInit init) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLImageElement image, @Nonnull final VideoFrameInit init) {
-  }
-
-  public VideoFrame(@Nonnull final SVGImageElement image, @Nonnull final VideoFrameInit init) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLVideoElement image, @Nonnull final VideoFrameInit init) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLCanvasElement image, @Nonnull final VideoFrameInit init) {
-  }
-
-  public VideoFrame(@Nonnull final ImageBitmap image, @Nonnull final VideoFrameInit init) {
-  }
-
-  public VideoFrame(@Nonnull final OffscreenCanvas image, @Nonnull final VideoFrameInit init) {
-  }
-
   public VideoFrame(@Nonnull final CanvasImageSource image) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLOrSVGImageElement image) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLImageElement image) {
-  }
-
-  public VideoFrame(@Nonnull final SVGImageElement image) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLVideoElement image) {
-  }
-
-  public VideoFrame(@Nonnull final HTMLCanvasElement image) {
-  }
-
-  public VideoFrame(@Nonnull final ImageBitmap image) {
-  }
-
-  public VideoFrame(@Nonnull final OffscreenCanvas image) {
   }
 
   public VideoFrame(@Nonnull final JsArray<PlaneInit> planes,

@@ -15,10 +15,7 @@ import jsinterop.base.JsArrayLike;
  * The HTMLSelectElement interface represents a &lt;select&gt; HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlselectelement">HTMLSelectElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#htmlselectelement">HTMLSelectElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-94282980">HTMLSelectElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-94282980">HTMLSelectElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlselectelement">(HTML) # htmlselectelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -277,7 +274,7 @@ public class HTMLSelectElement extends HTMLElement {
    */
   @HasNoSideEffects
   @Nullable
-  public native Element item(int index);
+  public native HTMLOptionElement item(int index);
 
   @JsOverlay
   public final void setAt(final int index, @Nullable final HTMLOptionElement option) {

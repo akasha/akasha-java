@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The MediaQueryListEvent object stores information on the changes that have happened to a MediaQueryList object &mdash; instances are available as the event object on a function referenced by a MediaQueryList.onchange property or MediaQueryList.addListener() call.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent">MediaQueryListEvent - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#mediaquerylistevent">MediaQueryListEvent - CSS Object Model (CSSOM) View Module</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface">(CSSOM View) # the-mediaquerylist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

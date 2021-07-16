@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,6 +33,12 @@ public class GPUSupportedLimits extends JsObject {
       name = "maxComputeWorkgroupInvocations"
   )
   public native int maxComputeWorkgroupInvocations();
+
+  @JsProperty(
+      name = "maxComputeWorkgroupSize"
+  )
+  @Nonnull
+  public native GPUExtent3D maxComputeWorkgroupSize();
 
   @JsProperty(
       name = "maxComputeWorkgroupStorageSize"

@@ -16,10 +16,8 @@ import jsinterop.annotations.JsType;
  * The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration">ServiceWorkerRegistration - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkerregistration">ServiceWorkerRegistration - Service Workers</a>
- * @see <a href="https://w3c.github.io/push-api/#dom-serviceworkerregistration-pushmanager">PushManager - Push API</a>
- * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
- * @see <a href="https://wicg.github.io/background-sync/spec/">Web Background Synchronization</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworkerregistration-interface"># serviceworkerregistration-interface</a>
+ * @see <a href="https://w3c.github.io/push-api/#extensions-to-the-serviceworkerregistration-interface"># extensions-to-the-serviceworkerregistration-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -9,11 +9,7 @@ import jsinterop.annotations.JsType;
  * The HTMLHtmlElement interface serves as the root node for a given HTML document. This object inherits the properties and methods described in the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHtmlElement">HTMLHtmlElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmlhtmlelement">HTMLHtmlElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/semantics.html#the-html-element">HTMLHtmlElement - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/semantics.html#the-html-element">HTMLHtmlElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33759296">HTMLHtmlElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33759296">HTMLHtmlElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmlhtmlelement">(HTML) # htmlhtmlelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

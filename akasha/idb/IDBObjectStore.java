@@ -16,8 +16,7 @@ import jsinterop.base.Any;
  * The IDBObjectStore interface of the IndexedDB API represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore">IDBObjectStore - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbobjectstore">IDBObjectStore - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#object-store-interface">IDBObjectStore - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#object-store-interface">(Indexed DB 3.0) # object-store-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

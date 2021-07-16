@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection">HTMLCollection - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#htmlcollection">HTMLCollection - DOM</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-htmlcollection">(DOM) # interface-htmlcollection</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

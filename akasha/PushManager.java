@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The PushManager interface of the Push API provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager">PushManager - MDN</a>
- * @see <a href="https://w3c.github.io/push-api/#pushmanager-interface">PushManager - Push API</a>
+ * @see <a href="https://w3c.github.io/push-api/#pushmanager-interface"># pushmanager-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

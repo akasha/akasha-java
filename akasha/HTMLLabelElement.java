@@ -11,10 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLLabelElement interface gives access to properties specific to &lt;label&gt; elements. It inherits methods and properties from the base HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement">HTMLLabelElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#htmllabelelement">HTMLLabelElement - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#the-label-element">HTMLLabelElement - HTML5</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-13691394">HTMLLabelElement - Document Object Model (DOM) Level 2 HTML Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-13691394">HTMLLabelElement - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#htmllabelelement">(HTML) # htmllabelelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

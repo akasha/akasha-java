@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker">ServiceWorker - MDN</a>
- * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworker">ServiceWorker - Service Workers</a>
+ * @see <a href="https://w3c.github.io/ServiceWorker/#serviceworker-interface"># serviceworker-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ServiceWorker"
 )
-public class ServiceWorker extends EventTarget {
+public class ServiceWorker extends EventTarget implements MessageEventSource {
   /**
    * The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.
    *

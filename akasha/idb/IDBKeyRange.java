@@ -14,8 +14,7 @@ import jsinterop.base.Any;
  * The IDBKeyRange interface of the IndexedDB API represents a continuous interval over some data type that is used for keys. Records can be retrieved from IDBObjectStore and IDBIndex objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A&ndash;Z.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange">IDBKeyRange - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbkeyrange">IDBKeyRange - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#keyrange">IDBKeyRange - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#keyrange">(Indexed DB 3.0) # keyrange</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

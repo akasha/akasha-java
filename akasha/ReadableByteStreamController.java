@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ReadableByteStreamController"
 )
-public class ReadableByteStreamController extends JsObject {
+public class ReadableByteStreamController extends JsObject implements ReadableStreamController {
   protected ReadableByteStreamController() {
   }
 

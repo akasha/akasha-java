@@ -2,7 +2,6 @@ package akasha;
 
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
-import akasha.svg.SVGImageElement;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "OffscreenCanvasRenderingContext2D"
 )
-public class OffscreenCanvasRenderingContext2D extends JsObject {
+public class OffscreenCanvasRenderingContext2D extends JsObject implements OffscreenRenderingContext {
   @Nonnull
   @CanvasDirection
   public String direction;
@@ -164,33 +163,6 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
   public native CanvasPattern createPattern(@Nonnull CanvasImageSource image,
       @Nonnull String repetition);
 
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLOrSVGImageElement image,
-      @Nonnull String repetition);
-
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLImageElement image,
-      @Nonnull String repetition);
-
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull SVGImageElement image,
-      @Nonnull String repetition);
-
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLVideoElement image,
-      @Nonnull String repetition);
-
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLCanvasElement image,
-      @Nonnull String repetition);
-
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull ImageBitmap image, @Nonnull String repetition);
-
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull OffscreenCanvas image,
-      @Nonnull String repetition);
-
   @Nonnull
   public native CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1,
       double y1, double r1);
@@ -235,66 +207,10 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
 
   public native void drawImage(@Nonnull CanvasImageSource image, double dx, double dy);
 
-  public native void drawImage(@Nonnull HTMLOrSVGImageElement image, double dx, double dy);
-
-  public native void drawImage(@Nonnull HTMLImageElement image, double dx, double dy);
-
-  public native void drawImage(@Nonnull SVGImageElement image, double dx, double dy);
-
-  public native void drawImage(@Nonnull HTMLVideoElement image, double dx, double dy);
-
-  public native void drawImage(@Nonnull HTMLCanvasElement image, double dx, double dy);
-
-  public native void drawImage(@Nonnull ImageBitmap image, double dx, double dy);
-
-  public native void drawImage(@Nonnull OffscreenCanvas image, double dx, double dy);
-
   public native void drawImage(@Nonnull CanvasImageSource image, double dx, double dy, double dw,
       double dh);
 
-  public native void drawImage(@Nonnull HTMLOrSVGImageElement image, double dx, double dy,
-      double dw, double dh);
-
-  public native void drawImage(@Nonnull HTMLImageElement image, double dx, double dy, double dw,
-      double dh);
-
-  public native void drawImage(@Nonnull SVGImageElement image, double dx, double dy, double dw,
-      double dh);
-
-  public native void drawImage(@Nonnull HTMLVideoElement image, double dx, double dy, double dw,
-      double dh);
-
-  public native void drawImage(@Nonnull HTMLCanvasElement image, double dx, double dy, double dw,
-      double dh);
-
-  public native void drawImage(@Nonnull ImageBitmap image, double dx, double dy, double dw,
-      double dh);
-
-  public native void drawImage(@Nonnull OffscreenCanvas image, double dx, double dy, double dw,
-      double dh);
-
   public native void drawImage(@Nonnull CanvasImageSource image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull HTMLOrSVGImageElement image, double sx, double sy,
-      double sw, double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull HTMLImageElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull SVGImageElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull HTMLVideoElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull HTMLCanvasElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull ImageBitmap image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  public native void drawImage(@Nonnull OffscreenCanvas image, double sx, double sy, double sw,
       double sh, double dx, double dy, double dw, double dh);
 
   @HasNoSideEffects
@@ -352,4 +268,10 @@ public class OffscreenCanvasRenderingContext2D extends JsObject {
   public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
 
   public native void rect(double x, double y, double w, double h);
+
+  public native void roundRect(double x, double y, double w, double h,
+      @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);
+
+  public native void roundRect(double x, double y, double w, double h,
+      @Nonnull UnrestrictedDoubleOrDOMPointInitUnion[] radii);
 }

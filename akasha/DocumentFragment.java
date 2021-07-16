@@ -12,11 +12,7 @@ import jsinterop.annotations.JsType;
  * The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment">DocumentFragment - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment">DocumentFragment - DOM</a>
- * @see <a href="https://www.w3.org/TR/selectors-api/#the-apis">DocumentFragment - Selectors API Level 1</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-B63ED1A3">DocumentFragment - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-B63ED1A3">DocumentFragment - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3">DocumentFragment - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment">(DOM) # interface-documentfragment</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

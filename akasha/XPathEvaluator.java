@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The XPathEvaluator interface allows to compile and evaluate XPath expressions.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator">XPathEvaluator - MDN</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator">XPathEvaluator - Document Object Model (DOM) Level 3 XPath Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-xpathevaluator">(DOM) # interface-xpathevaluator</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

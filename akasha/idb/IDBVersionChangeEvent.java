@@ -12,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The IDBVersionChangeEvent interface of the IndexedDB API indicates that the version of the database has changed, as the result of an IDBOpenDBRequest.onupgradeneeded event handler function.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent - MDN</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbversionchangeevent">IDBVersionChangeEvent - Indexed Database API 2.0</a>
- * @see <a href="https://www.w3.org/TR/IndexedDB/#idbversionchangeevent">IDBVersionChangeEvent - Indexed Database API 2.0</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#events">(Indexed DB 3.0) # events</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

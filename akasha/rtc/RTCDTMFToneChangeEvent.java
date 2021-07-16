@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The RTCDTMFToneChangeEvent interface represents events sent to indicate that DTMF tones have started or finished playing. This interface is used by the tonechange event.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent">RTCDTMFToneChangeEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#event-RTCDTMFSender-tonechange">RTCDTMFToneChangeEvent - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtmftonechangeevent">(WebRTC 1.0) # dom-rtcdtmftonechangeevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

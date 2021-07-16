@@ -13,7 +13,6 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC API's RTCRtpCodecCapability dictionary provides information describing the capabilities of a single media codec.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecCapability">RTCRtpCodecCapability - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpcodeccapability">RTCRtpCodecCapability - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -65,7 +64,6 @@ public interface RTCRtpCodecCapability {
    * The WebRTC API's RTCRtpCodecCapability dictionary provides information describing the capabilities of a single media codec.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecCapability">RTCRtpCodecCapability - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpcodeccapability">RTCRtpCodecCapability - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

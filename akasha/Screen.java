@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Screen interface represents a screen, usually the one on which the current window is being rendered, and is obtained using window.screen.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen">Screen - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#the-screen-interface">Screen - CSS Object Model (CSSOM) View Module</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#the-screen-interface">(CSSOM View) # the-screen-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

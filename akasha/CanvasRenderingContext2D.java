@@ -2,7 +2,6 @@ package akasha;
 
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
-import akasha.svg.SVGImageElement;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -255,62 +254,6 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
    */
-  public native void drawImage(@Nonnull HTMLOrSVGImageElement image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLImageElement image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull SVGImageElement image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLVideoElement image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLCanvasElement image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull ImageBitmap image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull OffscreenCanvas image, double dx, double dy);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
   public native void drawImage(@Nonnull CanvasImageSource image, double dx, double dy, double dw,
       double dh);
 
@@ -320,133 +263,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
    */
-  public native void drawImage(@Nonnull HTMLOrSVGImageElement image, double dx, double dy,
-      double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLImageElement image, double dx, double dy, double dw,
-      double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull SVGImageElement image, double dx, double dy, double dw,
-      double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLVideoElement image, double dx, double dy, double dw,
-      double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLCanvasElement image, double dx, double dy, double dw,
-      double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull ImageBitmap image, double dx, double dy, double dw,
-      double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull OffscreenCanvas image, double dx, double dy, double dw,
-      double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
   public native void drawImage(@Nonnull CanvasImageSource image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLOrSVGImageElement image, double sx, double sy,
-      double sw, double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLImageElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull SVGImageElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLVideoElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull HTMLCanvasElement image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull ImageBitmap image, double sx, double sy, double sw,
-      double sh, double dx, double dy, double dw, double dh);
-
-  /**
-   * The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage">CanvasRenderingContext2D: drawImage - HTML Living Standard</a>
-   */
-  public native void drawImage(@Nonnull OffscreenCanvas image, double sx, double sy, double sw,
       double sh, double dx, double dy, double dw, double dh);
 
   /**
@@ -511,75 +328,6 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   @Nullable
   public native CanvasPattern createPattern(@Nonnull CanvasImageSource image,
-      @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLOrSVGImageElement image,
-      @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLImageElement image,
-      @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull SVGImageElement image,
-      @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLVideoElement image,
-      @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull HTMLCanvasElement image,
-      @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull ImageBitmap image, @Nonnull String repetition);
-
-  /**
-   * The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
-   */
-  @Nullable
-  public native CanvasPattern createPattern(@Nonnull OffscreenCanvas image,
       @Nonnull String repetition);
 
   /**
@@ -892,6 +640,12 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-rect">CanvasRenderingContext2D.rect - HTML Living Standard</a>
    */
   public native void rect(double x, double y, double w, double h);
+
+  public native void roundRect(double x, double y, double w, double h,
+      @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);
+
+  public native void roundRect(double x, double y, double w, double h,
+      @Nonnull UnrestrictedDoubleOrDOMPointInitUnion[] radii);
 
   /**
    * The CanvasRenderingContext2D.clearRect() method of the Canvas 2D API erases the pixels in a rectangular area by setting them to transparent black.

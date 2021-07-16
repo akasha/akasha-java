@@ -14,7 +14,7 @@ import jsinterop.base.Any;
  * The MessageEvent interface represents a message received by a target object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent">MessageEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#messageevent">MessageEvent - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface">(HTML) # the-messageevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -109,47 +109,11 @@ public class MessageEvent extends Event {
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull Window source, @Nonnull JsArray<MessagePort> ports);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull MessagePort source, @Nonnull JsArray<MessagePort> ports);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull ServiceWorker source, @Nonnull JsArray<MessagePort> ports);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull Window source, @Nonnull MessagePort[] ports);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull MessagePort source, @Nonnull MessagePort[] ports);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull ServiceWorker source, @Nonnull MessagePort[] ports);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull Window source);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull MessagePort source);
-
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull ServiceWorker source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId);

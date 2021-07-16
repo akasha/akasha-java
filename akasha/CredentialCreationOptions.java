@@ -38,16 +38,6 @@ public interface CredentialCreationOptions {
   @JsProperty
   void setPassword(@Nonnull PasswordCredentialInit password);
 
-  @JsOverlay
-  default void setPassword(@Nonnull final PasswordCredentialData password) {
-    setPassword( PasswordCredentialInit.of( password ) );
-  }
-
-  @JsOverlay
-  default void setPassword(@Nonnull final HTMLFormElement password) {
-    setPassword( PasswordCredentialInit.of( password ) );
-  }
-
   @JsProperty(
       name = "federated"
   )
@@ -81,20 +71,6 @@ public interface CredentialCreationOptions {
     @JsOverlay
     @Nonnull
     default Builder password(@Nonnull final PasswordCredentialInit password) {
-      setPassword( password );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder password(@Nonnull final PasswordCredentialData password) {
-      setPassword( password );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder password(@Nonnull final HTMLFormElement password) {
       setPassword( password );
       return this;
     }

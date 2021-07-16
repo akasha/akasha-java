@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.OffscreenRenderingContext;
 import akasha.RenderingContext;
 import akasha.core.ArrayBufferView;
 import akasha.core.BufferSource;
@@ -9,6 +10,7 @@ import akasha.core.JsObject;
 import akasha.core.Uint32Array;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
+import akasha.xr.XRWebGLRenderingContext;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -31,7 +33,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "WebGL2RenderingContext"
 )
-public class WebGL2RenderingContext extends JsObject implements RenderingContext {
+public class WebGL2RenderingContext extends JsObject implements OffscreenRenderingContext, RenderingContext, XRWebGLRenderingContext {
   @JsOverlay
   public static final int ACTIVE_ATTRIBUTES = 0x8B89;
 

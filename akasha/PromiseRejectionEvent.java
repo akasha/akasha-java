@@ -13,7 +13,7 @@ import jsinterop.base.Any;
  * The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent">PromiseRejectionEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#promiserejectionevent">PromiseRejectionEvent - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#the-promiserejectionevent-interface">(HTML) # the-promiserejectionevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

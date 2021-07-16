@@ -11,12 +11,9 @@ import jsinterop.annotations.JsType;
  * The MouseEvent interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include click, dblclick, mouseup, mousedown.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">MouseEvent - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface">MouseEvent - CSS Object Model (CSSOM) View Module</a>
- * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-mouseevent-interface">MouseEvent - Pointer Lock</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface">MouseEvent - CSS Object Model (CSSOM) View Module</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-mouseevent">MouseEvent - UI Events</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#events-mouseevents">MouseEvent - Document Object Model (DOM) Level 3 Events Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent">MouseEvent - Document Object Model (DOM) Level 2 Events Specification</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-mouseevent"># interface-mouseevent</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface">(CSSOM View) # extensions-to-the-mouseevent-interface</a>
+ * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-mouseevent-interface"># extensions-to-the-mouseevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,6 +11,7 @@ import jsinterop.annotations.JsType;
  * The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController">AbortController - MDN</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-abortcontroller">(DOM) # interface-abortcontroller</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

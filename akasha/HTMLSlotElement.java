@@ -12,7 +12,7 @@ import jsinterop.base.Js;
  * The HTMLSlotElement interface of the Shadow DOM API enables access to the name and assigned nodes of an HTML &lt;slot&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement">HTMLSlotElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlslotelement">HTMLSlotElement - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlslotelement">(HTML) # htmlslotelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

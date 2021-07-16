@@ -13,7 +13,6 @@ import jsinterop.base.JsPropertyMap;
  * The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters">RTCIceParameters - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtciceparameters">RTCIceParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -72,7 +71,6 @@ public interface RTCIceParameters {
    * The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters">RTCIceParameters - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#rtciceparameters">RTCIceParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

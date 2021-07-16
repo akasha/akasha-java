@@ -21,13 +21,10 @@ import jsinterop.base.Js;
  * The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance">Performance - MDN</a>
- * @see <a href="https://www.w3.org/TR/hr-time-2/#sec-performance">Performance - High Resolution Time Level 2</a>
- * @see <a href="https://www.w3.org/TR/hr-time-1/#performance">Performance - High Resolution Time</a>
- * @see <a href="https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface">Performance extensions - Performance Timeline Level 2</a>
- * @see <a href="https://www.w3.org/TR/performance-timeline/#extensions-to-the-performance-interface">Performance extensions - Performance Timeline</a>
- * @see <a href="https://www.w3.org/TR/resource-timing-1/#extensions-performance-interface">Performance extensions - Resource Timing Level 1</a>
- * @see <a href="https://w3c.github.io/user-timing/#extensions-performance-interface">Performance extensions - User Timing Level 2</a>
- * @see <a href="https://www.w3.org/TR/user-timing/#extensions-performance-interface">Performance extensions - User Timing</a>
+ * @see <a href="https://w3c.github.io/hr-time/#sec-performance"># sec-performance</a>
+ * @see <a href="https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface">(Performance Timeline 2) # extensions-to-the-performance-interface</a>
+ * @see <a href="https://w3c.github.io/resource-timing/#sec-extensions-performance-interface">(Resource Timing 2) # sec-extensions-performance-interface</a>
+ * @see <a href="https://w3c.github.io/user-timing/#extensions-performance-interface">(User Timing 2) # extensions-performance-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

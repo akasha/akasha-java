@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent">SecurityPolicyViolationEvent - MDN</a>
- * @see <a href="https://www.w3.org/TR/CSP2/#firing-securitypolicyviolationevent-events">SecurityPolicyViolationEvent - Content Security Policy Level 2</a>
- * @see <a href="https://w3c.github.io/webappsec-csp/#report-violation">SecurityPolicyViolationEvent - Content Security Policy Level 3</a>
+ * @see <a href="https://w3c.github.io/webappsec-csp/#report-violation">(Content Security Policy 3) # report-violation</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -53,17 +52,6 @@ public class SecurityPolicyViolationEvent extends Event {
   @Nonnull
   public native String blockedURI();
 
-  @JsProperty(
-      name = "blockedURL"
-  )
-  @Nonnull
-  public native String blockedURL();
-
-  @JsProperty(
-      name = "colno"
-  )
-  public native int colno();
-
   /**
    * The columnNumber read-only property of the SecurityPolicyViolationEvent interface is the column number in the document or worker at which the violation occurred.
    *
@@ -100,12 +88,6 @@ public class SecurityPolicyViolationEvent extends Event {
   @Nonnull
   public native String documentURI();
 
-  @JsProperty(
-      name = "documentURL"
-  )
-  @Nonnull
-  public native String documentURL();
-
   /**
    * The effectiveDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation.
    *
@@ -128,11 +110,6 @@ public class SecurityPolicyViolationEvent extends Event {
       name = "lineNumber"
   )
   public native int lineNumber();
-
-  @JsProperty(
-      name = "lineno"
-  )
-  public native int lineno();
 
   /**
    * The originalPolicy read-only property of the SecurityPolicyViolationEvent interface is a DOMString containing the policy whose enforcement uncovered the violation.

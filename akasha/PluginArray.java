@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The PluginArray interface is used to store a list of Plugin objects describing the available plugins; it's returned by the navigator.plugins property. The PluginArray is not a JavaScript array, but has the length property and supports accessing individual items using bracket notation (plugins[2]), as well as via item(index) and namedItem(&quot;name&quot;) methods.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PluginArray">PluginArray - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/#pluginarray">PluginArray - HTML Living Standard</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#pluginarray">(HTML) # pluginarray</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -30,12 +30,13 @@ public class PluginArray extends JsObject {
   )
   public native int length();
 
-  @Nullable
-  public native JsObject namedItem(@Nonnull String name);
-
   public native void refresh();
 
   @HasNoSideEffects
   @Nullable
-  public native JsObject item(int index);
+  public native Plugin item(int index);
+
+  @HasNoSideEffects
+  @Nullable
+  public native Plugin namedItem(@Nonnull String name);
 }

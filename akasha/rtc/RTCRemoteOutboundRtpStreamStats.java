@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats">RTCRemoteOutboundRtpStreamStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*">RTCRemoteOutboundRtpStreamStats - Identifiers for WebRTC's Statistics API</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*">(WebRTC Statistics) # remoteoutboundrtpstats-dict*</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -115,7 +115,7 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats">RTCRemoteOutboundRtpStreamStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*">RTCRemoteOutboundRtpStreamStats - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*">(WebRTC Statistics) # remoteoutboundrtpstats-dict*</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

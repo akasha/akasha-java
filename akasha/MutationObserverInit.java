@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The MutationObserverInit dictionary describes the configuration of a mutation observer. As such, it's primarily used as the type of the options parameter on the MutationObserver.observe() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#dictdef-mutationobserverinit">MutationObserverInit - DOM</a>
+ * @see <a href="https://dom.spec.whatwg.org/#dictdef-mutationobserverinit">(DOM) # dictdef-mutationobserverinit</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -184,7 +184,7 @@ public interface MutationObserverInit {
    * The MutationObserverInit dictionary describes the configuration of a mutation observer. As such, it's primarily used as the type of the options parameter on the MutationObserver.observe() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#dictdef-mutationobserverinit">MutationObserverInit - DOM</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dictdef-mutationobserverinit">(DOM) # dictdef-mutationobserverinit</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -57,11 +57,11 @@ public interface GPUVertexBufferLayout {
   @JsProperty(
       name = "stepMode"
   )
-  @GPUInputStepMode
+  @GPUVertexStepMode
   String stepMode();
 
   @JsProperty
-  void setStepMode(@GPUInputStepMode @Nonnull String stepMode);
+  void setStepMode(@GPUVertexStepMode @Nonnull String stepMode);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -94,7 +94,7 @@ public interface GPUVertexBufferLayout {
 
     @JsOverlay
     @Nonnull
-    default Builder stepMode(@GPUInputStepMode @Nonnull final String stepMode) {
+    default Builder stepMode(@GPUVertexStepMode @Nonnull final String stepMode) {
       setStepMode( stepMode );
       return this;
     }

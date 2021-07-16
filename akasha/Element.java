@@ -18,20 +18,12 @@ import jsinterop.base.Js;
  * Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations-1/">Web Animations</a>
- * @see <a href="https://www.w3.org/TR/pointerevents2/#extensions-to-the-element-interface">Element - Pointer Events &ndash; Level 2</a>
- * @see <a href="https://www.w3.org/TR/pointerevents1/#extensions-to-the-element-interface">Element - Pointer Events</a>
- * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">Element - Selectors API Level 1</a>
- * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface">Element - Pointer Lock</a>
- * @see <a href="https://fullscreen.spec.whatwg.org/#api">Element - Fullscreen API</a>
- * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface">Element - DOM Parsing and Serialization</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface">Element - CSS Object Model (CSSOM) View Module</a>
- * @see <a href="https://www.w3.org/TR/ElementTraversal/#ecmascript-bindings">Element - Element Traversal Specification</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-element">Element - DOM</a>
- * @see <a href="https://www.w3.org/TR/dom/#interface-element">Element - DOM4</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-745549614">Element - Document Object Model (DOM) Level 3 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-745549614">Element - Document Object Model (DOM) Level 2 Core Specification</a>
- * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614">Element - Document Object Model (DOM) Level 1 Specification</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-element">(DOM) # interface-element</a>
+ * @see <a href="https://w3c.github.io/pointerevents/#extensions-to-the-element-interface"># extensions-to-the-element-interface</a>
+ * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface"># extensions-to-the-element-interface</a>
+ * @see <a href="https://fullscreen.spec.whatwg.org/#api">(Fullscreen API) # api</a>
+ * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface"># extensions-to-the-element-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface">(CSSOM View) # extension-to-the-element-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

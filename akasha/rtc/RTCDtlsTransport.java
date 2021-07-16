@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The RTCDtlsTransport interface provides access to information about the Datagram Transport Layer Security (DTLS) transport over which a RTCPeerConnection's RTP and RTCP packets are sent and received by its RTCRtpSender and RTCRtpReceiver objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport">RTCDtlsTransport - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport">RTCDtlsTransport - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport">(WebRTC 1.0) # dom-rtcdtlstransport</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

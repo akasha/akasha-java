@@ -10,9 +10,7 @@ import jsinterop.annotations.JsType;
  * The ValidityState interface represents the validity states that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState">ValidityState - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#validitystate">ValidityState - HTML Living Standard</a>
- * @see <a href="https://www.w3.org/TR/html51/sec-forms.html#validitystate-validitystate">ValidityState - HTML 5.1</a>
- * @see <a href="https://www.w3.org/TR/html52/forms.html#validitystate">ValidityState - HTML5</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api:validitystate-3">(HTML) # the-constraint-validation-api:validitystate-3</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

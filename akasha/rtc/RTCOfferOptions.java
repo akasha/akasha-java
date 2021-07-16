@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">RTCOfferOptions - WebRTC 1.0: Real-time Communication Between Browsers</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">(WebRTC 1.0) # dom-rtcofferoptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -68,7 +68,7 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
    * The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">RTCOfferOptions - WebRTC 1.0: Real-time Communication Between Browsers</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">(WebRTC 1.0) # dom-rtcofferoptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(
