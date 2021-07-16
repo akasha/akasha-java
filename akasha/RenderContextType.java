@@ -28,13 +28,6 @@ public @interface RenderContextType {
   String bitmaprenderer = "bitmaprenderer";
 
   /**
-   * The context type designates a {@link akasha.GPUPresentationContext}, a WenGPU rendering context.
-   * This context is only available on browsers that implement WebGPU specification.
-   */
-  @Nonnull
-  String gpupresent = "gpupresent";
-
-  /**
    * The context type designates a {@link akasha.gl.WebGLRenderingContext}, a three-dimensional rendering context.
    * This context is only available on browsers that implement WebGL version 1 (OpenGL ES 2.0).
    */
@@ -47,6 +40,13 @@ public @interface RenderContextType {
    */
   @Nonnull
   String webgl2 = "webgl2";
+
+  /**
+   * The context type designates a {@link akasha.gpu.GPUCanvasContext}, a WebGPU rendering context.
+   * This context is only available on browsers that implement WebGPU specification.
+   */
+  @Nonnull
+  String webgpu = "webgpu";
 
   final class Util {
     private Util() {
@@ -63,7 +63,7 @@ public @interface RenderContextType {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return RenderContextType._2d.equals( value ) || RenderContextType.bitmaprenderer.equals( value ) || RenderContextType.gpupresent.equals( value ) || RenderContextType.webgl.equals( value ) || RenderContextType.webgl2.equals( value );
+      return RenderContextType._2d.equals( value ) || RenderContextType.bitmaprenderer.equals( value ) || RenderContextType.webgl.equals( value ) || RenderContextType.webgl2.equals( value ) || RenderContextType.webgpu.equals( value );
     }
   }
 }
