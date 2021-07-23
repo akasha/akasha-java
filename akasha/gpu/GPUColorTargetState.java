@@ -25,14 +25,6 @@ public interface GPUColorTargetState {
   }
 
   @JsProperty(
-      name = "blend"
-  )
-  GPUBlendState blend();
-
-  @JsProperty
-  void setBlend(@Nonnull GPUBlendState blend);
-
-  @JsProperty(
       name = "format"
   )
   @GPUTextureFormat
@@ -41,6 +33,14 @@ public interface GPUColorTargetState {
 
   @JsProperty
   void setFormat(@GPUTextureFormat @Nonnull String format);
+
+  @JsProperty(
+      name = "blend"
+  )
+  GPUBlendState blend();
+
+  @JsProperty
+  void setBlend(@Nonnull GPUBlendState blend);
 
   @JsProperty(
       name = "writeMask"
@@ -60,15 +60,15 @@ public interface GPUColorTargetState {
   interface Builder extends GPUColorTargetState {
     @JsOverlay
     @Nonnull
-    default Builder blend(@Nonnull final GPUBlendState blend) {
-      setBlend( blend );
+    default Builder format(@GPUTextureFormat @Nonnull final String format) {
+      setFormat( format );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
+    default Builder blend(@Nonnull final GPUBlendState blend) {
+      setBlend( blend );
       return this;
     }
 

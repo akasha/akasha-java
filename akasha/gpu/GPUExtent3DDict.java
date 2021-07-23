@@ -25,6 +25,14 @@ public interface GPUExtent3DDict {
   }
 
   @JsProperty(
+      name = "width"
+  )
+  int width();
+
+  @JsProperty
+  void setWidth(int width);
+
+  @JsProperty(
       name = "depthOrArrayLayers"
   )
   int depthOrArrayLayers();
@@ -40,14 +48,6 @@ public interface GPUExtent3DDict {
   @JsProperty
   void setHeight(int height);
 
-  @JsProperty(
-      name = "width"
-  )
-  int width();
-
-  @JsProperty
-  void setWidth(int width);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -56,6 +56,13 @@ public interface GPUExtent3DDict {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUExtent3DDict {
+    @JsOverlay
+    @Nonnull
+    default Builder width(final int width) {
+      setWidth( width );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder depthOrArrayLayers(final int depthOrArrayLayers) {
@@ -67,13 +74,6 @@ public interface GPUExtent3DDict {
     @Nonnull
     default Builder height(final int height) {
       setHeight( height );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder width(final int width) {
-      setWidth( width );
       return this;
     }
   }

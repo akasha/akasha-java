@@ -25,14 +25,6 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   }
 
   @JsProperty(
-      name = "mappedAtCreation"
-  )
-  boolean mappedAtCreation();
-
-  @JsProperty
-  void setMappedAtCreation(boolean mappedAtCreation);
-
-  @JsProperty(
       name = "size"
   )
   int size();
@@ -48,6 +40,14 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setUsage(int usage);
 
+  @JsProperty(
+      name = "mappedAtCreation"
+  )
+  boolean mappedAtCreation();
+
+  @JsProperty
+  void setMappedAtCreation(boolean mappedAtCreation);
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -56,13 +56,6 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUBufferDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder mappedAtCreation(final boolean mappedAtCreation) {
-      setMappedAtCreation( mappedAtCreation );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder size(final int size) {
@@ -74,6 +67,13 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
     @Nonnull
     default Builder usage(final int usage) {
       setUsage( usage );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mappedAtCreation(final boolean mappedAtCreation) {
+      setMappedAtCreation( mappedAtCreation );
       return this;
     }
 

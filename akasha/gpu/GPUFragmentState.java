@@ -21,16 +21,16 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUFragmentState extends GPUProgrammableStage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String entryPoint, @Nonnull final GPUShaderModule module,
+  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint,
       @Nonnull final JsArray<GPUColorTargetState> targets) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).entryPoint( entryPoint ).module( module ).targets( targets );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint ).targets( targets );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String entryPoint, @Nonnull final GPUShaderModule module,
+  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint,
       @Nonnull final GPUColorTargetState[] targets) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).entryPoint( entryPoint ).module( module ).targets( targets );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint ).targets( targets );
   }
 
   @JsProperty(
@@ -71,8 +71,8 @@ public interface GPUFragmentState extends GPUProgrammableStage {
 
     @JsOverlay
     @Nonnull
-    default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {
-      setConstants( constants );
+    default Builder module(@Nonnull final GPUShaderModule module) {
+      setModule( module );
       return this;
     }
 
@@ -85,8 +85,8 @@ public interface GPUFragmentState extends GPUProgrammableStage {
 
     @JsOverlay
     @Nonnull
-    default Builder module(@Nonnull final GPUShaderModule module) {
-      setModule( module );
+    default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {
+      setConstants( constants );
       return this;
     }
   }

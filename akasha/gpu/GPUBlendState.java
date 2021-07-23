@@ -20,19 +20,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBlendState {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUBlendComponent alpha,
-      @Nonnull final GPUBlendComponent color) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).alpha( alpha ).color( color );
+  static Builder create(@Nonnull final GPUBlendComponent color,
+      @Nonnull final GPUBlendComponent alpha) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).color( color ).alpha( alpha );
   }
-
-  @JsProperty(
-      name = "alpha"
-  )
-  @Nonnull
-  GPUBlendComponent alpha();
-
-  @JsProperty
-  void setAlpha(@Nonnull GPUBlendComponent alpha);
 
   @JsProperty(
       name = "color"
@@ -42,6 +33,15 @@ public interface GPUBlendState {
 
   @JsProperty
   void setColor(@Nonnull GPUBlendComponent color);
+
+  @JsProperty(
+      name = "alpha"
+  )
+  @Nonnull
+  GPUBlendComponent alpha();
+
+  @JsProperty
+  void setAlpha(@Nonnull GPUBlendComponent alpha);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -53,15 +53,15 @@ public interface GPUBlendState {
   interface Builder extends GPUBlendState {
     @JsOverlay
     @Nonnull
-    default Builder alpha(@Nonnull final GPUBlendComponent alpha) {
-      setAlpha( alpha );
+    default Builder color(@Nonnull final GPUBlendComponent color) {
+      setColor( color );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder color(@Nonnull final GPUBlendComponent color) {
-      setColor( color );
+    default Builder alpha(@Nonnull final GPUBlendComponent alpha) {
+      setAlpha( alpha );
       return this;
     }
   }

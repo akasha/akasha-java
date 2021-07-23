@@ -41,6 +41,15 @@ public interface GPUVertexBufferLayout {
   void setArrayStride(int arrayStride);
 
   @JsProperty(
+      name = "stepMode"
+  )
+  @GPUVertexStepMode
+  String stepMode();
+
+  @JsProperty
+  void setStepMode(@GPUVertexStepMode @Nonnull String stepMode);
+
+  @JsProperty(
       name = "attributes"
   )
   @Nonnull
@@ -53,15 +62,6 @@ public interface GPUVertexBufferLayout {
   default void setAttributes(@Nonnull final GPUVertexAttribute... attributes) {
     setAttributes( Js.<JsArray<GPUVertexAttribute>>uncheckedCast( attributes ) );
   }
-
-  @JsProperty(
-      name = "stepMode"
-  )
-  @GPUVertexStepMode
-  String stepMode();
-
-  @JsProperty
-  void setStepMode(@GPUVertexStepMode @Nonnull String stepMode);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -80,6 +80,13 @@ public interface GPUVertexBufferLayout {
 
     @JsOverlay
     @Nonnull
+    default Builder stepMode(@GPUVertexStepMode @Nonnull final String stepMode) {
+      setStepMode( stepMode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder attributes(@Nonnull final JsArray<GPUVertexAttribute> attributes) {
       setAttributes( attributes );
       return this;
@@ -89,13 +96,6 @@ public interface GPUVertexBufferLayout {
     @Nonnull
     default Builder attributes(@Nonnull final GPUVertexAttribute... attributes) {
       setAttributes( attributes );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder stepMode(@GPUVertexStepMode @Nonnull final String stepMode) {
-      setStepMode( stepMode );
       return this;
     }
   }

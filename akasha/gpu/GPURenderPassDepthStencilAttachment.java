@@ -20,35 +20,44 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURenderPassDepthStencilAttachment {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String depthLoadValue,
+  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final String depthLoadValue,
       @GPUStoreOp @Nonnull final String depthStoreOp, @Nonnull final String stencilLoadValue,
-      @GPUStoreOp @Nonnull final String stencilStoreOp, @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp ).view( view );
+      @GPUStoreOp @Nonnull final String stencilStoreOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(final float depthLoadValue, @GPUStoreOp @Nonnull final String depthStoreOp,
-      @Nonnull final String stencilLoadValue, @GPUStoreOp @Nonnull final String stencilStoreOp,
-      @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view, final float depthLoadValue,
+      @GPUStoreOp @Nonnull final String depthStoreOp, @Nonnull final String stencilLoadValue,
+      @GPUStoreOp @Nonnull final String stencilStoreOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String depthLoadValue,
+  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final String depthLoadValue,
       @GPUStoreOp @Nonnull final String depthStoreOp, final int stencilLoadValue,
-      @GPUStoreOp @Nonnull final String stencilStoreOp, @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp ).view( view );
+      @GPUStoreOp @Nonnull final String stencilStoreOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(final float depthLoadValue, @GPUStoreOp @Nonnull final String depthStoreOp,
-      final int stencilLoadValue, @GPUStoreOp @Nonnull final String stencilStoreOp,
-      @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view, final float depthLoadValue,
+      @GPUStoreOp @Nonnull final String depthStoreOp, final int stencilLoadValue,
+      @GPUStoreOp @Nonnull final String stencilStoreOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).depthLoadValue( depthLoadValue ).depthStoreOp( depthStoreOp ).stencilLoadValue( stencilLoadValue ).stencilStoreOp( stencilStoreOp );
   }
+
+  @JsProperty(
+      name = "view"
+  )
+  @Nonnull
+  GPUTextureView view();
+
+  @JsProperty
+  void setView(@Nonnull GPUTextureView view);
 
   @JsProperty(
       name = "depthLoadValue"
@@ -70,14 +79,6 @@ public interface GPURenderPassDepthStencilAttachment {
   }
 
   @JsProperty(
-      name = "depthReadOnly"
-  )
-  boolean depthReadOnly();
-
-  @JsProperty
-  void setDepthReadOnly(boolean depthReadOnly);
-
-  @JsProperty(
       name = "depthStoreOp"
   )
   @GPUStoreOp
@@ -86,6 +87,14 @@ public interface GPURenderPassDepthStencilAttachment {
 
   @JsProperty
   void setDepthStoreOp(@GPUStoreOp @Nonnull String depthStoreOp);
+
+  @JsProperty(
+      name = "depthReadOnly"
+  )
+  boolean depthReadOnly();
+
+  @JsProperty
+  void setDepthReadOnly(boolean depthReadOnly);
 
   @JsProperty(
       name = "stencilLoadValue"
@@ -107,14 +116,6 @@ public interface GPURenderPassDepthStencilAttachment {
   }
 
   @JsProperty(
-      name = "stencilReadOnly"
-  )
-  boolean stencilReadOnly();
-
-  @JsProperty
-  void setStencilReadOnly(boolean stencilReadOnly);
-
-  @JsProperty(
       name = "stencilStoreOp"
   )
   @GPUStoreOp
@@ -125,13 +126,12 @@ public interface GPURenderPassDepthStencilAttachment {
   void setStencilStoreOp(@GPUStoreOp @Nonnull String stencilStoreOp);
 
   @JsProperty(
-      name = "view"
+      name = "stencilReadOnly"
   )
-  @Nonnull
-  GPUTextureView view();
+  boolean stencilReadOnly();
 
   @JsProperty
-  void setView(@Nonnull GPUTextureView view);
+  void setStencilReadOnly(boolean stencilReadOnly);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -141,6 +141,13 @@ public interface GPURenderPassDepthStencilAttachment {
   )
   @ApiStatus.Experimental
   interface Builder extends GPURenderPassDepthStencilAttachment {
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nonnull final GPUTextureView view) {
+      setView( view );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder depthLoadValue(@Nonnull final String depthLoadValue) {
@@ -157,15 +164,15 @@ public interface GPURenderPassDepthStencilAttachment {
 
     @JsOverlay
     @Nonnull
-    default Builder depthReadOnly(final boolean depthReadOnly) {
-      setDepthReadOnly( depthReadOnly );
+    default Builder depthStoreOp(@GPUStoreOp @Nonnull final String depthStoreOp) {
+      setDepthStoreOp( depthStoreOp );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder depthStoreOp(@GPUStoreOp @Nonnull final String depthStoreOp) {
-      setDepthStoreOp( depthStoreOp );
+    default Builder depthReadOnly(final boolean depthReadOnly) {
+      setDepthReadOnly( depthReadOnly );
       return this;
     }
 
@@ -185,13 +192,6 @@ public interface GPURenderPassDepthStencilAttachment {
 
     @JsOverlay
     @Nonnull
-    default Builder stencilReadOnly(final boolean stencilReadOnly) {
-      setStencilReadOnly( stencilReadOnly );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder stencilStoreOp(@GPUStoreOp @Nonnull final String stencilStoreOp) {
       setStencilStoreOp( stencilStoreOp );
       return this;
@@ -199,8 +199,8 @@ public interface GPURenderPassDepthStencilAttachment {
 
     @JsOverlay
     @Nonnull
-    default Builder view(@Nonnull final GPUTextureView view) {
-      setView( view );
+    default Builder stencilReadOnly(final boolean stencilReadOnly) {
+      setStencilReadOnly( stencilReadOnly );
       return this;
     }
   }

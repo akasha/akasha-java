@@ -15,10 +15,10 @@ import org.jetbrains.annotations.ApiStatus;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "GPURenderBundleEncoderDescriptor"
+    name = "GPURenderPassLayout"
 )
 @ApiStatus.Experimental
-public interface GPURenderBundleEncoderDescriptor extends GPURenderPassLayout {
+public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final JsArray<String> colorFormats) {
@@ -32,43 +32,44 @@ public interface GPURenderBundleEncoderDescriptor extends GPURenderPassLayout {
   }
 
   @JsProperty(
-      name = "depthReadOnly"
+      name = "colorFormats"
   )
-  boolean depthReadOnly();
+  @Nonnull
+  JsArray<String> colorFormats();
 
   @JsProperty
-  void setDepthReadOnly(boolean depthReadOnly);
+  void setColorFormats(@Nonnull JsArray<String> colorFormats);
+
+  @JsOverlay
+  default void setColorFormats(@Nonnull final String... colorFormats) {
+    setColorFormats( Js.<JsArray<String>>uncheckedCast( colorFormats ) );
+  }
 
   @JsProperty(
-      name = "stencilReadOnly"
+      name = "depthStencilFormat"
   )
-  boolean stencilReadOnly();
+  @GPUTextureFormat
+  String depthStencilFormat();
 
   @JsProperty
-  void setStencilReadOnly(boolean stencilReadOnly);
+  void setDepthStencilFormat(@GPUTextureFormat @Nonnull String depthStencilFormat);
+
+  @JsProperty(
+      name = "sampleCount"
+  )
+  int sampleCount();
+
+  @JsProperty
+  void setSampleCount(int sampleCount);
 
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "GPURenderBundleEncoderDescriptor"
+      name = "GPURenderPassLayout"
   )
   @ApiStatus.Experimental
-  interface Builder extends GPURenderBundleEncoderDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder depthReadOnly(final boolean depthReadOnly) {
-      setDepthReadOnly( depthReadOnly );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder stencilReadOnly(final boolean stencilReadOnly) {
-      setStencilReadOnly( stencilReadOnly );
-      return this;
-    }
-
+  interface Builder extends GPURenderPassLayout {
     @JsOverlay
     @Nonnull
     default Builder colorFormats(@Nonnull final JsArray<String> colorFormats) {

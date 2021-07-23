@@ -42,29 +42,6 @@ public interface GPUImageCopyExternalImage {
   }
 
   @JsProperty(
-      name = "origin"
-  )
-  GPUOrigin2D origin();
-
-  @JsProperty
-  void setOrigin(@Nonnull GPUOrigin2D origin);
-
-  @JsOverlay
-  default void setOrigin(@Nonnull final JsArray<Double> origin) {
-    setOrigin( GPUOrigin2D.of( origin ) );
-  }
-
-  @JsOverlay
-  default void setOrigin(@Nonnull final double... origin) {
-    setOrigin( GPUOrigin2D.of( origin ) );
-  }
-
-  @JsOverlay
-  default void setOrigin(@Nonnull final GPUOrigin2DDict origin) {
-    setOrigin( GPUOrigin2D.of( origin ) );
-  }
-
-  @JsProperty(
       name = "source"
   )
   @Nonnull
@@ -88,6 +65,29 @@ public interface GPUImageCopyExternalImage {
     setSource( ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion.of( source ) );
   }
 
+  @JsProperty(
+      name = "origin"
+  )
+  GPUOrigin2D origin();
+
+  @JsProperty
+  void setOrigin(@Nonnull GPUOrigin2D origin);
+
+  @JsOverlay
+  default void setOrigin(@Nonnull final JsArray<Double> origin) {
+    setOrigin( GPUOrigin2D.of( origin ) );
+  }
+
+  @JsOverlay
+  default void setOrigin(@Nonnull final double... origin) {
+    setOrigin( GPUOrigin2D.of( origin ) );
+  }
+
+  @JsOverlay
+  default void setOrigin(@Nonnull final GPUOrigin2DDict origin) {
+    setOrigin( GPUOrigin2D.of( origin ) );
+  }
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -96,6 +96,27 @@ public interface GPUImageCopyExternalImage {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUImageCopyExternalImage {
+    @JsOverlay
+    @Nonnull
+    default Builder source(@Nonnull final ImageBitmap source) {
+      setSource( source );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder source(@Nonnull final HTMLCanvasElement source) {
+      setSource( source );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder source(@Nonnull final OffscreenCanvas source) {
+      setSource( source );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder origin(@Nonnull final GPUOrigin2D origin) {
@@ -121,27 +142,6 @@ public interface GPUImageCopyExternalImage {
     @Nonnull
     default Builder origin(@Nonnull final GPUOrigin2DDict origin) {
       setOrigin( origin );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final ImageBitmap source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final HTMLCanvasElement source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final OffscreenCanvas source) {
-      setSource( source );
       return this;
     }
   }

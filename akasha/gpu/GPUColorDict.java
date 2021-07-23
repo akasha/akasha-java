@@ -20,25 +20,17 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUColorDict {
   @JsOverlay
   @Nonnull
-  static Builder create(final double a, final double b, final double g, final double r) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).a( a ).b( b ).g( g ).r( r );
+  static Builder create(final double r, final double g, final double b, final double a) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).r( r ).g( g ).b( b ).a( a );
   }
 
   @JsProperty(
-      name = "a"
+      name = "r"
   )
-  double a();
+  double r();
 
   @JsProperty
-  void setA(double a);
-
-  @JsProperty(
-      name = "b"
-  )
-  double b();
-
-  @JsProperty
-  void setB(double b);
+  void setR(double r);
 
   @JsProperty(
       name = "g"
@@ -49,12 +41,20 @@ public interface GPUColorDict {
   void setG(double g);
 
   @JsProperty(
-      name = "r"
+      name = "b"
   )
-  double r();
+  double b();
 
   @JsProperty
-  void setR(double r);
+  void setB(double b);
+
+  @JsProperty(
+      name = "a"
+  )
+  double a();
+
+  @JsProperty
+  void setA(double a);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -66,15 +66,8 @@ public interface GPUColorDict {
   interface Builder extends GPUColorDict {
     @JsOverlay
     @Nonnull
-    default Builder a(final double a) {
-      setA( a );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder b(final double b) {
-      setB( b );
+    default Builder r(final double r) {
+      setR( r );
       return this;
     }
 
@@ -87,8 +80,15 @@ public interface GPUColorDict {
 
     @JsOverlay
     @Nonnull
-    default Builder r(final double r) {
-      setR( r );
+    default Builder b(final double b) {
+      setB( b );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder a(final double a) {
+      setA( a );
       return this;
     }
   }

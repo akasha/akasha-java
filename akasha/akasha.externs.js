@@ -1243,7 +1243,7 @@ var PerformanceObserverCallbackOptions;
  */
 var AudioDecoderSupport;
 /**
- * @typedef {{entries:!Array<!GPUBindGroupEntry>,layout:!GPUBindGroupLayout,label:(!string|undefined)}}
+ * @typedef {{layout:!GPUBindGroupLayout,entries:!Array<!GPUBindGroupEntry>,label:(!string|undefined)}}
  */
 var GPUBindGroupDescriptor;
 /**
@@ -1251,7 +1251,7 @@ var GPUBindGroupDescriptor;
  */
 var PopStateEventInit;
 /**
- * @typedef {{colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),device:!GPUDevice,format:!string,size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined)}}
+ * @typedef {{device:!GPUDevice,format:!string,colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined)}}
  */
 var GPUCanvasConfiguration;
 /**
@@ -1383,7 +1383,7 @@ var MediaStreamConstraints;
  */
 var ConstrainDoubleRange;
 /**
- * @typedef {{colorSpace:(!string|undefined),source:!HTMLVideoElement,label:(!string|undefined)}}
+ * @typedef {{source:!HTMLVideoElement,colorSpace:(!string|undefined),label:(!string|undefined)}}
  */
 var GPUExternalTextureDescriptor;
 /**
@@ -1443,7 +1443,7 @@ var RTCIceCandidateInit;
  */
 var FederatedCredentialInit;
 /**
- * @typedef {{targets:!Array<!GPUColorTargetState>,constants:(!Object<!string,!GPUPipelineConstantValue>|undefined),entryPoint:!string,module:!GPUShaderModule}}
+ * @typedef {{targets:!Array<!GPUColorTargetState>,module:!GPUShaderModule,entryPoint:!string,constants:(!Object<!string,!GPUPipelineConstantValue>|undefined)}}
  */
 var GPUFragmentState;
 /**
@@ -1463,7 +1463,7 @@ var ConstrainDOMStringParameters;
  */
 var ModuleImportDescriptor;
 /**
- * @typedef {{mappedAtCreation:(!boolean|undefined),size:!GPUSize64,usage:!GPUBufferUsageFlags,label:(!string|undefined)}}
+ * @typedef {{size:!GPUSize64,usage:!GPUBufferUsageFlags,mappedAtCreation:(!boolean|undefined),label:(!string|undefined)}}
  */
 var GPUBufferDescriptor;
 /**
@@ -1519,7 +1519,7 @@ var RTCRtpHeaderExtensionParameters;
  */
 var GPUPrimitiveState;
 /**
- * @typedef {{depthStencil:(!GPUDepthStencilState|undefined),fragment:(!GPUFragmentState|undefined),multisample:(!GPUMultisampleState|undefined),primitive:(!GPUPrimitiveState|undefined),vertex:!GPUVertexState,layout:(!GPUPipelineLayout|undefined),label:(!string|undefined)}}
+ * @typedef {{vertex:!GPUVertexState,depthStencil:(!GPUDepthStencilState|undefined),fragment:(!GPUFragmentState|undefined),multisample:(!GPUMultisampleState|undefined),primitive:(!GPUPrimitiveState|undefined),layout:(!GPUPipelineLayout|undefined),label:(!string|undefined)}}
  */
 var GPURenderPipelineDescriptor;
 /**
@@ -1558,6 +1558,10 @@ var GetRootNodeOptions;
  * @typedef {{root:(?ElementOrDocumentUnion|undefined),rootMargin:(!string|undefined),threshold:(!DoubleOrDoubleArrayUnion|undefined)}}
  */
 var IntersectionObserverInit;
+/**
+ * @typedef {{colorFormats:!Array<!string>,depthStencilFormat:(!string|undefined),sampleCount:(!GPUSize32|undefined),label:(!string|undefined)}}
+ */
+var GPURenderPassLayout;
 /**
  * @typedef {{statusMessage:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
@@ -1631,7 +1635,7 @@ var GetAnimationsOptions;
  */
 var ImageDecodeResult;
 /**
- * @typedef {{a:!number,b:!number,g:!number,r:!number}}
+ * @typedef {{r:!number,g:!number,b:!number,a:!number}}
  */
 var GPUColorDict;
 /**
@@ -1719,7 +1723,7 @@ var RTCRemoteOutboundRtpStreamStats;
  */
 var RTCRtpSynchronizationSource;
 /**
- * @typedef {{blend:(!GPUBlendState|undefined),format:!string,writeMask:(!GPUColorWriteFlags|undefined)}}
+ * @typedef {{format:!string,blend:(!GPUBlendState|undefined),writeMask:(!GPUColorWriteFlags|undefined)}}
  */
 var GPUColorTargetState;
 /**
@@ -1815,7 +1819,7 @@ var XRWebGLLayerInit;
  */
 var HmacImportParams;
 /**
- * @typedef {{loadValue:GPULoadOpOrGPUColorUnion,resolveTarget:(!GPUTextureView|undefined),storeOp:!string,view:!GPUTextureView}}
+ * @typedef {{view:!GPUTextureView,resolveTarget:(!GPUTextureView|undefined),loadValue:GPULoadOpOrGPUColorUnion,storeOp:!string}}
  */
 var GPURenderPassColorAttachment;
 /**
@@ -1831,7 +1835,7 @@ var PointerEventInit;
  */
 var ValueEventInit;
 /**
- * @typedef {{arrayStride:!GPUSize64,attributes:!Array<!GPUVertexAttribute>,stepMode:(!string|undefined)}}
+ * @typedef {{arrayStride:!GPUSize64,stepMode:(!string|undefined),attributes:!Array<!GPUVertexAttribute>}}
  */
 var GPUVertexBufferLayout;
 /**
@@ -1955,11 +1959,11 @@ var RsaOtherPrimesInfo;
  */
 var MediaEncryptedEventInit;
 /**
- * @typedef {{colorSpace:(!string|undefined),premultipliedAlpha:(!boolean|undefined),aspect:(!string|undefined),mipLevel:(!GPUIntegerCoordinate|undefined),origin:(!GPUOrigin3D|undefined),texture:!GPUTexture}}
+ * @typedef {{colorSpace:(!string|undefined),premultipliedAlpha:(!boolean|undefined),texture:!GPUTexture,aspect:(!string|undefined),mipLevel:(!GPUIntegerCoordinate|undefined),origin:(!GPUOrigin3D|undefined)}}
  */
 var GPUImageCopyTextureTagged;
 /**
- * @typedef {{constants:(!Object<!string,!GPUPipelineConstantValue>|undefined),entryPoint:!string,module:!GPUShaderModule}}
+ * @typedef {{module:!GPUShaderModule,entryPoint:!string,constants:(!Object<!string,!GPUPipelineConstantValue>|undefined)}}
  */
 var GPUProgrammableStage;
 /**
@@ -2171,7 +2175,7 @@ var KeyframeEffectOptions;
  */
 var RTCDataChannelInit;
 /**
- * @typedef {{depthBias:(!GPUDepthBias|undefined),depthBiasClamp:(!number|undefined),depthBiasSlopeScale:(!number|undefined),depthCompare:(!string|undefined),depthWriteEnabled:(!boolean|undefined),format:!string,stencilBack:(!GPUStencilFaceState|undefined),stencilFront:(!GPUStencilFaceState|undefined),stencilReadMask:(!GPUStencilValue|undefined),stencilWriteMask:(!GPUStencilValue|undefined)}}
+ * @typedef {{format:!string,depthBias:(!GPUDepthBias|undefined),depthBiasClamp:(!number|undefined),depthBiasSlopeScale:(!number|undefined),depthCompare:(!string|undefined),depthWriteEnabled:(!boolean|undefined),stencilBack:(!GPUStencilFaceState|undefined),stencilFront:(!GPUStencilFaceState|undefined),stencilReadMask:(!GPUStencilValue|undefined),stencilWriteMask:(!GPUStencilValue|undefined)}}
  */
 var GPUDepthStencilState;
 /**
@@ -2359,7 +2363,7 @@ var EffectTiming;
  */
 var RsaHashedKeyGenParams;
 /**
- * @typedef {{colorFormats:!Array<!string>,depthStencilFormat:(!string|undefined),sampleCount:(!GPUSize32|undefined),label:(!string|undefined)}}
+ * @typedef {{depthReadOnly:(!boolean|undefined),stencilReadOnly:(!boolean|undefined),colorFormats:!Array<!string>,depthStencilFormat:(!string|undefined),sampleCount:(!GPUSize32|undefined),label:(!string|undefined)}}
  */
 var GPURenderBundleEncoderDescriptor;
 /**
@@ -2431,7 +2435,7 @@ var RTCCodecStats;
  */
 var ImageDataSettings;
 /**
- * @typedef {{depthLoadValue:GPULoadOpOrFloatUnion,depthReadOnly:(!boolean|undefined),depthStoreOp:!string,stencilLoadValue:GPULoadOpOrGPUStencilValueUnion,stencilReadOnly:(!boolean|undefined),stencilStoreOp:!string,view:!GPUTextureView}}
+ * @typedef {{view:!GPUTextureView,depthLoadValue:GPULoadOpOrFloatUnion,depthStoreOp:!string,depthReadOnly:(!boolean|undefined),stencilLoadValue:GPULoadOpOrGPUStencilValueUnion,stencilStoreOp:!string,stencilReadOnly:(!boolean|undefined)}}
  */
 var GPURenderPassDepthStencilAttachment;
 /**
@@ -2475,7 +2479,7 @@ var XRPermissionDescriptor;
  */
 var VideoEncoderConfig;
 /**
- * @typedef {{count:!GPUSize32,pipelineStatistics:(!Array<!string>|undefined),type:!string,label:(!string|undefined)}}
+ * @typedef {{type:!string,count:!GPUSize32,pipelineStatistics:(!Array<!string>|undefined),label:(!string|undefined)}}
  */
 var GPUQuerySetDescriptor;
 /**
@@ -2499,7 +2503,7 @@ var QueuingStrategy;
  */
 var WheelEventInit;
 /**
- * @typedef {{buffers:(!Array<?GPUVertexBufferLayout>|undefined),constants:(!Object<!string,!GPUPipelineConstantValue>|undefined),entryPoint:!string,module:!GPUShaderModule}}
+ * @typedef {{buffers:(!Array<?GPUVertexBufferLayout>|undefined),module:!GPUShaderModule,entryPoint:!string,constants:(!Object<!string,!GPUPipelineConstantValue>|undefined)}}
  */
 var GPUVertexState;
 /**
@@ -2539,11 +2543,11 @@ var KeyframeAnimationOptions;
  */
 var ImageEncodeOptions;
 /**
- * @typedef {{depthOrArrayLayers:(!GPUIntegerCoordinate|undefined),height:(!GPUIntegerCoordinate|undefined),width:!GPUIntegerCoordinate}}
+ * @typedef {{width:!GPUIntegerCoordinate,depthOrArrayLayers:(!GPUIntegerCoordinate|undefined),height:(!GPUIntegerCoordinate|undefined)}}
  */
 var GPUExtent3DDict;
 /**
- * @typedef {{dimension:(!string|undefined),format:!string,mipLevelCount:(!GPUIntegerCoordinate|undefined),sampleCount:(!GPUSize32|undefined),size:!GPUExtent3D,usage:!GPUTextureUsageFlags,label:(!string|undefined)}}
+ * @typedef {{size:!GPUExtent3D,dimension:(!string|undefined),mipLevelCount:(!GPUIntegerCoordinate|undefined),sampleCount:(!GPUSize32|undefined),format:!string,usage:!GPUTextureUsageFlags,label:(!string|undefined)}}
  */
 var GPUTextureDescriptor;
 /**
@@ -2707,7 +2711,7 @@ var ScrollToOptions;
  */
 var RTCSenderVideoTrackAttachmentStats;
 /**
- * @typedef {{alpha:!GPUBlendComponent,color:!GPUBlendComponent}}
+ * @typedef {{color:!GPUBlendComponent,alpha:!GPUBlendComponent}}
  */
 var GPUBlendState;
 /**
@@ -2747,7 +2751,7 @@ var PublicKeyCredentialParameters;
  */
 var IDBTransactionOptions;
 /**
- * @typedef {{binding:!GPUIndex32,buffer:(!GPUBufferBindingLayout|undefined),externalTexture:(!GPUExternalTextureBindingLayout|undefined),sampler:(!GPUSamplerBindingLayout|undefined),storageTexture:(!GPUStorageTextureBindingLayout|undefined),texture:(!GPUTextureBindingLayout|undefined),visibility:!GPUShaderStageFlags}}
+ * @typedef {{binding:!GPUIndex32,visibility:!GPUShaderStageFlags,buffer:(!GPUBufferBindingLayout|undefined),externalTexture:(!GPUExternalTextureBindingLayout|undefined),sampler:(!GPUSamplerBindingLayout|undefined),storageTexture:(!GPUStorageTextureBindingLayout|undefined),texture:(!GPUTextureBindingLayout|undefined)}}
  */
 var GPUBindGroupLayoutEntry;
 /**
@@ -2791,7 +2795,7 @@ var TextEncoderEncodeIntoResult;
  */
 var MediaKeySystemConfiguration;
 /**
- * @typedef {{origin:(!GPUOrigin2D|undefined),source:ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion}}
+ * @typedef {{source:ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion,origin:(!GPUOrigin2D|undefined)}}
  */
 var GPUImageCopyExternalImage;
 /**
@@ -2803,7 +2807,7 @@ var CompositionEventInit;
  */
 var CSSStyleSheetInit;
 /**
- * @typedef {{aspect:(!string|undefined),mipLevel:(!GPUIntegerCoordinate|undefined),origin:(!GPUOrigin3D|undefined),texture:!GPUTexture}}
+ * @typedef {{texture:!GPUTexture,aspect:(!string|undefined),mipLevel:(!GPUIntegerCoordinate|undefined),origin:(!GPUOrigin3D|undefined)}}
  */
 var GPUImageCopyTexture;
 /**

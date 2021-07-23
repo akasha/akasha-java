@@ -21,8 +21,8 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUVertexState extends GPUProgrammableStage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String entryPoint, @Nonnull final GPUShaderModule module) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).entryPoint( entryPoint ).module( module );
+  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint );
   }
 
   @JsProperty(
@@ -62,8 +62,8 @@ public interface GPUVertexState extends GPUProgrammableStage {
 
     @JsOverlay
     @Nonnull
-    default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {
-      setConstants( constants );
+    default Builder module(@Nonnull final GPUShaderModule module) {
+      setModule( module );
       return this;
     }
 
@@ -76,8 +76,8 @@ public interface GPUVertexState extends GPUProgrammableStage {
 
     @JsOverlay
     @Nonnull
-    default Builder module(@Nonnull final GPUShaderModule module) {
-      setModule( module );
+    default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {
+      setConstants( constants );
       return this;
     }
   }

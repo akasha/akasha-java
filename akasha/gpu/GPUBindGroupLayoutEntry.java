@@ -33,6 +33,14 @@ public interface GPUBindGroupLayoutEntry {
   void setBinding(int binding);
 
   @JsProperty(
+      name = "visibility"
+  )
+  int visibility();
+
+  @JsProperty
+  void setVisibility(int visibility);
+
+  @JsProperty(
       name = "buffer"
   )
   GPUBufferBindingLayout buffer();
@@ -72,14 +80,6 @@ public interface GPUBindGroupLayoutEntry {
   @JsProperty
   void setTexture(@Nonnull GPUTextureBindingLayout texture);
 
-  @JsProperty(
-      name = "visibility"
-  )
-  int visibility();
-
-  @JsProperty
-  void setVisibility(int visibility);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -92,6 +92,13 @@ public interface GPUBindGroupLayoutEntry {
     @Nonnull
     default Builder binding(final int binding) {
       setBinding( binding );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder visibility(final int visibility) {
+      setVisibility( visibility );
       return this;
     }
 
@@ -128,13 +135,6 @@ public interface GPUBindGroupLayoutEntry {
     @Nonnull
     default Builder texture(@Nonnull final GPUTextureBindingLayout texture) {
       setTexture( texture );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder visibility(final int visibility) {
-      setVisibility( visibility );
       return this;
     }
   }

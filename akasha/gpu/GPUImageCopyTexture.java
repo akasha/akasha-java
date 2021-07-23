@@ -26,6 +26,15 @@ public interface GPUImageCopyTexture {
   }
 
   @JsProperty(
+      name = "texture"
+  )
+  @Nonnull
+  GPUTexture texture();
+
+  @JsProperty
+  void setTexture(@Nonnull GPUTexture texture);
+
+  @JsProperty(
       name = "aspect"
   )
   @GPUTextureAspect
@@ -65,15 +74,6 @@ public interface GPUImageCopyTexture {
     setOrigin( GPUOrigin3D.of( origin ) );
   }
 
-  @JsProperty(
-      name = "texture"
-  )
-  @Nonnull
-  GPUTexture texture();
-
-  @JsProperty
-  void setTexture(@Nonnull GPUTexture texture);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -82,6 +82,13 @@ public interface GPUImageCopyTexture {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUImageCopyTexture {
+    @JsOverlay
+    @Nonnull
+    default Builder texture(@Nonnull final GPUTexture texture) {
+      setTexture( texture );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder aspect(@GPUTextureAspect @Nonnull final String aspect) {
@@ -121,13 +128,6 @@ public interface GPUImageCopyTexture {
     @Nonnull
     default Builder origin(@Nonnull final GPUOrigin3DDict origin) {
       setOrigin( origin );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder texture(@Nonnull final GPUTexture texture) {
-      setTexture( texture );
       return this;
     }
   }

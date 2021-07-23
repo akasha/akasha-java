@@ -66,6 +66,13 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
 
     @JsOverlay
     @Nonnull
+    default Builder texture(@Nonnull final GPUTexture texture) {
+      setTexture( texture );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder aspect(@GPUTextureAspect @Nonnull final String aspect) {
       setAspect( aspect );
       return this;
@@ -103,13 +110,6 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
     @Nonnull
     default Builder origin(@Nonnull final GPUOrigin3DDict origin) {
       setOrigin( origin );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder texture(@Nonnull final GPUTexture texture) {
-      setTexture( texture );
       return this;
     }
   }

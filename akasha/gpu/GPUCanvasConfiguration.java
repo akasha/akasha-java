@@ -27,24 +27,6 @@ public interface GPUCanvasConfiguration {
   }
 
   @JsProperty(
-      name = "colorSpace"
-  )
-  @GPUPredefinedColorSpace
-  String colorSpace();
-
-  @JsProperty
-  void setColorSpace(@GPUPredefinedColorSpace @Nonnull String colorSpace);
-
-  @JsProperty(
-      name = "compositingAlphaMode"
-  )
-  @GPUCanvasCompositingAlphaMode
-  String compositingAlphaMode();
-
-  @JsProperty
-  void setCompositingAlphaMode(@GPUCanvasCompositingAlphaMode @Nonnull String compositingAlphaMode);
-
-  @JsProperty(
       name = "device"
   )
   @Nonnull
@@ -62,6 +44,24 @@ public interface GPUCanvasConfiguration {
 
   @JsProperty
   void setFormat(@GPUTextureFormat @Nonnull String format);
+
+  @JsProperty(
+      name = "colorSpace"
+  )
+  @GPUPredefinedColorSpace
+  String colorSpace();
+
+  @JsProperty
+  void setColorSpace(@GPUPredefinedColorSpace @Nonnull String colorSpace);
+
+  @JsProperty(
+      name = "compositingAlphaMode"
+  )
+  @GPUCanvasCompositingAlphaMode
+  String compositingAlphaMode();
+
+  @JsProperty
+  void setCompositingAlphaMode(@GPUCanvasCompositingAlphaMode @Nonnull String compositingAlphaMode);
 
   @JsProperty(
       name = "size"
@@ -104,6 +104,20 @@ public interface GPUCanvasConfiguration {
   interface Builder extends GPUCanvasConfiguration {
     @JsOverlay
     @Nonnull
+    default Builder device(@Nonnull final GPUDevice device) {
+      setDevice( device );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder format(@GPUTextureFormat @Nonnull final String format) {
+      setFormat( format );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder colorSpace(@GPUPredefinedColorSpace @Nonnull final String colorSpace) {
       setColorSpace( colorSpace );
       return this;
@@ -114,20 +128,6 @@ public interface GPUCanvasConfiguration {
     default Builder compositingAlphaMode(
         @GPUCanvasCompositingAlphaMode @Nonnull final String compositingAlphaMode) {
       setCompositingAlphaMode( compositingAlphaMode );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder device(@Nonnull final GPUDevice device) {
-      setDevice( device );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
       return this;
     }
 

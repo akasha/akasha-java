@@ -21,38 +21,55 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURenderPassColorAttachment {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String loadValue, @GPUStoreOp @Nonnull final String storeOp,
-      @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).loadValue( loadValue ).storeOp( storeOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final String loadValue,
+      @GPUStoreOp @Nonnull final String storeOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUColor loadValue,
-      @GPUStoreOp @Nonnull final String storeOp, @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).loadValue( loadValue ).storeOp( storeOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final GPUColor loadValue,
+      @GPUStoreOp @Nonnull final String storeOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> loadValue,
-      @GPUStoreOp @Nonnull final String storeOp, @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).loadValue( loadValue ).storeOp( storeOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view,
+      @Nonnull final JsArray<Double> loadValue, @GPUStoreOp @Nonnull final String storeOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] loadValue,
-      @GPUStoreOp @Nonnull final String storeOp, @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).loadValue( loadValue ).storeOp( storeOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final double[] loadValue,
+      @GPUStoreOp @Nonnull final String storeOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUColorDict loadValue,
-      @GPUStoreOp @Nonnull final String storeOp, @Nonnull final GPUTextureView view) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).loadValue( loadValue ).storeOp( storeOp ).view( view );
+  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final GPUColorDict loadValue,
+      @GPUStoreOp @Nonnull final String storeOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
   }
+
+  @JsProperty(
+      name = "view"
+  )
+  @Nonnull
+  GPUTextureView view();
+
+  @JsProperty
+  void setView(@Nonnull GPUTextureView view);
+
+  @JsProperty(
+      name = "resolveTarget"
+  )
+  GPUTextureView resolveTarget();
+
+  @JsProperty
+  void setResolveTarget(@Nonnull GPUTextureView resolveTarget);
 
   @JsProperty(
       name = "loadValue"
@@ -89,14 +106,6 @@ public interface GPURenderPassColorAttachment {
   }
 
   @JsProperty(
-      name = "resolveTarget"
-  )
-  GPUTextureView resolveTarget();
-
-  @JsProperty
-  void setResolveTarget(@Nonnull GPUTextureView resolveTarget);
-
-  @JsProperty(
       name = "storeOp"
   )
   @GPUStoreOp
@@ -106,15 +115,6 @@ public interface GPURenderPassColorAttachment {
   @JsProperty
   void setStoreOp(@GPUStoreOp @Nonnull String storeOp);
 
-  @JsProperty(
-      name = "view"
-  )
-  @Nonnull
-  GPUTextureView view();
-
-  @JsProperty
-  void setView(@Nonnull GPUTextureView view);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -123,6 +123,20 @@ public interface GPURenderPassColorAttachment {
   )
   @ApiStatus.Experimental
   interface Builder extends GPURenderPassColorAttachment {
+    @JsOverlay
+    @Nonnull
+    default Builder view(@Nonnull final GPUTextureView view) {
+      setView( view );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder resolveTarget(@Nonnull final GPUTextureView resolveTarget) {
+      setResolveTarget( resolveTarget );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder loadValue(@Nonnull final String loadValue) {
@@ -160,22 +174,8 @@ public interface GPURenderPassColorAttachment {
 
     @JsOverlay
     @Nonnull
-    default Builder resolveTarget(@Nonnull final GPUTextureView resolveTarget) {
-      setResolveTarget( resolveTarget );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder storeOp(@GPUStoreOp @Nonnull final String storeOp) {
       setStoreOp( storeOp );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder view(@Nonnull final GPUTextureView view) {
-      setView( view );
       return this;
     }
   }

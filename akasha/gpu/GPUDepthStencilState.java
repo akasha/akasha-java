@@ -25,6 +25,16 @@ public interface GPUDepthStencilState {
   }
 
   @JsProperty(
+      name = "format"
+  )
+  @GPUTextureFormat
+  @Nonnull
+  String format();
+
+  @JsProperty
+  void setFormat(@GPUTextureFormat @Nonnull String format);
+
+  @JsProperty(
       name = "depthBias"
   )
   int depthBias();
@@ -64,16 +74,6 @@ public interface GPUDepthStencilState {
 
   @JsProperty
   void setDepthWriteEnabled(boolean depthWriteEnabled);
-
-  @JsProperty(
-      name = "format"
-  )
-  @GPUTextureFormat
-  @Nonnull
-  String format();
-
-  @JsProperty
-  void setFormat(@GPUTextureFormat @Nonnull String format);
 
   @JsProperty(
       name = "stencilBack"
@@ -117,6 +117,13 @@ public interface GPUDepthStencilState {
   interface Builder extends GPUDepthStencilState {
     @JsOverlay
     @Nonnull
+    default Builder format(@GPUTextureFormat @Nonnull final String format) {
+      setFormat( format );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder depthBias(final int depthBias) {
       setDepthBias( depthBias );
       return this;
@@ -147,13 +154,6 @@ public interface GPUDepthStencilState {
     @Nonnull
     default Builder depthWriteEnabled(final boolean depthWriteEnabled) {
       setDepthWriteEnabled( depthWriteEnabled );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
       return this;
     }
 
