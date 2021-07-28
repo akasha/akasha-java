@@ -1,5 +1,6 @@
 package akasha;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -47,4 +48,12 @@ public class HTMLOptionsCollection extends HTMLCollection {
   public final void setAt(final int index, @Nullable final HTMLOptionElement option) {
     Js.<JsArrayLike<HTMLOptionElement>>cast( this ).setAt( index, option );
   }
+
+  @HasNoSideEffects
+  @Nullable
+  public native HTMLOptionElement item(int index);
+
+  @HasNoSideEffects
+  @Nullable
+  public native HTMLOptionElement namedItem(@Nonnull String name);
 }

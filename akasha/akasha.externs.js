@@ -8977,6 +8977,18 @@ function HTMLOptionsCollection() {}
  */
 HTMLOptionsCollection.prototype.add = function(element,before) {}
 /**
+ * @param {!string} name
+ * @return {?HTMLOptionElement}
+ * @override
+ */
+HTMLOptionsCollection.prototype.namedItem = function(name) {}
+/**
+ * @param {!number} index
+ * @return {?HTMLOptionElement}
+ * @override
+ */
+HTMLOptionsCollection.prototype.item = function(index) {}
+/**
  * @param {!number} index
  * @return {undefined}
  */

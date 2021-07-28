@@ -44,7 +44,7 @@ public class JsObject
   }
 
   @Nonnull
-  private static native Object assign( @Nonnull JsObject target, @Nonnull Object... sources );
+  private static native JsObject assign( @Nonnull JsObject target, @Nonnull Object... sources );
 
   /**
    * The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
@@ -54,14 +54,14 @@ public class JsObject
    */
   @JsOverlay
   @Nonnull
-  public static Object create( @Nullable final Object proto,
-                               @Nullable final JsPropertyMap<ObjectPropertyDescriptor> props )
+  public static JsObject create( @Nullable final Object proto,
+                                 @Nullable final JsPropertyMap<ObjectPropertyDescriptor> props )
   {
     return create( Js.uncheckedCast( proto ), props );
   }
 
-  private static native Object create( @Nullable JsObject proto,
-                                       @Nullable JsPropertyMap<ObjectPropertyDescriptor> props );
+  private static native JsObject create( @Nullable JsObject proto,
+                                         @Nullable JsPropertyMap<ObjectPropertyDescriptor> props );
 
   /**
    * The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
@@ -77,7 +77,7 @@ public class JsObject
   }
 
   @Nonnull
-  private static native Object create( @Nullable JsObject proto );
+  private static native JsObject create( @Nullable JsObject proto );
 
   /**
    * The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.
@@ -168,7 +168,7 @@ public class JsObject
    * @see <a href="https://tc39.es/ecma262/#sec-object.fromentries">Object.fromEntries - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native Object fromEntries( @Nonnull JsIterable<ObjectPropertyEntry> iterable );
+  public static native JsObject fromEntries( @Nonnull JsIterable<ObjectPropertyEntry> iterable );
 
   @Nullable
   private static native ObjectPropertyDescriptor getOwnPropertyDescriptor( @Nonnull JsObject obj,
@@ -255,7 +255,7 @@ public class JsObject
   }
 
   @Nullable
-  private static native Object getPrototypeOf( @Nonnull JsObject obj );
+  private static native JsObject getPrototypeOf( @Nonnull JsObject obj );
 
   /**
    * The Object.getPrototypeOf() method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.
@@ -265,7 +265,7 @@ public class JsObject
    */
   @JsOverlay
   @Nullable
-  public static Object getPrototypeOf( @Nonnull final Object obj )
+  public static JsObject getPrototypeOf( @Nonnull final Object obj )
   {
     return getPrototypeOf( Js.uncheckedCast( obj ) );
   }
@@ -395,11 +395,53 @@ public class JsObject
   private static native JsArray<Any> values( @Nonnull JsObject obj );
 
   /**
+   * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.prototype.hasOwnProperty - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
+   */
+  public native boolean hasOwnProperty( @Nonnull Symbol prop );
+
+  /**
+   * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.prototype.hasOwnProperty - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
+   */
+  public native boolean hasOwnProperty( @Nonnull String prop );
+
+  /**
+   * The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable and is the object's own property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">Object.prototype.propertyIsEnumerable - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable">Object.prototype.propertyIsEnumerable - ECMAScript (ECMA-262)</a>
+   */
+  public native boolean propertyIsEnumerable( @Nonnull String prop );
+
+  /**
+   * The isPrototypeOf() method checks if an object exists in another object's prototype chain.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf">Object.prototype.isPrototypeOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.isprototypeof">Object.prototype.isPrototypeOf - ECMAScript (ECMA-262)</a>
+   */
+  public native boolean isPrototypeOf( @Nonnull Object object );
+
+  /**
    * The valueOf() method returns the wrapped primitive value of a Number object.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
    */
   @JsMethod( name = "valueOf" )
   public native Any valueOf_();
+
+  /**
+   * The valueOf() method returns the wrapped primitive value of a Number object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.prototype.toString - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.tostring">Object.prototype.toString - ECMAScript (ECMA-262)</a>
+   */
+  @JsMethod( name = "toString" )
+  @Nonnull
+  public native String toString_();
 }
