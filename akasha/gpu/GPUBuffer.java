@@ -36,13 +36,13 @@ public class GPUBuffer extends JsObject {
   public native ArrayBuffer getMappedRange();
 
   @Nonnull
-  public native Promise<Void> mapAsync(int mode, int offset, int size);
+  public native Promise<Void> mapAsync(@GPUMapModeFlags int mode, int offset, int size);
 
   @Nonnull
-  public native Promise<Void> mapAsync(int mode, int offset);
+  public native Promise<Void> mapAsync(@GPUMapModeFlags int mode, int offset);
 
   @Nonnull
-  public native Promise<Void> mapAsync(int mode);
+  public native Promise<Void> mapAsync(@GPUMapModeFlags int mode);
 
   public native void unmap();
 }

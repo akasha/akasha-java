@@ -59,10 +59,6 @@ var WebGLExtension;
  */
 var WebGLCommonExtension;
 /**
- * @typedef {!number}
- */
-var GPUMapModeFlags;
-/**
  * @typedef {(!Int8Array|!Int16Array|!Int32Array|!Uint8Array|!Uint16Array|!Uint32Array|!Uint8ClampedArray)}
  */
 var IntegerTypedArray;
@@ -119,10 +115,6 @@ var BluetoothDescriptorUUID;
  */
 var GPUSize64;
 /**
- * @typedef {!number}
- */
-var GPUColorWriteFlags;
-/**
  * @typedef {(!Request|!string)}
  */
 var RequestInfo;
@@ -138,10 +130,6 @@ var XMLHttpRequestBodyInit;
  * @typedef {?EventHandler}
  */
 var NullableEventHandler;
-/**
- * @typedef {!number}
- */
-var GPUTextureUsageFlags;
 /**
  * @typedef {!Array<!ClipboardItem>}
  */
@@ -169,15 +157,7 @@ var GPUColor;
 /**
  * @typedef {!number}
  */
-var GPUShaderStageFlags;
-/**
- * @typedef {!number}
- */
 var GPUSignedOffset32;
-/**
- * @typedef {!number}
- */
-var GPUBufferUsageFlags;
 /**
  * @typedef {(!BufferSource|!Blob|!string)}
  */
@@ -1251,7 +1231,7 @@ var GPUBindGroupDescriptor;
  */
 var PopStateEventInit;
 /**
- * @typedef {{device:!GPUDevice,format:!string,colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),size:(!GPUExtent3D|undefined),usage:(!GPUTextureUsageFlags|undefined)}}
+ * @typedef {{device:!GPUDevice,format:!string,colorSpace:(!string|undefined),compositingAlphaMode:(!string|undefined),size:(!GPUExtent3D|undefined),usage:(!GPUFlagsConstant|undefined)}}
  */
 var GPUCanvasConfiguration;
 /**
@@ -1463,7 +1443,7 @@ var ConstrainDOMStringParameters;
  */
 var ModuleImportDescriptor;
 /**
- * @typedef {{size:!GPUSize64,usage:!GPUBufferUsageFlags,mappedAtCreation:(!boolean|undefined),label:(!string|undefined)}}
+ * @typedef {{size:!GPUSize64,usage:!GPUFlagsConstant,mappedAtCreation:(!boolean|undefined),label:(!string|undefined)}}
  */
 var GPUBufferDescriptor;
 /**
@@ -1723,7 +1703,7 @@ var RTCRemoteOutboundRtpStreamStats;
  */
 var RTCRtpSynchronizationSource;
 /**
- * @typedef {{format:!string,blend:(!GPUBlendState|undefined),writeMask:(!GPUColorWriteFlags|undefined)}}
+ * @typedef {{format:!string,blend:(!GPUBlendState|undefined),writeMask:(!GPUFlagsConstant|undefined)}}
  */
 var GPUColorTargetState;
 /**
@@ -2547,7 +2527,7 @@ var ImageEncodeOptions;
  */
 var GPUExtent3DDict;
 /**
- * @typedef {{size:!GPUExtent3D,dimension:(!string|undefined),mipLevelCount:(!GPUIntegerCoordinate|undefined),sampleCount:(!GPUSize32|undefined),format:!string,usage:!GPUTextureUsageFlags,label:(!string|undefined)}}
+ * @typedef {{size:!GPUExtent3D,dimension:(!string|undefined),mipLevelCount:(!GPUIntegerCoordinate|undefined),sampleCount:(!GPUSize32|undefined),format:!string,usage:!GPUFlagsConstant,label:(!string|undefined)}}
  */
 var GPUTextureDescriptor;
 /**
@@ -2751,7 +2731,7 @@ var PublicKeyCredentialParameters;
  */
 var IDBTransactionOptions;
 /**
- * @typedef {{binding:!GPUIndex32,visibility:!GPUShaderStageFlags,buffer:(!GPUBufferBindingLayout|undefined),externalTexture:(!GPUExternalTextureBindingLayout|undefined),sampler:(!GPUSamplerBindingLayout|undefined),storageTexture:(!GPUStorageTextureBindingLayout|undefined),texture:(!GPUTextureBindingLayout|undefined)}}
+ * @typedef {{binding:!GPUIndex32,visibility:!GPUFlagsConstant,buffer:(!GPUBufferBindingLayout|undefined),externalTexture:(!GPUExternalTextureBindingLayout|undefined),sampler:(!GPUSamplerBindingLayout|undefined),storageTexture:(!GPUStorageTextureBindingLayout|undefined),texture:(!GPUTextureBindingLayout|undefined)}}
  */
 var GPUBindGroupLayoutEntry;
 /**
@@ -19010,7 +18990,7 @@ WebGL2RenderingContext.prototype.isShader = function(shader) {}
 function GPUBuffer() {}
 /** @type {?string} */ GPUBuffer.prototype.label;
 /**
- * @param {!GPUMapModeFlags} mode
+ * @param {!GPUFlagsConstant} mode
  * @param {!GPUSize64=} offset
  * @param {!GPUSize64=} size
  * @return {!Promise<undefined>}

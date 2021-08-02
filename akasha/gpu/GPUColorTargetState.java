@@ -45,10 +45,11 @@ public interface GPUColorTargetState {
   @JsProperty(
       name = "writeMask"
   )
+  @GPUColorWriteFlags
   int writeMask();
 
   @JsProperty
-  void setWriteMask(int writeMask);
+  void setWriteMask(@GPUColorWriteFlags @Nonnull int writeMask);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -74,7 +75,7 @@ public interface GPUColorTargetState {
 
     @JsOverlay
     @Nonnull
-    default Builder writeMask(final int writeMask) {
+    default Builder writeMask(@GPUColorWriteFlags final int writeMask) {
       setWriteMask( writeMask );
       return this;
     }

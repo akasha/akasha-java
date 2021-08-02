@@ -20,7 +20,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(final int size, final int usage) {
+  static Builder create(final int size, @GPUBufferUsageFlags final int usage) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).usage( usage );
   }
 
@@ -35,10 +35,12 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "usage"
   )
+  @GPUBufferUsageFlags
+  @Nonnull
   int usage();
 
   @JsProperty
-  void setUsage(int usage);
+  void setUsage(@GPUBufferUsageFlags @Nonnull int usage);
 
   @JsProperty(
       name = "mappedAtCreation"
@@ -65,7 +67,7 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
 
     @JsOverlay
     @Nonnull
-    default Builder usage(final int usage) {
+    default Builder usage(@GPUBufferUsageFlags final int usage) {
       setUsage( usage );
       return this;
     }

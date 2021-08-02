@@ -22,28 +22,28 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUExtent3D size,
-      @GPUTextureFormat @Nonnull final String format, final int usage) {
+      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final JsArray<Double> size,
-      @GPUTextureFormat @Nonnull final String format, final int usage) {
+      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final double[] size,
-      @GPUTextureFormat @Nonnull final String format, final int usage) {
+      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUExtent3DDict size,
-      @GPUTextureFormat @Nonnull final String format, final int usage) {
+      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
   }
 
@@ -109,10 +109,12 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "usage"
   )
+  @GPUTextureUsageFlags
+  @Nonnull
   int usage();
 
   @JsProperty
-  void setUsage(int usage);
+  void setUsage(@GPUTextureUsageFlags @Nonnull int usage);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -180,7 +182,7 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
 
     @JsOverlay
     @Nonnull
-    default Builder usage(final int usage) {
+    default Builder usage(@GPUTextureUsageFlags final int usage) {
       setUsage( usage );
       return this;
     }

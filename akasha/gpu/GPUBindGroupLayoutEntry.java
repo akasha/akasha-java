@@ -20,7 +20,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBindGroupLayoutEntry {
   @JsOverlay
   @Nonnull
-  static Builder create(final int binding, final int visibility) {
+  static Builder create(final int binding, @GPUShaderStageFlags final int visibility) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).binding( binding ).visibility( visibility );
   }
 
@@ -35,10 +35,12 @@ public interface GPUBindGroupLayoutEntry {
   @JsProperty(
       name = "visibility"
   )
+  @GPUShaderStageFlags
+  @Nonnull
   int visibility();
 
   @JsProperty
-  void setVisibility(int visibility);
+  void setVisibility(@GPUShaderStageFlags @Nonnull int visibility);
 
   @JsProperty(
       name = "buffer"
@@ -97,7 +99,7 @@ public interface GPUBindGroupLayoutEntry {
 
     @JsOverlay
     @Nonnull
-    default Builder visibility(final int visibility) {
+    default Builder visibility(@GPUShaderStageFlags final int visibility) {
       setVisibility( visibility );
       return this;
     }

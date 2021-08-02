@@ -89,10 +89,11 @@ public interface GPUCanvasConfiguration {
   @JsProperty(
       name = "usage"
   )
+  @GPUTextureUsageFlags
   int usage();
 
   @JsProperty
-  void setUsage(int usage);
+  void setUsage(@GPUTextureUsageFlags @Nonnull int usage);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -161,7 +162,7 @@ public interface GPUCanvasConfiguration {
 
     @JsOverlay
     @Nonnull
-    default Builder usage(final int usage) {
+    default Builder usage(@GPUTextureUsageFlags final int usage) {
       setUsage( usage );
       return this;
     }
