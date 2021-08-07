@@ -113,7 +113,7 @@ public class HTMLSelectElement extends HTMLElement {
       name = "selectedOptions"
   )
   @Nonnull
-  public native HTMLReadOnlyOptionsCollection selectedOptions();
+  public native HTMLCollection selectedOptions();
 
   /**
    * The HTMLSelectElement.type read-only property returns the form control's type.

@@ -1,4 +1,4 @@
-package akasha;
+package akasha.core;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

@@ -1,6 +1,5 @@
 package akasha.core;
 
-import akasha.StringOrLongLongUnion;
 import akasha.lang.JsArray;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;

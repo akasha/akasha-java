@@ -23688,3 +23688,9 @@ function open(url,target,features) {}
  * @return {undefined}
  */
 function moveTo(x,y) {}
+/**
+ * This type def is an alias because the type is used in closure/base that is added during J2CL compiles.
+ *
+ * @typedef {Document}
+ */
+var HTMLDocument;
