@@ -2,7 +2,6 @@ package akasha.gpu;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,25 +24,34 @@ public class GPUSupportedLimits extends JsObject {
   public native int maxBindGroups();
 
   @JsProperty(
-      name = "maxComputePerDimensionDispatchSize"
+      name = "maxComputeInvocationsPerWorkgroup"
   )
-  public native int maxComputePerDimensionDispatchSize();
+  public native int maxComputeInvocationsPerWorkgroup();
 
   @JsProperty(
-      name = "maxComputeWorkgroupInvocations"
+      name = "maxComputeWorkgroupSizeX"
   )
-  public native int maxComputeWorkgroupInvocations();
+  public native int maxComputeWorkgroupSizeX();
 
   @JsProperty(
-      name = "maxComputeWorkgroupSize"
+      name = "maxComputeWorkgroupSizeY"
   )
-  @Nonnull
-  public native GPUExtent3D maxComputeWorkgroupSize();
+  public native int maxComputeWorkgroupSizeY();
+
+  @JsProperty(
+      name = "maxComputeWorkgroupSizeZ"
+  )
+  public native int maxComputeWorkgroupSizeZ();
 
   @JsProperty(
       name = "maxComputeWorkgroupStorageSize"
   )
   public native int maxComputeWorkgroupStorageSize();
+
+  @JsProperty(
+      name = "maxComputeWorkgroupsPerDimension"
+  )
+  public native int maxComputeWorkgroupsPerDimension();
 
   @JsProperty(
       name = "maxDynamicStorageBuffersPerPipelineLayout"

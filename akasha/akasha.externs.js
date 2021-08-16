@@ -2735,7 +2735,7 @@ var IDBTransactionOptions;
  */
 var GPUBindGroupLayoutEntry;
 /**
- * @typedef {{requiredFeatures:(!Array<!string>|undefined),requiredLimits:(!Object<!string,!GPUSize32>|undefined),label:(!string|undefined)}}
+ * @typedef {{requiredFeatures:(!Array<!string>|undefined),requiredLimits:(!Object<!string,!GPUSize64>|undefined),label:(!string|undefined)}}
  */
 var GPUDeviceDescriptor;
 /**
@@ -11035,10 +11035,10 @@ function GPUTextureUsage() {}
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.COPY_SRC;
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.RENDER_ATTACHMENT;
 /** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.RENDER_ATTACHMENT;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.SHADER_READ;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.SHADER_READ;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.STORAGE;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.STORAGE;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.STORAGE_BINDING;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.STORAGE_BINDING;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.TEXTURE_BINDING;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.TEXTURE_BINDING;
 /**
  * @constructor
  * @private
@@ -19119,10 +19119,12 @@ function HTMLSourceElement() {}
  */
 function GPUSupportedLimits() {}
 /** @type {!number} */ GPUSupportedLimits.prototype.maxBindGroups;
-/** @type {!number} */ GPUSupportedLimits.prototype.maxComputePerDimensionDispatchSize;
-/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupInvocations;
-/** @type {!GPUExtent3D} */ GPUSupportedLimits.prototype.maxComputeWorkgroupSize;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeInvocationsPerWorkgroup;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupSizeX;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupSizeY;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupSizeZ;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupStorageSize;
+/** @type {!number} */ GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout;
 /** @type {!number} */ GPUSupportedLimits.prototype.maxInterStageShaderComponents;

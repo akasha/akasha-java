@@ -11,8 +11,8 @@ import org.intellij.lang.annotations.MagicConstant;
     flags = {
         GPUTextureUsage.COPY_SRC,
         GPUTextureUsage.COPY_DST,
-        GPUTextureUsage.SHADER_READ,
-        GPUTextureUsage.STORAGE,
+        GPUTextureUsage.TEXTURE_BINDING,
+        GPUTextureUsage.STORAGE_BINDING,
         GPUTextureUsage.RENDER_ATTACHMENT
     }
 )
@@ -28,16 +28,16 @@ public @interface GPUTextureUsageFlags {
     }
 
     public static void assertValid(final int value) {
-      assert isValid( value ) : "@GPUTextureUsageFlags annotated value must be one of [GPUTextureUsage.COPY_SRC, GPUTextureUsage.COPY_DST, GPUTextureUsage.SHADER_READ, GPUTextureUsage.STORAGE, GPUTextureUsage.RENDER_ATTACHMENT] but is " + value;
+      assert isValid( value ) : "@GPUTextureUsageFlags annotated value must be one of [GPUTextureUsage.COPY_SRC, GPUTextureUsage.COPY_DST, GPUTextureUsage.TEXTURE_BINDING, GPUTextureUsage.STORAGE_BINDING, GPUTextureUsage.RENDER_ATTACHMENT] but is " + value;
     }
 
     public static boolean isValid(final int value) {
-      return GPUTextureUsage.COPY_SRC == value || GPUTextureUsage.COPY_DST == value || GPUTextureUsage.SHADER_READ == value || GPUTextureUsage.STORAGE == value || GPUTextureUsage.RENDER_ATTACHMENT == value;
+      return GPUTextureUsage.COPY_SRC == value || GPUTextureUsage.COPY_DST == value || GPUTextureUsage.TEXTURE_BINDING == value || GPUTextureUsage.STORAGE_BINDING == value || GPUTextureUsage.RENDER_ATTACHMENT == value;
     }
 
     @Nonnull
     public static String describe(final int value) {
-      return GPUTextureUsage.COPY_SRC == value ? "COPY_SRC" : GPUTextureUsage.COPY_DST == value ? "COPY_DST" : GPUTextureUsage.SHADER_READ == value ? "SHADER_READ" : GPUTextureUsage.STORAGE == value ? "STORAGE" : GPUTextureUsage.RENDER_ATTACHMENT == value ? "RENDER_ATTACHMENT" : "Unknown value " + value;
+      return GPUTextureUsage.COPY_SRC == value ? "COPY_SRC" : GPUTextureUsage.COPY_DST == value ? "COPY_DST" : GPUTextureUsage.TEXTURE_BINDING == value ? "TEXTURE_BINDING" : GPUTextureUsage.STORAGE_BINDING == value ? "STORAGE_BINDING" : GPUTextureUsage.RENDER_ATTACHMENT == value ? "RENDER_ATTACHMENT" : "Unknown value " + value;
     }
   }
 }

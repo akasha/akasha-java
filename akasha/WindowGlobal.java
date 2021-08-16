@@ -1111,6 +1111,11 @@ public final class WindowGlobal {
   )
   public static native int length();
 
+  @JsOverlay
+  public static boolean isLocalStorageSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Window_localStorage__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Window_localStorage__supported" ) ) ? false : Js.global().has( "localStorage" );
+  }
+
   /**
    * The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
    *
@@ -1373,6 +1378,11 @@ public final class WindowGlobal {
   @Nonnull
   public static native Window self();
 
+  @JsOverlay
+  public static boolean isSessionStorageSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Window_sessionStorage__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Window_sessionStorage__supported" ) ) ? false : Js.global().has( "sessionStorage" );
+  }
+
   /**
    * The read-only sessionStorage property accesses a session Storage object for the current origin. sessionStorage is similar to localStorage; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
    *
@@ -1384,6 +1394,11 @@ public final class WindowGlobal {
   )
   @Nonnull
   public static native Storage sessionStorage();
+
+  @JsOverlay
+  public static boolean isSpeechSynthesisSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Window_speechSynthesis__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Window_speechSynthesis__supported" ) ) ? false : Js.global().has( "speechSynthesis" );
+  }
 
   /**
    * The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality.

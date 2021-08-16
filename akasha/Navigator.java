@@ -12,9 +12,11 @@ import akasha.xr.XRSystem;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 import org.jetbrains.annotations.ApiStatus;
 
 /**
@@ -69,6 +71,11 @@ public class Navigator extends JsObject {
   @Nonnull
   public native String appVersion();
 
+  @JsOverlay
+  public final boolean isBluetoothSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_bluetooth__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_bluetooth__supported" ) ) ? false : Js.asPropertyMap( this ).has( "bluetooth" );
+  }
+
   @JsProperty(
       name = "bluetooth"
   )
@@ -121,6 +128,11 @@ public class Navigator extends JsObject {
   )
   @Nonnull
   public native Geolocation geolocation();
+
+  @JsOverlay
+  public final boolean isGpuSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_gpu__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_gpu__supported" ) ) ? false : Js.asPropertyMap( this ).has( "gpu" );
+  }
 
   @JsProperty(
       name = "gpu"

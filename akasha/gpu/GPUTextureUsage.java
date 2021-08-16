@@ -25,10 +25,10 @@ public class GPUTextureUsage extends JsObject {
   public static final int RENDER_ATTACHMENT = 0x10;
 
   @JsOverlay
-  public static final int SHADER_READ = 0x04;
+  public static final int STORAGE_BINDING = 0x08;
 
   @JsOverlay
-  public static final int STORAGE = 0x08;
+  public static final int TEXTURE_BINDING = 0x04;
 
   protected GPUTextureUsage() {
   }
