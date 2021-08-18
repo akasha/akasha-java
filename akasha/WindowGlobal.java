@@ -1055,6 +1055,11 @@ public final class WindowGlobal {
   @Nonnull
   public static native History history();
 
+  @JsOverlay
+  public static boolean isIndexedDBSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Window_indexedDB__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Window_indexedDB__supported" ) ) ? false : Js.global().has( "indexedDB" );
+  }
+
   /**
    * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
    *

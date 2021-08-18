@@ -1060,6 +1060,11 @@ public class Window extends EventTarget {
   @Nonnull
   public native History history();
 
+  @JsOverlay
+  public final boolean isIndexedDBSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Window_indexedDB__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Window_indexedDB__supported" ) ) ? false : Js.asPropertyMap( this ).has( "indexedDB" );
+  }
+
   /**
    * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
    *

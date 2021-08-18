@@ -82,6 +82,11 @@ public class Navigator extends JsObject {
   @Nonnull
   public native Bluetooth bluetooth();
 
+  @JsOverlay
+  public final boolean isClipboardSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_clipboard__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_clipboard__supported" ) ) ? false : Js.asPropertyMap( this ).has( "clipboard" );
+  }
+
   /**
    * The Clipboard API adds to the Navigator interface the read-only clipboard property, which returns the Clipboard object used to read and write the clipboard's contents.
    *
@@ -105,6 +110,11 @@ public class Navigator extends JsObject {
   )
   public native boolean cookieEnabled();
 
+  @JsOverlay
+  public final boolean isCredentialsSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_credentials__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_credentials__supported" ) ) ? false : Js.asPropertyMap( this ).has( "credentials" );
+  }
+
   /**
    * The credentials property of the Navigator interface returns the CredentialsContainer interface, which exposes methods to request credentials. The CredentialsContainer interface also notifies the user agent when an interesting event occurs, such as a successful sign-in or sign-out. This interface can be used for feature detection.
    *
@@ -116,6 +126,11 @@ public class Navigator extends JsObject {
   )
   @Nonnull
   public native CredentialsContainer credentials();
+
+  @JsOverlay
+  public final boolean isGeolocationSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_geolocation__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_geolocation__supported" ) ) ? false : Js.asPropertyMap( this ).has( "geolocation" );
+  }
 
   /**
    * The Navigator.geolocation read-only property returns a Geolocation object that gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
@@ -187,6 +202,11 @@ public class Navigator extends JsObject {
   )
   public native int maxTouchPoints();
 
+  @JsOverlay
+  public final boolean isMediaDevicesSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_mediaDevices__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_mediaDevices__supported" ) ) ? false : Js.asPropertyMap( this ).has( "mediaDevices" );
+  }
+
   /**
    * The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
    *
@@ -238,6 +258,11 @@ public class Navigator extends JsObject {
       name = "pdfViewerEnabled"
   )
   public native boolean pdfViewerEnabled();
+
+  @JsOverlay
+  public final boolean isPermissionsSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_permissions__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_permissions__supported" ) ) ? false : Js.asPropertyMap( this ).has( "permissions" );
+  }
 
   /**
    * The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API.
@@ -297,6 +322,11 @@ public class Navigator extends JsObject {
   )
   @Nonnull
   public native String productSub();
+
+  @JsOverlay
+  public final boolean isServiceWorkerSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_serviceWorker__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_serviceWorker__supported" ) ) ? false : Js.asPropertyMap( this ).has( "serviceWorker" );
+  }
 
   /**
    * The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker.
@@ -358,6 +388,11 @@ public class Navigator extends JsObject {
   @Nonnull
   public native String vendorSub();
 
+  @JsOverlay
+  public final boolean isWakeLockSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_wakeLock__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_wakeLock__supported" ) ) ? false : Js.asPropertyMap( this ).has( "wakeLock" );
+  }
+
   /**
    * The wakeLock read-only property returns a WakeLock interface which allows a document to acquire a screen wake lock. While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.
    *
@@ -380,6 +415,11 @@ public class Navigator extends JsObject {
   )
   public native boolean webdriver();
 
+  @JsOverlay
+  public final boolean isXrSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_xr__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_xr__supported" ) ) ? false : Js.asPropertyMap( this ).has( "xr" );
+  }
+
   /**
    * The read-only xr property provided by the Navigator or WorkerNavigator interface returns an XRSystem object which can be used to access the WebXR Device API.
    *
@@ -391,6 +431,11 @@ public class Navigator extends JsObject {
   )
   @Nonnull
   public native XRSystem xr();
+
+  @JsOverlay
+  public final boolean isSendBeaconSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_sendBeacon__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_sendBeacon__supported" ) ) ? false : Js.asPropertyMap( this ).has( "sendBeacon" );
+  }
 
   /**
    * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
@@ -464,6 +509,11 @@ public class Navigator extends JsObject {
    */
   public native boolean sendBeacon(@Nonnull String url);
 
+  @JsOverlay
+  public final boolean isRequestMediaKeySystemAccessSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_requestMediaKeySystemAccess__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_requestMediaKeySystemAccess__supported" ) ) ? false : Js.asPropertyMap( this ).has( "requestMediaKeySystemAccess" );
+  }
+
   /**
    * The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web.
    *
@@ -484,6 +534,11 @@ public class Navigator extends JsObject {
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
       @Nonnull MediaKeySystemConfiguration[] supportedConfigurations);
 
+  @JsOverlay
+  public final boolean isGetGamepadsSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_getGamepads__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_getGamepads__supported" ) ) ? false : Js.asPropertyMap( this ).has( "getGamepads" );
+  }
+
   /**
    * The Navigator.getGamepads() method returns an array of Gamepad objects, one for each gamepad connected to the device.
    *
@@ -492,6 +547,11 @@ public class Navigator extends JsObject {
    */
   @Nonnull
   public native JsArray<Gamepad> getGamepads();
+
+  @JsOverlay
+  public final boolean isVibrateSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_vibrate__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_vibrate__supported" ) ) ? false : Js.asPropertyMap( this ).has( "vibrate" );
+  }
 
   /**
    * The Navigator.vibrate() method pulses the vibration hardware on the device, if such hardware exists. If the device doesn't support vibration, this method has no effect. If a vibration pattern is already in progress when this method is called, the previous pattern is halted and the new one begins instead.
@@ -524,6 +584,11 @@ public class Navigator extends JsObject {
    * @see <a href="https://dev.w3.org/2009/dap/vibration/">Vibration API</a>
    */
   public native boolean vibrate(@Nonnull double[] pattern);
+
+  @JsOverlay
+  public final boolean isShareSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_share__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_share__supported" ) ) ? false : Js.asPropertyMap( this ).has( "share" );
+  }
 
   /**
    * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.
