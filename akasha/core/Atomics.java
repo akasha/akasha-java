@@ -3,6 +3,7 @@ package akasha.core;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -126,7 +127,7 @@ public final class Atomics {
   @JsMethod(
       name = "wait"
   )
-  @Nonnull
+  @JsNonNull
   public static native JsString wait_(@Nonnull IntegerTypedArray typedArray, int index, int value,
       int timeout);
 
@@ -143,6 +144,6 @@ public final class Atomics {
   @JsMethod(
       name = "wait"
   )
-  @Nonnull
+  @JsNonNull
   public static native JsString wait_(@Nonnull IntegerTypedArray typedArray, int index, int value);
 }

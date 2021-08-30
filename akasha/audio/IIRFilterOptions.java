@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,11 +48,11 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   @JsProperty(
       name = "feedback"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Double> feedback();
 
   @JsProperty
-  void setFeedback(@Nonnull JsArray<Double> feedback);
+  void setFeedback(@JsNonNull JsArray<Double> feedback);
 
   @JsOverlay
   default void setFeedback(@Nonnull final double... feedback) {
@@ -61,11 +62,11 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   @JsProperty(
       name = "feedforward"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Double> feedforward();
 
   @JsProperty
-  void setFeedforward(@Nonnull JsArray<Double> feedforward);
+  void setFeedforward(@JsNonNull JsArray<Double> feedforward);
 
   @JsOverlay
   default void setFeedforward(@Nonnull final double... feedforward) {

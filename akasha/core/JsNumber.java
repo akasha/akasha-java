@@ -4,6 +4,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -166,7 +167,7 @@ public class JsNumber extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.toexponential">(ECMAScript) # sec-number.prototype.toexponential</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toExponential(int fractionDigits);
 
   /**
@@ -176,7 +177,7 @@ public class JsNumber extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.toexponential">(ECMAScript) # sec-number.prototype.toexponential</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toExponential();
 
   /**
@@ -186,7 +187,7 @@ public class JsNumber extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tofixed">(ECMAScript) # sec-number.prototype.tofixed</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toFixed(int digits);
 
   /**
@@ -196,7 +197,7 @@ public class JsNumber extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tofixed">(ECMAScript) # sec-number.prototype.tofixed</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toFixed();
 
   /**
@@ -206,7 +207,7 @@ public class JsNumber extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.toprecision">(ECMAScript) # sec-number.prototype.toprecision</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toPrecision(int precision);
 
   /**
@@ -216,7 +217,7 @@ public class JsNumber extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.toprecision">(ECMAScript) # sec-number.prototype.toprecision</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toPrecision();
 
   /**
@@ -228,7 +229,7 @@ public class JsNumber extends JsObject {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_(int radix);
 
   /**
@@ -240,7 +241,7 @@ public class JsNumber extends JsObject {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 
   /**

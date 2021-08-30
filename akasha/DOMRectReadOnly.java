@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly">DOMRectReadOnly - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">DOMRectReadOnly - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">(Geometry Interfaces 1) # DOMRect</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -153,7 +154,7 @@ public class DOMRectReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect">DOMRectReadOnly.fromRect - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrect-fromrect">fromRect() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native DOMRectReadOnly fromRect(@Nonnull DOMRectInit other);
 
   /**
@@ -162,9 +163,9 @@ public class DOMRectReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect">DOMRectReadOnly.fromRect - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-domrect-fromrect">fromRect() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native DOMRectReadOnly fromRect();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

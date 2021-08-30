@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase 
   @JsProperty(
       name = "compute"
   )
-  @Nonnull
+  @JsNonNull
   GPUProgrammableStage compute();
 
   @JsProperty
-  void setCompute(@Nonnull GPUProgrammableStage compute);
+  void setCompute(@JsNonNull GPUProgrammableStage compute);
 
   @Generated("org.realityforge.webtack")
   @JsType(

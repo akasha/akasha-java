@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public class TextTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onaddtrack">TextTrackList.onaddtrack - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">TextTrackList: onaddtrack - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public TrackEventHandler onaddtrack;
 
   /**
@@ -38,7 +39,7 @@ public class TextTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onchange">TextTrackList.onchange - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">TextTrackList: onchange - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   /**
@@ -47,8 +48,8 @@ public class TextTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onremovetrack">TextTrackList.onremovetrack - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">TextTrackList: onremovetrack - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onremovetrack;
+  @JsNullable
+  public TrackEventHandler onremovetrack;
 
   protected TextTrackList() {
   }
@@ -70,11 +71,11 @@ public class TextTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/getTrackById">TextTrackList.getTrackById - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttracklist-gettrackbyid">TextTrackList.getTrackById() - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public native TextTrack getTrackById(@Nonnull String id);
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final TextTrack getAt(final int index) {
     return Js.<JsArrayLike<TextTrack>>cast( this ).getAt( index );
   }
@@ -111,6 +112,40 @@ public class TextTrackList extends EventTarget {
   @JsOverlay
   public final void removeAddtrackListener(@Nonnull final TrackEventListener callback) {
     removeEventListener( "addtrack", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addRemovetrackListener(@Nonnull final TrackEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "removetrack", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addRemovetrackListener(@Nonnull final TrackEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "removetrack", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addRemovetrackListener(@Nonnull final TrackEventListener callback) {
+    addEventListener( "removetrack", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeRemovetrackListener(@Nonnull final TrackEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "removetrack", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeRemovetrackListener(@Nonnull final TrackEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "removetrack", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeRemovetrackListener(@Nonnull final TrackEventListener callback) {
+    removeEventListener( "removetrack", Js.cast( callback ) );
   }
 
   @JsOverlay

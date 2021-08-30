@@ -4,7 +4,8 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,7 +29,7 @@ public class MediaList extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/mediaText">MediaList.mediaText - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom/#dom-medialist-mediatext">mediaText - CSS Object Model (CSSOM)</a>
    */
-  @Nonnull
+  @JsNonNull
   public String mediaText;
 
   protected MediaList() {
@@ -44,6 +45,6 @@ public class MediaList extends JsObject {
   public native void deleteMedium(@Nonnull String medium);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String item(int index);
 }

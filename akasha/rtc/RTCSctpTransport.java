@@ -5,6 +5,7 @@ import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     name = "RTCSctpTransport"
 )
 public class RTCSctpTransport extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onstatechange;
 
   protected RTCSctpTransport() {

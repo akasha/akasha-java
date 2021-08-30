@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,7 +35,7 @@ public interface AudioParamDescriptor {
   String automationRate();
 
   @JsProperty
-  void setAutomationRate(@AutomationRate @Nonnull String automationRate);
+  void setAutomationRate(@AutomationRate @JsNonNull String automationRate);
 
   @JsProperty(
       name = "defaultValue"
@@ -63,11 +64,11 @@ public interface AudioParamDescriptor {
   @JsProperty(
       name = "name"
   )
-  @Nonnull
+  @JsNonNull
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   /**
    * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for AudioParam objects.

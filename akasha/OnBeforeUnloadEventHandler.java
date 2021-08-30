@@ -2,13 +2,13 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNullable;
 
 @Generated("org.realityforge.webtack")
 @JsFunction
 @FunctionalInterface
 public interface OnBeforeUnloadEventHandler {
-  @Nullable
+  @JsNullable
   String onInvoke(@Nonnull Event event);
 }

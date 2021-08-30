@@ -3,6 +3,7 @@ package akasha.bluetooth;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface BluetoothDataFilterInit {
   BufferSource dataPrefix();
 
   @JsProperty
-  void setDataPrefix(@Nonnull BufferSource dataPrefix);
+  void setDataPrefix(@JsNonNull BufferSource dataPrefix);
 
   @JsProperty(
       name = "mask"
@@ -37,7 +38,7 @@ public interface BluetoothDataFilterInit {
   BufferSource mask();
 
   @JsProperty
-  void setMask(@Nonnull BufferSource mask);
+  void setMask(@JsNonNull BufferSource mask);
 
   @Generated("org.realityforge.webtack")
   @JsType(

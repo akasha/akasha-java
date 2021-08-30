@@ -10,6 +10,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +31,7 @@ import jsinterop.base.Js;
     name = "Bluetooth"
 )
 public class Bluetooth extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onadvertisementreceived;
 
   /**
@@ -38,22 +40,22 @@ public class Bluetooth extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/onavailabilitychanged">Bluetooth.onavailabilitychanged - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">Bluetooth - Web Bluetooth</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onavailabilitychanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler oncharacteristicvaluechanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler ongattserverdisconnected;
 
-  @Nullable
+  @JsNullable
   public EventHandler onserviceadded;
 
-  @Nullable
+  @JsNullable
   public EventHandler onservicechanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler onserviceremoved;
 
   protected Bluetooth() {
@@ -77,7 +79,7 @@ public class Bluetooth extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getAvailability">Bluetooth.getAvailability - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getavailability">getAvailability() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> getAvailability();
 
   /**
@@ -86,7 +88,7 @@ public class Bluetooth extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices">Bluetooth.getDevices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getdevices">getDevices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothDevice>> getDevices();
 
   /**
@@ -95,7 +97,7 @@ public class Bluetooth extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice">Bluetooth.requestDevice - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice">requestDevice() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothDevice> requestDevice(@Nonnull RequestDeviceOptions options);
 
   /**
@@ -104,7 +106,7 @@ public class Bluetooth extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice">Bluetooth.requestDevice - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice">requestDevice() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothDevice> requestDevice();
 
   @JsOverlay

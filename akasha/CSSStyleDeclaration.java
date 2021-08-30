@@ -5,6 +5,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -22,10 +23,10 @@ import jsinterop.annotations.JsType;
     name = "CSSStyleDeclaration"
 )
 public class CSSStyleDeclaration extends JsObject {
-  @Nonnull
+  @JsNonNull
   public String cssFloat;
 
-  @Nonnull
+  @JsNonNull
   public String cssText;
 
   protected CSSStyleDeclaration() {
@@ -59,7 +60,7 @@ public class CSSStyleDeclaration extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyPriority">CSSStyleDeclaration.getPropertyPriority - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String getPropertyPriority(@Nonnull String property);
 
   /**
@@ -67,7 +68,7 @@ public class CSSStyleDeclaration extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue">CSSStyleDeclaration.getPropertyValue - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String getPropertyValue(@Nonnull String property);
 
   /**
@@ -75,7 +76,7 @@ public class CSSStyleDeclaration extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/removeProperty">CSSStyleDeclaration.removeProperty - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String removeProperty(@Nonnull String property);
 
   /**
@@ -99,6 +100,6 @@ public class CSSStyleDeclaration extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/item">CSSStyleDeclaration.item - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String item(int index);
 }

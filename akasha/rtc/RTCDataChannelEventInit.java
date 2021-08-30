@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface RTCDataChannelEventInit extends EventInit {
   @JsProperty(
       name = "channel"
   )
-  @Nonnull
+  @JsNonNull
   RTCDataChannel channel();
 
   @JsProperty
-  void setChannel(@Nonnull RTCDataChannel channel);
+  void setChannel(@JsNonNull RTCDataChannel channel);
 
   @Generated("org.realityforge.webtack")
   @JsType(

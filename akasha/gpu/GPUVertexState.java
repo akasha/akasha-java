@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface GPUVertexState extends GPUProgrammableStage {
   JsArray<GPUVertexBufferLayout> buffers();
 
   @JsProperty
-  void setBuffers(@Nonnull JsArray<GPUVertexBufferLayout> buffers);
+  void setBuffers(@JsNonNull JsArray<GPUVertexBufferLayout> buffers);
 
   @JsOverlay
   default void setBuffers(@Nonnull final GPUVertexBufferLayout... buffers) {

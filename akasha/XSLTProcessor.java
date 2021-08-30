@@ -5,6 +5,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
@@ -26,7 +28,7 @@ public class XSLTProcessor extends JsObject {
 
   public native void clearParameters();
 
-  @Nullable
+  @JsNullable
   public native Any getParameter(@Nonnull String namespaceURI, @Nonnull String localName);
 
   public native void importStylesheet(@Nonnull Node style);
@@ -38,10 +40,10 @@ public class XSLTProcessor extends JsObject {
   public native void setParameter(@Nonnull String namespaceURI, @Nonnull String localName,
       @DoNotAutobox @Nullable Object value);
 
-  @Nonnull
+  @JsNonNull
   public native Document transformToDocument(@Nonnull Node source);
 
-  @Nonnull
+  @JsNonNull
   public native DocumentFragment transformToFragment(@Nonnull Node source,
       @Nonnull Document output);
 }

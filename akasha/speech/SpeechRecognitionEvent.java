@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SpeechRecognitionEvent interface of the Web Speech API represents the event object for the result and nomatch events, and contains all the data associated with an interim or final speech recognition result.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent">SpeechRecognitionEvent - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-event">SpeechRecognitionEvent - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-event"># speechreco-event</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

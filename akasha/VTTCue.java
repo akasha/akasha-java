@@ -2,15 +2,16 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * This interface also inherits properties from TextTrackCue.
+ * The VTTCue interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes and controls the text track associated with a particular &lt;track&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue">VTTCue - MDN</a>
- * @see <a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a>
+ * @see <a href="https://w3c.github.io/webvtt/#the-vttcue-interface"># the-vttcue-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,35 +20,35 @@ import jsinterop.annotations.JsType;
     name = "VTTCue"
 )
 public class VTTCue extends TextTrackCue {
-  @Nonnull
+  @JsNonNull
   @AlignSetting
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public LineAndPositionSetting line;
 
-  @Nonnull
+  @JsNonNull
   @LineAlignSetting
   public String lineAlign;
 
-  @Nonnull
+  @JsNonNull
   public LineAndPositionSetting position;
 
-  @Nonnull
+  @JsNonNull
   @PositionAlignSetting
   public String positionAlign;
 
-  @Nullable
+  @JsNullable
   public VTTRegion region;
 
   public double size;
 
   public boolean snapToLines;
 
-  @Nonnull
+  @JsNonNull
   public String text;
 
-  @Nonnull
+  @JsNonNull
   @DirectionSetting
   public String vertical;
 
@@ -60,6 +61,6 @@ public class VTTCue extends TextTrackCue {
   public VTTCue(final double startTime, final double endTime, @Nonnull final String text) {
   }
 
-  @Nonnull
+  @JsNonNull
   public native DocumentFragment getCueAsHTML();
 }

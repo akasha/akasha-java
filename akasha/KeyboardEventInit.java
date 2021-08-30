@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface KeyboardEventInit extends EventModifierInit {
   String code();
 
   @JsProperty
-  void setCode(@Nonnull String code);
+  void setCode(@JsNonNull String code);
 
   @JsProperty(
       name = "isComposing"
@@ -45,7 +46,7 @@ public interface KeyboardEventInit extends EventModifierInit {
   String key();
 
   @JsProperty
-  void setKey(@Nonnull String key);
+  void setKey(@JsNonNull String key);
 
   @JsProperty(
       name = "location"

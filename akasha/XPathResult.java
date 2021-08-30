@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -141,7 +142,7 @@ public class XPathResult extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/iterateNext">XPathResult.iterateNext - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-iterateNext">XPathResult.iterateNext() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nullable
+  @JsNullable
   public native Node iterateNext();
 
   /**
@@ -150,6 +151,6 @@ public class XPathResult extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/snapshotItem">XPathResult.snapshotItem - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-snapshotItem">XPathResult.snapshotItem() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nullable
+  @JsNullable
   public native Node snapshotItem(int index);
 }

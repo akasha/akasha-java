@@ -10,7 +10,8 @@ import akasha.lang.JsArray;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +40,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/onresourcetimingbufferfull">Performance.onresourcetimingbufferfull - MDN</a>
    * @see <a href="https://www.w3.org/TR/resource-timing-1/#dom-performance-onresourcetimingbufferfull">onresourcetimingbufferfull - Resource Timing Level 1</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onresourcetimingbufferfull;
 
   protected Performance() {
@@ -95,7 +96,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/toJSON">Performance.toJSON - MDN</a>
    * @see <a href="https://www.w3.org/TR/hr-time-2/#dom-performance-tojson">toJSON() serializer - High Resolution Time Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 
   /**
@@ -106,7 +107,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentries">getEntries() - Performance Timeline</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntries();
 
   /**
@@ -117,7 +118,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname">getEntriesByName() - Performance Timeline</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntriesByName(@Nonnull String name,
       @Nonnull String type);
 
@@ -129,7 +130,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname">getEntriesByName() - Performance Timeline</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntriesByName(@Nonnull String name);
 
   /**
@@ -140,7 +141,7 @@ public class Performance extends EventTarget {
    * @see <a href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbytype">getEntriesByType() - Performance Timeline</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntriesByType(@Nonnull String type);
 
   /**

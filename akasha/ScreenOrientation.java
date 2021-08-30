@@ -3,10 +3,13 @@ package akasha;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The ScreenOrientation interface of the Screen Orientation API provides information about the current orientation of the document.
@@ -27,7 +30,7 @@ public class ScreenOrientation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/onchange">ScreenOrientation.onchange - MDN</a>
    * @see <a href="https://w3c.github.io/screen-orientation/#dom-screenorientation-onchange">onchange - Screen Orientation API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   protected ScreenOrientation() {
@@ -63,7 +66,7 @@ public class ScreenOrientation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/lock">ScreenOrientation.lock - MDN</a>
    * @see <a href="https://w3c.github.io/screen-orientation/#dom-screenorientation-lock">lock() - Screen Orientation API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> lock(@OrientationLockType @Nonnull String orientation);
 
   /**
@@ -73,4 +76,38 @@ public class ScreenOrientation extends EventTarget {
    * @see <a href="https://w3c.github.io/screen-orientation/#dom-screenorientation-unlock">unlock() - Screen Orientation API</a>
    */
   public native void unlock();
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "change", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "change", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "change", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "change", Js.cast( callback ) );
+  }
 }

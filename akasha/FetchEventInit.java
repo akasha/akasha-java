@@ -3,6 +3,7 @@ package akasha;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +31,7 @@ public interface FetchEventInit extends ExtendableEventInit {
   String clientId();
 
   @JsProperty
-  void setClientId(@Nonnull String clientId);
+  void setClientId(@JsNonNull String clientId);
 
   @JsProperty(
       name = "handled"
@@ -38,7 +39,7 @@ public interface FetchEventInit extends ExtendableEventInit {
   Promise<Void> handled();
 
   @JsProperty
-  void setHandled(@Nonnull Promise<Void> handled);
+  void setHandled(@JsNonNull Promise<Void> handled);
 
   @JsProperty(
       name = "preloadResponse"
@@ -46,7 +47,7 @@ public interface FetchEventInit extends ExtendableEventInit {
   Promise<Any> preloadResponse();
 
   @JsProperty
-  void setPreloadResponse(@Nonnull Promise<Any> preloadResponse);
+  void setPreloadResponse(@JsNonNull Promise<Any> preloadResponse);
 
   @JsProperty(
       name = "replacesClientId"
@@ -54,16 +55,16 @@ public interface FetchEventInit extends ExtendableEventInit {
   String replacesClientId();
 
   @JsProperty
-  void setReplacesClientId(@Nonnull String replacesClientId);
+  void setReplacesClientId(@JsNonNull String replacesClientId);
 
   @JsProperty(
       name = "request"
   )
-  @Nonnull
+  @JsNonNull
   Request request();
 
   @JsProperty
-  void setRequest(@Nonnull Request request);
+  void setRequest(@JsNonNull Request request);
 
   @JsProperty(
       name = "resultingClientId"
@@ -71,7 +72,7 @@ public interface FetchEventInit extends ExtendableEventInit {
   String resultingClientId();
 
   @JsProperty
-  void setResultingClientId(@Nonnull String resultingClientId);
+  void setResultingClientId(@JsNonNull String resultingClientId);
 
   @Generated("org.realityforge.webtack")
   @JsType(

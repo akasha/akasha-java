@@ -5,6 +5,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +31,11 @@ public interface MessageEventInit extends EventInit {
   @JsProperty(
       name = "data"
   )
-  @Nullable
+  @JsNullable
   Any data();
 
   @JsProperty
-  void setData(@DoNotAutobox @Nullable Object data);
+  void setData(@DoNotAutobox @JsNullable Object data);
 
   @JsProperty(
       name = "lastEventId"
@@ -41,7 +43,7 @@ public interface MessageEventInit extends EventInit {
   String lastEventId();
 
   @JsProperty
-  void setLastEventId(@Nonnull String lastEventId);
+  void setLastEventId(@JsNonNull String lastEventId);
 
   @JsProperty(
       name = "origin"
@@ -49,7 +51,7 @@ public interface MessageEventInit extends EventInit {
   String origin();
 
   @JsProperty
-  void setOrigin(@Nonnull String origin);
+  void setOrigin(@JsNonNull String origin);
 
   @JsProperty(
       name = "ports"
@@ -57,7 +59,7 @@ public interface MessageEventInit extends EventInit {
   JsArray<MessagePort> ports();
 
   @JsProperty
-  void setPorts(@Nonnull JsArray<MessagePort> ports);
+  void setPorts(@JsNonNull JsArray<MessagePort> ports);
 
   @JsOverlay
   default void setPorts(@Nonnull final MessagePort... ports) {
@@ -67,11 +69,11 @@ public interface MessageEventInit extends EventInit {
   @JsProperty(
       name = "source"
   )
-  @Nullable
+  @JsNullable
   MessageEventSource source();
 
   @JsProperty
-  void setSource(@Nullable MessageEventSource source);
+  void setSource(@JsNullable MessageEventSource source);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -3,7 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The StorageManager interface of the Storage API provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either navigator.storage or WorkerNavigator.storage.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager">StorageManager - MDN</a>
- * @see <a href="https://storage.spec.whatwg.org/#storagemanager">StorageManger - Storage</a>
+ * @see <a href="https://storage.spec.whatwg.org/#storagemanager">(Storage) # storagemanager</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +29,7 @@ public class StorageManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate">StorageManager.estimate - MDN</a>
    * @see <a href="https://storage.spec.whatwg.org/#dom-storagemanager-estimate">estimate() - Storage</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<StorageEstimate> estimate();
 
   /**
@@ -38,7 +38,7 @@ public class StorageManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist">StorageManager.persist - MDN</a>
    * @see <a href="https://storage.spec.whatwg.org/#dom-storagemanager-persist">persist - Storage</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> persist();
 
   /**
@@ -47,6 +47,6 @@ public class StorageManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persisted">StorageManager.persisted - MDN</a>
    * @see <a href="https://storage.spec.whatwg.org/#dom-storagemanager-persisted">persisted - Storage</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> persisted();
 }

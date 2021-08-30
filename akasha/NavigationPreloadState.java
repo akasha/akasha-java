@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,7 +37,7 @@ public interface NavigationPreloadState {
   String headerValue();
 
   @JsProperty
-  void setHeaderValue(@Nonnull String headerValue);
+  void setHeaderValue(@JsNonNull String headerValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -1,5 +1,6 @@
 package akasha.gpu;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -33,5 +34,25 @@ public interface GPUColor {
   @Nonnull
   static GPUColor of(@Nonnull final GPUColorDict value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isGPUColorDict() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default GPUColorDict asGPUColorDict() {
+    return Js.cast( this );
   }
 }

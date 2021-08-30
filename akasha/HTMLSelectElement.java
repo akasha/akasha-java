@@ -4,6 +4,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,7 +26,7 @@ import jsinterop.base.JsArrayLike;
     name = "HTMLSelectElement"
 )
 public class HTMLSelectElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   @AutocompleteType
   public String autocomplete;
 
@@ -41,7 +43,7 @@ public class HTMLSelectElement extends HTMLElement {
 
   public boolean multiple;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
   public boolean required;
@@ -57,7 +59,7 @@ public class HTMLSelectElement extends HTMLElement {
 
   public int size;
 
-  @Nonnull
+  @JsNonNull
   public String value;
 
   protected HTMLSelectElement() {
@@ -229,7 +231,7 @@ public class HTMLSelectElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-select-nameditem">HTMLSelectElement.namedItem() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-nameditem">HTMLSelectElement.namedItem() - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public native HTMLOptionElement namedItem(@Nonnull String name);
 
   /**
@@ -273,7 +275,7 @@ public class HTMLSelectElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-select-item">HTMLSelectElement.item() - HTML5</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native HTMLOptionElement item(int index);
 
   @JsOverlay

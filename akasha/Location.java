@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,7 +27,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hash">Location.hash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-hash">hash - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hash;
 
   /**
@@ -35,7 +36,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/host">Location.host - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-host">host - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String host;
 
   /**
@@ -44,7 +45,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hostname">Location.hostname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-hostname">hostname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hostname;
 
   /**
@@ -53,7 +54,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/href">Location.href - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-href">href - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String href;
 
   /**
@@ -62,7 +63,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname">Location.pathname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-pathname">pathname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String pathname;
 
   /**
@@ -71,7 +72,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/port">Location.port - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-port">Location.port - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String port;
 
   /**
@@ -80,7 +81,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/protocol">Location.protocol - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-protocol">protocol - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String protocol;
 
   /**
@@ -89,7 +90,7 @@ public class Location extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/search">Location.search - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-location-search">search - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String search;
 
   protected Location() {

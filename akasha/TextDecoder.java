@@ -4,6 +4,7 @@ import akasha.core.BufferSource;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -76,7 +77,7 @@ public class TextDecoder extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
    * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">TextDecoder.decode() - Encoding</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String decode(@Nonnull BufferSource input, @Nonnull TextDecodeOptions options);
 
   /**
@@ -85,7 +86,7 @@ public class TextDecoder extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
    * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">TextDecoder.decode() - Encoding</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String decode(@Nonnull BufferSource input);
 
   /**
@@ -94,6 +95,6 @@ public class TextDecoder extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode">TextDecoder.decode - MDN</a>
    * @see <a href="https://encoding.spec.whatwg.org/#dom-textdecoder-decode">TextDecoder.decode() - Encoding</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String decode();
 }

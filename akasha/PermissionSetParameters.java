@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface PermissionSetParameters {
   @JsProperty(
       name = "descriptor"
   )
-  @Nonnull
+  @JsNonNull
   PermissionDescriptor descriptor();
 
   @JsProperty
-  void setDescriptor(@Nonnull PermissionDescriptor descriptor);
+  void setDescriptor(@JsNonNull PermissionDescriptor descriptor);
 
   @JsProperty(
       name = "oneRealm"
@@ -44,11 +45,11 @@ public interface PermissionSetParameters {
       name = "state"
   )
   @PermissionState
-  @Nonnull
+  @JsNonNull
   String state();
 
   @JsProperty
-  void setState(@PermissionState @Nonnull String state);
+  void setState(@PermissionState @JsNonNull String state);
 
   @Generated("org.realityforge.webtack")
   @JsType(

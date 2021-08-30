@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,16 +30,16 @@ public interface PushSubscriptionJSON {
   String endpoint();
 
   @JsProperty
-  void setEndpoint(@Nonnull String endpoint);
+  void setEndpoint(@JsNonNull String endpoint);
 
   @JsProperty(
       name = "expirationTime"
   )
-  @Nullable
+  @JsNullable
   int expirationTime();
 
   @JsProperty
-  void setExpirationTime(@Nullable int expirationTime);
+  void setExpirationTime(@JsNullable int expirationTime);
 
   @JsProperty(
       name = "keys"
@@ -46,7 +47,7 @@ public interface PushSubscriptionJSON {
   JsPropertyMap<String> keys();
 
   @JsProperty
-  void setKeys(@Nonnull JsPropertyMap<String> keys);
+  void setKeys(@JsNonNull JsPropertyMap<String> keys);
 
   @Generated("org.realityforge.webtack")
   @JsType(

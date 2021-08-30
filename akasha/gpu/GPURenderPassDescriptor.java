@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "colorAttachments"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<GPURenderPassColorAttachment> colorAttachments();
 
   @JsProperty
-  void setColorAttachments(@Nonnull JsArray<GPURenderPassColorAttachment> colorAttachments);
+  void setColorAttachments(@JsNonNull JsArray<GPURenderPassColorAttachment> colorAttachments);
 
   @JsOverlay
   default void setColorAttachments(
@@ -53,7 +54,7 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
 
   @JsProperty
   void setDepthStencilAttachment(
-      @Nonnull GPURenderPassDepthStencilAttachment depthStencilAttachment);
+      @JsNonNull GPURenderPassDepthStencilAttachment depthStencilAttachment);
 
   @JsProperty(
       name = "occlusionQuerySet"
@@ -61,7 +62,7 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
   GPUQuerySet occlusionQuerySet();
 
   @JsProperty
-  void setOcclusionQuerySet(@Nonnull GPUQuerySet occlusionQuerySet);
+  void setOcclusionQuerySet(@JsNonNull GPUQuerySet occlusionQuerySet);
 
   @Generated("org.realityforge.webtack")
   @JsType(

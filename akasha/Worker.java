@@ -5,6 +5,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -29,8 +30,8 @@ public class Worker extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onerror">Worker.onerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-abstractworker-onerror">AbstractWorker.onerror - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onerror;
+  @JsNullable
+  public ErrorEventHandler onerror;
 
   /**
    * The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method).
@@ -38,7 +39,7 @@ public class Worker extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessage">Worker.onmessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-worker-onmessage">Worker.onmessage - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
   /**
@@ -47,7 +48,7 @@ public class Worker extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessageerror">Worker.onmessageerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-worker-onmessageerror">onmessageerror - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessageerror;
 
   /**
@@ -177,5 +178,39 @@ public class Worker extends EventTarget {
   @JsOverlay
   public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
   }
 }

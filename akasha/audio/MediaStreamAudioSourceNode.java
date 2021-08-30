@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MediaStreamAudioSourceNode interface is a type of AudioNode which operates as an audio source whose media is received from a MediaStream obtained using the WebRTC or Media Capture and Streams APIs.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode">MediaStreamAudioSourceNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#mediastreamaudiosourcenode">MediaStreamAudioSourceNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamAudioSourceNode"># MediaStreamAudioSourceNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

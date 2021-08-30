@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,16 +29,16 @@ public interface GenerateTestReportParameters {
   String group();
 
   @JsProperty
-  void setGroup(@Nonnull String group);
+  void setGroup(@JsNonNull String group);
 
   @JsProperty(
       name = "message"
   )
-  @Nonnull
+  @JsNonNull
   String message();
 
   @JsProperty
-  void setMessage(@Nonnull String message);
+  void setMessage(@JsNonNull String message);
 
   @Generated("org.realityforge.webtack")
   @JsType(

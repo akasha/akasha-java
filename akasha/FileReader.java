@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,7 @@ import jsinterop.base.Js;
  * The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader">FileReader - MDN</a>
- * @see <a href="https://w3c.github.io/FileAPI/#dfn-filereader">FileReader - File API</a>
+ * @see <a href="https://w3c.github.io/FileAPI/#APIASynch"># APIASynch</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -36,7 +37,7 @@ public class FileReader extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onabort">FileReader.onabort - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public ProgressEventHandler onabort;
 
   /**
@@ -44,7 +45,7 @@ public class FileReader extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onerror">FileReader.onerror - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public ProgressEventHandler onerror;
 
   /**
@@ -52,16 +53,16 @@ public class FileReader extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onload">FileReader.onload - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public ProgressEventHandler onload;
 
-  @Nullable
+  @JsNullable
   public ProgressEventHandler onloadend;
 
-  @Nullable
+  @JsNullable
   public ProgressEventHandler onloadstart;
 
-  @Nullable
+  @JsNullable
   public ProgressEventHandler onprogress;
 
   /**

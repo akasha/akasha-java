@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,15 +36,15 @@ public class ImageDecoder extends JsObject {
   @Nonnull
   public native ImageTrackList tracks();
 
-  @Nonnull
+  @JsNonNull
   public static native Promise<Boolean> isTypeSupported(@Nonnull String type);
 
   public native void close();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<ImageDecodeResult> decode(@Nonnull ImageDecodeOptions options);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<ImageDecodeResult> decode();
 
   public native void reset();

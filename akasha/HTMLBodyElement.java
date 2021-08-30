@@ -2,9 +2,12 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The HTMLBodyElement interface provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating &lt;body&gt; elements.
@@ -19,16 +22,16 @@ import jsinterop.annotations.JsType;
     name = "HTMLBodyElement"
 )
 public class HTMLBodyElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String aLink;
 
-  @Nonnull
+  @JsNonNull
   public String background;
 
-  @Nonnull
+  @JsNonNull
   public String bgColor;
 
-  @Nonnull
+  @JsNonNull
   public String link;
 
   /**
@@ -36,7 +39,7 @@ public class HTMLBodyElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onafterprint">HTMLBodyElement.onafterprint - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onafterprint;
 
   /**
@@ -44,7 +47,7 @@ public class HTMLBodyElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint">WindowEventHandlers.onbeforeprint - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onbeforeprint;
 
   /**
@@ -52,13 +55,13 @@ public class HTMLBodyElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onbeforeunload">HTMLBodyElement.onbeforeunload - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public OnBeforeUnloadEventHandler onbeforeunload;
 
-  @Nullable
+  @JsNullable
   public EventHandler ongamepadconnected;
 
-  @Nullable
+  @JsNullable
   public EventHandler ongamepaddisconnected;
 
   /**
@@ -69,8 +72,8 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">GlobalEventHandlers - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">GlobalEventHandlers - HTML5</a>
    */
-  @Nullable
-  public EventHandler onhashchange;
+  @JsNullable
+  public HashChangeEventHandler onhashchange;
 
   /**
    * The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.
@@ -78,7 +81,7 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onlanguagechange">HTMLBodyElement.onlanguagechange - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">WindowEventHandler.onlanguagechange - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onlanguagechange;
 
   /**
@@ -87,8 +90,8 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">onmessage - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onmessage;
+  @JsNullable
+  public MessageEventHandler onmessage;
 
   /**
    * The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.
@@ -96,23 +99,23 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">onmessageerror - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onmessageerror;
+  @JsNullable
+  public MessageEventHandler onmessageerror;
 
-  @Nullable
+  @JsNullable
   public EventHandler onoffline;
 
-  @Nullable
+  @JsNullable
   public EventHandler ononline;
 
-  @Nullable
+  @JsNullable
   public EventHandler onorientationchange;
 
-  @Nullable
-  public EventHandler onpagehide;
+  @JsNullable
+  public PageTransitionEventHandler onpagehide;
 
-  @Nullable
-  public EventHandler onpageshow;
+  @JsNullable
+  public PageTransitionEventHandler onpageshow;
 
   /**
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
@@ -120,8 +123,8 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onpopstate">HTMLBodyElement.onpopstate - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">onpopstate - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onpopstate;
+  @JsNullable
+  public PopStateEventHandler onpopstate;
 
   /**
    * The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected.
@@ -129,8 +132,8 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">WindowEventHandlers.onrejectionhandled - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">onrejectionhandled - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onrejectionhandled;
+  @JsNullable
+  public PromiseRejectionEventHandler onrejectionhandled;
 
   /**
    * The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.
@@ -138,8 +141,8 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onstorage">WindowEventHandlers.onstorage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">onstorage - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onstorage;
+  @JsNullable
+  public StorageEventHandler onstorage;
 
   /**
    * The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.
@@ -147,8 +150,8 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">WindowEventHandlers.onunhandledrejection - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">onunhandledrejection - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onunhandledrejection;
+  @JsNullable
+  public PromiseRejectionEventHandler onunhandledrejection;
 
   /**
    * The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.
@@ -158,15 +161,363 @@ public class HTMLBodyElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">GlobalEventHandlers - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">GlobalEventHandlers - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onunload;
 
-  @Nonnull
+  @JsNonNull
   public String text;
 
-  @Nonnull
+  @JsNonNull
   public String vLink;
 
   protected HTMLBodyElement() {
+  }
+
+  @JsOverlay
+  public final void addPopstateListener(@Nonnull final PopStateEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "popstate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPopstateListener(@Nonnull final PopStateEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "popstate", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPopstateListener(@Nonnull final PopStateEventListener callback) {
+    addEventListener( "popstate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePopstateListener(@Nonnull final PopStateEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "popstate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePopstateListener(@Nonnull final PopStateEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "popstate", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePopstateListener(@Nonnull final PopStateEventListener callback) {
+    removeEventListener( "popstate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPageshowListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pageshow", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPageshowListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pageshow", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPageshowListener(@Nonnull final PageTransitionEventListener callback) {
+    addEventListener( "pageshow", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePageshowListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pageshow", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePageshowListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pageshow", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePageshowListener(@Nonnull final PageTransitionEventListener callback) {
+    removeEventListener( "pageshow", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "unhandledrejection", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    addEventListener( "unhandledrejection", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    addEventListener( "unhandledrejection", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "unhandledrejection", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    removeEventListener( "unhandledrejection", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeUnhandledrejectionListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    removeEventListener( "unhandledrejection", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "messageerror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "messageerror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "rejectionhandled", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    addEventListener( "rejectionhandled", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    addEventListener( "rejectionhandled", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "rejectionhandled", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback, final boolean useCapture) {
+    removeEventListener( "rejectionhandled", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeRejectionhandledListener(
+      @Nonnull final PromiseRejectionEventListener callback) {
+    removeEventListener( "rejectionhandled", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addStorageListener(@Nonnull final StorageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "storage", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addStorageListener(@Nonnull final StorageEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "storage", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addStorageListener(@Nonnull final StorageEventListener callback) {
+    addEventListener( "storage", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeStorageListener(@Nonnull final StorageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "storage", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeStorageListener(@Nonnull final StorageEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "storage", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeStorageListener(@Nonnull final StorageEventListener callback) {
+    removeEventListener( "storage", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "beforeunload", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "beforeunload", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback) {
+    addEventListener( "beforeunload", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "beforeunload", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "beforeunload", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback) {
+    removeEventListener( "beforeunload", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPagehideListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pagehide", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPagehideListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pagehide", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPagehideListener(@Nonnull final PageTransitionEventListener callback) {
+    addEventListener( "pagehide", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePagehideListener(@Nonnull final PageTransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pagehide", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePagehideListener(@Nonnull final PageTransitionEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pagehide", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePagehideListener(@Nonnull final PageTransitionEventListener callback) {
+    removeEventListener( "pagehide", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "hashchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "hashchange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addHashchangeListener(@Nonnull final HashChangeEventListener callback) {
+    addEventListener( "hashchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "hashchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeHashchangeListener(@Nonnull final HashChangeEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "hashchange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeHashchangeListener(@Nonnull final HashChangeEventListener callback) {
+    removeEventListener( "hashchange", Js.cast( callback ) );
   }
 }

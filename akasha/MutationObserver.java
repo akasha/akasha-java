@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -59,6 +60,6 @@ public class MutationObserver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/takeRecords">MutationObserver.takeRecords - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-mutationobserver-takerecords">MutationObserver.takeRecords() - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<MutationRecord> takeRecords();
 }

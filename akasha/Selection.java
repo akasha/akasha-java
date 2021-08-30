@@ -5,6 +5,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -202,7 +203,7 @@ public class Selection extends JsObject {
    * @see <a href="https://w3c.github.io/selection-api/#dom-selection-getrangeat">Selection: getRangeAt() - Selection API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Range getRangeAt(int index);
 
   /**

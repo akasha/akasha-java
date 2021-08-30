@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface FederatedCredentialRequestOptions {
   JsArray<String> protocols();
 
   @JsProperty
-  void setProtocols(@Nonnull JsArray<String> protocols);
+  void setProtocols(@JsNonNull JsArray<String> protocols);
 
   @JsOverlay
   default void setProtocols(@Nonnull final String... protocols) {
@@ -42,7 +43,7 @@ public interface FederatedCredentialRequestOptions {
   JsArray<String> providers();
 
   @JsProperty
-  void setProviders(@Nonnull JsArray<String> providers);
+  void setProviders(@JsNonNull JsArray<String> providers);
 
   @JsOverlay
   default void setProviders(@Nonnull final String... providers) {

@@ -2,6 +2,7 @@ package akasha.idb;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface IDBTransactionOptions {
   String durability();
 
   @JsProperty
-  void setDurability(@IDBTransactionDurability @Nonnull String durability);
+  void setDurability(@IDBTransactionDurability @JsNonNull String durability);
 
   @Generated("org.realityforge.webtack")
   @JsType(

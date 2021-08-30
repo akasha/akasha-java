@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,7 +54,7 @@ public interface PannerOptions extends AudioNodeOptions {
   String distanceModel();
 
   @JsProperty
-  void setDistanceModel(@DistanceModelType @Nonnull String distanceModel);
+  void setDistanceModel(@DistanceModelType @JsNonNull String distanceModel);
 
   @JsProperty(
       name = "maxDistance"
@@ -94,7 +95,7 @@ public interface PannerOptions extends AudioNodeOptions {
   String panningModel();
 
   @JsProperty
-  void setPanningModel(@PanningModelType @Nonnull String panningModel);
+  void setPanningModel(@PanningModelType @JsNonNull String panningModel);
 
   @JsProperty(
       name = "positionX"

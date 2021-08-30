@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface RTCAudioSenderStats extends RTCAudioHandlerStats {
   String mediaSourceId();
 
   @JsProperty
-  void setMediaSourceId(@Nonnull String mediaSourceId);
+  void setMediaSourceId(@JsNonNull String mediaSourceId);
 
   @JsProperty(
       name = "echoReturnLoss"

@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -48,7 +49,7 @@ public interface RTCConfiguration {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy">RTCConfiguration.bundlePolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setBundlePolicy(@RTCBundlePolicy @Nonnull String bundlePolicy);
+  void setBundlePolicy(@RTCBundlePolicy @JsNonNull String bundlePolicy);
 
   /**
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
@@ -68,7 +69,7 @@ public interface RTCConfiguration {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates">RTCConfiguration.certificates - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setCertificates(@Nonnull JsArray<RTCCertificate> certificates);
+  void setCertificates(@JsNonNull JsArray<RTCCertificate> certificates);
 
   /**
    * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
@@ -107,7 +108,7 @@ public interface RTCConfiguration {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers">RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setIceServers(@Nonnull JsArray<RTCIceServer> iceServers);
+  void setIceServers(@JsNonNull JsArray<RTCIceServer> iceServers);
 
   /**
    *
@@ -139,7 +140,7 @@ public interface RTCConfiguration {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-icetransportpolicy">RTCCandidate.iceTransportPolicy - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setIceTransportPolicy(@RTCIceTransportPolicy @Nonnull String iceTransportPolicy);
+  void setIceTransportPolicy(@RTCIceTransportPolicy @JsNonNull String iceTransportPolicy);
 
   @JsProperty(
       name = "rtcpMuxPolicy"
@@ -148,7 +149,7 @@ public interface RTCConfiguration {
   String rtcpMuxPolicy();
 
   @JsProperty
-  void setRtcpMuxPolicy(@RTCRtcpMuxPolicy @Nonnull String rtcpMuxPolicy);
+  void setRtcpMuxPolicy(@RTCRtcpMuxPolicy @JsNonNull String rtcpMuxPolicy);
 
   @JsProperty(
       name = "peerIdentity"
@@ -156,7 +157,7 @@ public interface RTCConfiguration {
   String peerIdentity();
 
   @JsProperty
-  void setPeerIdentity(@Nonnull String peerIdentity);
+  void setPeerIdentity(@JsNonNull String peerIdentity);
 
   /**
    * The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.

@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -19,27 +19,27 @@ import jsinterop.annotations.JsType;
     name = "HTMLEmbedElement"
 )
 public class HTMLEmbedElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String height;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String src;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLEmbedElement() {
   }
 
-  @Nullable
+  @JsNullable
   public native Document getSVGDocument();
 }

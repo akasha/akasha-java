@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -54,7 +55,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connect">BluetoothRemoteGATTServer.connect - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-connect">connect() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTServer> connect();
 
   /**
@@ -71,7 +72,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryService">BluetoothRemoteGATTServer.getPrimaryService - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservice">getPrimaryService() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTService> getPrimaryService(
       @Nonnull BluetoothServiceUUID service);
 
@@ -81,7 +82,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryService">BluetoothRemoteGATTServer.getPrimaryService - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservice">getPrimaryService() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTService> getPrimaryService(@Nonnull String service);
 
   /**
@@ -90,7 +91,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryService">BluetoothRemoteGATTServer.getPrimaryService - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservice">getPrimaryService() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTService> getPrimaryService(int service);
 
   /**
@@ -99,7 +100,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices">BluetoothRemoteGATTServer.getPrimaryServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservices">getPrimaryServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(
       @Nonnull BluetoothServiceUUID service);
 
@@ -109,7 +110,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices">BluetoothRemoteGATTServer.getPrimaryServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservices">getPrimaryServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(
       @Nonnull String service);
 
@@ -119,7 +120,7 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices">BluetoothRemoteGATTServer.getPrimaryServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservices">getPrimaryServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(int service);
 
   /**
@@ -128,6 +129,6 @@ public class BluetoothRemoteGATTServer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices">BluetoothRemoteGATTServer.getPrimaryServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservices">getPrimaryServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices();
 }

@@ -1,7 +1,10 @@
 package akasha.media;
 
+import akasha.AddEventListenerOptions;
 import akasha.AudioTrackList;
 import akasha.EventHandler;
+import akasha.EventListener;
+import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.TextTrackList;
 import akasha.TimeRanges;
@@ -9,16 +12,19 @@ import akasha.VideoTrackList;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer">SourceBuffer - MDN</a>
- * @see <a href="https://w3c.github.io/media-source/#sourcebuffer">SourceBuffer - Media Source Extensions</a>
+ * @see <a href="https://w3c.github.io/media-source/#sourcebuffer"># sourcebuffer</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -49,23 +55,23 @@ public class SourceBuffer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode">SourceBuffer.mode - MDN</a>
    * @see <a href="https://w3c.github.io/media-source/#idl-def-sourcebuffer-mode">mode - Media Source Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   @AppendMode
   public String mode;
 
-  @Nullable
+  @JsNullable
   public EventHandler onabort;
 
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
-  @Nullable
+  @JsNullable
   public EventHandler onupdate;
 
-  @Nullable
+  @JsNullable
   public EventHandler onupdateend;
 
-  @Nullable
+  @JsNullable
   public EventHandler onupdatestart;
 
   /**
@@ -161,4 +167,174 @@ public class SourceBuffer extends EventTarget {
    * @see <a href="https://w3c.github.io/media-source/#dom-sourcebuffer-remove">remove() - Media Source Extensions</a>
    */
   public native void remove(double start, double end);
+
+  @JsOverlay
+  public final void addUpdateListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "update", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUpdateListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "update", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addUpdateListener(@Nonnull final EventListener callback) {
+    addEventListener( "update", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUpdateListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "update", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUpdateListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "update", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeUpdateListener(@Nonnull final EventListener callback) {
+    removeEventListener( "update", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addUpdatestartListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "updatestart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUpdatestartListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "updatestart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addUpdatestartListener(@Nonnull final EventListener callback) {
+    addEventListener( "updatestart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUpdatestartListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "updatestart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUpdatestartListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "updatestart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeUpdatestartListener(@Nonnull final EventListener callback) {
+    removeEventListener( "updatestart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addUpdateendListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "updateend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUpdateendListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "updateend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addUpdateendListener(@Nonnull final EventListener callback) {
+    addEventListener( "updateend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUpdateendListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "updateend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUpdateendListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "updateend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeUpdateendListener(@Nonnull final EventListener callback) {
+    removeEventListener( "updateend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "abort", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final EventListener callback) {
+    addEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "abort", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final EventListener callback) {
+    removeEventListener( "abort", Js.cast( callback ) );
+  }
 }

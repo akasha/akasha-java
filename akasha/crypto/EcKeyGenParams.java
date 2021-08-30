@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +32,11 @@ public interface EcKeyGenParams extends Algorithm {
   @JsProperty(
       name = "namedCurve"
   )
-  @Nonnull
+  @JsNonNull
   String namedCurve();
 
   @JsProperty
-  void setNamedCurve(@Nonnull String namedCurve);
+  void setNamedCurve(@JsNonNull String namedCurve);
 
   /**
    * The EcKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of ECDSA or ECDH.

@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +26,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/align">HTMLTableElement.align - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String align;
 
   /**
@@ -33,7 +34,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/bgColor">HTMLTableElement.bgColor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String bgColor;
 
   /**
@@ -41,7 +42,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/border">HTMLTableElement.border - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String border;
 
   /**
@@ -53,7 +54,7 @@ public class HTMLTableElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520">HTMLTableElement.caption - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14594520">HTMLTableElement.caption - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nullable
+  @JsNullable
   public HTMLTableCaptionElement caption;
 
   /**
@@ -61,10 +62,10 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/cellPadding">HTMLTableElement.cellPadding - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String cellPadding;
 
-  @Nonnull
+  @JsNonNull
   public String cellSpacing;
 
   /**
@@ -72,7 +73,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/frame">HTMLTableElement.frame - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String frame;
 
   /**
@@ -80,7 +81,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rules">HTMLTableElement.rules - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String rules;
 
   /**
@@ -88,7 +89,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/summary">HTMLTableElement.summary - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String summary;
 
   /**
@@ -100,7 +101,7 @@ public class HTMLTableElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64197097">HTMLTableElement.tFoot - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-64197097">HTMLTableElement.tFoot - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nullable
+  @JsNullable
   public HTMLTableSectionElement tFoot;
 
   /**
@@ -112,7 +113,7 @@ public class HTMLTableElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9530944">HTMLTableElement.tHead - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-9530944">HTMLTableElement.tHead - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nullable
+  @JsNullable
   public HTMLTableSectionElement tHead;
 
   /**
@@ -120,7 +121,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/width">HTMLTableElement.width - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLTableElement() {
@@ -153,10 +154,10 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createCaption">HTMLTableElement.createCaption - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableCaptionElement createCaption();
 
-  @Nonnull
+  @JsNonNull
   public native HTMLTableSectionElement createTBody();
 
   /**
@@ -164,7 +165,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTFoot">HTMLTableElement.createTFoot - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableSectionElement createTFoot();
 
   /**
@@ -172,7 +173,7 @@ public class HTMLTableElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTHead">HTMLTableElement.createTHead - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableSectionElement createTHead();
 
   /**
@@ -211,7 +212,7 @@ public class HTMLTableElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-93995626">HTMLTableElement.insertRow() - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-39872903">HTMLTableElement.insertRow() - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableRowElement insertRow(int index);
 
   /**
@@ -222,6 +223,6 @@ public class HTMLTableElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-93995626">HTMLTableElement.insertRow() - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-39872903">HTMLTableElement.insertRow() - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableRowElement insertRow();
 }

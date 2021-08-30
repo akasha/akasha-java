@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,20 +27,20 @@ public interface AudioDecoderInit {
   @JsProperty(
       name = "error"
   )
-  @Nonnull
+  @JsNonNull
   WebCodecsErrorCallback error();
 
   @JsProperty
-  void setError(@Nonnull WebCodecsErrorCallback error);
+  void setError(@JsNonNull WebCodecsErrorCallback error);
 
   @JsProperty(
       name = "output"
   )
-  @Nonnull
+  @JsNonNull
   AudioDataOutputCallback output();
 
   @JsProperty
-  void setOutput(@Nonnull AudioDataOutputCallback output);
+  void setOutput(@JsNonNull AudioDataOutputCallback output);
 
   @Generated("org.realityforge.webtack")
   @JsType(

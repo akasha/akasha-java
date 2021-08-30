@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,7 +28,7 @@ public class DOMParser extends JsObject {
   public DOMParser() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native Document parseFromString(@Nonnull String string,
       @DOMParserSupportedType @Nonnull String type);
 }

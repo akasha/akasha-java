@@ -7,6 +7,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -15,7 +16,7 @@ import jsinterop.annotations.JsType;
  * The ReadableStream interface of the Streams API represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">ReadableStream - MDN</a>
- * @see <a href="https://streams.spec.whatwg.org/#rs-class">ReadableStream - Streams</a>
+ * @see <a href="https://streams.spec.whatwg.org/#rs-class">(Streams) # rs-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -69,7 +70,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/cancel">ReadableStream.cancel - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-cancel">cancel() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> cancel(@DoNotAutobox @Nullable Object reason);
 
   /**
@@ -78,7 +79,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/cancel">ReadableStream.cancel - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-cancel">cancel() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> cancel();
 
   /**
@@ -87,7 +88,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader">ReadableStream.getReader - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-get-reader">getReader() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ReadableStreamReader getReader(@Nonnull ReadableStreamGetReaderOptions options);
 
   /**
@@ -96,7 +97,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader">ReadableStream.getReader - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-get-reader">getReader() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ReadableStreamReader getReader();
 
   /**
@@ -105,7 +106,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough">ReadableStream.pipeThrough - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-pipe-through">pipeThrough() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ReadableStream pipeThrough(@Nonnull ReadableWritablePair transform,
       @Nonnull StreamPipeOptions options);
 
@@ -115,7 +116,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough">ReadableStream.pipeThrough - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-pipe-through">pipeThrough() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ReadableStream pipeThrough(@Nonnull ReadableWritablePair transform);
 
   /**
@@ -124,7 +125,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeTo">ReadableStream.pipeTo - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-pipe-to">pipeTo() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> pipeTo(@Nonnull WritableStream destination,
       @Nonnull StreamPipeOptions options);
 
@@ -134,7 +135,7 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeTo">ReadableStream.pipeTo - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-pipe-to">pipeTo() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> pipeTo(@Nonnull WritableStream destination);
 
   /**
@@ -143,6 +144,6 @@ public class ReadableStream extends JsObject implements ImageBufferSource, Trans
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/tee">ReadableStream.tee - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#rs-tee">tee() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<ReadableStream> tee();
 }

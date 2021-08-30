@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +31,7 @@ public interface TouchEventInit extends EventModifierInit {
   JsArray<Touch> changedTouches();
 
   @JsProperty
-  void setChangedTouches(@Nonnull JsArray<Touch> changedTouches);
+  void setChangedTouches(@JsNonNull JsArray<Touch> changedTouches);
 
   @JsOverlay
   default void setChangedTouches(@Nonnull final Touch... changedTouches) {
@@ -43,7 +44,7 @@ public interface TouchEventInit extends EventModifierInit {
   JsArray<Touch> targetTouches();
 
   @JsProperty
-  void setTargetTouches(@Nonnull JsArray<Touch> targetTouches);
+  void setTargetTouches(@JsNonNull JsArray<Touch> targetTouches);
 
   @JsOverlay
   default void setTargetTouches(@Nonnull final Touch... targetTouches) {
@@ -56,7 +57,7 @@ public interface TouchEventInit extends EventModifierInit {
   JsArray<Touch> touches();
 
   @JsProperty
-  void setTouches(@Nonnull JsArray<Touch> touches);
+  void setTouches(@JsNonNull JsArray<Touch> touches);
 
   @JsOverlay
   default void setTouches(@Nonnull final Touch... touches) {

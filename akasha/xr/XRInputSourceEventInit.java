@@ -3,6 +3,7 @@ package akasha.xr;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -11,10 +12,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The XRInputSourceEventInit dictionary is used when calling the XRInputSourceEvent() constructor to provide configuration options for the newly-created XRInputSourceEvent object to take on.
+ * The XRInputSourceEvent() constructor creates and returns a new XRInputSourceEvent object describing an event (state change) which has occurred on a WebXR user input device represented by an XRInputSource.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit">XRInputSourceEventInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrinputsourceeventinit">XRInputSourceEventInit - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceevent-xrinputsourceevent"># dom-xrinputsourceevent-xrinputsourceevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -38,7 +39,7 @@ public interface XRInputSourceEventInit extends EventInit {
   @JsProperty(
       name = "frame"
   )
-  @Nonnull
+  @JsNonNull
   XRFrame frame();
 
   /**
@@ -48,7 +49,7 @@ public interface XRInputSourceEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-frame">XRInputSourceEventInit.frame - WebXR Device API</a>
    */
   @JsProperty
-  void setFrame(@Nonnull XRFrame frame);
+  void setFrame(@JsNonNull XRFrame frame);
 
   /**
    * The XRInputSourceEventInit dictionary's inputSource property is used when calling the XRInputSourceEvent() constructor to specify the XRInputSource from which the newly-created event is being sent.
@@ -59,7 +60,7 @@ public interface XRInputSourceEventInit extends EventInit {
   @JsProperty(
       name = "inputSource"
   )
-  @Nonnull
+  @JsNonNull
   XRInputSource inputSource();
 
   /**
@@ -69,13 +70,13 @@ public interface XRInputSourceEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-inputsource">XRInputSourceEventInit.inputSource - WebXR Device API</a>
    */
   @JsProperty
-  void setInputSource(@Nonnull XRInputSource inputSource);
+  void setInputSource(@JsNonNull XRInputSource inputSource);
 
   /**
-   * The XRInputSourceEventInit dictionary is used when calling the XRInputSourceEvent() constructor to provide configuration options for the newly-created XRInputSourceEvent object to take on.
+   * The XRInputSourceEvent() constructor creates and returns a new XRInputSourceEvent object describing an event (state change) which has occurred on a WebXR user input device represented by an XRInputSource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit">XRInputSourceEventInit - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrinputsourceeventinit">XRInputSourceEventInit - WebXR Device API</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceevent-xrinputsourceevent"># dom-xrinputsourceevent-xrinputsourceevent</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

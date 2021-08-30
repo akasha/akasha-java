@@ -4,17 +4,18 @@ import akasha.AddEventListenerOptions;
 import akasha.EventListenerOptions;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The WebXR Device API's XRReferenceSpace interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior.
+ * The WebXR Device API's XRReferenceSpace interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected reference space type. It expands upon the base class, XRSpace, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace">XRReferenceSpace - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrreferencespace-interface">XRReferenceSpace - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrreferencespace-interface"># xrreferencespace-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +30,7 @@ public class XRReferenceSpace extends XRSpace {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/onreset">XRReferenceSpace.onreset - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespace-onreset">onreset - WebXR Device API</a>
    */
-  @Nullable
+  @JsNullable
   public XRReferenceSpaceEventHandler onreset;
 
   protected XRReferenceSpace() {
@@ -41,7 +42,7 @@ public class XRReferenceSpace extends XRSpace {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/getOffsetReferenceSpace">XRReferenceSpace.getOffsetReferenceSpace - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespace-getoffsetreferencespace">getOffsetReferenceSpace() - WebXR Device API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XRReferenceSpace getOffsetReferenceSpace(@Nonnull XRRigidTransform originOffset);
 
   @JsOverlay

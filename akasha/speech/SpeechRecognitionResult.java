@@ -3,7 +3,7 @@ package akasha.speech;
 import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The SpeechRecognitionResult interface of the Web Speech API represents a single recognition match, which may contain multiple SpeechRecognitionAlternative objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult">SpeechRecognitionResult - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-result">SpeechRecognitionResult - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-result"># speechreco-result</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -53,6 +53,6 @@ public class SpeechRecognitionResult extends JsObject {
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognitionresult-item">item() - Web Speech API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SpeechRecognitionAlternative item(int index);
 }

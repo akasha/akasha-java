@@ -4,6 +4,7 @@ import akasha.core.ArrayBufferView;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The Crypto interface represents basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto">Crypto - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#crypto-interface">Crypto - Web Cryptography API</a>
+ * @see <a href="https://w3c.github.io/webcrypto/#crypto-interface"># crypto-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -41,6 +42,6 @@ public class Crypto extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues">Crypto.getRandomValues - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ArrayBufferView getRandomValues(@Nonnull ArrayBufferView array);
 }

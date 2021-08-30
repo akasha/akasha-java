@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -129,11 +130,11 @@ public interface TouchInit {
   @JsProperty(
       name = "target"
   )
-  @Nonnull
+  @JsNonNull
   EventTarget target();
 
   @JsProperty
-  void setTarget(@Nonnull EventTarget target);
+  void setTarget(@JsNonNull EventTarget target);
 
   @JsProperty(
       name = "touchType"
@@ -142,7 +143,7 @@ public interface TouchInit {
   String touchType();
 
   @JsProperty
-  void setTouchType(@TouchType @Nonnull String touchType);
+  void setTouchType(@TouchType @JsNonNull String touchType);
 
   @Generated("org.realityforge.webtack")
   @JsType(

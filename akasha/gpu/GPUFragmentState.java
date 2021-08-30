@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +37,11 @@ public interface GPUFragmentState extends GPUProgrammableStage {
   @JsProperty(
       name = "targets"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<GPUColorTargetState> targets();
 
   @JsProperty
-  void setTargets(@Nonnull JsArray<GPUColorTargetState> targets);
+  void setTargets(@JsNonNull JsArray<GPUColorTargetState> targets);
 
   @JsOverlay
   default void setTargets(@Nonnull final GPUColorTargetState... targets) {

@@ -13,6 +13,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -41,7 +43,7 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-name">Window.name - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-name">Window.name - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   /**
@@ -49,7 +51,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onabort">Window.onabort - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onabort;
 
   /**
@@ -57,7 +59,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onafterprint">Window.onafterprint - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onafterprint;
 
   /**
@@ -65,7 +67,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">GlobalEventHandlers.onanimationcancel - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public AnimationEventHandler onanimationcancel;
 
   /**
@@ -73,7 +75,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">GlobalEventHandlers.onanimationend - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public AnimationEventHandler onanimationend;
 
   /**
@@ -81,7 +83,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">GlobalEventHandlers.onanimationiteration - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public AnimationEventHandler onanimationiteration;
 
   /**
@@ -89,7 +91,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">GlobalEventHandlers.onanimationstart - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public AnimationEventHandler onanimationstart;
 
   /**
@@ -98,7 +100,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onauxclick">GlobalEventHandlers.onauxclick - MDN</a>
    * @see <a href="https://w3c.github.io/uievents/#event-type-auxclick">onauxclick - UI Events</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onauxclick;
 
   /**
@@ -106,7 +108,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeprint">Window.onbeforeprint - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onbeforeprint;
 
   /**
@@ -114,7 +116,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeunload">Window.onbeforeunload - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public OnBeforeUnloadEventHandler onbeforeunload;
 
   /**
@@ -123,7 +125,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onblur">Window.onblur - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur">onblur - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public FocusEventHandler onblur;
 
   /**
@@ -132,7 +134,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncancel">GlobalEventHandlers.oncancel - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncancel">oncancel - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncancel;
 
   /**
@@ -140,7 +142,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplay">GlobalEventHandlers.oncanplay - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncanplay;
 
   /**
@@ -148,7 +150,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough">GlobalEventHandlers.oncanplaythrough - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncanplaythrough;
 
   /**
@@ -156,7 +158,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onchange">Window.onchange - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   /**
@@ -164,7 +166,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onclick">Window.onclick - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclick;
 
   /**
@@ -173,10 +175,10 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose">GlobalEventHandlers.onclose - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose">onclose - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclose;
 
-  @Nullable
+  @JsNullable
   public EventHandler oncompassneedscalibration;
 
   /**
@@ -185,7 +187,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oncontextmenu">Window.oncontextmenu - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncontextmenu">oncontextmenu - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncontextmenu;
 
   /**
@@ -193,7 +195,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncuechange">GlobalEventHandlers.oncuechange - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncuechange;
 
   /**
@@ -202,7 +204,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondblclick">Window.ondblclick - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick">ondblclick - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ondblclick;
 
   /**
@@ -211,7 +213,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
    * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
-  @Nullable
+  @JsNullable
   public DeviceMotionEventHandler ondevicemotion;
 
   /**
@@ -220,7 +222,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
    * @see <a href="https://w3c.github.io/deviceorientation/">DeviceOrientation Event Specification</a>
    */
-  @Nullable
+  @JsNullable
   public DeviceOrientationEventHandler ondeviceorientation;
 
   /**
@@ -228,7 +230,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientationabsolute">Window.ondeviceorientationabsolute - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ondeviceorientationabsolute;
 
   /**
@@ -238,8 +240,8 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag">ondrag - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrag">ondrag - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondrag;
+  @JsNullable
+  public DragEventHandler ondrag;
 
   /**
    * A global event handler for the dragend event.
@@ -248,8 +250,8 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend">ondragend - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragend">ondragend - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondragend;
+  @JsNullable
+  public DragEventHandler ondragend;
 
   /**
    * A global event handler for the dragenter event.
@@ -258,8 +260,8 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter">ondragenter - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter">ondragenter - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondragenter;
+  @JsNullable
+  public DragEventHandler ondragenter;
 
   /**
    * A global event handler for the dragleave event.
@@ -268,8 +270,8 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave">ondragleave - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave">ondragleave - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondragleave;
+  @JsNullable
+  public DragEventHandler ondragleave;
 
   /**
    * A global event handler for the dragover event.
@@ -278,8 +280,8 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover">ondragover - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragover">ondragover - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondragover;
+  @JsNullable
+  public DragEventHandler ondragover;
 
   /**
    * A global event handler for the dragstart event.
@@ -288,8 +290,8 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart">ondragstart - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart">ondragstart - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondragstart;
+  @JsNullable
+  public DragEventHandler ondragstart;
 
   /**
    * A global event handler for the drop event.
@@ -298,15 +300,15 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrop">ondrop - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/index.html#ix-handler-ondrop">ondrop - HTML 5.1</a>
    */
-  @Nullable
-  public EventHandler ondrop;
+  @JsNullable
+  public DragEventHandler ondrop;
 
   /**
    * The ondurationchange property of the GlobalEventHandlers mixin is the EventHandler for processing durationchange events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange">GlobalEventHandlers.ondurationchange - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ondurationchange;
 
   /**
@@ -314,7 +316,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onemptied">GlobalEventHandlers.onemptied - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onemptied;
 
   /**
@@ -322,7 +324,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onended">GlobalEventHandlers.onended - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onended;
 
   /**
@@ -331,7 +333,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror">GlobalEventHandlers.onerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror">onerror - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public OnErrorEventHandler onerror;
 
   /**
@@ -340,7 +342,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onfocus">Window.onfocus - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onfocus">onfocus - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public FocusEventHandler onfocus;
 
   /**
@@ -349,7 +351,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onformdata">onformdata - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onformdata;
 
   /**
@@ -358,7 +360,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepadconnected">Window.ongamepadconnected - MDN</a>
    * @see <a href="https://w3c.github.io/gamepad/#event-gamepadconnected">gamepadconnected event - Gamepad</a>
    */
-  @Nullable
+  @JsNullable
   public GamepadEventHandler ongamepadconnected;
 
   /**
@@ -367,7 +369,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepaddisconnected">Window.ongamepaddisconnected - MDN</a>
    * @see <a href="https://w3c.github.io/gamepad/#event-gamepaddisconnected">gamepaddisconnected event - Gamepad</a>
    */
-  @Nullable
+  @JsNullable
   public GamepadEventHandler ongamepaddisconnected;
 
   /**
@@ -376,8 +378,8 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture">GlobalEventHandlers.ongotpointercapture - MDN</a>
    * @see <a href="https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event">ongotpointercapture - Pointer Events &ndash; Level 2</a>
    */
-  @Nullable
-  public EventHandler ongotpointercapture;
+  @JsNullable
+  public PointerEventHandler ongotpointercapture;
 
   /**
    * The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.
@@ -387,7 +389,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">GlobalEventHandlers - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">GlobalEventHandlers - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public HashChangeEventHandler onhashchange;
 
   /**
@@ -396,7 +398,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/oninput">Window.oninput - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">onkeydown - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oninput;
 
   /**
@@ -404,7 +406,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">GlobalEventHandlers.oninvalid - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oninvalid;
 
   /**
@@ -413,7 +415,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeydown">Window.onkeydown - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeydown">onkeydown - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onkeydown;
 
   /**
@@ -422,7 +424,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeypress">Window.onkeypress - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeypress">onkeypress - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onkeypress;
 
   /**
@@ -431,7 +433,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onkeyup">Window.onkeyup - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onkeyup">onkeyup - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onkeyup;
 
   /**
@@ -440,7 +442,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onlanguagechange">Window.onlanguagechange - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">WindowEventHandler.onlanguagechange - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onlanguagechange;
 
   /**
@@ -449,7 +451,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onload">Window.onload - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onload">onload - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onload;
 
   /**
@@ -457,7 +459,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata">GlobalEventHandlers.onloadeddata - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onloadeddata;
 
   /**
@@ -465,7 +467,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata">GlobalEventHandlers.onloadedmetadata - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onloadedmetadata;
 
   /**
@@ -474,7 +476,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadstart">GlobalEventHandlers.onloadstart - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onloadstart">onloadstart - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onloadstart;
 
   /**
@@ -483,8 +485,8 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture">GlobalEventHandlers.onlostpointercapture - MDN</a>
    * @see <a href="https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event">onlostpointercapture - Pointer Events &ndash; Level 2</a>
    */
-  @Nullable
-  public EventHandler onlostpointercapture;
+  @JsNullable
+  public PointerEventHandler onlostpointercapture;
 
   /**
    * The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.
@@ -492,7 +494,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage">WindowEventHandlers.onmessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">onmessage - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
   /**
@@ -501,7 +503,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">WindowEventHandlers.onmessageerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">onmessageerror - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessageerror;
 
   /**
@@ -509,7 +511,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousedown">Window.onmousedown - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmousedown;
 
   /**
@@ -517,7 +519,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter">GlobalEventHandlers.onmouseenter - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmouseenter;
 
   /**
@@ -525,7 +527,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave">GlobalEventHandlers.onmouseleave - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmouseleave;
 
   /**
@@ -534,7 +536,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmousemove">Window.onmousemove - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousemove">onmousemove - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmousemove;
 
   /**
@@ -542,7 +544,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseout">Window.onmouseout - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmouseout;
 
   /**
@@ -551,7 +553,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseover">Window.onmouseover - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover">onmouseover - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmouseover;
 
   /**
@@ -559,22 +561,22 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onmouseup">Window.onmouseup - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmouseup;
 
-  @Nullable
+  @JsNullable
   public EventHandler onoffline;
 
-  @Nullable
+  @JsNullable
   public EventHandler ononline;
 
-  @Nullable
+  @JsNullable
   public EventHandler onorientationchange;
 
-  @Nullable
+  @JsNullable
   public PageTransitionEventHandler onpagehide;
 
-  @Nullable
+  @JsNullable
   public PageTransitionEventHandler onpageshow;
 
   /**
@@ -582,7 +584,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpause">GlobalEventHandlers.onpause - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onpause;
 
   /**
@@ -590,7 +592,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplay">GlobalEventHandlers.onplay - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onplay;
 
   /**
@@ -598,7 +600,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplaying">GlobalEventHandlers.onplaying - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onplaying;
 
   /**
@@ -608,8 +610,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointercancel">onpointercancel - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointercancel">onpointercancel - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointercancel;
+  @JsNullable
+  public PointerEventHandler onpointercancel;
 
   /**
    * The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.
@@ -618,8 +620,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown">onpointerdown - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown">onpointerdown - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointerdown;
+  @JsNullable
+  public PointerEventHandler onpointerdown;
 
   /**
    * The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.
@@ -628,8 +630,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter">onpointerenter - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter">onpointerenter - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointerenter;
+  @JsNullable
+  public PointerEventHandler onpointerenter;
 
   /**
    * The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.
@@ -638,8 +640,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave">onpointerleave - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave">onpointerleave - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointerleave;
+  @JsNullable
+  public PointerEventHandler onpointerleave;
 
   /**
    * The onpointermove property of the GlobalEventHandlers mixin is an EventHandler that processes pointermove events.
@@ -648,8 +650,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointermove">onpointermove - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointermove">onpointermove - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointermove;
+  @JsNullable
+  public PointerEventHandler onpointermove;
 
   /**
    * The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.
@@ -658,8 +660,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout">onpointerout - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout">onpointerout - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointerout;
+  @JsNullable
+  public PointerEventHandler onpointerout;
 
   /**
    * The onpointerover property of the GlobalEventHandlers mixin is an EventHandler that processes pointerover events.
@@ -668,8 +670,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerover">onpointerover - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerover">onpointerover - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointerover;
+  @JsNullable
+  public PointerEventHandler onpointerover;
 
   /**
    * The onpointerup property of the GlobalEventHandlers mixin is an EventHandler that processes pointerup events.
@@ -678,8 +680,8 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup">onpointerup - Pointer Events &ndash; Level 2</a>
    * @see <a href="https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup">onpointerup - Pointer Events</a>
    */
-  @Nullable
-  public EventHandler onpointerup;
+  @JsNullable
+  public PointerEventHandler onpointerup;
 
   /**
    * The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.
@@ -687,13 +689,13 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onpopstate">Window.onpopstate - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate">onpopstate - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onpopstate;
+  @JsNullable
+  public PopStateEventHandler onpopstate;
 
-  @Nullable
+  @JsNullable
   public EventHandler onprogress;
 
-  @Nullable
+  @JsNullable
   public EventHandler onratechange;
 
   /**
@@ -702,7 +704,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled">Window.onrejectionhandled - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onrejectionhandled">onrejectionhandled - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public PromiseRejectionEventHandler onrejectionhandled;
 
   /**
@@ -710,7 +712,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onreset">Window.onreset - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onreset;
 
   /**
@@ -718,7 +720,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onresize">Window.onresize - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public UIEventHandler onresize;
 
   /**
@@ -728,16 +730,16 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-onscroll">onscroll - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll">onscroll - Document Object Model (DOM) Level 3 Events Specification</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onscroll;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsecuritypolicyviolation;
 
-  @Nullable
+  @JsNullable
   public EventHandler onseeked;
 
-  @Nullable
+  @JsNullable
   public EventHandler onseeking;
 
   /**
@@ -745,7 +747,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onselect">Window.onselect - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onselect;
 
   /**
@@ -754,7 +756,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
    * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange">GlobalEventHandlers.onselectionchange - Selection API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onselectionchange;
 
   /**
@@ -763,13 +765,13 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart">GlobalEventHandlers.onselectstart - MDN</a>
    * @see <a href="https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart">GlobalEventHandlers.onselectstart - Selection API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onselectstart;
 
-  @Nullable
+  @JsNullable
   public EventHandler onslotchange;
 
-  @Nullable
+  @JsNullable
   public EventHandler onstalled;
 
   /**
@@ -778,7 +780,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onstorage">Window.onstorage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage">onstorage - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public StorageEventHandler onstorage;
 
   /**
@@ -787,16 +789,16 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onsubmit">Window.onsubmit - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit">onsubmit - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onsubmit;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsuspend;
 
-  @Nullable
+  @JsNullable
   public EventHandler ontimeupdate;
 
-  @Nullable
+  @JsNullable
   public EventHandler ontoggle;
 
   /**
@@ -805,8 +807,8 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel">GlobalEventHandlers.ontouchcancel - MDN</a>
    * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchcancel">Touch Events – Level 2</a>
    */
-  @Nullable
-  public EventHandler ontouchcancel;
+  @JsNullable
+  public TouchEventHandler ontouchcancel;
 
   /**
    * A global event handler for the touchend event.
@@ -814,8 +816,8 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchend">GlobalEventHandlers.ontouchend - MDN</a>
    * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchend">Touch Events – Level 2</a>
    */
-  @Nullable
-  public EventHandler ontouchend;
+  @JsNullable
+  public TouchEventHandler ontouchend;
 
   /**
    * A global event handler for the touchmove event.
@@ -823,8 +825,8 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove">GlobalEventHandlers.ontouchmove - MDN</a>
    * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchmove">Touch Events – Level 2</a>
    */
-  @Nullable
-  public EventHandler ontouchmove;
+  @JsNullable
+  public TouchEventHandler ontouchmove;
 
   /**
    * The ontouchstart property of the GlobalEventHandlers mixin is an EventHandler that processes touchstart events.
@@ -832,15 +834,15 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart">GlobalEventHandlers.ontouchstart - MDN</a>
    * @see <a href="https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchstart">Touch Events – Level 2</a>
    */
-  @Nullable
-  public EventHandler ontouchstart;
+  @JsNullable
+  public TouchEventHandler ontouchstart;
 
   /**
    * The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">GlobalEventHandlers.ontransitioncancel - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public TransitionEventHandler ontransitioncancel;
 
   /**
@@ -848,13 +850,13 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">GlobalEventHandlers.ontransitionend - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public TransitionEventHandler ontransitionend;
 
-  @Nullable
+  @JsNullable
   public TransitionEventHandler ontransitionrun;
 
-  @Nullable
+  @JsNullable
   public TransitionEventHandler ontransitionstart;
 
   /**
@@ -863,7 +865,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/onunhandledrejection">Window.onunhandledrejection - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection">onunhandledrejection - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public PromiseRejectionEventHandler onunhandledrejection;
 
   /**
@@ -874,25 +876,25 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/html51/#windoweventhandlers">GlobalEventHandlers - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/#windoweventhandlers">GlobalEventHandlers - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onunload;
 
-  @Nullable
+  @JsNullable
   public EventHandler onvolumechange;
 
-  @Nullable
+  @JsNullable
   public EventHandler onwaiting;
 
-  @Nullable
+  @JsNullable
   public EventHandler onwebkitanimationend;
 
-  @Nullable
+  @JsNullable
   public EventHandler onwebkitanimationiteration;
 
-  @Nullable
+  @JsNullable
   public EventHandler onwebkitanimationstart;
 
-  @Nullable
+  @JsNullable
   public EventHandler onwebkittransitionend;
 
   /**
@@ -900,7 +902,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onwheel;
 
   /**
@@ -909,7 +911,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener">Window.opener - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-opener">window.opener - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public Any opener;
 
   /**
@@ -917,7 +919,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/status">Window.status - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String status;
 
   protected Window() {
@@ -1541,7 +1543,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Window open(@Nonnull String url, @Nonnull String target, @Nonnull String features);
 
   /**
@@ -1549,7 +1551,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Window open(@Nonnull String url, @Nonnull String target);
 
   /**
@@ -1557,7 +1559,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Window open(@Nonnull String url);
 
   /**
@@ -1565,7 +1567,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Window open();
 
   /**
@@ -1624,7 +1626,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native String prompt(@Nonnull String message, @Nonnull String default_);
 
   /**
@@ -1632,7 +1634,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native String prompt(@Nonnull String message);
 
   /**
@@ -1640,7 +1642,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native String prompt();
 
   /**
@@ -1651,7 +1653,7 @@ public class Window extends EventTarget {
   public native void stop();
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final JsObject get(@Nonnull final String name) {
     return Js.<JsPropertyMap<JsObject>>cast( this ).get( name );
   }
@@ -1664,7 +1666,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">getComputedStyle() - Document Object Model (DOM) Level 2 Style Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt,
       @Nonnull String pseudoElt);
 
@@ -1676,7 +1678,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle">getComputedStyle() - Document Object Model (DOM) Level 2 Style Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt);
 
   /**
@@ -1685,7 +1687,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia">Window.matchMedia - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-matchmedia">Window.matchMedia() - CSS Object Model (CSSOM) View Module</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaQueryList matchMedia(@Nonnull String query);
 
   /**
@@ -1815,7 +1817,7 @@ public class Window extends EventTarget {
    * @see <a href="https://w3c.github.io/selection-api/#extensions-to-window-interface">Window.getSelection() - Selection API</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Selection getSelection();
 
   /**
@@ -1827,7 +1829,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-atob">WindowBase64.atob() - HTML5</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String atob(@Nonnull String data);
 
   /**
@@ -1839,7 +1841,7 @@ public class Window extends EventTarget {
    * @see <a href="https://www.w3.org/TR/html52/#dom-windowbase64-btoa">WindowBase64.btoa() - HTML5</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String btoa(@Nonnull String data);
 
   /**
@@ -1876,7 +1878,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image,
       @Nonnull ImageBitmapOptions options);
 
@@ -1886,7 +1888,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image);
 
   /**
@@ -1895,7 +1897,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image, int sx,
       int sy, int sw, int sh, @Nonnull ImageBitmapOptions options);
 
@@ -1905,7 +1907,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap">WindowOrWorkerGlobalScope.createImageBitmap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap">createImageBitmap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ImageBitmap> createImageBitmap(@Nonnull ImageBitmapSource image, int sx,
       int sy, int sw, int sh);
 
@@ -1925,7 +1927,7 @@ public class Window extends EventTarget {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Response> fetch(@Nonnull RequestInfo input, @Nonnull RequestInit init);
 
   /**
@@ -1936,7 +1938,7 @@ public class Window extends EventTarget {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Response> fetch(@Nonnull Request input, @Nonnull RequestInit init);
 
   /**
@@ -1947,7 +1949,7 @@ public class Window extends EventTarget {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Response> fetch(@Nonnull String input, @Nonnull RequestInit init);
 
   /**
@@ -1958,7 +1960,7 @@ public class Window extends EventTarget {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Response> fetch(@Nonnull RequestInfo input);
 
   /**
@@ -1969,7 +1971,7 @@ public class Window extends EventTarget {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Response> fetch(@Nonnull Request input);
 
   /**
@@ -1980,7 +1982,7 @@ public class Window extends EventTarget {
    * @see <a href="https://fetch.spec.whatwg.org/#dom-global-fetch">fetch() - Fetch</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Response> fetch(@Nonnull String input);
 
   /**
@@ -2315,71 +2317,377 @@ public class Window extends EventTarget {
   }
 
   @JsOverlay
-  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+  public final void addPopstateListener(@Nonnull final PopStateEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+    addEventListener( "popstate", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+  public final void addPopstateListener(@Nonnull final PopStateEventListener callback,
       final boolean useCapture) {
-    addEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
+    addEventListener( "popstate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback) {
-    addEventListener( "DOMContentLoaded", Js.cast( callback ) );
+  public final void addPopstateListener(@Nonnull final PopStateEventListener callback) {
+    addEventListener( "popstate", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+  public final void removePopstateListener(@Nonnull final PopStateEventListener callback,
       @Nonnull final EventListenerOptions options) {
-    removeEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+    removeEventListener( "popstate", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+  public final void removePopstateListener(@Nonnull final PopStateEventListener callback,
       final boolean useCapture) {
-    removeEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
+    removeEventListener( "popstate", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback) {
-    removeEventListener( "DOMContentLoaded", Js.cast( callback ) );
+  public final void removePopstateListener(@Nonnull final PopStateEventListener callback) {
+    removeEventListener( "popstate", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public final void addAfterprintListener(@Nonnull final EventListener callback,
+  public final void addBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "afterprint", Js.cast( callback ), options );
+    addEventListener( "beforeunload", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void addAfterprintListener(@Nonnull final EventListener callback,
+  public final void addBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
       final boolean useCapture) {
-    addEventListener( "afterprint", Js.cast( callback ), useCapture );
+    addEventListener( "beforeunload", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void addAfterprintListener(@Nonnull final EventListener callback) {
-    addEventListener( "afterprint", Js.cast( callback ) );
+  public final void addBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback) {
+    addEventListener( "beforeunload", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public final void removeAfterprintListener(@Nonnull final EventListener callback,
+  public final void removeBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
       @Nonnull final EventListenerOptions options) {
-    removeEventListener( "afterprint", Js.cast( callback ), options );
+    removeEventListener( "beforeunload", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void removeAfterprintListener(@Nonnull final EventListener callback,
+  public final void removeBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback,
       final boolean useCapture) {
-    removeEventListener( "afterprint", Js.cast( callback ), useCapture );
+    removeEventListener( "beforeunload", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void removeAfterprintListener(@Nonnull final EventListener callback) {
-    removeEventListener( "afterprint", Js.cast( callback ) );
+  public final void removeBeforeunloadListener(@Nonnull final BeforeUnloadEventListener callback) {
+    removeEventListener( "beforeunload", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDragListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "drag", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDragListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "drag", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDragListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "drag", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDragListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "drag", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDragListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "drag", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDragListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "drag", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDragleaveListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "dragleave", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDragleaveListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "dragleave", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDragleaveListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "dragleave", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDragleaveListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "dragleave", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDragleaveListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "dragleave", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDragleaveListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "dragleave", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDragstartListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "dragstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDragstartListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "dragstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDragstartListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "dragstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDragstartListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "dragstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDragstartListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "dragstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDragstartListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "dragstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDropListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "drop", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDropListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "drop", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDropListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "drop", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDropListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "drop", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDropListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "drop", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDropListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "drop", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDragendListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "dragend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDragendListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "dragend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDragendListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "dragend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDragendListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "dragend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDragendListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "dragend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDragendListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "dragend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDragenterListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "dragenter", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDragenterListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "dragenter", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDragenterListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "dragenter", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDragenterListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "dragenter", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDragenterListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "dragenter", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDragenterListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "dragenter", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDragoverListener(@Nonnull final DragEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "dragover", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDragoverListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "dragover", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDragoverListener(@Nonnull final DragEventListener callback) {
+    addEventListener( "dragover", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDragoverListener(@Nonnull final DragEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "dragover", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDragoverListener(@Nonnull final DragEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "dragover", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDragoverListener(@Nonnull final DragEventListener callback) {
+    removeEventListener( "dragover", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "animationstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "animationstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback) {
+    addEventListener( "animationstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "animationstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "animationstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback) {
+    removeEventListener( "animationstart", Js.cast( callback ) );
   }
 
   @JsOverlay
@@ -2486,37 +2794,684 @@ public class Window extends EventTarget {
   }
 
   @JsOverlay
-  public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
+  public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "animationstart", Js.cast( callback ), options );
+    addEventListener( "transitionrun", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback,
+  public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
       final boolean useCapture) {
-    addEventListener( "animationstart", Js.cast( callback ), useCapture );
+    addEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void addAnimationstartListener(@Nonnull final AnimationEventListener callback) {
-    addEventListener( "animationstart", Js.cast( callback ) );
+  public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback) {
+    addEventListener( "transitionrun", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
+  public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
       @Nonnull final EventListenerOptions options) {
-    removeEventListener( "animationstart", Js.cast( callback ), options );
+    removeEventListener( "transitionrun", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback,
+  public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
       final boolean useCapture) {
-    removeEventListener( "animationstart", Js.cast( callback ), useCapture );
+    removeEventListener( "transitionrun", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void removeAnimationstartListener(@Nonnull final AnimationEventListener callback) {
-    removeEventListener( "animationstart", Js.cast( callback ) );
+  public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback) {
+    removeEventListener( "transitionrun", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "transitioncancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "transitioncancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback) {
+    addEventListener( "transitioncancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "transitioncancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "transitioncancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTransitioncancelListener(
+      @Nonnull final TransitionEventListener callback) {
+    removeEventListener( "transitioncancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "transitionstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "transitionstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback) {
+    addEventListener( "transitionstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "transitionstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "transitionstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback) {
+    removeEventListener( "transitionstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "transitionend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "transitionend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTransitionendListener(@Nonnull final TransitionEventListener callback) {
+    addEventListener( "transitionend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "transitionend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "transitionend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback) {
+    removeEventListener( "transitionend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointerdownListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointerdown", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointerdownListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointerdown", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointerdownListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointerdown", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointerdownListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointerdown", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointerdownListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointerdown", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointerdownListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointerdown", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addGotpointercaptureListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "gotpointercapture", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addGotpointercaptureListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "gotpointercapture", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addGotpointercaptureListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "gotpointercapture", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeGotpointercaptureListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "gotpointercapture", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeGotpointercaptureListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "gotpointercapture", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeGotpointercaptureListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "gotpointercapture", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addLostpointercaptureListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "lostpointercapture", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLostpointercaptureListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "lostpointercapture", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addLostpointercaptureListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "lostpointercapture", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeLostpointercaptureListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "lostpointercapture", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLostpointercaptureListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "lostpointercapture", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeLostpointercaptureListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "lostpointercapture", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointerenterListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointerenter", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointerenterListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointerenter", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointerenterListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointerenter", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointerenterListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointerenter", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointerenterListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointerenter", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointerenterListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointerenter", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointeroutListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointerout", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointeroutListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointerout", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointeroutListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointerout", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointeroutListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointerout", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointeroutListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointerout", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointeroutListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointerout", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointerupListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointerup", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointerupListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointerup", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointerupListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointerup", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointerupListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointerup", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointerupListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointerup", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointerupListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointerup", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointermoveListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointermove", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointermoveListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointermove", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointermoveListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointermove", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointermoveListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointermove", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointermoveListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointermove", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointermoveListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointermove", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointerleaveListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointerleave", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointerleaveListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointerleave", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointerleaveListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointerleave", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointerleaveListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointerleave", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointerleaveListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointerleave", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointerleaveListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointerleave", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointeroverListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointerover", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointeroverListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointerover", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointeroverListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointerover", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointeroverListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointerover", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointeroverListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointerover", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointeroverListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointerover", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPointercancelListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pointercancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPointercancelListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "pointercancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addPointercancelListener(@Nonnull final PointerEventListener callback) {
+    addEventListener( "pointercancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePointercancelListener(@Nonnull final PointerEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pointercancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePointercancelListener(@Nonnull final PointerEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "pointercancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removePointercancelListener(@Nonnull final PointerEventListener callback) {
+    removeEventListener( "pointercancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTouchendListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "touchend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTouchendListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "touchend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTouchendListener(@Nonnull final TouchEventListener callback) {
+    addEventListener( "touchend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTouchendListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "touchend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTouchendListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "touchend", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTouchendListener(@Nonnull final TouchEventListener callback) {
+    removeEventListener( "touchend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTouchmoveListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "touchmove", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTouchmoveListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "touchmove", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTouchmoveListener(@Nonnull final TouchEventListener callback) {
+    addEventListener( "touchmove", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTouchmoveListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "touchmove", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTouchmoveListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "touchmove", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTouchmoveListener(@Nonnull final TouchEventListener callback) {
+    removeEventListener( "touchmove", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTouchcancelListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "touchcancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTouchcancelListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "touchcancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTouchcancelListener(@Nonnull final TouchEventListener callback) {
+    addEventListener( "touchcancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTouchcancelListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "touchcancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTouchcancelListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "touchcancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTouchcancelListener(@Nonnull final TouchEventListener callback) {
+    removeEventListener( "touchcancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTouchstartListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "touchstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTouchstartListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "touchstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addTouchstartListener(@Nonnull final TouchEventListener callback) {
+    addEventListener( "touchstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTouchstartListener(@Nonnull final TouchEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "touchstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTouchstartListener(@Nonnull final TouchEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "touchstart", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeTouchstartListener(@Nonnull final TouchEventListener callback) {
+    removeEventListener( "touchstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addAfterprintListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "afterprint", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAfterprintListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "afterprint", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addAfterprintListener(@Nonnull final EventListener callback) {
+    addEventListener( "afterprint", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAfterprintListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "afterprint", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAfterprintListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "afterprint", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeAfterprintListener(@Nonnull final EventListener callback) {
+    removeEventListener( "afterprint", Js.cast( callback ) );
   }
 
   @JsOverlay
@@ -2585,40 +3540,6 @@ public class Window extends EventTarget {
   @JsOverlay
   public final void removeBeforeprintListener(@Nonnull final EventListener callback) {
     removeEventListener( "beforeprint", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addBeforeunloadListener(@Nonnull final EventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "beforeunload", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addBeforeunloadListener(@Nonnull final EventListener callback,
-      final boolean useCapture) {
-    addEventListener( "beforeunload", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addBeforeunloadListener(@Nonnull final EventListener callback) {
-    addEventListener( "beforeunload", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeBeforeunloadListener(@Nonnull final EventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "beforeunload", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeBeforeunloadListener(@Nonnull final EventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "beforeunload", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeBeforeunloadListener(@Nonnull final EventListener callback) {
-    removeEventListener( "beforeunload", Js.cast( callback ) );
   }
 
   @JsOverlay
@@ -3168,143 +4089,6 @@ public class Window extends EventTarget {
   @JsOverlay
   public final void removeResizeListener(@Nonnull final UIEventListener callback) {
     removeEventListener( "resize", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "transitioncancel", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "transitioncancel", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addTransitioncancelListener(@Nonnull final TransitionEventListener callback) {
-    addEventListener( "transitioncancel", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "transitioncancel", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeTransitioncancelListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "transitioncancel", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeTransitioncancelListener(
-      @Nonnull final TransitionEventListener callback) {
-    removeEventListener( "transitioncancel", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "transitionend", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "transitionend", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addTransitionendListener(@Nonnull final TransitionEventListener callback) {
-    addEventListener( "transitionend", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "transitionend", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "transitionend", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeTransitionendListener(@Nonnull final TransitionEventListener callback) {
-    removeEventListener( "transitionend", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "transitionrun", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "transitionrun", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addTransitionrunListener(@Nonnull final TransitionEventListener callback) {
-    addEventListener( "transitionrun", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "transitionrun", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "transitionrun", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeTransitionrunListener(@Nonnull final TransitionEventListener callback) {
-    removeEventListener( "transitionrun", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "transitionstart", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "transitionstart", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addTransitionstartListener(@Nonnull final TransitionEventListener callback) {
-    addEventListener( "transitionstart", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "transitionstart", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "transitionstart", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeTransitionstartListener(@Nonnull final TransitionEventListener callback) {
-    removeEventListener( "transitionstart", Js.cast( callback ) );
   }
 
   @JsOverlay

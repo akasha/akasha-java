@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +38,7 @@ public interface RTCStats {
   @JsProperty(
       name = "id"
   )
-  @Nonnull
+  @JsNonNull
   String id();
 
   /**
@@ -47,7 +48,7 @@ public interface RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setId(@Nonnull String id);
+  void setId(@JsNonNull String id);
 
   /**
    * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
@@ -79,7 +80,7 @@ public interface RTCStats {
       name = "type"
   )
   @RTCStatsType
-  @Nonnull
+  @JsNonNull
   String type();
 
   /**
@@ -89,7 +90,7 @@ public interface RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setType(@RTCStatsType @Nonnull String type);
+  void setType(@RTCStatsType @JsNonNull String type);
 
   /**
    * The RTCStats dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.

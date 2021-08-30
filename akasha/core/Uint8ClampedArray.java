@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -160,7 +161,7 @@ public class Uint8ClampedArray extends JsObject implements IntegerTypedArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of">TypedArray.of - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.of">(ECMAScript) # sec-%typedarray%.of</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Uint8ClampedArray of(short... element);
 
   /**
@@ -169,7 +170,7 @@ public class Uint8ClampedArray extends JsObject implements IntegerTypedArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Uint8ClampedArray copyWithin(int target, int start, int end);
 
   /**
@@ -178,7 +179,7 @@ public class Uint8ClampedArray extends JsObject implements IntegerTypedArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Uint8ClampedArray copyWithin(int target, int start);
 
   @JsOverlay
@@ -245,7 +246,7 @@ public class Uint8ClampedArray extends JsObject implements IntegerTypedArray {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray">TypedArray.subarray - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.subarray">(ECMAScript) # sec-%typedarray%.prototype.subarray</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Uint8ClampedArray subarray(int start, int end);
 
   /**
@@ -257,6 +258,6 @@ public class Uint8ClampedArray extends JsObject implements IntegerTypedArray {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 }

@@ -6,6 +6,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,7 +41,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">String.fromCharCode - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.fromcharcode">(ECMAScript) # sec-string.fromcharcode</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String fromCharCode(int... charCodes);
 
   /**
@@ -49,7 +50,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.fromcodepoint">(ECMAScript) # sec-string.fromcodepoint</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String fromCodePoint(int codePoint, int... codePoints);
 
   /**
@@ -58,7 +59,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt">String.charAt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.charat">(ECMAScript) # sec-string.prototype.charat</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String charAt(int index);
 
   /**
@@ -95,7 +96,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.concat">(ECMAScript) # sec-string.prototype.concat</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String concat(@Nonnull String... strings);
 
   /**
@@ -249,7 +250,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.match - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.match">(ECMAScript) # sec-string.prototype.match</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> match(@Nonnull RegExp regexp);
 
   /**
@@ -258,7 +259,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.match - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.match">(ECMAScript) # sec-string.prototype.match</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> match(@Nonnull String regexp);
 
   /**
@@ -268,7 +269,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.matchall">(ECMAScript) # sec-string.prototype.matchall</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<RegExpResult> matchAll(@Nonnull RegExp regexp);
 
   /**
@@ -278,7 +279,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.matchall">(ECMAScript) # sec-string.prototype.matchall</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<RegExpResult> matchAll(@Nonnull String regexp);
 
   /**
@@ -287,7 +288,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize">String.normalize - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.normalize">(ECMAScript) # sec-string.prototype.normalize</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String normalize(@Nonnull String form);
 
   /**
@@ -296,7 +297,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize">String.normalize - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.normalize">(ECMAScript) # sec-string.prototype.normalize</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String normalize();
 
   /**
@@ -306,7 +307,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.padend">(ECMAScript) # sec-string.prototype.padend</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String padEnd(int targetLength, @Nonnull String padString);
 
   /**
@@ -316,7 +317,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.padend">(ECMAScript) # sec-string.prototype.padend</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String padEnd(int targetLength);
 
   /**
@@ -326,7 +327,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.padstart">(ECMAScript) # sec-string.prototype.padstart</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String padStart(int targetLength, @Nonnull String padString);
 
   /**
@@ -336,7 +337,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.padstart">(ECMAScript) # sec-string.prototype.padstart</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String padStart(int targetLength);
 
   /**
@@ -346,7 +347,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.repeat">(ECMAScript) # sec-string.prototype.repeat</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String repeat(int count);
 
   /**
@@ -355,7 +356,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.replace - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.replace">(ECMAScript) # sec-string.prototype.replace</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String replace(@Nonnull RegExp pattern, @Nonnull String replacement);
 
   /**
@@ -364,7 +365,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.replace - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.replace">(ECMAScript) # sec-string.prototype.replace</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String replace(@Nonnull String pattern, @Nonnull String replacement);
 
   /**
@@ -390,7 +391,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.slice">(ECMAScript) # sec-string.prototype.slice</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String slice(int begin, int end);
 
   /**
@@ -400,7 +401,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.slice">(ECMAScript) # sec-string.prototype.slice</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String slice(int begin);
 
   /**
@@ -410,7 +411,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.split">(ECMAScript) # sec-string.prototype.split</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> split(@Nonnull RegExp separator, int limit);
 
   /**
@@ -420,7 +421,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.split">(ECMAScript) # sec-string.prototype.split</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> split(@Nonnull String separator, int limit);
 
   /**
@@ -430,7 +431,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.split">(ECMAScript) # sec-string.prototype.split</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> split(@Nonnull RegExp separator);
 
   /**
@@ -440,7 +441,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.split">(ECMAScript) # sec-string.prototype.split</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> split(@Nonnull String separator);
 
   /**
@@ -450,7 +451,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.split">(ECMAScript) # sec-string.prototype.split</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> split();
 
   /**
@@ -478,7 +479,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.substring">(ECMAScript) # sec-string.prototype.substring</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String substring(int start, int end);
 
   /**
@@ -488,7 +489,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.substring">(ECMAScript) # sec-string.prototype.substring</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String substring(int start);
 
   /**
@@ -499,7 +500,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocalelowercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLocaleLowerCase(@Nonnull JsArray<String> locales);
 
   /**
@@ -510,7 +511,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocalelowercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLocaleLowerCase(@Nonnull String[] locales);
 
   /**
@@ -521,7 +522,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocalelowercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLocaleLowerCase();
 
   /**
@@ -532,7 +533,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocaleuppercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLocaleUpperCase(@Nonnull JsArray<String> locales);
 
   /**
@@ -543,7 +544,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocaleuppercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLocaleUpperCase(@Nonnull String[] locales);
 
   /**
@@ -554,7 +555,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocaleuppercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLocaleUpperCase();
 
   /**
@@ -564,7 +565,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.tolowercase">(ECMAScript) # sec-string.prototype.tolowercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toLowerCase();
 
   /**
@@ -574,7 +575,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.touppercase">(ECMAScript) # sec-string.prototype.touppercase</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toUpperCase();
 
   /**
@@ -584,7 +585,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trim">(ECMAScript) # sec-string.prototype.trim</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String trim();
 
   /**
@@ -594,15 +595,15 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimend">(ECMAScript) # sec-string.prototype.trimend</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String trimEnd();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String trimLeft();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String trimRight();
 
   /**
@@ -612,7 +613,7 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimstart">(ECMAScript) # sec-string.prototype.trimstart</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String trimStart();
 
   /**
@@ -621,7 +622,7 @@ public class JsString extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf">String.valueOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.valueof">(ECMAScript) # sec-string.prototype.valueof</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String valueOf();
 
   /**
@@ -633,6 +634,6 @@ public class JsString extends JsObject {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 }

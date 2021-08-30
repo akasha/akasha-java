@@ -2,6 +2,7 @@ package akasha.speech;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
       name = "error"
   )
   @SpeechSynthesisErrorCode
-  @Nonnull
+  @JsNonNull
   String error();
 
   @JsProperty
-  void setError(@SpeechSynthesisErrorCode @Nonnull String error);
+  void setError(@SpeechSynthesisErrorCode @JsNonNull String error);
 
   @Generated("org.realityforge.webtack")
   @JsType(

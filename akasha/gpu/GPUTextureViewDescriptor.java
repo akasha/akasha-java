@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +40,7 @@ public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
   String aspect();
 
   @JsProperty
-  void setAspect(@GPUTextureAspect @Nonnull String aspect);
+  void setAspect(@GPUTextureAspect @JsNonNull String aspect);
 
   @JsProperty(
       name = "baseArrayLayer"
@@ -64,7 +65,7 @@ public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
   String dimension();
 
   @JsProperty
-  void setDimension(@GPUTextureViewDimension @Nonnull String dimension);
+  void setDimension(@GPUTextureViewDimension @JsNonNull String dimension);
 
   @JsProperty(
       name = "format"
@@ -73,7 +74,7 @@ public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
   String format();
 
   @JsProperty
-  void setFormat(@GPUTextureFormat @Nonnull String format);
+  void setFormat(@GPUTextureFormat @JsNonNull String format);
 
   @JsProperty(
       name = "mipLevelCount"

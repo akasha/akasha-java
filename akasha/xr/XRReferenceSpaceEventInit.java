@@ -4,6 +4,8 @@ import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,10 +14,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The XRReferenceSpaceEventInit dictionary is used when calling the XRReferenceSpaceEvent() constructor to provide the values for its properties. Since the properties are read-only, this is the only opportunity available to set their values.
+ * The XRReferenceSpaceEvent() constructor is used to create a new XRReferenceSpaceEvent object, which represents an event regarding the state of a WebXR reference space object, XRReferenceSpace.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit">XRReferenceSpaceEventInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrreferencespaceeventinit">XRReferenceSpaceEventInit - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceevent-xrreferencespaceevent"># dom-xrreferencespaceevent-xrreferencespaceevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -39,7 +41,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
   @JsProperty(
       name = "referenceSpace"
   )
-  @Nonnull
+  @JsNonNull
   XRReferenceSpace referenceSpace();
 
   /**
@@ -49,7 +51,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">XRReferenceSpaceEventInit.referenceSpace - WebXR Device API</a>
    */
   @JsProperty
-  void setReferenceSpace(@Nonnull XRReferenceSpace referenceSpace);
+  void setReferenceSpace(@JsNonNull XRReferenceSpace referenceSpace);
 
   /**
    * The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.
@@ -60,7 +62,7 @@ public interface XRReferenceSpaceEventInit extends EventInit {
   @JsProperty(
       name = "transform"
   )
-  @Nullable
+  @JsNullable
   XRRigidTransform transform();
 
   /**
@@ -70,13 +72,13 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-transform">XRReferenceSpaceEventInit.transform - WebXR Device API</a>
    */
   @JsProperty
-  void setTransform(@Nullable XRRigidTransform transform);
+  void setTransform(@JsNullable XRRigidTransform transform);
 
   /**
-   * The XRReferenceSpaceEventInit dictionary is used when calling the XRReferenceSpaceEvent() constructor to provide the values for its properties. Since the properties are read-only, this is the only opportunity available to set their values.
+   * The XRReferenceSpaceEvent() constructor is used to create a new XRReferenceSpaceEvent object, which represents an event regarding the state of a WebXR reference space object, XRReferenceSpace.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit">XRReferenceSpaceEventInit - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrreferencespaceeventinit">XRReferenceSpaceEventInit - WebXR Device API</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceevent-xrreferencespaceevent"># dom-xrreferencespaceevent-xrreferencespaceevent</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

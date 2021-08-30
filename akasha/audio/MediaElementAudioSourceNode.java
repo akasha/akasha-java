@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MediaElementAudioSourceNode interface represents an audio source consisting of an HTML5 &lt;audio&gt; or &lt;video&gt; element. It is an AudioNode that acts as an audio source.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode">MediaElementAudioSourceNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#mediaelementaudiosourcenode">MediaElementAudioSourceNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#MediaElementAudioSourceNode"># MediaElementAudioSourceNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

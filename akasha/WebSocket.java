@@ -5,7 +5,8 @@ import akasha.core.ArrayBufferView;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -43,7 +44,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType">WebSocket.binaryType - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-binarytype">WebSocket: binaryType - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @BinaryType
   public String binaryType;
 
@@ -53,7 +54,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onclose">WebSocket.onclose - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-websocket-onclose">WebSocket: onclose - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public CloseEventHandler onclose;
 
   /**
@@ -62,7 +63,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onerror">WebSocket.onerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-websocket-onerror">WebSocket: onerror - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
   /**
@@ -71,7 +72,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onmessage">WebSocket.onmessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-websocket-onmessage">WebSocket: onmessage - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
   /**
@@ -80,7 +81,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onopen">WebSocket.onopen - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-websocket-onopen">WebSocket: onopen - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onopen;
 
   /**

@@ -5,6 +5,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,19 +32,19 @@ public class NamedNodeMap extends JsObject {
   )
   public native int length();
 
-  @Nullable
+  @JsNullable
   public native Attr getNamedItemNS(@Nullable String namespace, @Nonnull String localName);
 
-  @Nonnull
+  @JsNonNull
   public native Attr removeNamedItem(@Nonnull String qualifiedName);
 
-  @Nonnull
+  @JsNonNull
   public native Attr removeNamedItemNS(@Nullable String namespace, @Nonnull String localName);
 
-  @Nullable
+  @JsNullable
   public native Attr setNamedItem(@Nonnull Attr attr);
 
-  @Nullable
+  @JsNullable
   public native Attr setNamedItemNS(@Nonnull Attr attr);
 
   /**
@@ -51,10 +53,10 @@ public class NamedNodeMap extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItem">NamedNodeMap.getNamedItem - MDN</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Attr getNamedItem(@Nonnull String qualifiedName);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Attr item(int index);
 }

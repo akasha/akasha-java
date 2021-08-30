@@ -4,15 +4,15 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The Report interface of the Reporting API represents a single report.Reports can be accessed in a number of ways:Via the ReportingObserver.takeRecords() method &mdash; this returns all reports in an observer's report queue, and then empties the queue.Via the reports parameter of the callback function passed into the ReportingObserver() constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.By sending requests to the endpoints defined via the Report-To HTTP header.
+ * The Report interface of the Reporting API represents a single report.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Report">Report - MDN</a>
- * @see <a href="https://w3c.github.io/reporting/#dom-report">Report - Reporting API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -60,6 +60,6 @@ public class Report extends JsObject {
   @Nonnull
   public native String url();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

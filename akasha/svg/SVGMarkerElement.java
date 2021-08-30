@@ -2,6 +2,7 @@ package akasha.svg;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,7 +33,7 @@ public class SVGMarkerElement extends SVGElement {
   @JsOverlay
   public static final int SVG_MARKER_ORIENT_UNKNOWN = 0;
 
-  @Nonnull
+  @JsNonNull
   public String orient;
 
   protected SVGMarkerElement() {

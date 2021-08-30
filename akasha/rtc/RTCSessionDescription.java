@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -60,6 +61,6 @@ public class RTCSessionDescription extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/toJSON">RTCSessionDescription.toJSON - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcsessiondescription-tojson">RTCSessionDescription: toJSON() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

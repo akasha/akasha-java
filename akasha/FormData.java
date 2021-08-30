@@ -7,8 +7,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -17,7 +18,7 @@ import jsinterop.annotations.JsType;
  * The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to &quot;multipart/form-data&quot;.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData - MDN</a>
- * @see <a href="https://xhr.spec.whatwg.org/#interface-formdata">FormData - XMLHttpRequest</a>
+ * @see <a href="https://xhr.spec.whatwg.org/#interface-formdata">(XMLHttpRequest) # interface-formdata</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -83,7 +84,7 @@ public class FormData extends JsObject implements JsIterable<FormData.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/get">FormData.get - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata-get">get() - XMLHttpRequest</a>
    */
-  @Nullable
+  @JsNullable
   public native FormDataEntryValue get(@Nonnull String name);
 
   /**
@@ -92,7 +93,7 @@ public class FormData extends JsObject implements JsIterable<FormData.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/getAll">FormData.getAll - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata-getall">getAll() - XMLHttpRequest</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<FormDataEntryValue> getAll(@Nonnull String name);
 
   /**
@@ -134,7 +135,7 @@ public class FormData extends JsObject implements JsIterable<FormData.Entry> {
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">keys() (as iterator&lt;&gt;) - XMLHttpRequest</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   /**
@@ -144,7 +145,7 @@ public class FormData extends JsObject implements JsIterable<FormData.Entry> {
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">values() (as iterator&lt;&gt;) - XMLHttpRequest</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<FormDataEntryValue> values();
 
   /**
@@ -154,14 +155,14 @@ public class FormData extends JsObject implements JsIterable<FormData.Entry> {
    * @see <a href="https://xhr.spec.whatwg.org/#dom-formdata">entries() (as iterator&lt;&gt;) - XMLHttpRequest</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -185,18 +186,18 @@ public class FormData extends JsObject implements JsIterable<FormData.Entry> {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull FormDataEntryValue value);
+    void item(@JsNonNull FormDataEntryValue value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull FormDataEntryValue value, String key);
+    void item(@JsNonNull FormDataEntryValue value, String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull FormDataEntryValue value, String key, @Nonnull FormData iterable);
+    void item(@JsNonNull FormDataEntryValue value, String key, @JsNonNull FormData iterable);
   }
 }

@@ -3,7 +3,8 @@ package akasha.audio;
 import akasha.core.Float32Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The WaveShaperNode interface represents a non-linear distorter.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode">WaveShaperNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#waveshapernode">WaveShaperNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#WaveShaperNode"># WaveShaperNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,7 +27,7 @@ public class WaveShaperNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/curve">WaveShaperNode.curve - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-waveshapernode-curve">curve - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public Float32Array curve;
 
   /**
@@ -35,7 +36,7 @@ public class WaveShaperNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/oversample">WaveShaperNode.oversample - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-waveshapernode-oversample">oversample - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   @OverSampleType
   public String oversample;
 

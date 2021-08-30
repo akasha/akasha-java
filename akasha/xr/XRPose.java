@@ -8,10 +8,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * XRPose is a WebXR API interface representing a position and orientation in the 3D space, relative to the XRSpace within which it resides.
+ * XRPose is a WebXR API interface representing a position and orientation in the 3D space, relative to the XRSpace within which it resides. The XRSpace&mdash;which is either an XRReferenceSpace or an XRBoundedReferenceSpace&mdash;defines the coordinate system used for the pose and, in the case of an XRViewerPose, its underlying views.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPose">XRPose - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrpose-interface">XRPose - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrpose-interface"># xrpose-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

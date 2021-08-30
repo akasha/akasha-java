@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,10 +18,10 @@ import jsinterop.annotations.JsType;
     name = "HTMLModElement"
 )
 public class HTMLModElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String cite;
 
-  @Nonnull
+  @JsNonNull
   public String dateTime;
 
   protected HTMLModElement() {

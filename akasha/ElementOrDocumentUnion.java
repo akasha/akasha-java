@@ -25,4 +25,24 @@ public interface ElementOrDocumentUnion {
   static ElementOrDocumentUnion of(@Nonnull final Document value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isDocument() {
+    return ( (Object) this ) instanceof Document;
+  }
+
+  @JsOverlay
+  default Document asDocument() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isElement() {
+    return ( (Object) this ) instanceof Element;
+  }
+
+  @JsOverlay
+  default Element asElement() {
+    return Js.cast( this );
+  }
 }

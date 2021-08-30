@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
   @JsProperty(
       name = "hash"
   )
-  @Nonnull
+  @JsNonNull
   KeyAlgorithm hash();
 
   @JsProperty
-  void setHash(@Nonnull KeyAlgorithm hash);
+  void setHash(@JsNonNull KeyAlgorithm hash);
 
   @JsProperty(
       name = "length"

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations-1/#the-effecttiming-dictionaries">EffectTiming - Web Animations</a>
+ * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -67,7 +68,7 @@ public interface EffectTiming {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#enumdef-playbackdirection">direction - Web Animations</a>
    */
   @JsProperty
-  void setDirection(@PlaybackDirection @Nonnull String direction);
+  void setDirection(@PlaybackDirection @JsNonNull String direction);
 
   /**
    * The duration property of the dictionary EffectTiming in the Web Animations API specifies the duration in milliseconds that a single iteration (from beginning to end) the animation should take to complete.
@@ -87,7 +88,7 @@ public interface EffectTiming {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#iteration-duration">duration - Web Animations</a>
    */
   @JsProperty
-  void setDuration(@Nonnull UnrestrictedDoubleOrStringUnion duration);
+  void setDuration(@JsNonNull UnrestrictedDoubleOrStringUnion duration);
 
   /**
    * The duration property of the dictionary EffectTiming in the Web Animations API specifies the duration in milliseconds that a single iteration (from beginning to end) the animation should take to complete.
@@ -129,7 +130,7 @@ public interface EffectTiming {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#time-transformations">easing - Web Animations</a>
    */
   @JsProperty
-  void setEasing(@Nonnull String easing);
+  void setEasing(@JsNonNull String easing);
 
   /**
    * The endDelay property of the EffectTiming dictionary (part of the Web Animations API) indicates the number of milliseconds to delay after the active period of an animation sequence. The animation's end time&mdash;the time at which an iteration is considered to have finished&mdash;is the time at which the animation finishes an iteration (its initial delay, AnimationEffectTimingReadOnly.delay, plus its duration,duration, plus its end delay.
@@ -170,7 +171,7 @@ public interface EffectTiming {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#enumdef-fillmode">fill - Web Animations</a>
    */
   @JsProperty
-  void setFill(@FillMode @Nonnull String fill);
+  void setFill(@FillMode @JsNonNull String fill);
 
   /**
    * Web Animations API's EffectTiming dictionary's  iterationStart property specifies the repetition number which repetition the animation begins at and its progress through it.
@@ -216,7 +217,7 @@ public interface EffectTiming {
    * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#the-effecttiming-dictionaries">EffectTiming - Web Animations</a>
+   * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -2,9 +2,9 @@ package akasha.core;
 
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -56,6 +56,6 @@ public class JsBoolean extends JsObject {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 }

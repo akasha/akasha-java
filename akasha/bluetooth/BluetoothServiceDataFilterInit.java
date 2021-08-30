@@ -3,6 +3,7 @@ package akasha.bluetooth;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -38,11 +39,11 @@ public interface BluetoothServiceDataFilterInit extends BluetoothDataFilterInit 
   @JsProperty(
       name = "service"
   )
-  @Nonnull
+  @JsNonNull
   BluetoothServiceUUID service();
 
   @JsProperty
-  void setService(@Nonnull BluetoothServiceUUID service);
+  void setService(@JsNonNull BluetoothServiceUUID service);
 
   @JsOverlay
   default void setService(@Nonnull final String service) {

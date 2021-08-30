@@ -33,4 +33,24 @@ public interface Float32List {
   static Float32List of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isFloat32Array() {
+    return ( (Object) this ) instanceof Float32Array;
+  }
+
+  @JsOverlay
+  default Float32Array asFloat32Array() {
+    return Js.cast( this );
+  }
 }

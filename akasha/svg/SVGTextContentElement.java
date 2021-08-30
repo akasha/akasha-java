@@ -5,6 +5,7 @@ import akasha.DOMPointInit;
 import akasha.DOMRect;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,8 +15,7 @@ import jsinterop.annotations.JsType;
  * The SVGTextContentElement interface is implemented by elements that support rendering child text content. It is inherited by various text-related interfaces, such as SVGTextElement, SVGTSpanElement, SVGTRefElement, SVGAltGlyphElement and SVGTextPathElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextContentElement">SVGTextContentElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">SVGTextContentElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTextContentElement">SVGTextContentElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">(SVG) # InterfaceSVGTextContentElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -54,17 +54,17 @@ public class SVGTextContentElement extends SVGGraphicsElement {
 
   public native float getComputedTextLength();
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint getEndPositionOfChar(int charnum);
 
-  @Nonnull
+  @JsNonNull
   public native DOMRect getExtentOfChar(int charnum);
 
   public native int getNumberOfChars();
 
   public native float getRotationOfChar(int charnum);
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint getStartPositionOfChar(int charnum);
 
   public native float getSubStringLength(int charnum, int nchars);

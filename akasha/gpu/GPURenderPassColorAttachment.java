@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -57,11 +58,11 @@ public interface GPURenderPassColorAttachment {
   @JsProperty(
       name = "view"
   )
-  @Nonnull
+  @JsNonNull
   GPUTextureView view();
 
   @JsProperty
-  void setView(@Nonnull GPUTextureView view);
+  void setView(@JsNonNull GPUTextureView view);
 
   @JsProperty(
       name = "resolveTarget"
@@ -69,16 +70,16 @@ public interface GPURenderPassColorAttachment {
   GPUTextureView resolveTarget();
 
   @JsProperty
-  void setResolveTarget(@Nonnull GPUTextureView resolveTarget);
+  void setResolveTarget(@JsNonNull GPUTextureView resolveTarget);
 
   @JsProperty(
       name = "loadValue"
   )
-  @Nonnull
+  @JsNonNull
   GPULoadOpOrGPUColorUnion loadValue();
 
   @JsProperty
-  void setLoadValue(@Nonnull GPULoadOpOrGPUColorUnion loadValue);
+  void setLoadValue(@JsNonNull GPULoadOpOrGPUColorUnion loadValue);
 
   @JsOverlay
   default void setLoadValue(@Nonnull final String loadValue) {
@@ -109,11 +110,11 @@ public interface GPURenderPassColorAttachment {
       name = "storeOp"
   )
   @GPUStoreOp
-  @Nonnull
+  @JsNonNull
   String storeOp();
 
   @JsProperty
-  void setStoreOp(@GPUStoreOp @Nonnull String storeOp);
+  void setStoreOp(@GPUStoreOp @JsNonNull String storeOp);
 
   @Generated("org.realityforge.webtack")
   @JsType(

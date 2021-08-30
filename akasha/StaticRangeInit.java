@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface StaticRangeInit {
   @JsProperty(
       name = "endContainer"
   )
-  @Nonnull
+  @JsNonNull
   Node endContainer();
 
   @JsProperty
-  void setEndContainer(@Nonnull Node endContainer);
+  void setEndContainer(@JsNonNull Node endContainer);
 
   @JsProperty(
       name = "endOffset"
@@ -43,11 +44,11 @@ public interface StaticRangeInit {
   @JsProperty(
       name = "startContainer"
   )
-  @Nonnull
+  @JsNonNull
   Node startContainer();
 
   @JsProperty
-  void setStartContainer(@Nonnull Node startContainer);
+  void setStartContainer(@JsNonNull Node startContainer);
 
   @JsProperty(
       name = "startOffset"

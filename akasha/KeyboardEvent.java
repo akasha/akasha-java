@@ -8,10 +8,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard.
+ * KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type (keydown, keypress, or keyup) identifies what kind of keyboard activity occurred.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">KeyboardEvent - MDN</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-keyboardevent">KeyboardEvent - UI Events</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-keyboardevent"># interface-keyboardevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

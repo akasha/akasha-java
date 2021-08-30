@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,29 +27,29 @@ public interface DeviceMotionEventAccelerationInit {
   @JsProperty(
       name = "x"
   )
-  @Nullable
+  @JsNullable
   Double x();
 
   @JsProperty
-  void setX(@Nullable Double x);
+  void setX(@JsNullable Double x);
 
   @JsProperty(
       name = "y"
   )
-  @Nullable
+  @JsNullable
   Double y();
 
   @JsProperty
-  void setY(@Nullable Double y);
+  void setY(@JsNullable Double y);
 
   @JsProperty(
       name = "z"
   )
-  @Nullable
+  @JsNullable
   Double z();
 
   @JsProperty
-  void setZ(@Nullable Double z);
+  void setZ(@JsNullable Double z);
 
   @Generated("org.realityforge.webtack")
   @JsType(

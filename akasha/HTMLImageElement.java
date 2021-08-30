@@ -4,7 +4,8 @@ import akasha.gl.TexImageSource;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLImageElement"
 )
 public class HTMLImageElement extends HTMLElement implements TexImageSource, HTMLOrSVGImageElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
   /**
@@ -31,10 +32,10 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt">HTMLImageElement.alt - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-img-alt">HTMLImageElement.alt - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String alt;
 
-  @Nonnull
+  @JsNonNull
   public String border;
 
   /**
@@ -42,7 +43,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
    */
-  @Nullable
+  @JsNullable
   @CrossOriginType
   public String crossOrigin;
 
@@ -52,7 +53,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding">HTMLImageElement.decoding - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-img-decoding">decoding - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String decoding;
 
   /**
@@ -79,14 +80,14 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#attr-img-loading">HTMLImageElement.loading - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @LoadingType
   public String loading;
 
-  @Nonnull
+  @JsNonNull
   public String longDesc;
 
-  @Nonnull
+  @JsNonNull
   public String lowsrc;
 
   /**
@@ -96,7 +97,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://html.spec.whatwg.org/multipage/#attr-img-name">HTMLImageElement.name - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html401/struct/objects.html#adef-name-IMG">HTMLImageElement.name - HTML 4.01 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   /**
@@ -105,7 +106,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy">HTMLImageElement.referrerPolicy - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">referrerPolicy attribute - Referrer Policy</a>
    */
-  @Nonnull
+  @JsNonNull
   @ReferrerPolicy
   public String referrerPolicy;
 
@@ -115,7 +116,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes">HTMLImageElement.sizes - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-img-sizes">HTMLImageElement.sizes - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String sizes;
 
   /**
@@ -124,7 +125,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src">HTMLImageElement.src - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-img-src">HTMLImageElement.src - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String src;
 
   /**
@@ -133,7 +134,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset">HTMLImageElement.srcset - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-img-srcset">HTMLImageElement.srcset - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String srcset;
 
   /**
@@ -142,7 +143,7 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/useMap">HTMLImageElement.useMap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-img-usemap">HTMLImageElement.useMap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String useMap;
 
   public int vspace;
@@ -230,6 +231,6 @@ public class HTMLImageElement extends HTMLElement implements TexImageSource, HTM
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decode">HTMLImageElement.decode - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-img-decode">decode() - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> decode();
 }

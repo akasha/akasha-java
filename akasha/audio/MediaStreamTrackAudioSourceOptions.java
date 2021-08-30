@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.media.MediaStreamTrack;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The MediaStreamTrackAudioSourceOptions dictionary is used when specifying options to the MediaStreamTrackAudioSourceNode() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions">MediaStreamTrackAudioSourceOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamtrackaudiosourceoptions">MediaStreamTrackAudioSourceOptions - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamTrackAudioSourceOptions"># MediaStreamTrackAudioSourceOptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -38,7 +39,7 @@ public interface MediaStreamTrackAudioSourceOptions {
   @JsProperty(
       name = "mediaStreamTrack"
   )
-  @Nonnull
+  @JsNonNull
   MediaStreamTrack mediaStreamTrack();
 
   /**
@@ -48,13 +49,13 @@ public interface MediaStreamTrackAudioSourceOptions {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack">MediaStreamTrackAudioSourceOptions.mediaStream - Web Audio API</a>
    */
   @JsProperty
-  void setMediaStreamTrack(@Nonnull MediaStreamTrack mediaStreamTrack);
+  void setMediaStreamTrack(@JsNonNull MediaStreamTrack mediaStreamTrack);
 
   /**
    * The MediaStreamTrackAudioSourceOptions dictionary is used when specifying options to the MediaStreamTrackAudioSourceNode() constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions">MediaStreamTrackAudioSourceOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamtrackaudiosourceoptions">MediaStreamTrackAudioSourceOptions - Web Audio API</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamTrackAudioSourceOptions"># MediaStreamTrackAudioSourceOptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

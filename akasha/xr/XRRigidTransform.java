@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The XRRigidTransform is a WebXR API interface that represents the 3D geometric transform described by a position and orientation.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform">XRRigidTransform - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrrigidtransform-interface">XRRigidTransform - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrrigidtransform-interface"># xrrigidtransform-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

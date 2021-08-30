@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,10 +18,10 @@ import jsinterop.annotations.JsType;
     name = "HTMLBaseElement"
 )
 public class HTMLBaseElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String href;
 
-  @Nonnull
+  @JsNonNull
   public String target;
 
   protected HTMLBaseElement() {

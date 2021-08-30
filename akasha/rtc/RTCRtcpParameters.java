@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +34,7 @@ public interface RTCRtcpParameters {
   String cname();
 
   @JsProperty
-  void setCname(@Nonnull String cname);
+  void setCname(@JsNonNull String cname);
 
   @JsProperty(
       name = "reducedSize"

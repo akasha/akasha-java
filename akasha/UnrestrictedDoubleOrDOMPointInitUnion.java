@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -24,5 +25,25 @@ public interface UnrestrictedDoubleOrDOMPointInitUnion {
   @Nonnull
   static UnrestrictedDoubleOrDOMPointInitUnion of(@Nonnull final DOMPointInit value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isDOMPointInit() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default DOMPointInit asDOMPointInit() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isDouble() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default double asDouble() {
+    return Js.asDouble( this );
   }
 }

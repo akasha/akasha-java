@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface ComputedEffectTiming extends EffectTiming {
   @JsProperty(
       name = "currentIteration"
   )
-  @Nullable
+  @JsNullable
   Double currentIteration();
 
   @JsProperty
-  void setCurrentIteration(@Nullable Double currentIteration);
+  void setCurrentIteration(@JsNullable Double currentIteration);
 
   @JsProperty(
       name = "endTime"
@@ -51,20 +52,20 @@ public interface ComputedEffectTiming extends EffectTiming {
   @JsProperty(
       name = "localTime"
   )
-  @Nullable
+  @JsNullable
   Double localTime();
 
   @JsProperty
-  void setLocalTime(@Nullable Double localTime);
+  void setLocalTime(@JsNullable Double localTime);
 
   @JsProperty(
       name = "progress"
   )
-  @Nullable
+  @JsNullable
   Double progress();
 
   @JsProperty
-  void setProgress(@Nullable Double progress);
+  void setProgress(@JsNullable Double progress);
 
   @Generated("org.realityforge.webtack")
   @JsType(

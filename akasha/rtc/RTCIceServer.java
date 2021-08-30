@@ -4,6 +4,7 @@ import akasha.StringOrStringArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -59,7 +60,7 @@ public interface RTCIceServer {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-credential">RTCIceServer.credential - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setCredential(@Nonnull String credential);
+  void setCredential(@JsNonNull String credential);
 
   /**
    * The RTCIceServer dictionary's credentialType property is a string value from the RTCIceCredentialType enum which indicates what type of credential the RTCIceServer.credential value is. The default is password.
@@ -80,7 +81,7 @@ public interface RTCIceServer {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-credential">RTCIceServer.credential - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setCredentialType(@RTCIceCredentialType @Nonnull String credentialType);
+  void setCredentialType(@RTCIceCredentialType @JsNonNull String credentialType);
 
   /**
    * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
@@ -91,7 +92,7 @@ public interface RTCIceServer {
   @JsProperty(
       name = "urls"
   )
-  @Nonnull
+  @JsNonNull
   StringOrStringArrayUnion urls();
 
   /**
@@ -101,7 +102,7 @@ public interface RTCIceServer {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setUrls(@Nonnull StringOrStringArrayUnion urls);
+  void setUrls(@JsNonNull StringOrStringArrayUnion urls);
 
   /**
    * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
@@ -154,7 +155,7 @@ public interface RTCIceServer {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-username">RTCIceServer.username - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setUsername(@Nonnull String username);
+  void setUsername(@JsNonNull String username);
 
   /**
    * The RTCIceServer dictionary defines how to connect to a single ICE server (such as a STUN or TURN server). Objects of this type are provided in the configuration of an RTCPeerConnection, in the iceServers array.

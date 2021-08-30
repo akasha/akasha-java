@@ -15,6 +15,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -40,7 +42,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onconnectionstatechange">RTCPeerConnection.onconnectionstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onconnectionstatechange">RTCPeerConnection.onconnectionstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onconnectionstatechange;
 
   /**
@@ -49,7 +51,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-ondatachannel">RTCPeerConnection.ondatachannel - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCDataChannelEventHandler ondatachannel;
 
   /**
@@ -58,7 +60,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate">RTCPeerConnection.onicecandidate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicecandidate">RTCPeerConnection.onicecandidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCPeerConnectionIceEventHandler onicecandidate;
 
   /**
@@ -67,7 +69,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidateerror">RTCPeerConnection.onicecandidateerror - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicecandidateerror">RTCPeerConnection.onicecandidateerror - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCPeerConnectionIceErrorEventHandler onicecandidateerror;
 
   /**
@@ -76,7 +78,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange">RTCPeerConnection.oniceconnectionstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-oniceconnectionstatechange">RTCPeerConnection.oniceconnectionstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oniceconnectionstatechange;
 
   /**
@@ -85,7 +87,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicegatheringstatechange">RTCPeerConnection.onicegatheringstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicegatheringstatechange">RTCPeerConnection.onicegatheringstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onicegatheringstatechange;
 
   /**
@@ -94,7 +96,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onnegotiationneeded">RTCPeerConnection.onnegotiationneeded - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onnegotiationneeded">RTCPeerConnection.onnegotiationneeded - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onnegotiationneeded;
 
   /**
@@ -103,7 +105,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange">RTCPeerConnection.onsignalingstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onsignalingstatechange">RTCPeerConnection.onsignalingstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onsignalingstatechange;
 
   /**
@@ -112,7 +114,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack">RTCPeerConnection.ontrack - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-ontrack">RTCPeerConnection.ontrack - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCTrackEventHandler ontrack;
 
   /**
@@ -313,7 +315,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate">RTCPeerConnection.addIceCandidate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate">RTCPeerConnection.addIceCandidate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> addIceCandidate(@Nonnull RTCIceCandidateInit candidate);
 
   /**
@@ -322,7 +324,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate">RTCPeerConnection.addIceCandidate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate">RTCPeerConnection.addIceCandidate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> addIceCandidate();
 
   /**
@@ -331,7 +333,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate">RTCPeerConnection.addIceCandidate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate">RTCPeerConnection.addIceCandidate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> addIceCandidate(@Nonnull RTCIceCandidateInit candidate,
       @Nonnull VoidFunction successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback);
@@ -350,7 +352,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer">RTCPeerConnection.createAnswer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer">createAnswer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCSessionDescriptionInit> createAnswer(@Nonnull RTCAnswerOptions options);
 
   /**
@@ -359,7 +361,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer">RTCPeerConnection.createAnswer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer">createAnswer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCSessionDescriptionInit> createAnswer();
 
   /**
@@ -368,7 +370,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer">RTCPeerConnection.createAnswer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer">createAnswer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> createAnswer(@Nonnull RTCSessionDescriptionCallback successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback);
 
@@ -378,7 +380,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">createOffer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCSessionDescriptionInit> createOffer(@Nonnull RTCOfferOptions options);
 
   /**
@@ -387,7 +389,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">createOffer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCSessionDescriptionInit> createOffer();
 
   /**
@@ -396,7 +398,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">createOffer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> createOffer(@Nonnull RTCSessionDescriptionCallback successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback, @Nonnull RTCOfferOptions options);
 
@@ -406,7 +408,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer">RTCPeerConnection.createOffer - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">createOffer() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> createOffer(@Nonnull RTCSessionDescriptionCallback successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback);
 
@@ -416,7 +418,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration">RTCPeerConnection.getConfiguration - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-getconfiguration">getConfiguration() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCConfiguration getConfiguration();
 
   /**
@@ -449,7 +451,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">RTCPeerConnection.setLocalDescription() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setLocalDescription(
       @Nonnull RTCLocalSessionDescriptionInit description);
 
@@ -459,7 +461,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">RTCPeerConnection.setLocalDescription() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setLocalDescription();
 
   /**
@@ -468,7 +470,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription">RTCPeerConnection.setLocalDescription() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setLocalDescription(
       @Nonnull RTCLocalSessionDescriptionInit description, @Nonnull VoidFunction successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback);
@@ -479,7 +481,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription">RTCPeerConnection.setRemoteDescription - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setremotedescription">RTCPeerConnection.setRemoteDescription() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setRemoteDescription(@Nonnull RTCSessionDescriptionInit description);
 
   /**
@@ -488,7 +490,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription">RTCPeerConnection.setRemoteDescription - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-setremotedescription">RTCPeerConnection.setRemoteDescription() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setRemoteDescription(@Nonnull RTCSessionDescriptionInit description,
       @Nonnull VoidFunction successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback);
@@ -499,7 +501,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate">RTCPeerConnection.generateCertificate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">RTCPeerConnection.generateCertificate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<RTCCertificate> generateCertificate(
       @Nonnull AlgorithmIdentifier keygenAlgorithm);
 
@@ -509,7 +511,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate">RTCPeerConnection.generateCertificate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">RTCPeerConnection.generateCertificate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<RTCCertificate> generateCertificate(
       @Nonnull JsObject keygenAlgorithm);
 
@@ -519,7 +521,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate">RTCPeerConnection.generateCertificate - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate">RTCPeerConnection.generateCertificate() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<RTCCertificate> generateCertificate(@Nonnull String keygenAlgorithm);
 
   /**
@@ -528,22 +530,22 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTrack">RTCPeerConnection.addTrack - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-addtrack">RTCPeerConnection.addTrack() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCRtpSender addTrack(@Nonnull MediaStreamTrack track,
       @Nonnull MediaStream... streams);
 
-  @Nonnull
+  @JsNonNull
   public native RTCRtpTransceiver addTransceiver(@Nonnull MediaStreamTrack trackOrKind,
       @Nonnull RTCRtpTransceiverInit init);
 
-  @Nonnull
+  @JsNonNull
   public native RTCRtpTransceiver addTransceiver(@Nonnull String trackOrKind,
       @Nonnull RTCRtpTransceiverInit init);
 
-  @Nonnull
+  @JsNonNull
   public native RTCRtpTransceiver addTransceiver(@Nonnull MediaStreamTrack trackOrKind);
 
-  @Nonnull
+  @JsNonNull
   public native RTCRtpTransceiver addTransceiver(@Nonnull String trackOrKind);
 
   /**
@@ -552,7 +554,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getReceivers">RTCPeerConnection.getReceivers - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-getreceivers">RTCPeerConnection.getReceivers() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCRtpReceiver> getReceivers();
 
   /**
@@ -561,7 +563,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders">RTCPeerConnection.getSenders - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-getsenders">RTCPeerConnection.getSenders() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCRtpSender> getSenders();
 
   /**
@@ -570,7 +572,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers">RTCPeerConnection.getTransceivers - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-gettransceivers">RTCPeerConnection.getTransceivers() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCRtpTransceiver> getTransceivers();
 
   /**
@@ -587,7 +589,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel">RTCPeerConnection.createDataChannel - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-createdatachannel">createDataChannel() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCDataChannel createDataChannel(@Nonnull String label,
       @Nonnull RTCDataChannelInit dataChannelDict);
 
@@ -597,7 +599,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel">RTCPeerConnection.createDataChannel - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection-createdatachannel">createDataChannel() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCDataChannel createDataChannel(@Nonnull String label);
 
   /**
@@ -606,7 +608,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats">RTCPeerConnection.getStats - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-getStats-Promise-RTCStatsReport--MediaStreamTrack-selector">RTCPeerConnection.getStats() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCStatsReport> getStats(@Nullable MediaStreamTrack selector);
 
   /**
@@ -615,7 +617,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats">RTCPeerConnection.getStats - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-getStats-Promise-RTCStatsReport--MediaStreamTrack-selector">RTCPeerConnection.getStats() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCStatsReport> getStats();
 
   /**
@@ -624,7 +626,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion">RTCPeerConnection.getIdentityAssertion - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-identity/#dfn-getidentityassertion">RTCPeerConnection.getIdentityAssertion() - Identity for WebRTC</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<String> getIdentityAssertion();
 
   /**

@@ -3,6 +3,7 @@ package akasha.crypto;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,6 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams">AesCtrParams - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams">SubtleCrypto.AesCtrParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,11 +34,11 @@ public interface AesCtrParams extends Algorithm {
   @JsProperty(
       name = "counter"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource counter();
 
   @JsProperty
-  void setCounter(@Nonnull BufferSource counter);
+  void setCounter(@JsNonNull BufferSource counter);
 
   @JsProperty(
       name = "length"
@@ -50,6 +52,7 @@ public interface AesCtrParams extends Algorithm {
    * The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams">AesCtrParams - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams">SubtleCrypto.AesCtrParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

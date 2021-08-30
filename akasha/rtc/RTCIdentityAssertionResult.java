@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,20 +27,20 @@ public interface RTCIdentityAssertionResult {
   @JsProperty(
       name = "assertion"
   )
-  @Nonnull
+  @JsNonNull
   String assertion();
 
   @JsProperty
-  void setAssertion(@Nonnull String assertion);
+  void setAssertion(@JsNonNull String assertion);
 
   @JsProperty(
       name = "idp"
   )
-  @Nonnull
+  @JsNonNull
   RTCIdentityProviderDetails idp();
 
   @JsProperty
-  void setIdp(@Nonnull RTCIdentityProviderDetails idp);
+  void setIdp(@JsNonNull RTCIdentityProviderDetails idp);
 
   @Generated("org.realityforge.webtack")
   @JsType(

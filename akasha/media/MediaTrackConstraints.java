@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -35,7 +36,7 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
   JsArray<MediaTrackConstraintSet> advanced();
 
   @JsProperty
-  void setAdvanced(@Nonnull JsArray<MediaTrackConstraintSet> advanced);
+  void setAdvanced(@JsNonNull JsArray<MediaTrackConstraintSet> advanced);
 
   @JsOverlay
   default void setAdvanced(@Nonnull final MediaTrackConstraintSet... advanced) {

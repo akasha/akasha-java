@@ -4,7 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +31,7 @@ public class HTMLFormControlsCollection extends JsObject {
   public native int length();
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native RadioNodeListOrElementUnion item(int index);
 
   /**
@@ -42,6 +42,6 @@ public class HTMLFormControlsCollection extends JsObject {
    * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML5</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native RadioNodeListOrElementUnion namedItem(@Nonnull String name);
 }

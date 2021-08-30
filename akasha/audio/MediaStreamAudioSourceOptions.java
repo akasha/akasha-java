@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.media.MediaStream;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions">MediaStreamAudioSourceOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamaudiosourceoptions">MediaStreamAudioSourceOptions - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamAudioSourceOptions"># MediaStreamAudioSourceOptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -38,7 +39,7 @@ public interface MediaStreamAudioSourceOptions {
   @JsProperty(
       name = "mediaStream"
   )
-  @Nonnull
+  @JsNonNull
   MediaStream mediaStream();
 
   /**
@@ -48,13 +49,13 @@ public interface MediaStreamAudioSourceOptions {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourceoptions-mediastream">MediaStreamAudioSourceOptions.mediaStream - Web Audio API</a>
    */
   @JsProperty
-  void setMediaStream(@Nonnull MediaStream mediaStream);
+  void setMediaStream(@JsNonNull MediaStream mediaStream);
 
   /**
    * The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions">MediaStreamAudioSourceOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dictdef-mediastreamaudiosourceoptions">MediaStreamAudioSourceOptions - Web Audio API</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamAudioSourceOptions"># MediaStreamAudioSourceOptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The StorageEstimate dictionary is used by the StorageManager to provide estimates of the size of a site's or application's data store and how much of it is in use. The estimate() method returns an object that conforms to this dictionary when its Promise resolves.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate">StorageEstimate - MDN</a>
- * @see <a href="https://storage.spec.whatwg.org/#dictdef-storageestimate">StorageEstimate - Storage</a>
+ * @see <a href="https://storage.spec.whatwg.org/#dictdef-storageestimate">(Storage) # dictdef-storageestimate</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -72,7 +72,7 @@ public interface StorageEstimate {
    * The StorageEstimate dictionary is used by the StorageManager to provide estimates of the size of a site's or application's data store and how much of it is in use. The estimate() method returns an object that conforms to this dictionary when its Promise resolves.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate">StorageEstimate - MDN</a>
-   * @see <a href="https://storage.spec.whatwg.org/#dictdef-storageestimate">StorageEstimate - Storage</a>
+   * @see <a href="https://storage.spec.whatwg.org/#dictdef-storageestimate">(Storage) # dictdef-storageestimate</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

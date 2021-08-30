@@ -4,6 +4,8 @@ import akasha.core.ArrayBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +29,11 @@ public interface MediaEncryptedEventInit extends EventInit {
   @JsProperty(
       name = "initData"
   )
-  @Nullable
+  @JsNullable
   ArrayBuffer initData();
 
   @JsProperty
-  void setInitData(@Nullable ArrayBuffer initData);
+  void setInitData(@JsNullable ArrayBuffer initData);
 
   @JsProperty(
       name = "initDataType"
@@ -39,7 +41,7 @@ public interface MediaEncryptedEventInit extends EventInit {
   String initDataType();
 
   @JsProperty
-  void setInitDataType(@Nonnull String initDataType);
+  void setInitDataType(@JsNonNull String initDataType);
 
   @Generated("org.realityforge.webtack")
   @JsType(

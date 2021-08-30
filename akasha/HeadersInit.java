@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -32,5 +33,25 @@ public interface HeadersInit {
   @Nonnull
   static HeadersInit of(@Nonnull final JsPropertyMap<String> value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<JsArray<String>> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isPropertyMap() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default JsPropertyMap<String> asPropertyMap() {
+    return Js.cast( this );
   }
 }

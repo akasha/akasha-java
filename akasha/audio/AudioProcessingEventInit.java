@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,20 +28,20 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsProperty(
       name = "inputBuffer"
   )
-  @Nonnull
+  @JsNonNull
   AudioBuffer inputBuffer();
 
   @JsProperty
-  void setInputBuffer(@Nonnull AudioBuffer inputBuffer);
+  void setInputBuffer(@JsNonNull AudioBuffer inputBuffer);
 
   @JsProperty(
       name = "outputBuffer"
   )
-  @Nonnull
+  @JsNonNull
   AudioBuffer outputBuffer();
 
   @JsProperty
-  void setOutputBuffer(@Nonnull AudioBuffer outputBuffer);
+  void setOutputBuffer(@JsNonNull AudioBuffer outputBuffer);
 
   @JsProperty(
       name = "playbackTime"

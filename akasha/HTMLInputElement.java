@@ -4,6 +4,8 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -23,16 +25,16 @@ import jsinterop.base.Js;
     name = "HTMLInputElement"
 )
 public class HTMLInputElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String accept;
 
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String alt;
 
-  @Nonnull
+  @JsNonNull
   @AutocompleteType
   public String autocomplete;
 
@@ -40,43 +42,43 @@ public class HTMLInputElement extends HTMLElement {
 
   public boolean defaultChecked;
 
-  @Nonnull
+  @JsNonNull
   public String defaultValue;
 
-  @Nonnull
+  @JsNonNull
   public String dirName;
 
   public boolean disabled;
 
-  @Nullable
+  @JsNullable
   public FileList files;
 
-  @Nonnull
+  @JsNonNull
   public String formAction;
 
-  @Nonnull
+  @JsNonNull
   @FormEncodingType
   public String formEnctype;
 
-  @Nonnull
+  @JsNonNull
   @FormMethodType
   public String formMethod;
 
   public boolean formNoValidate;
 
-  @Nonnull
+  @JsNonNull
   public String formTarget;
 
   public int height;
 
   public boolean indeterminate;
 
-  @Nonnull
+  @JsNonNull
   public String max;
 
   public int maxLength;
 
-  @Nonnull
+  @JsNonNull
   public String min;
 
   public int minLength;
@@ -89,47 +91,47 @@ public class HTMLInputElement extends HTMLElement {
    */
   public boolean multiple;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String pattern;
 
-  @Nonnull
+  @JsNonNull
   public String placeholder;
 
   public boolean readOnly;
 
   public boolean required;
 
-  @Nullable
+  @JsNullable
   public String selectionDirection;
 
-  @Nullable
+  @JsNullable
   public Double selectionEnd;
 
-  @Nullable
+  @JsNullable
   public Double selectionStart;
 
   public int size;
 
-  @Nonnull
+  @JsNonNull
   public String src;
 
-  @Nonnull
+  @JsNonNull
   public String step;
 
-  @Nonnull
+  @JsNonNull
   @InputType
   public String type;
 
-  @Nonnull
+  @JsNonNull
   public String useMap;
 
-  @Nonnull
+  @JsNonNull
   public String value;
 
-  @Nullable
+  @JsNullable
   public JsObject valueAsDate;
 
   public double valueAsNumber;

@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -43,9 +44,9 @@ public class GPUAdapter extends JsObject {
   @Nonnull
   public native String name();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPUDevice> requestDevice(@Nonnull GPUDeviceDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPUDevice> requestDevice();
 }

@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,7 +29,7 @@ public class AnimationEffect extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/getComputedTiming">AnimationEffect.getComputedTiming - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animationeffect-getcomputedtiming">AnimationEffect.getComputedTiming() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ComputedEffectTiming getComputedTiming();
 
   /**
@@ -37,7 +38,7 @@ public class AnimationEffect extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/getTiming">AnimationEffect.getTiming - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animationeffect-gettiming">AnimationEffect.getTiming() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native EffectTiming getTiming();
 
   /**

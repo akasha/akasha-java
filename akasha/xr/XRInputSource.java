@@ -10,10 +10,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system.
+ * The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system. The device is specific to the platform being used, but provides the direction in which it is being aimed and optionally may generate events if the user triggers performs actions using the device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource">XRInputSource - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrinputsource-interface">XRInputSource - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrinputsource-interface"># xrinputsource-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

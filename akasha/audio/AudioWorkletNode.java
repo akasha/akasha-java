@@ -1,13 +1,18 @@
 package akasha.audio;
 
+import akasha.AddEventListenerOptions;
 import akasha.EventHandler;
+import akasha.EventListener;
+import akasha.EventListenerOptions;
 import akasha.MessagePort;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The AudioWorkletNode interface of the Web Audio API represents a base class for a user-defined AudioNode, which can be connected to an audio routing graph along with other nodes. It has an associated AudioWorkletProcessor, which does the actual audio processing in a Web Audio rendering thread.
@@ -28,7 +33,7 @@ public class AudioWorkletNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/onprocessorerror">AudioWorkletNode.onprocessorerror - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-onprocessorerror">onprocessorerror - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onprocessorerror;
 
   /**
@@ -73,4 +78,38 @@ public class AudioWorkletNode extends AudioNode {
   )
   @Nonnull
   public native MessagePort port();
+
+  @JsOverlay
+  public final void addProcessorerrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "processorerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addProcessorerrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "processorerror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addProcessorerrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "processorerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeProcessorerrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "processorerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeProcessorerrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "processorerror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeProcessorerrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "processorerror", Js.cast( callback ) );
+  }
 }

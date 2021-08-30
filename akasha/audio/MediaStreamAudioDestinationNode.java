@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MediaStreamAudioDestinationNode interface represents an audio destination consisting of a WebRTC MediaStream with a single AudioMediaStreamTrack, which can be used in a similar way to a MediaStream obtained from Navigator.getUserMedia().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#mediastreamaudiodestinationnode">MediaStreamAudioDestinationNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamAudioDestinationNode"># MediaStreamAudioDestinationNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

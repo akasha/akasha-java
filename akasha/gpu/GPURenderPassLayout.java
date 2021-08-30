@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "colorFormats"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<String> colorFormats();
 
   @JsProperty
-  void setColorFormats(@Nonnull JsArray<String> colorFormats);
+  void setColorFormats(@JsNonNull JsArray<String> colorFormats);
 
   @JsOverlay
   default void setColorFormats(@Nonnull final String... colorFormats) {
@@ -52,7 +53,7 @@ public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   String depthStencilFormat();
 
   @JsProperty
-  void setDepthStencilFormat(@GPUTextureFormat @Nonnull String depthStencilFormat);
+  void setDepthStencilFormat(@GPUTextureFormat @JsNonNull String depthStencilFormat);
 
   @JsProperty(
       name = "sampleCount"

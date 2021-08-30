@@ -1,20 +1,26 @@
 package akasha.media;
 
+import akasha.AddEventListenerOptions;
 import akasha.EventHandler;
+import akasha.EventListener;
+import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.MediaProvider;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The MediaSource interface of the Media Source Extensions API represents a source of media data for an HTMLMediaElement object. A MediaSource object can be attached to a HTMLMediaElement to be played in the user agent.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource">MediaSource - MDN</a>
- * @see <a href="https://w3c.github.io/media-source/#mediasource">MediaSource - Media Source Extensions</a>
+ * @see <a href="https://w3c.github.io/media-source/#mediasource"># mediasource</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,13 +37,13 @@ public class MediaSource extends EventTarget implements MediaProvider {
    */
   public double duration;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsourceclose;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsourceended;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsourceopen;
 
   protected MediaSource() {
@@ -94,7 +100,7 @@ public class MediaSource extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/addSourceBuffer">MediaSource.addSourceBuffer - MDN</a>
    * @see <a href="https://w3c.github.io/media-source/#dom-mediasource-addsourcebuffer">addSourceBuffer() - Media Source Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native SourceBuffer addSourceBuffer(@Nonnull String type);
 
   /**
@@ -136,4 +142,106 @@ public class MediaSource extends EventTarget implements MediaProvider {
    * @see <a href="https://w3c.github.io/media-source/#dom-mediasource-setliveseekablerange">setLiveSeekableRange() - Media Source Extensions</a>
    */
   public native void setLiveSeekableRange(double start, double end);
+
+  @JsOverlay
+  public final void addSourceopenListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "sourceopen", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSourceopenListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "sourceopen", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addSourceopenListener(@Nonnull final EventListener callback) {
+    addEventListener( "sourceopen", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSourceopenListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "sourceopen", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSourceopenListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "sourceopen", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeSourceopenListener(@Nonnull final EventListener callback) {
+    removeEventListener( "sourceopen", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSourceendedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "sourceended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSourceendedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "sourceended", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addSourceendedListener(@Nonnull final EventListener callback) {
+    addEventListener( "sourceended", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSourceendedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "sourceended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSourceendedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "sourceended", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeSourceendedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "sourceended", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSourcecloseListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "sourceclose", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSourcecloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "sourceclose", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addSourcecloseListener(@Nonnull final EventListener callback) {
+    addEventListener( "sourceclose", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSourcecloseListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "sourceclose", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSourcecloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "sourceclose", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeSourcecloseListener(@Nonnull final EventListener callback) {
+    removeEventListener( "sourceclose", Js.cast( callback ) );
+  }
 }

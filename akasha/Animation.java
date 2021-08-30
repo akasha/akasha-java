@@ -4,9 +4,13 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
@@ -27,7 +31,7 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime">Animation.currentTime - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-currenttime">currentTime - Web Animations</a>
    */
-  @Nullable
+  @JsNullable
   public Double currentTime;
 
   /**
@@ -36,7 +40,7 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/effect">Animation.effect - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-effect">Animation.effect - Web Animations</a>
    */
-  @Nullable
+  @JsNullable
   public AnimationEffect effect;
 
   /**
@@ -45,7 +49,7 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/id">Animation.id - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-id">Animation.id - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public String id;
 
   /**
@@ -54,8 +58,8 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/oncancel">Animation.oncancel - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-oncancel">Animation.oncancel - Web Animations</a>
    */
-  @Nullable
-  public EventHandler oncancel;
+  @JsNullable
+  public AnimationPlaybackEventHandler oncancel;
 
   /**
    * The Animation interface's onfinish property (from the Web Animations API) is the event handler for the finish event. This event is sent when the animation finishes playing.
@@ -63,8 +67,8 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/onfinish">Animation.onfinish - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-onfinish">Animation.onfinish - Web Animations</a>
    */
-  @Nullable
-  public EventHandler onfinish;
+  @JsNullable
+  public AnimationPlaybackEventHandler onfinish;
 
   /**
    * The Animation interface's onremove property (from the Web Animations API) is the event handler for the remove event. This event is sent when the animation is removed (i.e., put into an active replace state).
@@ -72,8 +76,8 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/onremove">Animation.onremove - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-onremove">Animation.onremove - Web Animations</a>
    */
-  @Nullable
-  public EventHandler onremove;
+  @JsNullable
+  public AnimationPlaybackEventHandler onremove;
 
   /**
    * The Animation.playbackRate property of the Web Animations API returns or sets the playback rate of the animation.
@@ -89,7 +93,7 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/startTime">Animation.startTime - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-starttime">Animation.startTime - Web Animations</a>
    */
-  @Nullable
+  @JsNullable
   public Double startTime;
 
   /**
@@ -98,7 +102,7 @@ public class Animation extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/timeline">Animation.timeline - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-timeline">Animation.timeline - Web Animations</a>
    */
-  @Nullable
+  @JsNullable
   public AnimationTimeline timeline;
 
   /**
@@ -253,4 +257,106 @@ public class Animation extends EventTarget {
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animation-updateplaybackrate">updatePlaybackRate() - Web Animations</a>
    */
   public native void updatePlaybackRate(double playbackRate);
+
+  @JsOverlay
+  public final void addCancelListener(@Nonnull final AnimationPlaybackEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "cancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCancelListener(@Nonnull final AnimationPlaybackEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "cancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addCancelListener(@Nonnull final AnimationPlaybackEventListener callback) {
+    addEventListener( "cancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCancelListener(@Nonnull final AnimationPlaybackEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "cancel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCancelListener(@Nonnull final AnimationPlaybackEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "cancel", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeCancelListener(@Nonnull final AnimationPlaybackEventListener callback) {
+    removeEventListener( "cancel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addFinishListener(@Nonnull final AnimationPlaybackEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "finish", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addFinishListener(@Nonnull final AnimationPlaybackEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "finish", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addFinishListener(@Nonnull final AnimationPlaybackEventListener callback) {
+    addEventListener( "finish", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeFinishListener(@Nonnull final AnimationPlaybackEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "finish", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeFinishListener(@Nonnull final AnimationPlaybackEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "finish", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeFinishListener(@Nonnull final AnimationPlaybackEventListener callback) {
+    removeEventListener( "finish", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addRemoveListener(@Nonnull final AnimationPlaybackEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "remove", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addRemoveListener(@Nonnull final AnimationPlaybackEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "remove", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addRemoveListener(@Nonnull final AnimationPlaybackEventListener callback) {
+    addEventListener( "remove", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeRemoveListener(@Nonnull final AnimationPlaybackEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "remove", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeRemoveListener(@Nonnull final AnimationPlaybackEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "remove", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeRemoveListener(@Nonnull final AnimationPlaybackEventListener callback) {
+    removeEventListener( "remove", Js.cast( callback ) );
+  }
 }

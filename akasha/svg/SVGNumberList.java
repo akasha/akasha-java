@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,25 +37,25 @@ public class SVGNumberList extends JsObject {
   )
   public native int numberOfItems();
 
-  @Nonnull
+  @JsNonNull
   public native SVGNumber appendItem(@Nonnull SVGNumber newItem);
 
   public native void clear();
 
-  @Nonnull
+  @JsNonNull
   public native SVGNumber initialize(@Nonnull SVGNumber newItem);
 
-  @Nonnull
+  @JsNonNull
   public native SVGNumber insertItemBefore(@Nonnull SVGNumber newItem, int index);
 
-  @Nonnull
+  @JsNonNull
   public native SVGNumber removeItem(int index);
 
-  @Nonnull
+  @JsNonNull
   public native SVGNumber replaceItem(@Nonnull SVGNumber newItem, int index);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SVGNumber getItem(int index);
 
   @JsOverlay

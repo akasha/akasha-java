@@ -2,6 +2,7 @@ package akasha.media;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +34,7 @@ public interface MediaStreamConstraints {
   BooleanOrMediaTrackConstraintsUnion audio();
 
   @JsProperty
-  void setAudio(@Nonnull BooleanOrMediaTrackConstraintsUnion audio);
+  void setAudio(@JsNonNull BooleanOrMediaTrackConstraintsUnion audio);
 
   @JsOverlay
   default void setAudio(final boolean audio) {
@@ -51,7 +52,7 @@ public interface MediaStreamConstraints {
   BooleanOrMediaTrackConstraintsUnion video();
 
   @JsProperty
-  void setVideo(@Nonnull BooleanOrMediaTrackConstraintsUnion video);
+  void setVideo(@JsNonNull BooleanOrMediaTrackConstraintsUnion video);
 
   @JsOverlay
   default void setVideo(final boolean video) {
@@ -69,7 +70,7 @@ public interface MediaStreamConstraints {
   String peerIdentity();
 
   @JsProperty
-  void setPeerIdentity(@Nonnull String peerIdentity);
+  void setPeerIdentity(@JsNonNull String peerIdentity);
 
   /**
    * The MediaStreamConstraints dictionary is used when calling getUserMedia() to specify what kinds of tracks should be included in the returned MediaStream, and, optionally, to establish constraints for those tracks' settings.

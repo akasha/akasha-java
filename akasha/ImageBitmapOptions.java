@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ImageBitmapOptions {
   String colorSpaceConversion();
 
   @JsProperty
-  void setColorSpaceConversion(@ColorSpaceConversion @Nonnull String colorSpaceConversion);
+  void setColorSpaceConversion(@ColorSpaceConversion @JsNonNull String colorSpaceConversion);
 
   @JsProperty(
       name = "imageOrientation"
@@ -38,7 +39,7 @@ public interface ImageBitmapOptions {
   String imageOrientation();
 
   @JsProperty
-  void setImageOrientation(@ImageOrientation @Nonnull String imageOrientation);
+  void setImageOrientation(@ImageOrientation @JsNonNull String imageOrientation);
 
   @JsProperty(
       name = "premultiplyAlpha"
@@ -47,7 +48,7 @@ public interface ImageBitmapOptions {
   String premultiplyAlpha();
 
   @JsProperty
-  void setPremultiplyAlpha(@PremultiplyAlpha @Nonnull String premultiplyAlpha);
+  void setPremultiplyAlpha(@PremultiplyAlpha @JsNonNull String premultiplyAlpha);
 
   @JsProperty(
       name = "resizeHeight"
@@ -64,7 +65,7 @@ public interface ImageBitmapOptions {
   String resizeQuality();
 
   @JsProperty
-  void setResizeQuality(@ResizeQuality @Nonnull String resizeQuality);
+  void setResizeQuality(@ResizeQuality @JsNonNull String resizeQuality);
 
   @JsProperty(
       name = "resizeWidth"

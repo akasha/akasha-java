@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,25 +37,25 @@ public class SVGStringList extends JsObject {
   )
   public native int numberOfItems();
 
-  @Nonnull
+  @JsNonNull
   public native String appendItem(@Nonnull String newItem);
 
   public native void clear();
 
-  @Nonnull
+  @JsNonNull
   public native String initialize(@Nonnull String newItem);
 
-  @Nonnull
+  @JsNonNull
   public native String insertItemBefore(@Nonnull String newItem, int index);
 
-  @Nonnull
+  @JsNonNull
   public native String removeItem(int index);
 
-  @Nonnull
+  @JsNonNull
   public native String replaceItem(@Nonnull String newItem, int index);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String getItem(int index);
 
   @JsOverlay

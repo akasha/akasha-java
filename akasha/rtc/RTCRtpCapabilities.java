@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,11 +54,11 @@ public interface RTCRtpCapabilities {
   @JsProperty(
       name = "codecs"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<RTCRtpCodecCapability> codecs();
 
   @JsProperty
-  void setCodecs(@Nonnull JsArray<RTCRtpCodecCapability> codecs);
+  void setCodecs(@JsNonNull JsArray<RTCRtpCodecCapability> codecs);
 
   @JsOverlay
   default void setCodecs(@Nonnull final RTCRtpCodecCapability... codecs) {
@@ -67,11 +68,11 @@ public interface RTCRtpCapabilities {
   @JsProperty(
       name = "headerExtensions"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<RTCRtpHeaderExtensionCapability> headerExtensions();
 
   @JsProperty
-  void setHeaderExtensions(@Nonnull JsArray<RTCRtpHeaderExtensionCapability> headerExtensions);
+  void setHeaderExtensions(@JsNonNull JsArray<RTCRtpHeaderExtensionCapability> headerExtensions);
 
   @JsOverlay
   default void setHeaderExtensions(

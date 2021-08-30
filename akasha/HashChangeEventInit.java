@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface HashChangeEventInit extends EventInit {
   String newURL();
 
   @JsProperty
-  void setNewURL(@Nonnull String newURL);
+  void setNewURL(@JsNonNull String newURL);
 
   @JsProperty(
       name = "oldURL"
@@ -36,7 +37,7 @@ public interface HashChangeEventInit extends EventInit {
   String oldURL();
 
   @JsProperty
-  void setOldURL(@Nonnull String oldURL);
+  void setOldURL(@JsNonNull String oldURL);
 
   @Generated("org.realityforge.webtack")
   @JsType(

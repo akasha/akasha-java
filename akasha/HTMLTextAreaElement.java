@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -20,16 +21,16 @@ import jsinterop.annotations.JsType;
     name = "HTMLTextAreaElement"
 )
 public class HTMLTextAreaElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   @AutocompleteType
   public String autocomplete;
 
   public int cols;
 
-  @Nonnull
+  @JsNonNull
   public String defaultValue;
 
-  @Nonnull
+  @JsNonNull
   public String dirName;
 
   public boolean disabled;
@@ -38,10 +39,10 @@ public class HTMLTextAreaElement extends HTMLElement {
 
   public int minLength;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String placeholder;
 
   public boolean readOnly;
@@ -50,17 +51,17 @@ public class HTMLTextAreaElement extends HTMLElement {
 
   public int rows;
 
-  @Nonnull
+  @JsNonNull
   public String selectionDirection;
 
   public int selectionEnd;
 
   public int selectionStart;
 
-  @Nonnull
+  @JsNonNull
   public String value;
 
-  @Nonnull
+  @JsNonNull
   @WrapType
   public String wrap;
 

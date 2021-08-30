@@ -3,6 +3,7 @@ package akasha;
 import akasha.media.BitrateMode;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -38,16 +39,16 @@ public interface VideoEncoderConfig {
   String bitrateMode();
 
   @JsProperty
-  void setBitrateMode(@BitrateMode @Nonnull String bitrateMode);
+  void setBitrateMode(@BitrateMode @JsNonNull String bitrateMode);
 
   @JsProperty(
       name = "codec"
   )
-  @Nonnull
+  @JsNonNull
   String codec();
 
   @JsProperty
-  void setCodec(@Nonnull String codec);
+  void setCodec(@JsNonNull String codec);
 
   @JsProperty(
       name = "displayHeight"
@@ -72,7 +73,7 @@ public interface VideoEncoderConfig {
   String hardwareAcceleration();
 
   @JsProperty
-  void setHardwareAcceleration(@HardwareAcceleration @Nonnull String hardwareAcceleration);
+  void setHardwareAcceleration(@HardwareAcceleration @JsNonNull String hardwareAcceleration);
 
   @JsProperty(
       name = "height"
@@ -88,7 +89,7 @@ public interface VideoEncoderConfig {
   String scalabilityMode();
 
   @JsProperty
-  void setScalabilityMode(@Nonnull String scalabilityMode);
+  void setScalabilityMode(@JsNonNull String scalabilityMode);
 
   @JsProperty(
       name = "width"

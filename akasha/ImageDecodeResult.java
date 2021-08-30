@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,11 +34,11 @@ public interface ImageDecodeResult {
   @JsProperty(
       name = "image"
   )
-  @Nonnull
+  @JsNonNull
   VideoFrame image();
 
   @JsProperty
-  void setImage(@Nonnull VideoFrame image);
+  void setImage(@JsNonNull VideoFrame image);
 
   @Generated("org.realityforge.webtack")
   @JsType(

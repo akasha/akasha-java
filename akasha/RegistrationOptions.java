@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RegistrationOptions {
   String scope();
 
   @JsProperty
-  void setScope(@Nonnull String scope);
+  void setScope(@JsNonNull String scope);
 
   @JsProperty(
       name = "type"
@@ -37,7 +38,7 @@ public interface RegistrationOptions {
   String type();
 
   @JsProperty
-  void setType(@WorkerType @Nonnull String type);
+  void setType(@WorkerType @JsNonNull String type);
 
   @JsProperty(
       name = "updateViaCache"
@@ -46,7 +47,7 @@ public interface RegistrationOptions {
   String updateViaCache();
 
   @JsProperty
-  void setUpdateViaCache(@ServiceWorkerUpdateViaCache @Nonnull String updateViaCache);
+  void setUpdateViaCache(@ServiceWorkerUpdateViaCache @JsNonNull String updateViaCache);
 
   @Generated("org.realityforge.webtack")
   @JsType(

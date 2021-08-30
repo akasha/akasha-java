@@ -8,8 +8,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -20,7 +21,7 @@ import jsinterop.base.Any;
  * The MediaKeyStatusMap interface of the EncryptedMediaExtensions API is a read-only map of media key statuses by key IDs.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap">MediaKeyStatusMap - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface">MediaKeyStatusMap - Encrypted Media Extensions</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface"># mediakeystatusmap-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -49,7 +50,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get">MediaKeyStatusMap.get - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
-  @Nullable
+  @JsNullable
   public native Any get(@Nonnull BufferSource keyId);
 
   /**
@@ -67,7 +68,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<BufferSource> keys();
 
   /**
@@ -77,7 +78,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   /**
@@ -87,7 +88,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
   /**
@@ -96,7 +97,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach">MediaKeyStatusMap.forEach - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
   /**
    * The forEach property of the MediaKeyStatusMap interface calls callback once for each key-value pair in the status map, in insertion order. If an argument is present it will be passed to the callback.
@@ -104,7 +105,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach">MediaKeyStatusMap.forEach - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
   /**
    * The forEach property of the MediaKeyStatusMap interface calls callback once for each key-value pair in the status map, in insertion order. If an argument is present it will be passed to the callback.
@@ -112,7 +113,7 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/forEach">MediaKeyStatusMap.forEach - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/">Encrypted Media Extensions</a>
    */
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -136,18 +137,18 @@ public class MediaKeyStatusMap extends JsObject implements JsIterable<MediaKeySt
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, BufferSource key);
+    void item(@JsNonNull String value, BufferSource key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, BufferSource key, @Nonnull MediaKeyStatusMap iterable);
+    void item(@JsNonNull String value, BufferSource key, @JsNonNull MediaKeyStatusMap iterable);
   }
 }

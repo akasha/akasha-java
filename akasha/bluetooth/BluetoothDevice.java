@@ -9,6 +9,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,22 +30,22 @@ import jsinterop.base.Js;
     name = "BluetoothDevice"
 )
 public class BluetoothDevice extends EventTarget {
-  @Nullable
-  public EventHandler onadvertisementreceived;
+  @JsNullable
+  public BluetoothAdvertisingEventHandler onadvertisementreceived;
 
-  @Nullable
+  @JsNullable
   public EventHandler oncharacteristicvaluechanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler ongattserverdisconnected;
 
-  @Nullable
+  @JsNullable
   public EventHandler onserviceadded;
 
-  @Nullable
+  @JsNullable
   public EventHandler onservicechanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler onserviceremoved;
 
   protected BluetoothDevice() {
@@ -90,10 +92,10 @@ public class BluetoothDevice extends EventTarget {
   )
   public native boolean watchingAdvertisements();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> watchAdvertisements(@Nonnull WatchAdvertisementsOptions options);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> watchAdvertisements();
 
   @JsOverlay

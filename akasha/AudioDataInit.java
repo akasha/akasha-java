@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,21 +29,21 @@ public interface AudioDataInit {
   @JsProperty(
       name = "data"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource data();
 
   @JsProperty
-  void setData(@Nonnull BufferSource data);
+  void setData(@JsNonNull BufferSource data);
 
   @JsProperty(
       name = "format"
   )
   @AudioSampleFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@AudioSampleFormat @Nonnull String format);
+  void setFormat(@AudioSampleFormat @JsNonNull String format);
 
   @JsProperty(
       name = "numberOfChannels"

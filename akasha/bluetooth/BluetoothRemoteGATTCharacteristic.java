@@ -1,7 +1,6 @@
 package akasha.bluetooth;
 
 import akasha.AddEventListenerOptions;
-import akasha.EventHandler;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.core.BufferSource;
@@ -11,6 +10,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,8 +31,8 @@ import jsinterop.base.Js;
     name = "BluetoothRemoteGATTCharacteristic"
 )
 public class BluetoothRemoteGATTCharacteristic extends EventTarget {
-  @Nullable
-  public EventHandler oncharacteristicvaluechanged;
+  @JsNullable
+  public ValueEventHandler oncharacteristicvaluechanged;
 
   protected BluetoothRemoteGATTCharacteristic() {
   }
@@ -90,7 +91,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor">BluetoothRemoteGATTCharacteristic.getDescriptor - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor">getDescriptor() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(
       @Nonnull BluetoothDescriptorUUID descriptor);
 
@@ -100,7 +101,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor">BluetoothRemoteGATTCharacteristic.getDescriptor - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor">getDescriptor() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(@Nonnull String descriptor);
 
   /**
@@ -109,7 +110,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor">BluetoothRemoteGATTCharacteristic.getDescriptor - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor">getDescriptor() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(int descriptor);
 
   /**
@@ -118,7 +119,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">getDescriptors() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors(
       @Nonnull BluetoothDescriptorUUID descriptor);
 
@@ -128,7 +129,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">getDescriptors() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors(
       @Nonnull String descriptor);
 
@@ -138,7 +139,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">getDescriptors() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors(int descriptor);
 
   /**
@@ -147,7 +148,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors">BluetoothRemoteGATTCharacteristic.getDescriptors - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptors">getDescriptors() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTDescriptor>> getDescriptors();
 
   /**
@@ -156,7 +157,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/readValue">BluetoothRemoteGATTCharacteristic.readValue - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-readvalue">readValue() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<DataView> readValue();
 
   /**
@@ -165,7 +166,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/startNotifications">BluetoothRemoteGATTCharacteristic.startNotifications - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-startnotifications">startNotifications() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTCharacteristic> startNotifications();
 
   /**
@@ -174,7 +175,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications">BluetoothRemoteGATTCharacteristic.stopNotifications - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-stopnotifications">stopNotifications() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTCharacteristic> stopNotifications();
 
   /**
@@ -183,13 +184,13 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue">BluetoothRemoteGATTCharacteristic.writeValue - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue">writeValue() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> writeValue(@Nonnull BufferSource value);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> writeValueWithResponse(@Nonnull BufferSource value);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> writeValueWithoutResponse(@Nonnull BufferSource value);
 
   @JsOverlay

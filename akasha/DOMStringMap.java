@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -26,7 +27,7 @@ public class DOMStringMap extends JsObject {
   }
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final String get(@Nonnull final String name) {
     return Js.<JsPropertyMap<String>>cast( this ).get( name );
   }

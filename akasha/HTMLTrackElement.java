@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -38,11 +39,11 @@ public class HTMLTrackElement extends HTMLElement {
   )
   public boolean default_;
 
-  @Nonnull
+  @JsNonNull
   @TrackKind
   public String kind;
 
-  @Nonnull
+  @JsNonNull
   public String label;
 
   /**
@@ -52,10 +53,10 @@ public class HTMLTrackElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-track-src">HTMLTrackElement.src - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-track-src">HTMLTrackElement.src - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public String src;
 
-  @Nonnull
+  @JsNonNull
   public String srclang;
 
   protected HTMLTrackElement() {

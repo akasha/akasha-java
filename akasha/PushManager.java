@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -43,7 +44,7 @@ public class PushManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/getSubscription">PushManager.getSubscription - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushmanager-getsubscription">getSubscription() - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<PushSubscription> getSubscription();
 
   /**
@@ -52,7 +53,7 @@ public class PushManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState">PushManager.permissionState - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushmanager-permissionstate">permissionState() - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<String> permissionState(@Nonnull PushSubscriptionOptionsInit options);
 
   /**
@@ -61,7 +62,7 @@ public class PushManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState">PushManager.permissionState - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushmanager-permissionstate">permissionState() - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<String> permissionState();
 
   /**
@@ -70,7 +71,7 @@ public class PushManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe">PushManager.subscribe - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushmanager-subscribe">subscribe() - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<PushSubscription> subscribe(@Nonnull PushSubscriptionOptionsInit options);
 
   /**
@@ -79,6 +80,6 @@ public class PushManager extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe">PushManager.subscribe - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushmanager-subscribe">subscribe() - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<PushSubscription> subscribe();
 }

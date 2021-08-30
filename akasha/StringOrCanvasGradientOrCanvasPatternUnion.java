@@ -31,4 +31,34 @@ public interface StringOrCanvasGradientOrCanvasPatternUnion {
   static StringOrCanvasGradientOrCanvasPatternUnion of(@Nonnull final CanvasPattern value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isCanvasGradient() {
+    return ( (Object) this ) instanceof CanvasGradient;
+  }
+
+  @JsOverlay
+  default CanvasGradient asCanvasGradient() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isCanvasPattern() {
+    return ( (Object) this ) instanceof CanvasPattern;
+  }
+
+  @JsOverlay
+  default CanvasPattern asCanvasPattern() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -20,34 +22,34 @@ import jsinterop.annotations.JsType;
     name = "HTMLIFrameElement"
 )
 public class HTMLIFrameElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String allow;
 
   public boolean allowFullscreen;
 
-  @Nonnull
+  @JsNonNull
   public String frameBorder;
 
-  @Nonnull
+  @JsNonNull
   public String height;
 
-  @Nonnull
+  @JsNonNull
   @LoadingType
   public String loading;
 
-  @Nonnull
+  @JsNonNull
   public String longDesc;
 
-  @Nonnull
+  @JsNonNull
   public String marginHeight;
 
-  @Nonnull
+  @JsNonNull
   public String marginWidth;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
   /**
@@ -57,11 +59,11 @@ public class HTMLIFrameElement extends HTMLElement {
    * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">referrerpolicy attribute - Referrer Policy</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-iframe-referrerpolicy">HTMLIFrameElement: referrerPolicy - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @ReferrerPolicy
   public String referrerPolicy;
 
-  @Nonnull
+  @JsNonNull
   public String scrolling;
 
   /**
@@ -70,7 +72,7 @@ public class HTMLIFrameElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src">HTMLIFrameElement.src - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-iframe-src">HTMLIFrameElement: src - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String src;
 
   /**
@@ -79,10 +81,10 @@ public class HTMLIFrameElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc">HTMLIFrameElement.srcdoc - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#attr-iframe-srcdoc">HTMLIFrameElement: srcdoc - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String srcdoc;
 
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLIFrameElement() {
@@ -118,6 +120,6 @@ public class HTMLIFrameElement extends HTMLElement {
   @Nonnull
   public native DOMTokenList sandbox();
 
-  @Nullable
+  @JsNullable
   public native Document getSVGDocument();
 }

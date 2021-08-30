@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +26,7 @@ public class CSSStyleRule extends CSSRule {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/selectorText">CSSStyleRule.selectorText - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom/#dom-cssstylerule-selectortext">CSSStyleRule.selectorText - CSS Object Model (CSSOM)</a>
    */
-  @Nonnull
+  @JsNonNull
   public String selectorText;
 
   protected CSSStyleRule() {

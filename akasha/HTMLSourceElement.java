@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -20,19 +20,19 @@ import jsinterop.annotations.JsType;
 public class HTMLSourceElement extends HTMLElement {
   public int height;
 
-  @Nonnull
+  @JsNonNull
   public String media;
 
-  @Nonnull
+  @JsNonNull
   public String sizes;
 
-  @Nonnull
+  @JsNonNull
   public String src;
 
-  @Nonnull
+  @JsNonNull
   public String srcset;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
   public int width;

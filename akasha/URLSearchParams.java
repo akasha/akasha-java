@@ -7,8 +7,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -95,7 +96,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-get">get() - URL</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String get(@Nonnull String name);
 
   /**
@@ -105,7 +106,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-getall">getAll() - URL</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> getAll(@Nonnull String name);
 
   /**
@@ -140,7 +141,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">keys() (see &quot;iterable&quot;) - URL</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   /**
@@ -150,7 +151,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">values() (see &quot;iterable&quot;) - URL</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   /**
@@ -160,7 +161,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">entries() (see &quot;iterable&quot;) - URL</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
   /**
@@ -169,7 +170,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach">URLSearchParams.forEach - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">forEach() (see &quot;iterable&quot;) - URL</a>
    */
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
   /**
    * The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.
@@ -177,7 +178,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach">URLSearchParams.forEach - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">forEach() (see &quot;iterable&quot;) - URL</a>
    */
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
   /**
    * The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.
@@ -185,7 +186,7 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach">URLSearchParams.forEach - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#interface-urlsearchparams">forEach() (see &quot;iterable&quot;) - URL</a>
    */
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -209,18 +210,18 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, String key);
+    void item(@JsNonNull String value, String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, String key, @Nonnull URLSearchParams iterable);
+    void item(@JsNonNull String value, String key, @JsNonNull URLSearchParams iterable);
   }
 }

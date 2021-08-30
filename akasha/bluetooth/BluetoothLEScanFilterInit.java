@@ -3,6 +3,7 @@ package akasha.bluetooth;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,8 @@ public interface BluetoothLEScanFilterInit {
   JsArray<BluetoothManufacturerDataFilterInit> manufacturerData();
 
   @JsProperty
-  void setManufacturerData(@Nonnull JsArray<BluetoothManufacturerDataFilterInit> manufacturerData);
+  void setManufacturerData(
+      @JsNonNull JsArray<BluetoothManufacturerDataFilterInit> manufacturerData);
 
   @JsOverlay
   default void setManufacturerData(
@@ -43,7 +45,7 @@ public interface BluetoothLEScanFilterInit {
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @JsProperty(
       name = "namePrefix"
@@ -51,7 +53,7 @@ public interface BluetoothLEScanFilterInit {
   String namePrefix();
 
   @JsProperty
-  void setNamePrefix(@Nonnull String namePrefix);
+  void setNamePrefix(@JsNonNull String namePrefix);
 
   @JsProperty(
       name = "serviceData"
@@ -59,7 +61,7 @@ public interface BluetoothLEScanFilterInit {
   JsArray<BluetoothServiceDataFilterInit> serviceData();
 
   @JsProperty
-  void setServiceData(@Nonnull JsArray<BluetoothServiceDataFilterInit> serviceData);
+  void setServiceData(@JsNonNull JsArray<BluetoothServiceDataFilterInit> serviceData);
 
   @JsOverlay
   default void setServiceData(@Nonnull final BluetoothServiceDataFilterInit... serviceData) {
@@ -72,7 +74,7 @@ public interface BluetoothLEScanFilterInit {
   JsArray<BluetoothServiceUUID> services();
 
   @JsProperty
-  void setServices(@Nonnull JsArray<BluetoothServiceUUID> services);
+  void setServices(@JsNonNull JsArray<BluetoothServiceUUID> services);
 
   @JsOverlay
   default void setServices(@Nonnull final BluetoothServiceUUID... services) {

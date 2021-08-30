@@ -5,6 +5,7 @@ import akasha.core.Float64Array;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The DOMMatrix interface represents 4&times;4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the DOMMatrixReadOnly interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix">DOMMatrix - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix">DOMMatrix - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix">(Geometry Interfaces 1) # DOMMatrix</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -101,131 +102,131 @@ public class DOMMatrix extends DOMMatrixReadOnly {
   public DOMMatrix() {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrix fromFloat32Array(@Nonnull Float32Array array32);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrix fromFloat64Array(@Nonnull Float64Array array64);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrix fromMatrix(@Nonnull DOMMatrixInit other);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrix fromMatrix();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix invertSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix multiplySelf(@Nonnull DOMMatrixInit other);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix multiplySelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix preMultiplySelf(@Nonnull DOMMatrixInit other);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix preMultiplySelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngleSelf(double x, double y, double z, double angle);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngleSelf(double x, double y, double z);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngleSelf(double x, double y);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngleSelf(double x);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngleSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateFromVectorSelf(double x, double y);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateFromVectorSelf(double x);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateFromVectorSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateSelf(double rotX, double rotY, double rotZ);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateSelf(double rotX, double rotY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateSelf(double rotX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3dSelf(double scale, double originX, double originY, double originZ);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3dSelf(double scale, double originX, double originY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3dSelf(double scale, double originX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3dSelf(double scale);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3dSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf(double scaleX, double scaleY, double scaleZ, double originX,
       double originY, double originZ);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf(double scaleX, double scaleY, double scaleZ, double originX,
       double originY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf(double scaleX, double scaleY, double scaleZ, double originX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf(double scaleX, double scaleY, double scaleZ);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf(double scaleX, double scaleY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf(double scaleX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix setMatrixValue(@Nonnull String transformList);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewXSelf(double sx);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewXSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewYSelf(double sy);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewYSelf();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translateSelf(double tx, double ty, double tz);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translateSelf(double tx, double ty);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translateSelf(double tx);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translateSelf();
 }

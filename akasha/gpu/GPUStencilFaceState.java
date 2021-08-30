@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface GPUStencilFaceState {
   String compare();
 
   @JsProperty
-  void setCompare(@GPUCompareFunction @Nonnull String compare);
+  void setCompare(@GPUCompareFunction @JsNonNull String compare);
 
   @JsProperty(
       name = "depthFailOp"
@@ -40,7 +41,7 @@ public interface GPUStencilFaceState {
   String depthFailOp();
 
   @JsProperty
-  void setDepthFailOp(@GPUStencilOperation @Nonnull String depthFailOp);
+  void setDepthFailOp(@GPUStencilOperation @JsNonNull String depthFailOp);
 
   @JsProperty(
       name = "failOp"
@@ -49,7 +50,7 @@ public interface GPUStencilFaceState {
   String failOp();
 
   @JsProperty
-  void setFailOp(@GPUStencilOperation @Nonnull String failOp);
+  void setFailOp(@GPUStencilOperation @JsNonNull String failOp);
 
   @JsProperty(
       name = "passOp"
@@ -58,7 +59,7 @@ public interface GPUStencilFaceState {
   String passOp();
 
   @JsProperty
-  void setPassOp(@GPUStencilOperation @Nonnull String passOp);
+  void setPassOp(@GPUStencilOperation @JsNonNull String passOp);
 
   @Generated("org.realityforge.webtack")
   @JsType(

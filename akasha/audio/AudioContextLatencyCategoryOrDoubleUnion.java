@@ -26,4 +26,25 @@ public interface AudioContextLatencyCategoryOrDoubleUnion {
   static AudioContextLatencyCategoryOrDoubleUnion of(final double value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isAudioContextLatencyCategory() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  @AudioContextLatencyCategory
+  default String asAudioContextLatencyCategory() {
+    return Js.asString( this );
+  }
+
+  @JsOverlay
+  default boolean isDouble() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default double asDouble() {
+    return Js.asDouble( this );
+  }
 }

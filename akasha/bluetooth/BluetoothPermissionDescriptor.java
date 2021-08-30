@@ -5,6 +5,7 @@ import akasha.PermissionName;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +40,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   String deviceId();
 
   @JsProperty
-  void setDeviceId(@Nonnull String deviceId);
+  void setDeviceId(@JsNonNull String deviceId);
 
   @JsProperty(
       name = "filters"
@@ -47,7 +48,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   JsArray<BluetoothLEScanFilterInit> filters();
 
   @JsProperty
-  void setFilters(@Nonnull JsArray<BluetoothLEScanFilterInit> filters);
+  void setFilters(@JsNonNull JsArray<BluetoothLEScanFilterInit> filters);
 
   @JsOverlay
   default void setFilters(@Nonnull final BluetoothLEScanFilterInit... filters) {
@@ -60,7 +61,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   JsArray<Double> optionalManufacturerData();
 
   @JsProperty
-  void setOptionalManufacturerData(@Nonnull JsArray<Double> optionalManufacturerData);
+  void setOptionalManufacturerData(@JsNonNull JsArray<Double> optionalManufacturerData);
 
   @JsOverlay
   default void setOptionalManufacturerData(@Nonnull final double... optionalManufacturerData) {
@@ -73,7 +74,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   JsArray<BluetoothServiceUUID> optionalServices();
 
   @JsProperty
-  void setOptionalServices(@Nonnull JsArray<BluetoothServiceUUID> optionalServices);
+  void setOptionalServices(@JsNonNull JsArray<BluetoothServiceUUID> optionalServices);
 
   @JsOverlay
   default void setOptionalServices(@Nonnull final BluetoothServiceUUID... optionalServices) {

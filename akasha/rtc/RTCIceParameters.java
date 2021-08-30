@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -45,7 +46,7 @@ public interface RTCIceParameters {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceparameters-password">RTCIceParameters.password - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setPassword(@Nonnull String password);
+  void setPassword(@JsNonNull String password);
 
   /**
    * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment (&quot;ufrag&quot;) that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
@@ -65,7 +66,7 @@ public interface RTCIceParameters {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceparameters-usernamefragment">RTCIceParameters.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setUsernameFragment(@Nonnull String usernameFragment);
+  void setUsernameFragment(@JsNonNull String usernameFragment);
 
   /**
    * The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session.

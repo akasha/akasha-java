@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +38,7 @@ public interface RTCIceServerStats extends RTCStats {
   String relayProtocol();
 
   @JsProperty
-  void setRelayProtocol(@Nonnull String relayProtocol);
+  void setRelayProtocol(@JsNonNull String relayProtocol);
 
   @JsProperty(
       name = "totalRequestsSent"
@@ -66,11 +67,11 @@ public interface RTCIceServerStats extends RTCStats {
   @JsProperty(
       name = "url"
   )
-  @Nonnull
+  @JsNonNull
   String url();
 
   @JsProperty
-  void setUrl(@Nonnull String url);
+  void setUrl(@JsNonNull String url);
 
   @Generated("org.realityforge.webtack")
   @JsType(

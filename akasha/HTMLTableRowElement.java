@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,19 +20,19 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableRowElement"
 )
 public class HTMLTableRowElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String bgColor;
 
-  @Nonnull
+  @JsNonNull
   public String ch;
 
-  @Nonnull
+  @JsNonNull
   public String chOff;
 
-  @Nonnull
+  @JsNonNull
   public String vAlign;
 
   protected HTMLTableRowElement() {
@@ -67,7 +68,7 @@ public class HTMLTableRowElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#dom-tr-insertcell">HTMLTableRowElement.insertCell() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68927016">HTMLTableRowElement.insertCell() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableCellElement insertCell(int index);
 
   /**
@@ -77,6 +78,6 @@ public class HTMLTableRowElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#dom-tr-insertcell">HTMLTableRowElement.insertCell() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68927016">HTMLTableRowElement.insertCell() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native HTMLTableCellElement insertCell();
 }

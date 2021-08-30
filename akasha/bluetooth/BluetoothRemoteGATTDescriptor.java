@@ -7,6 +7,7 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -69,7 +70,7 @@ public class BluetoothRemoteGATTDescriptor extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/readValue">BluetoothRemoteGATTDescriptor.readValue - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-readvalue">readValue() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<DataView> readValue();
 
   /**
@@ -78,6 +79,6 @@ public class BluetoothRemoteGATTDescriptor extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue">BluetoothRemoteGATTDescriptor.writeValue - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-writevalue">writeValue() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> writeValue(@Nonnull BufferSource value);
 }

@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.HTMLVideoElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface GPUExternalTextureDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "source"
   )
-  @Nonnull
+  @JsNonNull
   HTMLVideoElement source();
 
   @JsProperty
-  void setSource(@Nonnull HTMLVideoElement source);
+  void setSource(@JsNonNull HTMLVideoElement source);
 
   @JsProperty(
       name = "colorSpace"
@@ -41,7 +42,7 @@ public interface GPUExternalTextureDescriptor extends GPUObjectDescriptorBase {
   String colorSpace();
 
   @JsProperty
-  void setColorSpace(@GPUPredefinedColorSpace @Nonnull String colorSpace);
+  void setColorSpace(@GPUPredefinedColorSpace @JsNonNull String colorSpace);
 
   @Generated("org.realityforge.webtack")
   @JsType(

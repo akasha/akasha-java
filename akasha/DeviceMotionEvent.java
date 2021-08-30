@@ -4,6 +4,7 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -87,6 +88,6 @@ public class DeviceMotionEvent extends Event {
   @Nullable
   public native DeviceMotionEventRotationRate rotationRate();
 
-  @Nonnull
+  @JsNonNull
   public static native Promise<String> requestPermission();
 }

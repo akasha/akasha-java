@@ -4,16 +4,19 @@ import akasha.core.BufferSource;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The MediaKeySession interface of the EncryptedMediaExtensions API represents a context for message exchange with a content decryption module (CDM).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession">MediaKeySession - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysession-interface">MediaKeySession - Encrypted Media Extensions</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysession-interface"># mediakeysession-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -22,11 +25,11 @@ import jsinterop.annotations.JsType;
     name = "MediaKeySession"
 )
 public class MediaKeySession extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onkeystatuseschange;
 
-  @Nullable
-  public EventHandler onmessage;
+  @JsNullable
+  public MediaKeyMessageEventHandler onmessage;
 
   protected MediaKeySession() {
   }
@@ -84,7 +87,7 @@ public class MediaKeySession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/close">MediaKeySession.close - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-close">close() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> close();
 
   /**
@@ -93,7 +96,7 @@ public class MediaKeySession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/generateRequest">MediaKeySession.generateRequest - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-generaterequest">generateRequest() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> generateRequest(@Nonnull String initDataType,
       @Nonnull BufferSource initData);
 
@@ -103,7 +106,7 @@ public class MediaKeySession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/load">MediaKeySession.load - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-load">load() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> load(@Nonnull String sessionId);
 
   /**
@@ -112,7 +115,7 @@ public class MediaKeySession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/remove">MediaKeySession.remove - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-sessionid">remove() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> remove();
 
   /**
@@ -121,6 +124,74 @@ public class MediaKeySession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/update">MediaKeySession.update - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession-update">update() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> update(@Nonnull BufferSource response);
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MediaKeyMessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MediaKeyMessageEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MediaKeyMessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MediaKeyMessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MediaKeyMessageEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MediaKeyMessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addKeystatuseschangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "keystatuseschange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addKeystatuseschangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "keystatuseschange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addKeystatuseschangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "keystatuseschange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeKeystatuseschangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "keystatuseschange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeKeystatuseschangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "keystatuseschange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeKeystatuseschangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "keystatuseschange", Js.cast( callback ) );
+  }
 }

@@ -9,10 +9,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API's XRBoundedReferenceSpace interface describes a virtual world reference space which has preset boundaries. This extends XRReferenceSpace, which describes an essentially unrestricted space around the viewer's position.
+ * The WebXR Device API's XRBoundedReferenceSpace interface describes a virtual world reference space which has preset boundaries. This extends XRReferenceSpace, which describes an essentially unrestricted space around the viewer's position. These bounds are defined using an array of points, each of which defines a vertex in a polygon inside which the user is allowed to move.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace">XRBoundedReferenceSpace - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrboundedreferencespace-interface">XRBoundedReferenceSpace - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrboundedreferencespace-interface"># xrboundedreferencespace-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

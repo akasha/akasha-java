@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -23,9 +24,9 @@ public class WakeLock extends JsObject {
   protected WakeLock() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native Promise<WakeLockSentinel> request(@WakeLockType @Nonnull String type);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<WakeLockSentinel> request();
 }

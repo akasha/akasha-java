@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -20,22 +22,22 @@ import jsinterop.annotations.JsType;
     name = "HTMLObjectElement"
 )
 public class HTMLObjectElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String archive;
 
-  @Nonnull
+  @JsNonNull
   public String border;
 
-  @Nonnull
+  @JsNonNull
   public String code;
 
-  @Nonnull
+  @JsNonNull
   public String codeBase;
 
-  @Nonnull
+  @JsNonNull
   public String codeType;
 
   /**
@@ -44,7 +46,7 @@ public class HTMLObjectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/data">HTMLObjectElement.data - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-object-data">data - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String data;
 
   public boolean declare;
@@ -55,7 +57,7 @@ public class HTMLObjectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/height">HTMLObjectElement.height - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-dim-height">height - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String height;
 
   public int hspace;
@@ -66,10 +68,10 @@ public class HTMLObjectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/name">HTMLObjectElement.name - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-object-name">name - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String standby;
 
   /**
@@ -78,7 +80,7 @@ public class HTMLObjectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/type">HTMLObjectElement.type - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-object-type">type - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String type;
 
   /**
@@ -87,7 +89,7 @@ public class HTMLObjectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/useMap">HTMLObjectElement.useMap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-object-usemap">useMap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String useMap;
 
   public int vspace;
@@ -98,7 +100,7 @@ public class HTMLObjectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/width">HTMLObjectElement.width - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-dim-width">width - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLObjectElement() {
@@ -183,7 +185,7 @@ public class HTMLObjectElement extends HTMLElement {
    */
   public native boolean checkValidity();
 
-  @Nullable
+  @JsNullable
   public native Document getSVGDocument();
 
   public native boolean reportValidity();

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface AudioEncoderSupport {
   AudioEncoderConfig config();
 
   @JsProperty
-  void setConfig(@Nonnull AudioEncoderConfig config);
+  void setConfig(@JsNonNull AudioEncoderConfig config);
 
   @JsProperty(
       name = "supported"

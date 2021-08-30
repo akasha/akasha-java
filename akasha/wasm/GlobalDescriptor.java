@@ -2,6 +2,7 @@ package akasha.wasm;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface GlobalDescriptor {
       name = "value"
   )
   @ValueType
-  @Nonnull
+  @JsNonNull
   String value();
 
   @JsProperty
-  void setValue(@ValueType @Nonnull String value);
+  void setValue(@ValueType @JsNonNull String value);
 
   @Generated("org.realityforge.webtack")
   @JsType(

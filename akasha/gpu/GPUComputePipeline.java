@@ -2,8 +2,8 @@ package akasha.gpu;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -16,12 +16,12 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUComputePipeline"
 )
 public class GPUComputePipeline extends JsObject {
-  @Nullable
+  @JsNullable
   public String label;
 
   protected GPUComputePipeline() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native GPUBindGroupLayout getBindGroupLayout(int index);
 }

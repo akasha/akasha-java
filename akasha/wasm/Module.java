@@ -6,6 +6,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -25,13 +26,13 @@ public class Module extends JsObject {
   public Module(@Nonnull final BufferSource bytes) {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native JsArray<ArrayBuffer> customSections(@Nonnull Module moduleObject,
       @Nonnull String sectionName);
 
-  @Nonnull
+  @JsNonNull
   public static native JsArray<ModuleExportDescriptor> exports(@Nonnull Module moduleObject);
 
-  @Nonnull
+  @JsNonNull
   public static native JsArray<ModuleImportDescriptor> imports(@Nonnull Module moduleObject);
 }

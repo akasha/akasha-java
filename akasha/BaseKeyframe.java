@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +32,7 @@ public interface BaseKeyframe {
   String composite();
 
   @JsProperty
-  void setComposite(@CompositeOperationOrAuto @Nonnull String composite);
+  void setComposite(@CompositeOperationOrAuto @JsNonNull String composite);
 
   @JsProperty(
       name = "easing"
@@ -38,16 +40,16 @@ public interface BaseKeyframe {
   String easing();
 
   @JsProperty
-  void setEasing(@Nonnull String easing);
+  void setEasing(@JsNonNull String easing);
 
   @JsProperty(
       name = "offset"
   )
-  @Nullable
+  @JsNullable
   Double offset();
 
   @JsProperty
-  void setOffset(@Nullable Double offset);
+  void setOffset(@JsNullable Double offset);
 
   @Generated("org.realityforge.webtack")
   @JsType(

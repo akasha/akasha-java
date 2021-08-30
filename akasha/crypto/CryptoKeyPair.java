@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKeyPair">CryptoKeyPair - Web Cryptography API</a>
+ * @see <a href="https://w3c.github.io/webcrypto/#keypair"># keypair</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +35,7 @@ public interface CryptoKeyPair {
   CryptoKey privateKey();
 
   @JsProperty
-  void setPrivateKey(@Nonnull CryptoKey privateKey);
+  void setPrivateKey(@JsNonNull CryptoKey privateKey);
 
   @JsProperty(
       name = "publicKey"
@@ -42,13 +43,13 @@ public interface CryptoKeyPair {
   CryptoKey publicKey();
 
   @JsProperty
-  void setPublicKey(@Nonnull CryptoKey publicKey);
+  void setPublicKey(@JsNonNull CryptoKey publicKey);
 
   /**
    * The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKeyPair">CryptoKeyPair - Web Cryptography API</a>
+   * @see <a href="https://w3c.github.io/webcrypto/#keypair"># keypair</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

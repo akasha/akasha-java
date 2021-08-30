@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -44,7 +45,7 @@ public interface OscillatorOptions extends AudioNodeOptions {
   PeriodicWave periodicWave();
 
   @JsProperty
-  void setPeriodicWave(@Nonnull PeriodicWave periodicWave);
+  void setPeriodicWave(@JsNonNull PeriodicWave periodicWave);
 
   @JsProperty(
       name = "type"
@@ -53,7 +54,7 @@ public interface OscillatorOptions extends AudioNodeOptions {
   String type();
 
   @JsProperty
-  void setType(@OscillatorType @Nonnull String type);
+  void setType(@OscillatorType @JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface AuthenticationExtensionsClientInputs {
   String appid();
 
   @JsProperty
-  void setAppid(@Nonnull String appid);
+  void setAppid(@JsNonNull String appid);
 
   @JsProperty(
       name = "appidExclude"
@@ -36,7 +37,7 @@ public interface AuthenticationExtensionsClientInputs {
   String appidExclude();
 
   @JsProperty
-  void setAppidExclude(@Nonnull String appidExclude);
+  void setAppidExclude(@JsNonNull String appidExclude);
 
   @JsProperty(
       name = "uvm"
@@ -60,7 +61,7 @@ public interface AuthenticationExtensionsClientInputs {
   AuthenticationExtensionsLargeBlobInputs largeBlob();
 
   @JsProperty
-  void setLargeBlob(@Nonnull AuthenticationExtensionsLargeBlobInputs largeBlob);
+  void setLargeBlob(@JsNonNull AuthenticationExtensionsLargeBlobInputs largeBlob);
 
   @Generated("org.realityforge.webtack")
   @JsType(

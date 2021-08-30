@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,10 +20,10 @@ import jsinterop.annotations.JsType;
     name = "HTMLAnchorElement"
 )
 public class HTMLAnchorElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String charset;
 
-  @Nonnull
+  @JsNonNull
   public String coords;
 
   /**
@@ -31,7 +32,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download">HTMLAnchorElement.download - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-download">download - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String download;
 
   /**
@@ -40,7 +41,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/hash">HTMLAnchorElement.hash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hash">HTMLHyperlinkElementUtils.hash - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hash;
 
   /**
@@ -49,7 +50,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/host">HTMLAnchorElement.host - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-host">HTMLHyperlinkElementUtils.host - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String host;
 
   /**
@@ -58,7 +59,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/hostname">HTMLAnchorElement.hostname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hostname">HTMLHyperlinkElementUtils.hostname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hostname;
 
   /**
@@ -67,13 +68,13 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/href">HTMLAnchorElement.href - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-href">HTMLHyperlinkElementUtils.href - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String href;
 
-  @Nonnull
+  @JsNonNull
   public String hreflang;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
   /**
@@ -82,7 +83,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/password">HTMLAnchorElement.password - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-password">HTMLHyperlinkElementUtils.password - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String password;
 
   /**
@@ -91,10 +92,10 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/pathname">HTMLAnchorElement.pathname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-pathname">HTMLHyperlinkElementUtils.pathname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String pathname;
 
-  @Nonnull
+  @JsNonNull
   public String ping;
 
   /**
@@ -103,7 +104,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/port">HTMLAnchorElement.port - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-port">HTMLHyperlinkElementUtils.port - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String port;
 
   /**
@@ -112,7 +113,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/protocol">HTMLAnchorElement.protocol - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-protocol">HTMLHyperlinkElementUtils.protocol - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String protocol;
 
   /**
@@ -121,7 +122,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/referrerPolicy">HTMLAnchorElement.referrerPolicy - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">referrerPolicy attribute - Referrer Policy</a>
    */
-  @Nonnull
+  @JsNonNull
   @ReferrerPolicy
   public String referrerPolicy;
 
@@ -133,10 +134,10 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-3815891">rel - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-3815891">rel - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public String rel;
 
-  @Nonnull
+  @JsNonNull
   public String rev;
 
   /**
@@ -145,19 +146,19 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/search">HTMLAnchorElement.search - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-search">HTMLHyperlinkElementUtils.search - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String search;
 
-  @Nonnull
+  @JsNonNull
   public String shape;
 
-  @Nonnull
+  @JsNonNull
   public String target;
 
-  @Nonnull
+  @JsNonNull
   public String text;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
   /**
@@ -166,7 +167,7 @@ public class HTMLAnchorElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/username">HTMLAnchorElement.username - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-username">HTMLHyperlinkElementUtils.username - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String username;
 
   protected HTMLAnchorElement() {

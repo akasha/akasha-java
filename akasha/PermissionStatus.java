@@ -2,10 +2,12 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The PermissionStatus interface of the Permissions API provides the state of an object and an event handler for monitoring changes to said state.
@@ -25,7 +27,7 @@ public class PermissionStatus extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/onchange">PermissionStatus.onchange - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   protected PermissionStatus() {
@@ -42,4 +44,38 @@ public class PermissionStatus extends EventTarget {
   @Nonnull
   @PermissionState
   public native String state();
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "change", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "change", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "change", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "change", Js.cast( callback ) );
+  }
 }

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -44,7 +45,7 @@ public interface AddEventListenerOptions extends EventListenerOptions {
   AbortSignal signal();
 
   @JsProperty
-  void setSignal(@Nonnull AbortSignal signal);
+  void setSignal(@JsNonNull AbortSignal signal);
 
   @Generated("org.realityforge.webtack")
   @JsType(

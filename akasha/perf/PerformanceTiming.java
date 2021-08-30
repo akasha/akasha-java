@@ -2,7 +2,7 @@ package akasha.perf;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -253,6 +253,6 @@ public class PerformanceTiming extends JsObject {
   )
   public native int unloadEventStart();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

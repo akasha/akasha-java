@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface PasswordCredentialData extends CredentialData, PasswordCredenti
   String iconURL();
 
   @JsProperty
-  void setIconURL(@Nonnull String iconURL);
+  void setIconURL(@JsNonNull String iconURL);
 
   @JsProperty(
       name = "name"
@@ -37,25 +38,25 @@ public interface PasswordCredentialData extends CredentialData, PasswordCredenti
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @JsProperty(
       name = "origin"
   )
-  @Nonnull
+  @JsNonNull
   String origin();
 
   @JsProperty
-  void setOrigin(@Nonnull String origin);
+  void setOrigin(@JsNonNull String origin);
 
   @JsProperty(
       name = "password"
   )
-  @Nonnull
+  @JsNonNull
   String password();
 
   @JsProperty
-  void setPassword(@Nonnull String password);
+  void setPassword(@JsNonNull String password);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -43,6 +44,6 @@ public class GamepadHapticActuator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/pulse">GamepadHapticActuator.pulse - MDN</a>
    * @see <a href="https://w3c.github.io/gamepad/extensions.html#dom-gamepadhapticactuator-pulse">pulse() - Gamepad Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> pulse(double value, double duration);
 }

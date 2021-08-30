@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface GPUBlendComponent {
   String dstFactor();
 
   @JsProperty
-  void setDstFactor(@GPUBlendFactor @Nonnull String dstFactor);
+  void setDstFactor(@GPUBlendFactor @JsNonNull String dstFactor);
 
   @JsProperty(
       name = "operation"
@@ -40,7 +41,7 @@ public interface GPUBlendComponent {
   String operation();
 
   @JsProperty
-  void setOperation(@GPUBlendOperation @Nonnull String operation);
+  void setOperation(@GPUBlendOperation @JsNonNull String operation);
 
   @JsProperty(
       name = "srcFactor"
@@ -49,7 +50,7 @@ public interface GPUBlendComponent {
   String srcFactor();
 
   @JsProperty
-  void setSrcFactor(@GPUBlendFactor @Nonnull String srcFactor);
+  void setSrcFactor(@GPUBlendFactor @JsNonNull String srcFactor);
 
   @Generated("org.realityforge.webtack")
   @JsType(

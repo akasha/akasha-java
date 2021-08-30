@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.ArrayBufferView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ReadableStreamBYOBReadResult {
   ArrayBufferView value();
 
   @JsProperty
-  void setValue(@Nonnull ArrayBufferView value);
+  void setValue(@JsNonNull ArrayBufferView value);
 
   @JsProperty(
       name = "done"

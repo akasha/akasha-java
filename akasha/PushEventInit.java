@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface PushEventInit extends ExtendableEventInit {
   PushMessageDataInit data();
 
   @JsProperty
-  void setData(@Nonnull PushMessageDataInit data);
+  void setData(@JsNonNull PushMessageDataInit data);
 
   @JsOverlay
   default void setData(@Nonnull final BufferSource data) {

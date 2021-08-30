@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "CSSFontFeatureValuesRule"
 )
 public class CSSFontFeatureValuesRule extends CSSRule {
-  @Nonnull
+  @JsNonNull
   public String fontFamily;
 
   protected CSSFontFeatureValuesRule() {

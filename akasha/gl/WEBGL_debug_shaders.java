@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -34,6 +35,6 @@ public class WEBGL_debug_shaders extends JsObject implements WebGLCommonExtensio
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_shaders/">WEBGL_debug_shaders.getTranslatedShaderSource - WEBGL_debug_shaders</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String getTranslatedShaderSource(@Nonnull WebGLShader shader);
 }

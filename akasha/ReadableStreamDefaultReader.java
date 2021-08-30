@@ -6,6 +6,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,14 +27,14 @@ public class ReadableStreamDefaultReader extends JsObject implements ReadableStr
   @Nonnull
   public native Promise<Void> closed();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<ReadableStreamDefaultReadResult> read();
 
   public native void releaseLock();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> cancel(@DoNotAutobox @Nullable Object reason);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> cancel();
 }

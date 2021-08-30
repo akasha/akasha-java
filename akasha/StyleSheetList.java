@@ -3,7 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,6 +30,6 @@ public class StyleSheetList extends JsObject {
   public native int length();
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native CSSStyleSheet item(int index);
 }

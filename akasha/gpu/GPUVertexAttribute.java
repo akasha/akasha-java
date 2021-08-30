@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +30,11 @@ public interface GPUVertexAttribute {
       name = "format"
   )
   @GPUVertexFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@GPUVertexFormat @Nonnull String format);
+  void setFormat(@GPUVertexFormat @JsNonNull String format);
 
   @JsProperty(
       name = "offset"

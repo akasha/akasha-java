@@ -5,6 +5,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,20 +31,20 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsProperty(
       name = "promise"
   )
-  @Nonnull
+  @JsNonNull
   Promise<Any> promise();
 
   @JsProperty
-  void setPromise(@Nonnull Promise<Any> promise);
+  void setPromise(@JsNonNull Promise<Any> promise);
 
   @JsProperty(
       name = "reason"
   )
-  @Nullable
+  @JsNullable
   Any reason();
 
   @JsProperty
-  void setReason(@DoNotAutobox @Nullable Object reason);
+  void setReason(@DoNotAutobox @JsNullable Object reason);
 
   @Generated("org.realityforge.webtack")
   @JsType(

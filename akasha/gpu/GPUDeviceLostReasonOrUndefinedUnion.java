@@ -24,4 +24,20 @@ public interface GPUDeviceLostReasonOrUndefinedUnion {
   static GPUDeviceLostReasonOrUndefinedUnion of() {
     return Js.cast( Js.undefined() );
   }
+
+  @JsOverlay
+  default boolean isGPUDeviceLostReason() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  @GPUDeviceLostReason
+  default String asGPUDeviceLostReason() {
+    return Js.asString( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
+  }
 }

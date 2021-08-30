@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface DeviceMotionEventInit extends EventInit {
   DeviceMotionEventAccelerationInit acceleration();
 
   @JsProperty
-  void setAcceleration(@Nonnull DeviceMotionEventAccelerationInit acceleration);
+  void setAcceleration(@JsNonNull DeviceMotionEventAccelerationInit acceleration);
 
   @JsProperty(
       name = "accelerationIncludingGravity"
@@ -37,7 +38,7 @@ public interface DeviceMotionEventInit extends EventInit {
 
   @JsProperty
   void setAccelerationIncludingGravity(
-      @Nonnull DeviceMotionEventAccelerationInit accelerationIncludingGravity);
+      @JsNonNull DeviceMotionEventAccelerationInit accelerationIncludingGravity);
 
   @JsProperty(
       name = "interval"
@@ -53,7 +54,7 @@ public interface DeviceMotionEventInit extends EventInit {
   DeviceMotionEventRotationRateInit rotationRate();
 
   @JsProperty
-  void setRotationRate(@Nonnull DeviceMotionEventRotationRateInit rotationRate);
+  void setRotationRate(@JsNonNull DeviceMotionEventRotationRateInit rotationRate);
 
   @Generated("org.realityforge.webtack")
   @JsType(

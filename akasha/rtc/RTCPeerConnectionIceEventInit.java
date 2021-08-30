@@ -4,6 +4,7 @@ import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,20 +28,20 @@ public interface RTCPeerConnectionIceEventInit extends EventInit {
   @JsProperty(
       name = "candidate"
   )
-  @Nullable
+  @JsNullable
   RTCIceCandidate candidate();
 
   @JsProperty
-  void setCandidate(@Nullable RTCIceCandidate candidate);
+  void setCandidate(@JsNullable RTCIceCandidate candidate);
 
   @JsProperty(
       name = "url"
   )
-  @Nullable
+  @JsNullable
   String url();
 
   @JsProperty
-  void setUrl(@Nullable String url);
+  void setUrl(@JsNullable String url);
 
   @Generated("org.realityforge.webtack")
   @JsType(

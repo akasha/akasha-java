@@ -3,7 +3,8 @@ package akasha.gpu;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -16,16 +17,16 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUTexture"
 )
 public class GPUTexture extends JsObject {
-  @Nullable
+  @JsNullable
   public String label;
 
   protected GPUTexture() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native GPUTextureView createView(@Nonnull GPUTextureViewDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUTextureView createView();
 
   public native void destroy();

@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface RTCMediaSourceStats extends RTCStats {
   @JsProperty(
       name = "kind"
   )
-  @Nonnull
+  @JsNonNull
   String kind();
 
   @JsProperty
-  void setKind(@Nonnull String kind);
+  void setKind(@JsNonNull String kind);
 
   @JsProperty(
       name = "relayedSource"
@@ -44,11 +45,11 @@ public interface RTCMediaSourceStats extends RTCStats {
   @JsProperty(
       name = "trackIdentifier"
   )
-  @Nonnull
+  @JsNonNull
   String trackIdentifier();
 
   @JsProperty
-  void setTrackIdentifier(@Nonnull String trackIdentifier);
+  void setTrackIdentifier(@JsNonNull String trackIdentifier);
 
   @Generated("org.realityforge.webtack")
   @JsType(

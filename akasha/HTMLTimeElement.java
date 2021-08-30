@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +26,7 @@ public class HTMLTimeElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/html51/text-level-semantics.html#dom-time-datetime">HTMLTimeElement - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/text-level-semantics.html#dom-time-datetime">HTMLTimeElement - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public String dateTime;
 
   protected HTMLTimeElement() {

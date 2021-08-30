@@ -5,9 +5,12 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
@@ -28,8 +31,8 @@ public class ServiceWorker extends EventTarget implements MessageEventSource {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onerror">ServiceWorker.onerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-abstractworker-onerror">AbstractWorker.onerror - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onerror;
+  @JsNullable
+  public ErrorEventHandler onerror;
 
   /**
    * An EventListener property called whenever an event of type statechange is fired; it is basically fired anytime the ServiceWorker.state changes.
@@ -37,7 +40,7 @@ public class ServiceWorker extends EventTarget implements MessageEventSource {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange">ServiceWorker.onstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworker-onstatechange">ServiceWorker.onstatechange - Service Workers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onstatechange;
 
   protected ServiceWorker() {
@@ -78,4 +81,38 @@ public class ServiceWorker extends EventTarget implements MessageEventSource {
       @Nonnull PostMessageOptions options);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message);
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
 }

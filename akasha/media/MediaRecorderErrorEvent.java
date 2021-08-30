@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The MediaRecorderErrorEvent interface represents errors returned by the MediaStream Recording API. It is an Event object that encapsulates a reference to a DOMException describing the error that occurred.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent">MediaRecorderErrorEvent - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-record/#errorevent-section">MediaRecorderErrorEvent - MediaStream Recording</a>
+ * @see <a href="https://w3c.github.io/mediacapture-record/#errorevent-section"># errorevent-section</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

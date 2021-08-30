@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -91,7 +92,7 @@ public class NodeIterator extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode">NodeIterator.nextNode - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node nextNode();
 
   /**
@@ -99,6 +100,6 @@ public class NodeIterator extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/previousNode">NodeIterator.previousNode - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node previousNode();
 }

@@ -4,6 +4,7 @@ import akasha.DOMException;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface MediaRecorderErrorEventInit extends EventInit {
   @JsProperty(
       name = "error"
   )
-  @Nonnull
+  @JsNonNull
   DOMException error();
 
   @JsProperty
-  void setError(@Nonnull DOMException error);
+  void setError(@JsNonNull DOMException error);
 
   @Generated("org.realityforge.webtack")
   @JsType(

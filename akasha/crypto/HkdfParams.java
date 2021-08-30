@@ -4,6 +4,7 @@ import akasha.core.BufferSource;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -48,11 +49,11 @@ public interface HkdfParams extends Algorithm {
   @JsProperty(
       name = "hash"
   )
-  @Nonnull
+  @JsNonNull
   AlgorithmIdentifier hash();
 
   @JsProperty
-  void setHash(@Nonnull AlgorithmIdentifier hash);
+  void setHash(@JsNonNull AlgorithmIdentifier hash);
 
   @JsOverlay
   default void setHash(@Nonnull final JsObject hash) {
@@ -67,20 +68,20 @@ public interface HkdfParams extends Algorithm {
   @JsProperty(
       name = "info"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource info();
 
   @JsProperty
-  void setInfo(@Nonnull BufferSource info);
+  void setInfo(@JsNonNull BufferSource info);
 
   @JsProperty(
       name = "salt"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource salt();
 
   @JsProperty
-  void setSalt(@Nonnull BufferSource salt);
+  void setSalt(@JsNonNull BufferSource salt);
 
   /**
    * A DOMString representing the digest algorithm to use. This may be one of:

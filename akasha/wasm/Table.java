@@ -5,6 +5,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,7 +41,7 @@ public class Table extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">WebAssembly.Table.get - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Function get(int index);
 
   /**

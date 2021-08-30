@@ -5,6 +5,7 @@ import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface ClipboardEventInit extends EventInit {
   @JsProperty(
       name = "clipboardData"
   )
-  @Nullable
+  @JsNullable
   DataTransfer clipboardData();
 
   @JsProperty
-  void setClipboardData(@Nullable DataTransfer clipboardData);
+  void setClipboardData(@JsNullable DataTransfer clipboardData);
 
   @Generated("org.realityforge.webtack")
   @JsType(

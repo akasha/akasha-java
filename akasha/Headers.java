@@ -7,8 +7,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -94,7 +95,7 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/get">Headers.get - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-headers-get">get() - Fetch</a>
    */
-  @Nullable
+  @JsNullable
   public native String get(@Nonnull String name);
 
   /**
@@ -119,7 +120,7 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/keys">Headers.keys - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   /**
@@ -128,7 +129,7 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/values">Headers.values - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   /**
@@ -137,14 +138,14 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/entries">Headers.entries - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -168,18 +169,18 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, String key);
+    void item(@JsNonNull String value, String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, String key, @Nonnull Headers iterable);
+    void item(@JsNonNull String value, String key, @JsNonNull Headers iterable);
   }
 }

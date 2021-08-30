@@ -4,12 +4,14 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document.
+ * The DocumentFragment interface represents a minimal document object that has no parent.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment">DocumentFragment - MDN</a>
  * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment">(DOM) # interface-documentfragment</a>
@@ -106,7 +108,7 @@ public class DocumentFragment extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector">DocumentFragment.querySelector - MDN</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element querySelector(@Nonnull String selectors);
 
   /**
@@ -116,7 +118,7 @@ public class DocumentFragment extends Node {
    * @see <a href="https://www.w3.org/TR/selectors-api/#queryselector">DocumentFragment.querySelectorAll - Selectors API Level 1</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native NodeList querySelectorAll(@Nonnull String selectors);
 
   /**
@@ -134,6 +136,6 @@ public class DocumentFragment extends Node {
   public native void replaceChildren(@Nonnull String... nodes);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element getElementById(@Nonnull String elementId);
 }

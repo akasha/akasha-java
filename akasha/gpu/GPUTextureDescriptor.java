@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -50,11 +51,11 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "size"
   )
-  @Nonnull
+  @JsNonNull
   GPUExtent3D size();
 
   @JsProperty
-  void setSize(@Nonnull GPUExtent3D size);
+  void setSize(@JsNonNull GPUExtent3D size);
 
   @JsOverlay
   default void setSize(@Nonnull final JsArray<Double> size) {
@@ -78,7 +79,7 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   String dimension();
 
   @JsProperty
-  void setDimension(@GPUTextureDimension @Nonnull String dimension);
+  void setDimension(@GPUTextureDimension @JsNonNull String dimension);
 
   @JsProperty(
       name = "mipLevelCount"
@@ -100,21 +101,21 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
       name = "format"
   )
   @GPUTextureFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@GPUTextureFormat @Nonnull String format);
+  void setFormat(@GPUTextureFormat @JsNonNull String format);
 
   @JsProperty(
       name = "usage"
   )
   @GPUTextureUsageFlags
-  @Nonnull
+  @JsNonNull
   int usage();
 
   @JsProperty
-  void setUsage(@GPUTextureUsageFlags @Nonnull int usage);
+  void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
   @Generated("org.realityforge.webtack")
   @JsType(

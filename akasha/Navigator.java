@@ -12,6 +12,7 @@ import akasha.xr.XRSystem;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -520,7 +521,7 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">requestMediaKeySystemAccess() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
       @Nonnull JsArray<MediaKeySystemConfiguration> supportedConfigurations);
 
@@ -530,7 +531,7 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">requestMediaKeySystemAccess() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
       @Nonnull MediaKeySystemConfiguration[] supportedConfigurations);
 
@@ -545,7 +546,7 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads">Navigator.getGamepads - MDN</a>
    * @see <a href="https://w3c.github.io/gamepad/">The Gamepad API specification - Gamepad</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Gamepad> getGamepads();
 
   @JsOverlay
@@ -596,7 +597,7 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - MDN</a>
    * @see <a href="https://w3c.github.io/web-share/#share-method">share() - Web Share API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> share(@Nonnull ShareData data);
 
   /**
@@ -605,7 +606,7 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - MDN</a>
    * @see <a href="https://w3c.github.io/web-share/#share-method">share() - Web Share API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> share();
 
   /**

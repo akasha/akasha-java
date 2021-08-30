@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,44 +19,44 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableCellElement"
 )
 public class HTMLTableCellElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String abbr;
 
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String axis;
 
-  @Nonnull
+  @JsNonNull
   public String bgColor;
 
-  @Nonnull
+  @JsNonNull
   public String ch;
 
-  @Nonnull
+  @JsNonNull
   public String chOff;
 
   public int colSpan;
 
-  @Nonnull
+  @JsNonNull
   public String headers;
 
-  @Nonnull
+  @JsNonNull
   public String height;
 
   public boolean noWrap;
 
   public int rowSpan;
 
-  @Nonnull
+  @JsNonNull
   @ScopeType
   public String scope;
 
-  @Nonnull
+  @JsNonNull
   public String vAlign;
 
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLTableCellElement() {

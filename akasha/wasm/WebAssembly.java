@@ -7,6 +7,7 @@ import akasha.promise.Promise;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -32,7 +33,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile">WebAssembly.compile - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/js-api/#dom-webassembly-compile"># dom-webassembly-compile</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<Module> compile(@Nonnull BufferSource bytes);
 
   /**
@@ -41,7 +42,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/js-api/#dom-webassembly-instantiate"># dom-webassembly-instantiate</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<WebAssemblyInstantiatedSource> instantiate(
       @Nonnull BufferSource bytes, @Nonnull JsObject importObject);
 
@@ -51,7 +52,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/js-api/#dom-webassembly-instantiate"># dom-webassembly-instantiate</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<WebAssemblyInstantiatedSource> instantiate(
       @Nonnull BufferSource bytes);
 
@@ -61,7 +62,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/js-api/#dom-webassembly-instantiate"># dom-webassembly-instantiate</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<Instance> instantiate(@Nonnull Module moduleObject,
       @Nonnull JsObject importObject);
 
@@ -71,7 +72,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/js-api/#dom-webassembly-instantiate"># dom-webassembly-instantiate</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<Instance> instantiate(@Nonnull Module moduleObject);
 
   /**
@@ -89,7 +90,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming">WebAssembly.compileStreaming - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/web-api/#dom-webassembly-compilestreaming"># dom-webassembly-compilestreaming</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<Module> compileStreaming(@Nonnull Promise<Response> source);
 
   /**
@@ -98,7 +99,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming">WebAssembly.instantiateStreaming - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/web-api/#dom-webassembly-instantiatestreaming"># dom-webassembly-instantiatestreaming</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<WebAssemblyInstantiatedSource> instantiateStreaming(
       @Nonnull Promise<Response> source, @Nonnull JsObject importObject);
 
@@ -108,7 +109,7 @@ public final class WebAssembly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming">WebAssembly.instantiateStreaming - MDN</a>
    * @see <a href="https://webassembly.github.io/spec/web-api/#dom-webassembly-instantiatestreaming"># dom-webassembly-instantiatestreaming</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<WebAssemblyInstantiatedSource> instantiateStreaming(
       @Nonnull Promise<Response> source);
 }

@@ -4,7 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,10 +36,10 @@ public class HTMLCollection extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item">HTMLCollection.item - MDN</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element item(int index);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element namedItem(@Nonnull String name);
 }

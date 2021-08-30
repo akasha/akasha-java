@@ -2,7 +2,7 @@ package akasha.svg;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The SVGAngle interface is used to represent a value that can be an &lt;angle&gt; or &lt;number&gt; value. An SVGAngle reflected through the animVal attribute is always read only.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle">SVGAngle - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle">SVGElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAngle">SVGElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle">(SVG) # InterfaceSVGAngle</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -39,7 +38,7 @@ public class SVGAngle extends JsObject {
 
   public float value;
 
-  @Nonnull
+  @JsNonNull
   public String valueAsString;
 
   public float valueInSpecifiedUnits;

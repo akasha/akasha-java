@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RTCRtpCodingParameters {
   String rid();
 
   @JsProperty
-  void setRid(@Nonnull String rid);
+  void setRid(@JsNonNull String rid);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -4,6 +4,7 @@ import akasha.core.BufferSource;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty(
       name = "id"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource id();
 
   @JsProperty
-  void setId(@Nonnull BufferSource id);
+  void setId(@JsNonNull BufferSource id);
 
   @JsProperty(
       name = "transports"
@@ -39,7 +40,7 @@ public interface PublicKeyCredentialDescriptor {
   JsArray<String> transports();
 
   @JsProperty
-  void setTransports(@Nonnull JsArray<String> transports);
+  void setTransports(@JsNonNull JsArray<String> transports);
 
   @JsOverlay
   default void setTransports(@Nonnull final String... transports) {
@@ -49,11 +50,11 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty(
       name = "type"
   )
-  @Nonnull
+  @JsNonNull
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

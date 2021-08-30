@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -46,7 +47,7 @@ public class CustomElementRegistry extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/get">CustomElementRegistry.get - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-get">customElements.get() - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native CustomElementConstructorOrUndefinedUnion get(@Nonnull String name);
 
   /**
@@ -63,6 +64,6 @@ public class CustomElementRegistry extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined">CustomElementRegistry.whenDefined - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-customelementregistry-whendefined">customElements.whenDefined() - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<CustomElementConstructor> whenDefined(@Nonnull String name);
 }

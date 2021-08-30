@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface FocusEventInit extends UIEventInit {
   @JsProperty(
       name = "relatedTarget"
   )
-  @Nullable
+  @JsNullable
   EventTarget relatedTarget();
 
   @JsProperty
-  void setRelatedTarget(@Nullable EventTarget relatedTarget);
+  void setRelatedTarget(@JsNullable EventTarget relatedTarget);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,20 +54,20 @@ public interface GPURenderPassDepthStencilAttachment {
   @JsProperty(
       name = "view"
   )
-  @Nonnull
+  @JsNonNull
   GPUTextureView view();
 
   @JsProperty
-  void setView(@Nonnull GPUTextureView view);
+  void setView(@JsNonNull GPUTextureView view);
 
   @JsProperty(
       name = "depthLoadValue"
   )
-  @Nonnull
+  @JsNonNull
   GPULoadOpOrFloatUnion depthLoadValue();
 
   @JsProperty
-  void setDepthLoadValue(@Nonnull GPULoadOpOrFloatUnion depthLoadValue);
+  void setDepthLoadValue(@JsNonNull GPULoadOpOrFloatUnion depthLoadValue);
 
   @JsOverlay
   default void setDepthLoadValue(@Nonnull final String depthLoadValue) {
@@ -82,11 +83,11 @@ public interface GPURenderPassDepthStencilAttachment {
       name = "depthStoreOp"
   )
   @GPUStoreOp
-  @Nonnull
+  @JsNonNull
   String depthStoreOp();
 
   @JsProperty
-  void setDepthStoreOp(@GPUStoreOp @Nonnull String depthStoreOp);
+  void setDepthStoreOp(@GPUStoreOp @JsNonNull String depthStoreOp);
 
   @JsProperty(
       name = "depthReadOnly"
@@ -99,11 +100,11 @@ public interface GPURenderPassDepthStencilAttachment {
   @JsProperty(
       name = "stencilLoadValue"
   )
-  @Nonnull
+  @JsNonNull
   GPULoadOpOrGPUStencilValueUnion stencilLoadValue();
 
   @JsProperty
-  void setStencilLoadValue(@Nonnull GPULoadOpOrGPUStencilValueUnion stencilLoadValue);
+  void setStencilLoadValue(@JsNonNull GPULoadOpOrGPUStencilValueUnion stencilLoadValue);
 
   @JsOverlay
   default void setStencilLoadValue(@Nonnull final String stencilLoadValue) {
@@ -119,11 +120,11 @@ public interface GPURenderPassDepthStencilAttachment {
       name = "stencilStoreOp"
   )
   @GPUStoreOp
-  @Nonnull
+  @JsNonNull
   String stencilStoreOp();
 
   @JsProperty
-  void setStencilStoreOp(@GPUStoreOp @Nonnull String stencilStoreOp);
+  void setStencilStoreOp(@GPUStoreOp @JsNonNull String stencilStoreOp);
 
   @JsProperty(
       name = "stencilReadOnly"

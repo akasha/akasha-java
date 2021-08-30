@@ -4,6 +4,7 @@ import akasha.core.Float32Array;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -105,6 +106,6 @@ public class AudioBuffer extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/getChannelData">AudioBuffer.getChannelData - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Float32Array getChannelData(int channel);
 }

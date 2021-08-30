@@ -4,7 +4,8 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,18 +28,18 @@ public class HTMLAllCollection extends JsObject {
   )
   public native int length();
 
-  @Nullable
+  @JsNullable
   public native HTMLCollectionOrElementUnion item(@Nonnull String nameOrIndex);
 
-  @Nullable
+  @JsNullable
   public native HTMLCollectionOrElementUnion item();
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native HTMLCollectionOrElementUnion namedItem(@Nonnull String name);
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final Element getAt(final int index) {
     return Js.<JsArrayLike<Element>>cast( this ).getAt( index );
   }

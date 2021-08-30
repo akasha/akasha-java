@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface CollectedClientData {
   @JsProperty(
       name = "challenge"
   )
-  @Nonnull
+  @JsNonNull
   String challenge();
 
   @JsProperty
-  void setChallenge(@Nonnull String challenge);
+  void setChallenge(@JsNonNull String challenge);
 
   @JsProperty(
       name = "crossOrigin"
@@ -43,11 +44,11 @@ public interface CollectedClientData {
   @JsProperty(
       name = "origin"
   )
-  @Nonnull
+  @JsNonNull
   String origin();
 
   @JsProperty
-  void setOrigin(@Nonnull String origin);
+  void setOrigin(@JsNonNull String origin);
 
   @JsProperty(
       name = "tokenBinding"
@@ -55,16 +56,16 @@ public interface CollectedClientData {
   TokenBinding tokenBinding();
 
   @JsProperty
-  void setTokenBinding(@Nonnull TokenBinding tokenBinding);
+  void setTokenBinding(@JsNonNull TokenBinding tokenBinding);
 
   @JsProperty(
       name = "type"
   )
-  @Nonnull
+  @JsNonNull
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

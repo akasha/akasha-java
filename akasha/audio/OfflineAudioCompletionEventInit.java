@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
   @JsProperty(
       name = "renderedBuffer"
   )
-  @Nonnull
+  @JsNonNull
   AudioBuffer renderedBuffer();
 
   @JsProperty
-  void setRenderedBuffer(@Nonnull AudioBuffer renderedBuffer);
+  void setRenderedBuffer(@JsNonNull AudioBuffer renderedBuffer);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ScrollOptions {
   String behavior();
 
   @JsProperty
-  void setBehavior(@ScrollBehavior @Nonnull String behavior);
+  void setBehavior(@ScrollBehavior @JsNonNull String behavior);
 
   @Generated("org.realityforge.webtack")
   @JsType(

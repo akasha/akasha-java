@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,7 +26,7 @@ public class HTMLLabelElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/htmlFor">HTMLLabelElement.htmlFor - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-label-htmlfor">htmlFor - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String htmlFor;
 
   protected HTMLLabelElement() {

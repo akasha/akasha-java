@@ -6,10 +6,10 @@ import akasha.EventHandler;
 import akasha.EventListener;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
-import akasha.indexeddb.IDBObjectStoreOrIDBIndexOrIDBCursorUnion;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +37,7 @@ public class IDBRequest extends EventTarget {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onerror">onerror - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-onerror">onerror - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
   /**
@@ -47,7 +47,7 @@ public class IDBRequest extends EventTarget {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onsuccess">onsuccess - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbrequest-onsuccess">onsuccess - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onsuccess;
 
   protected IDBRequest() {

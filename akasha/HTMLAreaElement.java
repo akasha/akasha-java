@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,13 +20,13 @@ import jsinterop.annotations.JsType;
     name = "HTMLAreaElement"
 )
 public class HTMLAreaElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String alt;
 
-  @Nonnull
+  @JsNonNull
   public String coords;
 
-  @Nonnull
+  @JsNonNull
   public String download;
 
   /**
@@ -34,7 +35,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hash">HTMLAreaElement.hash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hash">HTMLHyperlinkElementUtils.hash - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hash;
 
   /**
@@ -43,7 +44,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/host">HTMLAreaElement.host - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-host">HTMLHyperlinkElementUtils.host - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String host;
 
   /**
@@ -52,7 +53,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hostname">HTMLAreaElement.hostname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hostname">HTMLHyperlinkElementUtils.hostname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hostname;
 
   /**
@@ -61,7 +62,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/href">HTMLAreaElement.href - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-href">HTMLHyperlinkElementUtils.href - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String href;
 
   public boolean noHref;
@@ -72,7 +73,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/password">HTMLAreaElement.password - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-password">HTMLHyperlinkElementUtils.password - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String password;
 
   /**
@@ -81,10 +82,10 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/pathname">HTMLAreaElement.pathname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-pathname">HTMLHyperlinkElementUtils.pathname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String pathname;
 
-  @Nonnull
+  @JsNonNull
   public String ping;
 
   /**
@@ -93,7 +94,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/port">HTMLAreaElement.port - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-port">HTMLHyperlinkElementUtils.port - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String port;
 
   /**
@@ -102,7 +103,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/protocol">HTMLAreaElement.protocol - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-protocol">HTMLHyperlinkElementUtils.protocol - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String protocol;
 
   /**
@@ -111,7 +112,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy">HTMLAreaElement.referrerPolicy - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">referrerpolicy attribute - Referrer Policy</a>
    */
-  @Nonnull
+  @JsNonNull
   @ReferrerPolicy
   public String referrerPolicy;
 
@@ -121,7 +122,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/rel">HTMLAreaElement.rel - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-area-rel">rel - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String rel;
 
   /**
@@ -130,13 +131,13 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/search">HTMLAreaElement.search - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-search">HTMLHyperlinkElementUtils.search - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String search;
 
-  @Nonnull
+  @JsNonNull
   public String shape;
 
-  @Nonnull
+  @JsNonNull
   public String target;
 
   /**
@@ -145,7 +146,7 @@ public class HTMLAreaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/username">HTMLAreaElement.username - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-username">HTMLHyperlinkElementUtils.username - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String username;
 
   protected HTMLAreaElement() {

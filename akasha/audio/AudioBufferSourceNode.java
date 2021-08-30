@@ -2,13 +2,13 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The AudioBufferSourceNode interface is an AudioScheduledSourceNode which represents an audio source consisting of in-memory audio data, stored in an AudioBuffer. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network.
+ * The AudioBufferSourceNode interface is an AudioScheduledSourceNode which represents an audio source consisting of in-memory audio data, stored in an AudioBuffer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode">AudioBufferSourceNode - MDN</a>
  * @see <a href="https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode"># AudioBufferSourceNode</a>
@@ -26,7 +26,7 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/buffer">AudioBufferSourceNode.buffer - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiobuffersourcenode-buffer">buffer - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public AudioBuffer buffer;
 
   /**

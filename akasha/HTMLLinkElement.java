@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,34 +28,34 @@ public class HTMLLinkElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/as">HTMLLinkElement.as - MDN</a>
    * @see <a href="https://w3c.github.io/preload/#as-attribute">as - Preload</a>
    */
-  @Nonnull
+  @JsNonNull
   public String as;
 
-  @Nonnull
+  @JsNonNull
   public String charset;
 
-  @Nullable
+  @JsNullable
   @CrossOriginType
   public String crossOrigin;
 
   public boolean disabled;
 
-  @Nonnull
+  @JsNonNull
   public String href;
 
-  @Nonnull
+  @JsNonNull
   public String hreflang;
 
-  @Nonnull
+  @JsNonNull
   public String imageSizes;
 
-  @Nonnull
+  @JsNonNull
   public String imageSrcset;
 
-  @Nonnull
+  @JsNonNull
   public String integrity;
 
-  @Nonnull
+  @JsNonNull
   public String media;
 
   /**
@@ -62,7 +64,7 @@ public class HTMLLinkElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/referrerPolicy">HTMLLinkElement.referrerPolicy - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">referrerPolicy attribute - Referrer Policy</a>
    */
-  @Nonnull
+  @JsNonNull
   @ReferrerPolicy
   public String referrerPolicy;
 
@@ -74,16 +76,16 @@ public class HTMLLinkElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-41369587">rel - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-41369587">rel - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public String rel;
 
-  @Nonnull
+  @JsNonNull
   public String rev;
 
-  @Nonnull
+  @JsNonNull
   public String target;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
   protected HTMLLinkElement() {

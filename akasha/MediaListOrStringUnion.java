@@ -25,4 +25,24 @@ public interface MediaListOrStringUnion {
   static MediaListOrStringUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isMediaList() {
+    return ( (Object) this ) instanceof MediaList;
+  }
+
+  @JsOverlay
+  default MediaList asMediaList() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

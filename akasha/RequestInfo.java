@@ -25,4 +25,24 @@ public interface RequestInfo {
   static RequestInfo of(@Nonnull final String value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isRequest() {
+    return ( (Object) this ) instanceof Request;
+  }
+
+  @JsOverlay
+  default Request asRequest() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

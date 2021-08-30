@@ -9,6 +9,7 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -91,15 +92,15 @@ public class VideoFrame extends JsObject implements TexImageSource {
   @JsMethod(
       name = "clone"
   )
-  @Nonnull
+  @JsNonNull
   public native VideoFrame clone_();
 
   public native void close();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<PlaneLayout>> copyTo(@Nonnull BufferSource destination,
       @Nonnull VideoFrameCopyToOptions options);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<PlaneLayout>> copyTo(@Nonnull BufferSource destination);
 }

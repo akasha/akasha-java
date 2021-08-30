@@ -4,6 +4,8 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +33,7 @@ public interface BasePropertyIndexedKeyframe {
 
   @JsProperty
   void setComposite(
-      @Nonnull CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion composite);
+      @JsNonNull CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion composite);
 
   @JsOverlay
   default void setComposite(@Nonnull final String composite) {
@@ -54,7 +56,7 @@ public interface BasePropertyIndexedKeyframe {
   StringOrStringArrayUnion easing();
 
   @JsProperty
-  void setEasing(@Nonnull StringOrStringArrayUnion easing);
+  void setEasing(@JsNonNull StringOrStringArrayUnion easing);
 
   @JsOverlay
   default void setEasing(@Nonnull final String easing) {
@@ -74,11 +76,11 @@ public interface BasePropertyIndexedKeyframe {
   @JsProperty(
       name = "offset"
   )
-  @Nullable
+  @JsNullable
   DoubleOrDoubleArrayUnion offset();
 
   @JsProperty
-  void setOffset(@Nullable DoubleOrDoubleArrayUnion offset);
+  void setOffset(@JsNullable DoubleOrDoubleArrayUnion offset);
 
   @JsOverlay
   default void setOffset(@Nullable final Double offset) {

@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +31,7 @@ public interface RTCMediaStreamStats extends RTCStats {
   String streamIdentifier();
 
   @JsProperty
-  void setStreamIdentifier(@Nonnull String streamIdentifier);
+  void setStreamIdentifier(@JsNonNull String streamIdentifier);
 
   @JsProperty(
       name = "trackIds"
@@ -38,7 +39,7 @@ public interface RTCMediaStreamStats extends RTCStats {
   JsArray<String> trackIds();
 
   @JsProperty
-  void setTrackIds(@Nonnull JsArray<String> trackIds);
+  void setTrackIds(@JsNonNull JsArray<String> trackIds);
 
   @JsOverlay
   default void setTrackIds(@Nonnull final String... trackIds) {

@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -68,7 +69,7 @@ public interface RTCDataChannelInit {
   String protocol();
 
   @JsProperty
-  void setProtocol(@Nonnull String protocol);
+  void setProtocol(@JsNonNull String protocol);
 
   @JsProperty(
       name = "priority"
@@ -77,7 +78,7 @@ public interface RTCDataChannelInit {
   String priority();
 
   @JsProperty
-  void setPriority(@RTCPriorityType @Nonnull String priority);
+  void setPriority(@RTCPriorityType @JsNonNull String priority);
 
   @Generated("org.realityforge.webtack")
   @JsType(

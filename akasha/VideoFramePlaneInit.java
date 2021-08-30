@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -67,11 +68,11 @@ public interface VideoFramePlaneInit {
       name = "format"
   )
   @PixelFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@PixelFormat @Nonnull String format);
+  void setFormat(@PixelFormat @JsNonNull String format);
 
   @JsProperty(
       name = "timestamp"
@@ -87,7 +88,7 @@ public interface VideoFramePlaneInit {
   VideoFrameRect visibleRect();
 
   @JsProperty
-  void setVisibleRect(@Nonnull VideoFrameRect visibleRect);
+  void setVisibleRect(@JsNonNull VideoFrameRect visibleRect);
 
   @Generated("org.realityforge.webtack")
   @JsType(

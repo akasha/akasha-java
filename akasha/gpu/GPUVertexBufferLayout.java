@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,16 +48,16 @@ public interface GPUVertexBufferLayout {
   String stepMode();
 
   @JsProperty
-  void setStepMode(@GPUVertexStepMode @Nonnull String stepMode);
+  void setStepMode(@GPUVertexStepMode @JsNonNull String stepMode);
 
   @JsProperty(
       name = "attributes"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<GPUVertexAttribute> attributes();
 
   @JsProperty
-  void setAttributes(@Nonnull JsArray<GPUVertexAttribute> attributes);
+  void setAttributes(@JsNonNull JsArray<GPUVertexAttribute> attributes);
 
   @JsOverlay
   default void setAttributes(@Nonnull final GPUVertexAttribute... attributes) {

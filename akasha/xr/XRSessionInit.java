@@ -3,6 +3,7 @@ package akasha.xr;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,9 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The WebXR Device API dictionary XRSessionInit specifies required and/or optional features when requesting a new XRSession by calling the navigator.xr.requestSession() method.
+ * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit">XRSessionInit - MDN</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession"># dom-xrsystem-requestsession</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -35,7 +37,7 @@ public interface XRSessionInit {
   JsArray<Any> optionalFeatures();
 
   @JsProperty
-  void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
+  void setOptionalFeatures(@JsNonNull JsArray<Any> optionalFeatures);
 
   @JsOverlay
   default void setOptionalFeatures(@Nonnull final Any... optionalFeatures) {
@@ -48,7 +50,7 @@ public interface XRSessionInit {
   JsArray<Any> requiredFeatures();
 
   @JsProperty
-  void setRequiredFeatures(@Nonnull JsArray<Any> requiredFeatures);
+  void setRequiredFeatures(@JsNonNull JsArray<Any> requiredFeatures);
 
   @JsOverlay
   default void setRequiredFeatures(@Nonnull final Any... requiredFeatures) {
@@ -56,9 +58,10 @@ public interface XRSessionInit {
   }
 
   /**
-   * The WebXR Device API dictionary XRSessionInit specifies required and/or optional features when requesting a new XRSession by calling the navigator.xr.requestSession() method.
+   * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit">XRSessionInit - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession"># dom-xrsystem-requestsession</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

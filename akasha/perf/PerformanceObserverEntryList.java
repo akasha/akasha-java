@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,7 +30,7 @@ public class PerformanceObserverEntryList extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntries">PerformanceObserverEntryList.getEntries - MDN</a>
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserverentrylist-getentries">getEntries() - Performance Timeline Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntries();
 
   /**
@@ -38,7 +39,7 @@ public class PerformanceObserverEntryList extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntriesByName">PerformanceObserverEntryList.getEntriesByName - MDN</a>
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserverentrylist-getentriesbyname">getEntriesByName() - Performance Timeline Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntriesByName(@Nonnull String name,
       @Nonnull String type);
 
@@ -48,7 +49,7 @@ public class PerformanceObserverEntryList extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntriesByName">PerformanceObserverEntryList.getEntriesByName - MDN</a>
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserverentrylist-getentriesbyname">getEntriesByName() - Performance Timeline Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntriesByName(@Nonnull String name);
 
   /**
@@ -57,6 +58,6 @@ public class PerformanceObserverEntryList extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntriesByType">PerformanceObserverEntryList.getEntriesByType - MDN</a>
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserverentrylist-getentriesbytype">getEntriesByType() - Performance Timeline Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> getEntriesByType(@Nonnull String type);
 }

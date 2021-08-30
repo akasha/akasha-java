@@ -6,6 +6,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -14,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The WritableStream interface of the Streams API provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream">WritableStream - MDN</a>
- * @see <a href="https://streams.spec.whatwg.org/#ws-class">WritableStream - Streams</a>
+ * @see <a href="https://streams.spec.whatwg.org/#ws-class">(Streams) # ws-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -68,7 +69,7 @@ public class WritableStream extends JsObject implements Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/abort">WritableStream.abort - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#ws-abort">abort() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> abort(@DoNotAutobox @Nullable Object reason);
 
   /**
@@ -77,10 +78,10 @@ public class WritableStream extends JsObject implements Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/abort">WritableStream.abort - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#ws-abort">abort() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> abort();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> close();
 
   /**
@@ -89,6 +90,6 @@ public class WritableStream extends JsObject implements Transferable {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/getWriter">WritableStream.getWriter - MDN</a>
    * @see <a href="https://streams.spec.whatwg.org/#ws-get-writer">getWriter() - Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native WritableStreamDefaultWriter getWriter();
 }

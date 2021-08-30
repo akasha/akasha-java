@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,10 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame.
+ * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrrenderstateinit">XRRenderStateInit - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate"># dom-xrsession-updaterenderstate</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,11 +34,11 @@ public interface XRRenderStateInit {
   @JsProperty(
       name = "baseLayer"
   )
-  @Nullable
+  @JsNullable
   XRWebGLLayer baseLayer();
 
   @JsProperty
-  void setBaseLayer(@Nullable XRWebGLLayer baseLayer);
+  void setBaseLayer(@JsNullable XRWebGLLayer baseLayer);
 
   @JsProperty(
       name = "depthFar"
@@ -66,11 +67,11 @@ public interface XRRenderStateInit {
   @JsProperty(
       name = "layers"
   )
-  @Nullable
+  @JsNullable
   JsArray<XRLayer> layers();
 
   @JsProperty
-  void setLayers(@Nullable JsArray<XRLayer> layers);
+  void setLayers(@JsNullable JsArray<XRLayer> layers);
 
   @JsOverlay
   default void setLayers(@Nullable final XRLayer... layers) {
@@ -78,10 +79,10 @@ public interface XRRenderStateInit {
   }
 
   /**
-   * The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame.
+   * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrrenderstateinit">XRRenderStateInit - WebXR Device API</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate"># dom-xrsession-updaterenderstate</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

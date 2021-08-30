@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -23,15 +24,15 @@ public class NavigationPreloadManager extends JsObject {
   protected NavigationPreloadManager() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> disable();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> enable();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<NavigationPreloadState> getState();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setHeaderValue(@Nonnull String value);
 }

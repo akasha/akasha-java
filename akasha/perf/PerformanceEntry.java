@@ -3,6 +3,7 @@ package akasha.perf;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -79,6 +80,6 @@ public class PerformanceEntry extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/toJSON">PerformanceEntry.toJSON - MDN</a>
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceentry-tojson">toJSON - Performance Timeline Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

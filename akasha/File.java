@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The File interface provides information about files and allows JavaScript in a web page to access their content.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File">File - MDN</a>
- * @see <a href="https://w3c.github.io/FileAPI/#file-section">The File interface - File API</a>
+ * @see <a href="https://w3c.github.io/FileAPI/#file-section"># file-section</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

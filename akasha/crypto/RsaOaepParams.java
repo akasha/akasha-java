@@ -3,6 +3,7 @@ package akasha.crypto;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -35,7 +36,7 @@ public interface RsaOaepParams extends Algorithm {
   BufferSource label();
 
   @JsProperty
-  void setLabel(@Nonnull BufferSource label);
+  void setLabel(@JsNonNull BufferSource label);
 
   /**
    * The RsaOaepParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the RSA_OAEP algorithm.

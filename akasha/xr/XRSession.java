@@ -5,7 +5,8 @@ import akasha.EventTarget;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -14,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API's XRSession interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the XRSystem interface's requestSession() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession">XRSession - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrsession-interface">XRSession - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrsession-interface"># xrsession-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,31 +24,31 @@ import jsinterop.annotations.JsType;
     name = "XRSession"
 )
 public class XRSession extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onend;
 
-  @Nullable
+  @JsNullable
   public EventHandler oninputsourceschange;
 
-  @Nullable
+  @JsNullable
   public EventHandler onselect;
 
-  @Nullable
+  @JsNullable
   public EventHandler onselectend;
 
-  @Nullable
+  @JsNullable
   public EventHandler onselectstart;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsqueeze;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsqueezeend;
 
-  @Nullable
+  @JsNullable
   public EventHandler onsqueezestart;
 
-  @Nullable
+  @JsNullable
   public EventHandler onvisibilitychange;
 
   protected XRSession() {
@@ -104,7 +105,7 @@ public class XRSession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end">XRSession.end - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-end">XRSession.end - WebXR Device API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> end();
 
   /**
@@ -121,7 +122,7 @@ public class XRSession extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace">XRSession.requestReferenceSpace - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-requestreferencespace">requestReferenceSpace() - WebXR Device API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<XRReferenceSpace> requestReferenceSpace(
       @XRReferenceSpaceType @Nonnull String type);
 

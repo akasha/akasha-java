@@ -11,8 +11,7 @@ import jsinterop.annotations.JsType;
  * The FocusEvent interface represents focus-related events, including focus, blur, focusin, and focusout.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent">FocusEvent - MDN</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-focusevent">FocusEvent - UI Events</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-focusevent">FocusEvent - Document Object Model (DOM) Level 3 Events Specification</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-focusevent"># interface-focusevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

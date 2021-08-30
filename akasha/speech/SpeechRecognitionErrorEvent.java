@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SpeechRecognitionErrorEvent interface of the Web Speech API represents error messages from the recognition service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent">SpeechRecognitionErrorEvent - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechrecognitionerrorevent">SpeechRecognitionErrorEvent - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechrecognitionerrorevent"># speechrecognitionerrorevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

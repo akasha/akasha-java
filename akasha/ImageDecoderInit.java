@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,16 +30,16 @@ public interface ImageDecoderInit {
   String colorSpaceConversion();
 
   @JsProperty
-  void setColorSpaceConversion(@ColorSpaceConversion @Nonnull String colorSpaceConversion);
+  void setColorSpaceConversion(@ColorSpaceConversion @JsNonNull String colorSpaceConversion);
 
   @JsProperty(
       name = "data"
   )
-  @Nonnull
+  @JsNonNull
   ImageBufferSource data();
 
   @JsProperty
-  void setData(@Nonnull ImageBufferSource data);
+  void setData(@JsNonNull ImageBufferSource data);
 
   @JsProperty(
       name = "desiredHeight"
@@ -71,16 +72,16 @@ public interface ImageDecoderInit {
   String premultiplyAlpha();
 
   @JsProperty
-  void setPremultiplyAlpha(@PremultiplyAlpha @Nonnull String premultiplyAlpha);
+  void setPremultiplyAlpha(@PremultiplyAlpha @JsNonNull String premultiplyAlpha);
 
   @JsProperty(
       name = "type"
   )
-  @Nonnull
+  @JsNonNull
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

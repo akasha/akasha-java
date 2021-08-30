@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface RTCErrorEventInit extends EventInit {
   @JsProperty(
       name = "error"
   )
-  @Nonnull
+  @JsNonNull
   RTCError error();
 
   @JsProperty
-  void setError(@Nonnull RTCError error);
+  void setError(@JsNonNull RTCError error);
 
   @Generated("org.realityforge.webtack")
   @JsType(

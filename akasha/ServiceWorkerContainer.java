@@ -5,6 +5,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +32,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange">ServiceWorkerContainer.oncontrollerchange - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-oncontrollerchange">ServiceWorkerContainer: oncontrollerchange - Service Workers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncontrollerchange;
 
   /**
@@ -39,11 +41,11 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/onmessage">ServiceWorkerContainer.onmessage - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onmessage">ServiceWorkerContainer: onmessage - Service Workers</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
-  @Nullable
-  public EventHandler onmessageerror;
+  @JsNullable
+  public MessageEventHandler onmessageerror;
 
   protected ServiceWorkerContainer() {
   }
@@ -78,7 +80,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration">ServiceWorkerContainer: getRegistration - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ServiceWorkerRegistrationOrUndefinedUnion> getRegistration(
       @Nonnull String clientURL);
 
@@ -88,7 +90,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration">ServiceWorkerContainer: getRegistration - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ServiceWorkerRegistrationOrUndefinedUnion> getRegistration();
 
   /**
@@ -97,7 +99,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistrations">ServiceWorkerContainer.getRegistrations - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#navigator-service-worker-getRegistrations">getRegistrations() - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<ServiceWorkerRegistration>> getRegistrations();
 
   /**
@@ -106,7 +108,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register">ServiceWorkerContainer.register - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">ServiceWorkerContainer: register - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ServiceWorkerRegistration> register(@Nonnull String scriptURL,
       @Nonnull RegistrationOptions options);
 
@@ -116,7 +118,7 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register">ServiceWorkerContainer.register - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">ServiceWorkerContainer: register - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ServiceWorkerRegistration> register(@Nonnull String scriptURL);
 
   /**
@@ -159,5 +161,73 @@ public class ServiceWorkerContainer extends EventTarget {
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "messageerror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "messageerror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addControllerchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "controllerchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addControllerchangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "controllerchange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addControllerchangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "controllerchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeControllerchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "controllerchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeControllerchangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "controllerchange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeControllerchangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "controllerchange", Js.cast( callback ) );
   }
 }

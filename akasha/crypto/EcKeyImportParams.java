@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +32,11 @@ public interface EcKeyImportParams extends Algorithm {
   @JsProperty(
       name = "namedCurve"
   )
-  @Nonnull
+  @JsNonNull
   String namedCurve();
 
   @JsProperty
-  void setNamedCurve(@Nonnull String namedCurve);
+  void setNamedCurve(@JsNonNull String namedCurve);
 
   /**
    * A DOMString representing the name of the elliptic curve to use. This may be any of the following names for NIST-approved curves:

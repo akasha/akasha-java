@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,20 +27,20 @@ public interface ReadableWritablePair {
   @JsProperty(
       name = "readable"
   )
-  @Nonnull
+  @JsNonNull
   ReadableStream readable();
 
   @JsProperty
-  void setReadable(@Nonnull ReadableStream readable);
+  void setReadable(@JsNonNull ReadableStream readable);
 
   @JsProperty(
       name = "writable"
   )
-  @Nonnull
+  @JsNonNull
   WritableStream writable();
 
   @JsProperty
-  void setWritable(@Nonnull WritableStream writable);
+  void setWritable(@JsNonNull WritableStream writable);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLLegendElement"
 )
 public class HTMLLegendElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
   protected HTMLLegendElement() {

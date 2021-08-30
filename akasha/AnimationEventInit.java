@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface AnimationEventInit extends EventInit {
   String animationName();
 
   @JsProperty
-  void setAnimationName(@Nonnull String animationName);
+  void setAnimationName(@JsNonNull String animationName);
 
   @JsProperty(
       name = "elapsedTime"
@@ -44,7 +45,7 @@ public interface AnimationEventInit extends EventInit {
   String pseudoElement();
 
   @JsProperty
-  void setPseudoElement(@Nonnull String pseudoElement);
+  void setPseudoElement(@JsNonNull String pseudoElement);
 
   @Generated("org.realityforge.webtack")
   @JsType(

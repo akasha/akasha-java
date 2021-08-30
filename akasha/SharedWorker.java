@@ -2,10 +2,12 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope.
@@ -26,8 +28,8 @@ public class SharedWorker extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/onerror">SharedWorker.onerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-abstractworker-onerror">AbstractWorker.onerror - HTML Living Standard</a>
    */
-  @Nullable
-  public EventHandler onerror;
+  @JsNullable
+  public ErrorEventHandler onerror;
 
   /**
    * The SharedWorker() constructor creates a SharedWorker object that executes the script at the specified URL. This script must obey the same-origin policy.
@@ -67,4 +69,38 @@ public class SharedWorker extends EventTarget {
   )
   @Nonnull
   public native MessagePort port();
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
 }

@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,7 +29,7 @@ public class DataTransfer extends JsObject {
    * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-dropeffect">dropEffect - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransfer-dropeffect">dropEffect - HTML 5.1</a>
    */
-  @Nonnull
+  @JsNonNull
   public String dropEffect;
 
   /**
@@ -38,7 +39,7 @@ public class DataTransfer extends JsObject {
    * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-effectallowed">effectAllowed - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransfer-effectallowed">effectAllowed - HTML 5.1</a>
    */
-  @Nonnull
+  @JsNonNull
   public String effectAllowed;
 
   /**
@@ -114,7 +115,7 @@ public class DataTransfer extends JsObject {
    * @see <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-getdata">getData() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransfer-getdata">getData() - HTML 5.1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String getData(@Nonnull String format);
 
   /**

@@ -25,4 +25,19 @@ public interface CustomElementConstructorOrUndefinedUnion {
   static CustomElementConstructorOrUndefinedUnion of() {
     return Js.cast( Js.undefined() );
   }
+
+  @JsOverlay
+  default boolean isCustomElementConstructor() {
+    return ( (Object) this ) instanceof CustomElementConstructor;
+  }
+
+  @JsOverlay
+  default CustomElementConstructor asCustomElementConstructor() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
+  }
 }

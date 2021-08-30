@@ -4,6 +4,8 @@ import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +29,11 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsProperty(
       name = "address"
   )
-  @Nullable
+  @JsNullable
   String address();
 
   @JsProperty
-  void setAddress(@Nullable String address);
+  void setAddress(@JsNullable String address);
 
   @JsProperty(
       name = "errorCode"
@@ -47,16 +49,16 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   String errorText();
 
   @JsProperty
-  void setErrorText(@Nonnull String errorText);
+  void setErrorText(@JsNonNull String errorText);
 
   @JsProperty(
       name = "port"
   )
-  @Nullable
+  @JsNullable
   Double port();
 
   @JsProperty
-  void setPort(@Nullable Double port);
+  void setPort(@JsNullable Double port);
 
   @JsProperty(
       name = "url"
@@ -64,7 +66,7 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   String url();
 
   @JsProperty
-  void setUrl(@Nonnull String url);
+  void setUrl(@JsNonNull String url);
 
   @Generated("org.realityforge.webtack")
   @JsType(

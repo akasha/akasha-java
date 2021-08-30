@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String addressModeU();
 
   @JsProperty
-  void setAddressModeU(@GPUAddressMode @Nonnull String addressModeU);
+  void setAddressModeU(@GPUAddressMode @JsNonNull String addressModeU);
 
   @JsProperty(
       name = "addressModeV"
@@ -40,7 +41,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String addressModeV();
 
   @JsProperty
-  void setAddressModeV(@GPUAddressMode @Nonnull String addressModeV);
+  void setAddressModeV(@GPUAddressMode @JsNonNull String addressModeV);
 
   @JsProperty(
       name = "addressModeW"
@@ -49,7 +50,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String addressModeW();
 
   @JsProperty
-  void setAddressModeW(@GPUAddressMode @Nonnull String addressModeW);
+  void setAddressModeW(@GPUAddressMode @JsNonNull String addressModeW);
 
   @JsProperty(
       name = "compare"
@@ -58,7 +59,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String compare();
 
   @JsProperty
-  void setCompare(@GPUCompareFunction @Nonnull String compare);
+  void setCompare(@GPUCompareFunction @JsNonNull String compare);
 
   @JsProperty(
       name = "lodMaxClamp"
@@ -83,7 +84,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String magFilter();
 
   @JsProperty
-  void setMagFilter(@GPUFilterMode @Nonnull String magFilter);
+  void setMagFilter(@GPUFilterMode @JsNonNull String magFilter);
 
   @JsProperty(
       name = "maxAnisotropy"
@@ -100,7 +101,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String minFilter();
 
   @JsProperty
-  void setMinFilter(@GPUFilterMode @Nonnull String minFilter);
+  void setMinFilter(@GPUFilterMode @JsNonNull String minFilter);
 
   @JsProperty(
       name = "mipmapFilter"
@@ -109,7 +110,7 @@ public interface GPUSamplerDescriptor extends GPUObjectDescriptorBase {
   String mipmapFilter();
 
   @JsProperty
-  void setMipmapFilter(@GPUFilterMode @Nonnull String mipmapFilter);
+  void setMipmapFilter(@GPUFilterMode @JsNonNull String mipmapFilter);
 
   @Generated("org.realityforge.webtack")
   @JsType(

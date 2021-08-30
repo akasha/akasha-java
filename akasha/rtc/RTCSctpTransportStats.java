@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -61,7 +62,7 @@ public interface RTCSctpTransportStats extends RTCStats {
   String transportId();
 
   @JsProperty
-  void setTransportId(@Nonnull String transportId);
+  void setTransportId(@JsNonNull String transportId);
 
   @JsProperty(
       name = "unackData"

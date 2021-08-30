@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -66,6 +67,6 @@ public class PerformanceObserver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/takeRecords">PerformanceObserver.takeRecords - MDN</a>
    * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceobserver-takerecords">takeRecords() - Performance Timeline Level 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<PerformanceEntry> takeRecords();
 }

@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface EcKeyAlgorithm extends KeyAlgorithm {
   @JsProperty(
       name = "namedCurve"
   )
-  @Nonnull
+  @JsNonNull
   String namedCurve();
 
   @JsProperty
-  void setNamedCurve(@Nonnull String namedCurve);
+  void setNamedCurve(@JsNonNull String namedCurve);
 
   @Generated("org.realityforge.webtack")
   @JsType(

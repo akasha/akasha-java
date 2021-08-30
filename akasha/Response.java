@@ -8,6 +8,7 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -290,7 +291,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/error">Response.error - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-response-error">error() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Response error();
 
   /**
@@ -299,7 +300,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect">Response.redirect - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirect">redirect() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Response redirect(@Nonnull String url, int status);
 
   /**
@@ -308,7 +309,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect">Response.redirect - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-response-redirect">redirect() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Response redirect(@Nonnull String url);
 
   /**
@@ -320,7 +321,7 @@ public class Response extends JsObject {
   @JsMethod(
       name = "clone"
   )
-  @Nonnull
+  @JsNonNull
   public native Response clone_();
 
   /**
@@ -329,7 +330,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/arrayBuffer">Response.arrayBuffer - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-body-arraybuffer">arrayBuffer() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ArrayBuffer> arrayBuffer();
 
   /**
@@ -338,7 +339,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/blob">Response.blob - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-body-blob">blob() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Blob> blob();
 
   /**
@@ -347,7 +348,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/formData">Body.formData - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-body-formdata">formData() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<FormData> formData();
 
   /**
@@ -356,7 +357,7 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/json">Response.json - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-body-json">Body.json() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Any> json();
 
   /**
@@ -365,6 +366,6 @@ public class Response extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/text">Response.text - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-body-text">text() - Fetch</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<String> text();
 }

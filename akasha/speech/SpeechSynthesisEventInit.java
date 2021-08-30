@@ -3,6 +3,7 @@ package akasha.speech;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,16 +54,16 @@ public interface SpeechSynthesisEventInit extends EventInit {
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @JsProperty(
       name = "utterance"
   )
-  @Nonnull
+  @JsNonNull
   SpeechSynthesisUtterance utterance();
 
   @JsProperty
-  void setUtterance(@Nonnull SpeechSynthesisUtterance utterance);
+  void setUtterance(@JsNonNull SpeechSynthesisUtterance utterance);
 
   @Generated("org.realityforge.webtack")
   @JsType(

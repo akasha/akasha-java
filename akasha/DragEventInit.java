@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface DragEventInit extends MouseEventInit {
   @JsProperty(
       name = "dataTransfer"
   )
-  @Nullable
+  @JsNullable
   DataTransfer dataTransfer();
 
   @JsProperty
-  void setDataTransfer(@Nullable DataTransfer dataTransfer);
+  void setDataTransfer(@JsNullable DataTransfer dataTransfer);
 
   @Generated("org.realityforge.webtack")
   @JsType(

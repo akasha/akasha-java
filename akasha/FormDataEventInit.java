@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface FormDataEventInit extends EventInit {
   @JsProperty(
       name = "formData"
   )
-  @Nonnull
+  @JsNonNull
   FormData formData();
 
   @JsProperty
-  void setFormData(@Nonnull FormData formData);
+  void setFormData(@JsNonNull FormData formData);
 
   @Generated("org.realityforge.webtack")
   @JsType(

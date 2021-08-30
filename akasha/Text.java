@@ -3,12 +3,13 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The Text interface represents the textual content of Element or Attr.
+ * The Text interface represents a text node in a DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">Text - MDN</a>
  * @see <a href="https://dom.spec.whatwg.org/#interface-text">(DOM) # interface-text</a>
@@ -70,6 +71,6 @@ public class Text extends CharacterData {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-38853C1D">Text.splitText - Document Object Model (DOM) Level 2 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-38853C1D">Text.splitText - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Text splitText(int offset);
 }

@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface EncodedAudioChunkInit {
   @JsProperty(
       name = "data"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource data();
 
   @JsProperty
-  void setData(@Nonnull BufferSource data);
+  void setData(@JsNonNull BufferSource data);
 
   @JsProperty(
       name = "timestamp"
@@ -45,11 +46,11 @@ public interface EncodedAudioChunkInit {
       name = "type"
   )
   @EncodedAudioChunkType
-  @Nonnull
+  @JsNonNull
   String type();
 
   @JsProperty
-  void setType(@EncodedAudioChunkType @Nonnull String type);
+  void setType(@EncodedAudioChunkType @JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -4,6 +4,7 @@ import akasha.DOMPoint;
 import akasha.DOMPointInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement">SVGGeometryElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement">SVGGeometryElement - Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement">(SVG) # InterfaceSVGGeometryElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -42,7 +43,7 @@ public class SVGGeometryElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength">SVGGeometryElement.getPointAtLength - MDN</a>
    * @see <a href="https://svgwg.org/svg2-draft/types.html#__svg__SVGGeometryElement__getPointAtLength">SVGGeometryElement.getTotalLength() - Scalable Vector Graphics (SVG) 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMPoint getPointAtLength(float distance);
 
   /**

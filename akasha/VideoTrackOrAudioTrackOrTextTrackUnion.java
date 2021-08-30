@@ -31,4 +31,34 @@ public interface VideoTrackOrAudioTrackOrTextTrackUnion {
   static VideoTrackOrAudioTrackOrTextTrackUnion of(@Nonnull final TextTrack value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isAudioTrack() {
+    return ( (Object) this ) instanceof AudioTrack;
+  }
+
+  @JsOverlay
+  default AudioTrack asAudioTrack() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isTextTrack() {
+    return ( (Object) this ) instanceof TextTrack;
+  }
+
+  @JsOverlay
+  default TextTrack asTextTrack() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVideoTrack() {
+    return ( (Object) this ) instanceof VideoTrack;
+  }
+
+  @JsOverlay
+  default VideoTrack asVideoTrack() {
+    return Js.cast( this );
+  }
 }

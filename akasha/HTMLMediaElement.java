@@ -6,6 +6,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -77,7 +79,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/#attr-media-crossorigin">HTMLMediaElement.crossOrigin - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement">HTMLMediaElement.crossOrigin - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   @CrossOriginType
   public String crossOrigin;
 
@@ -126,10 +128,10 @@ public class HTMLMediaElement extends HTMLElement {
    */
   public boolean muted;
 
-  @Nullable
+  @JsNullable
   public EventHandler onencrypted;
 
-  @Nullable
+  @JsNullable
   public EventHandler onwaitingforkey;
 
   /**
@@ -141,7 +143,7 @@ public class HTMLMediaElement extends HTMLElement {
    */
   public double playbackRate;
 
-  @Nonnull
+  @JsNonNull
   @MediaPreloadType
   public String preload;
 
@@ -154,7 +156,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-src">HTMLMediaElement.src - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-src">HTMLMediaElement.src - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public String src;
 
   /**
@@ -163,7 +165,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject">HTMLMediaElement.srcObject - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-srcobject">srcObject - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MediaProvider srcObject;
 
   /**
@@ -348,14 +350,14 @@ public class HTMLMediaElement extends HTMLElement {
   @Nonnull
   public native VideoTrackList videoTracks();
 
-  @Nonnull
+  @JsNonNull
   public native TextTrack addTextTrack(@TextTrackKind @Nonnull String kind, @Nonnull String label,
       @Nonnull String language);
 
-  @Nonnull
+  @JsNonNull
   public native TextTrack addTextTrack(@TextTrackKind @Nonnull String kind, @Nonnull String label);
 
-  @Nonnull
+  @JsNonNull
   public native TextTrack addTextTrack(@TextTrackKind @Nonnull String kind);
 
   /**
@@ -367,7 +369,7 @@ public class HTMLMediaElement extends HTMLElement {
    */
   @HasNoSideEffects
   @CanPlayTypeResult
-  @Nonnull
+  @JsNonNull
   public native String canPlayType(@Nonnull String type);
 
   /**
@@ -378,7 +380,7 @@ public class HTMLMediaElement extends HTMLElement {
    */
   public native void fastSeek(double time);
 
-  @Nonnull
+  @JsNonNull
   public native JsObject getStartDate();
 
   /**
@@ -406,7 +408,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-play">play() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-play">play() - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> play();
 
   /**
@@ -415,7 +417,7 @@ public class HTMLMediaElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setMediaKeys">HTMLMediaElement.setMediaKeys - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-setmediakeys">setMediaKeys() - Encrypted Media Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setMediaKeys(@Nullable MediaKeys mediaKeys);
 
   @JsOverlay
@@ -620,40 +622,6 @@ public class HTMLMediaElement extends HTMLElement {
   @JsOverlay
   public final void removeEndedListener(@Nonnull final EventListener callback) {
     removeEventListener( "ended", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback,
-      final boolean useCapture) {
-    addEventListener( "error", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback) {
-    addEventListener( "error", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final EventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final EventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "error", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final EventListener callback) {
-    removeEventListener( "error", Js.cast( callback ) );
   }
 
   @JsOverlay

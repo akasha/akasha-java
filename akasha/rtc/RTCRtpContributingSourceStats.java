@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -43,11 +44,11 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
   @JsProperty(
       name = "inboundRtpStreamId"
   )
-  @Nonnull
+  @JsNonNull
   String inboundRtpStreamId();
 
   @JsProperty
-  void setInboundRtpStreamId(@Nonnull String inboundRtpStreamId);
+  void setInboundRtpStreamId(@JsNonNull String inboundRtpStreamId);
 
   @JsProperty(
       name = "packetsContributedTo"

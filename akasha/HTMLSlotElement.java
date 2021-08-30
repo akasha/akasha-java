@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -27,7 +28,7 @@ public class HTMLSlotElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/name">HTMLSlotElement.name - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-slot-name">name - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected HTMLSlotElement() {
@@ -43,7 +44,7 @@ public class HTMLSlotElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedElements">HTMLSlotElement.assignedElements - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-slot-assignedelements">assignedElements() - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Element> assignedElements(@Nonnull AssignedNodesOptions options);
 
   /**
@@ -52,7 +53,7 @@ public class HTMLSlotElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedElements">HTMLSlotElement.assignedElements - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-slot-assignedelements">assignedElements() - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Element> assignedElements();
 
   /**
@@ -61,7 +62,7 @@ public class HTMLSlotElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedNodes">HTMLSlotElement.assignedNodes - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assignednodes">assignedNodes - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Node> assignedNodes(@Nonnull AssignedNodesOptions options);
 
   /**
@@ -70,7 +71,7 @@ public class HTMLSlotElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedNodes">HTMLSlotElement.assignedNodes - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assignednodes">assignedNodes - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Node> assignedNodes();
 
   @JsOverlay

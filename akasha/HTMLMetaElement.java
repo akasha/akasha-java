@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,19 +18,19 @@ import jsinterop.annotations.JsType;
     name = "HTMLMetaElement"
 )
 public class HTMLMetaElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String content;
 
-  @Nonnull
+  @JsNonNull
   public String httpEquiv;
 
-  @Nonnull
+  @JsNonNull
   public String media;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String scheme;
 
   protected HTMLMetaElement() {

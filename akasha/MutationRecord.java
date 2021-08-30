@@ -9,7 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback.
+ * A MutationRecord represents an individual DOM mutation. It is the object that is inside the array passed to MutationObserver's callback.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord">MutationRecord - MDN</a>
  * @see <a href="https://dom.spec.whatwg.org/#interface-mutationrecord">(DOM) # interface-mutationrecord</a>

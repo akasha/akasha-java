@@ -3,6 +3,8 @@ package akasha.rtc;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -40,7 +42,7 @@ public interface RTCIceCandidateStats extends RTCStats {
   @JsProperty(
       name = "address"
   )
-  @Nullable
+  @JsNullable
   String address();
 
   /**
@@ -50,7 +52,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-address">RTCIceCandidateStats.address - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setAddress(@Nullable String address);
+  void setAddress(@JsNullable String address);
 
   /**
    * The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents.
@@ -62,7 +64,7 @@ public interface RTCIceCandidateStats extends RTCStats {
       name = "candidateType"
   )
   @RTCIceCandidateType
-  @Nonnull
+  @JsNonNull
   String candidateType();
 
   /**
@@ -72,7 +74,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats">RTCIceCandidateStats.candidateType - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setCandidateType(@RTCIceCandidateType @Nonnull String candidateType);
+  void setCandidateType(@RTCIceCandidateType @JsNonNull String candidateType);
 
   /**
    * The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate.
@@ -132,7 +134,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-protocol">RTCIceCandidateStats.protocol - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setProtocol(@Nonnull String protocol);
+  void setProtocol(@JsNonNull String protocol);
 
   /**
    * The RTCIceCandidateStats dictionary's relayProtocol property specifies the protocol being used by a local ICE candidate to communicate with the TURN server.
@@ -152,7 +154,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-relayprotocol">RTCIceCandidateStats.relayProtocol - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setRelayProtocol(@Nonnull String relayProtocol);
+  void setRelayProtocol(@JsNonNull String relayProtocol);
 
   /**
    * The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken.
@@ -163,7 +165,7 @@ public interface RTCIceCandidateStats extends RTCStats {
   @JsProperty(
       name = "transportId"
   )
-  @Nonnull
+  @JsNonNull
   String transportId();
 
   /**
@@ -173,7 +175,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-transportid">RTCIceCandidateStats.transportId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setTransportId(@Nonnull String transportId);
+  void setTransportId(@JsNonNull String transportId);
 
   /**
    * The RTCIceCandidateStats dictionary's url property specifies the URL of the ICE server from which the described candidate was obtained. This property is only available for local candidates.
@@ -193,7 +195,7 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-url">RTCIceCandidateStats.url - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setUrl(@Nonnull String url);
+  void setUrl(@JsNonNull String url);
 
   /**
    * The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released.

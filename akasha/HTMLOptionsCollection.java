@@ -4,6 +4,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -50,10 +51,10 @@ public class HTMLOptionsCollection extends HTMLCollection {
   }
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native HTMLOptionElement item(int index);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native HTMLOptionElement namedItem(@Nonnull String name);
 }

@@ -8,7 +8,8 @@ import akasha.EventTarget;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -19,7 +20,7 @@ import jsinterop.base.Js;
  * The SpeechSynthesis interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis">SpeechSynthesis - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#tts-section">SpeechSynthesis - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#tts-section"># tts-section</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +35,7 @@ public class SpeechSynthesis extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged">SpeechSynthesis.onvoiceschanged - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesis-onvoiceschanged">onvoiceschanged - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onvoiceschanged;
 
   protected SpeechSynthesis() {
@@ -87,7 +88,7 @@ public class SpeechSynthesis extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">SpeechSynthesis.getVoices - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesis-getvoices">getVoices() - Web Speech API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<SpeechSynthesisVoice> getVoices();
 
   /**

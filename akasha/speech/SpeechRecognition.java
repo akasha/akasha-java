@@ -7,7 +7,8 @@ import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -17,7 +18,7 @@ import jsinterop.base.Js;
  * The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition">SpeechRecognition - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-section">SpeechRecognition - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-section"># speechreco-section</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,7 +41,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars">SpeechRecognition.grammars - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-grammars">grammars - Web Speech API</a>
    */
-  @Nonnull
+  @JsNonNull
   public SpeechGrammarList grammars;
 
   /**
@@ -57,7 +58,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang">SpeechRecognition.lang - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-lang">lang - Web Speech API</a>
    */
-  @Nonnull
+  @JsNonNull
   public String lang;
 
   /**
@@ -74,7 +75,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudioend">SpeechRecognition.onaudioend - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onaudioend">onaudioend - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onaudioend;
 
   /**
@@ -83,7 +84,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudiostart">SpeechRecognition.onaudiostart - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onaudiostart">onaudiostart - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onaudiostart;
 
   /**
@@ -92,7 +93,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onend">SpeechRecognition.onend - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onend">onend - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onend;
 
   /**
@@ -101,7 +102,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror">SpeechRecognition.onerror - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onerror">onerror - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechRecognitionErrorEventHandler onerror;
 
   /**
@@ -110,7 +111,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch">SpeechRecognition.onnomatch - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onnomatch">onnomatch - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechRecognitionEventHandler onnomatch;
 
   /**
@@ -119,7 +120,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult">SpeechRecognition.onresult - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onresult">onresult - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechRecognitionEventHandler onresult;
 
   /**
@@ -128,7 +129,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundend">SpeechRecognition.onsoundend - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundend">onsoundend - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onsoundend;
 
   /**
@@ -137,7 +138,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundstart">SpeechRecognition.onsoundstart - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundstart">onsoundstart - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onsoundstart;
 
   /**
@@ -146,7 +147,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend">SpeechRecognition.onspeechend - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onspeechend">onspeechend - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onspeechend;
 
   /**
@@ -155,7 +156,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechstart">SpeechRecognition.onspeechstart - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onspeechstart">onspeechstart - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onspeechstart;
 
   /**
@@ -164,7 +165,7 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onstart">SpeechRecognition.onstart - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognition-onstart">onstart - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onstart;
 
   /**

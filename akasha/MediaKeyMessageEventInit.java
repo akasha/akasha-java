@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.ArrayBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,21 +28,21 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsProperty(
       name = "message"
   )
-  @Nonnull
+  @JsNonNull
   ArrayBuffer message();
 
   @JsProperty
-  void setMessage(@Nonnull ArrayBuffer message);
+  void setMessage(@JsNonNull ArrayBuffer message);
 
   @JsProperty(
       name = "messageType"
   )
   @MediaKeyMessageType
-  @Nonnull
+  @JsNonNull
   String messageType();
 
   @JsProperty
-  void setMessageType(@MediaKeyMessageType @Nonnull String messageType);
+  void setMessageType(@MediaKeyMessageType @JsNonNull String messageType);
 
   @Generated("org.realityforge.webtack")
   @JsType(

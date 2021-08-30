@@ -4,6 +4,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,7 +49,7 @@ public interface ObjectPropertyDescriptor {
   PropertyAccessorFunction get();
 
   @JsProperty
-  void setGet(@Nonnull PropertyAccessorFunction get);
+  void setGet(@JsNonNull PropertyAccessorFunction get);
 
   @JsProperty(
       name = "set"
@@ -55,16 +57,16 @@ public interface ObjectPropertyDescriptor {
   PropertyMutatorFunction set();
 
   @JsProperty
-  void setSet(@Nonnull PropertyMutatorFunction set);
+  void setSet(@JsNonNull PropertyMutatorFunction set);
 
   @JsProperty(
       name = "value"
   )
-  @Nullable
+  @JsNullable
   Any value();
 
   @JsProperty
-  void setValue(@DoNotAutobox @Nullable Object value);
+  void setValue(@DoNotAutobox @JsNullable Object value);
 
   @JsProperty(
       name = "writable"

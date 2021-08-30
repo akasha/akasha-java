@@ -3,6 +3,7 @@ package akasha.bluetooth;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,11 +33,11 @@ public interface BluetoothPermissionStorage {
   @JsProperty(
       name = "allowedDevices"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<AllowedBluetoothDevice> allowedDevices();
 
   @JsProperty
-  void setAllowedDevices(@Nonnull JsArray<AllowedBluetoothDevice> allowedDevices);
+  void setAllowedDevices(@JsNonNull JsArray<AllowedBluetoothDevice> allowedDevices);
 
   @JsOverlay
   default void setAllowedDevices(@Nonnull final AllowedBluetoothDevice... allowedDevices) {

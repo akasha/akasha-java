@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -83,7 +84,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
   String networkPriority();
 
   @JsProperty
-  void setNetworkPriority(@RTCPriorityType @Nonnull String networkPriority);
+  void setNetworkPriority(@RTCPriorityType @JsNonNull String networkPriority);
 
   @JsProperty(
       name = "priority"
@@ -92,7 +93,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
   String priority();
 
   @JsProperty
-  void setPriority(@RTCPriorityType @Nonnull String priority);
+  void setPriority(@RTCPriorityType @JsNonNull String priority);
 
   /**
    * An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.

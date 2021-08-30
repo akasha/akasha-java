@@ -2,7 +2,7 @@ package akasha.perf;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -58,6 +58,6 @@ public class PerformanceNavigation extends JsObject {
   @PerformanceNavigationType
   public native int type();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

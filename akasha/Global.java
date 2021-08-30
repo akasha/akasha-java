@@ -3,7 +3,8 @@ package akasha;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
@@ -25,7 +26,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI">decodeURI - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-decodeuri-encodeduri">decodeURI() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String decodeURI(@Nonnull String encodedURI);
 
   /**
@@ -35,7 +36,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent">decodeURIComponent - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-decodeuricomponent-encodeduricomponent">decodeURIComponent() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String decodeURIComponent(@Nonnull String encodedURI);
 
   /**
@@ -45,7 +46,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI">encodeURI - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-encodeuri-uri">encodeURI() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String encodeURI(@Nonnull String uri);
 
   /**
@@ -55,7 +56,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-encodeuricomponent-uricomponent">encodeURIComponent() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String encodeURIComponent(@Nonnull String uri);
 
   /**
@@ -68,7 +69,7 @@ public final class Global {
    */
   @Deprecated
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public static native String escape(@Nonnull String str);
 
   /**
@@ -78,7 +79,7 @@ public final class Global {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-eval-x">eval() - ECMA</a>
    */
-  @Nullable
+  @JsNullable
   public static native Any eval(@Nonnull String code);
 
   /**
@@ -131,6 +132,6 @@ public final class Global {
    */
   @Deprecated
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public static native String unescape(@Nonnull String str);
 }

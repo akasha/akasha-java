@@ -3,6 +3,7 @@ package akasha.notifications;
 import akasha.ExtendableEventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,16 +30,16 @@ public interface NotificationEventInit extends ExtendableEventInit {
   String action();
 
   @JsProperty
-  void setAction(@Nonnull String action);
+  void setAction(@JsNonNull String action);
 
   @JsProperty(
       name = "notification"
   )
-  @Nonnull
+  @JsNonNull
   Notification notification();
 
   @JsProperty
-  void setNotification(@Nonnull Notification notification);
+  void setNotification(@JsNonNull Notification notification);
 
   @Generated("org.realityforge.webtack")
   @JsType(

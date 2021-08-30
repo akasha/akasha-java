@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -62,7 +63,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   String encoderImplementation();
 
   @JsProperty
-  void setEncoderImplementation(@Nonnull String encoderImplementation);
+  void setEncoderImplementation(@JsNonNull String encoderImplementation);
 
   @JsProperty(
       name = "fecPacketsSent"
@@ -210,7 +211,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   String mediaSourceId();
 
   @JsProperty
-  void setMediaSourceId(@Nonnull String mediaSourceId);
+  void setMediaSourceId(@JsNonNull String mediaSourceId);
 
   /**
    * The nackCount property of the RTCOutboundRtpStreamStats dictionary is a numeric value indicating the number of times the RTCRtpSender described by this object received a NACK packet from the remote receiver.
@@ -258,7 +259,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-perDscpPacketsSent">RTCOutboundRtpStreamStats.perDscpPacketsSent - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setPerDscpPacketsSent(@Nonnull JsPropertyMap<Double> perDscpPacketsSent);
+  void setPerDscpPacketsSent(@JsNonNull JsPropertyMap<Double> perDscpPacketsSent);
 
   /**
    * The pliCount property of the RTCOutboundRtpStreamStats dictionary states the number of times the remote peer's RTCRtpReceiver sent a Picture Loss Indication (PLI) packet to the RTCRtpSender for which this object provides statistics.
@@ -306,7 +307,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   JsPropertyMap<Double> qualityLimitationDurations();
 
   @JsProperty
-  void setQualityLimitationDurations(@Nonnull JsPropertyMap<Double> qualityLimitationDurations);
+  void setQualityLimitationDurations(@JsNonNull JsPropertyMap<Double> qualityLimitationDurations);
 
   /**
    * The qualityLimitationReason property of the RTCOutboundRtpStreamStats dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or none if no quality reduction is being performed.
@@ -328,7 +329,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    */
   @JsProperty
   void setQualityLimitationReason(
-      @RTCQualityLimitationReason @Nonnull String qualityLimitationReason);
+      @RTCQualityLimitationReason @JsNonNull String qualityLimitationReason);
 
   @JsProperty(
       name = "qualityLimitationResolutionChanges"
@@ -356,7 +357,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-remoteid">RTCOutboundRtpStreamStats.remoteId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setRemoteId(@Nonnull String remoteId);
+  void setRemoteId(@JsNonNull String remoteId);
 
   @JsProperty(
       name = "retransmittedBytesSent"
@@ -380,7 +381,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   String rid();
 
   @JsProperty
-  void setRid(@Nonnull String rid);
+  void setRid(@JsNonNull String rid);
 
   @JsProperty(
       name = "rtxSsrc"
@@ -412,7 +413,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   String senderId();
 
   @JsProperty
-  void setSenderId(@Nonnull String senderId);
+  void setSenderId(@JsNonNull String senderId);
 
   /**
    * The sliCount property of the RTCOutboundRtpStreamStats dictionary indicates how many Slice Loss Indication (SLI) packets the RTCRtpSender received from the remote RTCRtpReceiver for the RTP stream described by this object.
@@ -500,7 +501,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-trackId">RTCOutboundRtpStreamStats.trackId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setTrackId(@Nonnull String trackId);
+  void setTrackId(@JsNonNull String trackId);
 
   /**
    * The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender.

@@ -1,14 +1,20 @@
 package akasha.media;
 
+import akasha.AddEventListenerOptions;
 import akasha.EventHandler;
+import akasha.EventListener;
+import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
@@ -29,7 +35,7 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange">MediaDevices.ondevicechange - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-ondevicechange">ondevicechange - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ondevicechange;
 
   protected MediaDevices() {
@@ -41,7 +47,7 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices">MediaDevices.enumerateDevices - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-enumeratedevices">mediaDevices: enumerateDevices - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<MediaDeviceInfo>> enumerateDevices();
 
   /**
@@ -50,7 +56,7 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getSupportedConstraints">MediaDevices.getSupportedConstraints - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-getsupportedconstraints">getSupportedConstraints() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaTrackSupportedConstraints getSupportedConstraints();
 
   /**
@@ -59,7 +65,7 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">MediaDevices.getUserMedia - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia">MediaDevices.getUserMedia() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<MediaStream> getUserMedia(@Nonnull MediaStreamConstraints constraints);
 
   /**
@@ -68,7 +74,7 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">MediaDevices.getUserMedia - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia">MediaDevices.getUserMedia() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<MediaStream> getUserMedia();
 
   /**
@@ -77,7 +83,7 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia">MediaDevices.getDisplayMedia - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediadevices-getdisplaymedia">MediaDevices.getDisplayMedia() - Screen Capture</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<MediaStream> getDisplayMedia(
       @Nonnull DisplayMediaStreamConstraints constraints);
 
@@ -87,6 +93,40 @@ public class MediaDevices extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia">MediaDevices.getDisplayMedia - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediadevices-getdisplaymedia">MediaDevices.getDisplayMedia() - Screen Capture</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<MediaStream> getDisplayMedia();
+
+  @JsOverlay
+  public final void addDevicechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "devicechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDevicechangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "devicechange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDevicechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "devicechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDevicechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "devicechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDevicechangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "devicechange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDevicechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "devicechange", Js.cast( callback ) );
+  }
 }

@@ -7,6 +7,7 @@ import akasha.OffscreenCanvas;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -44,11 +45,11 @@ public interface GPUImageCopyExternalImage {
   @JsProperty(
       name = "source"
   )
-  @Nonnull
+  @JsNonNull
   ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion source();
 
   @JsProperty
-  void setSource(@Nonnull ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion source);
+  void setSource(@JsNonNull ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion source);
 
   @JsOverlay
   default void setSource(@Nonnull final ImageBitmap source) {
@@ -71,7 +72,7 @@ public interface GPUImageCopyExternalImage {
   GPUOrigin2D origin();
 
   @JsProperty
-  void setOrigin(@Nonnull GPUOrigin2D origin);
+  void setOrigin(@JsNonNull GPUOrigin2D origin);
 
   @JsOverlay
   default void setOrigin(@Nonnull final JsArray<Double> origin) {

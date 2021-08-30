@@ -4,12 +4,13 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The CSSStyleSheet interface represents a single CSS stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet.
+ * The CSSStyleSheet interface represents a single CSS stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, StyleSheet.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">CSSStyleSheet - MDN</a>
  * @see <a href="https://drafts.csswg.org/cssom/#the-cssstylesheet-interface">(CSSOM) # the-cssstylesheet-interface</a>
@@ -83,7 +84,7 @@ public class CSSStyleSheet extends StyleSheet {
    */
   public native int insertRule(@Nonnull String rule);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<CSSStyleSheet> replace(@Nonnull String text);
 
   public native void replaceSync(@Nonnull String text);

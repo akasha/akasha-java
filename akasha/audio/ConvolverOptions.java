@@ -3,6 +3,7 @@ package akasha.audio;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface ConvolverOptions extends AudioNodeOptions {
   @JsProperty(
       name = "buffer"
   )
-  @Nullable
+  @JsNullable
   AudioBuffer buffer();
 
   @JsProperty
-  void setBuffer(@Nullable AudioBuffer buffer);
+  void setBuffer(@JsNullable AudioBuffer buffer);
 
   @JsProperty(
       name = "disableNormalization"

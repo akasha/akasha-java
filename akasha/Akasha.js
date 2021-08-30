@@ -10,6 +10,9 @@ var goog = goog || {};
 goog.provide('akasha.Akasha');
 
 /** @define {string} */
+akasha.is__WorkerNavigator_gpu__supported = goog.define('akasha.is__WorkerNavigator_gpu__supported', 'detect');
+
+/** @define {string} */
 akasha.is__Window_speechSynthesis__supported = goog.define('akasha.is__Window_speechSynthesis__supported', 'detect');
 
 /** @define {string} */
@@ -65,3 +68,6 @@ akasha.is__Navigator_vibrate__supported = goog.define('akasha.is__Navigator_vibr
 
 /** @define {string} */
 akasha.is__Navigator_share__supported = goog.define('akasha.is__Navigator_share__supported', 'detect');
+
+/** @define {string} */
+akasha.is__WorkerGlobalScope_indexedDB__supported = goog.define('akasha.is__WorkerGlobalScope_indexedDB__supported', 'detect');

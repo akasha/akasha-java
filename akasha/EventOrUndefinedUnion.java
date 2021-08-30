@@ -24,4 +24,19 @@ public interface EventOrUndefinedUnion {
   static EventOrUndefinedUnion of() {
     return Js.cast( Js.undefined() );
   }
+
+  @JsOverlay
+  default boolean isEvent() {
+    return ( (Object) this ) instanceof Event;
+  }
+
+  @JsOverlay
+  default Event asEvent() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
+  }
 }

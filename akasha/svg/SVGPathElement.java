@@ -8,8 +8,7 @@ import jsinterop.annotations.JsType;
  * The SVGPathElement interface corresponds to the &lt;path&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement">SVGPathElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/paths.html#InterfaceSVGPathElement">SVGPathElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/paths.html#InterfaceSVGPathElement">SVGPathElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/paths.html#InterfaceSVGPathElement">(SVG) # InterfaceSVGPathElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

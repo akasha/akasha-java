@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import akasha.media.MediaStream;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +38,7 @@ public interface RTCRtpTransceiverInit {
   String direction();
 
   @JsProperty
-  void setDirection(@RTCRtpTransceiverDirection @Nonnull String direction);
+  void setDirection(@RTCRtpTransceiverDirection @JsNonNull String direction);
 
   @JsProperty(
       name = "sendEncodings"
@@ -45,7 +46,7 @@ public interface RTCRtpTransceiverInit {
   JsArray<RTCRtpEncodingParameters> sendEncodings();
 
   @JsProperty
-  void setSendEncodings(@Nonnull JsArray<RTCRtpEncodingParameters> sendEncodings);
+  void setSendEncodings(@JsNonNull JsArray<RTCRtpEncodingParameters> sendEncodings);
 
   @JsOverlay
   default void setSendEncodings(@Nonnull final RTCRtpEncodingParameters... sendEncodings) {
@@ -58,7 +59,7 @@ public interface RTCRtpTransceiverInit {
   JsArray<MediaStream> streams();
 
   @JsProperty
-  void setStreams(@Nonnull JsArray<MediaStream> streams);
+  void setStreams(@JsNonNull JsArray<MediaStream> streams);
 
   @JsOverlay
   default void setStreams(@Nonnull final MediaStream... streams) {

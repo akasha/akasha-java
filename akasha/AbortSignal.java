@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public class AbortSignal extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/onabort">AbortSignal.onabort - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-abortsignal-aborted">onabort - DOM</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onabort;
 
   protected AbortSignal() {
@@ -45,7 +46,7 @@ public class AbortSignal extends EventTarget {
   )
   public native boolean aborted();
 
-  @Nonnull
+  @JsNonNull
   public static native AbortSignal abort();
 
   @JsOverlay

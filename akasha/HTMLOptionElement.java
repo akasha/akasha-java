@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,15 +24,15 @@ public class HTMLOptionElement extends HTMLElement {
 
   public boolean disabled;
 
-  @Nonnull
+  @JsNonNull
   public String label;
 
   public boolean selected;
 
-  @Nonnull
+  @JsNonNull
   public String text;
 
-  @Nonnull
+  @JsNonNull
   public String value;
 
   protected HTMLOptionElement() {

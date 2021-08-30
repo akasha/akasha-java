@@ -3,7 +3,7 @@ package akasha.rtc;
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,6 +29,6 @@ public class RTCCertificate extends JsObject {
   )
   public native int expires();
 
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCDtlsFingerprint> getFingerprints();
 }

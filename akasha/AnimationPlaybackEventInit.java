@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,20 +27,20 @@ public interface AnimationPlaybackEventInit extends EventInit {
   @JsProperty(
       name = "currentTime"
   )
-  @Nullable
+  @JsNullable
   Double currentTime();
 
   @JsProperty
-  void setCurrentTime(@Nullable Double currentTime);
+  void setCurrentTime(@JsNullable Double currentTime);
 
   @JsProperty(
       name = "timelineTime"
   )
-  @Nullable
+  @JsNullable
   Double timelineTime();
 
   @JsProperty
-  void setTimelineTime(@Nullable Double timelineTime);
+  void setTimelineTime(@JsNullable Double timelineTime);
 
   @Generated("org.realityforge.webtack")
   @JsType(

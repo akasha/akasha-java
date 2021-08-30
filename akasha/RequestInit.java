@@ -6,6 +6,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,11 +32,11 @@ public interface RequestInit {
   @JsProperty(
       name = "body"
   )
-  @Nullable
+  @JsNullable
   BodyInit body();
 
   @JsProperty
-  void setBody(@Nullable BodyInit body);
+  void setBody(@JsNullable BodyInit body);
 
   @JsOverlay
   default void setBody(@Nonnull final ReadableStream body) {
@@ -78,7 +80,7 @@ public interface RequestInit {
   String cache();
 
   @JsProperty
-  void setCache(@RequestCache @Nonnull String cache);
+  void setCache(@RequestCache @JsNonNull String cache);
 
   @JsProperty(
       name = "credentials"
@@ -87,7 +89,7 @@ public interface RequestInit {
   String credentials();
 
   @JsProperty
-  void setCredentials(@RequestCredentials @Nonnull String credentials);
+  void setCredentials(@RequestCredentials @JsNonNull String credentials);
 
   @JsProperty(
       name = "headers"
@@ -95,7 +97,7 @@ public interface RequestInit {
   HeadersInit headers();
 
   @JsProperty
-  void setHeaders(@Nonnull HeadersInit headers);
+  void setHeaders(@JsNonNull HeadersInit headers);
 
   @JsOverlay
   default void setHeaders(@Nonnull final JsArray<JsArray<String>> headers) {
@@ -119,7 +121,7 @@ public interface RequestInit {
   String integrity();
 
   @JsProperty
-  void setIntegrity(@Nonnull String integrity);
+  void setIntegrity(@JsNonNull String integrity);
 
   @JsProperty(
       name = "keepalive"
@@ -135,7 +137,7 @@ public interface RequestInit {
   String method();
 
   @JsProperty
-  void setMethod(@Nonnull String method);
+  void setMethod(@JsNonNull String method);
 
   @JsProperty(
       name = "mode"
@@ -144,7 +146,7 @@ public interface RequestInit {
   String mode();
 
   @JsProperty
-  void setMode(@RequestMode @Nonnull String mode);
+  void setMode(@RequestMode @JsNonNull String mode);
 
   @JsProperty(
       name = "redirect"
@@ -153,7 +155,7 @@ public interface RequestInit {
   String redirect();
 
   @JsProperty
-  void setRedirect(@RequestRedirect @Nonnull String redirect);
+  void setRedirect(@RequestRedirect @JsNonNull String redirect);
 
   @JsProperty(
       name = "referrer"
@@ -161,7 +163,7 @@ public interface RequestInit {
   String referrer();
 
   @JsProperty
-  void setReferrer(@Nonnull String referrer);
+  void setReferrer(@JsNonNull String referrer);
 
   @JsProperty(
       name = "referrerPolicy"
@@ -170,25 +172,25 @@ public interface RequestInit {
   String referrerPolicy();
 
   @JsProperty
-  void setReferrerPolicy(@ReferrerPolicy @Nonnull String referrerPolicy);
+  void setReferrerPolicy(@ReferrerPolicy @JsNonNull String referrerPolicy);
 
   @JsProperty(
       name = "signal"
   )
-  @Nullable
+  @JsNullable
   AbortSignal signal();
 
   @JsProperty
-  void setSignal(@Nullable AbortSignal signal);
+  void setSignal(@JsNullable AbortSignal signal);
 
   @JsProperty(
       name = "window"
   )
-  @Nullable
+  @JsNullable
   Any window();
 
   @JsProperty
-  void setWindow(@DoNotAutobox @Nullable Object window);
+  void setWindow(@DoNotAutobox @JsNullable Object window);
 
   @Generated("org.realityforge.webtack")
   @JsType(

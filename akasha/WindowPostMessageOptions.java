@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface WindowPostMessageOptions extends PostMessageOptions {
   String targetOrigin();
 
   @JsProperty
-  void setTargetOrigin(@Nonnull String targetOrigin);
+  void setTargetOrigin(@JsNonNull String targetOrigin);
 
   @Generated("org.realityforge.webtack")
   @JsType(

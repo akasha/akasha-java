@@ -2,7 +2,7 @@ package akasha;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The VTTRegion interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes a portion of the video to render a VTTCue onto.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VTTRegion">VTTRegion - MDN</a>
- * @see <a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a>
+ * @see <a href="https://w3c.github.io/webvtt/#the-vttregion-interface"># the-vttregion-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     name = "VTTRegion"
 )
 public class VTTRegion extends JsObject {
-  @Nonnull
+  @JsNonNull
   public String id;
 
   public int lines;
@@ -28,7 +28,7 @@ public class VTTRegion extends JsObject {
 
   public double regionAnchorY;
 
-  @Nonnull
+  @JsNonNull
   @ScrollSetting
   public String scroll;
 

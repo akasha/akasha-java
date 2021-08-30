@@ -4,7 +4,8 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -17,20 +18,20 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUCommandEncoder"
 )
 public class GPUCommandEncoder extends JsObject {
-  @Nullable
+  @JsNullable
   public String label;
 
   protected GPUCommandEncoder() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native GPUComputePassEncoder beginComputePass(
       @Nonnull GPUComputePassDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUComputePassEncoder beginComputePass();
 
-  @Nonnull
+  @JsNonNull
   public native GPURenderPassEncoder beginRenderPass(@Nonnull GPURenderPassDescriptor descriptor);
 
   public native void copyBufferToBuffer(@Nonnull GPUBuffer source, int sourceOffset,
@@ -72,10 +73,10 @@ public class GPUCommandEncoder extends JsObject {
   public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3DDict copySize);
 
-  @Nonnull
+  @JsNonNull
   public native GPUCommandBuffer finish(@Nonnull GPUCommandBufferDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUCommandBuffer finish();
 
   public native void insertDebugMarker(@Nonnull String markerLabel);

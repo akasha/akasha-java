@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -35,11 +36,11 @@ public interface GPUBindGroupEntry {
   @JsProperty(
       name = "resource"
   )
-  @Nonnull
+  @JsNonNull
   GPUBindingResource resource();
 
   @JsProperty
-  void setResource(@Nonnull GPUBindingResource resource);
+  void setResource(@JsNonNull GPUBindingResource resource);
 
   @Generated("org.realityforge.webtack")
   @JsType(

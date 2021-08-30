@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGRectElement interface provides access to the properties of &lt;rect&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement">SVGRectElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGRectElement">SVGRectElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGRectElement">SVGRectElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGRectElement">(SVG) # InterfaceSVGRectElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -5,7 +5,8 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -17,8 +18,7 @@ import jsinterop.base.JsArrayLike;
  * The SVGTransformList defines a list of SVGTransform objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList">SVGTransformList - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransformList">SVGTransformList - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/coords.html#InterfaceSVGTransformList">SVGTransformList - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransformList">(SVG) # InterfaceSVGTransformList</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,31 +40,31 @@ public class SVGTransformList extends JsObject {
   )
   public native int numberOfItems();
 
-  @Nonnull
+  @JsNonNull
   public native SVGTransform appendItem(@Nonnull SVGTransform newItem);
 
   public native void clear();
 
-  @Nullable
+  @JsNullable
   public native SVGTransform consolidate();
 
-  @Nonnull
+  @JsNonNull
   public native SVGTransform createSVGTransformFromMatrix(@Nonnull DOMMatrixReadOnly matrix);
 
-  @Nonnull
+  @JsNonNull
   public native SVGTransform initialize(@Nonnull SVGTransform newItem);
 
-  @Nonnull
+  @JsNonNull
   public native SVGTransform insertItemBefore(@Nonnull SVGTransform newItem, int index);
 
-  @Nonnull
+  @JsNonNull
   public native SVGTransform removeItem(int index);
 
-  @Nonnull
+  @JsNonNull
   public native SVGTransform replaceItem(@Nonnull SVGTransform newItem, int index);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SVGTransform getItem(int index);
 
   @JsOverlay

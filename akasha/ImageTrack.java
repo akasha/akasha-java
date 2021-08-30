@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "ImageTrack"
 )
 public class ImageTrack extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   public boolean selected;

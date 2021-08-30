@@ -3,6 +3,7 @@ package akasha.crypto;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface JsonWebKey {
   String alg();
 
   @JsProperty
-  void setAlg(@Nonnull String alg);
+  void setAlg(@JsNonNull String alg);
 
   @JsProperty(
       name = "crv"
@@ -37,7 +38,7 @@ public interface JsonWebKey {
   String crv();
 
   @JsProperty
-  void setCrv(@Nonnull String crv);
+  void setCrv(@JsNonNull String crv);
 
   @JsProperty(
       name = "d"
@@ -45,7 +46,7 @@ public interface JsonWebKey {
   String d();
 
   @JsProperty
-  void setD(@Nonnull String d);
+  void setD(@JsNonNull String d);
 
   @JsProperty(
       name = "dp"
@@ -53,7 +54,7 @@ public interface JsonWebKey {
   String dp();
 
   @JsProperty
-  void setDp(@Nonnull String dp);
+  void setDp(@JsNonNull String dp);
 
   @JsProperty(
       name = "dq"
@@ -61,7 +62,7 @@ public interface JsonWebKey {
   String dq();
 
   @JsProperty
-  void setDq(@Nonnull String dq);
+  void setDq(@JsNonNull String dq);
 
   @JsProperty(
       name = "e"
@@ -69,7 +70,7 @@ public interface JsonWebKey {
   String e();
 
   @JsProperty
-  void setE(@Nonnull String e);
+  void setE(@JsNonNull String e);
 
   @JsProperty(
       name = "ext"
@@ -85,7 +86,7 @@ public interface JsonWebKey {
   String k();
 
   @JsProperty
-  void setK(@Nonnull String k);
+  void setK(@JsNonNull String k);
 
   @JsProperty(
       name = "key_ops"
@@ -93,7 +94,7 @@ public interface JsonWebKey {
   JsArray<String> key_ops();
 
   @JsProperty
-  void setKey_ops(@Nonnull JsArray<String> key_ops);
+  void setKey_ops(@JsNonNull JsArray<String> key_ops);
 
   @JsOverlay
   default void setKey_ops(@Nonnull final String... key_ops) {
@@ -106,7 +107,7 @@ public interface JsonWebKey {
   String kty();
 
   @JsProperty
-  void setKty(@Nonnull String kty);
+  void setKty(@JsNonNull String kty);
 
   @JsProperty(
       name = "n"
@@ -114,7 +115,7 @@ public interface JsonWebKey {
   String n();
 
   @JsProperty
-  void setN(@Nonnull String n);
+  void setN(@JsNonNull String n);
 
   @JsProperty(
       name = "oth"
@@ -122,7 +123,7 @@ public interface JsonWebKey {
   JsArray<RsaOtherPrimesInfo> oth();
 
   @JsProperty
-  void setOth(@Nonnull JsArray<RsaOtherPrimesInfo> oth);
+  void setOth(@JsNonNull JsArray<RsaOtherPrimesInfo> oth);
 
   @JsOverlay
   default void setOth(@Nonnull final RsaOtherPrimesInfo... oth) {
@@ -135,7 +136,7 @@ public interface JsonWebKey {
   String p();
 
   @JsProperty
-  void setP(@Nonnull String p);
+  void setP(@JsNonNull String p);
 
   @JsProperty(
       name = "q"
@@ -143,7 +144,7 @@ public interface JsonWebKey {
   String q();
 
   @JsProperty
-  void setQ(@Nonnull String q);
+  void setQ(@JsNonNull String q);
 
   @JsProperty(
       name = "qi"
@@ -151,7 +152,7 @@ public interface JsonWebKey {
   String qi();
 
   @JsProperty
-  void setQi(@Nonnull String qi);
+  void setQi(@JsNonNull String qi);
 
   @JsProperty(
       name = "use"
@@ -159,7 +160,7 @@ public interface JsonWebKey {
   String use();
 
   @JsProperty
-  void setUse(@Nonnull String use);
+  void setUse(@JsNonNull String use);
 
   @JsProperty(
       name = "x"
@@ -167,7 +168,7 @@ public interface JsonWebKey {
   String x();
 
   @JsProperty
-  void setX(@Nonnull String x);
+  void setX(@JsNonNull String x);
 
   @JsProperty(
       name = "y"
@@ -175,7 +176,7 @@ public interface JsonWebKey {
   String y();
 
   @JsProperty
-  void setY(@Nonnull String y);
+  void setY(@JsNonNull String y);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -30,7 +31,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/add">Cache.add - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-add">Cache: add - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> add(@Nonnull RequestInfo request);
 
   /**
@@ -39,7 +40,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/add">Cache.add - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-add">Cache: add - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> add(@Nonnull Request request);
 
   /**
@@ -48,7 +49,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/add">Cache.add - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-add">Cache: add - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> add(@Nonnull String request);
 
   /**
@@ -57,7 +58,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll">Cache.addAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-addAll">Cache: addAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> addAll(@Nonnull JsArray<RequestInfo> requests);
 
   /**
@@ -66,7 +67,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll">Cache.addAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-addAll">Cache: addAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> addAll(@Nonnull RequestInfo[] requests);
 
   /**
@@ -75,7 +76,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-delete">Cache: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull RequestInfo request,
       @Nonnull CacheQueryOptions options);
 
@@ -85,7 +86,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-delete">Cache: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull Request request,
       @Nonnull CacheQueryOptions options);
 
@@ -95,7 +96,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-delete">Cache: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull String request,
       @Nonnull CacheQueryOptions options);
 
@@ -105,7 +106,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-delete">Cache: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull RequestInfo request);
 
   /**
@@ -114,7 +115,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-delete">Cache: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull Request request);
 
   /**
@@ -123,7 +124,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-delete">Cache: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull String request);
 
   /**
@@ -132,7 +133,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys(@Nonnull RequestInfo request,
       @Nonnull CacheQueryOptions options);
 
@@ -142,7 +143,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys(@Nonnull Request request,
       @Nonnull CacheQueryOptions options);
 
@@ -152,7 +153,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys(@Nonnull String request,
       @Nonnull CacheQueryOptions options);
 
@@ -162,7 +163,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys(@Nonnull RequestInfo request);
 
   /**
@@ -171,7 +172,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys(@Nonnull Request request);
 
   /**
@@ -180,7 +181,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys(@Nonnull String request);
 
   /**
@@ -189,7 +190,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys">Cache.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-keys">Cache: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Request>> keys();
 
   /**
@@ -198,7 +199,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match">Cache.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-match">Cache match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull RequestInfo request,
       @Nonnull CacheQueryOptions options);
 
@@ -208,7 +209,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match">Cache.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-match">Cache match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull Request request,
       @Nonnull CacheQueryOptions options);
 
@@ -218,7 +219,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match">Cache.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-match">Cache match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull String request,
       @Nonnull CacheQueryOptions options);
 
@@ -228,7 +229,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match">Cache.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-match">Cache match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull RequestInfo request);
 
   /**
@@ -237,7 +238,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match">Cache.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-match">Cache match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull Request request);
 
   /**
@@ -246,7 +247,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match">Cache.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-match">Cache match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull String request);
 
   /**
@@ -255,7 +256,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll(@Nonnull RequestInfo request,
       @Nonnull CacheQueryOptions options);
 
@@ -265,7 +266,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll(@Nonnull Request request,
       @Nonnull CacheQueryOptions options);
 
@@ -275,7 +276,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll(@Nonnull String request,
       @Nonnull CacheQueryOptions options);
 
@@ -285,7 +286,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll(@Nonnull RequestInfo request);
 
   /**
@@ -294,7 +295,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll(@Nonnull Request request);
 
   /**
@@ -303,7 +304,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll(@Nonnull String request);
 
   /**
@@ -312,7 +313,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll">Cache.matchAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-matchall">Cache: matchAll - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Response>> matchAll();
 
   /**
@@ -321,7 +322,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/put">Cache.put - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-put">Cache: put - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> put(@Nonnull RequestInfo request, @Nonnull Response response);
 
   /**
@@ -330,7 +331,7 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/put">Cache.put - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-put">Cache: put - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> put(@Nonnull Request request, @Nonnull Response response);
 
   /**
@@ -339,6 +340,6 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/put">Cache.put - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-put">Cache: put - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> put(@Nonnull String request, @Nonnull Response response);
 }

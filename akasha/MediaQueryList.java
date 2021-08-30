@@ -3,9 +3,12 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * A MediaQueryList object stores information on a media query applied to a document, with support for both immediate and event-driven matching against the state of the document.
@@ -26,8 +29,8 @@ public class MediaQueryList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/onchange">MediaQueryList.onchange - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom-view/#dom-mediaquerylist-onchange">onchange - CSS Object Model (CSSOM) View Module</a>
    */
-  @Nullable
-  public EventHandler onchange;
+  @JsNullable
+  public MediaQueryListEventHandler onchange;
 
   protected MediaQueryList() {
   }
@@ -70,4 +73,38 @@ public class MediaQueryList extends EventTarget {
    * @see <a href="https://drafts.csswg.org/cssom-view/#dom-mediaquerylist-removelistener">removeListener - CSS Object Model (CSSOM) View Module</a>
    */
   public native void removeListener(@Nullable EventListener callback);
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final MediaQueryListEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final MediaQueryListEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "change", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final MediaQueryListEventListener callback) {
+    addEventListener( "change", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final MediaQueryListEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final MediaQueryListEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "change", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final MediaQueryListEventListener callback) {
+    removeEventListener( "change", Js.cast( callback ) );
+  }
 }

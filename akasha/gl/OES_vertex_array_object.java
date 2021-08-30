@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -45,7 +46,7 @@ public class OES_vertex_array_object extends JsObject implements WebGL1Extension
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/">OES_vertex_array_object - OES_vertex_array_object</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLVertexArrayObjectOES createVertexArrayOES();
 
   /**

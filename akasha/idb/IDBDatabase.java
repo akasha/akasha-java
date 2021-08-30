@@ -9,7 +9,8 @@ import akasha.EventTarget;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,7 +37,7 @@ public class IDBDatabase extends EventTarget {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onabort">onabort - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onabort">onabort - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onabort;
 
   /**
@@ -45,7 +46,7 @@ public class IDBDatabase extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onclose">IDBDatabase.onclose - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onclose">onclose - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclose;
 
   /**
@@ -55,7 +56,7 @@ public class IDBDatabase extends EventTarget {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onerror">onerror - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onerror">onerror - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
   /**
@@ -65,8 +66,8 @@ public class IDBDatabase extends EventTarget {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onversionchange">onversionchange - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbdatabase-onversionchange">onversionchange - Indexed Database API Draft</a>
    */
-  @Nullable
-  public EventHandler onversionchange;
+  @JsNullable
+  public IDBVersionChangeEventHandler onversionchange;
 
   protected IDBDatabase() {
   }
@@ -121,7 +122,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore">IDBDatabase.createObjectStore - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBObjectStore createObjectStore(@Nonnull String name,
       @Nonnull IDBObjectStoreParameters options);
 
@@ -130,7 +131,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore">IDBDatabase.createObjectStore - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBObjectStore createObjectStore(@Nonnull String name);
 
   /**
@@ -145,7 +146,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull String storeNames,
       @IDBTransactionMode @Nonnull String mode, @Nonnull IDBTransactionOptions options);
 
@@ -154,7 +155,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull JsArray<String> storeNames,
       @IDBTransactionMode @Nonnull String mode, @Nonnull IDBTransactionOptions options);
 
@@ -163,7 +164,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull String[] storeNames,
       @IDBTransactionMode @Nonnull String mode, @Nonnull IDBTransactionOptions options);
 
@@ -172,7 +173,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull String storeNames,
       @IDBTransactionMode @Nonnull String mode);
 
@@ -181,7 +182,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull JsArray<String> storeNames,
       @IDBTransactionMode @Nonnull String mode);
 
@@ -190,7 +191,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull String[] storeNames,
       @IDBTransactionMode @Nonnull String mode);
 
@@ -199,7 +200,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull String storeNames);
 
   /**
@@ -207,7 +208,7 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull JsArray<String> storeNames);
 
   /**
@@ -215,8 +216,45 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBTransaction transaction(@Nonnull String[] storeNames);
+
+  @JsOverlay
+  public final void addVersionchangeListener(@Nonnull final IDBVersionChangeEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "versionchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addVersionchangeListener(@Nonnull final IDBVersionChangeEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "versionchange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addVersionchangeListener(
+      @Nonnull final IDBVersionChangeEventListener callback) {
+    addEventListener( "versionchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeVersionchangeListener(
+      @Nonnull final IDBVersionChangeEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "versionchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeVersionchangeListener(
+      @Nonnull final IDBVersionChangeEventListener callback, final boolean useCapture) {
+    removeEventListener( "versionchange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeVersionchangeListener(
+      @Nonnull final IDBVersionChangeEventListener callback) {
+    removeEventListener( "versionchange", Js.cast( callback ) );
+  }
 
   @JsOverlay
   public final void addAbortListener(@Nonnull final EventListener callback,
@@ -318,39 +356,5 @@ public class IDBDatabase extends EventTarget {
   @JsOverlay
   public final void removeErrorListener(@Nonnull final EventListener callback) {
     removeEventListener( "error", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addVersionchangeListener(@Nonnull final EventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "versionchange", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addVersionchangeListener(@Nonnull final EventListener callback,
-      final boolean useCapture) {
-    addEventListener( "versionchange", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addVersionchangeListener(@Nonnull final EventListener callback) {
-    addEventListener( "versionchange", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeVersionchangeListener(@Nonnull final EventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "versionchange", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeVersionchangeListener(@Nonnull final EventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "versionchange", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeVersionchangeListener(@Nonnull final EventListener callback) {
-    removeEventListener( "versionchange", Js.cast( callback ) );
   }
 }

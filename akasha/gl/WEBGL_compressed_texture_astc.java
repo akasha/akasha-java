@@ -3,7 +3,7 @@ package akasha.gl;
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -117,6 +117,6 @@ public class WEBGL_compressed_texture_astc extends JsObject implements WebGLComm
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles">WEBGL_compressed_texture_astc.getSupportedProfiles - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/">WEBGL_compressed_texture_astc - WEBGL_compressed_texture_astc</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> getSupportedProfiles();
 }

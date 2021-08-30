@@ -8,17 +8,18 @@ import akasha.EventTarget;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
+ * The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem">XRSystem - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrsystem-interface">XRSystem - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrsystem-interface"># xrsystem-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -33,7 +34,7 @@ public class XRSystem extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/ondevicechange">XRSystem.ondevicechange - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-ondevicechange">ondevicechange  - WebXR Device API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ondevicechange;
 
   protected XRSystem() {
@@ -45,7 +46,7 @@ public class XRSystem extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/isSessionSupported">XRSystem.isSessionSupported - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-issessionsupported">isSessionSupported() - WebXR Device API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> isSessionSupported(@XRSessionMode @Nonnull String mode);
 
   /**
@@ -54,7 +55,7 @@ public class XRSystem extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession">XRSystem.requestSession - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession">requestSession() - WebXR Device API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<XRSession> requestSession(@XRSessionMode @Nonnull String mode,
       @Nonnull XRSessionInit options);
 
@@ -64,7 +65,7 @@ public class XRSystem extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession">XRSystem.requestSession - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession">requestSession() - WebXR Device API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<XRSession> requestSession(@XRSessionMode @Nonnull String mode);
 
   @JsOverlay

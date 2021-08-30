@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -46,17 +47,17 @@ public interface RTCTransportStats extends RTCStats {
   String dtlsCipher();
 
   @JsProperty
-  void setDtlsCipher(@Nonnull String dtlsCipher);
+  void setDtlsCipher(@JsNonNull String dtlsCipher);
 
   @JsProperty(
       name = "dtlsState"
   )
   @RTCDtlsTransportState
-  @Nonnull
+  @JsNonNull
   String dtlsState();
 
   @JsProperty
-  void setDtlsState(@RTCDtlsTransportState @Nonnull String dtlsState);
+  void setDtlsState(@RTCDtlsTransportState @JsNonNull String dtlsState);
 
   @JsProperty(
       name = "iceLocalUsernameFragment"
@@ -64,7 +65,7 @@ public interface RTCTransportStats extends RTCStats {
   String iceLocalUsernameFragment();
 
   @JsProperty
-  void setIceLocalUsernameFragment(@Nonnull String iceLocalUsernameFragment);
+  void setIceLocalUsernameFragment(@JsNonNull String iceLocalUsernameFragment);
 
   @JsProperty(
       name = "iceRole"
@@ -73,7 +74,7 @@ public interface RTCTransportStats extends RTCStats {
   String iceRole();
 
   @JsProperty
-  void setIceRole(@RTCIceRole @Nonnull String iceRole);
+  void setIceRole(@RTCIceRole @JsNonNull String iceRole);
 
   @JsProperty(
       name = "iceState"
@@ -82,7 +83,7 @@ public interface RTCTransportStats extends RTCStats {
   String iceState();
 
   @JsProperty
-  void setIceState(@RTCIceTransportState @Nonnull String iceState);
+  void setIceState(@RTCIceTransportState @JsNonNull String iceState);
 
   @JsProperty(
       name = "localCertificateId"
@@ -90,7 +91,7 @@ public interface RTCTransportStats extends RTCStats {
   String localCertificateId();
 
   @JsProperty
-  void setLocalCertificateId(@Nonnull String localCertificateId);
+  void setLocalCertificateId(@JsNonNull String localCertificateId);
 
   @JsProperty(
       name = "packetsReceived"
@@ -114,7 +115,7 @@ public interface RTCTransportStats extends RTCStats {
   String remoteCertificateId();
 
   @JsProperty
-  void setRemoteCertificateId(@Nonnull String remoteCertificateId);
+  void setRemoteCertificateId(@JsNonNull String remoteCertificateId);
 
   @JsProperty(
       name = "rtcpTransportStatsId"
@@ -122,7 +123,7 @@ public interface RTCTransportStats extends RTCStats {
   String rtcpTransportStatsId();
 
   @JsProperty
-  void setRtcpTransportStatsId(@Nonnull String rtcpTransportStatsId);
+  void setRtcpTransportStatsId(@JsNonNull String rtcpTransportStatsId);
 
   @JsProperty(
       name = "selectedCandidatePairChanges"
@@ -138,7 +139,7 @@ public interface RTCTransportStats extends RTCStats {
   String selectedCandidatePairId();
 
   @JsProperty
-  void setSelectedCandidatePairId(@Nonnull String selectedCandidatePairId);
+  void setSelectedCandidatePairId(@JsNonNull String selectedCandidatePairId);
 
   @JsProperty(
       name = "srtpCipher"
@@ -146,7 +147,7 @@ public interface RTCTransportStats extends RTCStats {
   String srtpCipher();
 
   @JsProperty
-  void setSrtpCipher(@Nonnull String srtpCipher);
+  void setSrtpCipher(@JsNonNull String srtpCipher);
 
   @JsProperty(
       name = "tlsGroup"
@@ -154,7 +155,7 @@ public interface RTCTransportStats extends RTCStats {
   String tlsGroup();
 
   @JsProperty
-  void setTlsGroup(@Nonnull String tlsGroup);
+  void setTlsGroup(@JsNonNull String tlsGroup);
 
   @JsProperty(
       name = "tlsVersion"
@@ -162,7 +163,7 @@ public interface RTCTransportStats extends RTCStats {
   String tlsVersion();
 
   @JsProperty
-  void setTlsVersion(@Nonnull String tlsVersion);
+  void setTlsVersion(@JsNonNull String tlsVersion);
 
   @Generated("org.realityforge.webtack")
   @JsType(

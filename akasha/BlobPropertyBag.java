@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface BlobPropertyBag {
   String endings();
 
   @JsProperty
-  void setEndings(@EndingType @Nonnull String endings);
+  void setEndings(@EndingType @JsNonNull String endings);
 
   @JsProperty(
       name = "type"
@@ -37,7 +38,7 @@ public interface BlobPropertyBag {
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

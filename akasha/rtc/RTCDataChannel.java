@@ -14,6 +14,8 @@ import akasha.core.ArrayBufferView;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +41,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/binaryType">RTCDataChannel.binaryType - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-datachannel-binarytype">RTCDataChannel.binaryType - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   @BinaryType
   public String binaryType;
 
@@ -56,7 +58,7 @@ public class RTCDataChannel extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onbufferedamountlow">RTCDataChannel.onbufferedamountlow - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onbufferedamountlow;
 
   /**
@@ -65,7 +67,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclose">RTCDataChannel.onclose - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onclose">RTCDataChannel.onclose - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclose;
 
   /**
@@ -74,7 +76,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclosing">RTCDataChannel.onclosing - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onclosing">RTCDataChannel.onclosing - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclosing;
 
   /**
@@ -83,7 +85,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onerror">RTCDataChannel.onerror - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onerror">RTCDataChannel.onerror - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCErrorEventHandler onerror;
 
   /**
@@ -92,7 +94,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onmessage">RTCDataChannel.onmessage - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onmessage">RTCDataChannel.onmessage - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
   /**
@@ -101,7 +103,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen">RTCDataChannel.onopen - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onopen">RTCDataChannel.onopen - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCDataChannelEventHandler onopen;
 
   protected RTCDataChannel() {

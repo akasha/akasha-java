@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SpeechSynthesisVoice interface of the Web Speech API represents a voice that the system supports. Every SpeechSynthesisVoice has its own relative speech service including information about language, name and URI.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice">SpeechSynthesisVoice - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisvoice">SpeechSynthesisVoice - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisvoice"># speechsynthesisvoice</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

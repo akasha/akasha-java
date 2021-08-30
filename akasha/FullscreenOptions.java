@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -10,9 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The FullscreenOptions dictionary is used to provide configuration options when calling requestFullscreen() on an element to place that element into full-screen mode.
+ * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions">FullscreenOptions - MDN</a>
+ * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0">(Fullscreen API) # ref-for-dom-element-requestfullscreen①</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,12 +48,13 @@ public interface FullscreenOptions {
    * @see <a href="https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions">FullscreenOptions - Fullscreen API</a>
    */
   @JsProperty
-  void setNavigationUI(@FullscreenNavigationUI @Nonnull String navigationUI);
+  void setNavigationUI(@FullscreenNavigationUI @JsNonNull String navigationUI);
 
   /**
-   * The FullscreenOptions dictionary is used to provide configuration options when calling requestFullscreen() on an element to place that element into full-screen mode.
+   * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions">FullscreenOptions - MDN</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0">(Fullscreen API) # ref-for-dom-element-requestfullscreen①</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

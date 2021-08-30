@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface PermissionDescriptor {
       name = "name"
   )
   @PermissionName
-  @Nonnull
+  @JsNonNull
   String name();
 
   @JsProperty
-  void setName(@PermissionName @Nonnull String name);
+  void setName(@PermissionName @JsNonNull String name);
 
   @Generated("org.realityforge.webtack")
   @JsType(

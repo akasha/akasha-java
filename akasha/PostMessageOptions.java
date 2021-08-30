@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface PostMessageOptions {
   JsArray<Transferable> transfer();
 
   @JsProperty
-  void setTransfer(@Nonnull JsArray<Transferable> transfer);
+  void setTransfer(@JsNonNull JsArray<Transferable> transfer);
 
   @JsOverlay
   default void setTransfer(@Nonnull final Transferable... transfer) {

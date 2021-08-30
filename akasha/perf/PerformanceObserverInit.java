@@ -3,6 +3,7 @@ package akasha.perf;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +38,7 @@ public interface PerformanceObserverInit {
   JsArray<String> entryTypes();
 
   @JsProperty
-  void setEntryTypes(@Nonnull JsArray<String> entryTypes);
+  void setEntryTypes(@JsNonNull JsArray<String> entryTypes);
 
   @JsOverlay
   default void setEntryTypes(@Nonnull final String... entryTypes) {
@@ -50,7 +51,7 @@ public interface PerformanceObserverInit {
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -57,11 +58,11 @@ public interface RTCRtpParameters {
   @JsProperty(
       name = "codecs"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<RTCRtpCodecParameters> codecs();
 
   @JsProperty
-  void setCodecs(@Nonnull JsArray<RTCRtpCodecParameters> codecs);
+  void setCodecs(@JsNonNull JsArray<RTCRtpCodecParameters> codecs);
 
   @JsOverlay
   default void setCodecs(@Nonnull final RTCRtpCodecParameters... codecs) {
@@ -71,11 +72,11 @@ public interface RTCRtpParameters {
   @JsProperty(
       name = "headerExtensions"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<RTCRtpHeaderExtensionParameters> headerExtensions();
 
   @JsProperty
-  void setHeaderExtensions(@Nonnull JsArray<RTCRtpHeaderExtensionParameters> headerExtensions);
+  void setHeaderExtensions(@JsNonNull JsArray<RTCRtpHeaderExtensionParameters> headerExtensions);
 
   @JsOverlay
   default void setHeaderExtensions(
@@ -86,11 +87,11 @@ public interface RTCRtpParameters {
   @JsProperty(
       name = "rtcp"
   )
-  @Nonnull
+  @JsNonNull
   RTCRtcpParameters rtcp();
 
   @JsProperty
-  void setRtcp(@Nonnull RTCRtcpParameters rtcp);
+  void setRtcp(@JsNonNull RTCRtcpParameters rtcp);
 
   /**
    * The RTCRtpParameters dictionary is the basic object describing the parameters of an RTP transport. It is extended separately for senders and receivers in the form of the RTCRtpSendParameters and RTCRtpReceiveParameters dictionaries.

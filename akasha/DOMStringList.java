@@ -4,7 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,6 +34,6 @@ public class DOMStringList extends JsObject {
   public native boolean contains(@Nonnull String string);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String item(int index);
 }

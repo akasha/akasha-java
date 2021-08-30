@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Web Audio API OfflineAudioCompletionEvent interface represents events that occur when the processing of an OfflineAudioContext is terminated. The complete event implements this interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent">OfflineAudioCompletionEvent - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#OfflineAudioCompletionEvent">OfflineAudioCompletionEvent - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#OfflineAudioCompletionEvent"># OfflineAudioCompletionEvent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

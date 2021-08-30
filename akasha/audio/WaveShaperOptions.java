@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   JsArray<Double> curve();
 
   @JsProperty
-  void setCurve(@Nonnull JsArray<Double> curve);
+  void setCurve(@JsNonNull JsArray<Double> curve);
 
   @JsOverlay
   default void setCurve(@Nonnull final double... curve) {
@@ -43,7 +44,7 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   String oversample();
 
   @JsProperty
-  void setOversample(@OverSampleType @Nonnull String oversample);
+  void setOversample(@OverSampleType @JsNonNull String oversample);
 
   @Generated("org.realityforge.webtack")
   @JsType(

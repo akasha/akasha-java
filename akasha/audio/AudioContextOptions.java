@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -10,10 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes.
+ * The AudioContext() constructor creates a new AudioContext object which represents an audio-processing graph, built from audio modules linked together, each represented by an AudioNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions">AudioContextOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions"># AudioContextOptions</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-audiocontext"># dom-audiocontext-audiocontext</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,7 +47,7 @@ public interface AudioContextOptions {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
    */
   @JsProperty
-  void setLatencyHint(@Nonnull AudioContextLatencyCategoryOrDoubleUnion latencyHint);
+  void setLatencyHint(@JsNonNull AudioContextLatencyCategoryOrDoubleUnion latencyHint);
 
   /**
    * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
@@ -91,10 +92,10 @@ public interface AudioContextOptions {
   void setSampleRate(float sampleRate);
 
   /**
-   * The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes.
+   * The AudioContext() constructor creates a new AudioContext object which represents an audio-processing graph, built from audio modules linked together, each represented by an AudioNode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions">AudioContextOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioContextOptions"># AudioContextOptions</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-audiocontext"># dom-audiocontext-audiocontext</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

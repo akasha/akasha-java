@@ -25,4 +25,24 @@ public interface HTMLCollectionOrElementUnion {
   static HTMLCollectionOrElementUnion of(@Nonnull final Element value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isElement() {
+    return ( (Object) this ) instanceof Element;
+  }
+
+  @JsOverlay
+  default Element asElement() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isHTMLCollection() {
+    return ( (Object) this ) instanceof HTMLCollection;
+  }
+
+  @JsOverlay
+  default HTMLCollection asHTMLCollection() {
+    return Js.cast( this );
+  }
 }

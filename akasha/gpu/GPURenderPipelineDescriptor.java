@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   @JsProperty(
       name = "vertex"
   )
-  @Nonnull
+  @JsNonNull
   GPUVertexState vertex();
 
   @JsProperty
-  void setVertex(@Nonnull GPUVertexState vertex);
+  void setVertex(@JsNonNull GPUVertexState vertex);
 
   @JsProperty(
       name = "depthStencil"
@@ -39,7 +40,7 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   GPUDepthStencilState depthStencil();
 
   @JsProperty
-  void setDepthStencil(@Nonnull GPUDepthStencilState depthStencil);
+  void setDepthStencil(@JsNonNull GPUDepthStencilState depthStencil);
 
   @JsProperty(
       name = "fragment"
@@ -47,7 +48,7 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   GPUFragmentState fragment();
 
   @JsProperty
-  void setFragment(@Nonnull GPUFragmentState fragment);
+  void setFragment(@JsNonNull GPUFragmentState fragment);
 
   @JsProperty(
       name = "multisample"
@@ -55,7 +56,7 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   GPUMultisampleState multisample();
 
   @JsProperty
-  void setMultisample(@Nonnull GPUMultisampleState multisample);
+  void setMultisample(@JsNonNull GPUMultisampleState multisample);
 
   @JsProperty(
       name = "primitive"
@@ -63,7 +64,7 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   GPUPrimitiveState primitive();
 
   @JsProperty
-  void setPrimitive(@Nonnull GPUPrimitiveState primitive);
+  void setPrimitive(@JsNonNull GPUPrimitiveState primitive);
 
   @Generated("org.realityforge.webtack")
   @JsType(

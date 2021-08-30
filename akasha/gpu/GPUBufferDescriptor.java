@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +37,11 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
       name = "usage"
   )
   @GPUBufferUsageFlags
-  @Nonnull
+  @JsNonNull
   int usage();
 
   @JsProperty
-  void setUsage(@GPUBufferUsageFlags @Nonnull int usage);
+  void setUsage(@GPUBufferUsageFlags @JsNonNull int usage);
 
   @JsProperty(
       name = "mappedAtCreation"

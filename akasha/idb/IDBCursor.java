@@ -1,12 +1,12 @@
 package akasha.idb;
 
 import akasha.core.JsObject;
-import akasha.indexeddb.IDBObjectStoreOrIDBIndexUnion;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -127,7 +127,7 @@ public class IDBCursor extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbcursor-delete">delete() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbcursor-delete">delete() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest delete();
 
   /**
@@ -137,6 +137,6 @@ public class IDBCursor extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbcursor-update">update() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbcursor-update">update() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest update(@DoNotAutobox @Nullable Object value);
 }

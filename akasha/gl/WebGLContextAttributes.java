@@ -2,6 +2,7 @@ package akasha.gl;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -134,7 +135,7 @@ public interface WebGLContextAttributes {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">WebGLContextAttributes.powerPreference - MDN</a>
    */
   @JsProperty
-  void setPowerPreference(@WebGLPowerPreference @Nonnull String powerPreference);
+  void setPowerPreference(@WebGLPowerPreference @JsNonNull String powerPreference);
 
   /**
    * A flag that indicates that the page compositor will assume the drawing buffer contains colors with pre-multiplied alpha.

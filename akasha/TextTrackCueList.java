@@ -3,7 +3,8 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,11 +33,11 @@ public class TextTrackCueList extends JsObject {
   )
   public native int length();
 
-  @Nullable
+  @JsNullable
   public native TextTrackCue getCueById(@Nonnull String id);
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final TextTrackCue getAt(final int index) {
     return Js.<JsArrayLike<TextTrackCue>>cast( this ).getAt( index );
   }

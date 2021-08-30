@@ -2,6 +2,7 @@ package akasha.wasm;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface TableDescriptor {
       name = "element"
   )
   @TableKind
-  @Nonnull
+  @JsNonNull
   String element();
 
   @JsProperty
-  void setElement(@TableKind @Nonnull String element);
+  void setElement(@TableKind @JsNonNull String element);
 
   @JsProperty(
       name = "initial"

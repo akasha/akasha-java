@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +31,7 @@ public class VideoEncoder extends JsObject {
   @CodecState
   public native String state();
 
-  @Nonnull
+  @JsNonNull
   public static native Promise<Boolean> isConfigSupported(@Nonnull VideoEncoderConfig config);
 
   public native void close();
@@ -41,7 +42,7 @@ public class VideoEncoder extends JsObject {
 
   public native void encode(@Nonnull VideoFrame frame);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> flush();
 
   public native void reset();

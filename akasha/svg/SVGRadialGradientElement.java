@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGRadialGradientElement interface corresponds to the &lt;RadialGradient&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRadialGradientElement">SVGRadialGradientElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGRadialGradientElement">SVGRadialGradientElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGRadialGradientElement">SVGRadialGradientElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGRadialGradientElement">(SVG) # InterfaceSVGRadialGradientElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

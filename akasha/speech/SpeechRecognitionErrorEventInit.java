@@ -3,6 +3,7 @@ package akasha.speech;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
       name = "error"
   )
   @SpeechRecognitionErrorCode
-  @Nonnull
+  @JsNonNull
   String error();
 
   @JsProperty
-  void setError(@SpeechRecognitionErrorCode @Nonnull String error);
+  void setError(@SpeechRecognitionErrorCode @JsNonNull String error);
 
   @JsProperty(
       name = "message"
@@ -39,7 +40,7 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
   String message();
 
   @JsProperty
-  void setMessage(@Nonnull String message);
+  void setMessage(@JsNonNull String message);
 
   @Generated("org.realityforge.webtack")
   @JsType(

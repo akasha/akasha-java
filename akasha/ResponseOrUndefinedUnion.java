@@ -24,4 +24,19 @@ public interface ResponseOrUndefinedUnion {
   static ResponseOrUndefinedUnion of() {
     return Js.cast( Js.undefined() );
   }
+
+  @JsOverlay
+  default boolean isResponse() {
+    return ( (Object) this ) instanceof Response;
+  }
+
+  @JsOverlay
+  default Response asResponse() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
+  }
 }

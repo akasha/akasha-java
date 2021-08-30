@@ -7,8 +7,9 @@ import akasha.MediaProvider;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,7 +35,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onaddtrack">MediaStream.onaddtrack - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#event-mediastream-addtrack">MediaStream.onaddtrack - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public MediaStreamTrackEventHandler onaddtrack;
 
   /**
@@ -43,7 +44,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onremovetrack">MediaStream.onremovetrack - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastream-onremovetrack">MediaStream.onremovetrack - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public MediaStreamTrackEventHandler onremovetrack;
 
   /**
@@ -122,7 +123,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
   @JsMethod(
       name = "clone"
   )
-  @Nonnull
+  @JsNonNull
   public native MediaStream clone_();
 
   /**
@@ -131,7 +132,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getAudioTracks">MediaStream.getAudioTracks - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastream-getaudiotracks">getAudioTracks() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<MediaStreamTrack> getAudioTracks();
 
   /**
@@ -140,7 +141,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTrackById">MediaStream.getTrackById - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastream-gettrackbyid">getTrackById() - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public native MediaStreamTrack getTrackById(@Nonnull String trackId);
 
   /**
@@ -149,7 +150,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTracks">MediaStream.getTracks - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastream-gettracks">getTracks() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<MediaStreamTrack> getTracks();
 
   /**
@@ -158,7 +159,7 @@ public class MediaStream extends EventTarget implements MediaProvider {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getVideoTracks">MediaStream.getVideoTracks - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastream-getvideotracks">getVideoTracks() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<MediaStreamTrack> getVideoTracks();
 
   public native void removeTrack(@Nonnull MediaStreamTrack track);

@@ -6,13 +6,14 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.
+ * The ClipboardItem interface of the Clipboard API represents a single item format, used when reading or writing data via the Clipboard API. That is clipboard.read() and clipboard.write() respectively.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem">ClipboardItem - MDN</a>
  * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem"># clipboarditem</a>
@@ -60,12 +61,12 @@ public class ClipboardItem extends JsObject {
   @Nonnull
   public native JsArray<String> types();
 
-  @Nonnull
+  @JsNonNull
   public static native ClipboardItem createDelayed(
       @Nonnull JsPropertyMap<ClipboardItemDelayedCallback> items,
       @Nonnull ClipboardItemOptions options);
 
-  @Nonnull
+  @JsNonNull
   public static native ClipboardItem createDelayed(
       @Nonnull JsPropertyMap<ClipboardItemDelayedCallback> items);
 
@@ -75,6 +76,6 @@ public class ClipboardItem extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/getType">ClipboardItem.getType - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#clipboarditem">ClipboardItem - Clipboard API and events</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Blob> getType(@Nonnull String type);
 }

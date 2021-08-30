@@ -5,6 +5,7 @@ import akasha.PermissionName;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,12 +14,6 @@ import jsinterop.base.Any;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
-/**
- * User permissions in the WebXR Device API are managed using the Permissions API. To that end, the XRPermissionDescriptor dictionary is used to describe the WebXR features the app needs to use, as well as those features it would like ot use if permision is granted.
- *
- * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor">XRPermissionDescriptor - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrpermissiondescriptor">XRPermissionDescriptor - WebXR Device API</a>
- */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -51,7 +46,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-mode">XRPermissionDescriptor.mode - WebXR Device API</a>
    */
   @JsProperty
-  void setMode(@XRSessionMode @Nonnull String mode);
+  void setMode(@XRSessionMode @JsNonNull String mode);
 
   /**
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
@@ -71,7 +66,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures">XRPermissionDescriptor.optionalFeatures - WebXR Device API</a>
    */
   @JsProperty
-  void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
+  void setOptionalFeatures(@JsNonNull JsArray<Any> optionalFeatures);
 
   /**
    * The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.
@@ -102,7 +97,7 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures">XRPermissionDescriptor.requiredFeatures - WebXR Device API</a>
    */
   @JsProperty
-  void setRequiredFeatures(@Nonnull JsArray<Any> requiredFeatures);
+  void setRequiredFeatures(@JsNonNull JsArray<Any> requiredFeatures);
 
   /**
    * The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.
@@ -115,12 +110,6 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
     setRequiredFeatures( Js.<JsArray<Any>>uncheckedCast( requiredFeatures ) );
   }
 
-  /**
-   * User permissions in the WebXR Device API are managed using the Permissions API. To that end, the XRPermissionDescriptor dictionary is used to describe the WebXR features the app needs to use, as well as those features it would like ot use if permision is granted.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor">XRPermissionDescriptor - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrpermissiondescriptor">XRPermissionDescriptor - WebXR Device API</a>
-   */
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,

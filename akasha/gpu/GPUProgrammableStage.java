@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,20 +28,20 @@ public interface GPUProgrammableStage {
   @JsProperty(
       name = "module"
   )
-  @Nonnull
+  @JsNonNull
   GPUShaderModule module();
 
   @JsProperty
-  void setModule(@Nonnull GPUShaderModule module);
+  void setModule(@JsNonNull GPUShaderModule module);
 
   @JsProperty(
       name = "entryPoint"
   )
-  @Nonnull
+  @JsNonNull
   String entryPoint();
 
   @JsProperty
-  void setEntryPoint(@Nonnull String entryPoint);
+  void setEntryPoint(@JsNonNull String entryPoint);
 
   @JsProperty(
       name = "constants"
@@ -48,7 +49,7 @@ public interface GPUProgrammableStage {
   JsPropertyMap<Double> constants();
 
   @JsProperty
-  void setConstants(@Nonnull JsPropertyMap<Double> constants);
+  void setConstants(@JsNonNull JsPropertyMap<Double> constants);
 
   @Generated("org.realityforge.webtack")
   @JsType(

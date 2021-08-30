@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface VideoFrameCopyToOptions {
   JsArray<PlaneLayout> layout();
 
   @JsProperty
-  void setLayout(@Nonnull JsArray<PlaneLayout> layout);
+  void setLayout(@JsNonNull JsArray<PlaneLayout> layout);
 
   @JsOverlay
   default void setLayout(@Nonnull final PlaneLayout... layout) {
@@ -42,7 +43,7 @@ public interface VideoFrameCopyToOptions {
   VideoFrameRect rect();
 
   @JsProperty
-  void setRect(@Nonnull VideoFrameRect rect);
+  void setRect(@JsNonNull VideoFrameRect rect);
 
   @Generated("org.realityforge.webtack")
   @JsType(

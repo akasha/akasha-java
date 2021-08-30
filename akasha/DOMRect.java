@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -9,7 +10,7 @@ import jsinterop.annotations.JsType;
  * A DOMRect describes the size and position of a rectangle.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect">DOMRect - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">DOMRect - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">(Geometry Interfaces 1) # DOMRect</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -66,9 +67,9 @@ public class DOMRect extends DOMRectReadOnly {
   public DOMRect() {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native DOMRect fromRect(@Nonnull DOMRectInit other);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMRect fromRect();
 }

@@ -4,6 +4,7 @@ import akasha.EventInit;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,10 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.
+ * The XRInputSourcesChangeEvent() constructor creates and returns a new XRInputSourcesChangeEvent object, representing an update to the list of available WebXR input devices. You won't typically call this constructor yourself, as these events are created and sent to you by the WebXR system.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit">XRInputSourcesChangeEventInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrinputsourceschangeeventinit">XRInputSourcesChangeEventInit - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeevent-xrinputsourceschangeevent"># dom-xrinputsourceschangeevent-xrinputsourceschangeevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,7 +41,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   @JsProperty(
       name = "added"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<XRInputSource> added();
 
   /**
@@ -50,7 +51,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-added">XRInputSourcesChangeEventInit.added - WebXR Device API</a>
    */
   @JsProperty
-  void setAdded(@Nonnull JsArray<XRInputSource> added);
+  void setAdded(@JsNonNull JsArray<XRInputSource> added);
 
   /**
    * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
@@ -61,7 +62,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   @JsProperty(
       name = "removed"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<XRInputSource> removed();
 
   /**
@@ -71,7 +72,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-removed">XRInputSourcesChangeEventInit.removed - WebXR Device API</a>
    */
   @JsProperty
-  void setRemoved(@Nonnull JsArray<XRInputSource> removed);
+  void setRemoved(@JsNonNull JsArray<XRInputSource> removed);
 
   /**
    * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
@@ -82,7 +83,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   @JsProperty(
       name = "session"
   )
-  @Nonnull
+  @JsNonNull
   XRSession session();
 
   /**
@@ -92,13 +93,13 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-session">XRInputSourcesChangeEventInit.session - WebXR Device API</a>
    */
   @JsProperty
-  void setSession(@Nonnull XRSession session);
+  void setSession(@JsNonNull XRSession session);
 
   /**
-   * The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.
+   * The XRInputSourcesChangeEvent() constructor creates and returns a new XRInputSourcesChangeEvent object, representing an update to the list of available WebXR input devices. You won't typically call this constructor yourself, as these events are created and sent to you by the WebXR system.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit">XRInputSourcesChangeEventInit - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrinputsourceschangeeventinit">XRInputSourcesChangeEventInit - WebXR Device API</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeevent-xrinputsourceschangeevent"># dom-xrinputsourceschangeevent-xrinputsourceschangeevent</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

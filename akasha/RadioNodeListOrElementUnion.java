@@ -25,4 +25,24 @@ public interface RadioNodeListOrElementUnion {
   static RadioNodeListOrElementUnion of(@Nonnull final Element value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isElement() {
+    return ( (Object) this ) instanceof Element;
+  }
+
+  @JsOverlay
+  default Element asElement() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isRadioNodeList() {
+    return ( (Object) this ) instanceof RadioNodeList;
+  }
+
+  @JsOverlay
+  default RadioNodeList asRadioNodeList() {
+    return Js.cast( this );
+  }
 }

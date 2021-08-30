@@ -1,5 +1,6 @@
 package akasha.media;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -24,5 +25,25 @@ public interface ConstrainULong {
   @Nonnull
   static ConstrainULong of(@Nonnull final ConstrainULongRange value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isConstrainULongRange() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default ConstrainULongRange asConstrainULongRange() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isInt() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default int asInt() {
+    return Js.asInt( this );
   }
 }

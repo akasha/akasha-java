@@ -13,6 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * A Number &mdash; the length in bits of the key to generate. This must be one of: 128, 192, or 256.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams - MDN</a>
+ * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesKeyGenParams">SubtleCrypto.AesKeyGenParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -39,6 +40,7 @@ public interface AesKeyGenParams extends Algorithm {
    * A Number &mdash; the length in bits of the key to generate. This must be one of: 128, 192, or 256.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams - MDN</a>
+   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesKeyGenParams">SubtleCrypto.AesKeyGenParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

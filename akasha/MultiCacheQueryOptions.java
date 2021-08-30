@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
   String cacheName();
 
   @JsProperty
-  void setCacheName(@Nonnull String cacheName);
+  void setCacheName(@JsNonNull String cacheName);
 
   @Generated("org.realityforge.webtack")
   @JsType(

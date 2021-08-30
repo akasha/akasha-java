@@ -25,4 +25,19 @@ public interface ServiceWorkerRegistrationOrUndefinedUnion {
   static ServiceWorkerRegistrationOrUndefinedUnion of() {
     return Js.cast( Js.undefined() );
   }
+
+  @JsOverlay
+  default boolean isServiceWorkerRegistration() {
+    return ( (Object) this ) instanceof ServiceWorkerRegistration;
+  }
+
+  @JsOverlay
+  default ServiceWorkerRegistration asServiceWorkerRegistration() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
+  }
 }

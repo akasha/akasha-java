@@ -5,7 +5,8 @@ import akasha.lang.JsArray;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,7 +30,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/direction">CanvasRenderingContext2D.direction - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-direction">CanvasRenderingContext2D.direction - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @CanvasDirection
   public String direction;
 
@@ -39,7 +40,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">CanvasRenderingContext2D.fillStyle - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-fillstyle">CanvasRenderingContext2D.fillStyle - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public StringOrCanvasGradientOrCanvasPatternUnion fillStyle;
 
   /**
@@ -48,7 +49,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter">CanvasRenderingContext2D.filter - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#filters">CanvasRenderingContext2D.filter - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String filter;
 
   /**
@@ -57,18 +58,18 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font">CanvasRenderingContext2D.font - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-font">CanvasRenderingContext2D.font - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String font;
 
-  @Nonnull
+  @JsNonNull
   @CanvasFontKerning
   public String fontKerning;
 
-  @Nonnull
+  @JsNonNull
   @CanvasFontStretch
   public String fontStretch;
 
-  @Nonnull
+  @JsNonNull
   @CanvasFontVariantCaps
   public String fontVariantCaps;
 
@@ -87,7 +88,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-globalcompositeoperation">CanvasRenderingContext2D.globalCompositeOperation - HTML Living Standard</a>
    * @see <a href="https://drafts.fxtf.org/compositing-1/">Compositing and Blending Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public String globalCompositeOperation;
 
   /**
@@ -104,7 +105,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality">CanvasRenderingContext2D.imageSmoothingQuality - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#imagesmoothingquality">imageSmoothingQuality - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
@@ -114,7 +115,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap">CanvasRenderingContext2D.lineCap - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-linecap">CanvasRenderingContext2D.lineCap - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @CanvasLineCap
   public String lineCap;
 
@@ -132,7 +133,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin">CanvasRenderingContext2D.lineJoin - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-linejoin">CanvasRenderingContext2D.lineJoin - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @CanvasLineJoin
   public String lineJoin;
 
@@ -166,7 +167,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowColor">CanvasRenderingContext2D.shadowColor - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-shadowcolor">CanvasRenderingContext2D.shadowColor - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String shadowColor;
 
   /**
@@ -191,7 +192,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle">CanvasRenderingContext2D.strokeStyle - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-strokestyle">CanvasRenderingContext2D.strokeStyle - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
 
   /**
@@ -200,7 +201,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign">CanvasRenderingContext2D.textAlign - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-textalign">CanvasRenderingContext2D.textAlign - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @CanvasTextAlign
   public String textAlign;
 
@@ -210,13 +211,13 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline">CanvasRenderingContext2D.textBaseline - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-textbaseline">CanvasRenderingContext2D.textBaseline - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @CanvasTextBaseline
   public String textBaseline;
 
   public double textLetterSpacing;
 
-  @Nonnull
+  @JsNonNull
   @CanvasTextRendering
   public String textRendering;
 
@@ -237,7 +238,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @Nonnull
   public native HTMLCanvasElement canvas();
 
-  @Nonnull
+  @JsNonNull
   public native CanvasRenderingContext2DSettings getContextAttributes();
 
   /**
@@ -289,7 +290,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-measuretext">CanvasRenderingContext2D.measureText - HTML Living Standard</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native TextMetrics measureText(@Nonnull String text);
 
   /**
@@ -308,7 +309,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   public native void strokeText(@Nonnull String text, double x, double y);
 
-  @Nonnull
+  @JsNonNull
   public native CanvasGradient createConicGradient(double startAngle, double x, double y);
 
   /**
@@ -317,7 +318,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient">CanvasRenderingContext2D.createLinearGradient - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createlineargradient">CanvasRenderingContext2D.createLinearGradient - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);
 
   /**
@@ -326,7 +327,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern">CanvasRenderingContext2D.createPattern - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createpattern">CanvasRenderingContext2D.createPattern - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public native CanvasPattern createPattern(@Nonnull CanvasImageSource image,
       @Nonnull String repetition);
 
@@ -336,7 +337,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient">CanvasRenderingContext2D.createRadialGradient - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createradialgradient">CanvasRenderingContext2D.createRadialGradient - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1,
       double y1, double r1);
 
@@ -490,7 +491,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
 
   /**
@@ -500,7 +501,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ImageData createImageData(int sw, int sh);
 
   /**
@@ -510,7 +511,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createimagedata">CanvasRenderingContext2D.createImageData - HTML Living Standard</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ImageData createImageData(@Nonnull ImageData imagedata);
 
   /**
@@ -519,7 +520,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ImageData getImageData(int sx, int sy, int sw, int sh,
       @Nonnull ImageDataSettings settings);
 
@@ -529,7 +530,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">CanvasRenderingContext2D.getImageData - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getimagedata">CanvasRenderingContext2D.getImageData - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ImageData getImageData(int sx, int sy, int sw, int sh);
 
   /**
@@ -695,7 +696,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash">CanvasRenderingContext2D.getLineDash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-getlinedash">CanvasRenderingContext2D.getLineDash - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Double> getLineDash();
 
   /**
@@ -752,7 +753,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getTransform">CanvasRenderingContext2D.getTransform - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-gettransform">CanvasRenderingContext2D.getTransform - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix getTransform();
 
   /**

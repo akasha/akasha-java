@@ -5,6 +5,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -59,7 +60,7 @@ public class DataTransferItem extends JsObject {
    * @see <a href="https://www.w3.org/TR/html51/editing.html#dom-datatransferitem-getasfile">getAsFile() - HTML 5.1</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native File getAsFile();
 
   /**

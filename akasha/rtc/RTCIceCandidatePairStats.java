@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -317,7 +318,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsProperty(
       name = "localCandidateId"
   )
-  @Nonnull
+  @JsNonNull
   String localCandidateId();
 
   /**
@@ -327,7 +328,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setLocalCandidateId(@Nonnull String localCandidateId);
+  void setLocalCandidateId(@JsNonNull String localCandidateId);
 
   /**
    * The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.
@@ -406,7 +407,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsProperty(
       name = "remoteCandidateId"
   )
-  @Nonnull
+  @JsNonNull
   String remoteCandidateId();
 
   /**
@@ -416,7 +417,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
-  void setRemoteCandidateId(@Nonnull String remoteCandidateId);
+  void setRemoteCandidateId(@JsNonNull String remoteCandidateId);
 
   @JsProperty(
       name = "requestBytesSent"
@@ -564,7 +565,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
       name = "state"
   )
   @RTCStatsIceCandidatePairState
-  @Nonnull
+  @JsNonNull
   String state();
 
   /**
@@ -574,7 +575,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
-  void setState(@RTCStatsIceCandidatePairState @Nonnull String state);
+  void setState(@RTCStatsIceCandidatePairState @JsNonNull String state);
 
   /**
    * The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.
@@ -605,7 +606,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsProperty(
       name = "transportId"
   )
-  @Nonnull
+  @JsNonNull
   String transportId();
 
   /**
@@ -615,7 +616,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
    */
   @JsProperty
-  void setTransportId(@Nonnull String transportId);
+  void setTransportId(@JsNonNull String transportId);
 
   @JsProperty(
       name = "currentRtt"

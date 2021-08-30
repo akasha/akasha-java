@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -52,7 +53,7 @@ public interface CanvasRenderingContext2DSettings {
   String colorSpace();
 
   @JsProperty
-  void setColorSpace(@PredefinedColorSpace @Nonnull String colorSpace);
+  void setColorSpace(@PredefinedColorSpace @JsNonNull String colorSpace);
 
   /**
    * A flag that provides a hint to the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.

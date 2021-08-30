@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface GPUPipelineLayoutDescriptor extends GPUObjectDescriptorBase {
   @JsProperty(
       name = "bindGroupLayouts"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<GPUBindGroupLayout> bindGroupLayouts();
 
   @JsProperty
-  void setBindGroupLayouts(@Nonnull JsArray<GPUBindGroupLayout> bindGroupLayouts);
+  void setBindGroupLayouts(@JsNonNull JsArray<GPUBindGroupLayout> bindGroupLayouts);
 
   @JsOverlay
   default void setBindGroupLayouts(@Nonnull final GPUBindGroupLayout... bindGroupLayouts) {

@@ -11,8 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGViewElement interface provides access to the properties of &lt;view&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGViewElement">SVGViewElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGViewElement">SVGViewElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/linking.html#InterfaceSVGViewElement">SVGViewElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGViewElement">(SVG) # InterfaceSVGViewElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -3,6 +3,7 @@ package akasha.gl;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface WebGLContextEventInit extends EventInit {
   String statusMessage();
 
   @JsProperty
-  void setStatusMessage(@Nonnull String statusMessage);
+  void setStatusMessage(@JsNonNull String statusMessage);
 
   @Generated("org.realityforge.webtack")
   @JsType(

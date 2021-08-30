@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +38,7 @@ public interface OptionalEffectTiming {
   String direction();
 
   @JsProperty
-  void setDirection(@PlaybackDirection @Nonnull String direction);
+  void setDirection(@PlaybackDirection @JsNonNull String direction);
 
   @JsProperty(
       name = "duration"
@@ -45,7 +46,7 @@ public interface OptionalEffectTiming {
   UnrestrictedDoubleOrStringUnion duration();
 
   @JsProperty
-  void setDuration(@Nonnull UnrestrictedDoubleOrStringUnion duration);
+  void setDuration(@JsNonNull UnrestrictedDoubleOrStringUnion duration);
 
   @JsOverlay
   default void setDuration(final double duration) {
@@ -63,7 +64,7 @@ public interface OptionalEffectTiming {
   String easing();
 
   @JsProperty
-  void setEasing(@Nonnull String easing);
+  void setEasing(@JsNonNull String easing);
 
   @JsProperty(
       name = "endDelay"
@@ -80,7 +81,7 @@ public interface OptionalEffectTiming {
   String fill();
 
   @JsProperty
-  void setFill(@FillMode @Nonnull String fill);
+  void setFill(@FillMode @JsNonNull String fill);
 
   @JsProperty(
       name = "iterationStart"

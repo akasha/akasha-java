@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,7 +54,7 @@ public interface RTCDataChannelStats extends RTCStats {
   String label();
 
   @JsProperty
-  void setLabel(@Nonnull String label);
+  void setLabel(@JsNonNull String label);
 
   @JsProperty(
       name = "messagesReceived"
@@ -77,17 +78,17 @@ public interface RTCDataChannelStats extends RTCStats {
   String protocol();
 
   @JsProperty
-  void setProtocol(@Nonnull String protocol);
+  void setProtocol(@JsNonNull String protocol);
 
   @JsProperty(
       name = "state"
   )
   @RTCDataChannelState
-  @Nonnull
+  @JsNonNull
   String state();
 
   @JsProperty
-  void setState(@RTCDataChannelState @Nonnull String state);
+  void setState(@RTCDataChannelState @JsNonNull String state);
 
   @Generated("org.realityforge.webtack")
   @JsType(

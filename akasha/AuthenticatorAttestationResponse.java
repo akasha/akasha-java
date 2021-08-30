@@ -4,7 +4,8 @@ import akasha.core.ArrayBuffer;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,10 +38,10 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
   @Nonnull
   public native ArrayBuffer attestationObject();
 
-  @Nonnull
+  @JsNonNull
   public native ArrayBuffer getAuthenticatorData();
 
-  @Nullable
+  @JsNullable
   public native ArrayBuffer getPublicKey();
 
   public native int getPublicKeyAlgorithm();
@@ -51,6 +52,6 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports">AuthenticatorAttestationResponse.getTransports - MDN</a>
    * @see <a href="https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-gettransports">getTransports() - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> getTransports();
 }

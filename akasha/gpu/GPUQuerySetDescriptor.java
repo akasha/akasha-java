@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +30,11 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
       name = "type"
   )
   @GPUQueryType
-  @Nonnull
+  @JsNonNull
   String type();
 
   @JsProperty
-  void setType(@GPUQueryType @Nonnull String type);
+  void setType(@GPUQueryType @JsNonNull String type);
 
   @JsProperty(
       name = "count"
@@ -49,7 +50,7 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
   JsArray<String> pipelineStatistics();
 
   @JsProperty
-  void setPipelineStatistics(@Nonnull JsArray<String> pipelineStatistics);
+  void setPipelineStatistics(@JsNonNull JsArray<String> pipelineStatistics);
 
   @JsOverlay
   default void setPipelineStatistics(@Nonnull final String... pipelineStatistics) {

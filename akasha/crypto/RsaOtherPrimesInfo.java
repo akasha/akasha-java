@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RsaOtherPrimesInfo {
   String d();
 
   @JsProperty
-  void setD(@Nonnull String d);
+  void setD(@JsNonNull String d);
 
   @JsProperty(
       name = "r"
@@ -36,7 +37,7 @@ public interface RsaOtherPrimesInfo {
   String r();
 
   @JsProperty
-  void setR(@Nonnull String r);
+  void setR(@JsNonNull String r);
 
   @JsProperty(
       name = "t"
@@ -44,7 +45,7 @@ public interface RsaOtherPrimesInfo {
   String t();
 
   @JsProperty
-  void setT(@Nonnull String t);
+  void setT(@JsNonNull String t);
 
   @Generated("org.realityforge.webtack")
   @JsType(

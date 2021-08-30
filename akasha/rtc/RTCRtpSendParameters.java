@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -102,11 +103,11 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   @JsProperty(
       name = "encodings"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<RTCRtpEncodingParameters> encodings();
 
   @JsProperty
-  void setEncodings(@Nonnull JsArray<RTCRtpEncodingParameters> encodings);
+  void setEncodings(@JsNonNull JsArray<RTCRtpEncodingParameters> encodings);
 
   @JsOverlay
   default void setEncodings(@Nonnull final RTCRtpEncodingParameters... encodings) {
@@ -116,11 +117,11 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   @JsProperty(
       name = "transactionId"
   )
-  @Nonnull
+  @JsNonNull
   String transactionId();
 
   @JsProperty
-  void setTransactionId(@Nonnull String transactionId);
+  void setTransactionId(@JsNonNull String transactionId);
 
   /**
    * The WebRTC API's RTCRtpSendParameters dictionary is used to specify the parameters for an RTCRtpSender when calling its setParameters() method.

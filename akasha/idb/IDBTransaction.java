@@ -10,6 +10,8 @@ import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,7 +36,7 @@ public class IDBTransaction extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/onabort">IDBTransaction.onabort - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onabort;
 
   /**
@@ -42,7 +44,7 @@ public class IDBTransaction extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/oncomplete">IDBTransaction.oncomplete - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler oncomplete;
 
   /**
@@ -50,7 +52,7 @@ public class IDBTransaction extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/onerror">IDBTransaction.onerror - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
   protected IDBTransaction() {
@@ -127,7 +129,7 @@ public class IDBTransaction extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStore">IDBTransaction.objectStore - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBObjectStore objectStore(@Nonnull String name);
 
   @JsOverlay

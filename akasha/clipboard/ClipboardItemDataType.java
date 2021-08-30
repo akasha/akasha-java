@@ -26,4 +26,24 @@ public interface ClipboardItemDataType {
   static ClipboardItemDataType of(@Nonnull final Blob value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isBlob() {
+    return ( (Object) this ) instanceof Blob;
+  }
+
+  @JsOverlay
+  default Blob asBlob() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

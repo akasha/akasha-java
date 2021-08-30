@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "CSSConditionRule"
 )
 public class CSSConditionRule extends CSSGroupingRule {
-  @Nonnull
+  @JsNonNull
   public String conditionText;
 
   protected CSSConditionRule() {

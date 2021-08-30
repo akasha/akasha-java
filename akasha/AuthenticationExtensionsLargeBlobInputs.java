@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,7 +38,7 @@ public interface AuthenticationExtensionsLargeBlobInputs {
   String support();
 
   @JsProperty
-  void setSupport(@Nonnull String support);
+  void setSupport(@JsNonNull String support);
 
   @JsProperty(
       name = "write"
@@ -45,7 +46,7 @@ public interface AuthenticationExtensionsLargeBlobInputs {
   BufferSource write();
 
   @JsProperty
-  void setWrite(@Nonnull BufferSource write);
+  void setWrite(@JsNonNull BufferSource write);
 
   @Generated("org.realityforge.webtack")
   @JsType(

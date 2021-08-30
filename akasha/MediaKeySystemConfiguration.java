@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration">MediaKeySystemConfiguration - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary">MediaKeySystemConfiguration - Encrypted Media Extensions</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary"># mediakeysystemconfiguration-dictionary</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -47,7 +48,7 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities">audioCapabilities - Encrypted Media Extensions</a>
    */
   @JsProperty
-  void setAudioCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> audioCapabilities);
+  void setAudioCapabilities(@JsNonNull JsArray<MediaKeySystemMediaCapability> audioCapabilities);
 
   /**
    * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
@@ -80,7 +81,7 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier">distinctiveIdentifier - Encrypted Media Extensions</a>
    */
   @JsProperty
-  void setDistinctiveIdentifier(@MediaKeysRequirement @Nonnull String distinctiveIdentifier);
+  void setDistinctiveIdentifier(@MediaKeysRequirement @JsNonNull String distinctiveIdentifier);
 
   /**
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
@@ -100,7 +101,7 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes">initDataTypes - Encrypted Media Extensions</a>
    */
   @JsProperty
-  void setInitDataTypes(@Nonnull JsArray<String> initDataTypes);
+  void setInitDataTypes(@JsNonNull JsArray<String> initDataTypes);
 
   /**
    * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
@@ -119,7 +120,7 @@ public interface MediaKeySystemConfiguration {
   String label();
 
   @JsProperty
-  void setLabel(@Nonnull String label);
+  void setLabel(@JsNonNull String label);
 
   /**
    * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
@@ -140,7 +141,7 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate">persistentState - Encrypted Media Extensions</a>
    */
   @JsProperty
-  void setPersistentState(@MediaKeysRequirement @Nonnull String persistentState);
+  void setPersistentState(@MediaKeysRequirement @JsNonNull String persistentState);
 
   @JsProperty(
       name = "sessionTypes"
@@ -148,7 +149,7 @@ public interface MediaKeySystemConfiguration {
   JsArray<String> sessionTypes();
 
   @JsProperty
-  void setSessionTypes(@Nonnull JsArray<String> sessionTypes);
+  void setSessionTypes(@JsNonNull JsArray<String> sessionTypes);
 
   @JsOverlay
   default void setSessionTypes(@Nonnull final String... sessionTypes) {
@@ -173,7 +174,7 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities">videoCapabilities - Encrypted Media Extensions</a>
    */
   @JsProperty
-  void setVideoCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> videoCapabilities);
+  void setVideoCapabilities(@JsNonNull JsArray<MediaKeySystemMediaCapability> videoCapabilities);
 
   /**
    * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
@@ -191,7 +192,7 @@ public interface MediaKeySystemConfiguration {
    * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration">MediaKeySystemConfiguration - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary">MediaKeySystemConfiguration - Encrypted Media Extensions</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary"># mediakeysystemconfiguration-dictionary</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

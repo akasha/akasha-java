@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   PushSubscription newSubscription();
 
   @JsProperty
-  void setNewSubscription(@Nonnull PushSubscription newSubscription);
+  void setNewSubscription(@JsNonNull PushSubscription newSubscription);
 
   @JsProperty(
       name = "oldSubscription"
@@ -36,7 +37,7 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   PushSubscription oldSubscription();
 
   @JsProperty
-  void setOldSubscription(@Nonnull PushSubscription oldSubscription);
+  void setOldSubscription(@JsNonNull PushSubscription oldSubscription);
 
   @Generated("org.realityforge.webtack")
   @JsType(

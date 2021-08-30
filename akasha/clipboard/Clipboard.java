@@ -5,11 +5,12 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard.
+ * Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard">Clipboard - MDN</a>
  * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-interface"># clipboard-interface</a>
@@ -30,7 +31,7 @@ public class Clipboard extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read">Clipboard.read - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboard-read">read() - Clipboard API and events</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<ClipboardItem>> read();
 
   /**
@@ -39,7 +40,7 @@ public class Clipboard extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText">Clipboard.readText - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboard-readtext">readText() - Clipboard API and events</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<String> readText();
 
   /**
@@ -48,7 +49,7 @@ public class Clipboard extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write">Clipboard.write - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboard-write">write() - Clipboard API and events</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> write(@Nonnull JsArray<ClipboardItem> data);
 
   /**
@@ -57,7 +58,7 @@ public class Clipboard extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write">Clipboard.write - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboard-write">write() - Clipboard API and events</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> write(@Nonnull ClipboardItem[] data);
 
   /**
@@ -66,6 +67,6 @@ public class Clipboard extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText">Clipboard.writeText - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboard-writetext">writeText() - Clipboard API and events</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> writeText(@Nonnull String data);
 }

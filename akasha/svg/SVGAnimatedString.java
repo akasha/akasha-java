@@ -3,6 +3,7 @@ package akasha.svg;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The SVGAnimatedString interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString">SVGAnimatedString - MDN</a>
- * @see <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedString">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAnimatedString">Scalable Vector Graphics (SVG) 2</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAnimatedString">(SVG) # InterfaceSVGAnimatedString</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,7 +28,7 @@ public class SVGAnimatedString extends JsObject {
    * @see <a href="https://www.w3.org/TR/SVG11/types.html#__svg__SVGAnimatedString__baseVal">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
    * @see <a href="https://svgwg.org/svg2-draft/types.html#__svg__SVGAnimatedString__baseVal">Scalable Vector Graphics (SVG) 2</a>
    */
-  @Nonnull
+  @JsNonNull
   public String baseVal;
 
   protected SVGAnimatedString() {

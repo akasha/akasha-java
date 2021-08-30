@@ -8,9 +8,13 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -32,7 +36,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">ServiceWorkerRegistration.onupdatefound - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-onupdatefound">ServiceWorkerRegistration.onupdatefound - Service Workers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onupdatefound;
 
   protected ServiceWorkerRegistration() {
@@ -133,7 +137,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/unregister">ServiceWorkerRegistration.unregister - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/navigator-service-worker-unregister">ServiceWorkerRegistration.unregister() - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> unregister();
 
   /**
@@ -142,7 +146,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/update">ServiceWorkerRegistration.update - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#service-worker-registration-update">ServiceWorkerRegistration.update() - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> update();
 
   /**
@@ -151,7 +155,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">ServiceWorkerRegistration.getNotifications - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications">ServiceWorkerRegistration.getNotifications() - Notifications API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Notification>> getNotifications(
       @Nonnull GetNotificationOptions filter);
 
@@ -161,7 +165,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">ServiceWorkerRegistration.getNotifications - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications">ServiceWorkerRegistration.getNotifications() - Notifications API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<Notification>> getNotifications();
 
   /**
@@ -170,7 +174,7 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification">ServiceWorkerRegistration.showNotification - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification">showNotification() - Notifications API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> showNotification(@Nonnull String title,
       @Nonnull NotificationOptions options);
 
@@ -180,6 +184,40 @@ public class ServiceWorkerRegistration extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification">ServiceWorkerRegistration.showNotification - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-shownotification">showNotification() - Notifications API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> showNotification(@Nonnull String title);
+
+  @JsOverlay
+  public final void addUpdatefoundListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "updatefound", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUpdatefoundListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "updatefound", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addUpdatefoundListener(@Nonnull final EventListener callback) {
+    addEventListener( "updatefound", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUpdatefoundListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "updatefound", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUpdatefoundListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "updatefound", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeUpdatefoundListener(@Nonnull final EventListener callback) {
+    removeEventListener( "updatefound", Js.cast( callback ) );
+  }
 }

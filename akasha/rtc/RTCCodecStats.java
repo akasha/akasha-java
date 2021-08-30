@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,16 +48,16 @@ public interface RTCCodecStats extends RTCStats {
   String codecType();
 
   @JsProperty
-  void setCodecType(@RTCCodecType @Nonnull String codecType);
+  void setCodecType(@RTCCodecType @JsNonNull String codecType);
 
   @JsProperty(
       name = "mimeType"
   )
-  @Nonnull
+  @JsNonNull
   String mimeType();
 
   @JsProperty
-  void setMimeType(@Nonnull String mimeType);
+  void setMimeType(@JsNonNull String mimeType);
 
   @JsProperty(
       name = "payloadType"
@@ -72,16 +73,16 @@ public interface RTCCodecStats extends RTCStats {
   String sdpFmtpLine();
 
   @JsProperty
-  void setSdpFmtpLine(@Nonnull String sdpFmtpLine);
+  void setSdpFmtpLine(@JsNonNull String sdpFmtpLine);
 
   @JsProperty(
       name = "transportId"
   )
-  @Nonnull
+  @JsNonNull
   String transportId();
 
   @JsProperty
-  void setTransportId(@Nonnull String transportId);
+  void setTransportId(@JsNonNull String transportId);
 
   @JsProperty(
       name = "implementation"
@@ -89,7 +90,7 @@ public interface RTCCodecStats extends RTCStats {
   String implementation();
 
   @JsProperty
-  void setImplementation(@Nonnull String implementation);
+  void setImplementation(@JsNonNull String implementation);
 
   @Generated("org.realityforge.webtack")
   @JsType(

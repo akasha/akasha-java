@@ -6,7 +6,7 @@ import akasha.EventListener;
 import akasha.EventListenerOptions;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -31,7 +31,7 @@ public class AudioScheduledSourceNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/onended">AudioScheduledSourceNode.onended - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended">onended - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onended;
 
   protected AudioScheduledSourceNode() {

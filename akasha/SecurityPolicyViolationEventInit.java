@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   String blockedURI();
 
   @JsProperty
-  void setBlockedURI(@Nonnull String blockedURI);
+  void setBlockedURI(@JsNonNull String blockedURI);
 
   @JsProperty(
       name = "columnNumber"
@@ -45,29 +46,29 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
       name = "disposition"
   )
   @SecurityPolicyViolationEventDisposition
-  @Nonnull
+  @JsNonNull
   String disposition();
 
   @JsProperty
-  void setDisposition(@SecurityPolicyViolationEventDisposition @Nonnull String disposition);
+  void setDisposition(@SecurityPolicyViolationEventDisposition @JsNonNull String disposition);
 
   @JsProperty(
       name = "documentURI"
   )
-  @Nonnull
+  @JsNonNull
   String documentURI();
 
   @JsProperty
-  void setDocumentURI(@Nonnull String documentURI);
+  void setDocumentURI(@JsNonNull String documentURI);
 
   @JsProperty(
       name = "effectiveDirective"
   )
-  @Nonnull
+  @JsNonNull
   String effectiveDirective();
 
   @JsProperty
-  void setEffectiveDirective(@Nonnull String effectiveDirective);
+  void setEffectiveDirective(@JsNonNull String effectiveDirective);
 
   @JsProperty(
       name = "lineNumber"
@@ -80,11 +81,11 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsProperty(
       name = "originalPolicy"
   )
-  @Nonnull
+  @JsNonNull
   String originalPolicy();
 
   @JsProperty
-  void setOriginalPolicy(@Nonnull String originalPolicy);
+  void setOriginalPolicy(@JsNonNull String originalPolicy);
 
   @JsProperty(
       name = "referrer"
@@ -92,7 +93,7 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   String referrer();
 
   @JsProperty
-  void setReferrer(@Nonnull String referrer);
+  void setReferrer(@JsNonNull String referrer);
 
   @JsProperty(
       name = "sample"
@@ -100,7 +101,7 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   String sample();
 
   @JsProperty
-  void setSample(@Nonnull String sample);
+  void setSample(@JsNonNull String sample);
 
   @JsProperty(
       name = "sourceFile"
@@ -108,7 +109,7 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   String sourceFile();
 
   @JsProperty
-  void setSourceFile(@Nonnull String sourceFile);
+  void setSourceFile(@JsNonNull String sourceFile);
 
   @JsProperty(
       name = "statusCode"
@@ -121,11 +122,11 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsProperty(
       name = "violatedDirective"
   )
-  @Nonnull
+  @JsNonNull
   String violatedDirective();
 
   @JsProperty
-  void setViolatedDirective(@Nonnull String violatedDirective);
+  void setViolatedDirective(@JsNonNull String violatedDirective);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +30,7 @@ public class HTMLStyleElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-16428977">HTMLStyleElement - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-16428977">HTMLStyleElement - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public String media;
 
   /**
@@ -38,7 +38,7 @@ public class HTMLStyleElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/type">HTMLStyleElement.type - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String type;
 
   protected HTMLStyleElement() {

@@ -7,6 +7,7 @@ import akasha.promise.Promise;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -94,7 +95,7 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://w3c.github.io/FileAPI/#dom-blob-arraybuffer">Blob.arrayBuffer() - File API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Promise<ArrayBuffer> arrayBuffer();
 
   /**
@@ -104,7 +105,7 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Blob slice(int start, int end, @Nonnull String contentType);
 
   /**
@@ -114,7 +115,7 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Blob slice(int start, int end);
 
   /**
@@ -124,7 +125,7 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Blob slice(int start);
 
   /**
@@ -134,7 +135,7 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-slice">Blob.slice() - File API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Blob slice();
 
   /**
@@ -143,7 +144,7 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/stream">Blob.stream - MDN</a>
    * @see <a href="https://w3c.github.io/FileAPI/#dom-blob-stream">Blob.stream() - File API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ReadableStream stream();
 
   /**
@@ -153,6 +154,6 @@ public class Blob extends JsObject implements MediaProvider, ImageBitmapSource {
    * @see <a href="https://w3c.github.io/FileAPI/#dom-blob-text">Blob.text() - File API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Promise<String> text();
 }

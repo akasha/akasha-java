@@ -33,4 +33,24 @@ public interface Uint32List {
   static Uint32List of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isUint32Array() {
+    return ( (Object) this ) instanceof Uint32Array;
+  }
+
+  @JsOverlay
+  default Uint32Array asUint32Array() {
+    return Js.cast( this );
+  }
 }

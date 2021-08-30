@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -24,7 +24,7 @@ public class RadioNodeList extends NodeList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RadioNodeList/value">RadioNodeList.value - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-radionodelist-value">RadioNodeList.value - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String value;
 
   protected RadioNodeList() {

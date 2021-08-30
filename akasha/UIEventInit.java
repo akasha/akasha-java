@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface UIEventInit extends EventInit {
   @JsProperty(
       name = "view"
   )
-  @Nullable
+  @JsNullable
   Window view();
 
   @JsProperty
-  void setView(@Nullable Window view);
+  void setView(@JsNullable Window view);
 
   @Generated("org.realityforge.webtack")
   @JsType(

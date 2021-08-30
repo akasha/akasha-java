@@ -5,6 +5,7 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -45,7 +46,7 @@ public class ImageTrackList extends JsObject {
   public native ImageTrack selectedTrack();
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final ImageTrack getAt(final int index) {
     return Js.<JsArrayLike<ImageTrack>>cast( this ).getAt( index );
   }

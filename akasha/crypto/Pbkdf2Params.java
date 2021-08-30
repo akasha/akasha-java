@@ -4,6 +4,7 @@ import akasha.core.BufferSource;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -48,11 +49,11 @@ public interface Pbkdf2Params extends Algorithm {
   @JsProperty(
       name = "hash"
   )
-  @Nonnull
+  @JsNonNull
   AlgorithmIdentifier hash();
 
   @JsProperty
-  void setHash(@Nonnull AlgorithmIdentifier hash);
+  void setHash(@JsNonNull AlgorithmIdentifier hash);
 
   @JsOverlay
   default void setHash(@Nonnull final JsObject hash) {
@@ -75,11 +76,11 @@ public interface Pbkdf2Params extends Algorithm {
   @JsProperty(
       name = "salt"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource salt();
 
   @JsProperty
-  void setSalt(@Nonnull BufferSource salt);
+  void setSalt(@JsNonNull BufferSource salt);
 
   /**
    * The Pbkdf2Params dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the PBKDF2 algorithm.

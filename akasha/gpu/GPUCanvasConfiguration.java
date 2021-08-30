@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,21 +30,21 @@ public interface GPUCanvasConfiguration {
   @JsProperty(
       name = "device"
   )
-  @Nonnull
+  @JsNonNull
   GPUDevice device();
 
   @JsProperty
-  void setDevice(@Nonnull GPUDevice device);
+  void setDevice(@JsNonNull GPUDevice device);
 
   @JsProperty(
       name = "format"
   )
   @GPUTextureFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@GPUTextureFormat @Nonnull String format);
+  void setFormat(@GPUTextureFormat @JsNonNull String format);
 
   @JsProperty(
       name = "colorSpace"
@@ -52,7 +53,7 @@ public interface GPUCanvasConfiguration {
   String colorSpace();
 
   @JsProperty
-  void setColorSpace(@GPUPredefinedColorSpace @Nonnull String colorSpace);
+  void setColorSpace(@GPUPredefinedColorSpace @JsNonNull String colorSpace);
 
   @JsProperty(
       name = "compositingAlphaMode"
@@ -61,7 +62,8 @@ public interface GPUCanvasConfiguration {
   String compositingAlphaMode();
 
   @JsProperty
-  void setCompositingAlphaMode(@GPUCanvasCompositingAlphaMode @Nonnull String compositingAlphaMode);
+  void setCompositingAlphaMode(
+      @GPUCanvasCompositingAlphaMode @JsNonNull String compositingAlphaMode);
 
   @JsProperty(
       name = "size"
@@ -69,7 +71,7 @@ public interface GPUCanvasConfiguration {
   GPUExtent3D size();
 
   @JsProperty
-  void setSize(@Nonnull GPUExtent3D size);
+  void setSize(@JsNonNull GPUExtent3D size);
 
   @JsOverlay
   default void setSize(@Nonnull final JsArray<Double> size) {
@@ -93,7 +95,7 @@ public interface GPUCanvasConfiguration {
   int usage();
 
   @JsProperty
-  void setUsage(@GPUTextureUsageFlags @Nonnull int usage);
+  void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
   @Generated("org.realityforge.webtack")
   @JsType(

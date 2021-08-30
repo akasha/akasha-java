@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +40,7 @@ public interface GPUPrimitiveState {
   String cullMode();
 
   @JsProperty
-  void setCullMode(@GPUCullMode @Nonnull String cullMode);
+  void setCullMode(@GPUCullMode @JsNonNull String cullMode);
 
   @JsProperty(
       name = "frontFace"
@@ -48,7 +49,7 @@ public interface GPUPrimitiveState {
   String frontFace();
 
   @JsProperty
-  void setFrontFace(@GPUFrontFace @Nonnull String frontFace);
+  void setFrontFace(@GPUFrontFace @JsNonNull String frontFace);
 
   @JsProperty(
       name = "stripIndexFormat"
@@ -57,7 +58,7 @@ public interface GPUPrimitiveState {
   String stripIndexFormat();
 
   @JsProperty
-  void setStripIndexFormat(@GPUIndexFormat @Nonnull String stripIndexFormat);
+  void setStripIndexFormat(@GPUIndexFormat @JsNonNull String stripIndexFormat);
 
   @JsProperty(
       name = "topology"
@@ -66,7 +67,7 @@ public interface GPUPrimitiveState {
   String topology();
 
   @JsProperty
-  void setTopology(@GPUPrimitiveTopology @Nonnull String topology);
+  void setTopology(@GPUPrimitiveTopology @JsNonNull String topology);
 
   @Generated("org.realityforge.webtack")
   @JsType(

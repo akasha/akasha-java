@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface GPUColorTargetState {
       name = "format"
   )
   @GPUTextureFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@GPUTextureFormat @Nonnull String format);
+  void setFormat(@GPUTextureFormat @JsNonNull String format);
 
   @JsProperty(
       name = "blend"
@@ -40,7 +41,7 @@ public interface GPUColorTargetState {
   GPUBlendState blend();
 
   @JsProperty
-  void setBlend(@Nonnull GPUBlendState blend);
+  void setBlend(@JsNonNull GPUBlendState blend);
 
   @JsProperty(
       name = "writeMask"
@@ -49,7 +50,7 @@ public interface GPUColorTargetState {
   int writeMask();
 
   @JsProperty
-  void setWriteMask(@GPUColorWriteFlags @Nonnull int writeMask);
+  void setWriteMask(@GPUColorWriteFlags @JsNonNull int writeMask);
 
   @Generated("org.realityforge.webtack")
   @JsType(

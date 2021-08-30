@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface RTCIdentityProviderDetails {
   @JsProperty(
       name = "domain"
   )
-  @Nonnull
+  @JsNonNull
   String domain();
 
   @JsProperty
-  void setDomain(@Nonnull String domain);
+  void setDomain(@JsNonNull String domain);
 
   @JsProperty(
       name = "protocol"
@@ -37,7 +38,7 @@ public interface RTCIdentityProviderDetails {
   String protocol();
 
   @JsProperty
-  void setProtocol(@Nonnull String protocol);
+  void setProtocol(@JsNonNull String protocol);
 
   @Generated("org.realityforge.webtack")
   @JsType(

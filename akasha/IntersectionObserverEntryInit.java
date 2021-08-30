@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +31,11 @@ public interface IntersectionObserverEntryInit {
   @JsProperty(
       name = "boundingClientRect"
   )
-  @Nonnull
+  @JsNonNull
   DOMRectInit boundingClientRect();
 
   @JsProperty
-  void setBoundingClientRect(@Nonnull DOMRectInit boundingClientRect);
+  void setBoundingClientRect(@JsNonNull DOMRectInit boundingClientRect);
 
   @JsProperty(
       name = "intersectionRatio"
@@ -46,11 +48,11 @@ public interface IntersectionObserverEntryInit {
   @JsProperty(
       name = "intersectionRect"
   )
-  @Nonnull
+  @JsNonNull
   DOMRectInit intersectionRect();
 
   @JsProperty
-  void setIntersectionRect(@Nonnull DOMRectInit intersectionRect);
+  void setIntersectionRect(@JsNonNull DOMRectInit intersectionRect);
 
   @JsProperty(
       name = "isIntersecting"
@@ -63,20 +65,20 @@ public interface IntersectionObserverEntryInit {
   @JsProperty(
       name = "rootBounds"
   )
-  @Nullable
+  @JsNullable
   DOMRectInit rootBounds();
 
   @JsProperty
-  void setRootBounds(@Nullable DOMRectInit rootBounds);
+  void setRootBounds(@JsNullable DOMRectInit rootBounds);
 
   @JsProperty(
       name = "target"
   )
-  @Nonnull
+  @JsNonNull
   Element target();
 
   @JsProperty
-  void setTarget(@Nonnull Element target);
+  void setTarget(@JsNonNull Element target);
 
   @JsProperty(
       name = "time"

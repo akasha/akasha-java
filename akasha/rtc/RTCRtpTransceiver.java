@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,7 +29,7 @@ public class RTCRtpTransceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction">RTCRtpTransceiver.direction - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-direction">RTCRtpTransceiver.direction - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   @RTCRtpTransceiverDirection
   public String direction;
 

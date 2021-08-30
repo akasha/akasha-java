@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.core.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -48,7 +49,7 @@ public class TextEncoder extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode">TextEncoder.encode - MDN</a>
    * @see <a href="https://encoding.spec.whatwg.org/#dom-textencoder-encode">TextEncoder.prototype.encode() - Encoding</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Uint8Array encode(@Nonnull String input);
 
   /**
@@ -57,7 +58,7 @@ public class TextEncoder extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode">TextEncoder.encode - MDN</a>
    * @see <a href="https://encoding.spec.whatwg.org/#dom-textencoder-encode">TextEncoder.prototype.encode() - Encoding</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Uint8Array encode();
 
   /**
@@ -66,7 +67,7 @@ public class TextEncoder extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto">TextEncoder.encodeInto - MDN</a>
    * @see <a href="https://encoding.spec.whatwg.org/#dom-textencoder-encodeinto">TextEncoder.encode() - Encoding</a>
    */
-  @Nonnull
+  @JsNonNull
   public native TextEncoderEncodeIntoResult encodeInto(@Nonnull String source,
       @Nonnull Uint8Array destination);
 }

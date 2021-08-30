@@ -8,8 +8,9 @@ import akasha.EventTarget;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -43,10 +44,10 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onended">MediaStreamTrack.onended - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-onended">MediaStreamTrack.onended - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onended;
 
-  @Nullable
+  @JsNullable
   public EventHandler onisolationchange;
 
   /**
@@ -55,7 +56,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onmute">MediaStreamTrack.onmute - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-onmute">MediaStreamTrack.onmute - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onmute;
 
   /**
@@ -64,7 +65,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onunmute">MediaStreamTrack.onunmute - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-onunmute">MediaStreamTrack.onunmute - Media Capture and Streams</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onunmute;
 
   protected MediaStreamTrack() {
@@ -142,7 +143,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints">applyConstraints() - Media Capture and Streams</a>
    * @see <a href="https://w3c.github.io/mediacapture-image/#mediatrackconstraintset-section">applyConstraints() - MediaStream Image Capture</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> applyConstraints(@Nonnull MediaTrackConstraints constraints);
 
   /**
@@ -152,7 +153,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints">applyConstraints() - Media Capture and Streams</a>
    * @see <a href="https://w3c.github.io/mediacapture-image/#mediatrackconstraintset-section">applyConstraints() - MediaStream Image Capture</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> applyConstraints();
 
   /**
@@ -164,7 +165,7 @@ public class MediaStreamTrack extends EventTarget {
   @JsMethod(
       name = "clone"
   )
-  @Nonnull
+  @JsNonNull
   public native MediaStreamTrack clone_();
 
   /**
@@ -173,7 +174,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities">MediaStreamTrack.getCapabilities - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getcapabilities">getCapabilities() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaTrackCapabilities getCapabilities();
 
   /**
@@ -182,7 +183,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getConstraints">MediaStreamTrack.getConstraints - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getconstraints">getConstraints() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaTrackConstraints getConstraints();
 
   /**
@@ -191,7 +192,7 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getSettings">MediaStreamTrack.getSettings - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getsettings">getSettings() - Media Capture and Streams</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaTrackSettings getSettings();
 
   /**

@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -210,7 +211,7 @@ public class Event extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath">Event.composedPath - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-event-composedpath">composedPath() - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<EventTarget> composedPath();
 
   /**

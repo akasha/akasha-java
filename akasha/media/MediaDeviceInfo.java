@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -72,6 +73,6 @@ public class MediaDeviceInfo extends JsObject {
   @Nonnull
   public native String label();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

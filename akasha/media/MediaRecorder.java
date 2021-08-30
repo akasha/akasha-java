@@ -6,7 +6,7 @@ import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -17,7 +17,7 @@ import jsinterop.base.Js;
  * The MediaRecorder interface of the MediaStream Recording API provides functionality to easily record media. It is created using the MediaRecorder() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder">MediaRecorder - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-record/#mediarecorder-api">MediaStream Recording</a>
+ * @see <a href="https://w3c.github.io/mediacapture-record/#mediarecorder-api"># mediarecorder-api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,7 +32,7 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ondataavailable">MediaRecorder.ondataavailable - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-ondataavailable">MediaRecorder.ondataavailable - MediaStream Recording</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ondataavailable;
 
   /**
@@ -41,7 +41,7 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onerror">MediaRecorder.onerror - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onerror">MediaRecorder.onerror - MediaStream Recording</a>
    */
-  @Nullable
+  @JsNullable
   public MediaRecorderErrorEventHandler onerror;
 
   /**
@@ -50,7 +50,7 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onpause">MediaRecorder.onpause - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onpause">MediaRecorder.onpause - MediaStream Recording</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onpause;
 
   /**
@@ -59,7 +59,7 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onresume">MediaRecorder.onresume - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onresume">MediaRecorder.onresume - MediaStream Recording</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onresume;
 
   /**
@@ -68,7 +68,7 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstart">MediaRecorder.onstart - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onstart">MediaRecorder.onstart - MediaStream Recording</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onstart;
 
   /**
@@ -77,7 +77,7 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstop">MediaRecorder.onstop - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-record/#dom-mediarecorder-onstop">MediaRecorder.onstop - MediaStream Recording</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onstop;
 
   /**

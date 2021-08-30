@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDouble aspectRatio();
 
   @JsProperty
-  void setAspectRatio(@Nonnull ConstrainDouble aspectRatio);
+  void setAspectRatio(@JsNonNull ConstrainDouble aspectRatio);
 
   @JsOverlay
   default void setAspectRatio(final double aspectRatio) {
@@ -47,7 +48,7 @@ public interface MediaTrackConstraintSet {
   ConstrainBoolean autoGainControl();
 
   @JsProperty
-  void setAutoGainControl(@Nonnull ConstrainBoolean autoGainControl);
+  void setAutoGainControl(@JsNonNull ConstrainBoolean autoGainControl);
 
   @JsOverlay
   default void setAutoGainControl(final boolean autoGainControl) {
@@ -65,7 +66,7 @@ public interface MediaTrackConstraintSet {
   ConstrainULong channelCount();
 
   @JsProperty
-  void setChannelCount(@Nonnull ConstrainULong channelCount);
+  void setChannelCount(@JsNonNull ConstrainULong channelCount);
 
   @JsOverlay
   default void setChannelCount(final int channelCount) {
@@ -83,7 +84,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDOMString deviceId();
 
   @JsProperty
-  void setDeviceId(@Nonnull ConstrainDOMString deviceId);
+  void setDeviceId(@JsNonNull ConstrainDOMString deviceId);
 
   @JsOverlay
   default void setDeviceId(@Nonnull final String deviceId) {
@@ -111,7 +112,7 @@ public interface MediaTrackConstraintSet {
   ConstrainBoolean echoCancellation();
 
   @JsProperty
-  void setEchoCancellation(@Nonnull ConstrainBoolean echoCancellation);
+  void setEchoCancellation(@JsNonNull ConstrainBoolean echoCancellation);
 
   @JsOverlay
   default void setEchoCancellation(final boolean echoCancellation) {
@@ -129,7 +130,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDOMString facingMode();
 
   @JsProperty
-  void setFacingMode(@Nonnull ConstrainDOMString facingMode);
+  void setFacingMode(@JsNonNull ConstrainDOMString facingMode);
 
   @JsOverlay
   default void setFacingMode(@Nonnull final String facingMode) {
@@ -157,7 +158,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDouble frameRate();
 
   @JsProperty
-  void setFrameRate(@Nonnull ConstrainDouble frameRate);
+  void setFrameRate(@JsNonNull ConstrainDouble frameRate);
 
   @JsOverlay
   default void setFrameRate(final double frameRate) {
@@ -175,7 +176,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDOMString groupId();
 
   @JsProperty
-  void setGroupId(@Nonnull ConstrainDOMString groupId);
+  void setGroupId(@JsNonNull ConstrainDOMString groupId);
 
   @JsOverlay
   default void setGroupId(@Nonnull final String groupId) {
@@ -203,7 +204,7 @@ public interface MediaTrackConstraintSet {
   ConstrainULong height();
 
   @JsProperty
-  void setHeight(@Nonnull ConstrainULong height);
+  void setHeight(@JsNonNull ConstrainULong height);
 
   @JsOverlay
   default void setHeight(final int height) {
@@ -221,7 +222,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDouble latency();
 
   @JsProperty
-  void setLatency(@Nonnull ConstrainDouble latency);
+  void setLatency(@JsNonNull ConstrainDouble latency);
 
   @JsOverlay
   default void setLatency(final double latency) {
@@ -239,7 +240,7 @@ public interface MediaTrackConstraintSet {
   ConstrainBoolean noiseSuppression();
 
   @JsProperty
-  void setNoiseSuppression(@Nonnull ConstrainBoolean noiseSuppression);
+  void setNoiseSuppression(@JsNonNull ConstrainBoolean noiseSuppression);
 
   @JsOverlay
   default void setNoiseSuppression(final boolean noiseSuppression) {
@@ -257,7 +258,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDOMString resizeMode();
 
   @JsProperty
-  void setResizeMode(@Nonnull ConstrainDOMString resizeMode);
+  void setResizeMode(@JsNonNull ConstrainDOMString resizeMode);
 
   @JsOverlay
   default void setResizeMode(@Nonnull final String resizeMode) {
@@ -285,7 +286,7 @@ public interface MediaTrackConstraintSet {
   ConstrainULong sampleRate();
 
   @JsProperty
-  void setSampleRate(@Nonnull ConstrainULong sampleRate);
+  void setSampleRate(@JsNonNull ConstrainULong sampleRate);
 
   @JsOverlay
   default void setSampleRate(final int sampleRate) {
@@ -303,7 +304,7 @@ public interface MediaTrackConstraintSet {
   ConstrainULong sampleSize();
 
   @JsProperty
-  void setSampleSize(@Nonnull ConstrainULong sampleSize);
+  void setSampleSize(@JsNonNull ConstrainULong sampleSize);
 
   @JsOverlay
   default void setSampleSize(final int sampleSize) {
@@ -321,7 +322,7 @@ public interface MediaTrackConstraintSet {
   ConstrainULong width();
 
   @JsProperty
-  void setWidth(@Nonnull ConstrainULong width);
+  void setWidth(@JsNonNull ConstrainULong width);
 
   @JsOverlay
   default void setWidth(final int width) {
@@ -339,7 +340,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDOMString cursor();
 
   @JsProperty
-  void setCursor(@Nonnull ConstrainDOMString cursor);
+  void setCursor(@JsNonNull ConstrainDOMString cursor);
 
   @JsOverlay
   default void setCursor(@Nonnull final String cursor) {
@@ -367,7 +368,7 @@ public interface MediaTrackConstraintSet {
   ConstrainDOMString displaySurface();
 
   @JsProperty
-  void setDisplaySurface(@Nonnull ConstrainDOMString displaySurface);
+  void setDisplaySurface(@JsNonNull ConstrainDOMString displaySurface);
 
   @JsOverlay
   default void setDisplaySurface(@Nonnull final String displaySurface) {
@@ -395,7 +396,7 @@ public interface MediaTrackConstraintSet {
   ConstrainBoolean logicalSurface();
 
   @JsProperty
-  void setLogicalSurface(@Nonnull ConstrainBoolean logicalSurface);
+  void setLogicalSurface(@JsNonNull ConstrainBoolean logicalSurface);
 
   @JsOverlay
   default void setLogicalSurface(final boolean logicalSurface) {
@@ -413,7 +414,7 @@ public interface MediaTrackConstraintSet {
   ConstrainBoolean restrictOwnAudio();
 
   @JsProperty
-  void setRestrictOwnAudio(@Nonnull ConstrainBoolean restrictOwnAudio);
+  void setRestrictOwnAudio(@JsNonNull ConstrainBoolean restrictOwnAudio);
 
   @JsOverlay
   default void setRestrictOwnAudio(final boolean restrictOwnAudio) {
@@ -431,7 +432,7 @@ public interface MediaTrackConstraintSet {
   ConstrainBoolean suppressLocalAudioPlayback();
 
   @JsProperty
-  void setSuppressLocalAudioPlayback(@Nonnull ConstrainBoolean suppressLocalAudioPlayback);
+  void setSuppressLocalAudioPlayback(@JsNonNull ConstrainBoolean suppressLocalAudioPlayback);
 
   @JsOverlay
   default void setSuppressLocalAudioPlayback(final boolean suppressLocalAudioPlayback) {

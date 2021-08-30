@@ -4,6 +4,7 @@ import akasha.StringOrUUIDArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -69,11 +70,11 @@ public interface AllowedBluetoothDevice {
   @JsProperty(
       name = "allowedManufacturerData"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Double> allowedManufacturerData();
 
   @JsProperty
-  void setAllowedManufacturerData(@Nonnull JsArray<Double> allowedManufacturerData);
+  void setAllowedManufacturerData(@JsNonNull JsArray<Double> allowedManufacturerData);
 
   @JsOverlay
   default void setAllowedManufacturerData(@Nonnull final double... allowedManufacturerData) {
@@ -83,11 +84,11 @@ public interface AllowedBluetoothDevice {
   @JsProperty(
       name = "allowedServices"
   )
-  @Nonnull
+  @JsNonNull
   StringOrUUIDArrayUnion allowedServices();
 
   @JsProperty
-  void setAllowedServices(@Nonnull StringOrUUIDArrayUnion allowedServices);
+  void setAllowedServices(@JsNonNull StringOrUUIDArrayUnion allowedServices);
 
   @JsOverlay
   default void setAllowedServices(@Nonnull final String allowedServices) {
@@ -107,11 +108,11 @@ public interface AllowedBluetoothDevice {
   @JsProperty(
       name = "deviceId"
   )
-  @Nonnull
+  @JsNonNull
   String deviceId();
 
   @JsProperty
-  void setDeviceId(@Nonnull String deviceId);
+  void setDeviceId(@JsNonNull String deviceId);
 
   @JsProperty(
       name = "mayUseGATT"

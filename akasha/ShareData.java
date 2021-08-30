@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ShareData {
   JsArray<File> files();
 
   @JsProperty
-  void setFiles(@Nonnull JsArray<File> files);
+  void setFiles(@JsNonNull JsArray<File> files);
 
   @JsOverlay
   default void setFiles(@Nonnull final File... files) {
@@ -42,7 +43,7 @@ public interface ShareData {
   String text();
 
   @JsProperty
-  void setText(@Nonnull String text);
+  void setText(@JsNonNull String text);
 
   @JsProperty(
       name = "title"
@@ -50,7 +51,7 @@ public interface ShareData {
   String title();
 
   @JsProperty
-  void setTitle(@Nonnull String title);
+  void setTitle(@JsNonNull String title);
 
   @JsProperty(
       name = "url"
@@ -58,7 +59,7 @@ public interface ShareData {
   String url();
 
   @JsProperty
-  void setUrl(@Nonnull String url);
+  void setUrl(@JsNonNull String url);
 
   @Generated("org.realityforge.webtack")
   @JsType(

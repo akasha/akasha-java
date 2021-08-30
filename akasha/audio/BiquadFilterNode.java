@@ -3,12 +3,13 @@ package akasha.audio;
 import akasha.core.Float32Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The BiquadFilterNode interface represents a simple low-order filter, and is created using the BaseAudioContext/createBiquadFilter method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers.
+ * The BiquadFilterNode interface represents a simple low-order filter, and is created using the BaseAudioContext/createBiquadFilter method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers. A BiquadFilterNode always has exactly one input and one output.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode">BiquadFilterNode - MDN</a>
  * @see <a href="https://webaudio.github.io/web-audio-api/#BiquadFilterNode"># BiquadFilterNode</a>
@@ -26,7 +27,7 @@ public class BiquadFilterNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/type">BiquadFilterNode.type - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-type">type - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   @BiquadFilterType
   public String type;
 

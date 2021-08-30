@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,16 +29,16 @@ public interface TokenBinding {
   String id();
 
   @JsProperty
-  void setId(@Nonnull String id);
+  void setId(@JsNonNull String id);
 
   @JsProperty(
       name = "status"
   )
-  @Nonnull
+  @JsNonNull
   String status();
 
   @JsProperty
-  void setStatus(@Nonnull String status);
+  void setStatus(@JsNonNull String status);
 
   @Generated("org.realityforge.webtack")
   @JsType(

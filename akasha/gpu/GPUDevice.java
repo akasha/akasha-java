@@ -5,7 +5,8 @@ import akasha.EventTarget;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,10 +20,10 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUDevice"
 )
 public class GPUDevice extends EventTarget {
-  @Nullable
+  @JsNullable
   public String label;
 
-  @Nullable
+  @JsNullable
   public EventHandler onuncapturederror;
 
   protected GPUDevice() {
@@ -52,69 +53,69 @@ public class GPUDevice extends EventTarget {
   @Nonnull
   public native GPUQueue queue();
 
-  @Nonnull
+  @JsNonNull
   public native GPUBindGroup createBindGroup(@Nonnull GPUBindGroupDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUBindGroupLayout createBindGroupLayout(
       @Nonnull GPUBindGroupLayoutDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUBuffer createBuffer(@Nonnull GPUBufferDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUCommandEncoder createCommandEncoder(
       @Nonnull GPUCommandEncoderDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUCommandEncoder createCommandEncoder();
 
-  @Nonnull
+  @JsNonNull
   public native GPUComputePipeline createComputePipeline(
       @Nonnull GPUComputePipelineDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPUComputePipeline> createComputePipelineAsync(
       @Nonnull GPUComputePipelineDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUPipelineLayout createPipelineLayout(
       @Nonnull GPUPipelineLayoutDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUQuerySet createQuerySet(@Nonnull GPUQuerySetDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPURenderBundleEncoder createRenderBundleEncoder(
       @Nonnull GPURenderBundleEncoderDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPURenderPipeline createRenderPipeline(
       @Nonnull GPURenderPipelineDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPURenderPipeline> createRenderPipelineAsync(
       @Nonnull GPURenderPipelineDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUSampler createSampler(@Nonnull GPUSamplerDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUSampler createSampler();
 
-  @Nonnull
+  @JsNonNull
   public native GPUShaderModule createShaderModule(@Nonnull GPUShaderModuleDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native GPUTexture createTexture(@Nonnull GPUTextureDescriptor descriptor);
 
   public native void destroy();
 
-  @Nonnull
+  @JsNonNull
   public native GPUExternalTexture importExternalTexture(
       @Nonnull GPUExternalTextureDescriptor descriptor);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPUError> popErrorScope();
 
   public native void pushErrorScope(@GPUErrorFilter @Nonnull String filter);

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The MediaKeyMessageEvent interface of the EncryptedMediaExtensions API contains the content and related data when the content decryption module generates a message for the session.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent">MediaKeyMessageEvent - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeymessageevent">MediaKeyMessageEvent - Encrypted Media Extensions</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#mediakeymessageevent"># mediakeymessageevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

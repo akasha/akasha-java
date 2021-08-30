@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * A DOMQuad is a collection of four DOMPoints defining the corners of an arbitrary quadrilateral. Returning DOMQuads lets getBoxQuads() return accurate information even when arbitrary 2D or 3D transforms are present. It has a handy bounds attribute returning a DOMRectReadOnly for those cases where you just want an axis-aligned bounding rectangle.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad">DOMQuad - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMQuad">DOMQuad - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMQuad">(Geometry Interfaces 1) # DOMQuad</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -61,21 +62,21 @@ public class DOMQuad extends JsObject {
   @Nonnull
   public native DOMPoint p4();
 
-  @Nonnull
+  @JsNonNull
   public static native DOMQuad fromQuad(@Nonnull DOMQuadInit other);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMQuad fromQuad();
 
-  @Nonnull
+  @JsNonNull
   public static native DOMQuad fromRect(@Nonnull DOMRectInit other);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMQuad fromRect();
 
-  @Nonnull
+  @JsNonNull
   public native DOMRect getBounds();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

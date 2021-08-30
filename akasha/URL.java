@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.media.MediaSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,7 +28,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hash">URL.hash - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-hash">URL.hash - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hash;
 
   /**
@@ -36,7 +37,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/host">URL.host - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-host">URL.host - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String host;
 
   /**
@@ -45,7 +46,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname">URL.hostname - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-hostname">URL.hostname - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hostname;
 
   /**
@@ -54,7 +55,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/href">URL.href - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-href">URL.href - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String href;
 
   /**
@@ -63,7 +64,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/password">URL.password - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-password">URL.password - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String password;
 
   /**
@@ -72,7 +73,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname">URL.pathname - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-pathname">URL.pathname - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String pathname;
 
   /**
@@ -81,7 +82,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/port">URL.port - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-port">URL.port - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String port;
 
   /**
@@ -90,7 +91,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol">URL.protocol - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-protocol">protocol - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String protocol;
 
   /**
@@ -99,7 +100,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/search">URL.search - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-search">URL.search - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String search;
 
   /**
@@ -108,7 +109,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/username">URL.username - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-username">username - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public String username;
 
   /**
@@ -157,7 +158,7 @@ public class URL extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/toJSON">URL.toJSON - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-url-tojson">toJSON() - URL</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toJSON();
 
   /**
@@ -174,7 +175,7 @@ public class URL extends JsObject {
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">createObjectURL() - File API</a>
    * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">URL - Media Source Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String createObjectURL(@Nonnull Blob blob);
 
   /**
@@ -184,6 +185,6 @@ public class URL extends JsObject {
    * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">createObjectURL() - File API</a>
    * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">URL - Media Source Extensions</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String createObjectURL(@Nonnull MediaSource mediaSource);
 }

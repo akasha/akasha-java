@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +37,11 @@ public interface GPUBindGroupLayoutEntry {
       name = "visibility"
   )
   @GPUShaderStageFlags
-  @Nonnull
+  @JsNonNull
   int visibility();
 
   @JsProperty
-  void setVisibility(@GPUShaderStageFlags @Nonnull int visibility);
+  void setVisibility(@GPUShaderStageFlags @JsNonNull int visibility);
 
   @JsProperty(
       name = "buffer"
@@ -48,7 +49,7 @@ public interface GPUBindGroupLayoutEntry {
   GPUBufferBindingLayout buffer();
 
   @JsProperty
-  void setBuffer(@Nonnull GPUBufferBindingLayout buffer);
+  void setBuffer(@JsNonNull GPUBufferBindingLayout buffer);
 
   @JsProperty(
       name = "externalTexture"
@@ -56,7 +57,7 @@ public interface GPUBindGroupLayoutEntry {
   GPUExternalTextureBindingLayout externalTexture();
 
   @JsProperty
-  void setExternalTexture(@Nonnull GPUExternalTextureBindingLayout externalTexture);
+  void setExternalTexture(@JsNonNull GPUExternalTextureBindingLayout externalTexture);
 
   @JsProperty(
       name = "sampler"
@@ -64,7 +65,7 @@ public interface GPUBindGroupLayoutEntry {
   GPUSamplerBindingLayout sampler();
 
   @JsProperty
-  void setSampler(@Nonnull GPUSamplerBindingLayout sampler);
+  void setSampler(@JsNonNull GPUSamplerBindingLayout sampler);
 
   @JsProperty(
       name = "storageTexture"
@@ -72,7 +73,7 @@ public interface GPUBindGroupLayoutEntry {
   GPUStorageTextureBindingLayout storageTexture();
 
   @JsProperty
-  void setStorageTexture(@Nonnull GPUStorageTextureBindingLayout storageTexture);
+  void setStorageTexture(@JsNonNull GPUStorageTextureBindingLayout storageTexture);
 
   @JsProperty(
       name = "texture"
@@ -80,7 +81,7 @@ public interface GPUBindGroupLayoutEntry {
   GPUTextureBindingLayout texture();
 
   @JsProperty
-  void setTexture(@Nonnull GPUTextureBindingLayout texture);
+  void setTexture(@JsNonNull GPUTextureBindingLayout texture);
 
   @Generated("org.realityforge.webtack")
   @JsType(

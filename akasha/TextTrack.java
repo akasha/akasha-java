@@ -4,6 +4,8 @@ import akasha.media.SourceBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +31,11 @@ public class TextTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/mode">TextTrack.mode - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-texttrack-mode">mode - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @TextTrackMode
   public String mode;
 
-  @Nullable
+  @JsNullable
   public EventHandler oncuechange;
 
   protected TextTrack() {

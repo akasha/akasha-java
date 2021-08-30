@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * A VideoPlaybackQuality object is returned by the HTMLVideoElement.getVideoPlaybackQuality() method and contains metrics that can be used to determine the playback quality of a video.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality">VideoPlaybackQuality - MDN</a>
- * @see <a href="https://w3c.github.io/media-playback-quality/#idl-def-videoplaybackquality">VideoPlaybackQuality - Media Playback Quality</a>
+ * @see <a href="https://w3c.github.io/media-playback-quality/#videoplaybackquality-interface"># videoplaybackquality-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

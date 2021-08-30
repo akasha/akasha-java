@@ -9,7 +9,8 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,16 +30,16 @@ import jsinterop.base.Js;
     name = "BluetoothRemoteGATTService"
 )
 public class BluetoothRemoteGATTService extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler oncharacteristicvaluechanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler onserviceadded;
 
-  @Nullable
+  @JsNullable
   public EventHandler onservicechanged;
 
-  @Nullable
+  @JsNullable
   public EventHandler onserviceremoved;
 
   protected BluetoothRemoteGATTService() {
@@ -85,7 +86,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">getCharacteristic() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
       @Nonnull BluetoothCharacteristicUUID characteristic);
 
@@ -95,7 +96,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">getCharacteristic() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
       @Nonnull String characteristic);
 
@@ -105,7 +106,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristic">getCharacteristic() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(int characteristic);
 
   /**
@@ -114,7 +115,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       @Nonnull BluetoothCharacteristicUUID characteristic);
 
@@ -124,7 +125,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       @Nonnull String characteristic);
 
@@ -134,7 +135,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       int characteristic);
 
@@ -144,7 +145,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics">getCharacteristics() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics();
 
   /**
@@ -153,7 +154,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">getIncludedService() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(
       @Nonnull BluetoothServiceUUID service);
 
@@ -163,7 +164,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">getIncludedService() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
 
   /**
@@ -172,7 +173,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice">getIncludedService() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(int service);
 
   /**
@@ -181,7 +182,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull BluetoothServiceUUID service);
 
@@ -191,7 +192,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull String service);
 
@@ -201,7 +202,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);
 
   /**
@@ -210,7 +211,7 @@ public class BluetoothRemoteGATTService extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
    * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservices">getIncludedServices() - Web Bluetooth</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();
 
   @JsOverlay

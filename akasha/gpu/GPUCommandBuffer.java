@@ -4,7 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUCommandBuffer"
 )
 public class GPUCommandBuffer extends JsObject {
-  @Nullable
+  @JsNullable
   public String label;
 
   protected GPUCommandBuffer() {

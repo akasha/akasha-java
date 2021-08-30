@@ -2,7 +2,7 @@ package akasha.speech;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SpeechGrammar interface of the Web Speech API represents a set of words or patterns of words that we want the recognition service to recognize.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar">SpeechGrammar - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-speechgrammar">SpeechGrammar - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-speechgrammar"># speechreco-speechgrammar</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,7 +25,7 @@ public class SpeechGrammar extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/src">SpeechGrammar.src - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechgrammar-src">src - Web Speech API</a>
    */
-  @Nonnull
+  @JsNonNull
   public String src;
 
   /**

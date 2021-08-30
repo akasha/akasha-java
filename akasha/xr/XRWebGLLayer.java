@@ -4,15 +4,16 @@ import akasha.gl.WebGLFramebuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device. In particular, it provides access to the WebGL framebuffer and viewport to ease access to the context.The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device.Although XRWebGLLayer is currently the only type of framebuffer layer supported by WebGL, it's entirely possible that future updates to the WebXR specification may allow for other layer types and corresponding image sources.
+ * The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device. In particular, it provides access to the WebGL framebuffer and viewport to ease access to the context.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer">XRWebGLLayer - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrwebgllayer-interface">XRWebGLLayer - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrwebgllayer-interface"># xrwebgllayer-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -111,6 +112,6 @@ public class XRWebGLLayer extends XRLayer {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport">XRWebGLLayer.getViewport - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-getviewport">XRWebGLLayer.getViewport() - WebXR Device API</a>
    */
-  @Nullable
+  @JsNullable
   public native XRViewport getViewport(@Nonnull XRView view);
 }

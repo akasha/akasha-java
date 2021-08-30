@@ -2,7 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +26,11 @@ public interface TrackEventInit extends EventInit {
   @JsProperty(
       name = "track"
   )
-  @Nullable
+  @JsNullable
   VideoTrackOrAudioTrackOrTextTrackUnion track();
 
   @JsProperty
-  void setTrack(@Nullable VideoTrackOrAudioTrackOrTextTrackUnion track);
+  void setTrack(@JsNullable VideoTrackOrAudioTrackOrTextTrackUnion track);
 
   @JsOverlay
   default void setTrack(@Nonnull final VideoTrack track) {

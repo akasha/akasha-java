@@ -5,6 +5,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -29,7 +30,7 @@ public class MessagePort extends EventTarget implements MessageEventSource, Tran
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage">MessagePort.onmessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#handler-messageport-onmessage">onmessage - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
   /**
@@ -38,7 +39,7 @@ public class MessagePort extends EventTarget implements MessageEventSource, Tran
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessageerror">MessagePort.onmessageerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#handler-messageport-onmessageerror">onmessageerror - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessageerror;
 
   protected MessagePort() {

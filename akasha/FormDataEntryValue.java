@@ -25,4 +25,24 @@ public interface FormDataEntryValue {
   static FormDataEntryValue of(@Nonnull final String value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isFile() {
+    return ( (Object) this ) instanceof File;
+  }
+
+  @JsOverlay
+  default File asFile() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

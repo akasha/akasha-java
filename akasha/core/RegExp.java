@@ -2,8 +2,9 @@ package akasha.core;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -128,7 +129,7 @@ public class RegExp extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">RegExp.exec - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-regexp.prototype.exec">(ECMAScript) # sec-regexp.prototype.exec</a>
    */
-  @Nullable
+  @JsNullable
   public native RegExpResult exec(@Nonnull String text);
 
   /**
@@ -148,6 +149,6 @@ public class RegExp extends JsObject {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 }

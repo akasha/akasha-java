@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +28,11 @@ public interface InputEventInit extends UIEventInit {
   @JsProperty(
       name = "data"
   )
-  @Nullable
+  @JsNullable
   String data();
 
   @JsProperty
-  void setData(@Nullable String data);
+  void setData(@JsNullable String data);
 
   @JsProperty(
       name = "inputType"
@@ -38,7 +40,7 @@ public interface InputEventInit extends UIEventInit {
   String inputType();
 
   @JsProperty
-  void setInputType(@Nonnull String inputType);
+  void setInputType(@JsNonNull String inputType);
 
   @JsProperty(
       name = "isComposing"

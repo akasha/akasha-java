@@ -4,6 +4,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface PopStateEventInit extends EventInit {
   @JsProperty(
       name = "state"
   )
-  @Nullable
+  @JsNullable
   Any state();
 
   @JsProperty
-  void setState(@DoNotAutobox @Nullable Object state);
+  void setState(@DoNotAutobox @JsNullable Object state);
 
   @Generated("org.realityforge.webtack")
   @JsType(

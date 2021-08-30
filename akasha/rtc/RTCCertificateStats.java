@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,29 +28,29 @@ public interface RTCCertificateStats extends RTCStats {
   @JsProperty(
       name = "base64Certificate"
   )
-  @Nonnull
+  @JsNonNull
   String base64Certificate();
 
   @JsProperty
-  void setBase64Certificate(@Nonnull String base64Certificate);
+  void setBase64Certificate(@JsNonNull String base64Certificate);
 
   @JsProperty(
       name = "fingerprint"
   )
-  @Nonnull
+  @JsNonNull
   String fingerprint();
 
   @JsProperty
-  void setFingerprint(@Nonnull String fingerprint);
+  void setFingerprint(@JsNonNull String fingerprint);
 
   @JsProperty(
       name = "fingerprintAlgorithm"
   )
-  @Nonnull
+  @JsNonNull
   String fingerprintAlgorithm();
 
   @JsProperty
-  void setFingerprintAlgorithm(@Nonnull String fingerprintAlgorithm);
+  void setFingerprintAlgorithm(@JsNonNull String fingerprintAlgorithm);
 
   @JsProperty(
       name = "issuerCertificateId"
@@ -57,7 +58,7 @@ public interface RTCCertificateStats extends RTCStats {
   String _issuerCertificateId();
 
   @JsProperty
-  void setIssuerCertificateId(@Nonnull String issuerCertificateId);
+  void setIssuerCertificateId(@JsNonNull String issuerCertificateId);
 
   @Generated("org.realityforge.webtack")
   @JsType(

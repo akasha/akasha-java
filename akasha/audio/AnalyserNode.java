@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
  * The AnalyserNode interface represents a node able to provide real-time frequency and time-domain analysis information. It is an AudioNode that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode">AnalyserNode - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AnalyserNode"># AnalyserNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -8,6 +8,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,124 +34,124 @@ import jsinterop.base.Js;
     name = "Element"
 )
 public class Element extends Node {
-  @Nonnull
+  @JsNonNull
   public String ariaAtomic;
 
-  @Nonnull
+  @JsNonNull
   public String ariaAutoComplete;
 
-  @Nonnull
+  @JsNonNull
   public String ariaBusy;
 
-  @Nonnull
+  @JsNonNull
   public String ariaChecked;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColCount;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColIndex;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColIndexText;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColSpan;
 
-  @Nonnull
+  @JsNonNull
   public String ariaCurrent;
 
-  @Nonnull
+  @JsNonNull
   public String ariaDescription;
 
-  @Nonnull
+  @JsNonNull
   public String ariaDisabled;
 
-  @Nonnull
+  @JsNonNull
   public String ariaExpanded;
 
-  @Nonnull
+  @JsNonNull
   public String ariaHasPopup;
 
-  @Nonnull
+  @JsNonNull
   public String ariaHidden;
 
-  @Nonnull
+  @JsNonNull
   public String ariaInvalid;
 
-  @Nonnull
+  @JsNonNull
   public String ariaKeyShortcuts;
 
-  @Nonnull
+  @JsNonNull
   public String ariaLabel;
 
-  @Nonnull
+  @JsNonNull
   public String ariaLevel;
 
-  @Nonnull
+  @JsNonNull
   public String ariaLive;
 
-  @Nonnull
+  @JsNonNull
   public String ariaModal;
 
-  @Nonnull
+  @JsNonNull
   public String ariaMultiLine;
 
-  @Nonnull
+  @JsNonNull
   public String ariaMultiSelectable;
 
-  @Nonnull
+  @JsNonNull
   public String ariaOrientation;
 
-  @Nonnull
+  @JsNonNull
   public String ariaPlaceholder;
 
-  @Nonnull
+  @JsNonNull
   public String ariaPosInSet;
 
-  @Nonnull
+  @JsNonNull
   public String ariaPressed;
 
-  @Nonnull
+  @JsNonNull
   public String ariaReadOnly;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRequired;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRoleDescription;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowCount;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowIndex;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowIndexText;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowSpan;
 
-  @Nonnull
+  @JsNonNull
   public String ariaSelected;
 
-  @Nonnull
+  @JsNonNull
   public String ariaSetSize;
 
-  @Nonnull
+  @JsNonNull
   public String ariaSort;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueMax;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueMin;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueNow;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueText;
 
   /**
@@ -160,7 +162,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/dom/#dom-element-classname">element.className - DOM4</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176">element.className - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public String className;
 
   /**
@@ -171,7 +173,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-63534901">id - Document Object Model (DOM) Level 2 HTML Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-63534901">id - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public String id;
 
   /**
@@ -179,7 +181,7 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">Element.innerHTML - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String innerHTML;
 
   /**
@@ -188,7 +190,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/onfullscreenchange">Element.onfullscreenchange - MDN</a>
    * @see <a href="https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange">onfullscreenchange - Fullscreen API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onfullscreenchange;
 
   /**
@@ -197,7 +199,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/onfullscreenerror">Element.onfullscreenerror - MDN</a>
    * @see <a href="https://fullscreen.spec.whatwg.org/#dom-element-onfullscreenerror">onfullscreenerror - Fullscreen API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onfullscreenerror;
 
   /**
@@ -205,10 +207,10 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML">Element.outerHTML - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String outerHTML;
 
-  @Nullable
+  @JsNullable
   public String role;
 
   /**
@@ -233,7 +235,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/slot">Element.slot - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-slot">slot - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public String slot;
 
   protected Element() {
@@ -475,7 +477,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow">Element.attachShadow - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-attachshadow">attachShadow() - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ShadowRoot attachShadow(@Nonnull ShadowRootInit init);
 
   /**
@@ -485,7 +487,7 @@ public class Element extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-closest">Element.closest() - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element closest(@Nonnull String selectors);
 
   /**
@@ -495,7 +497,7 @@ public class Element extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattribute">getAttribute() - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String getAttribute(@Nonnull String qualifiedName);
 
   /**
@@ -507,7 +509,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/#ID-ElGetAttrNS">Element.getAttributeNS() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String getAttributeNS(@Nullable String namespace, @Nonnull String localName);
 
   /**
@@ -516,7 +518,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames">Element.getAttributeNames - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattributenames">Element.getAttributeNames - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<String> getAttributeNames();
 
   /**
@@ -526,7 +528,7 @@ public class Element extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattributenode">getAttributeNode() - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Attr getAttributeNode(@Nonnull String qualifiedName);
 
   /**
@@ -536,7 +538,7 @@ public class Element extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getattributenodens">getAttributeNodeNS() - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Attr getAttributeNodeNS(@Nullable String namespace, @Nonnull String localName);
 
   /**
@@ -546,7 +548,7 @@ public class Element extends Node {
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">Element.getElementsByClassName() - DOM</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native HTMLCollection getElementsByClassName(@Nonnull String classNames);
 
   /**
@@ -559,7 +561,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1938918D">Element.getElementsByTagName() - Document Object Model (DOM) Level 1 Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native HTMLCollection getElementsByTagName(@Nonnull String qualifiedName);
 
   /**
@@ -571,7 +573,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">Element.getElementsByTagNameNS() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native HTMLCollection getElementsByTagNameNS(@Nullable String namespace,
       @Nonnull String localName);
 
@@ -610,7 +612,7 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement">Element.insertAdjacentElement - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Element insertAdjacentElement(@Nonnull String where, @Nonnull Element element);
 
   /**
@@ -647,7 +649,7 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNode">Element.removeAttributeNode - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Attr removeAttributeNode(@Nonnull Attr attr);
 
   /**
@@ -672,7 +674,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode">Element.setAttributeNode - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-element-setattributenode">setAttributeNode() - DOM</a>
    */
-  @Nullable
+  @JsNullable
   public native Attr setAttributeNode(@Nonnull Attr attr);
 
   /**
@@ -680,7 +682,7 @@ public class Element extends Node {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS">Element.setAttributeNodeNS - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Attr setAttributeNodeNS(@Nonnull Attr attr);
 
   /**
@@ -700,7 +702,7 @@ public class Element extends Node {
   @HasNoSideEffects
   public native boolean webkitMatchesSelector(@Nonnull String selectors);
 
-  @Nullable
+  @JsNullable
   public native CSSPseudoElement pseudo(@Nonnull String type);
 
   /**
@@ -709,7 +711,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">Element.getBoundingClientRect - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect">Element.getBoundingClientRect() - CSS Object Model (CSSOM) View Module</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMRect getBoundingClientRect();
 
   /**
@@ -718,7 +720,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getClientRects">Element.getClientRects - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom-view/#dom-element-getclientrects">Element.getClientRects() - CSS Object Model (CSSOM) View Module</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMRectList getClientRects();
 
   /**
@@ -858,7 +860,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen">Element.requestFullscreen - MDN</a>
    * @see <a href="https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen">Element.requestFullscreen() - Fullscreen API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> requestFullscreen(@Nonnull FullscreenOptions options);
 
   /**
@@ -867,7 +869,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen">Element.requestFullscreen - MDN</a>
    * @see <a href="https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen">Element.requestFullscreen() - Fullscreen API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> requestFullscreen();
 
   /**
@@ -907,7 +909,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/selectors-api/#queryselectorall">querySelectorAll() - Selectors API Level 1</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element querySelector(@Nonnull String selectors);
 
   /**
@@ -920,7 +922,7 @@ public class Element extends Node {
    * @see <a href="https://www.w3.org/TR/selectors-api/#interface-definitions">document.querySelector() - Selectors API Level 1</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native NodeList querySelectorAll(@Nonnull String selectors);
 
   /**
@@ -944,7 +946,7 @@ public class Element extends Node {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Animation animate(@Nullable JsObject keyframes, double options);
 
   /**
@@ -954,7 +956,7 @@ public class Element extends Node {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Animation animate(@Nullable JsObject keyframes,
       @Nonnull KeyframeAnimationOptions options);
 
@@ -965,7 +967,7 @@ public class Element extends Node {
    * @see <a href="https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite">KeyframeAnimationOptions.iterationComposite - Web Animations Level 2</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#animatable">animate() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Animation animate(@Nullable JsObject keyframes);
 
   /**
@@ -974,7 +976,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Animation> getAnimations(@Nonnull GetAnimationsOptions options);
 
   /**
@@ -983,7 +985,7 @@ public class Element extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-animatable-getanimations">Animatable.getAnimations() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Animation> getAnimations();
 
   /**
@@ -1309,36 +1311,36 @@ public class Element extends Node {
   }
 
   @JsOverlay
-  public final void addClickListener(@Nonnull final MouseEventListener callback,
+  public final void addClickListener(@Nonnull final PointerEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "click", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void addClickListener(@Nonnull final MouseEventListener callback,
+  public final void addClickListener(@Nonnull final PointerEventListener callback,
       final boolean useCapture) {
     addEventListener( "click", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void addClickListener(@Nonnull final MouseEventListener callback) {
+  public final void addClickListener(@Nonnull final PointerEventListener callback) {
     addEventListener( "click", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public final void removeClickListener(@Nonnull final MouseEventListener callback,
+  public final void removeClickListener(@Nonnull final PointerEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "click", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void removeClickListener(@Nonnull final MouseEventListener callback,
+  public final void removeClickListener(@Nonnull final PointerEventListener callback,
       final boolean useCapture) {
     removeEventListener( "click", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void removeClickListener(@Nonnull final MouseEventListener callback) {
+  public final void removeClickListener(@Nonnull final PointerEventListener callback) {
     removeEventListener( "click", Js.cast( callback ) );
   }
 
@@ -1448,36 +1450,36 @@ public class Element extends Node {
   }
 
   @JsOverlay
-  public final void addContextmenuListener(@Nonnull final MouseEventListener callback,
+  public final void addContextmenuListener(@Nonnull final PointerEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "contextmenu", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void addContextmenuListener(@Nonnull final MouseEventListener callback,
+  public final void addContextmenuListener(@Nonnull final PointerEventListener callback,
       final boolean useCapture) {
     addEventListener( "contextmenu", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void addContextmenuListener(@Nonnull final MouseEventListener callback) {
+  public final void addContextmenuListener(@Nonnull final PointerEventListener callback) {
     addEventListener( "contextmenu", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public final void removeContextmenuListener(@Nonnull final MouseEventListener callback,
+  public final void removeContextmenuListener(@Nonnull final PointerEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "contextmenu", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public final void removeContextmenuListener(@Nonnull final MouseEventListener callback,
+  public final void removeContextmenuListener(@Nonnull final PointerEventListener callback,
       final boolean useCapture) {
     removeEventListener( "contextmenu", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
-  public final void removeContextmenuListener(@Nonnull final MouseEventListener callback) {
+  public final void removeContextmenuListener(@Nonnull final PointerEventListener callback) {
     removeEventListener( "contextmenu", Js.cast( callback ) );
   }
 

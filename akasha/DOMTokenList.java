@@ -7,8 +7,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +34,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/value">DOMTokenList.value - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-value">value - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public String value;
 
   protected DOMTokenList() {
@@ -115,7 +116,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://dom.spec.whatwg.org/#dom-domtokenlist-item">item() - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String item(int index);
 
   /**
@@ -125,7 +126,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">keys() (as iterable&lt;Node&gt;) - DOM</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> keys();
 
   /**
@@ -135,7 +136,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">values() (as iterable&lt;Node&gt;) - DOM</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   /**
@@ -145,7 +146,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">entries() (as iterable&lt;Node&gt;) - DOM</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
   /**
@@ -154,7 +155,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">forEach() (as iterable&lt;Node&gt;) - DOM</a>
    */
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
   /**
    * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
@@ -162,7 +163,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">forEach() (as iterable&lt;Node&gt;) - DOM</a>
    */
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
   /**
    * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
@@ -170,7 +171,7 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">forEach() (as iterable&lt;Node&gt;) - DOM</a>
    */
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -193,18 +194,18 @@ public class DOMTokenList extends JsObject implements JsIterable<DOMTokenList.En
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, int index);
+    void item(@JsNonNull String value, int index);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, int index, @Nonnull DOMTokenList iterable);
+    void item(@JsNonNull String value, int index, @JsNonNull DOMTokenList iterable);
   }
 }

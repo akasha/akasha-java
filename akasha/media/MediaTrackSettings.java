@@ -2,6 +2,7 @@ package akasha.media;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -107,7 +108,7 @@ public interface MediaTrackSettings {
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-deviceid">deviceId - Media Capture and Streams</a>
    */
   @JsProperty
-  void setDeviceId(@Nonnull String deviceId);
+  void setDeviceId(@JsNonNull String deviceId);
 
   /**
    * The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
@@ -147,7 +148,7 @@ public interface MediaTrackSettings {
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-facingmode">facingMode - Media Capture and Streams</a>
    */
   @JsProperty
-  void setFacingMode(@Nonnull String facingMode);
+  void setFacingMode(@JsNonNull String facingMode);
 
   /**
    * The MediaTrackSettings dictionary's frameRate property is a double-precision floating-point number indicating the frame rate, in frames per second, of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.frameRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
@@ -187,7 +188,7 @@ public interface MediaTrackSettings {
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-groupid">groupId - Media Capture and Streams</a>
    */
   @JsProperty
-  void setGroupId(@Nonnull String groupId);
+  void setGroupId(@JsNonNull String groupId);
 
   /**
    * The MediaTrackSettings dictionary's height property is an integer indicating the number of pixels tall MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.height property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
@@ -255,7 +256,7 @@ public interface MediaTrackSettings {
   String resizeMode();
 
   @JsProperty
-  void setResizeMode(@Nonnull String resizeMode);
+  void setResizeMode(@JsNonNull String resizeMode);
 
   /**
    * The MediaTrackSettings dictionary's sampleRate property is an integer indicating how many audio samples per second the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().
@@ -335,7 +336,7 @@ public interface MediaTrackSettings {
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksettings-cursor">MediaTrackSettings.cursor - Screen Capture</a>
    */
   @JsProperty
-  void setCursor(@Nonnull String cursor);
+  void setCursor(@JsNonNull String cursor);
 
   /**
    * The MediaTrackSettings dictionary's displaySurface property indicates the type of display surface being captured.
@@ -355,7 +356,7 @@ public interface MediaTrackSettings {
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediatrackconstraintset-displaysurface">MediaTrackSettings.displaySurface - Screen Capture</a>
    */
   @JsProperty
-  void setDisplaySurface(@Nonnull String displaySurface);
+  void setDisplaySurface(@JsNonNull String displaySurface);
 
   @JsProperty(
       name = "logicalSurface"

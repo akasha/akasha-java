@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -36,7 +37,7 @@ public class HTMLDialogElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#dom-dialog-returnvalue">returnvalue - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html51/interactive-elements.html#dom-htmldialogelement-returnvalue">returnvalue - HTML 5.1</a>
    */
-  @Nonnull
+  @JsNonNull
   public String returnValue;
 
   protected HTMLDialogElement() {

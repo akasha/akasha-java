@@ -11,10 +11,7 @@ import jsinterop.annotations.JsType;
  * The UIEvent interface represents simple user interface events.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent">UIEvent - MDN</a>
- * @see <a href="https://wicg.github.io/InputDeviceCapabilities/">InputDeviceCapabilities</a>
- * @see <a href="https://w3c.github.io/uievents/">UI Events</a>
- * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-UIEvent">UIEvent - Document Object Model (DOM) Level 3 Events Specification</a>
- * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">UIEvent - Document Object Model (DOM) Level 2 Events Specification</a>
+ * @see <a href="https://w3c.github.io/uievents/#idl-uievent"># idl-uievent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

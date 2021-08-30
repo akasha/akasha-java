@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,11 +34,11 @@ public interface AudioEncoderConfig {
   @JsProperty(
       name = "codec"
   )
-  @Nonnull
+  @JsNonNull
   String codec();
 
   @JsProperty
-  void setCodec(@Nonnull String codec);
+  void setCodec(@JsNonNull String codec);
 
   @JsProperty(
       name = "numberOfChannels"

@@ -2,7 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format.
+ * The EventSource interface is web content's interface to server-sent events.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource - MDN</a>
  * @see <a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface">(HTML) # the-eventsource-interface</a>
@@ -37,7 +37,7 @@ public class EventSource extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onerror">EventSource.onerror - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onerror">onerror - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
   /**
@@ -46,7 +46,7 @@ public class EventSource extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onmessage">EventSource.onmessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onmessage">onmessage - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessage;
 
   /**
@@ -55,7 +55,7 @@ public class EventSource extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onopen">EventSource.onopen - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onopen">onopen - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onopen;
 
   /**
@@ -152,6 +152,40 @@ public class EventSource extends EventTarget {
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
   }
 
   @JsOverlay

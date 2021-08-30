@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface CredentialRequestOptions {
   String mediation();
 
   @JsProperty
-  void setMediation(@CredentialMediationRequirement @Nonnull String mediation);
+  void setMediation(@CredentialMediationRequirement @JsNonNull String mediation);
 
   @JsProperty(
       name = "signal"
@@ -37,7 +38,7 @@ public interface CredentialRequestOptions {
   AbortSignal signal();
 
   @JsProperty
-  void setSignal(@Nonnull AbortSignal signal);
+  void setSignal(@JsNonNull AbortSignal signal);
 
   @JsProperty(
       name = "password"
@@ -53,7 +54,7 @@ public interface CredentialRequestOptions {
   FederatedCredentialRequestOptions federated();
 
   @JsProperty
-  void setFederated(@Nonnull FederatedCredentialRequestOptions federated);
+  void setFederated(@JsNonNull FederatedCredentialRequestOptions federated);
 
   @JsProperty(
       name = "publicKey"
@@ -61,7 +62,7 @@ public interface CredentialRequestOptions {
   PublicKeyCredentialRequestOptions publicKey();
 
   @JsProperty
-  void setPublicKey(@Nonnull PublicKeyCredentialRequestOptions publicKey);
+  void setPublicKey(@JsNonNull PublicKeyCredentialRequestOptions publicKey);
 
   @Generated("org.realityforge.webtack")
   @JsType(

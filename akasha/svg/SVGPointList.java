@@ -5,6 +5,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,25 +33,25 @@ public class SVGPointList extends JsObject {
   )
   public native int numberOfItems();
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint appendItem(@Nonnull DOMPoint newItem);
 
   public native void clear();
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint initialize(@Nonnull DOMPoint newItem);
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint insertItemBefore(@Nonnull DOMPoint newItem, int index);
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint removeItem(int index);
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint replaceItem(@Nonnull DOMPoint newItem, int index);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native DOMPoint getItem(int index);
 
   @JsOverlay

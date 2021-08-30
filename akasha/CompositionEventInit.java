@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface CompositionEventInit extends UIEventInit {
   String data();
 
   @JsProperty
-  void setData(@Nonnull String data);
+  void setData(@JsNonNull String data);
 
   @Generated("org.realityforge.webtack")
   @JsType(

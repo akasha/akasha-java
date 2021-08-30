@@ -3,6 +3,7 @@ package akasha.crypto;
 import akasha.core.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -35,11 +36,11 @@ public interface RsaKeyGenParams extends Algorithm {
   @JsProperty(
       name = "publicExponent"
   )
-  @Nonnull
+  @JsNonNull
   Uint8Array publicExponent();
 
   @JsProperty
-  void setPublicExponent(@Nonnull Uint8Array publicExponent);
+  void setPublicExponent(@JsNonNull Uint8Array publicExponent);
 
   @Generated("org.realityforge.webtack")
   @JsType(

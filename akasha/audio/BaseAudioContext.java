@@ -1,6 +1,9 @@
 package akasha.audio;
 
+import akasha.AddEventListenerOptions;
 import akasha.EventHandler;
+import akasha.EventListener;
+import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.core.ArrayBuffer;
 import akasha.lang.JsArray;
@@ -8,12 +11,16 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
- * The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively. You wouldn't use BaseAudioContext directly &mdash; you'd use its features via one of these two inheriting interfaces.The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively.
+ * The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively. You wouldn't use BaseAudioContext directly &mdash; you'd use its features via one of these two inheriting interfaces.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext">BaseAudioContext - MDN</a>
  * @see <a href="https://webaudio.github.io/web-audio-api/#BaseAudioContext"># BaseAudioContext</a>
@@ -25,7 +32,7 @@ import jsinterop.annotations.JsType;
     name = "BaseAudioContext"
 )
 public class BaseAudioContext extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onstatechange;
 
   protected BaseAudioContext() {
@@ -108,7 +115,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createAnalyser">BaseAudioContext.createAnalyser - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createanalyser">createAnalyser() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AnalyserNode createAnalyser();
 
   /**
@@ -117,7 +124,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter">BaseAudioContext.createBiquadFilter - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbiquadfilter">createBiquadFilter() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native BiquadFilterNode createBiquadFilter();
 
   /**
@@ -126,7 +133,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBuffer">BaseAudioContext.createBuffer - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbuffer">createBuffer() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioBuffer createBuffer(int numberOfChannels, int length, float sampleRate);
 
   /**
@@ -135,7 +142,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBufferSource">BaseAudioContext.createBufferSource - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbuffersource">createBufferSource() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioBufferSourceNode createBufferSource();
 
   /**
@@ -144,7 +151,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createChannelMerger">BaseAudioContext.createChannelMerger - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createchannelmerger">createChannelMerger() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ChannelMergerNode createChannelMerger(int numberOfInputs);
 
   /**
@@ -153,7 +160,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createChannelMerger">BaseAudioContext.createChannelMerger - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createchannelmerger">createChannelMerger() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ChannelMergerNode createChannelMerger();
 
   /**
@@ -162,7 +169,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter">BaseAudioContext.createChannelSplitter - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createchannelsplitter">createChannelSplitter() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ChannelSplitterNode createChannelSplitter(int numberOfOutputs);
 
   /**
@@ -171,7 +178,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter">BaseAudioContext.createChannelSplitter - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createchannelsplitter">createChannelSplitter() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ChannelSplitterNode createChannelSplitter();
 
   /**
@@ -180,7 +187,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createConstantSource">BaseAudioContext.createConstantSource - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createconstantsource">createConstantSource() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ConstantSourceNode createConstantSource();
 
   /**
@@ -189,7 +196,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createConvolver">BaseAudioContext.createConvolver - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createconvolver">createConvolver() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ConvolverNode createConvolver();
 
   /**
@@ -198,7 +205,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createDelay">BaseAudioContext.createDelay - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createdelay">createDelay() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DelayNode createDelay(double maxDelayTime);
 
   /**
@@ -207,7 +214,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createDelay">BaseAudioContext.createDelay - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createdelay">createDelay() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DelayNode createDelay();
 
   /**
@@ -216,7 +223,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor">BaseAudioContext.createDynamicsCompressor - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createdynamicscompressor">createDynamicsCompressor() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DynamicsCompressorNode createDynamicsCompressor();
 
   /**
@@ -225,7 +232,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createGain">BaseAudioContext.createGain - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-creategain">createGain() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native GainNode createGain();
 
   /**
@@ -233,7 +240,7 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IIRFilterNode createIIRFilter(@Nonnull JsArray<Double> feedforward,
       @Nonnull JsArray<Double> feedback);
 
@@ -242,7 +249,7 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IIRFilterNode createIIRFilter(@Nonnull double[] feedforward,
       @Nonnull JsArray<Double> feedback);
 
@@ -251,7 +258,7 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IIRFilterNode createIIRFilter(@Nonnull JsArray<Double> feedforward,
       @Nonnull double[] feedback);
 
@@ -260,7 +267,7 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IIRFilterNode createIIRFilter(@Nonnull double[] feedforward,
       @Nonnull double[] feedback);
 
@@ -270,7 +277,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createOscillator">BaseAudioContext.createOscillator - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createoscillator">createOscillator - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native OscillatorNode createOscillator();
 
   /**
@@ -279,7 +286,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPanner">BaseAudioContext.createPanner - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createpanner">createPanner() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PannerNode createPanner();
 
   /**
@@ -288,7 +295,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
       @Nonnull JsArray<Double> imag, @Nonnull PeriodicWaveConstraints constraints);
 
@@ -298,7 +305,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull double[] real,
       @Nonnull JsArray<Double> imag, @Nonnull PeriodicWaveConstraints constraints);
 
@@ -308,7 +315,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
       @Nonnull double[] imag, @Nonnull PeriodicWaveConstraints constraints);
 
@@ -318,7 +325,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag,
       @Nonnull PeriodicWaveConstraints constraints);
 
@@ -328,7 +335,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
       @Nonnull JsArray<Double> imag);
 
@@ -338,7 +345,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull double[] real,
       @Nonnull JsArray<Double> imag);
 
@@ -348,7 +355,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
       @Nonnull double[] imag);
 
@@ -358,7 +365,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag);
 
   /**
@@ -367,7 +374,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor">BaseAudioContext.createScriptProcessor - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">createScriptProcessor - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ScriptProcessorNode createScriptProcessor(int bufferSize, int numberOfInputChannels,
       int numberOfOutputChannels);
 
@@ -377,7 +384,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor">BaseAudioContext.createScriptProcessor - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">createScriptProcessor - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ScriptProcessorNode createScriptProcessor(int bufferSize,
       int numberOfInputChannels);
 
@@ -387,7 +394,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor">BaseAudioContext.createScriptProcessor - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">createScriptProcessor - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ScriptProcessorNode createScriptProcessor(int bufferSize);
 
   /**
@@ -396,7 +403,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor">BaseAudioContext.createScriptProcessor - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">createScriptProcessor - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native ScriptProcessorNode createScriptProcessor();
 
   /**
@@ -405,7 +412,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createStereoPanner">BaseAudioContext.createStereoPanner - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createstereopanner">createStereoPanner() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native StereoPannerNode createStereoPanner();
 
   /**
@@ -414,7 +421,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createWaveShaper">BaseAudioContext.createWaveShaper - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createwaveshaper">createWaveShaper() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native WaveShaperNode createWaveShaper();
 
   /**
@@ -423,7 +430,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/decodeAudioData">BaseAudioContext.decodeAudioData - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-decodeaudiodata">decodeAudioData() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<AudioBuffer> decodeAudioData(@Nonnull ArrayBuffer audioData,
       @Nullable DecodeSuccessCallback successCallback, @Nullable DecodeErrorCallback errorCallback);
 
@@ -433,7 +440,7 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/decodeAudioData">BaseAudioContext.decodeAudioData - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-decodeaudiodata">decodeAudioData() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<AudioBuffer> decodeAudioData(@Nonnull ArrayBuffer audioData,
       @Nullable DecodeSuccessCallback successCallback);
 
@@ -443,6 +450,40 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/decodeAudioData">BaseAudioContext.decodeAudioData - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-decodeaudiodata">decodeAudioData() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<AudioBuffer> decodeAudioData(@Nonnull ArrayBuffer audioData);
+
+  @JsOverlay
+  public final void addStatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "statechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addStatechangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "statechange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addStatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "statechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeStatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "statechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeStatechangeListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "statechange", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeStatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "statechange", Js.cast( callback ) );
+  }
 }

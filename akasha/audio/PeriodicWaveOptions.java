@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   JsArray<Double> imag();
 
   @JsProperty
-  void setImag(@Nonnull JsArray<Double> imag);
+  void setImag(@JsNonNull JsArray<Double> imag);
 
   @JsOverlay
   default void setImag(@Nonnull final double... imag) {
@@ -42,7 +43,7 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   JsArray<Double> real();
 
   @JsProperty
-  void setReal(@Nonnull JsArray<Double> real);
+  void setReal(@JsNonNull JsArray<Double> real);
 
   @JsOverlay
   default void setReal(@Nonnull final double... real) {

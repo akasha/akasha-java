@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +31,7 @@ public class AudioTrackList extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">AudioTrackList.onaddtrack - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onaddtrack">AudioTrackList.onaddtrack - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public TrackEventHandler onaddtrack;
 
   /**
@@ -40,7 +41,7 @@ public class AudioTrackList extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">AudioTrackList.onchange - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onchange">AudioTrackList.onchange - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   /**
@@ -50,7 +51,7 @@ public class AudioTrackList extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">AudioTrackList.onremovetrack - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onremovetrack">AudioTrackList.onremovetrack - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public TrackEventHandler onremovetrack;
 
   protected AudioTrackList() {
@@ -75,11 +76,11 @@ public class AudioTrackList extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-audiotracklist-gettrackbyid">AudioTrackList.getTrackById() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-getTrackById">AudioTrackList.getTrackById() - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public native AudioTrack getTrackById(@Nonnull String id);
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final AudioTrack getAt(final int index) {
     return Js.<JsArrayLike<AudioTrack>>cast( this ).getAt( index );
   }

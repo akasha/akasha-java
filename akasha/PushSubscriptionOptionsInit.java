@@ -3,7 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +27,11 @@ public interface PushSubscriptionOptionsInit {
   @JsProperty(
       name = "applicationServerKey"
   )
-  @Nullable
+  @JsNullable
   BufferSourceOrStringUnion applicationServerKey();
 
   @JsProperty
-  void setApplicationServerKey(@Nullable BufferSourceOrStringUnion applicationServerKey);
+  void setApplicationServerKey(@JsNullable BufferSourceOrStringUnion applicationServerKey);
 
   @JsOverlay
   default void setApplicationServerKey(@Nonnull final BufferSource applicationServerKey) {

@@ -4,7 +4,7 @@ import akasha.AddEventListenerOptions;
 import akasha.EventListenerOptions;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -30,7 +30,7 @@ public class IDBOpenDBRequest extends IDBRequest {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onblocked">onblocked - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onblocked">onblocked - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public IDBVersionChangeEventHandler onblocked;
 
   /**
@@ -40,7 +40,7 @@ public class IDBOpenDBRequest extends IDBRequest {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onupgradeneeded">onupgradeneeded - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onupgradeneeded">onupgradeneeded - Indexed Database API Draft</a>
    */
-  @Nullable
+  @JsNullable
   public IDBVersionChangeEventHandler onupgradeneeded;
 
   protected IDBOpenDBRequest() {

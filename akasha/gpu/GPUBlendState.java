@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,20 +29,20 @@ public interface GPUBlendState {
   @JsProperty(
       name = "color"
   )
-  @Nonnull
+  @JsNonNull
   GPUBlendComponent color();
 
   @JsProperty
-  void setColor(@Nonnull GPUBlendComponent color);
+  void setColor(@JsNonNull GPUBlendComponent color);
 
   @JsProperty(
       name = "alpha"
   )
-  @Nonnull
+  @JsNonNull
   GPUBlendComponent alpha();
 
   @JsProperty
-  void setAlpha(@Nonnull GPUBlendComponent alpha);
+  void setAlpha(@JsNonNull GPUBlendComponent alpha);
 
   @Generated("org.realityforge.webtack")
   @JsType(

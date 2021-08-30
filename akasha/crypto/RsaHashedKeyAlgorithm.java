@@ -3,6 +3,7 @@ package akasha.crypto;
 import akasha.core.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsProperty(
       name = "hash"
   )
-  @Nonnull
+  @JsNonNull
   KeyAlgorithm hash();
 
   @JsProperty
-  void setHash(@Nonnull KeyAlgorithm hash);
+  void setHash(@JsNonNull KeyAlgorithm hash);
 
   @Generated("org.realityforge.webtack")
   @JsType(

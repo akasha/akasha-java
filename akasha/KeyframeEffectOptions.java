@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,8 +15,6 @@ import jsinterop.base.JsPropertyMap;
  * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffectOptions">KeyframeEffectOptions - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations-2/#the-keyframeeffectoptions-dictionary">KeyframeEffectOptions - Web Animations Level 2</a>
- * @see <a href="https://drafts.csswg.org/web-animations-1/#the-keyframeeffectoptions-dictionary">KeyframeEffectOptions - Web Animations</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -37,23 +36,21 @@ public interface KeyframeEffectOptions extends EffectTiming {
   String composite();
 
   @JsProperty
-  void setComposite(@CompositeOperation @Nonnull String composite);
+  void setComposite(@CompositeOperation @JsNonNull String composite);
 
   @JsProperty(
       name = "pseudoElement"
   )
-  @Nullable
+  @JsNullable
   String pseudoElement();
 
   @JsProperty
-  void setPseudoElement(@Nullable String pseudoElement);
+  void setPseudoElement(@JsNullable String pseudoElement);
 
   /**
    * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffectOptions">KeyframeEffectOptions - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-2/#the-keyframeeffectoptions-dictionary">KeyframeEffectOptions - Web Animations Level 2</a>
-   * @see <a href="https://drafts.csswg.org/web-animations-1/#the-keyframeeffectoptions-dictionary">KeyframeEffectOptions - Web Animations</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

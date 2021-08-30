@@ -5,7 +5,7 @@ import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +31,7 @@ public class RTCDTMFSender extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/ontonechange">RTCDTMFSender.ontonechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtmfsender-ontonechange">ontonechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public RTCDTMFToneChangeEventHandler ontonechange;
 
   protected RTCDTMFSender() {

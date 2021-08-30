@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,11 +34,11 @@ public interface SyncEventInit extends ExtendableEventInit {
   @JsProperty(
       name = "tag"
   )
-  @Nonnull
+  @JsNonNull
   String tag();
 
   @JsProperty
-  void setTag(@Nonnull String tag);
+  void setTag(@JsNonNull String tag);
 
   @Generated("org.realityforge.webtack")
   @JsType(

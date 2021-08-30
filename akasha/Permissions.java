@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,6 +29,6 @@ public class Permissions extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions/query">Permissions.query - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<PermissionStatus> query(@Nonnull JsObject permissionDesc);
 }

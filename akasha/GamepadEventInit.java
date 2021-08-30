@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface GamepadEventInit extends EventInit {
   @JsProperty(
       name = "gamepad"
   )
-  @Nonnull
+  @JsNonNull
   Gamepad gamepad();
 
   @JsProperty
-  void setGamepad(@Nonnull Gamepad gamepad);
+  void setGamepad(@JsNonNull Gamepad gamepad);
 
   @Generated("org.realityforge.webtack")
   @JsType(

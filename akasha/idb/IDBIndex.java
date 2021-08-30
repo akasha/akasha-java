@@ -5,6 +5,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,7 +29,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/name">IDBIndex.name - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected IDBIndex() {
@@ -81,7 +82,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/count">IDBIndex.count - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest count(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -89,7 +90,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/count">IDBIndex.count - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest count();
 
   /**
@@ -97,7 +98,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/get">IDBIndex.get - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest get(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -105,7 +106,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query, int count);
 
   /**
@@ -113,7 +114,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -121,7 +122,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAll();
 
   /**
@@ -129,7 +130,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAllKeys">IDBIndex.getAllKeys - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query, int count);
 
   /**
@@ -137,7 +138,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAllKeys">IDBIndex.getAllKeys - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -145,7 +146,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAllKeys">IDBIndex.getAllKeys - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAllKeys();
 
   /**
@@ -153,7 +154,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getKey">IDBIndex.getKey - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getKey(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -161,7 +162,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openCursor">IDBIndex.openCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query,
       @IDBCursorDirection @Nonnull String direction);
 
@@ -170,7 +171,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openCursor">IDBIndex.openCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -178,7 +179,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openCursor">IDBIndex.openCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openCursor();
 
   /**
@@ -186,7 +187,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openKeyCursor">IDBIndex.openKeyCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query,
       @IDBCursorDirection @Nonnull String direction);
 
@@ -195,7 +196,7 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openKeyCursor">IDBIndex.openKeyCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -203,6 +204,6 @@ public class IDBIndex extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openKeyCursor">IDBIndex.openKeyCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openKeyCursor();
 }

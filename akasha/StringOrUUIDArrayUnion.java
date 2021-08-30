@@ -32,4 +32,24 @@ public interface StringOrUUIDArrayUnion {
   static StringOrUUIDArrayUnion of(@Nonnull final String[] value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<String> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

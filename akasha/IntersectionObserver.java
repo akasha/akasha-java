@@ -5,12 +5,13 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.
+ * The IntersectionObserver interface of the Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport. The ancestor element or viewport is referred to as the root.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">IntersectionObserver - MDN</a>
  * @see <a href="https://w3c.github.io/IntersectionObserver/#intersection-observer-interface"># intersection-observer-interface</a>
@@ -99,7 +100,7 @@ public class IntersectionObserver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/takeRecords">IntersectionObserver.takeRecords - MDN</a>
    * @see <a href="https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-takerecords">IntersectionObserver.takeRecords() - Intersection Observer</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<IntersectionObserverEntry> takeRecords();
 
   /**

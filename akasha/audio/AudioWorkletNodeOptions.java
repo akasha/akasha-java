@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,9 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing.
+ * The AudioWorkletNode() constructor creates a new AudioWorkletNode object, which represents an AudioNode that uses a JavaScript function to perform custom audio processing.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNodeOptions">AudioWorkletNodeOptions - MDN</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-audioworkletnode"># dom-audioworkletnode-audioworkletnode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -51,7 +53,7 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   JsArray<Double> outputChannelCount();
 
   @JsProperty
-  void setOutputChannelCount(@Nonnull JsArray<Double> outputChannelCount);
+  void setOutputChannelCount(@JsNonNull JsArray<Double> outputChannelCount);
 
   @JsOverlay
   default void setOutputChannelCount(@Nonnull final double... outputChannelCount) {
@@ -64,7 +66,7 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   JsPropertyMap<Double> parameterData();
 
   @JsProperty
-  void setParameterData(@Nonnull JsPropertyMap<Double> parameterData);
+  void setParameterData(@JsNonNull JsPropertyMap<Double> parameterData);
 
   @JsProperty(
       name = "processorOptions"
@@ -72,12 +74,13 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   JsObject processorOptions();
 
   @JsProperty
-  void setProcessorOptions(@Nonnull JsObject processorOptions);
+  void setProcessorOptions(@JsNonNull JsObject processorOptions);
 
   /**
-   * The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing.
+   * The AudioWorkletNode() constructor creates a new AudioWorkletNode object, which represents an AudioNode that uses a JavaScript function to perform custom audio processing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNodeOptions">AudioWorkletNodeOptions - MDN</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioworkletnode-audioworkletnode"># dom-audioworkletnode-audioworkletnode</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

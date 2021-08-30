@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,7 +15,6 @@ import jsinterop.base.JsPropertyMap;
  * The ReportingObserverOptions dictionary of the Reporting API allows options to be set in the constructor when creating a ReportingObserver.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserverOptions">ReportingObserverOptions - MDN</a>
- * @see <a href="https://w3c.github.io/reporting/#dictdef-reportingobserveroptions">ReportingObserverOptions - Reporting API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -43,7 +43,7 @@ public interface ReportingObserverOptions {
   JsArray<String> types();
 
   @JsProperty
-  void setTypes(@Nonnull JsArray<String> types);
+  void setTypes(@JsNonNull JsArray<String> types);
 
   @JsOverlay
   default void setTypes(@Nonnull final String... types) {
@@ -54,7 +54,6 @@ public interface ReportingObserverOptions {
    * The ReportingObserverOptions dictionary of the Reporting API allows options to be set in the constructor when creating a ReportingObserver.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserverOptions">ReportingObserverOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/reporting/#dictdef-reportingobserveroptions">ReportingObserverOptions - Reporting API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

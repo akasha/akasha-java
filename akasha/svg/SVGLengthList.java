@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,25 +37,25 @@ public class SVGLengthList extends JsObject {
   )
   public native int numberOfItems();
 
-  @Nonnull
+  @JsNonNull
   public native SVGLength appendItem(@Nonnull SVGLength newItem);
 
   public native void clear();
 
-  @Nonnull
+  @JsNonNull
   public native SVGLength initialize(@Nonnull SVGLength newItem);
 
-  @Nonnull
+  @JsNonNull
   public native SVGLength insertItemBefore(@Nonnull SVGLength newItem, int index);
 
-  @Nonnull
+  @JsNonNull
   public native SVGLength removeItem(int index);
 
-  @Nonnull
+  @JsNonNull
   public native SVGLength replaceItem(@Nonnull SVGLength newItem, int index);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SVGLength getItem(int index);
 
   @JsOverlay

@@ -11,8 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEGaussianBlurElement interface corresponds to the &lt;feGaussianBlur&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement">SVGFEGaussianBlurElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEGaussianBlurElement">SVGFEGaussianBlurElement - Filter Effects Module Level 1</a>
- * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEGaussianBlurElement">SVGFEGaussianBlurElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEGaussianBlurElement">(Filter Effects 2) # InterfaceSVGFEGaussianBlurElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

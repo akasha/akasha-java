@@ -5,7 +5,8 @@ import akasha.EventListenerOptions;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -16,7 +17,7 @@ import jsinterop.base.Js;
  * The OfflineAudioContext interface is an AudioContext interface representing an audio-processing graph built from linked together AudioNodes. In contrast with a standard AudioContext, an OfflineAudioContext doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an AudioBuffer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext">OfflineAudioContext - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#OfflineAudioContext">OfflineAudioContext - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#OfflineAudioContext"># OfflineAudioContext</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +32,7 @@ public class OfflineAudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/oncomplete">OfflineAudioContext.oncomplete - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-oncomplete">oncomplete - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public OfflineAudioCompletionEventHandler oncomplete;
 
   /**
@@ -69,7 +70,7 @@ public class OfflineAudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/resume">OfflineAudioContext.resume - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-resume">resume() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> resume();
 
   /**
@@ -78,7 +79,7 @@ public class OfflineAudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering">OfflineAudioContext.startRendering - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-startrendering">startRendering() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<AudioBuffer> startRendering();
 
   /**
@@ -87,7 +88,7 @@ public class OfflineAudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/suspend">OfflineAudioContext.suspend - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-suspend">suspend() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> suspend(double suspendTime);
 
   @JsOverlay

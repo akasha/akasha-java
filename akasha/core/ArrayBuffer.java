@@ -4,8 +4,8 @@ import akasha.Transferable;
 import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -66,7 +66,7 @@ public class ArrayBuffer extends JsObject implements BufferSource, Transferable 
    * @see <a href="https://tc39.es/ecma262/#sec-arraybuffer.prototype.slice">ArrayBuffer.slice - ECMA</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ArrayBuffer slice(int begin, int end);
 
   /**
@@ -77,6 +77,6 @@ public class ArrayBuffer extends JsObject implements BufferSource, Transferable 
    * @see <a href="https://tc39.es/ecma262/#sec-arraybuffer.prototype.slice">ArrayBuffer.slice - ECMA</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ArrayBuffer slice(int begin);
 }

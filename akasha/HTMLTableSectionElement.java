@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,16 +20,16 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableSectionElement"
 )
 public class HTMLTableSectionElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String ch;
 
-  @Nonnull
+  @JsNonNull
   public String chOff;
 
-  @Nonnull
+  @JsNonNull
   public String vAlign;
 
   protected HTMLTableSectionElement() {
@@ -42,9 +43,9 @@ public class HTMLTableSectionElement extends HTMLElement {
 
   public native void deleteRow(int index);
 
-  @Nonnull
+  @JsNonNull
   public native HTMLTableRowElement insertRow(int index);
 
-  @Nonnull
+  @JsNonNull
   public native HTMLTableRowElement insertRow();
 }

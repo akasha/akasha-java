@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ResponseInit {
   HeadersInit headers();
 
   @JsProperty
-  void setHeaders(@Nonnull HeadersInit headers);
+  void setHeaders(@JsNonNull HeadersInit headers);
 
   @JsOverlay
   default void setHeaders(@Nonnull final JsArray<JsArray<String>> headers) {
@@ -61,7 +62,7 @@ public interface ResponseInit {
   String statusText();
 
   @JsProperty
-  void setStatusText(@Nonnull String statusText);
+  void setStatusText(@JsNonNull String statusText);
 
   @Generated("org.realityforge.webtack")
   @JsType(

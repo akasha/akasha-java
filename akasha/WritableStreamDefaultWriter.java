@@ -6,6 +6,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,20 +39,20 @@ public class WritableStreamDefaultWriter extends JsObject {
   @Nonnull
   public native Promise<Void> ready();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> abort(@DoNotAutobox @Nullable Object reason);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> abort();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> close();
 
   public native void releaseLock();
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> write(@DoNotAutobox @Nullable Object chunk);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> write();
 }

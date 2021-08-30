@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface ShadowRootInit {
       name = "mode"
   )
   @ShadowRootMode
-  @Nonnull
+  @JsNonNull
   String mode();
 
   @JsProperty
-  void setMode(@ShadowRootMode @Nonnull String mode);
+  void setMode(@ShadowRootMode @JsNonNull String mode);
 
   @JsProperty(
       name = "slotAssignment"
@@ -47,7 +48,7 @@ public interface ShadowRootInit {
   String slotAssignment();
 
   @JsProperty
-  void setSlotAssignment(@SlotAssignmentMode @Nonnull String slotAssignment);
+  void setSlotAssignment(@SlotAssignmentMode @JsNonNull String slotAssignment);
 
   @Generated("org.realityforge.webtack")
   @JsType(

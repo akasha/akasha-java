@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -41,11 +42,11 @@ public interface RTCRtpHeaderExtensionParameters {
   @JsProperty(
       name = "uri"
   )
-  @Nonnull
+  @JsNonNull
   String uri();
 
   @JsProperty
-  void setUri(@Nonnull String uri);
+  void setUri(@JsNonNull String uri);
 
   @Generated("org.realityforge.webtack")
   @JsType(

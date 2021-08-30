@@ -3,7 +3,7 @@ package akasha.bluetooth;
 import akasha.PermissionStatus;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "BluetoothPermissionResult"
 )
 public class BluetoothPermissionResult extends PermissionStatus {
-  @Nonnull
+  @JsNonNull
   public JsArray<BluetoothDevice> devices;
 
   protected BluetoothPermissionResult() {

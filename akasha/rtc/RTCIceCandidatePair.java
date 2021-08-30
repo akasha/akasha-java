@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -10,7 +11,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.
+ * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints. It is used as the return value from RTCIceTransport.getSelectedCandidatePair() to identify the currently-selected candidate pair identified by the ICE agent.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair">RTCIceCandidatePair - MDN</a>
  */
@@ -45,7 +46,7 @@ public interface RTCIceCandidatePair {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local">RTCIceCandidatePair.local - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setLocal(@Nonnull RTCIceCandidate local);
+  void setLocal(@JsNonNull RTCIceCandidate local);
 
   /**
    * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
@@ -65,10 +66,10 @@ public interface RTCIceCandidatePair {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote">RTCIceCandidatePair.remote - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setRemote(@Nonnull RTCIceCandidate remote);
+  void setRemote(@JsNonNull RTCIceCandidate remote);
 
   /**
-   * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.
+   * The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints. It is used as the return value from RTCIceTransport.getSelectedCandidatePair() to identify the currently-selected candidate pair identified by the ICE agent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair">RTCIceCandidatePair - MDN</a>
    */

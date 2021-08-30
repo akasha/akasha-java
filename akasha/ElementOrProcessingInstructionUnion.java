@@ -25,4 +25,24 @@ public interface ElementOrProcessingInstructionUnion {
   static ElementOrProcessingInstructionUnion of(@Nonnull final ProcessingInstruction value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isElement() {
+    return ( (Object) this ) instanceof Element;
+  }
+
+  @JsOverlay
+  default Element asElement() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isProcessingInstruction() {
+    return ( (Object) this ) instanceof ProcessingInstruction;
+  }
+
+  @JsOverlay
+  default ProcessingInstruction asProcessingInstruction() {
+    return Js.cast( this );
+  }
 }

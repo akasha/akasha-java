@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface DOMQuadInit {
   DOMPointInit p1();
 
   @JsProperty
-  void setP1(@Nonnull DOMPointInit p1);
+  void setP1(@JsNonNull DOMPointInit p1);
 
   @JsProperty(
       name = "p2"
@@ -36,7 +37,7 @@ public interface DOMQuadInit {
   DOMPointInit p2();
 
   @JsProperty
-  void setP2(@Nonnull DOMPointInit p2);
+  void setP2(@JsNonNull DOMPointInit p2);
 
   @JsProperty(
       name = "p3"
@@ -44,7 +45,7 @@ public interface DOMQuadInit {
   DOMPointInit p3();
 
   @JsProperty
-  void setP3(@Nonnull DOMPointInit p3);
+  void setP3(@JsNonNull DOMPointInit p3);
 
   @JsProperty(
       name = "p4"
@@ -52,7 +53,7 @@ public interface DOMQuadInit {
   DOMPointInit p4();
 
   @JsProperty
-  void setP4(@Nonnull DOMPointInit p4);
+  void setP4(@JsNonNull DOMPointInit p4);
 
   @Generated("org.realityforge.webtack")
   @JsType(

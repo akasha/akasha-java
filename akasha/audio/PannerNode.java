@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -10,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The PannerNode interface represents the position and behavior of an audio source signal in space. It is an AudioNode audio-processing module describing its position with right-hand Cartesian coordinates, its movement using a velocity vector and its directionality using a directionality cone.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode">PannerNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#pannernode">PannerNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#PannerNode"># PannerNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -49,7 +50,7 @@ public class PannerNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/distanceModel">PannerNode.distanceModel - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-pannernode-distancemodel">distanceModel - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   @DistanceModelType
   public String distanceModel;
 
@@ -67,7 +68,7 @@ public class PannerNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/panningModel">PannerNode.panningModel - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-pannernode-panningmodel">panningModel - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   @PanningModelType
   public String panningModel;
 

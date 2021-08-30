@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface GPUDeviceDescriptor extends GPUObjectDescriptorBase {
   JsArray<String> requiredFeatures();
 
   @JsProperty
-  void setRequiredFeatures(@Nonnull JsArray<String> requiredFeatures);
+  void setRequiredFeatures(@JsNonNull JsArray<String> requiredFeatures);
 
   @JsOverlay
   default void setRequiredFeatures(@Nonnull final String... requiredFeatures) {
@@ -44,7 +45,7 @@ public interface GPUDeviceDescriptor extends GPUObjectDescriptorBase {
   JsPropertyMap<Double> requiredLimits();
 
   @JsProperty
-  void setRequiredLimits(@Nonnull JsPropertyMap<Double> requiredLimits);
+  void setRequiredLimits(@JsNonNull JsPropertyMap<Double> requiredLimits);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -1,12 +1,12 @@
-package akasha;
+package akasha.audio;
 
-import akasha.audio.AudioNode;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -14,7 +14,8 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "AudioNodeOrUndefinedUnion"
 )
-public interface AudioNodeOrUndefinedUnion {
+@ApiStatus.Internal
+interface AudioNodeOrUndefinedUnion {
   @JsOverlay
   @Nonnull
   static AudioNodeOrUndefinedUnion of(@Nonnull final AudioNode value) {
@@ -27,7 +28,17 @@ public interface AudioNodeOrUndefinedUnion {
   }
 
   @JsOverlay
+  default boolean isAudioNode() {
+    return ( (Object) this ) instanceof AudioNode;
+  }
+
+  @JsOverlay
   default AudioNode asAudioNode() {
     return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
   }
 }

@@ -2,7 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -25,7 +25,7 @@ public class ConvolverNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/buffer">ConvolverNode.buffer - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-convolvernode-buffer">buffer - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public AudioBuffer buffer;
 
   /**

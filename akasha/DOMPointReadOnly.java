@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The DOMPointReadOnly interface specifies the coordinate and perspective fields used by DOMPoint to define a 2D or 3D point in a coordinate system.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly">DOMPointReadOnly - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMPoint">DOMPoint - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMPoint">(Geometry Interfaces 1) # DOMPoint</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -105,7 +106,7 @@ public class DOMPointReadOnly extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/fromPoint">DOMPointReadOnly.fromPoint - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native DOMPointReadOnly fromPoint(@Nonnull DOMPointInit other);
 
   /**
@@ -113,13 +114,13 @@ public class DOMPointReadOnly extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/fromPoint">DOMPointReadOnly.fromPoint - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native DOMPointReadOnly fromPoint();
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint matrixTransform(@Nonnull DOMMatrixInit matrix);
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint matrixTransform();
 
   /**
@@ -127,6 +128,6 @@ public class DOMPointReadOnly extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/toJSON">DOMPointReadOnly.toJSON - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 }

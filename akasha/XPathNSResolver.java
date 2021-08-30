@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -24,6 +25,6 @@ public interface XPathNSResolver {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathNSResolver/lookupNamespaceURI">XPathNSResolver.lookupNamespaceURI - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathNSResolver-lookupNamespaceURI">XPathNSResolver.lookupNamespaceURI() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nullable
+  @JsNullable
   String lookupNamespaceURI(@Nullable String prefix);
 }

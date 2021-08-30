@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +28,11 @@ public interface GPUBufferBinding extends GPUBindingResource {
   @JsProperty(
       name = "buffer"
   )
-  @Nonnull
+  @JsNonNull
   GPUBuffer buffer();
 
   @JsProperty
-  void setBuffer(@Nonnull GPUBuffer buffer);
+  void setBuffer(@JsNonNull GPUBuffer buffer);
 
   @JsProperty(
       name = "offset"

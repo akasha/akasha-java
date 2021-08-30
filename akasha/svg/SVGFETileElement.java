@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFETileElement interface corresponds to the &lt;feTile&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETileElement">SVGFETileElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFETileElement">SVGFETileElement - Filter Effects Module Level 1</a>
- * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFETileElement">SVGFETileElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFETileElement">(Filter Effects 2) # InterfaceSVGFETileElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

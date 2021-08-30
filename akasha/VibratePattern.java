@@ -32,4 +32,24 @@ public interface VibratePattern {
   static VibratePattern of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isInt() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default int asInt() {
+    return Js.asInt( this );
+  }
 }

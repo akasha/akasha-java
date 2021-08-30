@@ -4,7 +4,7 @@ import akasha.AddEventListenerOptions;
 import akasha.EventListenerOptions;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -15,7 +15,6 @@ import jsinterop.base.Js;
  * The ScriptProcessorNode interface allows the generation, processing, or analyzing of audio using JavaScript.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode">ScriptProcessorNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#the-scriptprocessornode-interface---deprecated">ScriptProcessorNode - Web Audio API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -30,7 +29,7 @@ public class ScriptProcessorNode extends AudioNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode/onaudioprocess">ScriptProcessorNode.onaudioprocess - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#widl-ScriptProcessorNode-onaudioprocess">onaudioprocess - Web Audio API</a>
    */
-  @Nullable
+  @JsNullable
   public AudioProcessingEventHandler onaudioprocess;
 
   protected ScriptProcessorNode() {

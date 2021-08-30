@@ -4,6 +4,8 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,7 +28,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/currentNode">TreeWalker.currentNode - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public Node currentNode;
 
   protected TreeWalker() {
@@ -69,7 +71,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/firstChild">TreeWalker.firstChild - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node firstChild();
 
   /**
@@ -77,7 +79,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/lastChild">TreeWalker.lastChild - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node lastChild();
 
   /**
@@ -85,7 +87,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode">TreeWalker.nextNode - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node nextNode();
 
   /**
@@ -93,7 +95,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextSibling">TreeWalker.nextSibling - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node nextSibling();
 
   /**
@@ -101,7 +103,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/parentNode">TreeWalker.parentNode - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node parentNode();
 
   /**
@@ -109,7 +111,7 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousNode">TreeWalker.previousNode - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node previousNode();
 
   /**
@@ -117,6 +119,6 @@ public class TreeWalker extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/previousSibling">TreeWalker.previousSibling - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public native Node previousSibling();
 }

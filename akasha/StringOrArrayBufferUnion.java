@@ -26,4 +26,24 @@ public interface StringOrArrayBufferUnion {
   static StringOrArrayBufferUnion of(@Nonnull final ArrayBuffer value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isArrayBuffer() {
+    return ( (Object) this ) instanceof ArrayBuffer;
+  }
+
+  @JsOverlay
+  default ArrayBuffer asArrayBuffer() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

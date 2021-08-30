@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "HTMLMapElement"
 )
 public class HTMLMapElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected HTMLMapElement() {

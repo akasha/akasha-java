@@ -5,6 +5,7 @@ import akasha.StringOrUnsignedLongUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +37,11 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsProperty(
       name = "device"
   )
-  @Nonnull
+  @JsNonNull
   BluetoothDevice device();
 
   @JsProperty
-  void setDevice(@Nonnull BluetoothDevice device);
+  void setDevice(@JsNonNull BluetoothDevice device);
 
   @JsProperty(
       name = "manufacturerData"
@@ -48,7 +49,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   BluetoothManufacturerDataMap manufacturerData();
 
   @JsProperty
-  void setManufacturerData(@Nonnull BluetoothManufacturerDataMap manufacturerData);
+  void setManufacturerData(@JsNonNull BluetoothManufacturerDataMap manufacturerData);
 
   @JsProperty(
       name = "name"
@@ -56,7 +57,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @JsProperty(
       name = "rssi"
@@ -72,7 +73,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   BluetoothServiceDataMap serviceData();
 
   @JsProperty
-  void setServiceData(@Nonnull BluetoothServiceDataMap serviceData);
+  void setServiceData(@JsNonNull BluetoothServiceDataMap serviceData);
 
   @JsProperty(
       name = "txPower"
@@ -88,7 +89,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   JsArray<StringOrUnsignedLongUnion> uuids();
 
   @JsProperty
-  void setUuids(@Nonnull JsArray<StringOrUnsignedLongUnion> uuids);
+  void setUuids(@JsNonNull JsArray<StringOrUnsignedLongUnion> uuids);
 
   @JsOverlay
   default void setUuids(@Nonnull final StringOrUnsignedLongUnion... uuids) {

@@ -3,7 +3,8 @@ package akasha;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     name = "WakeLockSentinel"
 )
 public class WakeLockSentinel extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onrelease;
 
   protected WakeLockSentinel() {
@@ -57,6 +58,6 @@ public class WakeLockSentinel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release">WakeLockSentinel.release - MDN</a>
    * @see <a href="https://w3c.github.io/screen-wake-lock/#the-release-method">release() - Screen Wake Lock API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> release();
 }

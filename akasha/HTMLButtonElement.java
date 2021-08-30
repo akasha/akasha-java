@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,30 +28,30 @@ public class HTMLButtonElement extends HTMLElement {
    */
   public boolean disabled;
 
-  @Nonnull
+  @JsNonNull
   public String formAction;
 
-  @Nonnull
+  @JsNonNull
   @FormEncodingType
   public String formEnctype;
 
-  @Nonnull
+  @JsNonNull
   @FormMethodType
   public String formMethod;
 
   public boolean formNoValidate;
 
-  @Nonnull
+  @JsNonNull
   public String formTarget;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   @ButtonType
   public String type;
 
-  @Nonnull
+  @JsNonNull
   public String value;
 
   protected HTMLButtonElement() {

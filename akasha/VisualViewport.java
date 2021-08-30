@@ -3,7 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -14,7 +14,7 @@ import jsinterop.base.Js;
  * The VisualViewport interface of the Visual Viewport API represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique VisualViewport representing the properties associated with that window.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport">VisualViewport - MDN</a>
- * @see <a href="https://wicg.github.io/visual-viewport/#the-visualviewport-interface">VisualViewport - Visual Viewport API</a>
+ * @see <a href="https://wicg.github.io/visual-viewport/#the-visualviewport-interface"># the-visualviewport-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +29,7 @@ public class VisualViewport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onresize">VisualViewport.onresize - MDN</a>
    * @see <a href="https://wicg.github.io/visual-viewport/#dom-visualviewport-onresize">onresize - Visual Viewport API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onresize;
 
   /**
@@ -38,7 +38,7 @@ public class VisualViewport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onscroll">VisualViewport.onscroll - MDN</a>
    * @see <a href="https://wicg.github.io/visual-viewport/#dom-visualviewport-onscroll">onscroll - Visual Viewport API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onscroll;
 
   protected VisualViewport() {

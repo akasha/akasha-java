@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ReadableStreamGetReaderOptions {
   String mode();
 
   @JsProperty
-  void setMode(@ReadableStreamReaderMode @Nonnull String mode);
+  void setMode(@ReadableStreamReaderMode @JsNonNull String mode);
 
   @Generated("org.realityforge.webtack")
   @JsType(

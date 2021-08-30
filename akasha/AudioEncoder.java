@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +31,7 @@ public class AudioEncoder extends JsObject {
   @CodecState
   public native String state();
 
-  @Nonnull
+  @JsNonNull
   public static native Promise<AudioEncoderSupport> isConfigSupported(
       @Nonnull AudioEncoderConfig config);
 
@@ -40,7 +41,7 @@ public class AudioEncoder extends JsObject {
 
   public native void encode(@Nonnull AudioData data);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> flush();
 
   public native void reset();

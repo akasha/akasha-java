@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -21,7 +22,7 @@ import jsinterop.annotations.JsType;
     name = "AudioParam"
 )
 public class AudioParam extends JsObject {
-  @Nonnull
+  @JsNonNull
   @AutomationRate
   public String automationRate;
 
@@ -75,7 +76,7 @@ public class AudioParam extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelAndHoldAtTime">AudioParam.cancelAndHoldAtTime - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelandholdattime">cancelAndHoldAtTime() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam cancelAndHoldAtTime(double cancelTime);
 
   /**
@@ -83,7 +84,7 @@ public class AudioParam extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelScheduledValues">AudioParam.cancelScheduledValues - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam cancelScheduledValues(double cancelTime);
 
   /**
@@ -91,7 +92,7 @@ public class AudioParam extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime">AudioParam.exponentialRampToValueAtTime - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam exponentialRampToValueAtTime(float value, double endTime);
 
   /**
@@ -99,7 +100,7 @@ public class AudioParam extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime">AudioParam.linearRampToValueAtTime - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam linearRampToValueAtTime(float value, double endTime);
 
   /**
@@ -107,7 +108,7 @@ public class AudioParam extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setTargetAtTime">AudioParam.setTargetAtTime - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam setTargetAtTime(float target, double startTime, float timeConstant);
 
   /**
@@ -116,7 +117,7 @@ public class AudioParam extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime">AudioParam.setValueAtTime - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audioparam-setvalueattime">setValueAtTime - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam setValueAtTime(float value, double startTime);
 
   /**
@@ -124,7 +125,7 @@ public class AudioParam extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueCurveAtTime">AudioParam.setValueCurveAtTime - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam setValueCurveAtTime(@Nonnull JsArray<Double> values, double startTime,
       double duration);
 
@@ -133,7 +134,7 @@ public class AudioParam extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueCurveAtTime">AudioParam.setValueCurveAtTime - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioParam setValueCurveAtTime(@Nonnull double[] values, double startTime,
       double duration);
 }

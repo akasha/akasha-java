@@ -8,7 +8,8 @@ import akasha.EventTarget;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -16,7 +17,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.
+ * The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received. This is particularly useful if you need to access state information about the connection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport">RTCIceTransport - MDN</a>
  * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport">(WebRTC 1.0) # dom-rtcicetransport</a>
@@ -34,7 +35,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/ongatheringstatechange">RTCIceTransport.ongatheringstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-ongatheringstatechange">RTCIceTransport.ongatheringstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler ongatheringstatechange;
 
   /**
@@ -43,7 +44,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange">RTCIceTransport.onselectedcandidatepairchange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onselectedcandidatepairchange">RTCIceTransport.onselectedcandidatepairchange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onselectedcandidatepairchange;
 
   /**
@@ -52,7 +53,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onstatechange">RTCIceTransport.onstatechange - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onstatechange">RTCIceTransport.onstatechange - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onstatechange;
 
   protected RTCIceTransport() {
@@ -116,7 +117,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates">RTCIceTransport.getLocalCandidates - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalcandidates">RTCIceCandidate.getLocalCandidates() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCIceCandidate> getLocalCandidates();
 
   /**
@@ -125,7 +126,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters">RTCIceTransport.getLocalParameters - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalparameters">RTCIceTransport.getLocalParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public native RTCIceParameters getLocalParameters();
 
   /**
@@ -134,7 +135,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteCandidates">RTCIceTransport.getRemoteCandidates - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremotecandidates">RTCIceCandidate.getRemoteCandidates() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCIceCandidate> getRemoteCandidates();
 
   /**
@@ -143,7 +144,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteParameters">RTCIceTransport.getRemoteParameters - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremoteparameters">RTCIceTransport.getRemoteParameters - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public native RTCIceParameters getRemoteParameters();
 
   /**
@@ -152,7 +153,7 @@ public class RTCIceTransport extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair">RTCIceTransport.getSelectedCandidatePair - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getselectedcandidatepair">RTCIceTransport.getSelectedCandidatePair() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public native RTCIceCandidatePair getSelectedCandidatePair();
 
   @JsOverlay

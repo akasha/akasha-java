@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface WorkerOptions {
   String credentials();
 
   @JsProperty
-  void setCredentials(@RequestCredentials @Nonnull String credentials);
+  void setCredentials(@RequestCredentials @JsNonNull String credentials);
 
   @JsProperty(
       name = "name"
@@ -37,7 +38,7 @@ public interface WorkerOptions {
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @JsProperty(
       name = "type"
@@ -46,7 +47,7 @@ public interface WorkerOptions {
   String type();
 
   @JsProperty
-  void setType(@WorkerType @Nonnull String type);
+  void setType(@WorkerType @JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,21 +18,21 @@ import jsinterop.annotations.JsType;
     name = "HTMLTableColElement"
 )
 public class HTMLTableColElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String ch;
 
-  @Nonnull
+  @JsNonNull
   public String chOff;
 
   public int span;
 
-  @Nonnull
+  @JsNonNull
   public String vAlign;
 
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLTableColElement() {

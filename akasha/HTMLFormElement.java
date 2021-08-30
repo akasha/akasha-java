@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/acceptCharset">HTMLFormElement.acceptCharset - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String acceptCharset;
 
   /**
@@ -37,10 +38,10 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/action">HTMLFormElement.action - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String action;
 
-  @Nonnull
+  @JsNonNull
   @FormAutocompleteType
   public String autocomplete;
 
@@ -49,7 +50,7 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/encoding">HTMLFormElement.encoding - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String encoding;
 
   /**
@@ -57,7 +58,7 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   @FormEncodingType
   public String enctype;
 
@@ -66,7 +67,7 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   @FormMethodType
   public String method;
 
@@ -75,12 +76,12 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name">HTMLFormElement.name - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   public boolean noValidate;
 
-  @Nonnull
+  @JsNonNull
   public String rel;
 
   /**
@@ -88,7 +89,7 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/target">HTMLFormElement.target - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String target;
 
   protected HTMLFormElement() {
@@ -165,13 +166,13 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
   public native void submit();
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final Element getAt(final int index) {
     return Js.<JsArrayLike<Element>>cast( this ).getAt( index );
   }
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final RadioNodeListOrElementUnion get(@Nonnull final String name) {
     return Js.<JsPropertyMap<RadioNodeListOrElementUnion>>cast( this ).get( name );
   }

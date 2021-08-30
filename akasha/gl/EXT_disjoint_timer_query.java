@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -51,17 +52,17 @@ public class EXT_disjoint_timer_query extends JsObject implements WebGL1Extensio
 
   public native void beginQueryEXT(int target, @Nonnull WebGLTimerQueryEXT query);
 
-  @Nullable
+  @JsNullable
   public native WebGLTimerQueryEXT createQueryEXT();
 
   public native void deleteQueryEXT(@Nullable WebGLTimerQueryEXT query);
 
   public native void endQueryEXT(int target);
 
-  @Nullable
+  @JsNullable
   public native Any getQueryEXT(int target, int pname);
 
-  @Nullable
+  @JsNullable
   public native Any getQueryObjectEXT(@Nonnull WebGLTimerQueryEXT query, int pname);
 
   public native boolean isQueryEXT(@Nullable WebGLTimerQueryEXT query);

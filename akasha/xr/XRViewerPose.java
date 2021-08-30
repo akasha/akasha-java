@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API interface XRViewerPose represents the pose (the position and orientation) of a viewer's point of view on the scene. Each XRViewerPose can have multiple views to represent, for example, the slight separation between the left and right eye.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose">XRViewerPose - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrviewerpose-interface">XRViewerPose - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrviewerpose-interface"># xrviewerpose-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

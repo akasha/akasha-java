@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -22,7 +23,7 @@ import jsinterop.annotations.JsType;
 public class HTMLFieldSetElement extends HTMLElement {
   public boolean disabled;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected HTMLFieldSetElement() {

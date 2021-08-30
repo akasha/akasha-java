@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,7 +30,7 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createExpression">XPathEvaluator.createExpression - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createExpression">XPathEvaluator.createExpression() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathExpression createExpression(@Nonnull String expression,
       @Nullable XPathNSResolver resolver);
 
@@ -39,7 +40,7 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createExpression">XPathEvaluator.createExpression - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createExpression">XPathEvaluator.createExpression() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathExpression createExpression(@Nonnull String expression);
 
   /**
@@ -48,7 +49,7 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createNSResolver">XPathEvaluator.createNSResolver - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver">XPathEvaluator.createNSResolver() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathNSResolver createNSResolver(@Nonnull Node nodeResolver);
 
   /**
@@ -57,7 +58,7 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/evaluate">XPathEvaluator.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">XPathEvaluator.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
       @Nullable XPathNSResolver resolver, int type, @Nullable XPathResult result);
 
@@ -67,7 +68,7 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/evaluate">XPathEvaluator.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">XPathEvaluator.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
       @Nullable XPathNSResolver resolver, int type);
 
@@ -77,7 +78,7 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/evaluate">XPathEvaluator.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">XPathEvaluator.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode,
       @Nullable XPathNSResolver resolver);
 
@@ -87,6 +88,6 @@ public class XPathEvaluator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/evaluate">XPathEvaluator.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate">XPathEvaluator.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull String expression, @Nonnull Node contextNode);
 }

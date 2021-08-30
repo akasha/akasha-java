@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface EncodedVideoChunkMetadata {
   VideoDecoderConfig decoderConfig();
 
   @JsProperty
-  void setDecoderConfig(@Nonnull VideoDecoderConfig decoderConfig);
+  void setDecoderConfig(@JsNonNull VideoDecoderConfig decoderConfig);
 
   @JsProperty(
       name = "svc"
@@ -36,7 +37,7 @@ public interface EncodedVideoChunkMetadata {
   SvcOutputMetadata svc();
 
   @JsProperty
-  void setSvc(@Nonnull SvcOutputMetadata svc);
+  void setSvc(@JsNonNull SvcOutputMetadata svc);
 
   @Generated("org.realityforge.webtack")
   @JsType(

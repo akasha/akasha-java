@@ -11,8 +11,8 @@ import jsinterop.annotations.JsType;
  * The InputEvent interface represents an event notifying the user of editable content changes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent">InputEvent - MDN</a>
- * @see <a href="https://w3c.github.io/input-events/#interface-InputEvent">InputEvent - Input Events Level 2</a>
- * @see <a href="https://w3c.github.io/uievents/#interface-inputevent">InputEvent - UI Events</a>
+ * @see <a href="https://w3c.github.io/input-events/#interface-InputEvent">(Input Events 2) # interface-InputEvent</a>
+ * @see <a href="https://w3c.github.io/uievents/#interface-inputevent"># interface-inputevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

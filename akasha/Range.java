@@ -3,6 +3,7 @@ package akasha;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -61,7 +62,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneContents">Range.cloneContents - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DocumentFragment cloneContents();
 
   /**
@@ -69,7 +70,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneRange">Range.cloneRange - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Range cloneRange();
 
   /**
@@ -130,7 +131,7 @@ public class Range extends AbstractRange {
    * @see <a href="https://dom.spec.whatwg.org/#dom-range-extractcontents">Range.extractContents() - DOM</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-extractContents">Range.extractContents() - Document Object Model (DOM) Level 2 Traversal and Range Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DocumentFragment extractContents();
 
   /**
@@ -240,7 +241,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/getBoundingClientRect">Range.getBoundingClientRect - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMRect getBoundingClientRect();
 
   /**
@@ -248,7 +249,7 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/getClientRects">Range.getClientRects - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMRectList getClientRects();
 
   /**
@@ -256,6 +257,6 @@ public class Range extends AbstractRange {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/createContextualFragment">Range.createContextualFragment - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DocumentFragment createContextualFragment(@Nonnull String fragment);
 }

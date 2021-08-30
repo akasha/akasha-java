@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   String block();
 
   @JsProperty
-  void setBlock(@ScrollLogicalPosition @Nonnull String block);
+  void setBlock(@ScrollLogicalPosition @JsNonNull String block);
 
   @JsProperty(
       name = "inline"
@@ -38,7 +39,7 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   String inline();
 
   @JsProperty
-  void setInline(@ScrollLogicalPosition @Nonnull String inline);
+  void setInline(@ScrollLogicalPosition @JsNonNull String inline);
 
   @Generated("org.realityforge.webtack")
   @JsType(

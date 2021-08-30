@@ -8,8 +8,7 @@ import jsinterop.annotations.JsType;
  * The SVGGElement interface corresponds to the &lt;g&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGElement">SVGGElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGGElement">SVGGElement - Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGGElement">SVGGElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGGElement">(SVG) # InterfaceSVGGElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

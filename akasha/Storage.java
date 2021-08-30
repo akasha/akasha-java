@@ -4,7 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -50,7 +50,7 @@ public class Storage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/key">Storage.key - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-key">Storage.key - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public native String key(int index);
 
   /**
@@ -60,7 +60,7 @@ public class Storage extends JsObject {
    * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-getitem">Storage.getItem - HTML Living Standard</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String getItem(@Nonnull String key);
 
   /**

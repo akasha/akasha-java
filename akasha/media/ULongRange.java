@@ -10,10 +10,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The ULongRange dictionary is used to define a range of permitted integer values for a property, with either or both a maximum and minimum value specified. The ConstrainULongRange dictionary is based on this, augmenting it to support exact and ideal values as well.
+ * The MediaTrackConstraints dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into applyConstraints() to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling getConstraints().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ULongRange">ULongRange - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange"># dom-ulongrange</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints"># dom-mediatrackconstraints</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -45,10 +45,10 @@ public interface ULongRange {
   void setMin(int min);
 
   /**
-   * The ULongRange dictionary is used to define a range of permitted integer values for a property, with either or both a maximum and minimum value specified. The ConstrainULongRange dictionary is based on this, augmenting it to support exact and ideal values as well.
+   * The MediaTrackConstraints dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into applyConstraints() to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling getConstraints().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ULongRange">ULongRange - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-ulongrange"># dom-ulongrange</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints"># dom-mediatrackconstraints</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

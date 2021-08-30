@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +30,11 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
       name = "code"
   )
   @WGSL
-  @Nonnull
+  @JsNonNull
   String code();
 
   @JsProperty
-  void setCode(@WGSL @Nonnull String code);
+  void setCode(@WGSL @JsNonNull String code);
 
   @JsProperty(
       name = "sourceMap"
@@ -41,7 +42,7 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   JsObject sourceMap();
 
   @JsProperty
-  void setSourceMap(@Nonnull JsObject sourceMap);
+  void setSourceMap(@JsNonNull JsObject sourceMap);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface MediaStreamTrackEventInit extends EventInit {
   @JsProperty(
       name = "track"
   )
-  @Nonnull
+  @JsNonNull
   MediaStreamTrack track();
 
   @JsProperty
-  void setTrack(@Nonnull MediaStreamTrack track);
+  void setTrack(@JsNonNull MediaStreamTrack track);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface WorkletOptions {
   String credentials();
 
   @JsProperty
-  void setCredentials(@RequestCredentials @Nonnull String credentials);
+  void setCredentials(@RequestCredentials @JsNonNull String credentials);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -8,8 +8,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,26 +35,26 @@ public class BluetoothManufacturerDataMap extends JsObject implements JsIterable
   public native boolean has(int key);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native DataView get(int key);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<DataView> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -76,18 +77,18 @@ public class BluetoothManufacturerDataMap extends JsObject implements JsIterable
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull DataView value);
+    void item(@JsNonNull DataView value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull DataView value, int key);
+    void item(@JsNonNull DataView value, int key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull DataView value, int key, @Nonnull BluetoothManufacturerDataMap map);
+    void item(@JsNonNull DataView value, int key, @JsNonNull BluetoothManufacturerDataMap map);
   }
 }

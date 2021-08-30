@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SpeechRecognitionAlternative interface of the Web Speech API represents a single word that has been recognized by the speech recognition service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative">SpeechRecognitionAlternative - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-alternative">SpeechRecognitionAlternative - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-alternative"># speechreco-alternative</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

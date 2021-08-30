@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +32,7 @@ public interface GPUSamplerBindingLayout {
   String type();
 
   @JsProperty
-  void setType(@GPUSamplerBindingType @Nonnull String type);
+  void setType(@GPUSamplerBindingType @JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

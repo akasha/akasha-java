@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
   @JsProperty(
       name = "error"
   )
-  @Nonnull
+  @JsNonNull
   GPUError error();
 
   @JsProperty
-  void setError(@Nonnull GPUError error);
+  void setError(@JsNonNull GPUError error);
 
   @Generated("org.realityforge.webtack")
   @JsType(

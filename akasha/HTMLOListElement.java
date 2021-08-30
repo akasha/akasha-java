@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -24,7 +24,7 @@ public class HTMLOListElement extends HTMLElement {
 
   public int start;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
   protected HTMLOListElement() {

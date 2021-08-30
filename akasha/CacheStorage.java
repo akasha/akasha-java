@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -30,7 +31,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/delete">CacheStorage.delete - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-delete">CacheStorage: delete - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> delete(@Nonnull String cacheName);
 
   /**
@@ -39,7 +40,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/has">CacheStorage.has - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-has">CacheStorage: has - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> has(@Nonnull String cacheName);
 
   /**
@@ -48,7 +49,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/keys">CacheStorage.keys - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-keys">CacheStorage: keys - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<String>> keys();
 
   /**
@@ -57,7 +58,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match">CacheStorage.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-match">CacheStorage: match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull RequestInfo request,
       @Nonnull MultiCacheQueryOptions options);
 
@@ -67,7 +68,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match">CacheStorage.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-match">CacheStorage: match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull Request request,
       @Nonnull MultiCacheQueryOptions options);
 
@@ -77,7 +78,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match">CacheStorage.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-match">CacheStorage: match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull String request,
       @Nonnull MultiCacheQueryOptions options);
 
@@ -87,7 +88,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match">CacheStorage.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-match">CacheStorage: match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull RequestInfo request);
 
   /**
@@ -96,7 +97,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match">CacheStorage.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-match">CacheStorage: match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull Request request);
 
   /**
@@ -105,7 +106,7 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match">CacheStorage.match - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-match">CacheStorage: match - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<ResponseOrUndefinedUnion> match(@Nonnull String request);
 
   /**
@@ -114,6 +115,6 @@ public class CacheStorage extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open">CacheStorage.open - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-storage-open">CacheStorage: open - Service Workers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Cache> open(@Nonnull String cacheName);
 }

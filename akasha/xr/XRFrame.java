@@ -3,16 +3,16 @@ package akasha.xr;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene. Events which communicate the tracking state of objects also provide an XRFrame reference as part of their structure.A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene.In addition to providing a reference to the XRSession for which this frame is to be rendered, the getViewerPose() method is provided to obtain the XRViewerPose describing the viewer's position and orientation in space, and getPose() can be used to create an XRPose describing the relative position of one XRSpace relative to another.
+ * A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR scene. Events which communicate the tracking state of objects also provide an XRFrame reference as part of their structure.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame">XRFrame - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrframe-interface">XRFrame - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrframe-interface"># xrframe-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -42,7 +42,7 @@ public class XRFrame extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose">XRFrame.getPose - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrframe-getpose">XRFrame.getPose() - WebXR Device API</a>
    */
-  @Nullable
+  @JsNullable
   public native XRPose getPose(@Nonnull XRSpace space, @Nonnull XRSpace baseSpace);
 
   /**
@@ -51,6 +51,6 @@ public class XRFrame extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose">XRFrame.getViewerPose - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrframe-getviewerpose">XRFrame.getViewerPose() - WebXR Device API</a>
    */
-  @Nullable
+  @JsNullable
   public native XRViewerPose getViewerPose(@Nonnull XRReferenceSpace referenceSpace);
 }

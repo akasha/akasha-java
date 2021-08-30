@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,20 +28,20 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
   @JsProperty(
       name = "displayName"
   )
-  @Nonnull
+  @JsNonNull
   String displayName();
 
   @JsProperty
-  void setDisplayName(@Nonnull String displayName);
+  void setDisplayName(@JsNonNull String displayName);
 
   @JsProperty(
       name = "id"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource id();
 
   @JsProperty
-  void setId(@Nonnull BufferSource id);
+  void setId(@JsNonNull BufferSource id);
 
   @Generated("org.realityforge.webtack")
   @JsType(

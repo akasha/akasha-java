@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
 public class HTMLOptGroupElement extends HTMLElement {
   public boolean disabled;
 
-  @Nonnull
+  @JsNonNull
   public String label;
 
   protected HTMLOptGroupElement() {

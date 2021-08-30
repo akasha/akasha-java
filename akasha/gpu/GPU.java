@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -19,9 +20,9 @@ public class GPU extends JsObject {
   protected GPU() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPUAdapter> requestAdapter(@Nonnull GPURequestAdapterOptions options);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<GPUAdapter> requestAdapter();
 }

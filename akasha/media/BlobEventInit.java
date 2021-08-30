@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.Blob;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface BlobEventInit {
   @JsProperty(
       name = "data"
   )
-  @Nonnull
+  @JsNonNull
   Blob data();
 
   @JsProperty
-  void setData(@Nonnull Blob data);
+  void setData(@JsNonNull Blob data);
 
   @JsProperty(
       name = "timecode"

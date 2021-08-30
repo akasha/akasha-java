@@ -1,5 +1,6 @@
 package akasha.gpu;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -33,5 +34,25 @@ public interface GPUExtent3D {
   @Nonnull
   static GPUExtent3D of(@Nonnull final GPUExtent3DDict value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isGPUExtent3DDict() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default GPUExtent3DDict asGPUExtent3DDict() {
+    return Js.cast( this );
   }
 }

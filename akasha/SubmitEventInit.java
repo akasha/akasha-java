@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface SubmitEventInit extends EventInit {
   @JsProperty(
       name = "submitter"
   )
-  @Nullable
+  @JsNullable
   HTMLElement submitter();
 
   @JsProperty
-  void setSubmitter(@Nullable HTMLElement submitter);
+  void setSubmitter(@JsNullable HTMLElement submitter);
 
   @Generated("org.realityforge.webtack")
   @JsType(

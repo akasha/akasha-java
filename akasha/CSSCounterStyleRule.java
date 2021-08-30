@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,37 +18,37 @@ import jsinterop.annotations.JsType;
     name = "CSSCounterStyleRule"
 )
 public class CSSCounterStyleRule extends CSSRule {
-  @Nonnull
+  @JsNonNull
   public String additiveSymbols;
 
-  @Nonnull
+  @JsNonNull
   public String fallback;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String negative;
 
-  @Nonnull
+  @JsNonNull
   public String pad;
 
-  @Nonnull
+  @JsNonNull
   public String prefix;
 
-  @Nonnull
+  @JsNonNull
   public String range;
 
-  @Nonnull
+  @JsNonNull
   public String speakAs;
 
-  @Nonnull
+  @JsNonNull
   public String suffix;
 
-  @Nonnull
+  @JsNonNull
   public String symbols;
 
-  @Nonnull
+  @JsNonNull
   public String system;
 
   protected CSSCounterStyleRule() {

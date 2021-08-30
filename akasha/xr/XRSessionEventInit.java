@@ -3,6 +3,7 @@ package akasha.xr;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -11,10 +12,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.
+ * The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object. These objects represent events announcing state changes in an XRSession representing an augmented or virtual reality session.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit">XRSessionEventInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit">XRSessionEventInit - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessionevent-xrsessionevent"># dom-xrsessionevent-xrsessionevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -38,7 +39,7 @@ public interface XRSessionEventInit extends EventInit {
   @JsProperty(
       name = "session"
   )
-  @Nonnull
+  @JsNonNull
   XRSession session();
 
   /**
@@ -48,13 +49,13 @@ public interface XRSessionEventInit extends EventInit {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
    */
   @JsProperty
-  void setSession(@Nonnull XRSession session);
+  void setSession(@JsNonNull XRSession session);
 
   /**
-   * The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.
+   * The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object. These objects represent events announcing state changes in an XRSession representing an augmented or virtual reality session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit">XRSessionEventInit - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit">XRSessionEventInit - WebXR Device API</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessionevent-xrsessionevent"># dom-xrsessionevent-xrsessionevent</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

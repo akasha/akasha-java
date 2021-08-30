@@ -26,4 +26,24 @@ public interface AlgorithmIdentifier {
   static AlgorithmIdentifier of(@Nonnull final String value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isObject() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default JsObject asObject() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

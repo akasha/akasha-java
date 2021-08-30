@@ -4,6 +4,8 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -21,127 +23,127 @@ import jsinterop.annotations.JsType;
     name = "ElementInternals"
 )
 public class ElementInternals extends JsObject {
-  @Nonnull
+  @JsNonNull
   public String ariaAtomic;
 
-  @Nonnull
+  @JsNonNull
   public String ariaAutoComplete;
 
-  @Nonnull
+  @JsNonNull
   public String ariaBusy;
 
-  @Nonnull
+  @JsNonNull
   public String ariaChecked;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColCount;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColIndex;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColIndexText;
 
-  @Nonnull
+  @JsNonNull
   public String ariaColSpan;
 
-  @Nonnull
+  @JsNonNull
   public String ariaCurrent;
 
-  @Nonnull
+  @JsNonNull
   public String ariaDescription;
 
-  @Nonnull
+  @JsNonNull
   public String ariaDisabled;
 
-  @Nonnull
+  @JsNonNull
   public String ariaExpanded;
 
-  @Nonnull
+  @JsNonNull
   public String ariaHasPopup;
 
-  @Nonnull
+  @JsNonNull
   public String ariaHidden;
 
-  @Nonnull
+  @JsNonNull
   public String ariaInvalid;
 
-  @Nonnull
+  @JsNonNull
   public String ariaKeyShortcuts;
 
-  @Nonnull
+  @JsNonNull
   public String ariaLabel;
 
-  @Nonnull
+  @JsNonNull
   public String ariaLevel;
 
-  @Nonnull
+  @JsNonNull
   public String ariaLive;
 
-  @Nonnull
+  @JsNonNull
   public String ariaModal;
 
-  @Nonnull
+  @JsNonNull
   public String ariaMultiLine;
 
-  @Nonnull
+  @JsNonNull
   public String ariaMultiSelectable;
 
-  @Nonnull
+  @JsNonNull
   public String ariaOrientation;
 
-  @Nonnull
+  @JsNonNull
   public String ariaPlaceholder;
 
-  @Nonnull
+  @JsNonNull
   public String ariaPosInSet;
 
-  @Nonnull
+  @JsNonNull
   public String ariaPressed;
 
-  @Nonnull
+  @JsNonNull
   public String ariaReadOnly;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRequired;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRoleDescription;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowCount;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowIndex;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowIndexText;
 
-  @Nonnull
+  @JsNonNull
   public String ariaRowSpan;
 
-  @Nonnull
+  @JsNonNull
   public String ariaSelected;
 
-  @Nonnull
+  @JsNonNull
   public String ariaSetSize;
 
-  @Nonnull
+  @JsNonNull
   public String ariaSort;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueMax;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueMin;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueNow;
 
-  @Nonnull
+  @JsNonNull
   public String ariaValueText;
 
-  @Nullable
+  @JsNullable
   public String role;
 
   protected ElementInternals() {

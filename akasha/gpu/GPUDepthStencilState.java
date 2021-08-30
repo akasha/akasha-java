@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface GPUDepthStencilState {
       name = "format"
   )
   @GPUTextureFormat
-  @Nonnull
+  @JsNonNull
   String format();
 
   @JsProperty
-  void setFormat(@GPUTextureFormat @Nonnull String format);
+  void setFormat(@GPUTextureFormat @JsNonNull String format);
 
   @JsProperty(
       name = "depthBias"
@@ -65,7 +66,7 @@ public interface GPUDepthStencilState {
   String depthCompare();
 
   @JsProperty
-  void setDepthCompare(@GPUCompareFunction @Nonnull String depthCompare);
+  void setDepthCompare(@GPUCompareFunction @JsNonNull String depthCompare);
 
   @JsProperty(
       name = "depthWriteEnabled"
@@ -81,7 +82,7 @@ public interface GPUDepthStencilState {
   GPUStencilFaceState stencilBack();
 
   @JsProperty
-  void setStencilBack(@Nonnull GPUStencilFaceState stencilBack);
+  void setStencilBack(@JsNonNull GPUStencilFaceState stencilBack);
 
   @JsProperty(
       name = "stencilFront"
@@ -89,7 +90,7 @@ public interface GPUDepthStencilState {
   GPUStencilFaceState stencilFront();
 
   @JsProperty
-  void setStencilFront(@Nonnull GPUStencilFaceState stencilFront);
+  void setStencilFront(@JsNonNull GPUStencilFaceState stencilFront);
 
   @JsProperty(
       name = "stencilReadMask"

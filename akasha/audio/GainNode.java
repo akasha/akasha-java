@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The GainNode interface represents a change in volume. It is an AudioNode audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A GainNode always has exactly one input and one output, both with the same number of channels.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode">GainNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#gainnode">GainNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#GainNode"># GainNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

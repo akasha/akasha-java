@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The StereoPannerNode interface of the Web Audio API represents a simple stereo panner node that can be used to pan an audio stream left or right. It is an AudioNode audio-processing module that positions an incoming audio stream in a stereo image using a low-cost equal-power panning algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode">StereoPannerNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#stereopannernode">StereoPannerNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#stereopannernode"># stereopannernode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

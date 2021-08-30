@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -11,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The CredentialsContainer interface of the Credential Management API exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from Navigator.credentials.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer">CredentialsContainer - MDN</a>
- * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
- * @see <a href="https://w3c.github.io/webauthn/">Web Authentication: An API for accessing Public Key Credentials Level 1</a>
+ * @see <a href="https://w3c.github.io/webappsec-credential-management/#credentialscontainer">(Credential Management 1) # credentialscontainer</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +31,7 @@ public class CredentialsContainer extends JsObject {
    * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get">get() - Credential Management Level 1</a>
    * @see <a href="https://w3c.github.io/webauthn/">Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Credential> create(@Nonnull CredentialCreationOptions options);
 
   /**
@@ -41,7 +41,7 @@ public class CredentialsContainer extends JsObject {
    * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get">get() - Credential Management Level 1</a>
    * @see <a href="https://w3c.github.io/webauthn/">Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Credential> create();
 
   /**
@@ -51,7 +51,7 @@ public class CredentialsContainer extends JsObject {
    * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get">get() - Credential Management Level 1</a>
    * @see <a href="https://w3c.github.io/webauthn/">Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Credential> get(@Nonnull CredentialRequestOptions options);
 
   /**
@@ -61,7 +61,7 @@ public class CredentialsContainer extends JsObject {
    * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get">get() - Credential Management Level 1</a>
    * @see <a href="https://w3c.github.io/webauthn/">Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Credential> get();
 
   /**
@@ -70,7 +70,7 @@ public class CredentialsContainer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess">CredentialsContainer.preventSilentAccess - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-preventsilentaccess">preventSilentAccess() - Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> preventSilentAccess();
 
   /**
@@ -79,6 +79,6 @@ public class CredentialsContainer extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store">CredentialsContainer.store - MDN</a>
    * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Credential> store(@Nonnull Credential credential);
 }

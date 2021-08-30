@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -217,6 +218,6 @@ public class RTCIceCandidate extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/toJSON">RTCIceCandidate.toJSON - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-tojson">RTCIceCandidate.toJSON() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCIceCandidateInit toJSON();
 }

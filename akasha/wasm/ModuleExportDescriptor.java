@@ -2,6 +2,7 @@ package akasha.wasm;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,20 +27,20 @@ public interface ModuleExportDescriptor {
       name = "kind"
   )
   @ImportExportKind
-  @Nonnull
+  @JsNonNull
   String kind();
 
   @JsProperty
-  void setKind(@ImportExportKind @Nonnull String kind);
+  void setKind(@ImportExportKind @JsNonNull String kind);
 
   @JsProperty(
       name = "name"
   )
-  @Nonnull
+  @JsNonNull
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @Generated("org.realityforge.webtack")
   @JsType(

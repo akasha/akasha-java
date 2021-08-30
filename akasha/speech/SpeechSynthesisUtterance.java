@@ -5,7 +5,8 @@ import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -15,7 +16,7 @@ import jsinterop.base.Js;
  * The SpeechSynthesisUtterance interface of the Web Speech API represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance">SpeechSynthesisUtterance - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#tts-section">SpeechSynthesisUtterance - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisutterance"># speechsynthesisutterance</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -30,7 +31,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/lang">SpeechSynthesisUtterance.lang - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-lang">lang - Web Speech API</a>
    */
-  @Nonnull
+  @JsNonNull
   public String lang;
 
   /**
@@ -39,7 +40,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary">SpeechSynthesisUtterance.onboundary - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onboundary">onboundary - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onboundary;
 
   /**
@@ -48,7 +49,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onend">SpeechSynthesisUtterance.onend - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onend">onend - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onend;
 
   /**
@@ -57,7 +58,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror">SpeechSynthesisUtterance.onerror - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onerror">onerror - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisErrorEventHandler onerror;
 
   /**
@@ -66,7 +67,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onmark">SpeechSynthesisUtterance.onmark - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onmark">onmark - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onmark;
 
   /**
@@ -75,7 +76,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">SpeechSynthesisUtterance.onpause - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onpause">onpause - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onpause;
 
   /**
@@ -84,7 +85,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume">SpeechSynthesisUtterance.onresume - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onresume">onresume - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onresume;
 
   /**
@@ -93,7 +94,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart">SpeechSynthesisUtterance.onstart - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onstart">onstart - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onstart;
 
   /**
@@ -118,7 +119,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text">SpeechSynthesisUtterance.text - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-text">text - Web Speech API</a>
    */
-  @Nonnull
+  @JsNonNull
   public String text;
 
   /**
@@ -127,7 +128,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice">SpeechSynthesisUtterance.voice - MDN</a>
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-voice">voice - Web Speech API</a>
    */
-  @Nullable
+  @JsNullable
   public SpeechSynthesisVoice voice;
 
   /**

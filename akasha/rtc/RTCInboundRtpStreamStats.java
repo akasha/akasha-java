@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -99,7 +100,7 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   String decoderImplementation();
 
   @JsProperty
-  void setDecoderImplementation(@Nonnull String decoderImplementation);
+  void setDecoderImplementation(@JsNonNull String decoderImplementation);
 
   @JsProperty(
       name = "estimatedPlayoutTimestamp"
@@ -367,7 +368,7 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-perdscppacketsreceived">RTCInboundRtpStreamStats.perDscpPacketsReceived - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setPerDscpPacketsReceived(@Nonnull JsPropertyMap<Double> perDscpPacketsReceived);
+  void setPerDscpPacketsReceived(@JsNonNull JsPropertyMap<Double> perDscpPacketsReceived);
 
   /**
    * The pliCount property of the RTCInboundRtpStreamStats dictionary states the number of times the RTCRtpReceiver described by these statistics sent a Picture Loss Indication (PLI) packet to the sender.
@@ -418,7 +419,7 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   @JsProperty(
       name = "receiverId"
   )
-  @Nonnull
+  @JsNonNull
   String receiverId();
 
   /**
@@ -428,7 +429,7 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-receiverid">RTCInboundRtpStreamStats.receiverId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setReceiverId(@Nonnull String receiverId);
+  void setReceiverId(@JsNonNull String receiverId);
 
   /**
    * The remoteId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCRemoteOutboundRtpStreamStats object representing the remote peer's RTCRtpSender which is sending the media to the local peer.
@@ -448,7 +449,7 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-remoteid">RTCInboundRtpStreamStats.remoteId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setRemoteId(@Nonnull String remoteId);
+  void setRemoteId(@JsNonNull String remoteId);
 
   @JsProperty(
       name = "removedSamplesForAcceleration"
@@ -600,7 +601,7 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-trackId">RTCInboundRtpStreamStats.trackId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setTrackId(@Nonnull String trackId);
+  void setTrackId(@JsNonNull String trackId);
 
   /**
    * The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection.

@@ -8,10 +8,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system.
+ * The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an XRInputSource.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent">XRInputSourceEvent - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourceevent">XRInputSourceEvent - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourceevent-interface"># xrinputsourceevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

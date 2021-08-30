@@ -3,6 +3,7 @@ package akasha.svg;
 import akasha.DOMTokenList;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,8 +12,7 @@ import jsinterop.annotations.JsType;
  * The SVGAElement interface provides access to the properties of &lt;a&gt; element, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement">SVGAElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGAElement">Scalable Vector Graphics (SVG) 2</a>
- * @see <a href="https://www.w3.org/TR/SVG11/linking.html#InterfaceSVGAElement">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGAElement">(SVG) # InterfaceSVGAElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     name = "SVGAElement"
 )
 public class SVGAElement extends SVGGraphicsElement {
-  @Nonnull
+  @JsNonNull
   public String download;
 
   /**
@@ -30,7 +30,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">HTMLHyperlinkElementUtils.hash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hash">HTMLHyperlinkElementUtils.hash - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hash;
 
   /**
@@ -39,7 +39,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/host">HTMLHyperlinkElementUtils.host - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-host">HTMLHyperlinkElementUtils.host - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String host;
 
   /**
@@ -48,7 +48,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname">HTMLHyperlinkElementUtils.hostname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-hostname">HTMLHyperlinkElementUtils.hostname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String hostname;
 
   /**
@@ -57,10 +57,10 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/href">HTMLHyperlinkElementUtils.href - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-href">HTMLHyperlinkElementUtils.href - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String href;
 
-  @Nonnull
+  @JsNonNull
   public String hreflang;
 
   /**
@@ -69,7 +69,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">HTMLHyperlinkElementUtils.password - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-password">HTMLHyperlinkElementUtils.password - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String password;
 
   /**
@@ -78,10 +78,10 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname">HTMLHyperlinkElementUtils.pathname - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-pathname">HTMLHyperlinkElementUtils.pathname - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String pathname;
 
-  @Nonnull
+  @JsNonNull
   public String ping;
 
   /**
@@ -90,7 +90,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/port">HTMLHyperlinkElementUtils.port - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-port">HTMLHyperlinkElementUtils.port - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String port;
 
   /**
@@ -99,13 +99,13 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/protocol">HTMLHyperlinkElementUtils.protocol - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-protocol">HTMLHyperlinkElementUtils.protocol - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String protocol;
 
-  @Nonnull
+  @JsNonNull
   public String referrerPolicy;
 
-  @Nonnull
+  @JsNonNull
   public String rel;
 
   /**
@@ -114,13 +114,13 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">HTMLHyperlinkElementUtils.search - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-search">HTMLHyperlinkElementUtils.search - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String search;
 
-  @Nonnull
+  @JsNonNull
   public String text;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
   /**
@@ -129,7 +129,7 @@ public class SVGAElement extends SVGGraphicsElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">HTMLHyperlinkElementUtils.username - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-hyperlink-username">HTMLHyperlinkElementUtils.username - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public String username;
 
   protected SVGAElement() {

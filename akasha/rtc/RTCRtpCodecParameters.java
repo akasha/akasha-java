@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,11 +48,11 @@ public interface RTCRtpCodecParameters {
   @JsProperty(
       name = "mimeType"
   )
-  @Nonnull
+  @JsNonNull
   String mimeType();
 
   @JsProperty
-  void setMimeType(@Nonnull String mimeType);
+  void setMimeType(@JsNonNull String mimeType);
 
   @JsProperty(
       name = "payloadType"
@@ -67,7 +68,7 @@ public interface RTCRtpCodecParameters {
   String sdpFmtpLine();
 
   @JsProperty
-  void setSdpFmtpLine(@Nonnull String sdpFmtpLine);
+  void setSdpFmtpLine(@JsNonNull String sdpFmtpLine);
 
   /**
    * The RTCRtpCodecParameters dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media codec.

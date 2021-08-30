@@ -5,6 +5,8 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -12,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the Animation() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect">KeyframeEffect - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface">KeyframeEffect - Web Animations</a>
+ * @see <a href="https://drafts.csswg.org/web-animations/#the-keyframeeffect-interface">(Web Animations 2) # the-keyframeeffect-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,11 +29,11 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/composite">KeyframeEffect.composite - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-composite">KeyframeEffect.composite - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   @CompositeOperation
   public String composite;
 
-  @Nullable
+  @JsNullable
   public String pseudoElement;
 
   /**
@@ -40,7 +42,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/target">KeyframeEffect.target - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-target">keyframeEffect - Web Animations</a>
    */
-  @Nullable
+  @JsNullable
   public Element target;
 
   /**
@@ -91,7 +93,7 @@ public class KeyframeEffect extends AnimationEffect {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/getKeyframes">KeyframeEffect.getKeyframes - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-getkeyframes">KeyframeEffect.getKeyframes() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<JsObject> getKeyframes();
 
   /**

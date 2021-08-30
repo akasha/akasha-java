@@ -2,7 +2,7 @@ package akasha;
 
 import akasha.gl.TexImageSource;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,7 +24,7 @@ public class HTMLVideoElement extends HTMLMediaElement implements TexImageSource
 
   public boolean playsInline;
 
-  @Nonnull
+  @JsNonNull
   public String poster;
 
   public int width;
@@ -62,6 +62,6 @@ public class HTMLVideoElement extends HTMLMediaElement implements TexImageSource
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality">HTMLVideoElement.getVideoPlaybackQuality - MDN</a>
    * @see <a href="https://w3c.github.io/media-playback-quality/#dom-htmlvideoelement-getvideoplaybackquality">HTMLVideoElement.getVideoPlaybackQuality() - Media Playback Quality</a>
    */
-  @Nonnull
+  @JsNonNull
   public native VideoPlaybackQuality getVideoPlaybackQuality();
 }

@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface MediaKeySystemMediaCapability {
   String contentType();
 
   @JsProperty
-  void setContentType(@Nonnull String contentType);
+  void setContentType(@JsNonNull String contentType);
 
   @JsProperty(
       name = "robustness"
@@ -36,7 +37,7 @@ public interface MediaKeySystemMediaCapability {
   String robustness();
 
   @JsProperty
-  void setRobustness(@Nonnull String robustness);
+  void setRobustness(@JsNonNull String robustness);
 
   @Generated("org.realityforge.webtack")
   @JsType(

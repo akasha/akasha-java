@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public class VideoTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onaddtrack">VideoTrackList.onaddtrack - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack">VideoTrackList: onaddtrack - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public TrackEventHandler onaddtrack;
 
   /**
@@ -38,7 +39,7 @@ public class VideoTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onchange">VideoTrackList.onchange - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange">VideoTrackList: onchange - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onchange;
 
   /**
@@ -47,7 +48,7 @@ public class VideoTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onremovetrack">VideoTrackList.onremovetrack - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack">VideoTrackList: onremovetrack - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public TrackEventHandler onremovetrack;
 
   protected VideoTrackList() {
@@ -81,11 +82,11 @@ public class VideoTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/getTrackById">VideoTrackList.getTrackById - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-videotracklist-gettrackbyid">VideoTrackList.getTrackById() - HTML Living Standard</a>
    */
-  @Nullable
+  @JsNullable
   public native VideoTrack getTrackById(@Nonnull String id);
 
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final VideoTrack getAt(final int index) {
     return Js.<JsArrayLike<VideoTrack>>cast( this ).getAt( index );
   }

@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,16 +18,16 @@ import jsinterop.annotations.JsType;
     name = "HTMLMarqueeElement"
 )
 public class HTMLMarqueeElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String behavior;
 
-  @Nonnull
+  @JsNonNull
   public String bgColor;
 
-  @Nonnull
+  @JsNonNull
   public String direction;
 
-  @Nonnull
+  @JsNonNull
   public String height;
 
   public int hspace;
@@ -42,7 +42,7 @@ public class HTMLMarqueeElement extends HTMLElement {
 
   public int vspace;
 
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLMarqueeElement() {

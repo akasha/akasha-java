@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +40,7 @@ public interface GPURequestAdapterOptions {
   String powerPreference();
 
   @JsProperty
-  void setPowerPreference(@GPUPowerPreference @Nonnull String powerPreference);
+  void setPowerPreference(@GPUPowerPreference @JsNonNull String powerPreference);
 
   @Generated("org.realityforge.webtack")
   @JsType(

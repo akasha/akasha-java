@@ -7,6 +7,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -69,7 +71,7 @@ public class RTCRtpSender extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getCapabilities">RTCRtpSender.getCapabilities - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-getcapabilities">RTCRtpSender.getCapabilities() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public static native RTCRtpCapabilities getCapabilities(@Nonnull String kind);
 
   /**
@@ -78,7 +80,7 @@ public class RTCRtpSender extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getParameters">RTCRtpSender.getParameters - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-getparameters">getParameters() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCRtpSendParameters getParameters();
 
   /**
@@ -87,7 +89,7 @@ public class RTCRtpSender extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getStats">RTCRtpSender.getStats - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#widl-RTCRtpSender-getStats-Promise-RTCStatsReport">RTCRtpSender.getStats() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCStatsReport> getStats();
 
   /**
@@ -96,7 +98,7 @@ public class RTCRtpSender extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/replaceTrack">RTCRtpSender.replaceTrack - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-replacetrack">RTCRtpSender.replaceTrack() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> replaceTrack(@Nullable MediaStreamTrack withTrack);
 
   /**
@@ -105,7 +107,7 @@ public class RTCRtpSender extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters">RTCRtpSender.setParameters - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-setparameters">RTCRtpSender.setParameters() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> setParameters(@Nonnull RTCRtpSendParameters parameters);
 
   /**

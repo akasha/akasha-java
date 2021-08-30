@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,18 +18,18 @@ import jsinterop.annotations.JsType;
     name = "HTMLHRElement"
 )
 public class HTMLHRElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String align;
 
-  @Nonnull
+  @JsNonNull
   public String color;
 
   public boolean noShade;
 
-  @Nonnull
+  @JsNonNull
   public String size;
 
-  @Nonnull
+  @JsNonNull
   public String width;
 
   protected HTMLHRElement() {

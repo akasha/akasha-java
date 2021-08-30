@@ -1,5 +1,6 @@
 package akasha.media;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -24,5 +25,25 @@ public interface ConstrainDouble {
   @Nonnull
   static ConstrainDouble of(@Nonnull final ConstrainDoubleRange value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isConstrainDoubleRange() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default ConstrainDoubleRange asConstrainDoubleRange() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isDouble() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default double asDouble() {
+    return Js.asDouble( this );
   }
 }

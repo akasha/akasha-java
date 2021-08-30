@@ -3,6 +3,7 @@ package akasha.audio;
 import akasha.HTMLMediaElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface MediaElementAudioSourceOptions {
   @JsProperty(
       name = "mediaElement"
   )
-  @Nonnull
+  @JsNonNull
   HTMLMediaElement mediaElement();
 
   @JsProperty
-  void setMediaElement(@Nonnull HTMLMediaElement mediaElement);
+  void setMediaElement(@JsNonNull HTMLMediaElement mediaElement);
 
   @Generated("org.realityforge.webtack")
   @JsType(

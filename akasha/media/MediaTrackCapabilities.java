@@ -3,6 +3,7 @@ package akasha.media;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface MediaTrackCapabilities {
   DoubleRange aspectRatio();
 
   @JsProperty
-  void setAspectRatio(@Nonnull DoubleRange aspectRatio);
+  void setAspectRatio(@JsNonNull DoubleRange aspectRatio);
 
   @JsProperty(
       name = "autoGainControl"
@@ -37,7 +38,7 @@ public interface MediaTrackCapabilities {
   JsArray<Boolean> autoGainControl();
 
   @JsProperty
-  void setAutoGainControl(@Nonnull JsArray<Boolean> autoGainControl);
+  void setAutoGainControl(@JsNonNull JsArray<Boolean> autoGainControl);
 
   @JsOverlay
   default void setAutoGainControl(@Nonnull final Boolean... autoGainControl) {
@@ -50,7 +51,7 @@ public interface MediaTrackCapabilities {
   ULongRange channelCount();
 
   @JsProperty
-  void setChannelCount(@Nonnull ULongRange channelCount);
+  void setChannelCount(@JsNonNull ULongRange channelCount);
 
   @JsProperty(
       name = "deviceId"
@@ -58,7 +59,7 @@ public interface MediaTrackCapabilities {
   String deviceId();
 
   @JsProperty
-  void setDeviceId(@Nonnull String deviceId);
+  void setDeviceId(@JsNonNull String deviceId);
 
   @JsProperty(
       name = "echoCancellation"
@@ -66,7 +67,7 @@ public interface MediaTrackCapabilities {
   JsArray<Boolean> echoCancellation();
 
   @JsProperty
-  void setEchoCancellation(@Nonnull JsArray<Boolean> echoCancellation);
+  void setEchoCancellation(@JsNonNull JsArray<Boolean> echoCancellation);
 
   @JsOverlay
   default void setEchoCancellation(@Nonnull final Boolean... echoCancellation) {
@@ -79,7 +80,7 @@ public interface MediaTrackCapabilities {
   JsArray<String> facingMode();
 
   @JsProperty
-  void setFacingMode(@Nonnull JsArray<String> facingMode);
+  void setFacingMode(@JsNonNull JsArray<String> facingMode);
 
   @JsOverlay
   default void setFacingMode(@Nonnull final String... facingMode) {
@@ -92,7 +93,7 @@ public interface MediaTrackCapabilities {
   DoubleRange frameRate();
 
   @JsProperty
-  void setFrameRate(@Nonnull DoubleRange frameRate);
+  void setFrameRate(@JsNonNull DoubleRange frameRate);
 
   @JsProperty(
       name = "groupId"
@@ -100,7 +101,7 @@ public interface MediaTrackCapabilities {
   String groupId();
 
   @JsProperty
-  void setGroupId(@Nonnull String groupId);
+  void setGroupId(@JsNonNull String groupId);
 
   @JsProperty(
       name = "height"
@@ -108,7 +109,7 @@ public interface MediaTrackCapabilities {
   ULongRange height();
 
   @JsProperty
-  void setHeight(@Nonnull ULongRange height);
+  void setHeight(@JsNonNull ULongRange height);
 
   @JsProperty(
       name = "latency"
@@ -116,7 +117,7 @@ public interface MediaTrackCapabilities {
   DoubleRange latency();
 
   @JsProperty
-  void setLatency(@Nonnull DoubleRange latency);
+  void setLatency(@JsNonNull DoubleRange latency);
 
   @JsProperty(
       name = "noiseSuppression"
@@ -124,7 +125,7 @@ public interface MediaTrackCapabilities {
   JsArray<Boolean> noiseSuppression();
 
   @JsProperty
-  void setNoiseSuppression(@Nonnull JsArray<Boolean> noiseSuppression);
+  void setNoiseSuppression(@JsNonNull JsArray<Boolean> noiseSuppression);
 
   @JsOverlay
   default void setNoiseSuppression(@Nonnull final Boolean... noiseSuppression) {
@@ -137,7 +138,7 @@ public interface MediaTrackCapabilities {
   JsArray<String> resizeMode();
 
   @JsProperty
-  void setResizeMode(@Nonnull JsArray<String> resizeMode);
+  void setResizeMode(@JsNonNull JsArray<String> resizeMode);
 
   @JsOverlay
   default void setResizeMode(@Nonnull final String... resizeMode) {
@@ -150,7 +151,7 @@ public interface MediaTrackCapabilities {
   ULongRange sampleRate();
 
   @JsProperty
-  void setSampleRate(@Nonnull ULongRange sampleRate);
+  void setSampleRate(@JsNonNull ULongRange sampleRate);
 
   @JsProperty(
       name = "sampleSize"
@@ -158,7 +159,7 @@ public interface MediaTrackCapabilities {
   ULongRange sampleSize();
 
   @JsProperty
-  void setSampleSize(@Nonnull ULongRange sampleSize);
+  void setSampleSize(@JsNonNull ULongRange sampleSize);
 
   @JsProperty(
       name = "width"
@@ -166,7 +167,7 @@ public interface MediaTrackCapabilities {
   ULongRange width();
 
   @JsProperty
-  void setWidth(@Nonnull ULongRange width);
+  void setWidth(@JsNonNull ULongRange width);
 
   @JsProperty(
       name = "cursor"
@@ -174,7 +175,7 @@ public interface MediaTrackCapabilities {
   JsArray<String> cursor();
 
   @JsProperty
-  void setCursor(@Nonnull JsArray<String> cursor);
+  void setCursor(@JsNonNull JsArray<String> cursor);
 
   @JsOverlay
   default void setCursor(@Nonnull final String... cursor) {
@@ -187,7 +188,7 @@ public interface MediaTrackCapabilities {
   String displaySurface();
 
   @JsProperty
-  void setDisplaySurface(@Nonnull String displaySurface);
+  void setDisplaySurface(@JsNonNull String displaySurface);
 
   @JsProperty(
       name = "logicalSurface"

@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -22,7 +22,7 @@ public class HTMLFontElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/color">HTMLFontElement.color - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String color;
 
   /**
@@ -30,7 +30,7 @@ public class HTMLFontElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/face">HTMLFontElement.face - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String face;
 
   /**
@@ -38,7 +38,7 @@ public class HTMLFontElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/size">HTMLFontElement.size - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String size;
 
   protected HTMLFontElement() {

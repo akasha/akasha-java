@@ -11,28 +11,32 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "DocumentOrWindowProxyUnion"
+    name = "ClientOrUndefinedUnion"
 )
-public interface DocumentOrWindowProxyUnion {
+public interface ClientOrUndefinedUnion {
   @JsOverlay
   @Nonnull
-  static DocumentOrWindowProxyUnion of(@Nonnull final Document value) {
+  static ClientOrUndefinedUnion of(@Nonnull final Client value) {
     return Js.cast( value );
   }
 
   @JsOverlay
-  @Nonnull
-  static DocumentOrWindowProxyUnion of(@Nonnull final Window value) {
-    return Js.cast( value );
+  static ClientOrUndefinedUnion of() {
+    return Js.cast( Js.undefined() );
   }
 
   @JsOverlay
-  default Document asDocument() {
+  default boolean isClient() {
+    return ( (Object) this ) instanceof Client;
+  }
+
+  @JsOverlay
+  default Client asClient() {
     return Js.cast( this );
   }
 
   @JsOverlay
-  default Window asWindowProxy() {
-    return Js.cast( this );
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
   }
 }

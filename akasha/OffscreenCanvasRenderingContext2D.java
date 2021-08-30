@@ -5,7 +5,8 @@ import akasha.lang.JsArray;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -17,49 +18,49 @@ import jsinterop.annotations.JsType;
     name = "OffscreenCanvasRenderingContext2D"
 )
 public class OffscreenCanvasRenderingContext2D extends JsObject implements OffscreenRenderingContext {
-  @Nonnull
+  @JsNonNull
   @CanvasDirection
   public String direction;
 
-  @Nonnull
+  @JsNonNull
   public StringOrCanvasGradientOrCanvasPatternUnion fillStyle;
 
-  @Nonnull
+  @JsNonNull
   public String filter;
 
-  @Nonnull
+  @JsNonNull
   public String font;
 
-  @Nonnull
+  @JsNonNull
   @CanvasFontKerning
   public String fontKerning;
 
-  @Nonnull
+  @JsNonNull
   @CanvasFontStretch
   public String fontStretch;
 
-  @Nonnull
+  @JsNonNull
   @CanvasFontVariantCaps
   public String fontVariantCaps;
 
   public double globalAlpha;
 
-  @Nonnull
+  @JsNonNull
   public String globalCompositeOperation;
 
   public boolean imageSmoothingEnabled;
 
-  @Nonnull
+  @JsNonNull
   @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
-  @Nonnull
+  @JsNonNull
   @CanvasLineCap
   public String lineCap;
 
   public double lineDashOffset;
 
-  @Nonnull
+  @JsNonNull
   @CanvasLineJoin
   public String lineJoin;
 
@@ -69,27 +70,27 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
 
   public double shadowBlur;
 
-  @Nonnull
+  @JsNonNull
   public String shadowColor;
 
   public double shadowOffsetX;
 
   public double shadowOffsetY;
 
-  @Nonnull
+  @JsNonNull
   public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
 
-  @Nonnull
+  @JsNonNull
   @CanvasTextAlign
   public String textAlign;
 
-  @Nonnull
+  @JsNonNull
   @CanvasTextBaseline
   public String textBaseline;
 
   public double textLetterSpacing;
 
-  @Nonnull
+  @JsNonNull
   @CanvasTextRendering
   public String textRendering;
 
@@ -153,28 +154,28 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
 
   public native void strokeRect(double x, double y, double w, double h);
 
-  @Nonnull
+  @JsNonNull
   public native CanvasGradient createConicGradient(double startAngle, double x, double y);
 
-  @Nonnull
+  @JsNonNull
   public native CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);
 
-  @Nullable
+  @JsNullable
   public native CanvasPattern createPattern(@Nonnull CanvasImageSource image,
       @Nonnull String repetition);
 
-  @Nonnull
+  @JsNonNull
   public native CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1,
       double y1, double r1);
 
-  @Nonnull
+  @JsNonNull
   public native JsArray<Double> getLineDash();
 
   public native void setLineDash(@Nonnull JsArray<Double> segments);
 
   public native void setLineDash(@Nonnull double[] segments);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix getTransform();
 
   public native void resetTransform();
@@ -198,7 +199,7 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   public native void fillText(@Nonnull String text, double x, double y);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native TextMetrics measureText(@Nonnull String text);
 
   public native void strokeText(@Nonnull String text, double x, double y, double maxWidth);
@@ -214,22 +215,22 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
       double sh, double dx, double dy, double dw, double dh);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ImageData createImageData(int sw, int sh, @Nonnull ImageDataSettings settings);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ImageData createImageData(int sw, int sh);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native ImageData createImageData(@Nonnull ImageData imagedata);
 
-  @Nonnull
+  @JsNonNull
   public native ImageData getImageData(int sx, int sy, int sw, int sh,
       @Nonnull ImageDataSettings settings);
 
-  @Nonnull
+  @JsNonNull
   public native ImageData getImageData(int sx, int sy, int sw, int sh);
 
   public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy);

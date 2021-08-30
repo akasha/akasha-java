@@ -2,6 +2,7 @@ package akasha.crypto;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +32,11 @@ public interface EcdhKeyDeriveParams extends Algorithm {
   @JsProperty(
       name = "public"
   )
-  @Nonnull
+  @JsNonNull
   CryptoKey public_();
 
   @JsProperty
-  void setPublic(@Nonnull CryptoKey public_);
+  void setPublic(@JsNonNull CryptoKey public_);
 
   /**
    * The EcdhKeyDeriveParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the ECDH algorithm.

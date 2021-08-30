@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,7 +40,7 @@ public interface GPUTextureBindingLayout {
   String sampleType();
 
   @JsProperty
-  void setSampleType(@GPUTextureSampleType @Nonnull String sampleType);
+  void setSampleType(@GPUTextureSampleType @JsNonNull String sampleType);
 
   @JsProperty(
       name = "viewDimension"
@@ -48,7 +49,7 @@ public interface GPUTextureBindingLayout {
   String viewDimension();
 
   @JsProperty
-  void setViewDimension(@GPUTextureViewDimension @Nonnull String viewDimension);
+  void setViewDimension(@GPUTextureViewDimension @JsNonNull String viewDimension);
 
   @Generated("org.realityforge.webtack")
   @JsType(

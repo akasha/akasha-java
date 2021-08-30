@@ -7,8 +7,9 @@ import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -48,7 +49,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://dom.spec.whatwg.org/#dom-nodelist-item">NodeList: item - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Node item(int index);
 
   /**
@@ -57,7 +58,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/keys">NodeList.keys - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> keys();
 
   /**
@@ -66,7 +67,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/values">NodeList.values - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Node> values();
 
   /**
@@ -75,7 +76,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/entries">NodeList.entries - MDN</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
   /**
@@ -84,7 +85,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach">NodeList.forEach - MDN</a>
    * @see <a href="https://heycam.github.io/webidl/#es-forEach">forEach - Web IDL</a>
    */
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
   /**
    * The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
@@ -92,7 +93,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach">NodeList.forEach - MDN</a>
    * @see <a href="https://heycam.github.io/webidl/#es-forEach">forEach - Web IDL</a>
    */
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
   /**
    * The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
@@ -100,7 +101,7 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach">NodeList.forEach - MDN</a>
    * @see <a href="https://heycam.github.io/webidl/#es-forEach">forEach - Web IDL</a>
    */
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -123,18 +124,18 @@ public class NodeList extends JsObject implements JsIterable<NodeList.Entry> {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull Node value);
+    void item(@JsNonNull Node value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull Node value, int index);
+    void item(@JsNonNull Node value, int index);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull Node value, int index, @Nonnull NodeList iterable);
+    void item(@JsNonNull Node value, int index, @JsNonNull NodeList iterable);
   }
 }

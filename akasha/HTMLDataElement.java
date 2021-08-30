@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -25,7 +25,7 @@ public class HTMLDataElement extends HTMLElement {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-data-value">HTMLDataElement.value - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/text-level-semantics.html#dom-data-value">value - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public String value;
 
   protected HTMLDataElement() {

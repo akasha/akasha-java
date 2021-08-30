@@ -2,6 +2,7 @@ package akasha.media;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,6 @@ import jsinterop.base.JsPropertyMap;
  * The DisplayMediaStreamConstraints dictionary is used to specify whether or not to include video and/or audio tracks in the MediaStream to be returned by getDisplayMedia(), as well as what type of processing must be applied to the tracks.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints">DisplayMediaStreamConstraints - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints">DisplayMediaStreamConstraints - Screen Capture</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,7 +46,7 @@ public interface DisplayMediaStreamConstraints {
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio">DisplayMediaStreamConstraints.audio - Screen Capture</a>
    */
   @JsProperty
-  void setAudio(@Nonnull BooleanOrMediaTrackConstraintsUnion audio);
+  void setAudio(@JsNonNull BooleanOrMediaTrackConstraintsUnion audio);
 
   /**
    * The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.
@@ -88,7 +88,7 @@ public interface DisplayMediaStreamConstraints {
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video">DisplayMediaStreamConstraints.video - Screen Capture</a>
    */
   @JsProperty
-  void setVideo(@Nonnull BooleanOrMediaTrackConstraintsUnion video);
+  void setVideo(@JsNonNull BooleanOrMediaTrackConstraintsUnion video);
 
   /**
    * The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().
@@ -116,7 +116,6 @@ public interface DisplayMediaStreamConstraints {
    * The DisplayMediaStreamConstraints dictionary is used to specify whether or not to include video and/or audio tracks in the MediaStream to be returned by getDisplayMedia(), as well as what type of processing must be applied to the tracks.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints">DisplayMediaStreamConstraints - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints">DisplayMediaStreamConstraints - Screen Capture</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

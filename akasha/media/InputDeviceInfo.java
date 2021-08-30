@@ -1,7 +1,7 @@
 package akasha.media;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -21,6 +21,6 @@ public class InputDeviceInfo extends MediaDeviceInfo {
   protected InputDeviceInfo() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native MediaTrackCapabilities getCapabilities();
 }

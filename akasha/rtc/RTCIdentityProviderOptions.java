@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RTCIdentityProviderOptions {
   String peerIdentity();
 
   @JsProperty
-  void setPeerIdentity(@Nonnull String peerIdentity);
+  void setPeerIdentity(@JsNonNull String peerIdentity);
 
   @JsProperty(
       name = "protocol"
@@ -36,7 +37,7 @@ public interface RTCIdentityProviderOptions {
   String protocol();
 
   @JsProperty
-  void setProtocol(@Nonnull String protocol);
+  void setProtocol(@JsNonNull String protocol);
 
   @JsProperty(
       name = "usernameHint"
@@ -44,7 +45,7 @@ public interface RTCIdentityProviderOptions {
   String usernameHint();
 
   @JsProperty
-  void setUsernameHint(@Nonnull String usernameHint);
+  void setUsernameHint(@JsNonNull String usernameHint);
 
   @Generated("org.realityforge.webtack")
   @JsType(

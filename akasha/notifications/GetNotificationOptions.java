@@ -2,6 +2,7 @@ package akasha.notifications;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface GetNotificationOptions {
   String tag();
 
   @JsProperty
-  void setTag(@Nonnull String tag);
+  void setTag(@JsNonNull String tag);
 
   @Generated("org.realityforge.webtack")
   @JsType(

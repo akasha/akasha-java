@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,7 +48,7 @@ public interface RTCRtpStreamStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setCodecId(@Nonnull String codecId);
+  void setCodecId(@JsNonNull String codecId);
 
   /**
    * The kind property of the RTCRtpStreamStats dictionary is a string indicating whether the described RTP stream contains audio or video media.
@@ -58,7 +59,7 @@ public interface RTCRtpStreamStats extends RTCStats {
   @JsProperty(
       name = "kind"
   )
-  @Nonnull
+  @JsNonNull
   String kind();
 
   /**
@@ -68,7 +69,7 @@ public interface RTCRtpStreamStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-kind">RTCRtpStreamStats.kind - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setKind(@Nonnull String kind);
+  void setKind(@JsNonNull String kind);
 
   /**
    * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
@@ -108,7 +109,7 @@ public interface RTCRtpStreamStats extends RTCStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-transportid">RTCRtpStreamStats.transportId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setTransportId(@Nonnull String transportId);
+  void setTransportId(@JsNonNull String transportId);
 
   @JsProperty(
       name = "averageRTCPInterval"
@@ -124,7 +125,7 @@ public interface RTCRtpStreamStats extends RTCStats {
   String mediaType();
 
   @JsProperty
-  void setMediaType(@Nonnull String mediaType);
+  void setMediaType(@JsNonNull String mediaType);
 
   /**
    * The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity.

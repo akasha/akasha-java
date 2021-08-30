@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface UnderlyingSource {
   UnderlyingSourceStartCallback start();
 
   @JsProperty
-  void setStart(@Nonnull UnderlyingSourceStartCallback start);
+  void setStart(@JsNonNull UnderlyingSourceStartCallback start);
 
   @JsProperty(
       name = "pull"
@@ -36,7 +37,7 @@ public interface UnderlyingSource {
   UnderlyingSourcePullCallback pull();
 
   @JsProperty
-  void setPull(@Nonnull UnderlyingSourcePullCallback pull);
+  void setPull(@JsNonNull UnderlyingSourcePullCallback pull);
 
   @JsProperty(
       name = "cancel"
@@ -44,7 +45,7 @@ public interface UnderlyingSource {
   UnderlyingSourceCancelCallback cancel();
 
   @JsProperty
-  void setCancel(@Nonnull UnderlyingSourceCancelCallback cancel);
+  void setCancel(@JsNonNull UnderlyingSourceCancelCallback cancel);
 
   @JsProperty(
       name = "type"
@@ -53,7 +54,7 @@ public interface UnderlyingSource {
   String type();
 
   @JsProperty
-  void setType(@ReadableStreamType @Nonnull String type);
+  void setType(@ReadableStreamType @JsNonNull String type);
 
   @JsProperty(
       name = "autoAllocateChunkSize"

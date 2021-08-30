@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,7 +33,7 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
   String colorSpace();
 
   @JsProperty
-  void setColorSpace(@GPUPredefinedColorSpace @Nonnull String colorSpace);
+  void setColorSpace(@GPUPredefinedColorSpace @JsNonNull String colorSpace);
 
   @JsProperty(
       name = "premultipliedAlpha"

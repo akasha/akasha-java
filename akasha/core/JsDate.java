@@ -4,6 +4,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -499,7 +500,7 @@ public class JsDate extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.todatestring">(ECMAScript) # sec-date.prototype.todatestring</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toDateString();
 
   /**
@@ -508,7 +509,7 @@ public class JsDate extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString">Date.toISOString - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.toisostring">(ECMAScript) # sec-date.prototype.toisostring</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toISOString();
 
   /**
@@ -517,7 +518,7 @@ public class JsDate extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON">Date.toJSON - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.tojson">(ECMAScript) # sec-date.prototype.tojson</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toJSON();
 
   /**
@@ -526,7 +527,7 @@ public class JsDate extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString">Date.toTimeString - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.totimestring">(ECMAScript) # sec-date.prototype.totimestring</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toTimeString();
 
   /**
@@ -536,7 +537,7 @@ public class JsDate extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.toutcstring">(ECMAScript) # sec-date.prototype.toutcstring</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String toUTCString();
 
   /**
@@ -556,7 +557,7 @@ public class JsDate extends JsObject {
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 
   /**

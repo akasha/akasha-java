@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,20 +27,20 @@ public interface VideoDecoderInit {
   @JsProperty(
       name = "error"
   )
-  @Nonnull
+  @JsNonNull
   WebCodecsErrorCallback error();
 
   @JsProperty
-  void setError(@Nonnull WebCodecsErrorCallback error);
+  void setError(@JsNonNull WebCodecsErrorCallback error);
 
   @JsProperty(
       name = "output"
   )
-  @Nonnull
+  @JsNonNull
   VideoFrameOutputCallback output();
 
   @JsProperty
-  void setOutput(@Nonnull VideoFrameOutputCallback output);
+  void setOutput(@JsNonNull VideoFrameOutputCallback output);
 
   @Generated("org.realityforge.webtack")
   @JsType(

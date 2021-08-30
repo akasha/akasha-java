@@ -6,6 +6,7 @@ import akasha.media.MediaStreamTrack;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -69,7 +70,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close">AudioContext.close - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-close">close() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> close();
 
   /**
@@ -78,7 +79,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaElementSource">AudioContext.createMediaElementSource - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediaelementsource">createMediaElementSource() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaElementAudioSourceNode createMediaElementSource(
       @Nonnull HTMLMediaElement mediaElement);
 
@@ -88,7 +89,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamDestination">AudioContext.createMediaStreamDestination - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamdestination">createMediaStreamDestination() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaStreamAudioDestinationNode createMediaStreamDestination();
 
   /**
@@ -97,7 +98,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamSource">AudioContext.createMediaStreamSource - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamsource">AudioContext.createMediaStreamSource() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaStreamAudioSourceNode createMediaStreamSource(
       @Nonnull MediaStream mediaStream);
 
@@ -107,7 +108,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamTrackSource">AudioContext.createMediaStreamTrackSource - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamtracksource">createMediaStreamTrackSource() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native MediaStreamTrackAudioSourceNode createMediaStreamTrackSource(
       @Nonnull MediaStreamTrack mediaStreamTrack);
 
@@ -117,7 +118,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/getOutputTimestamp">AudioContext.getOutputTimestamp - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-getoutputtimestamp">getOutputTimestamp() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioTimestamp getOutputTimestamp();
 
   /**
@@ -126,7 +127,7 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/resume">AudioContext.resume - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-resume">resume() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> resume();
 
   /**
@@ -135,6 +136,6 @@ public class AudioContext extends BaseAudioContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/suspend">AudioContext.suspend - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-suspend">close() - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> suspend();
 }

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API interface XRReferenceSpaceEvent represents an event sent to an XRReferenceSpace. Currently, the only event that uses this type is the reset event.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent">XRReferenceSpaceEvent - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrreferencespaceevent">XRReferenceSpaceEvent - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrreferencespaceevent-interface"># xrreferencespaceevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

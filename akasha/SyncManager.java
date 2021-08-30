@@ -5,6 +5,7 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The SyncManager interface of the ServiceWorker API provides an interface for registering and listing sync registrations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SyncManager">SyncManager - MDN</a>
- * @see <a href="https://wicg.github.io/background-sync/spec/#sync-manager-interface">SyncManager - Web Background Synchronization</a>
+ * @see <a href="https://wicg.github.io/background-sync/spec/#sync-manager-interface">(Background Sync) # sync-manager-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,7 +30,7 @@ public class SyncManager extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SyncManager/getTags">SyncManager.getTags - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<String>> getTags();
 
   /**
@@ -37,6 +38,6 @@ public class SyncManager extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SyncManager/register">SyncManager.register - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> register(@Nonnull String tag);
 }

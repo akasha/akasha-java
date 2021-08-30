@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.core.Uint8Array;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -48,11 +49,11 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
   @JsProperty(
       name = "hash"
   )
-  @Nonnull
+  @JsNonNull
   AlgorithmIdentifier hash();
 
   @JsProperty
-  void setHash(@Nonnull AlgorithmIdentifier hash);
+  void setHash(@JsNonNull AlgorithmIdentifier hash);
 
   @JsOverlay
   default void setHash(@Nonnull final JsObject hash) {

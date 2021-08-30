@@ -4,6 +4,8 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,10 +28,10 @@ public class ShadowRoot extends DocumentFragment {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML">ShadowRoot.innerHTML - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String innerHTML;
 
-  @Nullable
+  @JsNullable
   public EventHandler onslotchange;
 
   protected ShadowRoot() {
@@ -131,6 +133,6 @@ public class ShadowRoot extends DocumentFragment {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">DocumentOrShadowRoot.getAnimations - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-documentorshadowroot-getanimations">document.getAnimations() - Web Animations</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Animation> getAnimations();
 }

@@ -9,10 +9,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint.
+ * The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRView">XRView - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrview-interface">XRView - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrview-interface"># xrview-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

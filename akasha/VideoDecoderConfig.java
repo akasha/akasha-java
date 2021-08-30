@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface VideoDecoderConfig {
   @JsProperty(
       name = "codec"
   )
-  @Nonnull
+  @JsNonNull
   String codec();
 
   @JsProperty
-  void setCodec(@Nonnull String codec);
+  void setCodec(@JsNonNull String codec);
 
   @JsProperty(
       name = "codedHeight"
@@ -54,7 +55,7 @@ public interface VideoDecoderConfig {
   BufferSource description();
 
   @JsProperty
-  void setDescription(@Nonnull BufferSource description);
+  void setDescription(@JsNonNull BufferSource description);
 
   @JsProperty(
       name = "displayAspectHeight"
@@ -79,7 +80,7 @@ public interface VideoDecoderConfig {
   String hardwareAcceleration();
 
   @JsProperty
-  void setHardwareAcceleration(@HardwareAcceleration @Nonnull String hardwareAcceleration);
+  void setHardwareAcceleration(@HardwareAcceleration @JsNonNull String hardwareAcceleration);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -6,6 +6,7 @@ import akasha.RenderingContext;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,11 +31,11 @@ public class GPUCanvasContext extends JsObject implements OffscreenRenderingCont
 
   public native void configure(@Nonnull GPUCanvasConfiguration configuration);
 
-  @Nonnull
+  @JsNonNull
   public native GPUTexture getCurrentTexture();
 
   @GPUTextureFormat
-  @Nonnull
+  @JsNonNull
   public native String getPreferredFormat(@Nonnull GPUAdapter adapter);
 
   public native void unconfigure();

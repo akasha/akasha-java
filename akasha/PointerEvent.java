@@ -10,9 +10,7 @@ import jsinterop.annotations.JsType;
  * The PointerEvent interface represents the state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent">PointerEvent - MDN</a>
- * @see <a href="https://w3c.github.io/pointerevents/#pointerevent-interface">PointerEvent - Pointer Events &ndash; Level 3</a>
- * @see <a href="https://www.w3.org/TR/pointerevents2/#pointerevent-interface">PointerEvent - Pointer Events &ndash; Level 2</a>
- * @see <a href="https://www.w3.org/TR/pointerevents1/#pointerevent-interface">PointerEvent - Pointer Events</a>
+ * @see <a href="https://w3c.github.io/pointerevents/#pointerevent-interface"># pointerevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

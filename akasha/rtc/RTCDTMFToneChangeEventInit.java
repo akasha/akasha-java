@@ -3,6 +3,7 @@ package akasha.rtc;
 import akasha.EventInit;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface RTCDTMFToneChangeEventInit extends EventInit {
   String tone();
 
   @JsProperty
-  void setTone(@Nonnull String tone);
+  void setTone(@JsNonNull String tone);
 
   @Generated("org.realityforge.webtack")
   @JsType(

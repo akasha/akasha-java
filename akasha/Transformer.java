@@ -4,6 +4,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +33,7 @@ public interface Transformer {
   TransformerStartCallback start();
 
   @JsProperty
-  void setStart(@Nonnull TransformerStartCallback start);
+  void setStart(@JsNonNull TransformerStartCallback start);
 
   @JsProperty(
       name = "transform"
@@ -39,7 +41,7 @@ public interface Transformer {
   TransformerTransformCallback transform();
 
   @JsProperty
-  void setTransform(@Nonnull TransformerTransformCallback transform);
+  void setTransform(@JsNonNull TransformerTransformCallback transform);
 
   @JsProperty(
       name = "flush"
@@ -47,25 +49,25 @@ public interface Transformer {
   TransformerFlushCallback flush();
 
   @JsProperty
-  void setFlush(@Nonnull TransformerFlushCallback flush);
+  void setFlush(@JsNonNull TransformerFlushCallback flush);
 
   @JsProperty(
       name = "readableType"
   )
-  @Nullable
+  @JsNullable
   Any readableType();
 
   @JsProperty
-  void setReadableType(@DoNotAutobox @Nullable Object readableType);
+  void setReadableType(@DoNotAutobox @JsNullable Object readableType);
 
   @JsProperty(
       name = "writableType"
   )
-  @Nullable
+  @JsNullable
   Any writableType();
 
   @JsProperty
-  void setWritableType(@DoNotAutobox @Nullable Object writableType);
+  void setWritableType(@DoNotAutobox @JsNullable Object writableType);
 
   @Generated("org.realityforge.webtack")
   @JsType(

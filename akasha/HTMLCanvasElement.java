@@ -7,6 +7,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -56,7 +58,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/semantics-scripting.html#dom-htmlcanvaselement-getcontext">HTMLCanvasElement.getContext - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-getcontext">HTMLCanvasElement.getContext - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public native RenderingContext getContext(@RenderContextType @Nonnull String contextId,
       @Nonnull CanvasRenderingContext2DSettings options);
 
@@ -68,7 +70,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/semantics-scripting.html#dom-htmlcanvaselement-getcontext">HTMLCanvasElement.getContext - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-getcontext">HTMLCanvasElement.getContext - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public native RenderingContext getContext(@RenderContextType @Nonnull String contextId,
       @Nonnull ImageBitmapRenderingContextSettings options);
 
@@ -80,7 +82,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/semantics-scripting.html#dom-htmlcanvaselement-getcontext">HTMLCanvasElement.getContext - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-getcontext">HTMLCanvasElement.getContext - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public native RenderingContext getContext(@RenderContextType @Nonnull String contextId,
       @Nonnull WebGLContextAttributes options);
 
@@ -92,7 +94,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/semantics-scripting.html#dom-htmlcanvaselement-getcontext">HTMLCanvasElement.getContext - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-getcontext">HTMLCanvasElement.getContext - HTML5</a>
    */
-  @Nullable
+  @JsNullable
   public native RenderingContext getContext(@RenderContextType @Nonnull String contextId);
 
   /**
@@ -134,7 +136,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/scripting-1.html#dom-canvas-todataurl">HTMLCanvasElement.toDataURL - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-todataurl">HTMLCanvasElement.toDataURL - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toDataURL(@Nonnull String type, @DoNotAutobox @Nullable Object quality);
 
   /**
@@ -145,7 +147,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/scripting-1.html#dom-canvas-todataurl">HTMLCanvasElement.toDataURL - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-todataurl">HTMLCanvasElement.toDataURL - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toDataURL(@Nonnull String type);
 
   /**
@@ -156,7 +158,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://www.w3.org/TR/html51/scripting-1.html#dom-canvas-todataurl">HTMLCanvasElement.toDataURL - HTML 5.1</a>
    * @see <a href="https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-todataurl">HTMLCanvasElement.toDataURL - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String toDataURL();
 
   /**
@@ -165,7 +167,7 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen">HTMLCanvasElement.transferControlToOffscreen - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#dom-canvas-transfercontroltooffscreen">HTMLCanvasElement.transferControlToOffscreen() - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   public native OffscreenCanvas transferControlToOffscreen();
 
   @JsOverlay
@@ -278,5 +280,73 @@ public class HTMLCanvasElement extends HTMLElement implements TexImageSource, Ca
   public final void removeWebglcontextrestoredListener(
       @Nonnull final WebGLContextEventListener callback) {
     removeEventListener( "webglcontextrestored", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addContextrestoredListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "contextrestored", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addContextrestoredListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "contextrestored", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addContextrestoredListener(@Nonnull final EventListener callback) {
+    addEventListener( "contextrestored", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeContextrestoredListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "contextrestored", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeContextrestoredListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "contextrestored", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeContextrestoredListener(@Nonnull final EventListener callback) {
+    removeEventListener( "contextrestored", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addContextlostListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "contextlost", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addContextlostListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "contextlost", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addContextlostListener(@Nonnull final EventListener callback) {
+    addEventListener( "contextlost", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeContextlostListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "contextlost", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeContextlostListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "contextlost", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeContextlostListener(@Nonnull final EventListener callback) {
+    removeEventListener( "contextlost", Js.cast( callback ) );
   }
 }

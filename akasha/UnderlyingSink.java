@@ -4,6 +4,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +33,7 @@ public interface UnderlyingSink {
   UnderlyingSinkStartCallback start();
 
   @JsProperty
-  void setStart(@Nonnull UnderlyingSinkStartCallback start);
+  void setStart(@JsNonNull UnderlyingSinkStartCallback start);
 
   @JsProperty(
       name = "write"
@@ -39,7 +41,7 @@ public interface UnderlyingSink {
   UnderlyingSinkWriteCallback write();
 
   @JsProperty
-  void setWrite(@Nonnull UnderlyingSinkWriteCallback write);
+  void setWrite(@JsNonNull UnderlyingSinkWriteCallback write);
 
   @JsProperty(
       name = "close"
@@ -47,7 +49,7 @@ public interface UnderlyingSink {
   UnderlyingSinkCloseCallback close();
 
   @JsProperty
-  void setClose(@Nonnull UnderlyingSinkCloseCallback close);
+  void setClose(@JsNonNull UnderlyingSinkCloseCallback close);
 
   @JsProperty(
       name = "abort"
@@ -55,16 +57,16 @@ public interface UnderlyingSink {
   UnderlyingSinkAbortCallback abort();
 
   @JsProperty
-  void setAbort(@Nonnull UnderlyingSinkAbortCallback abort);
+  void setAbort(@JsNonNull UnderlyingSinkAbortCallback abort);
 
   @JsProperty(
       name = "type"
   )
-  @Nullable
+  @JsNullable
   Any type();
 
   @JsProperty
-  void setType(@DoNotAutobox @Nullable Object type);
+  void setType(@DoNotAutobox @JsNullable Object type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -6,7 +6,8 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -19,7 +20,7 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUQueue"
 )
 public class GPUQueue extends JsObject {
-  @Nullable
+  @JsNullable
   public String label;
 
   protected GPUQueue() {
@@ -37,7 +38,7 @@ public class GPUQueue extends JsObject {
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
       @Nonnull GPUImageCopyTextureTagged destination, @Nonnull GPUExtent3DDict copySize);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> onSubmittedWorkDone();
 
   public native void submit(@Nonnull JsArray<GPUCommandBuffer> commandBuffers);

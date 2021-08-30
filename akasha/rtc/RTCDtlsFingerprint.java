@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RTCDtlsFingerprint {
   String algorithm();
 
   @JsProperty
-  void setAlgorithm(@Nonnull String algorithm);
+  void setAlgorithm(@JsNonNull String algorithm);
 
   @JsProperty(
       name = "value"
@@ -36,7 +37,7 @@ public interface RTCDtlsFingerprint {
   String value();
 
   @JsProperty
-  void setValue(@Nonnull String value);
+  void setValue(@JsNonNull String value);
 
   @Generated("org.realityforge.webtack")
   @JsType(

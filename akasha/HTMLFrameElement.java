@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -14,27 +14,27 @@ import jsinterop.annotations.JsType;
     name = "HTMLFrameElement"
 )
 public class HTMLFrameElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String frameBorder;
 
-  @Nonnull
+  @JsNonNull
   public String longDesc;
 
-  @Nonnull
+  @JsNonNull
   public String marginHeight;
 
-  @Nonnull
+  @JsNonNull
   public String marginWidth;
 
-  @Nonnull
+  @JsNonNull
   public String name;
 
   public boolean noResize;
 
-  @Nonnull
+  @JsNonNull
   public String scrolling;
 
-  @Nonnull
+  @JsNonNull
   public String src;
 
   protected HTMLFrameElement() {

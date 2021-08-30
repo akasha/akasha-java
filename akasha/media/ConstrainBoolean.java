@@ -1,5 +1,6 @@
 package akasha.media;
 
+import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -24,5 +25,25 @@ public interface ConstrainBoolean {
   @Nonnull
   static ConstrainBoolean of(@Nonnull final ConstrainBooleanParameters value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isBoolean() {
+    return ( (Object) this ) instanceof Boolean;
+  }
+
+  @JsOverlay
+  default boolean asBoolean() {
+    return Js.asBoolean( this );
+  }
+
+  @JsOverlay
+  default boolean isConstrainBooleanParameters() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default ConstrainBooleanParameters asConstrainBooleanParameters() {
+    return Js.cast( this );
   }
 }

@@ -6,6 +6,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -14,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The DOMMatrixReadOnly interface represents a read-only 4&times;4 matrix, suitable for 2D and 3D operations. The DOMMatrix interrface&mdash;which is based upon DOMMatrixReadOnly&mdash;adds mutability, allowing you to alter the matrix after creating it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly">DOMMatrixReadOnly - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">DOMMatrixReadOnly - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix">(Geometry Interfaces 1) # DOMMatrix</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -179,16 +180,16 @@ public class DOMMatrixReadOnly extends JsObject {
   )
   public native double m44();
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrixReadOnly fromFloat32Array(@Nonnull Float32Array array32);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrixReadOnly fromFloat64Array(@Nonnull Float64Array array64);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrixReadOnly fromMatrix(@Nonnull DOMMatrixInit other);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrixReadOnly fromMatrix();
 
   /**
@@ -197,55 +198,55 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/flipX">DOMMatrixReadOnly.flipX - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-flipx">DOMMatrixReadOnly.flipX() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix flipX();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix flipY();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix inverse();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix multiply(@Nonnull DOMMatrixInit other);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix multiply();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotate(double rotX, double rotY, double rotZ);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotate(double rotX, double rotY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotate(double rotX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotate();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngle(double x, double y, double z, double angle);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngle(double x, double y, double z);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngle(double x, double y);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngle(double x);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateAxisAngle();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateFromVector(double x, double y);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateFromVector(double x);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix rotateFromVector();
 
   /**
@@ -254,7 +255,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX,
       double originY, double originZ);
 
@@ -264,7 +265,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX,
       double originY);
 
@@ -274,7 +275,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX);
 
   /**
@@ -283,7 +284,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ);
 
   /**
@@ -292,7 +293,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale(double scaleX, double scaleY);
 
   /**
@@ -301,7 +302,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale(double scaleX);
 
   /**
@@ -310,58 +311,58 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-scale">DOMMatrixReadOnly.scale() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3d(double scale, double originX, double originY, double originZ);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3d(double scale, double originX, double originY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3d(double scale, double originX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3d(double scale);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scale3d();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleNonUniform(double scaleX, double scaleY);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleNonUniform(double scaleX);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix scaleNonUniform();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewX(double sx);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewX();
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewY(double sy);
 
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix skewY();
 
-  @Nonnull
+  @JsNonNull
   public native Float32Array toFloat32Array();
 
-  @Nonnull
+  @JsNonNull
   public native Float64Array toFloat64Array();
 
-  @Nonnull
+  @JsNonNull
   public native JsObject toJSON();
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint transformPoint(@Nonnull DOMPointInit point);
 
-  @Nonnull
+  @JsNonNull
   public native DOMPoint transformPoint();
 
   /**
@@ -370,7 +371,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">DOMMatrixReadOnly.translate() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translate(double tx, double ty, double tz);
 
   /**
@@ -379,7 +380,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">DOMMatrixReadOnly.translate() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translate(double tx, double ty);
 
   /**
@@ -388,7 +389,7 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">DOMMatrixReadOnly.translate() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translate(double tx);
 
   /**
@@ -397,6 +398,6 @@ public class DOMMatrixReadOnly extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate">DOMMatrixReadOnly.translate() - Geometry Interfaces Module Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native DOMMatrix translate();
 }

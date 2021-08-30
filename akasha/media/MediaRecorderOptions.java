@@ -2,6 +2,7 @@ package akasha.media;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface MediaRecorderOptions {
   String audioBitrateMode();
 
   @JsProperty
-  void setAudioBitrateMode(@BitrateMode @Nonnull String audioBitrateMode);
+  void setAudioBitrateMode(@BitrateMode @JsNonNull String audioBitrateMode);
 
   @JsProperty(
       name = "audioBitsPerSecond"
@@ -53,7 +54,7 @@ public interface MediaRecorderOptions {
   String mimeType();
 
   @JsProperty
-  void setMimeType(@Nonnull String mimeType);
+  void setMimeType(@JsNonNull String mimeType);
 
   @JsProperty(
       name = "videoBitsPerSecond"

@@ -6,6 +6,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -68,7 +70,7 @@ public class PushSubscription extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/getKey">PushSubscription.getKey - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/">Push API</a>
    */
-  @Nullable
+  @JsNullable
   public native ArrayBuffer getKey(@PushEncryptionKeyName @Nonnull String name);
 
   /**
@@ -77,7 +79,7 @@ public class PushSubscription extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/toJSON">PushSubscription.toJSON - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushsubscription-tojson">PushSubscription: toJSON - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native PushSubscriptionJSON toJSON();
 
   /**
@@ -86,6 +88,6 @@ public class PushSubscription extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/unsubscribe">PushSubscription.unsubscribe - MDN</a>
    * @see <a href="https://w3c.github.io/push-api/#dom-pushsubscription-unsubscribe">unsubscribe() - Push API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<Boolean> unsubscribe();
 }

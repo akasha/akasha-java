@@ -3,6 +3,8 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,16 +31,16 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   String id();
 
   @JsProperty
-  void setId(@Nonnull String id);
+  void setId(@JsNonNull String id);
 
   @JsProperty(
       name = "timeline"
   )
-  @Nullable
+  @JsNullable
   AnimationTimeline timeline();
 
   @JsProperty
-  void setTimeline(@Nullable AnimationTimeline timeline);
+  void setTimeline(@JsNullable AnimationTimeline timeline);
 
   @Generated("org.realityforge.webtack")
   @JsType(

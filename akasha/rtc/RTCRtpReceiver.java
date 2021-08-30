@@ -7,6 +7,8 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -57,7 +59,7 @@ public class RTCRtpReceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities">RTCRtpReceiver.getCapabilities - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getcapabilities">RTCRtpReceiver.getCapabilities() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nullable
+  @JsNullable
   public static native RTCRtpCapabilities getCapabilities(@Nonnull String kind);
 
   /**
@@ -66,7 +68,7 @@ public class RTCRtpReceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources">RTCRtpReceiver.getContributingSources - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getcontributingsources">getContributingSources() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCRtpContributingSource> getContributingSources();
 
   /**
@@ -75,7 +77,7 @@ public class RTCRtpReceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters">RTCRtpReceiver.getParameters - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getparameters">RTCRtpReceiver.getParameters() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native RTCRtpReceiveParameters getParameters();
 
   /**
@@ -84,7 +86,7 @@ public class RTCRtpReceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getStats">RTCRtpReceiver.getStats - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#widl-RTCRtpReceiver-getStats-Promise-RTCStatsReport">RTCRtpReceiver.getStats() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<RTCStatsReport> getStats();
 
   /**
@@ -93,6 +95,6 @@ public class RTCRtpReceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources">RTCRtpReceiver.getSynchronizationSources - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getsynchronizationsources">getSynchronizationSources() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<RTCRtpSynchronizationSource> getSynchronizationSources();
 }

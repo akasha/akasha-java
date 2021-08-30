@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -43,7 +44,7 @@ public interface AudioNodeOptions {
   String channelCountMode();
 
   @JsProperty
-  void setChannelCountMode(@ChannelCountMode @Nonnull String channelCountMode);
+  void setChannelCountMode(@ChannelCountMode @JsNonNull String channelCountMode);
 
   @JsProperty(
       name = "channelInterpretation"
@@ -52,7 +53,7 @@ public interface AudioNodeOptions {
   String channelInterpretation();
 
   @JsProperty
-  void setChannelInterpretation(@ChannelInterpretation @Nonnull String channelInterpretation);
+  void setChannelInterpretation(@ChannelInterpretation @JsNonNull String channelInterpretation);
 
   /**
    * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.

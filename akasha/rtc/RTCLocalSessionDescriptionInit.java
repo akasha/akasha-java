@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RTCLocalSessionDescriptionInit {
   String sdp();
 
   @JsProperty
-  void setSdp(@Nonnull String sdp);
+  void setSdp(@JsNonNull String sdp);
 
   @JsProperty(
       name = "type"
@@ -37,7 +38,7 @@ public interface RTCLocalSessionDescriptionInit {
   String type();
 
   @JsProperty
-  void setType(@RTCSdpType @Nonnull String type);
+  void setType(@RTCSdpType @JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

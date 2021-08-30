@@ -5,6 +5,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -56,7 +57,7 @@ public class AudioData extends JsObject {
   @JsMethod(
       name = "clone"
   )
-  @Nonnull
+  @JsNonNull
   public native AudioData clone_();
 
   public native void close();

@@ -4,6 +4,7 @@ import akasha.StringOrStringArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -12,10 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The ConstrainDOMString dictionary is used to specify a constraint for a property whose value is a string. It allows you to specify one or more exact string values from which one must be the parameter's value, or a set of ideal values which should be used if possible. You can also specify a single string (or an array of strings) which the user agent will do its best to match once all more stringent constraints have been applied.
+ * The MediaTrackConstraints dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into applyConstraints() to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling getConstraints().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstrainDOMStringParameters">ConstrainDOMStringParameters - MDN</a>
- * @see <a href="https://w3c.github.io/mediacapture-main/#dom-constraindomstring"># dom-constraindomstring</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints"># dom-mediatrackconstraints</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -36,7 +37,7 @@ public interface ConstrainDOMStringParameters {
   StringOrStringArrayUnion exact();
 
   @JsProperty
-  void setExact(@Nonnull StringOrStringArrayUnion exact);
+  void setExact(@JsNonNull StringOrStringArrayUnion exact);
 
   @JsOverlay
   default void setExact(@Nonnull final String exact) {
@@ -59,7 +60,7 @@ public interface ConstrainDOMStringParameters {
   StringOrStringArrayUnion ideal();
 
   @JsProperty
-  void setIdeal(@Nonnull StringOrStringArrayUnion ideal);
+  void setIdeal(@JsNonNull StringOrStringArrayUnion ideal);
 
   @JsOverlay
   default void setIdeal(@Nonnull final String ideal) {
@@ -77,10 +78,10 @@ public interface ConstrainDOMStringParameters {
   }
 
   /**
-   * The ConstrainDOMString dictionary is used to specify a constraint for a property whose value is a string. It allows you to specify one or more exact string values from which one must be the parameter's value, or a set of ideal values which should be used if possible. You can also specify a single string (or an array of strings) which the user agent will do its best to match once all more stringent constraints have been applied.
+   * The MediaTrackConstraints dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into applyConstraints() to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling getConstraints().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstrainDOMStringParameters">ConstrainDOMStringParameters - MDN</a>
-   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-constraindomstring"># dom-constraindomstring</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints"># dom-mediatrackconstraints</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

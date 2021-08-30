@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The ReportingObserver interface of the Reporting API allows you to collect and access reports.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver">ReportingObserver - MDN</a>
- * @see <a href="https://w3c.github.io/reporting/#interface-reporting-observer">ReportingObserver - Reporting API</a>
+ * @see <a href="https://w3c.github.io/reporting/#interface-reporting-observer"># interface-reporting-observer</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -61,6 +62,6 @@ public class ReportingObserver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/takeRecords">ReportingObserver.takeRecords - MDN</a>
    * @see <a href="https://w3c.github.io/reporting/#dom-reportingobserver-takerecords">ReportingObserver.takeRecords() - Reporting API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<Report> takeRecords();
 }

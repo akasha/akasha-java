@@ -2,7 +2,8 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -20,7 +21,7 @@ import jsinterop.annotations.JsType;
     name = "CSSKeyframesRule"
 )
 public class CSSKeyframesRule extends CSSRule {
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected CSSKeyframesRule() {
@@ -36,6 +37,6 @@ public class CSSKeyframesRule extends CSSRule {
 
   public native void deleteRule(@Nonnull String select);
 
-  @Nullable
+  @JsNullable
   public native CSSKeyframeRule findRule(@Nonnull String select);
 }

@@ -11,8 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGComponentTransferFunctionElement interface defines a base interface used by the component transfer function interfaces.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement">SVGComponentTransferFunctionElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGComponentTransferFunctionElement">SVGComponentTransferFunctionElement - Filter Effects Module Level 1</a>
- * @see <a href="https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGComponentTransferFunctionElement">SVGComponentTransferFunctionElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGComponentTransferFunctionElement">(Filter Effects 2) # InterfaceSVGComponentTransferFunctionElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

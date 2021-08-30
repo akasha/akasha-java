@@ -4,6 +4,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface CustomEventInit extends EventInit {
   @JsProperty(
       name = "detail"
   )
-  @Nullable
+  @JsNullable
   Any detail();
 
   @JsProperty
-  void setDetail(@DoNotAutobox @Nullable Object detail);
+  void setDetail(@DoNotAutobox @JsNullable Object detail);
 
   @Generated("org.realityforge.webtack")
   @JsType(

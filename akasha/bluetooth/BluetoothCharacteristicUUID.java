@@ -25,4 +25,24 @@ public interface BluetoothCharacteristicUUID {
   static BluetoothCharacteristicUUID of(final int value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isInt() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default int asInt() {
+    return Js.asInt( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

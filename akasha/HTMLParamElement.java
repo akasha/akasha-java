@@ -1,7 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,16 +18,16 @@ import jsinterop.annotations.JsType;
     name = "HTMLParamElement"
 )
 public class HTMLParamElement extends HTMLElement {
-  @Nonnull
+  @JsNonNull
   public String name;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
-  @Nonnull
+  @JsNonNull
   public String value;
 
-  @Nonnull
+  @JsNonNull
   public String valueType;
 
   protected HTMLParamElement() {

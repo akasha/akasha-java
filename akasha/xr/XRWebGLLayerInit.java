@@ -10,10 +10,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The WebXR Device API's XRWebGLLayerInit dictionary is used to provide configuration options when creating a new XRWebGLLayer object with the XRWebGLLayer() constructor.
+ * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit">XRWebGLLayerInit - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrwebgllayerinit">XRWebGLLayerInit - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer"># dom-xrwebgllayer-xrwebgllayer</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -149,10 +149,10 @@ public interface XRWebGLLayerInit {
   void setStencil(boolean stencil);
 
   /**
-   * The WebXR Device API's XRWebGLLayerInit dictionary is used to provide configuration options when creating a new XRWebGLLayer object with the XRWebGLLayer() constructor.
+   * The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit">XRWebGLLayerInit - MDN</a>
-   * @see <a href="https://immersive-web.github.io/webxr/#dictdef-xrwebgllayerinit">XRWebGLLayerInit - WebXR Device API</a>
+   * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer"># dom-xrwebgllayer-xrwebgllayer</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

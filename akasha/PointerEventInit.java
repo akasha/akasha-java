@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,7 +54,7 @@ public interface PointerEventInit extends MouseEventInit {
   String pointerType();
 
   @JsProperty
-  void setPointerType(@Nonnull String pointerType);
+  void setPointerType(@JsNonNull String pointerType);
 
   @JsProperty(
       name = "pressure"

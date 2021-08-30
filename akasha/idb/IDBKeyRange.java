@@ -3,8 +3,8 @@ package akasha.idb;
 import akasha.core.JsObject;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -73,7 +73,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
       @DoNotAutobox @Nullable Object upper, boolean lowerOpen, boolean upperOpen);
 
@@ -82,7 +82,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
       @DoNotAutobox @Nullable Object upper, boolean lowerOpen);
 
@@ -91,7 +91,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
       @DoNotAutobox @Nullable Object upper);
 
@@ -100,7 +100,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange lowerBound(@DoNotAutobox @Nullable Object lower, boolean open);
 
   /**
@@ -108,7 +108,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange lowerBound(@DoNotAutobox @Nullable Object lower);
 
   /**
@@ -116,7 +116,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/only">IDBKeyRange.only - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange only(@DoNotAutobox @Nullable Object value);
 
   /**
@@ -124,7 +124,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange upperBound(@DoNotAutobox @Nullable Object upper, boolean open);
 
   /**
@@ -132,7 +132,7 @@ public class IDBKeyRange extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native IDBKeyRange upperBound(@DoNotAutobox @Nullable Object upper);
 
   /**

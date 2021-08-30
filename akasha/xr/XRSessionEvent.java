@@ -8,10 +8,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession.
+ * The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession. These events occur, for example, when the session ends or the visibility of its context changes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent">XRSessionEvent - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrsessionevent">XRSessionEvent - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrsessionevent-interface"># xrsessionevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

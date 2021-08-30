@@ -4,7 +4,7 @@ import akasha.StringOrStringArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +36,11 @@ public interface IDBObjectStoreParameters {
   @JsProperty(
       name = "keyPath"
   )
-  @Nullable
+  @JsNullable
   StringOrStringArrayUnion keyPath();
 
   @JsProperty
-  void setKeyPath(@Nullable StringOrStringArrayUnion keyPath);
+  void setKeyPath(@JsNullable StringOrStringArrayUnion keyPath);
 
   @JsOverlay
   default void setKeyPath(@Nonnull final String keyPath) {

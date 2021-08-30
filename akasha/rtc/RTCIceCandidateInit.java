@@ -3,6 +3,8 @@ package akasha.rtc;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,7 +49,7 @@ public interface RTCIceCandidateInit {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate">RTCIceCandidateInit.candidate - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setCandidate(@Nonnull String candidate);
+  void setCandidate(@JsNonNull String candidate);
 
   /**
    * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
@@ -58,7 +60,7 @@ public interface RTCIceCandidateInit {
   @JsProperty(
       name = "sdpMLineIndex"
   )
-  @Nullable
+  @JsNullable
   Double sdpMLineIndex();
 
   /**
@@ -68,7 +70,7 @@ public interface RTCIceCandidateInit {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex">RTCIceCandidateInit.sdpMLineIndex - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setSdpMLineIndex(@Nullable Double sdpMLineIndex);
+  void setSdpMLineIndex(@JsNullable Double sdpMLineIndex);
 
   /**
    * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
@@ -78,7 +80,7 @@ public interface RTCIceCandidateInit {
   @JsProperty(
       name = "sdpMid"
   )
-  @Nullable
+  @JsNullable
   String sdpMid();
 
   /**
@@ -87,7 +89,7 @@ public interface RTCIceCandidateInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
    */
   @JsProperty
-  void setSdpMid(@Nullable String sdpMid);
+  void setSdpMid(@JsNullable String sdpMid);
 
   /**
    * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
@@ -98,7 +100,7 @@ public interface RTCIceCandidateInit {
   @JsProperty(
       name = "usernameFragment"
   )
-  @Nullable
+  @JsNullable
   String usernameFragment();
 
   /**
@@ -108,7 +110,7 @@ public interface RTCIceCandidateInit {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment">RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setUsernameFragment(@Nullable String usernameFragment);
+  void setUsernameFragment(@JsNullable String usernameFragment);
 
   /**
    * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.

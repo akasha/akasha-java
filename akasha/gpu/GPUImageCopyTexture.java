@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface GPUImageCopyTexture {
   @JsProperty(
       name = "texture"
   )
-  @Nonnull
+  @JsNonNull
   GPUTexture texture();
 
   @JsProperty
-  void setTexture(@Nonnull GPUTexture texture);
+  void setTexture(@JsNonNull GPUTexture texture);
 
   @JsProperty(
       name = "aspect"
@@ -41,7 +42,7 @@ public interface GPUImageCopyTexture {
   String aspect();
 
   @JsProperty
-  void setAspect(@GPUTextureAspect @Nonnull String aspect);
+  void setAspect(@GPUTextureAspect @JsNonNull String aspect);
 
   @JsProperty(
       name = "mipLevel"
@@ -57,7 +58,7 @@ public interface GPUImageCopyTexture {
   GPUOrigin3D origin();
 
   @JsProperty
-  void setOrigin(@Nonnull GPUOrigin3D origin);
+  void setOrigin(@JsNonNull GPUOrigin3D origin);
 
   @JsOverlay
   default void setOrigin(@Nonnull final JsArray<Double> origin) {

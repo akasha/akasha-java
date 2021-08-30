@@ -7,6 +7,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +31,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/name">IDBObjectStore.name - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected IDBObjectStore() {
@@ -84,7 +85,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest add(@DoNotAutobox @Nullable Object value,
       @DoNotAutobox @Nullable Object key);
 
@@ -93,7 +94,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest add(@DoNotAutobox @Nullable Object value);
 
   /**
@@ -101,7 +102,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/clear">IDBObjectStore.clear - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest clear();
 
   /**
@@ -109,7 +110,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/count">IDBObjectStore.count - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest count(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -117,7 +118,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/count">IDBObjectStore.count - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest count();
 
   /**
@@ -127,7 +128,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath,
       @Nonnull IDBIndexParameters options);
 
@@ -138,7 +139,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath,
       @Nonnull IDBIndexParameters options);
 
@@ -149,7 +150,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath,
       @Nonnull IDBIndexParameters options);
 
@@ -160,7 +161,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
 
   /**
@@ -170,7 +171,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
 
   /**
@@ -180,7 +181,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
 
   /**
@@ -188,7 +189,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/delete">IDBObjectStore.delete - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest delete(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -207,7 +208,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-get">get() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-get">get() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest get(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -216,7 +217,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">getAll() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query, int count);
 
   /**
@@ -225,7 +226,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">getAll() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -234,7 +235,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall">getAll() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAll();
 
   /**
@@ -243,7 +244,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">getAllKeys() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query, int count);
 
   /**
@@ -252,7 +253,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">getAllKeys() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -261,7 +262,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys">getAllKeys() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getAllKeys();
 
   /**
@@ -270,7 +271,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getKey">IDBObjectStore.getKey - MDN</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getkey">getKey() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest getKey(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -278,7 +279,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/index">IDBObjectStore.index - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBIndex index(@Nonnull String name);
 
   /**
@@ -286,7 +287,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openCursor">IDBObjectStore.openCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query,
       @IDBCursorDirection @Nonnull String direction);
 
@@ -295,7 +296,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openCursor">IDBObjectStore.openCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -303,7 +304,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openCursor">IDBObjectStore.openCursor - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openCursor();
 
   /**
@@ -313,7 +314,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query,
       @IDBCursorDirection @Nonnull String direction);
 
@@ -324,7 +325,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query);
 
   /**
@@ -334,7 +335,7 @@ public class IDBObjectStore extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor">openKeyCursor() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest openKeyCursor();
 
   /**
@@ -342,7 +343,7 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest put(@DoNotAutobox @Nullable Object value,
       @DoNotAutobox @Nullable Object key);
 
@@ -351,6 +352,6 @@ public class IDBObjectStore extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBRequest put(@DoNotAutobox @Nullable Object value);
 }

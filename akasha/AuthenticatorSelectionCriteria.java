@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface AuthenticatorSelectionCriteria {
   String authenticatorAttachment();
 
   @JsProperty
-  void setAuthenticatorAttachment(@Nonnull String authenticatorAttachment);
+  void setAuthenticatorAttachment(@JsNonNull String authenticatorAttachment);
 
   @JsProperty(
       name = "requireResidentKey"
@@ -44,7 +45,7 @@ public interface AuthenticatorSelectionCriteria {
   String residentKey();
 
   @JsProperty
-  void setResidentKey(@Nonnull String residentKey);
+  void setResidentKey(@JsNonNull String residentKey);
 
   @JsProperty(
       name = "userVerification"
@@ -52,7 +53,7 @@ public interface AuthenticatorSelectionCriteria {
   String userVerification();
 
   @JsProperty
-  void setUserVerification(@Nonnull String userVerification);
+  void setUserVerification(@JsNonNull String userVerification);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -6,6 +6,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +35,7 @@ public interface NotificationOptions {
   JsArray<NotificationAction> actions();
 
   @JsProperty
-  void setActions(@Nonnull JsArray<NotificationAction> actions);
+  void setActions(@JsNonNull JsArray<NotificationAction> actions);
 
   @JsOverlay
   default void setActions(@Nonnull final NotificationAction... actions) {
@@ -46,7 +48,7 @@ public interface NotificationOptions {
   String badge();
 
   @JsProperty
-  void setBadge(@Nonnull String badge);
+  void setBadge(@JsNonNull String badge);
 
   @JsProperty(
       name = "body"
@@ -54,16 +56,16 @@ public interface NotificationOptions {
   String body();
 
   @JsProperty
-  void setBody(@Nonnull String body);
+  void setBody(@JsNonNull String body);
 
   @JsProperty(
       name = "data"
   )
-  @Nullable
+  @JsNullable
   Any data();
 
   @JsProperty
-  void setData(@DoNotAutobox @Nullable Object data);
+  void setData(@DoNotAutobox @JsNullable Object data);
 
   @JsProperty(
       name = "dir"
@@ -72,7 +74,7 @@ public interface NotificationOptions {
   String dir();
 
   @JsProperty
-  void setDir(@NotificationDirection @Nonnull String dir);
+  void setDir(@NotificationDirection @JsNonNull String dir);
 
   @JsProperty(
       name = "icon"
@@ -80,7 +82,7 @@ public interface NotificationOptions {
   String icon();
 
   @JsProperty
-  void setIcon(@Nonnull String icon);
+  void setIcon(@JsNonNull String icon);
 
   @JsProperty(
       name = "image"
@@ -88,7 +90,7 @@ public interface NotificationOptions {
   String image();
 
   @JsProperty
-  void setImage(@Nonnull String image);
+  void setImage(@JsNonNull String image);
 
   @JsProperty(
       name = "lang"
@@ -96,7 +98,7 @@ public interface NotificationOptions {
   String lang();
 
   @JsProperty
-  void setLang(@Nonnull String lang);
+  void setLang(@JsNonNull String lang);
 
   @JsProperty(
       name = "renotify"
@@ -128,7 +130,7 @@ public interface NotificationOptions {
   String tag();
 
   @JsProperty
-  void setTag(@Nonnull String tag);
+  void setTag(@JsNonNull String tag);
 
   @JsProperty(
       name = "timestamp"
@@ -144,7 +146,7 @@ public interface NotificationOptions {
   VibratePattern vibrate();
 
   @JsProperty
-  void setVibrate(@Nonnull VibratePattern vibrate);
+  void setVibrate(@JsNonNull VibratePattern vibrate);
 
   @JsOverlay
   default void setVibrate(final int vibrate) {

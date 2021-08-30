@@ -4,6 +4,7 @@ import akasha.core.ArrayBuffer;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -12,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The PublicKeyCredential interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from Credential, and was created by the Web Authentication API extension to the Credential Management API. Other interfaces that inherit from Credential are PasswordCredential and FederatedCredential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential">PublicKeyCredential - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#iface-pkcredential">PublicKeyCredential interface - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
+ * @see <a href="https://w3c.github.io/webauthn/#iface-pkcredential">(Web Authentication) # iface-pkcredential</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -54,7 +55,7 @@ public class PublicKeyCredential extends Credential {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResults">PublicKeyCredential.getClientExtensionResults - MDN</a>
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredential-getclientextensionresults">getClientExtensionResults() - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AuthenticationExtensionsClientOutputs getClientExtensionResults();
 
   /**
@@ -63,6 +64,6 @@ public class PublicKeyCredential extends Credential {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable - MDN</a>
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredential-isuserverifyingplatformauthenticatoravailable">isUserVerifyingPlatformAuthenticatorAvailable - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<Boolean> isUserVerifyingPlatformAuthenticatorAvailable();
 }

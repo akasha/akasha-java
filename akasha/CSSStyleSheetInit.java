@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface CSSStyleSheetInit {
   String baseURL();
 
   @JsProperty
-  void setBaseURL(@Nonnull String baseURL);
+  void setBaseURL(@JsNonNull String baseURL);
 
   @JsProperty(
       name = "disabled"
@@ -44,7 +45,7 @@ public interface CSSStyleSheetInit {
   MediaListOrStringUnion media();
 
   @JsProperty
-  void setMedia(@Nonnull MediaListOrStringUnion media);
+  void setMedia(@JsNonNull MediaListOrStringUnion media);
 
   @JsOverlay
   default void setMedia(@Nonnull final MediaList media) {

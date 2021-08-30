@@ -1,5 +1,6 @@
 package akasha.gl;
 
+import akasha.HTMLCanvasElementOrOffscreenCanvasUnion;
 import akasha.OffscreenRenderingContext;
 import akasha.RenderingContext;
 import akasha.core.ArrayBufferView;
@@ -14,6 +15,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,7 +27,7 @@ import jsinterop.base.Any;
  * The WebGLRenderingContext interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML &lt;canvas&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14">WebGLRenderingContext - WebGL 1.0</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14">(WebGL) # 5.14</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -925,6 +928,18 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   }
 
   /**
+   * The WebGLRenderingContext.canvas property is a read-only reference to the HTMLCanvasElement or OffscreenCanvas object that is associated with the context. It might be null if it is not associated with a canvas element or an OffscreenCanvas object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/canvas">WebGLRenderingContext.canvas - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-canvas">WebGLRenderingContext.canvas - WebGL 1.0</a>
+   */
+  @JsProperty(
+      name = "canvas"
+  )
+  @Nonnull
+  public native HTMLCanvasElementOrOffscreenCanvasUnion canvas();
+
+  /**
    * The read-only WebGLRenderingContext.drawingBufferHeight property represents the actual height of the current drawing buffer. It should match the height attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested height.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferHeight">WebGLRenderingContext.drawingBufferHeight - MDN</a>
@@ -1366,7 +1381,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml">glGenBuffers - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLBuffer createBuffer();
 
   /**
@@ -1377,7 +1392,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml">glGenFramebuffers - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLFramebuffer createFramebuffer();
 
   /**
@@ -1388,7 +1403,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateProgram.xml">glCreateProgram - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLProgram createProgram();
 
   /**
@@ -1399,7 +1414,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml">glGenRenderbuffers - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLRenderbuffer createRenderbuffer();
 
   /**
@@ -1410,7 +1425,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml">glCreateShader - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLShader createShader(int type);
 
   /**
@@ -1421,7 +1436,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml">glGenTextures - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLTexture createTexture();
 
   /**
@@ -1646,7 +1661,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml">glGetActiveAttrib - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLActiveInfo getActiveAttrib(@Nonnull WebGLProgram program, int index);
 
   /**
@@ -1657,7 +1672,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml">glGetActiveUniform - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLActiveInfo getActiveUniform(@Nonnull WebGLProgram program, int index);
 
   /**
@@ -1668,7 +1683,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml">glGetAttachedShaders - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native JsArray<WebGLShader> getAttachedShaders(@Nonnull WebGLProgram program);
 
   /**
@@ -1691,7 +1706,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetBufferParameter.xhtml">glGetBufferParameter - OpenGL ES 3.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getBufferParameter(int target, int pname);
 
   /**
@@ -1701,7 +1716,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.2">WebGLRenderingContext.getContextAttributes - WebGL 1.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLContextAttributes getContextAttributes();
 
   /**
@@ -1720,7 +1735,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension">WebGLRenderingContext.getExtension - MDN</a>
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getExtension - WebGL 1.0</a>
    */
-  @Nullable
+  @JsNullable
   public native JsObject getExtension(@Nonnull String name);
 
   /**
@@ -1733,7 +1748,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml">glGetFramebufferAttachmentParameteriv - OpenGL ES 3.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getFramebufferAttachmentParameter(int target, int attachment, int pname);
 
   /**
@@ -1745,7 +1760,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml">glGet - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getParameter(int pname);
 
   /**
@@ -1756,7 +1771,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml">glGetProgramInfoLog - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String getProgramInfoLog(@Nonnull WebGLProgram program);
 
   /**
@@ -1768,7 +1783,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7">getProgramParameter - WebGL 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getProgramParameter(@Nonnull WebGLProgram program, int pname);
 
   /**
@@ -1781,7 +1796,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml">glGetRenderbufferParameteriv - OpenGL ES 3.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getRenderbufferParameter(int target, int pname);
 
   /**
@@ -1792,7 +1807,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderInfoLog.xml">glGetShaderInfoLog - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String getShaderInfoLog(@Nonnull WebGLShader shader);
 
   /**
@@ -1803,7 +1818,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderiv.xml">glGetShaderiv - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getShaderParameter(@Nonnull WebGLShader shader, int pname);
 
   /**
@@ -1814,7 +1829,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderPrecisionFormat.xml">glGetShaderPrecisionFormat - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(int shadertype,
       int precisiontype);
 
@@ -1827,7 +1842,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    */
   @GLSL
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String getShaderSource(@Nonnull WebGLShader shader);
 
   /**
@@ -1837,7 +1852,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14">WebGLRenderingContext.getSupportedExtensions - WebGL 1.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native JsArray<String> getSupportedExtensions();
 
   /**
@@ -1850,7 +1865,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml">glGetTexParameter - OpenGL ES 3.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getTexParameter(int target, int pname);
 
   /**
@@ -1863,7 +1878,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml">glGetUniform - OpenGL ES 3.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getUniform(@Nonnull WebGLProgram program,
       @Nonnull WebGLUniformLocation location);
 
@@ -1875,7 +1890,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml">glGetUniformLocation - OpenGL ES 2.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native WebGLUniformLocation getUniformLocation(@Nonnull WebGLProgram program,
       @Nonnull String name);
 
@@ -1889,7 +1904,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml">glGetVertexAttrib - OpenGL ES 3.0</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Any getVertexAttrib(int index, int pname);
 
   /**
@@ -2221,6 +2236,6 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
    */
   public native void viewport(int x, int y, int width, int height);
 
-  @Nonnull
+  @JsNonNull
   public native Promise<Void> makeXRCompatible();
 }

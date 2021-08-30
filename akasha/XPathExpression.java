@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,7 +30,7 @@ public class XPathExpression extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathExpression/evaluate">XPathExpression.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression-evaluate">XPathExpression.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull Node contextNode, int type,
       @Nullable XPathResult result);
 
@@ -39,7 +40,7 @@ public class XPathExpression extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathExpression/evaluate">XPathExpression.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression-evaluate">XPathExpression.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull Node contextNode, int type);
 
   /**
@@ -48,6 +49,6 @@ public class XPathExpression extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathExpression/evaluate">XPathExpression.evaluate - MDN</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression-evaluate">XPathExpression.evaluate() - Document Object Model (DOM) Level 3 XPath Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native XPathResult evaluate(@Nonnull Node contextNode);
 }

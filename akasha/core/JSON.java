@@ -5,6 +5,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
@@ -33,7 +35,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, @Nullable StringifySpaceUnionType space);
 
@@ -45,7 +47,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, @Nullable StringifySpaceUnionType space);
 
@@ -57,7 +59,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer, @Nullable StringifySpaceUnionType space);
 
@@ -69,7 +71,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, @Nonnull String space);
 
@@ -81,7 +83,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, @Nonnull String space);
 
@@ -93,7 +95,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer, @Nonnull String space);
 
@@ -105,7 +107,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, int space);
 
@@ -117,7 +119,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, int space);
 
@@ -129,7 +131,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer, int space);
 
@@ -141,7 +143,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer);
 
@@ -153,7 +155,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer);
 
@@ -165,7 +167,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer);
 
@@ -177,7 +179,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value);
 
   /**
@@ -188,7 +190,7 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.parse">JSON.parse() - ECMA</a>
    */
-  @Nullable
+  @JsNullable
   public static native Any parse(@Nonnull String text, @Nullable ParseReviverFn reviver);
 
   /**
@@ -199,6 +201,6 @@ public class JSON extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-json.parse">JSON.parse() - ECMA</a>
    */
-  @Nullable
+  @JsNullable
   public static native Any parse(@Nonnull String text);
 }

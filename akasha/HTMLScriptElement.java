@@ -1,8 +1,8 @@
 package akasha;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -21,22 +21,22 @@ import jsinterop.annotations.JsType;
 public class HTMLScriptElement extends HTMLElement implements HTMLOrSVGScriptElement {
   public boolean async;
 
-  @Nonnull
+  @JsNonNull
   public String charset;
 
-  @Nullable
+  @JsNullable
   @CrossOriginType
   public String crossOrigin;
 
   public boolean defer;
 
-  @Nonnull
+  @JsNonNull
   public String event;
 
-  @Nonnull
+  @JsNonNull
   public String htmlFor;
 
-  @Nonnull
+  @JsNonNull
   public String integrity;
 
   public boolean noModule;
@@ -48,17 +48,17 @@ public class HTMLScriptElement extends HTMLElement implements HTMLOrSVGScriptEle
    * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute">referrerpolicy attribute - Referrer Policy</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-script-referrerpolicy">HTMLScriptElement: referrerPolicy - HTML Living Standard</a>
    */
-  @Nonnull
+  @JsNonNull
   @ReferrerPolicy
   public String referrerPolicy;
 
-  @Nonnull
+  @JsNonNull
   public String src;
 
-  @Nonnull
+  @JsNonNull
   public String text;
 
-  @Nonnull
+  @JsNonNull
   public String type;
 
   protected HTMLScriptElement() {

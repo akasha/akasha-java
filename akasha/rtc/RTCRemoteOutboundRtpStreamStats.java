@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,7 +48,7 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcremoteoutboundrtpstreamstats-localid">RTCRemoteOutboundRtpStreamStats.localId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setLocalId(@Nonnull String localId);
+  void setLocalId(@JsNonNull String localId);
 
   /**
    * The RTCRemoteOutboundRtpStreamStats property remoteTimestamp indicates the timestamp on the remote peer at which these statistics were sent. This differs from timestamp, which indicates the time at which the statistics were generated or received locally.

@@ -4,6 +4,8 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -82,7 +84,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue">Node.nodeValue - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-nodevalue">Node: nodeValue - DOM</a>
    */
-  @Nullable
+  @JsNullable
   public String nodeValue;
 
   /**
@@ -91,7 +93,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">Node.textContent - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-textcontent">Node.textContent - DOM</a>
    */
-  @Nullable
+  @JsNullable
   public String textContent;
 
   protected Node() {
@@ -265,7 +267,7 @@ public class Node extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-184E7107">Node.appendChild() - Document Object Model (DOM) Level 2 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-184E7107">Node.appendChild() - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Node appendChild(@Nonnull Node node);
 
   /**
@@ -277,7 +279,7 @@ public class Node extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4">Node.cloneNode() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Node cloneNode(boolean deep);
 
   /**
@@ -289,7 +291,7 @@ public class Node extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4">Node.cloneNode() - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Node cloneNode();
 
   /**
@@ -317,7 +319,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode">Node.getRootNode - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-getrootnode">getRootNode() - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Node getRootNode(@Nonnull GetRootNodeOptions options);
 
   /**
@@ -326,7 +328,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode">Node.getRootNode - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-getrootnode">getRootNode() - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Node getRootNode();
 
   /**
@@ -348,7 +350,7 @@ public class Node extends EventTarget {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-952280727">Node.insertBefore - Document Object Model (DOM) Level 2 Core Specification</a>
    * @see <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-insertBefore">Node.insertBefore - Document Object Model (DOM) Level 1 Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Node insertBefore(@Nonnull Node node, @Nullable Node child);
 
   /**
@@ -386,7 +388,7 @@ public class Node extends EventTarget {
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-lookupnamespaceuri">Node: lookupNamespaceURI - DOM</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String lookupNamespaceURI(@Nullable String prefix);
 
   /**
@@ -395,7 +397,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix">Node.lookupPrefix - MDN</a>
    */
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String lookupPrefix(@Nullable String namespace);
 
   /**
@@ -412,7 +414,7 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild">Node.removeChild - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-removechild">Node: removeChild - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Node removeChild(@Nonnull Node child);
 
   /**
@@ -421,6 +423,6 @@ public class Node extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild">Node.replaceChild - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-node-replacechild">Node: replaceChild - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Node replaceChild(@Nonnull Node node, @Nonnull Node child);
 }

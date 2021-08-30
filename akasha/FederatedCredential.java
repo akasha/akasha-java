@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The FederatedCredential interface of the Credential Management API provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. OpenID Connect is an example of a federated identity provider framework.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential">FederatedCredential - MDN</a>
- * @see <a href="https://w3c.github.io/webappsec-credential-management/">Credential Management Level 1</a>
+ * @see <a href="https://w3c.github.io/webappsec-credential-management/#federated">(Credential Management 1) # federated</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

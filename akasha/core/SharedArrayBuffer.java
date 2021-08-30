@@ -2,7 +2,7 @@ package akasha.core;
 
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -49,7 +49,7 @@ public class SharedArrayBuffer extends JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.slice - ECMA</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SharedArrayBuffer slice(int begin, int end);
 
   /**
@@ -60,6 +60,6 @@ public class SharedArrayBuffer extends JsObject {
    * @see <a href="https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice">SharedArrayBuffer.slice - ECMA</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SharedArrayBuffer slice(int begin);
 }

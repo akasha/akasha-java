@@ -2,8 +2,8 @@ package akasha;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -70,7 +70,7 @@ public class CSSRule extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/cssText">CSSRule.cssText - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom/#dom-cssrule-csstext">CSSRule: cssText - CSS Object Model (CSSOM)</a>
    */
-  @Nonnull
+  @JsNonNull
   public String cssText;
 
   protected CSSRule() {

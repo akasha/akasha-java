@@ -6,6 +6,7 @@ import akasha.media.MediaStream;
 import akasha.media.MediaStreamTrack;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -42,7 +43,7 @@ public interface RTCTrackEventInit extends EventInit {
   @JsProperty(
       name = "receiver"
   )
-  @Nonnull
+  @JsNonNull
   RTCRtpReceiver receiver();
 
   /**
@@ -52,7 +53,7 @@ public interface RTCTrackEventInit extends EventInit {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">RTCTrackEventInit.receiver - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setReceiver(@Nonnull RTCRtpReceiver receiver);
+  void setReceiver(@JsNonNull RTCRtpReceiver receiver);
 
   /**
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
@@ -72,7 +73,7 @@ public interface RTCTrackEventInit extends EventInit {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-streams">RTCTrackEventInit.streams - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setStreams(@Nonnull JsArray<MediaStream> streams);
+  void setStreams(@JsNonNull JsArray<MediaStream> streams);
 
   /**
    * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
@@ -94,7 +95,7 @@ public interface RTCTrackEventInit extends EventInit {
   @JsProperty(
       name = "track"
   )
-  @Nonnull
+  @JsNonNull
   MediaStreamTrack track();
 
   /**
@@ -104,16 +105,16 @@ public interface RTCTrackEventInit extends EventInit {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">RTCTrackEventInit.track - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setTrack(@Nonnull MediaStreamTrack track);
+  void setTrack(@JsNonNull MediaStreamTrack track);
 
   @JsProperty(
       name = "transceiver"
   )
-  @Nonnull
+  @JsNonNull
   RTCRtpTransceiver transceiver();
 
   @JsProperty
-  void setTransceiver(@Nonnull RTCRtpTransceiver transceiver);
+  void setTransceiver(@JsNonNull RTCRtpTransceiver transceiver);
 
   /**
    * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().

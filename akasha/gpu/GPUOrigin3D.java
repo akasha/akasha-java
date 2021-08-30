@@ -1,5 +1,6 @@
 package akasha.gpu;
 
+import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -33,5 +34,25 @@ public interface GPUOrigin3D {
   @Nonnull
   static GPUOrigin3D of(@Nonnull final GPUOrigin3DDict value) {
     return Js.cast( value );
+  }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isGPUOrigin3DDict() {
+    return ( (Object) this ) instanceof JsObject;
+  }
+
+  @JsOverlay
+  default GPUOrigin3DDict asGPUOrigin3DDict() {
+    return Js.cast( this );
   }
 }

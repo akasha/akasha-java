@@ -5,6 +5,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -33,7 +34,7 @@ public class DOMImplementation extends JsObject {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Level-2-Core-DOM-createDocument">DOMImplementation.createDocument - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native XMLDocument createDocument(@Nullable String namespace,
       @Nonnull String qualifiedName, @Nullable DocumentType doctype);
 
@@ -46,7 +47,7 @@ public class DOMImplementation extends JsObject {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Level-2-Core-DOM-createDocument">DOMImplementation.createDocument - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native XMLDocument createDocument(@Nullable String namespace,
       @Nonnull String qualifiedName);
 
@@ -59,7 +60,7 @@ public class DOMImplementation extends JsObject {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Level-2-Core-DOM-createDocType">DOMImplementation.createDocumentType - Document Object Model (DOM) Level 2 Core Specification</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native DocumentType createDocumentType(@Nonnull String qualifiedName,
       @Nonnull String publicId, @Nonnull String systemId);
 
@@ -69,7 +70,7 @@ public class DOMImplementation extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createHTMLDocument">DOMImplementation.createHTMLDocument - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument">DOMImplementation.createHTMLDocument - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Document createHTMLDocument(@Nonnull String title);
 
   /**
@@ -78,7 +79,7 @@ public class DOMImplementation extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createHTMLDocument">DOMImplementation.createHTMLDocument - MDN</a>
    * @see <a href="https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument">DOMImplementation.createHTMLDocument - DOM</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Document createHTMLDocument();
 
   /**

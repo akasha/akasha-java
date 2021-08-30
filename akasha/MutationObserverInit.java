@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -47,7 +48,7 @@ public interface MutationObserverInit {
    * @see <a href="https://dom.spec.whatwg.org/#dom-mutationobserverinit-attributefilter">MutationObserverInit: attributeFilter - DOM</a>
    */
   @JsProperty
-  void setAttributeFilter(@Nonnull JsArray<String> attributeFilter);
+  void setAttributeFilter(@JsNonNull JsArray<String> attributeFilter);
 
   /**
    * The MutationObserverInit dictionary's optional attributeFilter property is an array of strings specifying the names of the attributes whose values are to be monitored for changes.

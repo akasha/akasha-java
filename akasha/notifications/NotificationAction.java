@@ -2,6 +2,7 @@ package akasha.notifications;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,6 @@ import jsinterop.base.JsPropertyMap;
  * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction">NotificationAction - MDN</a>
- * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,11 +31,11 @@ public interface NotificationAction {
   @JsProperty(
       name = "action"
   )
-  @Nonnull
+  @JsNonNull
   String action();
 
   @JsProperty
-  void setAction(@Nonnull String action);
+  void setAction(@JsNonNull String action);
 
   @JsProperty(
       name = "icon"
@@ -43,22 +43,21 @@ public interface NotificationAction {
   String icon();
 
   @JsProperty
-  void setIcon(@Nonnull String icon);
+  void setIcon(@JsNonNull String icon);
 
   @JsProperty(
       name = "title"
   )
-  @Nonnull
+  @JsNonNull
   String title();
 
   @JsProperty
-  void setTitle(@Nonnull String title);
+  void setTitle(@JsNonNull String title);
 
   /**
    * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction">NotificationAction - MDN</a>
-   * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

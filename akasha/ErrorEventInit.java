@@ -4,6 +4,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +38,11 @@ public interface ErrorEventInit extends EventInit {
   @JsProperty(
       name = "error"
   )
-  @Nullable
+  @JsNullable
   Any error();
 
   @JsProperty
-  void setError(@DoNotAutobox @Nullable Object error);
+  void setError(@DoNotAutobox @JsNullable Object error);
 
   @JsProperty(
       name = "filename"
@@ -48,7 +50,7 @@ public interface ErrorEventInit extends EventInit {
   String filename();
 
   @JsProperty
-  void setFilename(@Nonnull String filename);
+  void setFilename(@JsNonNull String filename);
 
   @JsProperty(
       name = "lineno"
@@ -64,7 +66,7 @@ public interface ErrorEventInit extends EventInit {
   String message();
 
   @JsProperty
-  void setMessage(@Nonnull String message);
+  void setMessage(@JsNonNull String message);
 
   @Generated("org.realityforge.webtack")
   @JsType(

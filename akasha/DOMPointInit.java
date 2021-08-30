@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The DOMPointInit dictionary is used to provide the values of the coordinates and perspective when creating and JSONifying a DOMPoint or DOMPointReadOnly object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit">DOMPointInit - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointreadonly-frompoint">DOMPointReadOnly.fromPoint() - Geometry Interfaces Module Level 1</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#dictdef-dompointinit">(Geometry Interfaces 1) # dictdef-dompointinit</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -112,7 +112,7 @@ public interface DOMPointInit {
    * The DOMPointInit dictionary is used to provide the values of the coordinates and perspective when creating and JSONifying a DOMPoint or DOMPointReadOnly object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit">DOMPointInit - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompointreadonly-frompoint">DOMPointReadOnly.fromPoint() - Geometry Interfaces Module Level 1</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dictdef-dompointinit">(Geometry Interfaces 1) # dictdef-dompointinit</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

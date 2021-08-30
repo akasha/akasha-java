@@ -3,7 +3,7 @@ package akasha.speech;
 import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The SpeechRecognitionResultList interface of the Web Speech API represents a list of SpeechRecognitionResult objects, or a single one if results are being captured in continuous mode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList">SpeechRecognitionResultList - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechreco-resultlist">SpeechRecognitionResultList - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechreco-resultlist"># speechreco-resultlist</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -42,6 +42,6 @@ public class SpeechRecognitionResultList extends JsObject {
    * @see <a href="https://wicg.github.io/speech-api/#dom-speechrecognitionresultlist-item">item() - Web Speech API</a>
    */
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native SpeechRecognitionResult item(int index);
 }

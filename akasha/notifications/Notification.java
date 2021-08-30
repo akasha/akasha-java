@@ -1,22 +1,29 @@
 package akasha.notifications;
 
+import akasha.AddEventListenerOptions;
 import akasha.EventHandler;
+import akasha.EventListener;
+import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The Notification interface of the Notifications API is used to configure and display desktop notifications to the user.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification">Notification - MDN</a>
- * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
+ * @see <a href="https://notifications.spec.whatwg.org/#api">(Notifications API) # api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,7 +38,7 @@ public class Notification extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/onclick">Notification.onclick - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-onclick">onclick - Notifications API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclick;
 
   /**
@@ -39,7 +46,7 @@ public class Notification extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/onclose">Notification.onclose - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onclose;
 
   /**
@@ -48,7 +55,7 @@ public class Notification extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/onerror">Notification.onerror - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/#dom-notification-onerror">onerror - Notifications API</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onerror;
 
   /**
@@ -56,7 +63,7 @@ public class Notification extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/onshow">Notification.onshow - MDN</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onshow;
 
   /**
@@ -282,7 +289,7 @@ public class Notification extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission">Notification.requestPermission - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<String> requestPermission(
       @Nonnull NotificationPermissionCallback deprecatedCallback);
 
@@ -292,7 +299,7 @@ public class Notification extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission">Notification.requestPermission - MDN</a>
    * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Promise<String> requestPermission();
 
   /**
@@ -302,4 +309,140 @@ public class Notification extends EventTarget {
    * @see <a href="https://notifications.spec.whatwg.org/">Notifications API</a>
    */
   public native void close();
+
+  @JsOverlay
+  public final void addShowListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "show", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addShowListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "show", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addShowListener(@Nonnull final EventListener callback) {
+    addEventListener( "show", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeShowListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "show", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeShowListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "show", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeShowListener(@Nonnull final EventListener callback) {
+    removeEventListener( "show", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "error", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addClickListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "click", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addClickListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "click", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addClickListener(@Nonnull final EventListener callback) {
+    addEventListener( "click", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeClickListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "click", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeClickListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "click", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeClickListener(@Nonnull final EventListener callback) {
+    removeEventListener( "click", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addCloseListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "close", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addCloseListener(@Nonnull final EventListener callback) {
+    addEventListener( "close", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCloseListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCloseListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "close", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeCloseListener(@Nonnull final EventListener callback) {
+    removeEventListener( "close", Js.cast( callback ) );
+  }
 }

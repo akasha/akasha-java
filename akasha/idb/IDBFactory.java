@@ -7,6 +7,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -39,7 +40,7 @@ public class IDBFactory extends JsObject {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">IDBFactory.databases - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Promise<JsArray<IDBDatabaseInfo>> databases();
 
   /**
@@ -49,7 +50,7 @@ public class IDBFactory extends JsObject {
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-deletedatabase">deleteDatabase() - Indexed Database API Draft</a>
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-deletedatabase">deleteDatabase() - Indexed Database API 2.0</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBOpenDBRequest deleteDatabase(@Nonnull String name);
 
   /**
@@ -59,7 +60,7 @@ public class IDBFactory extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBOpenDBRequest open(@Nonnull String name, int version);
 
   /**
@@ -69,6 +70,6 @@ public class IDBFactory extends JsObject {
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbfactory-open">open() - Indexed Database API Draft</a>
    */
-  @Nonnull
+  @JsNonNull
   public native IDBOpenDBRequest open(@Nonnull String name);
 }

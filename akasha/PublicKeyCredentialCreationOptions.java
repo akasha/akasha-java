@@ -4,6 +4,7 @@ import akasha.core.BufferSource;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -15,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
  * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">PublicKeyCredentialCreationOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
+ * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">(Web Authentication) # dictdef-publickeycredentialcreationoptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -60,7 +61,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation">attestation - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setAttestation(@Nonnull String attestation);
+  void setAttestation(@JsNonNull String attestation);
 
   /**
    * authenticatorSelection, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an object giving criteria to filter out the authenticators to be used for the creation operation.
@@ -80,7 +81,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection">authenticatorSelection - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setAuthenticatorSelection(@Nonnull AuthenticatorSelectionCriteria authenticatorSelection);
+  void setAuthenticatorSelection(@JsNonNull AuthenticatorSelectionCriteria authenticatorSelection);
 
   /**
    * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
@@ -91,7 +92,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty(
       name = "challenge"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource challenge();
 
   /**
@@ -101,7 +102,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setChallenge(@Nonnull BufferSource challenge);
+  void setChallenge(@JsNonNull BufferSource challenge);
 
   /**
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
@@ -121,7 +122,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials">excludeCredentials - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setExcludeCredentials(@Nonnull JsArray<PublicKeyCredentialDescriptor> excludeCredentials);
+  void setExcludeCredentials(@JsNonNull JsArray<PublicKeyCredentialDescriptor> excludeCredentials);
 
   /**
    * excludeCredentials, an optional property of the PublicKeyCredentialCreationOptions dictionary, is an Array whose elements are descriptors for the public keys already existing for a given user. This is provided by the relying party's server if it wants to prevent creation of new credentials for an existing user.
@@ -153,7 +154,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-extensions">extensions - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setExtensions(@Nonnull AuthenticationExtensionsClientInputs extensions);
+  void setExtensions(@JsNonNull AuthenticationExtensionsClientInputs extensions);
 
   /**
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
@@ -164,7 +165,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty(
       name = "pubKeyCredParams"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<PublicKeyCredentialParameters> pubKeyCredParams();
 
   /**
@@ -174,7 +175,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setPubKeyCredParams(@Nonnull JsArray<PublicKeyCredentialParameters> pubKeyCredParams);
+  void setPubKeyCredParams(@JsNonNull JsArray<PublicKeyCredentialParameters> pubKeyCredParams);
 
   /**
    * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
@@ -197,7 +198,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty(
       name = "rp"
   )
-  @Nonnull
+  @JsNonNull
   PublicKeyCredentialRpEntity rp();
 
   /**
@@ -207,7 +208,7 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">rp - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setRp(@Nonnull PublicKeyCredentialRpEntity rp);
+  void setRp(@JsNonNull PublicKeyCredentialRpEntity rp);
 
   /**
    * The timeout property, of the PublicKeyCredentialCreationOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the creation operation.
@@ -238,7 +239,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty(
       name = "user"
   )
-  @Nonnull
+  @JsNonNull
   PublicKeyCredentialUserEntity user();
 
   /**
@@ -248,13 +249,13 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">user - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
    */
   @JsProperty
-  void setUser(@Nonnull PublicKeyCredentialUserEntity user);
+  void setUser(@JsNonNull PublicKeyCredentialUserEntity user);
 
   /**
    * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">PublicKeyCredentialCreationOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
+   * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">(Web Authentication) # dictdef-publickeycredentialcreationoptions</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

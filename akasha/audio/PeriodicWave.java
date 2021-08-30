@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The PeriodicWave interface defines a periodic waveform that can be used to shape the output of an OscillatorNode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave">PeriodicWave - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#periodicwave">PeriodicWave - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#PeriodicWave"># PeriodicWave</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

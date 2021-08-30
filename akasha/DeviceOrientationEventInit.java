@@ -3,6 +3,7 @@ package akasha;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,29 +35,29 @@ public interface DeviceOrientationEventInit extends EventInit {
   @JsProperty(
       name = "alpha"
   )
-  @Nullable
+  @JsNullable
   Double alpha();
 
   @JsProperty
-  void setAlpha(@Nullable Double alpha);
+  void setAlpha(@JsNullable Double alpha);
 
   @JsProperty(
       name = "beta"
   )
-  @Nullable
+  @JsNullable
   Double beta();
 
   @JsProperty
-  void setBeta(@Nullable Double beta);
+  void setBeta(@JsNullable Double beta);
 
   @JsProperty(
       name = "gamma"
   )
-  @Nullable
+  @JsNullable
   Double gamma();
 
   @JsProperty
-  void setGamma(@Nullable Double gamma);
+  void setGamma(@JsNullable Double gamma);
 
   @Generated("org.realityforge.webtack")
   @JsType(

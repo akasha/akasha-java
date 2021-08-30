@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API's XRViewport interface provides properties used to describe the size and position of the current viewport within the XRWebGLLayer being used to render the 3D scene.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRViewport">XRViewport - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrviewport-interface">XRViewport - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrviewport-interface"># xrviewport-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

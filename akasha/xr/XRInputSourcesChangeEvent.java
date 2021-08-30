@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The WebXR Device API interface XRInputSourcesChangeEvent is used to represent the inputsourceschange event sent to an XRSession when the set of available WebXR input controllers changes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent">XRInputSourcesChangeEvent - MDN</a>
- * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourceschangeevent">XRInputSourcesChangeEvent - WebXR Device API</a>
+ * @see <a href="https://immersive-web.github.io/webxr/#xrinputsourceschangeevent-interface"># xrinputsourceschangeevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,25 +31,25 @@ public interface RTCRtpTransceiverStats extends RTCStats {
   String mid();
 
   @JsProperty
-  void setMid(@Nonnull String mid);
+  void setMid(@JsNonNull String mid);
 
   @JsProperty(
       name = "receiverId"
   )
-  @Nonnull
+  @JsNonNull
   String receiverId();
 
   @JsProperty
-  void setReceiverId(@Nonnull String receiverId);
+  void setReceiverId(@JsNonNull String receiverId);
 
   @JsProperty(
       name = "senderId"
   )
-  @Nonnull
+  @JsNonNull
   String senderId();
 
   @JsProperty
-  void setSenderId(@Nonnull String senderId);
+  void setSenderId(@JsNonNull String senderId);
 
   @Generated("org.realityforge.webtack")
   @JsType(

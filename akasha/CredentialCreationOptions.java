@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface CredentialCreationOptions {
   AbortSignal signal();
 
   @JsProperty
-  void setSignal(@Nonnull AbortSignal signal);
+  void setSignal(@JsNonNull AbortSignal signal);
 
   @JsProperty(
       name = "password"
@@ -36,7 +37,7 @@ public interface CredentialCreationOptions {
   PasswordCredentialInit password();
 
   @JsProperty
-  void setPassword(@Nonnull PasswordCredentialInit password);
+  void setPassword(@JsNonNull PasswordCredentialInit password);
 
   @JsProperty(
       name = "federated"
@@ -44,7 +45,7 @@ public interface CredentialCreationOptions {
   FederatedCredentialInit federated();
 
   @JsProperty
-  void setFederated(@Nonnull FederatedCredentialInit federated);
+  void setFederated(@JsNonNull FederatedCredentialInit federated);
 
   @JsProperty(
       name = "publicKey"
@@ -52,7 +53,7 @@ public interface CredentialCreationOptions {
   PublicKeyCredentialCreationOptions publicKey();
 
   @JsProperty
-  void setPublicKey(@Nonnull PublicKeyCredentialCreationOptions publicKey);
+  void setPublicKey(@JsNonNull PublicKeyCredentialCreationOptions publicKey);
 
   @Generated("org.realityforge.webtack")
   @JsType(

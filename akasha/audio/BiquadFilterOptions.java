@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -61,7 +62,7 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   String type();
 
   @JsProperty
-  void setType(@BiquadFilterType @Nonnull String type);
+  void setType(@BiquadFilterType @JsNonNull String type);
 
   @Generated("org.realityforge.webtack")
   @JsType(

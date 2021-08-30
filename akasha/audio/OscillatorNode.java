@@ -2,6 +2,7 @@ package akasha.audio;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -10,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created&mdash;in effect, a constant tone.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode">OscillatorNode - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#oscillatornode">OscillatorNode - Web Audio API</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#OscillatorNode"># OscillatorNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,7 +26,7 @@ public class OscillatorNode extends AudioScheduledSourceNode {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type">OscillatorNode.type - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-oscillatornode-type">type - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   @OscillatorType
   public String type;
 

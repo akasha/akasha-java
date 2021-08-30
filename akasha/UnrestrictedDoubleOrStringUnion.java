@@ -25,4 +25,24 @@ public interface UnrestrictedDoubleOrStringUnion {
   static UnrestrictedDoubleOrStringUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isDouble() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default double asDouble() {
+    return Js.asDouble( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.asString( this );
+  }
 }

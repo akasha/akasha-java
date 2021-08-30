@@ -9,7 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API.
+ * The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException">DOMException - MDN</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-DOMException">(WebIDL 1) # idl-DOMException</a>

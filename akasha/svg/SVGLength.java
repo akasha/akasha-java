@@ -2,7 +2,7 @@ package akasha.svg;
 
 import akasha.core.JsObject;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -55,7 +55,7 @@ public class SVGLength extends JsObject {
 
   public float value;
 
-  @Nonnull
+  @JsNonNull
   public String valueAsString;
 
   public float valueInSpecifiedUnits;

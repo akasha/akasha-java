@@ -2,6 +2,7 @@ package akasha.rtc;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,11 +35,11 @@ public interface RTCMediaHandlerStats extends RTCStats {
   @JsProperty(
       name = "kind"
   )
-  @Nonnull
+  @JsNonNull
   String kind();
 
   @JsProperty
-  void setKind(@Nonnull String kind);
+  void setKind(@JsNonNull String kind);
 
   @JsProperty(
       name = "trackIdentifier"
@@ -46,7 +47,7 @@ public interface RTCMediaHandlerStats extends RTCStats {
   String trackIdentifier();
 
   @JsProperty
-  void setTrackIdentifier(@Nonnull String trackIdentifier);
+  void setTrackIdentifier(@JsNonNull String trackIdentifier);
 
   @JsProperty(
       name = "priority"
@@ -55,7 +56,7 @@ public interface RTCMediaHandlerStats extends RTCStats {
   String priority();
 
   @JsProperty
-  void setPriority(@RTCPriorityType @Nonnull String priority);
+  void setPriority(@RTCPriorityType @JsNonNull String priority);
 
   @JsProperty(
       name = "remoteSource"

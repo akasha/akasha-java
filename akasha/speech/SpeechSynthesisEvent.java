@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SpeechSynthesisEvent interface of the Web Speech API contains information about the current state of SpeechSynthesisUtterance objects that have been processed in the speech service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent">SpeechSynthesisEvent - MDN</a>
- * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisevent">SpeechSynthesisEvent - Web Speech API</a>
+ * @see <a href="https://wicg.github.io/speech-api/#speechsynthesisevent"># speechsynthesisevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

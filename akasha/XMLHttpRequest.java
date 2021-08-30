@@ -4,18 +4,19 @@ import akasha.core.BufferSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 
 /**
  * XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest - MDN</a>
- * @see <a href="https://xhr.spec.whatwg.org/">XMLHttpRequest</a>
+ * @see <a href="https://xhr.spec.whatwg.org/#interface-xmlhttprequest">(XMLHttpRequest) # interface-xmlhttprequest</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -45,7 +46,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange">XMLHttpRequest.onreadystatechange - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#handler-xhr-onreadystatechange">XMLHttpRequest</a>
    */
-  @Nullable
+  @JsNullable
   public EventHandler onreadystatechange;
 
   /**
@@ -54,7 +55,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType">XMLHttpRequest.responseType - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#the-responsetype-attribute">XMLHttpRequest</a>
    */
-  @Nonnull
+  @JsNonNull
   @XMLHttpRequestResponseType
   public String responseType;
 
@@ -191,7 +192,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders">XMLHttpRequest.getAllResponseHeaders - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#the-getallresponseheaders()-method">getAllResponseHeaders() - XMLHttpRequest</a>
    */
-  @Nonnull
+  @JsNonNull
   public native String getAllResponseHeaders();
 
   /**
@@ -200,7 +201,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getResponseHeader">XMLHttpRequest.getResponseHeader - MDN</a>
    * @see <a href="https://xhr.spec.whatwg.org/#dom-xmlhttprequest-getresponseheader">getResponseHeader() - XMLHttpRequest</a>
    */
-  @Nullable
+  @JsNullable
   public native String getResponseHeader(@Nonnull String name);
 
   /**
@@ -316,242 +317,4 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://xhr.spec.whatwg.org/#the-setrequestheader()-method">setRequestHeader() - XMLHttpRequest</a>
    */
   public native void setRequestHeader(@Nonnull String name, @Nonnull String value);
-
-  @JsOverlay
-  public final void addAbortListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "abort", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addAbortListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "abort", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addAbortListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "abort", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeAbortListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "abort", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeAbortListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "abort", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeAbortListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "abort", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "error", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "error", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "error", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "error", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addLoadListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "load", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addLoadListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "load", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addLoadListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "load", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeLoadListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "load", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeLoadListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "load", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeLoadListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "load", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addLoadendListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "loadend", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addLoadendListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "loadend", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addLoadendListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "loadend", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeLoadendListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "loadend", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeLoadendListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "loadend", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeLoadendListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "loadend", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addLoadstartListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "loadstart", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addLoadstartListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "loadstart", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addLoadstartListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "loadstart", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "loadstart", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "loadstart", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "loadstart", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addProgressListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "progress", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addProgressListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "progress", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addProgressListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "progress", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeProgressListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "progress", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeProgressListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "progress", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeProgressListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "progress", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void addTimeoutListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "timeout", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addTimeoutListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "timeout", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addTimeoutListener(@Nonnull final ProgressEventListener callback) {
-    addEventListener( "timeout", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeTimeoutListener(@Nonnull final ProgressEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "timeout", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeTimeoutListener(@Nonnull final ProgressEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "timeout", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeTimeoutListener(@Nonnull final ProgressEventListener callback) {
-    removeEventListener( "timeout", Js.cast( callback ) );
-  }
 }

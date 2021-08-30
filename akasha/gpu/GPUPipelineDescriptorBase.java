@@ -2,6 +2,7 @@ package akasha.gpu;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,7 +31,7 @@ public interface GPUPipelineDescriptorBase extends GPUObjectDescriptorBase {
   GPUPipelineLayout layout();
 
   @JsProperty
-  void setLayout(@Nonnull GPUPipelineLayout layout);
+  void setLayout(@JsNonNull GPUPipelineLayout layout);
 
   @Generated("org.realityforge.webtack")
   @JsType(

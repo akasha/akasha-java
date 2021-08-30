@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -45,7 +46,7 @@ public interface AuthenticationExtensionsClientOutputs {
   JsArray<JsArray<Double>> uvm();
 
   @JsProperty
-  void setUvm(@Nonnull JsArray<JsArray<Double>> uvm);
+  void setUvm(@JsNonNull JsArray<JsArray<Double>> uvm);
 
   @JsOverlay
   @SuppressWarnings("unchecked")
@@ -59,7 +60,7 @@ public interface AuthenticationExtensionsClientOutputs {
   CredentialPropertiesOutput credProps();
 
   @JsProperty
-  void setCredProps(@Nonnull CredentialPropertiesOutput credProps);
+  void setCredProps(@JsNonNull CredentialPropertiesOutput credProps);
 
   @JsProperty(
       name = "largeBlob"
@@ -67,7 +68,7 @@ public interface AuthenticationExtensionsClientOutputs {
   AuthenticationExtensionsLargeBlobOutputs largeBlob();
 
   @JsProperty
-  void setLargeBlob(@Nonnull AuthenticationExtensionsLargeBlobOutputs largeBlob);
+  void setLargeBlob(@JsNonNull AuthenticationExtensionsLargeBlobOutputs largeBlob);
 
   @Generated("org.realityforge.webtack")
   @JsType(

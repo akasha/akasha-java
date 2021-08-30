@@ -5,6 +5,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +31,7 @@ public class History extends JsObject {
    * @see <a href="https://html.spec.whatwg.org/multipage/#scroll-restoration-mode">scroll restoration mode - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/html52/browsers.html#dom-history-scrollrestoration">History.scrollRestoration - HTML5</a>
    */
-  @Nonnull
+  @JsNonNull
   @ScrollRestoration
   public String scrollRestoration;
 
