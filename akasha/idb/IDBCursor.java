@@ -24,7 +24,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "IDBCursor"
 )
-public class IDBCursor extends JsObject {
+public class IDBCursor extends JsObject implements IDBRequestSource {
   protected IDBCursor() {
   }
 
@@ -90,7 +90,7 @@ public class IDBCursor extends JsObject {
       name = "source"
   )
   @Nonnull
-  public native IDBObjectStoreOrIDBIndexUnion source();
+  public native IDBCursorSource source();
 
   /**
    * The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward.

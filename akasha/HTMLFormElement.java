@@ -173,8 +173,8 @@ public class HTMLFormElement extends HTMLElement implements PasswordCredentialIn
 
   @JsOverlay
   @JsNonNull
-  public final RadioNodeListOrElementUnion get(@Nonnull final String name) {
-    return Js.<JsPropertyMap<RadioNodeListOrElementUnion>>cast( this ).get( name );
+  public final HTMLFormControl get(@Nonnull final String name) {
+    return Js.<JsPropertyMap<HTMLFormControl>>cast( this ).get( name );
   }
 
   @JsOverlay

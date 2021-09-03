@@ -33,7 +33,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "Element"
 )
-public class Element extends Node {
+public class Element extends Node implements HTMLFormControl, IntersectionRoot, StyleSheetOwnerNode, HTMLAllCollectionItem {
   @JsNonNull
   public String ariaAtomic;
 

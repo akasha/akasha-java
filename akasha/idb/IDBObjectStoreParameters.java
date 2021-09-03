@@ -4,6 +4,7 @@ import akasha.StringOrStringArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -68,6 +69,13 @@ public interface IDBObjectStoreParameters {
     @Nonnull
     default Builder autoIncrement(final boolean autoIncrement) {
       setAutoIncrement( autoIncrement );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keyPath(@Nullable final StringOrStringArrayUnion keyPath) {
+      setKeyPath( keyPath );
       return this;
     }
 

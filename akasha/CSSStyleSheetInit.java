@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.media.MediaListOrStringUnion;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsNonNull;
@@ -75,6 +76,13 @@ public interface CSSStyleSheetInit {
     @Nonnull
     default Builder disabled(final boolean disabled) {
       setDisabled( disabled );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder media(@Nonnull final MediaListOrStringUnion media) {
+      setMedia( media );
       return this;
     }
 

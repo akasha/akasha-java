@@ -53,5 +53,5 @@ public class TrackEvent extends Event {
       name = "track"
   )
   @Nullable
-  public native VideoTrackOrAudioTrackOrTextTrackUnion track();
+  public native Track track();
 }

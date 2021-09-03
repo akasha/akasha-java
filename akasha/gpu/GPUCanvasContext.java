@@ -1,6 +1,6 @@
 package akasha.gpu;
 
-import akasha.HTMLCanvasElementOrOffscreenCanvasUnion;
+import akasha.Canvas;
 import akasha.OffscreenRenderingContext;
 import akasha.RenderingContext;
 import akasha.core.JsObject;
@@ -27,7 +27,7 @@ public class GPUCanvasContext extends JsObject implements OffscreenRenderingCont
       name = "canvas"
   )
   @Nonnull
-  public native HTMLCanvasElementOrOffscreenCanvasUnion canvas();
+  public native Canvas canvas();
 
   public native void configure(@Nonnull GPUCanvasConfiguration configuration);
 

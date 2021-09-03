@@ -101,5 +101,5 @@ public class ExtendableMessageEvent extends ExtendableEvent {
       name = "source"
   )
   @Nullable
-  public native ClientOrServiceWorkerOrMessagePortUnion source();
+  public native ExtendableMessageEventSource source();
 }

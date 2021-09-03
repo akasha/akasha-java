@@ -2,6 +2,7 @@ package akasha;
 
 import akasha.core.JsObject;
 import akasha.gl.TexImageSource;
+import akasha.gpu.GPUImageCopyExternalImageSource;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -19,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmap"
 )
-public class ImageBitmap extends JsObject implements TexImageSource, CanvasImageSource, Transferable {
+public class ImageBitmap extends JsObject implements TexImageSource, GPUImageCopyExternalImageSource, CanvasImageSource, Transferable {
   protected ImageBitmap() {
   }
 

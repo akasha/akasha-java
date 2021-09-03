@@ -25,7 +25,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "IDBObjectStore"
 )
-public class IDBObjectStore extends JsObject {
+public class IDBObjectStore extends JsObject implements IDBRequestSource, IDBCursorSource {
   /**
    * A DOMString containing the object store's name.
    *

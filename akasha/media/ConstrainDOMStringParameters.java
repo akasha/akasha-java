@@ -4,7 +4,8 @@ import akasha.StringOrStringArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsNonNull;
+import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,10 +35,11 @@ public interface ConstrainDOMStringParameters {
   @JsProperty(
       name = "exact"
   )
+  @JsNullable
   StringOrStringArrayUnion exact();
 
   @JsProperty
-  void setExact(@JsNonNull StringOrStringArrayUnion exact);
+  void setExact(@JsNullable StringOrStringArrayUnion exact);
 
   @JsOverlay
   default void setExact(@Nonnull final String exact) {
@@ -57,10 +59,11 @@ public interface ConstrainDOMStringParameters {
   @JsProperty(
       name = "ideal"
   )
+  @JsNullable
   StringOrStringArrayUnion ideal();
 
   @JsProperty
-  void setIdeal(@JsNonNull StringOrStringArrayUnion ideal);
+  void setIdeal(@JsNullable StringOrStringArrayUnion ideal);
 
   @JsOverlay
   default void setIdeal(@Nonnull final String ideal) {
@@ -92,6 +95,13 @@ public interface ConstrainDOMStringParameters {
   interface Builder extends ConstrainDOMStringParameters {
     @JsOverlay
     @Nonnull
+    default Builder exact(@Nullable final StringOrStringArrayUnion exact) {
+      setExact( exact );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder exact(@Nonnull final String exact) {
       setExact( exact );
       return this;
@@ -108,6 +118,13 @@ public interface ConstrainDOMStringParameters {
     @Nonnull
     default Builder exact(@Nonnull final String... exact) {
       setExact( exact );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder ideal(@Nullable final StringOrStringArrayUnion ideal) {
+      setIdeal( ideal );
       return this;
     }
 

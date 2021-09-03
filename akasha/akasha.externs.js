@@ -11,6 +11,10 @@ var HashAlgorithmIdentifier;
  */
 var OffscreenRenderingContext;
 /**
+ * @typedef {(!RadioNodeList|!Element)}
+ */
+var HTMLFormControl;
+/**
  * @typedef {!boolean}
  */
 var GLboolean;
@@ -75,6 +79,10 @@ var DOMTimeStamp;
  */
 var ReadableStreamController;
 /**
+ * @typedef {(!number|!Array<!number>)}
+ */
+var DoubleOrDoubleArrayUnion;
+/**
  * @typedef {(!number|!string)}
  */
 var LineAndPositionSetting;
@@ -115,9 +123,25 @@ var TexImageSource;
  */
 var BluetoothDescriptorUUID;
 /**
+ * @typedef {(!string|!Array<!string>)}
+ */
+var CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion;
+/**
+ * @typedef {(!Element|!Document)}
+ */
+var IntersectionRoot;
+/**
  * @typedef {!number}
  */
 var GPUSize64;
+/**
+ * @typedef {(!string|undefined)}
+ */
+var GPUDeviceLostReasonOrUndefinedUnion;
+/**
+ * @typedef {(!IDBObjectStore|!IDBIndex|!IDBCursor)}
+ */
+var IDBRequestSource;
 /**
  * @typedef {(!Request|!string)}
  */
@@ -131,6 +155,10 @@ var Timestamp;
  */
 var XMLHttpRequestBodyInit;
 /**
+ * @typedef {(!Element|!ProcessingInstruction)}
+ */
+var StyleSheetOwnerNode;
+/**
  * @typedef {?EventHandler}
  */
 var NullableEventHandler;
@@ -138,6 +166,18 @@ var NullableEventHandler;
  * @typedef {!Array<!ClipboardItem>}
  */
 var ClipboardItems;
+/**
+ * @typedef {(!string|!GPUColor)}
+ */
+var GPULoadOpOrGPUColorUnion;
+/**
+ * @typedef {(!string|!GPUStencilValue)}
+ */
+var GPULoadOpOrGPUStencilValueUnion;
+/**
+ * @typedef {(!CustomElementConstructor|undefined)}
+ */
+var CustomElementConstructorOrUndefinedUnion;
 /**
  * @typedef {!number}
  */
@@ -147,9 +187,17 @@ var GPUDepthBias;
  */
 var ConstrainBoolean;
 /**
+ * @typedef {(!MediaList|!string)}
+ */
+var MediaListOrStringUnion;
+/**
  * @typedef {(!string|!number)}
  */
 var StringifySpaceUnionType;
+/**
+ * @typedef {(!string|!number)}
+ */
+var GPULoadOpOrFloatUnion;
 /**
  * @typedef {(!CanvasRenderingContext2D|!ImageBitmapRenderingContext|!WebGLRenderingContext|!WebGL2RenderingContext|!GPUCanvasContext)}
  */
@@ -158,6 +206,10 @@ var RenderingContext;
  * @typedef {(!Array<!number>|!GPUColorDict)}
  */
 var GPUColor;
+/**
+ * @typedef {(!boolean|!MediaTrackConstraints)}
+ */
+var BooleanOrMediaTrackConstraintsUnion;
 /**
  * @typedef {(!Location|!WorkerLocation)}
  */
@@ -171,6 +223,10 @@ var GPUSignedOffset32;
  */
 var AudioNodeOrUndefinedUnion;
 /**
+ * @typedef {(!string|!Array<!string>)}
+ */
+var StringOrStringArrayUnion;
+/**
  * @typedef {(!BufferSource|!Blob|!string)}
  */
 var BlobPart;
@@ -182,6 +238,10 @@ var GPUBufferDynamicOffset;
  * @typedef {!number}
  */
 var GPUFlagsConstant;
+/**
+ * @typedef {(!Client|!ServiceWorker|!MessagePort)}
+ */
+var ExtendableMessageEventSource;
 /**
  * @typedef {!number}
  */
@@ -198,6 +258,14 @@ var WebGL1Extension;
  * @typedef {!Window}
  */
 var WindowProxy;
+/**
+ * @typedef {(!ImageBitmap|!HTMLCanvasElement|!OffscreenCanvas)}
+ */
+var GPUImageCopyExternalImageSource;
+/**
+ * @typedef {(!string|!ArrayBuffer)}
+ */
+var StringOrArrayBufferUnion;
 /**
  * @typedef {(!number|!ConstrainULongRange)}
  */
@@ -243,6 +311,10 @@ var BodyInit;
  */
 var CSSOMString;
 /**
+ * @typedef {(!HTMLCanvasElement|!OffscreenCanvas)}
+ */
+var Canvas;
+/**
  * @typedef {(!CanvasImageSource|!Blob|!ImageData)}
  */
 var ImageBitmapSource;
@@ -270,6 +342,10 @@ var GPUError;
  * @typedef {(!Int32Array|!Array<!GLint>)}
  */
 var Int32List;
+/**
+ * @typedef {(!string|!number)}
+ */
+var AudioContextLatencyCategoryOrDoubleUnion;
 /**
  * @typedef {(!WindowProxy|!MessagePort|!ServiceWorker)}
  */
@@ -303,6 +379,10 @@ var CanvasImageSource;
  */
 var PasswordCredentialInit;
 /**
+ * @typedef {(!number|!string)}
+ */
+var UnrestrictedDoubleOrStringUnion;
+/**
  * @typedef {!number}
  */
 var GPUIntegerCoordinate;
@@ -323,9 +403,17 @@ var HTMLOrSVGScriptElement;
  */
 var GLfloat;
 /**
+ * @typedef {(!Event|undefined)}
+ */
+var EventOrUndefinedUnion;
+/**
  * @typedef {!number}
  */
 var GLuint64;
+/**
+ * @typedef {(!HTMLCollection|!Element)}
+ */
+var HTMLAllCollectionItem;
 /**
  * @typedef {!number}
  */
@@ -363,6 +451,10 @@ var UvmEntry;
  */
 var GLint;
 /**
+ * @typedef {(!string|!CanvasGradient|!CanvasPattern)}
+ */
+var StringOrCanvasGradientOrCanvasPatternUnion;
+/**
  * @typedef {(!string|!Array<!string>|!ConstrainDOMStringParameters)}
  */
 var ConstrainDOMString;
@@ -387,9 +479,25 @@ var GPUPipelineConstantValue;
  */
 var GLclampf;
 /**
+ * @typedef {(!string|!Array<!UUID>)}
+ */
+var StringOrUUIDArrayUnion;
+/**
+ * @typedef {(!IDBObjectStore|!IDBIndex)}
+ */
+var IDBCursorSource;
+/**
+ * @typedef {(!BufferSource|!string)}
+ */
+var BufferSourceOrStringUnion;
+/**
  * @typedef {!number}
  */
 var GLintptr;
+/**
+ * @typedef {(!VideoTrack|!AudioTrack|!TextTrack)}
+ */
+var Track;
 /**
  * @typedef {!Array<!Report>}
  */
@@ -1384,7 +1492,7 @@ var RsaHashedKeyAlgorithm;
  */
 var MediaKeyMessageEventInit;
 /**
- * @typedef {{track:(?VideoTrackOrAudioTrackOrTextTrackUnion|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{track:(!Track|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var TrackEventInit;
 /**
@@ -1476,7 +1584,7 @@ var AudioNodeOptions;
  */
 var GPUOrigin3DDict;
 /**
- * @typedef {{autoIncrement:(!boolean|undefined),keyPath:(?StringOrStringArrayUnion|undefined)}}
+ * @typedef {{autoIncrement:(!boolean|undefined),keyPath:(!StringOrStringArrayUnion|undefined)}}
  */
 var IDBObjectStoreParameters;
 /**
@@ -1544,7 +1652,7 @@ var ConstantSourceOptions;
  */
 var VideoFrameCopyToOptions;
 /**
- * @typedef {{data:(*|undefined),lastEventId:(!string|undefined),origin:(!string|undefined),ports:(!Array<!MessagePort>|undefined),source:(?ClientOrServiceWorkerOrMessagePortUnion|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{data:(*|undefined),lastEventId:(!string|undefined),origin:(!string|undefined),ports:(!Array<!MessagePort>|undefined),source:(!ExtendableMessageEventSource|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var ExtendableMessageEventInit;
 /**
@@ -1748,7 +1856,7 @@ var OptionalEffectTiming;
  */
 var GetRootNodeOptions;
 /**
- * @typedef {{root:(?ElementOrDocumentUnion|undefined),rootMargin:(!string|undefined),threshold:(!DoubleOrDoubleArrayUnion|undefined)}}
+ * @typedef {{root:(!IntersectionRoot|undefined),rootMargin:(!string|undefined),threshold:(!DoubleOrDoubleArrayUnion|undefined)}}
  */
 var IntersectionObserverInit;
 /**
@@ -1776,7 +1884,7 @@ var EcdhKeyDeriveParams;
  */
 var EncodedVideoChunkInit;
 /**
- * @typedef {{allowedManufacturerData:!Array<!number>,allowedServices:StringOrUUIDArrayUnion,deviceId:!string,mayUseGATT:!boolean}}
+ * @typedef {{allowedManufacturerData:!Array<!number>,allowedServices:!StringOrUUIDArrayUnion,deviceId:!string,mayUseGATT:!boolean}}
  */
 var AllowedBluetoothDevice;
 /**
@@ -2012,7 +2120,7 @@ var XRWebGLLayerInit;
  */
 var HmacImportParams;
 /**
- * @typedef {{view:!GPUTextureView,resolveTarget:(!GPUTextureView|undefined),loadValue:GPULoadOpOrGPUColorUnion,storeOp:!string}}
+ * @typedef {{view:!GPUTextureView,resolveTarget:(!GPUTextureView|undefined),loadValue:!GPULoadOpOrGPUColorUnion,storeOp:!string}}
  */
 var GPURenderPassColorAttachment;
 /**
@@ -2520,7 +2628,7 @@ var OfflineAudioContextOptions;
  */
 var RTCCertificateExpiration;
 /**
- * @typedef {{credential:(!string|undefined),credentialType:(!string|undefined),urls:StringOrStringArrayUnion,username:(!string|undefined)}}
+ * @typedef {{credential:(!string|undefined),credentialType:(!string|undefined),urls:!StringOrStringArrayUnion,username:(!string|undefined)}}
  */
 var RTCIceServer;
 /**
@@ -2560,7 +2668,7 @@ var RsaHashedKeyGenParams;
  */
 var GPURenderBundleEncoderDescriptor;
 /**
- * @typedef {{applicationServerKey:(?BufferSourceOrStringUnion|undefined),userVisibleOnly:(!boolean|undefined)}}
+ * @typedef {{applicationServerKey:(!BufferSourceOrStringUnion|undefined),userVisibleOnly:(!boolean|undefined)}}
  */
 var PushSubscriptionOptionsInit;
 /**
@@ -2628,7 +2736,7 @@ var RTCCodecStats;
  */
 var ImageDataSettings;
 /**
- * @typedef {{view:!GPUTextureView,depthLoadValue:GPULoadOpOrFloatUnion,depthStoreOp:!string,depthReadOnly:(!boolean|undefined),stencilLoadValue:GPULoadOpOrGPUStencilValueUnion,stencilStoreOp:!string,stencilReadOnly:(!boolean|undefined)}}
+ * @typedef {{view:!GPUTextureView,depthLoadValue:!GPULoadOpOrFloatUnion,depthStoreOp:!string,depthReadOnly:(!boolean|undefined),stencilLoadValue:!GPULoadOpOrGPUStencilValueUnion,stencilStoreOp:!string,stencilReadOnly:(!boolean|undefined)}}
  */
 var GPURenderPassDepthStencilAttachment;
 /**
@@ -2988,7 +3096,7 @@ var TextEncoderEncodeIntoResult;
  */
 var MediaKeySystemConfiguration;
 /**
- * @typedef {{source:ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion,origin:(!GPUOrigin2D|undefined)}}
+ * @typedef {{source:!GPUImageCopyExternalImageSource,origin:(!GPUOrigin2D|undefined)}}
  */
 var GPUImageCopyExternalImage;
 /**
@@ -3753,7 +3861,7 @@ Crypto.prototype.getRandomValues = function(array) {}
 function StyleSheet() {}
 /** @type {?string} */ StyleSheet.prototype.href;
 /** @type {!MediaList} */ StyleSheet.prototype.media;
-/** @type {ElementOrProcessingInstructionUnion} */ StyleSheet.prototype.ownerNode;
+/** @type {!StyleSheetOwnerNode} */ StyleSheet.prototype.ownerNode;
 /** @type {?CSSStyleSheet} */ StyleSheet.prototype.parentStyleSheet;
 /** @type {?string} */ StyleSheet.prototype.title;
 /** @type {!CSSOMString} */ StyleSheet.prototype.type;
@@ -4164,8 +4272,8 @@ function CanvasRenderingContext2D() {}
 /** @type {!string} */ CanvasRenderingContext2D.prototype.shadowColor;
 /** @type {!number} */ CanvasRenderingContext2D.prototype.shadowOffsetX;
 /** @type {!number} */ CanvasRenderingContext2D.prototype.shadowOffsetY;
-/** @type {StringOrCanvasGradientOrCanvasPatternUnion} */ CanvasRenderingContext2D.prototype.fillStyle;
-/** @type {StringOrCanvasGradientOrCanvasPatternUnion} */ CanvasRenderingContext2D.prototype.strokeStyle;
+/** @type {!StringOrCanvasGradientOrCanvasPatternUnion} */ CanvasRenderingContext2D.prototype.fillStyle;
+/** @type {!StringOrCanvasGradientOrCanvasPatternUnion} */ CanvasRenderingContext2D.prototype.strokeStyle;
 /** @type {!number} */ CanvasRenderingContext2D.prototype.globalAlpha;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.globalCompositeOperation;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.lineCap;
@@ -7745,7 +7853,7 @@ function WebGLRenderingContext() {}
 /** @const {!GLenum} */ WebGLRenderingContext.prototype.ZERO;
 /** @type {!GLsizei} */ WebGLRenderingContext.prototype.drawingBufferHeight;
 /** @type {!GLsizei} */ WebGLRenderingContext.prototype.drawingBufferWidth;
-/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ WebGLRenderingContext.prototype.canvas;
+/** @type {!Canvas} */ WebGLRenderingContext.prototype.canvas;
 /**
  * @param {?WebGLBuffer} buffer
  * @return {!GLboolean}
@@ -8796,7 +8904,7 @@ function ExtendableMessageEvent(type,eventInitDict) {}
 /** @type {!string} */ ExtendableMessageEvent.prototype.lastEventId;
 /** @type {!string} */ ExtendableMessageEvent.prototype.origin;
 /** @type {!Array<!MessagePort>} */ ExtendableMessageEvent.prototype.ports;
-/** @type {ClientOrServiceWorkerOrMessagePortUnion} */ ExtendableMessageEvent.prototype.source;
+/** @type {!ExtendableMessageEventSource} */ ExtendableMessageEvent.prototype.source;
 /**
  * @constructor
  * @private
@@ -9611,8 +9719,8 @@ function HTMLDataListElement() {}
  */
 function OffscreenCanvasRenderingContext2D() {}
 /** @type {!OffscreenCanvas} */ OffscreenCanvasRenderingContext2D.prototype.canvas;
-/** @type {StringOrCanvasGradientOrCanvasPatternUnion} */ OffscreenCanvasRenderingContext2D.prototype.fillStyle;
-/** @type {StringOrCanvasGradientOrCanvasPatternUnion} */ OffscreenCanvasRenderingContext2D.prototype.strokeStyle;
+/** @type {!StringOrCanvasGradientOrCanvasPatternUnion} */ OffscreenCanvasRenderingContext2D.prototype.fillStyle;
+/** @type {!StringOrCanvasGradientOrCanvasPatternUnion} */ OffscreenCanvasRenderingContext2D.prototype.strokeStyle;
 /** @type {!boolean} */ OffscreenCanvasRenderingContext2D.prototype.imageSmoothingEnabled;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.imageSmoothingQuality;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.lineCap;
@@ -10100,7 +10208,7 @@ function WebGLUniformLocation() {}
  * @nosideeffects
  */
 function GPUCanvasContext() {}
-/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ GPUCanvasContext.prototype.canvas;
+/** @type {!Canvas} */ GPUCanvasContext.prototype.canvas;
 /**
  * @param {!GPUAdapter} adapter
  * @return {!string}
@@ -10431,7 +10539,7 @@ Animation.prototype.pause = function() {}
  * @nosideeffects
  */
 function ImageBitmapRenderingContext() {}
-/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ ImageBitmapRenderingContext.prototype.canvas;
+/** @type {!Canvas} */ ImageBitmapRenderingContext.prototype.canvas;
 /**
  * @param {?ImageBitmap} bitmap
  * @return {undefined}
@@ -10595,13 +10703,13 @@ function HTMLFormControlsCollection() {}
 /** @type {!number} */ HTMLFormControlsCollection.prototype.length;
 /**
  * @param {!string} name
- * @return {RadioNodeListOrElementUnion}
+ * @return {!HTMLFormControl}
  * @nosideeffects
  */
 HTMLFormControlsCollection.prototype.namedItem = function(name) {}
 /**
  * @param {!number} index
- * @return {RadioNodeListOrElementUnion}
+ * @return {!HTMLFormControl}
  */
 HTMLFormControlsCollection.prototype.item = function(index) {}
 /**
@@ -11463,7 +11571,7 @@ function IDBRequest() {}
 /** @type {?DOMException} */ IDBRequest.prototype.error;
 /** @type {!string} */ IDBRequest.prototype.readyState;
 /** @type {*} */ IDBRequest.prototype.result;
-/** @type {IDBObjectStoreOrIDBIndexOrIDBCursorUnion} */ IDBRequest.prototype.source;
+/** @type {!IDBRequestSource} */ IDBRequest.prototype.source;
 /** @type {?IDBTransaction} */ IDBRequest.prototype.transaction;
 /** @type {?EventHandler} */ IDBRequest.prototype.onerror;
 /** @type {?EventHandler} */ IDBRequest.prototype.onsuccess;
@@ -13990,7 +14098,7 @@ function Window() {}
 /** @type {!VisualViewport} */ Window.prototype.visualViewport;
 /** @type {!number} */ Window.prototype.orientation;
 /** @type {?EventHandler} */ Window.prototype.onorientationchange;
-/** @type {EventOrUndefinedUnion} */ Window.prototype.event;
+/** @type {!EventOrUndefinedUnion} */ Window.prototype.event;
 /** @type {!boolean} */ Window.prototype.crossOriginIsolated;
 /** @type {!boolean} */ Window.prototype.isSecureContext;
 /** @type {!string} */ Window.prototype.origin;
@@ -15453,7 +15561,7 @@ function HTMLLegendElement() {}
  * @param {!TrackEventInit=} eventInitDict
  */
 function TrackEvent(type,eventInitDict) {}
-/** @type {VideoTrackOrAudioTrackOrTextTrackUnion} */ TrackEvent.prototype.track;
+/** @type {!Track} */ TrackEvent.prototype.track;
 /**
  * @constructor
  * @private
@@ -16568,7 +16676,7 @@ function FileReader() {}
 /** @const {!number} */ FileReader.prototype.LOADING;
 /** @type {?DOMException} */ FileReader.prototype.error;
 /** @type {!number} */ FileReader.prototype.readyState;
-/** @type {StringOrArrayBufferUnion} */ FileReader.prototype.result;
+/** @type {!StringOrArrayBufferUnion} */ FileReader.prototype.result;
 /** @type {?ProgressEventHandler} */ FileReader.prototype.onabort;
 /** @type {?ProgressEventHandler} */ FileReader.prototype.onerror;
 /** @type {?ProgressEventHandler} */ FileReader.prototype.onload;
@@ -17843,7 +17951,7 @@ function WebGL2RenderingContext() {}
 /** @const {!GLenum} */ WebGL2RenderingContext.prototype.WAIT_FAILED;
 /** @type {!GLsizei} */ WebGL2RenderingContext.prototype.drawingBufferHeight;
 /** @type {!GLsizei} */ WebGL2RenderingContext.prototype.drawingBufferWidth;
-/** @type {HTMLCanvasElementOrOffscreenCanvasUnion} */ WebGL2RenderingContext.prototype.canvas;
+/** @type {!Canvas} */ WebGL2RenderingContext.prototype.canvas;
 /**
  * @param {?WebGLBuffer} buffer
  * @return {!GLboolean}
@@ -19904,12 +20012,12 @@ function HTMLAllCollection() {}
 /** @type {!number} */ HTMLAllCollection.prototype.length;
 /**
  * @param {!string} name
- * @return {HTMLCollectionOrElementUnion}
+ * @return {!HTMLAllCollectionItem}
  */
 HTMLAllCollection.prototype.namedItem = function(name) {}
 /**
  * @param {!string=} nameOrIndex
- * @return {HTMLCollectionOrElementUnion}
+ * @return {!HTMLAllCollectionItem}
  */
 HTMLAllCollection.prototype.item = function(nameOrIndex) {}
 /**
@@ -20122,7 +20230,7 @@ function IDBCursor() {}
 /** @type {*} */ IDBCursor.prototype.key;
 /** @type {*} */ IDBCursor.prototype.primaryKey;
 /** @type {!IDBRequest} */ IDBCursor.prototype.request;
-/** @type {IDBObjectStoreOrIDBIndexUnion} */ IDBCursor.prototype.source;
+/** @type {!IDBCursorSource} */ IDBCursor.prototype.source;
 /**
  * @param {*=} key
  * @return {undefined}
@@ -21906,7 +22014,7 @@ function CustomElementRegistry() {}
 CustomElementRegistry.prototype.upgrade = function(root) {}
 /**
  * @param {!string} name
- * @return {CustomElementConstructorOrUndefinedUnion}
+ * @return {!CustomElementConstructorOrUndefinedUnion}
  */
 CustomElementRegistry.prototype.get = function(name) {}
 /**
@@ -22927,7 +23035,7 @@ RTCPeerConnection.prototype.close = function() {}
  */
 function GPUDeviceLostInfo() {}
 /** @type {!string} */ GPUDeviceLostInfo.prototype.message;
-/** @type {GPUDeviceLostReasonOrUndefinedUnion} */ GPUDeviceLostInfo.prototype.reason;
+/** @type {!GPUDeviceLostReasonOrUndefinedUnion} */ GPUDeviceLostInfo.prototype.reason;
 /**
  * @constructor
  * @private
@@ -23041,7 +23149,7 @@ function SVGFEDisplacementMapElement() {}
  * @param {!IntersectionObserverInit=} options
  */
 function IntersectionObserver(callback,options) {}
-/** @type {ElementOrDocumentUnion} */ IntersectionObserver.prototype.root;
+/** @type {!IntersectionRoot} */ IntersectionObserver.prototype.root;
 /** @type {!string} */ IntersectionObserver.prototype.rootMargin;
 /** @type {!Array<!number>} */ IntersectionObserver.prototype.thresholds;
 /**
@@ -23971,7 +24079,7 @@ HTMLCanvasElement.prototype.getContext = function(contextId,options) {}
 /** @type {?DragEventHandler} */ var ondragenter;
 /** @type {?EventHandler} */ var onafterprint;
 /** @type {!NullableEventHandler} */ var onmouseleave;
-/** @type {EventOrUndefinedUnion} */ var event;
+/** @type {!EventOrUndefinedUnion} */ var event;
 /** @type {?EventHandler} */ var onorientationchange;
 /** @type {!boolean} */ var isSecureContext;
 /** @type {!NullableEventHandler} */ var onseeking;
@@ -24464,82 +24572,6 @@ function moveTo(x,y) {}
  */
 var UnrestrictedDoubleOrDOMPointInitUnion;
 /**
- * @typedef {(!IDBObjectStore|!IDBIndex)}
- */
-var IDBObjectStoreOrIDBIndexUnion;
-/**
- * @typedef {(!IDBObjectStore|!IDBIndex|!IDBCursor)}
- */
-var IDBObjectStoreOrIDBIndexOrIDBCursorUnion;
-/**
- * @typedef {(!number|!string)}
- */
-var UnrestrictedDoubleOrStringUnion;
-/**
- * @typedef {(?MessageEventHandler|?ExtendableMessageEventHandler)}
- */
-var MessageEventHandlerOrExtendableMessageEventHandlerUnion;
-/**
- * @typedef {(!string|!Array<!string>)}
- */
-var CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion;
-/**
- * @typedef {(!Promise<!RTCSessionDescriptionInit>|!Promise<undefined>)}
- */
-var RTCSessionDescriptionInitPromiseOrUndefinedPromiseUnion;
-/**
- * @typedef {(!ImageBitmap|!HTMLCanvasElement|!OffscreenCanvas)}
- */
-var ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion;
-/**
- * @typedef {(!string|undefined)}
- */
-var GPUDeviceLostReasonOrUndefinedUnion;
-/**
- * @typedef {(!Element|!ProcessingInstruction)}
- */
-var ElementOrProcessingInstructionUnion;
-/**
- * @typedef {(!string|!ArrayBuffer)}
- */
-var StringOrArrayBufferUnion;
-/**
- * @typedef {(!RadioNodeList|!Element)}
- */
-var RadioNodeListOrElementUnion;
-/**
- * @typedef {(!Event|!string)}
- */
-var EventOrStringUnion;
-/**
- * @typedef {(!Event|undefined)}
- */
-var EventOrUndefinedUnion;
-/**
- * @typedef {(!string|!GPUColor)}
- */
-var GPULoadOpOrGPUColorUnion;
-/**
- * @typedef {(!string|!GPUStencilValue)}
- */
-var GPULoadOpOrGPUStencilValueUnion;
-/**
- * @typedef {(!CustomElementConstructor|undefined)}
- */
-var CustomElementConstructorOrUndefinedUnion;
-/**
- * @typedef {(!MediaList|!string)}
- */
-var MediaListOrStringUnion;
-/**
- * @typedef {(!Response|undefined)}
- */
-var ResponseOrUndefinedUnion;
-/**
- * @typedef {(!string|!number)}
- */
-var GPULoadOpOrFloatUnion;
-/**
  * @typedef {(!string|!number)}
  */
 var StringOrUnsignedLongUnion;
@@ -24548,53 +24580,25 @@ var StringOrUnsignedLongUnion;
  */
 var ServiceWorkerRegistrationOrUndefinedUnion;
 /**
- * @typedef {(!HTMLCollection|!Element)}
+ * @typedef {(?MessageEventHandler|?ExtendableMessageEventHandler)}
  */
-var HTMLCollectionOrElementUnion;
+var MessageEventHandlerOrExtendableMessageEventHandlerUnion;
 /**
- * @typedef {(!boolean|!MediaTrackConstraints)}
+ * @typedef {(!Promise<!RTCSessionDescriptionInit>|!Promise<undefined>)}
  */
-var BooleanOrMediaTrackConstraintsUnion;
-/**
- * @typedef {(!VideoTrack|!AudioTrack|!TextTrack)}
- */
-var VideoTrackOrAudioTrackOrTextTrackUnion;
-/**
- * @typedef {(!string|!CanvasGradient|!CanvasPattern)}
- */
-var StringOrCanvasGradientOrCanvasPatternUnion;
-/**
- * @typedef {(!number|!Array<!number>)}
- */
-var DoubleOrDoubleArrayUnion;
+var RTCSessionDescriptionInitPromiseOrUndefinedPromiseUnion;
 /**
  * @typedef {(!Promise<!WebAssemblyInstantiatedSource>|!Promise<!WebAssembly.Instance>)}
  */
 var WebAssemblyInstantiatedSourcePromiseOrInstancePromiseUnion;
 /**
- * @typedef {(!string|!Array<!UUID>)}
- */
-var StringOrUUIDArrayUnion;
-/**
- * @typedef {(!string|!Array<!string>)}
- */
-var StringOrStringArrayUnion;
-/**
- * @typedef {(!BufferSource|!string)}
- */
-var BufferSourceOrStringUnion;
-/**
  * @typedef {(!Client|undefined)}
  */
 var ClientOrUndefinedUnion;
 /**
- * @typedef {(!Element|!Document)}
+ * @typedef {(!Event|!string)}
  */
-var ElementOrDocumentUnion;
-/**
- * @typedef {(!string|!number)}
- */
-var AudioContextLatencyCategoryOrDoubleUnion;
+var EventOrStringUnion;
 /**
  * @typedef {(!Document|?WindowProxy)}
  */
@@ -24604,13 +24608,9 @@ var DocumentOrWindowProxyUnion;
  */
 var WindowProxyOrWorkerGlobalScopeUnion;
 /**
- * @typedef {(!Client|!ServiceWorker|!MessagePort)}
+ * @typedef {(!Response|undefined)}
  */
-var ClientOrServiceWorkerOrMessagePortUnion;
-/**
- * @typedef {(!HTMLCanvasElement|!OffscreenCanvas)}
- */
-var HTMLCanvasElementOrOffscreenCanvasUnion;
+var ResponseOrUndefinedUnion;
 /**
  * This type def is an alias because the type is used in closure/base that is added during J2CL compiles.
  *

@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "AudioTrack"
 )
-public class AudioTrack extends JsObject {
+public class AudioTrack extends JsObject implements Track {
   /**
    * The AudioTrack property enabled specifies whether or not the described audio track is currently enabled for use. If the track is disabled by setting enabled to false, the track is muted and does not produce audio.
    *
@@ -58,6 +58,7 @@ public class AudioTrack extends JsObject {
       name = "kind"
   )
   @Nonnull
+  @AudioTrackKind
   public native String kind();
 
   /**

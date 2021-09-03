@@ -3,6 +3,7 @@ package akasha;
 import akasha.gl.TexImageSource;
 import akasha.gl.WebGLContextAttributes;
 import akasha.gl.WebGLContextEventListener;
+import akasha.gpu.GPUImageCopyExternalImageSource;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -26,7 +27,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "HTMLCanvasElement"
 )
-public class HTMLCanvasElement extends HTMLElement implements TexImageSource, CanvasImageSource {
+public class HTMLCanvasElement extends HTMLElement implements TexImageSource, GPUImageCopyExternalImageSource, Canvas, CanvasImageSource {
   /**
    * The HTMLCanvasElement.height property is a positive integer reflecting the height HTML attribute of the canvas element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of 150 is used.
    *

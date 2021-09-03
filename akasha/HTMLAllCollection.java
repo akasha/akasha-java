@@ -29,14 +29,14 @@ public class HTMLAllCollection extends JsObject {
   public native int length();
 
   @JsNullable
-  public native HTMLCollectionOrElementUnion item(@Nonnull String nameOrIndex);
+  public native HTMLAllCollectionItem item(@Nonnull String nameOrIndex);
 
   @JsNullable
-  public native HTMLCollectionOrElementUnion item();
+  public native HTMLAllCollectionItem item();
 
   @HasNoSideEffects
   @JsNullable
-  public native HTMLCollectionOrElementUnion namedItem(@Nonnull String name);
+  public native HTMLAllCollectionItem namedItem(@Nonnull String name);
 
   @JsOverlay
   @JsNonNull

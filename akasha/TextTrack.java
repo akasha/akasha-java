@@ -24,7 +24,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "TextTrack"
 )
-public class TextTrack extends EventTarget {
+public class TextTrack extends EventTarget implements Track {
   /**
    * The TextTrack interface's mode property is a string specifying and controlling the text track's mode: disabled, hidden, or showing.
    *

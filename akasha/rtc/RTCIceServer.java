@@ -4,7 +4,9 @@ import akasha.StringOrStringArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,6 +26,12 @@ import jsinterop.base.JsPropertyMap;
     name = "RTCIceServer"
 )
 public interface RTCIceServer {
+  @JsOverlay
+  @Nonnull
+  static Builder create(@Nullable final StringOrStringArrayUnion urls) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
+  }
+
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String urls) {
@@ -92,7 +100,7 @@ public interface RTCIceServer {
   @JsProperty(
       name = "urls"
   )
-  @JsNonNull
+  @JsNullable
   StringOrStringArrayUnion urls();
 
   /**
@@ -102,7 +110,7 @@ public interface RTCIceServer {
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
   @JsProperty
-  void setUrls(@JsNonNull StringOrStringArrayUnion urls);
+  void setUrls(@JsNullable StringOrStringArrayUnion urls);
 
   /**
    * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
@@ -192,6 +200,19 @@ public interface RTCIceServer {
     @Nonnull
     default Builder credentialType(@RTCIceCredentialType @Nonnull final String credentialType) {
       setCredentialType( credentialType );
+      return this;
+    }
+
+    /**
+     * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/urls">RTCIceServer.urls - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder urls(@Nullable final StringOrStringArrayUnion urls) {
+      setUrls( urls );
       return this;
     }
 

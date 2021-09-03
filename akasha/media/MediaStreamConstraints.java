@@ -86,6 +86,13 @@ public interface MediaStreamConstraints {
   interface Builder extends MediaStreamConstraints {
     @JsOverlay
     @Nonnull
+    default Builder audio(@Nonnull final BooleanOrMediaTrackConstraintsUnion audio) {
+      setAudio( audio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder audio(final boolean audio) {
       setAudio( audio );
       return this;
@@ -95,6 +102,13 @@ public interface MediaStreamConstraints {
     @Nonnull
     default Builder audio(@Nonnull final MediaTrackConstraints audio) {
       setAudio( audio );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder video(@Nonnull final BooleanOrMediaTrackConstraintsUnion video) {
+      setVideo( video );
       return this;
     }
 

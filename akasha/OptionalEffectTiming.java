@@ -122,6 +122,13 @@ public interface OptionalEffectTiming {
 
     @JsOverlay
     @Nonnull
+    default Builder duration(@Nonnull final UnrestrictedDoubleOrStringUnion duration) {
+      setDuration( duration );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder duration(final double duration) {
       setDuration( duration );
       return this;

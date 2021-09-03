@@ -24,7 +24,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "ServiceWorker"
 )
-public class ServiceWorker extends EventTarget implements MessageEventSource {
+public class ServiceWorker extends EventTarget implements ExtendableMessageEventSource, MessageEventSource {
   /**
    * The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.
    *

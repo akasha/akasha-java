@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "VideoTrack"
 )
-public class VideoTrack extends JsObject {
+public class VideoTrack extends JsObject implements Track {
   /**
    * The VideoTrack property selected controls whether or not a particular video track is active.
    *

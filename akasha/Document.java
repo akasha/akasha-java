@@ -37,7 +37,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "Document"
 )
-public class Document extends Node {
+public class Document extends Node implements IntersectionRoot {
   /**
    * Returns or sets the color of an active link in the document body. A link is active during the time between mousedown and mouseup events.
    *

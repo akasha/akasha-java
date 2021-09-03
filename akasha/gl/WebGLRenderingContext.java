@@ -1,6 +1,6 @@
 package akasha.gl;
 
-import akasha.HTMLCanvasElementOrOffscreenCanvasUnion;
+import akasha.Canvas;
 import akasha.OffscreenRenderingContext;
 import akasha.RenderingContext;
 import akasha.core.ArrayBufferView;
@@ -937,7 +937,7 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
       name = "canvas"
   )
   @Nonnull
-  public native HTMLCanvasElementOrOffscreenCanvasUnion canvas();
+  public native Canvas canvas();
 
   /**
    * The read-only WebGLRenderingContext.drawingBufferHeight property represents the actual height of the current drawing buffer. It should match the height attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested height.

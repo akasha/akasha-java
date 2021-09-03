@@ -53,10 +53,11 @@ public interface BasePropertyIndexedKeyframe {
   @JsProperty(
       name = "easing"
   )
+  @JsNullable
   StringOrStringArrayUnion easing();
 
   @JsProperty
-  void setEasing(@JsNonNull StringOrStringArrayUnion easing);
+  void setEasing(@JsNullable StringOrStringArrayUnion easing);
 
   @JsOverlay
   default void setEasing(@Nonnull final String easing) {
@@ -76,14 +77,13 @@ public interface BasePropertyIndexedKeyframe {
   @JsProperty(
       name = "offset"
   )
-  @JsNullable
   DoubleOrDoubleArrayUnion offset();
 
   @JsProperty
-  void setOffset(@JsNullable DoubleOrDoubleArrayUnion offset);
+  void setOffset(@JsNonNull DoubleOrDoubleArrayUnion offset);
 
   @JsOverlay
-  default void setOffset(@Nullable final Double offset) {
+  default void setOffset(final double offset) {
     setOffset( DoubleOrDoubleArrayUnion.of( offset ) );
   }
 
@@ -106,6 +106,14 @@ public interface BasePropertyIndexedKeyframe {
   interface Builder extends BasePropertyIndexedKeyframe {
     @JsOverlay
     @Nonnull
+    default Builder composite(
+        @Nonnull final CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion composite) {
+      setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder composite(@Nonnull final String composite) {
       setComposite( composite );
       return this;
@@ -122,6 +130,13 @@ public interface BasePropertyIndexedKeyframe {
     @Nonnull
     default Builder composite(@Nonnull final String... composite) {
       setComposite( composite );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder easing(@Nullable final StringOrStringArrayUnion easing) {
+      setEasing( easing );
       return this;
     }
 
@@ -148,7 +163,14 @@ public interface BasePropertyIndexedKeyframe {
 
     @JsOverlay
     @Nonnull
-    default Builder offset(@Nullable final Double offset) {
+    default Builder offset(@Nonnull final DoubleOrDoubleArrayUnion offset) {
+      setOffset( offset );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder offset(final double offset) {
       setOffset( offset );
       return this;
     }

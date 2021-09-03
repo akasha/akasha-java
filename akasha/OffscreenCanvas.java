@@ -1,6 +1,7 @@
 package akasha;
 
 import akasha.gl.TexImageSource;
+import akasha.gpu.GPUImageCopyExternalImageSource;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -25,7 +26,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "OffscreenCanvas"
 )
-public class OffscreenCanvas extends EventTarget implements TexImageSource, CanvasImageSource, Transferable {
+public class OffscreenCanvas extends EventTarget implements TexImageSource, GPUImageCopyExternalImageSource, Canvas, CanvasImageSource, Transferable {
   /**
    * The height property returns and sets the height of an OffscreenCanvas object.
    *

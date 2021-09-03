@@ -23,7 +23,7 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "IDBIndex"
 )
-public class IDBIndex extends JsObject {
+public class IDBIndex extends JsObject implements IDBRequestSource, IDBCursorSource {
   /**
    * A DOMString specifying a name for the index.
    *

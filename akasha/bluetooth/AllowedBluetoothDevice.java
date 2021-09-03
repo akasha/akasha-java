@@ -1,6 +1,5 @@
 package akasha.bluetooth;
 
-import akasha.StringOrUUIDArrayUnion;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -19,6 +18,22 @@ import jsinterop.base.JsPropertyMap;
     name = "AllowedBluetoothDevice"
 )
 public interface AllowedBluetoothDevice {
+  @JsOverlay
+  @Nonnull
+  static Builder create(@Nonnull final JsArray<Double> allowedManufacturerData,
+      @Nonnull final StringOrUUIDArrayUnion allowedServices, @Nonnull final String deviceId,
+      final boolean mayUseGATT) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static Builder create(@Nonnull final double[] allowedManufacturerData,
+      @Nonnull final StringOrUUIDArrayUnion allowedServices, @Nonnull final String deviceId,
+      final boolean mayUseGATT) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  }
+
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final JsArray<Double> allowedManufacturerData,
@@ -141,6 +156,13 @@ public interface AllowedBluetoothDevice {
     @Nonnull
     default Builder allowedManufacturerData(@Nonnull final double... allowedManufacturerData) {
       setAllowedManufacturerData( allowedManufacturerData );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder allowedServices(@Nonnull final StringOrUUIDArrayUnion allowedServices) {
+      setAllowedServices( allowedServices );
       return this;
     }
 

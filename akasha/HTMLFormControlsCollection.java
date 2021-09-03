@@ -4,7 +4,7 @@ import akasha.core.JsObject;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,8 +31,8 @@ public class HTMLFormControlsCollection extends JsObject {
   public native int length();
 
   @HasNoSideEffects
-  @JsNullable
-  public native RadioNodeListOrElementUnion item(int index);
+  @JsNonNull
+  public native HTMLFormControl item(int index);
 
   /**
    * The HTMLFormControlsCollection.namedItem() method returns the RadioNodeList or the Element in the collection whose name or id match the specified name, or null if no node matches.
@@ -42,6 +42,6 @@ public class HTMLFormControlsCollection extends JsObject {
    * @see <a href="https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection - HTML5</a>
    */
   @HasNoSideEffects
-  @JsNullable
-  public native RadioNodeListOrElementUnion namedItem(@Nonnull String name);
+  @JsNonNull
+  public native HTMLFormControl namedItem(@Nonnull String name);
 }

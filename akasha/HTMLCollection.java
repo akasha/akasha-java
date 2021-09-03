@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "HTMLCollection"
 )
-public class HTMLCollection extends JsObject {
+public class HTMLCollection extends JsObject implements HTMLAllCollectionItem {
   protected HTMLCollection() {
   }
 

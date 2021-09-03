@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ProcessingInstruction"
 )
-public class ProcessingInstruction extends CharacterData {
+public class ProcessingInstruction extends CharacterData implements StyleSheetOwnerNode {
   protected ProcessingInstruction() {
   }
 

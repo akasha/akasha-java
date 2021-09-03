@@ -22,7 +22,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Client"
 )
-public class Client extends JsObject {
+public class Client extends JsObject implements ExtendableMessageEventSource {
   protected Client() {
   }
 

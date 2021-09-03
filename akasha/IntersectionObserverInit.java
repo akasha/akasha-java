@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -29,20 +30,10 @@ public interface IntersectionObserverInit {
       name = "root"
   )
   @JsNullable
-  ElementOrDocumentUnion root();
+  IntersectionRoot root();
 
   @JsProperty
-  void setRoot(@JsNullable ElementOrDocumentUnion root);
-
-  @JsOverlay
-  default void setRoot(@Nonnull final Element root) {
-    setRoot( ElementOrDocumentUnion.of( root ) );
-  }
-
-  @JsOverlay
-  default void setRoot(@Nonnull final Document root) {
-    setRoot( ElementOrDocumentUnion.of( root ) );
-  }
+  void setRoot(@JsNullable IntersectionRoot root);
 
   @JsProperty(
       name = "rootMargin"
@@ -84,14 +75,7 @@ public interface IntersectionObserverInit {
   interface Builder extends IntersectionObserverInit {
     @JsOverlay
     @Nonnull
-    default Builder root(@Nonnull final Element root) {
-      setRoot( root );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder root(@Nonnull final Document root) {
+    default Builder root(@Nullable final IntersectionRoot root) {
       setRoot( root );
       return this;
     }
@@ -100,6 +84,13 @@ public interface IntersectionObserverInit {
     @Nonnull
     default Builder rootMargin(@Nonnull final String rootMargin) {
       setRootMargin( rootMargin );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder threshold(@Nonnull final DoubleOrDoubleArrayUnion threshold) {
+      setThreshold( threshold );
       return this;
     }
 

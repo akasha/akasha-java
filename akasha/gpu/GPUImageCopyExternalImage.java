@@ -1,9 +1,5 @@
 package akasha.gpu;
 
-import akasha.HTMLCanvasElement;
-import akasha.ImageBitmap;
-import akasha.ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion;
-import akasha.OffscreenCanvas;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -26,19 +22,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUImageCopyExternalImage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final ImageBitmap source) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final HTMLCanvasElement source) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final OffscreenCanvas source) {
+  static Builder create(@Nonnull final GPUImageCopyExternalImageSource source) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
   }
 
@@ -46,25 +30,10 @@ public interface GPUImageCopyExternalImage {
       name = "source"
   )
   @JsNonNull
-  ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion source();
+  GPUImageCopyExternalImageSource source();
 
   @JsProperty
-  void setSource(@JsNonNull ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion source);
-
-  @JsOverlay
-  default void setSource(@Nonnull final ImageBitmap source) {
-    setSource( ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion.of( source ) );
-  }
-
-  @JsOverlay
-  default void setSource(@Nonnull final HTMLCanvasElement source) {
-    setSource( ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion.of( source ) );
-  }
-
-  @JsOverlay
-  default void setSource(@Nonnull final OffscreenCanvas source) {
-    setSource( ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion.of( source ) );
-  }
+  void setSource(@JsNonNull GPUImageCopyExternalImageSource source);
 
   @JsProperty(
       name = "origin"
@@ -99,21 +68,7 @@ public interface GPUImageCopyExternalImage {
   interface Builder extends GPUImageCopyExternalImage {
     @JsOverlay
     @Nonnull
-    default Builder source(@Nonnull final ImageBitmap source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final HTMLCanvasElement source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final OffscreenCanvas source) {
+    default Builder source(@Nonnull final GPUImageCopyExternalImageSource source) {
       setSource( source );
       return this;
     }

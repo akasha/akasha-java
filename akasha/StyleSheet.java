@@ -63,7 +63,7 @@ public class StyleSheet extends JsObject {
       name = "ownerNode"
   )
   @Nullable
-  public native ElementOrProcessingInstructionUnion ownerNode();
+  public native StyleSheetOwnerNode ownerNode();
 
   /**
    * The parentStyleSheet property of the StyleSheet interface returns the style sheet, if any, that is including the given style sheet.

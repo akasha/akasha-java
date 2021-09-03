@@ -1,5 +1,6 @@
-package akasha;
+package akasha.bluetooth;
 
+import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -11,28 +12,34 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "MediaListOrStringUnion"
+    name = "StringOrUUIDArrayUnion"
 )
-public interface MediaListOrStringUnion {
+public interface StringOrUUIDArrayUnion {
   @JsOverlay
   @Nonnull
-  static MediaListOrStringUnion of(@Nonnull final MediaList value) {
+  static StringOrUUIDArrayUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static MediaListOrStringUnion of(@Nonnull final String value) {
+  static StringOrUUIDArrayUnion of(@Nonnull final JsArray<String> value) {
     return Js.cast( value );
   }
 
   @JsOverlay
-  default boolean isMediaList() {
-    return ( (Object) this ) instanceof MediaList;
+  @Nonnull
+  static StringOrUUIDArrayUnion of(@Nonnull final String[] value) {
+    return Js.cast( value );
   }
 
   @JsOverlay
-  default MediaList asMediaList() {
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<String> asArray() {
     return Js.cast( this );
   }
 

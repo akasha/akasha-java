@@ -143,6 +143,19 @@ public interface ComputedEffectTiming extends EffectTiming {
      */
     @JsOverlay
     @Nonnull
+    default Builder duration(@Nonnull final UnrestrictedDoubleOrStringUnion duration) {
+      setDuration( duration );
+      return this;
+    }
+
+    /**
+     * The duration property of the dictionary EffectTiming in the Web Animations API specifies the duration in milliseconds that a single iteration (from beginning to end) the animation should take to complete.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/duration">EffectTiming.duration - MDN</a>
+     * @see <a href="https://drafts.csswg.org/web-animations-1/#iteration-duration">duration - Web Animations</a>
+     */
+    @JsOverlay
+    @Nonnull
     default Builder duration(final double duration) {
       setDuration( duration );
       return this;

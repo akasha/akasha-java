@@ -1,5 +1,6 @@
-package akasha;
+package akasha.media;
 
+import akasha.MediaList;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -11,38 +12,38 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "ElementOrDocumentUnion"
+    name = "MediaListOrStringUnion"
 )
-public interface ElementOrDocumentUnion {
+public interface MediaListOrStringUnion {
   @JsOverlay
   @Nonnull
-  static ElementOrDocumentUnion of(@Nonnull final Element value) {
+  static MediaListOrStringUnion of(@Nonnull final MediaList value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static ElementOrDocumentUnion of(@Nonnull final Document value) {
+  static MediaListOrStringUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }
 
   @JsOverlay
-  default boolean isDocument() {
-    return ( (Object) this ) instanceof Document;
+  default boolean isMediaList() {
+    return ( (Object) this ) instanceof MediaList;
   }
 
   @JsOverlay
-  default Document asDocument() {
+  default MediaList asMediaList() {
     return Js.cast( this );
   }
 
   @JsOverlay
-  default boolean isElement() {
-    return ( (Object) this ) instanceof Element;
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
   }
 
   @JsOverlay
-  default Element asElement() {
-    return Js.cast( this );
+  default String asString() {
+    return Js.asString( this );
   }
 }

@@ -112,6 +112,20 @@ public interface AudioContextOptions {
      */
     @JsOverlay
     @Nonnull
+    default Builder latencyHint(
+        @Nonnull final AudioContextLatencyCategoryOrDoubleUnion latencyHint) {
+      setLatencyHint( latencyHint );
+      return this;
+    }
+
+    /**
+     * The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint">AudioContextOptions.latencyHint - MDN</a>
+     * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint">AudioContextOptions.latencyHint - Web Audio API</a>
+     */
+    @JsOverlay
+    @Nonnull
     default Builder latencyHint(@Nonnull final String latencyHint) {
       setLatencyHint( latencyHint );
       return this;

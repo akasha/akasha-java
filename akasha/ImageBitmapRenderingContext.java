@@ -28,7 +28,7 @@ public class ImageBitmapRenderingContext extends JsObject implements OffscreenRe
       name = "canvas"
   )
   @Nonnull
-  public native HTMLCanvasElementOrOffscreenCanvasUnion canvas();
+  public native Canvas canvas();
 
   /**
    * The ImageBitmapRenderingContext.transferFromImageBitmap() method displays the given ImageBitmap in the canvas associated with this rendering context. The ownership of the ImageBitmap is transferred to the canvas as well.

@@ -22,6 +22,14 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURenderPassColorAttachment {
   @JsOverlay
   @Nonnull
+  static Builder create(@Nonnull final GPUTextureView view,
+      @Nonnull final GPULoadOpOrGPUColorUnion loadValue,
+      @GPUStoreOp @Nonnull final String storeOp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
+  }
+
+  @JsOverlay
+  @Nonnull
   static Builder create(@Nonnull final GPUTextureView view, @Nonnull final String loadValue,
       @GPUStoreOp @Nonnull final String storeOp) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
@@ -135,6 +143,13 @@ public interface GPURenderPassColorAttachment {
     @Nonnull
     default Builder resolveTarget(@Nonnull final GPUTextureView resolveTarget) {
       setResolveTarget( resolveTarget );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder loadValue(@Nonnull final GPULoadOpOrGPUColorUnion loadValue) {
+      setLoadValue( loadValue );
       return this;
     }
 

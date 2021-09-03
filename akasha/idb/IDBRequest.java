@@ -104,7 +104,7 @@ public class IDBRequest extends EventTarget {
       name = "source"
   )
   @Nullable
-  public native IDBObjectStoreOrIDBIndexOrIDBCursorUnion source();
+  public native IDBRequestSource source();
 
   /**
    * An IDBTransaction.

@@ -70,25 +70,10 @@ public interface ExtendableMessageEventInit extends ExtendableEventInit {
       name = "source"
   )
   @JsNullable
-  ClientOrServiceWorkerOrMessagePortUnion source();
+  ExtendableMessageEventSource source();
 
   @JsProperty
-  void setSource(@JsNullable ClientOrServiceWorkerOrMessagePortUnion source);
-
-  @JsOverlay
-  default void setSource(@Nonnull final Client source) {
-    setSource( ClientOrServiceWorkerOrMessagePortUnion.of( source ) );
-  }
-
-  @JsOverlay
-  default void setSource(@Nonnull final ServiceWorker source) {
-    setSource( ClientOrServiceWorkerOrMessagePortUnion.of( source ) );
-  }
-
-  @JsOverlay
-  default void setSource(@Nonnull final MessagePort source) {
-    setSource( ClientOrServiceWorkerOrMessagePortUnion.of( source ) );
-  }
+  void setSource(@JsNullable ExtendableMessageEventSource source);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -134,21 +119,7 @@ public interface ExtendableMessageEventInit extends ExtendableEventInit {
 
     @JsOverlay
     @Nonnull
-    default Builder source(@Nonnull final Client source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final ServiceWorker source) {
-      setSource( source );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final MessagePort source) {
+    default Builder source(@Nullable final ExtendableMessageEventSource source) {
       setSource( source );
       return this;
     }
