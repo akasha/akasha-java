@@ -1,6 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
@@ -63,4 +64,6 @@ public class HTMLScriptElement extends HTMLElement implements HTMLOrSVGScriptEle
 
   protected HTMLScriptElement() {
   }
+
+  public static native boolean supports(@Nonnull String type);
 }

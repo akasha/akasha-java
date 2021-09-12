@@ -10,7 +10,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
+ * The Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard">Clipboard - MDN</a>
  * @see <a href="https://w3c.github.io/clipboard-apis/#clipboard-interface"># clipboard-interface</a>

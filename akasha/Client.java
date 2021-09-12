@@ -101,7 +101,7 @@ public class Client extends JsObject implements ExtendableMessageEventSource {
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-client-postmessage-message-options">postMessage() - Service Workers</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull PostMessageOptions options);
+      @Nonnull StructuredSerializeOptions options);
 
   /**
    * The postMessage() method of the Client interface allows a service worker to send a message to a client (a Window, Worker, or SharedWorker). The message is received in the &quot;message&quot; event on navigator.serviceWorker.

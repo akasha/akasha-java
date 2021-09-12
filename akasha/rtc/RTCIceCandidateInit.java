@@ -13,10 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.
+ * The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">(WebRTC 1.0) # dom-rtcicecandidateinit</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-constructor">(WebRTC 1.0) # dom-rtcicecandidate-constructor</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -113,10 +113,10 @@ public interface RTCIceCandidateInit {
   void setUsernameFragment(@JsNullable String usernameFragment);
 
   /**
-   * The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.
+   * The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit">(WebRTC 1.0) # dom-rtcicecandidateinit</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-constructor">(WebRTC 1.0) # dom-rtcicecandidate-constructor</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

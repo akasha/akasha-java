@@ -1,5 +1,6 @@
 package akasha;
 
+import akasha.codecs.ImageBufferSource;
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import akasha.promise.Promise;

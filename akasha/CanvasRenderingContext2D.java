@@ -672,6 +672,8 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    */
   public native void strokeRect(double x, double y, double w, double h);
 
+  public native boolean isContextLost();
+
   public native void reset();
 
   /**

@@ -19,27 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface StaticRangeInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Node endContainer, final int endOffset,
-      @Nonnull final Node startContainer, final int startOffset) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).endContainer( endContainer ).endOffset( endOffset ).startContainer( startContainer ).startOffset( startOffset );
+  static Builder create(@Nonnull final Node startContainer, final int startOffset,
+      @Nonnull final Node endContainer, final int endOffset) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).startContainer( startContainer ).startOffset( startOffset ).endContainer( endContainer ).endOffset( endOffset );
   }
-
-  @JsProperty(
-      name = "endContainer"
-  )
-  @JsNonNull
-  Node endContainer();
-
-  @JsProperty
-  void setEndContainer(@JsNonNull Node endContainer);
-
-  @JsProperty(
-      name = "endOffset"
-  )
-  int endOffset();
-
-  @JsProperty
-  void setEndOffset(int endOffset);
 
   @JsProperty(
       name = "startContainer"
@@ -58,6 +41,23 @@ public interface StaticRangeInit {
   @JsProperty
   void setStartOffset(int startOffset);
 
+  @JsProperty(
+      name = "endContainer"
+  )
+  @JsNonNull
+  Node endContainer();
+
+  @JsProperty
+  void setEndContainer(@JsNonNull Node endContainer);
+
+  @JsProperty(
+      name = "endOffset"
+  )
+  int endOffset();
+
+  @JsProperty
+  void setEndOffset(int endOffset);
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -65,20 +65,6 @@ public interface StaticRangeInit {
       name = "StaticRangeInit"
   )
   interface Builder extends StaticRangeInit {
-    @JsOverlay
-    @Nonnull
-    default Builder endContainer(@Nonnull final Node endContainer) {
-      setEndContainer( endContainer );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder endOffset(final int endOffset) {
-      setEndOffset( endOffset );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder startContainer(@Nonnull final Node startContainer) {
@@ -90,6 +76,20 @@ public interface StaticRangeInit {
     @Nonnull
     default Builder startOffset(final int startOffset) {
       setStartOffset( startOffset );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder endContainer(@Nonnull final Node endContainer) {
+      setEndContainer( endContainer );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder endOffset(final int endOffset) {
+      setEndOffset( endOffset );
       return this;
     }
   }

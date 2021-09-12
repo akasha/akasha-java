@@ -181,6 +181,9 @@ public class Window extends EventTarget {
   @JsNullable
   public EventHandler oncompassneedscalibration;
 
+  @JsNullable
+  public EventHandler oncontextlost;
+
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
@@ -189,6 +192,9 @@ public class Window extends EventTarget {
    */
   @JsNullable
   public EventHandler oncontextmenu;
+
+  @JsNullable
+  public EventHandler oncontextrestored;
 
   /**
    * The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.
@@ -1918,6 +1924,15 @@ public class Window extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">self.queueMicrotask() - HTML Living Standard</a>
    */
   public native void queueMicrotask(@Nonnull VoidFunction callback);
+
+  public native void reportError(@DoNotAutobox @Nullable Object e);
+
+  @JsNullable
+  public native Any structuredClone(@DoNotAutobox @Nullable Object value,
+      @Nonnull StructuredSerializeOptions options);
+
+  @JsNullable
+  public native Any structuredClone(@DoNotAutobox @Nullable Object value);
 
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.

@@ -15,7 +15,6 @@ import jsinterop.base.JsPropertyMap;
  * The AesGcmParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-GCM algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams">AesGcmParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams">SubtleCrypto.AesGcmParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,14 +30,6 @@ public interface AesGcmParams extends Algorithm {
   }
 
   @JsProperty(
-      name = "additionalData"
-  )
-  BufferSource additionalData();
-
-  @JsProperty
-  void setAdditionalData(@JsNonNull BufferSource additionalData);
-
-  @JsProperty(
       name = "iv"
   )
   @JsNonNull
@@ -46,6 +37,14 @@ public interface AesGcmParams extends Algorithm {
 
   @JsProperty
   void setIv(@JsNonNull BufferSource iv);
+
+  @JsProperty(
+      name = "additionalData"
+  )
+  BufferSource additionalData();
+
+  @JsProperty
+  void setAdditionalData(@JsNonNull BufferSource additionalData);
 
   @JsProperty(
       name = "tagLength"
@@ -59,7 +58,6 @@ public interface AesGcmParams extends Algorithm {
    * The AesGcmParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-GCM algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams">AesGcmParams - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams">SubtleCrypto.AesGcmParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -70,15 +68,15 @@ public interface AesGcmParams extends Algorithm {
   interface Builder extends AesGcmParams {
     @JsOverlay
     @Nonnull
-    default Builder additionalData(@Nonnull final BufferSource additionalData) {
-      setAdditionalData( additionalData );
+    default Builder iv(@Nonnull final BufferSource iv) {
+      setIv( iv );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder iv(@Nonnull final BufferSource iv) {
-      setIv( iv );
+    default Builder additionalData(@Nonnull final BufferSource additionalData) {
+      setAdditionalData( additionalData );
       return this;
     }
 

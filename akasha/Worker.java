@@ -94,7 +94,7 @@ public class Worker extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-worker-postmessage">Worker.postMessage() - HTML Living Standard</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull PostMessageOptions options);
+      @Nonnull StructuredSerializeOptions options);
 
   /**
    * The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.

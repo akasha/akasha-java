@@ -20,10 +20,18 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioProcessingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final AudioBuffer inputBuffer,
-      @Nonnull final AudioBuffer outputBuffer, final double playbackTime) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).inputBuffer( inputBuffer ).outputBuffer( outputBuffer ).playbackTime( playbackTime );
+  static Builder create(final double playbackTime, @Nonnull final AudioBuffer inputBuffer,
+      @Nonnull final AudioBuffer outputBuffer) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).playbackTime( playbackTime ).inputBuffer( inputBuffer ).outputBuffer( outputBuffer );
   }
+
+  @JsProperty(
+      name = "playbackTime"
+  )
+  double playbackTime();
+
+  @JsProperty
+  void setPlaybackTime(double playbackTime);
 
   @JsProperty(
       name = "inputBuffer"
@@ -43,14 +51,6 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsProperty
   void setOutputBuffer(@JsNonNull AudioBuffer outputBuffer);
 
-  @JsProperty(
-      name = "playbackTime"
-  )
-  double playbackTime();
-
-  @JsProperty
-  void setPlaybackTime(double playbackTime);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -58,6 +58,13 @@ public interface AudioProcessingEventInit extends EventInit {
       name = "AudioProcessingEventInit"
   )
   interface Builder extends AudioProcessingEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder playbackTime(final double playbackTime) {
+      setPlaybackTime( playbackTime );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder inputBuffer(@Nonnull final AudioBuffer inputBuffer) {
@@ -69,13 +76,6 @@ public interface AudioProcessingEventInit extends EventInit {
     @Nonnull
     default Builder outputBuffer(@Nonnull final AudioBuffer outputBuffer) {
       setOutputBuffer( outputBuffer );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder playbackTime(final double playbackTime) {
-      setPlaybackTime( playbackTime );
       return this;
     }
 

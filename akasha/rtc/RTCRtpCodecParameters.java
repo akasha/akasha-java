@@ -24,26 +24,18 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodecParameters {
   @JsOverlay
   @Nonnull
-  static Builder create(final int clockRate, @Nonnull final String mimeType,
-      final short payloadType) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType ).payloadType( payloadType );
+  static Builder create(final short payloadType, @Nonnull final String mimeType,
+      final int clockRate) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).payloadType( payloadType ).mimeType( mimeType ).clockRate( clockRate );
   }
 
   @JsProperty(
-      name = "channels"
+      name = "payloadType"
   )
-  int channels();
+  short payloadType();
 
   @JsProperty
-  void setChannels(int channels);
-
-  @JsProperty(
-      name = "clockRate"
-  )
-  int clockRate();
-
-  @JsProperty
-  void setClockRate(int clockRate);
+  void setPayloadType(short payloadType);
 
   @JsProperty(
       name = "mimeType"
@@ -55,12 +47,20 @@ public interface RTCRtpCodecParameters {
   void setMimeType(@JsNonNull String mimeType);
 
   @JsProperty(
-      name = "payloadType"
+      name = "clockRate"
   )
-  short payloadType();
+  int clockRate();
 
   @JsProperty
-  void setPayloadType(short payloadType);
+  void setClockRate(int clockRate);
+
+  @JsProperty(
+      name = "channels"
+  )
+  int channels();
+
+  @JsProperty
+  void setChannels(int channels);
 
   @JsProperty(
       name = "sdpFmtpLine"
@@ -84,15 +84,8 @@ public interface RTCRtpCodecParameters {
   interface Builder extends RTCRtpCodecParameters {
     @JsOverlay
     @Nonnull
-    default Builder channels(final int channels) {
-      setChannels( channels );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder clockRate(final int clockRate) {
-      setClockRate( clockRate );
+    default Builder payloadType(final short payloadType) {
+      setPayloadType( payloadType );
       return this;
     }
 
@@ -105,8 +98,15 @@ public interface RTCRtpCodecParameters {
 
     @JsOverlay
     @Nonnull
-    default Builder payloadType(final short payloadType) {
-      setPayloadType( payloadType );
+    default Builder clockRate(final int clockRate) {
+      setClockRate( clockRate );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder channels(final int channels) {
+      setChannels( channels );
       return this;
     }
 

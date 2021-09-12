@@ -371,7 +371,7 @@ var ReadableStreamReader;
  */
 var ClipboardItemData;
 /**
- * @typedef {(!HTMLOrSVGImageElement|!HTMLVideoElement|!HTMLCanvasElement|!ImageBitmap|!OffscreenCanvas)}
+ * @typedef {(!HTMLOrSVGImageElement|!HTMLVideoElement|!HTMLCanvasElement|!ImageBitmap|!OffscreenCanvas|!VideoFrame)}
  */
 var CanvasImageSource;
 /**
@@ -1480,7 +1480,7 @@ RTCErrorEventListener.prototype.handleEvent = function(event) {}
  */
 var PublicKeyCredentialCreationOptions;
 /**
- * @typedef {{error:!WebCodecsErrorCallback,output:!EncodedAudioChunkOutputCallback}}
+ * @typedef {{output:!EncodedAudioChunkOutputCallback,error:!WebCodecsErrorCallback}}
  */
 var AudioEncoderInit;
 /**
@@ -1504,7 +1504,7 @@ var ClientQueryOptions;
  */
 var MediaTrackConstraints;
 /**
- * @typedef {{length:!number,numberOfChannels:(!number|undefined),sampleRate:!number}}
+ * @typedef {{length:!number,sampleRate:!number,numberOfChannels:(!number|undefined)}}
  */
 var AudioBufferOptions;
 /**
@@ -1524,7 +1524,7 @@ var WindowPostMessageOptions;
  */
 var RTCRtpCodingParameters;
 /**
- * @typedef {{bitrate:(!number|undefined),codec:!string,numberOfChannels:(!number|undefined),sampleRate:(!number|undefined)}}
+ * @typedef {{codec:!string,bitrate:(!number|undefined),numberOfChannels:(!number|undefined),sampleRate:(!number|undefined)}}
  */
 var AudioEncoderConfig;
 /**
@@ -1572,7 +1572,7 @@ var PublicKeyCredentialRpEntity;
  */
 var GPURenderPassDescriptor;
 /**
- * @typedef {{concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),removedSamplesForAcceleration:(!number|undefined),silentConcealedSamples:(!number|undefined),totalSamplesReceived:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),removedSamplesForAcceleration:(!number|undefined),silentConcealedSamples:(!number|undefined),totalSamplesReceived:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCAudioReceiverStats;
 /**
@@ -1592,7 +1592,7 @@ var IDBObjectStoreParameters;
  */
 var UnderlyingSource;
 /**
- * @typedef {{channels:(!number|undefined),clockRate:!number,mimeType:!string,sdpFmtpLine:(!string|undefined)}}
+ * @typedef {{mimeType:!string,clockRate:!number,channels:(!number|undefined),sdpFmtpLine:(!string|undefined)}}
  */
 var RTCRtpCodecCapability;
 /**
@@ -1616,15 +1616,15 @@ var PushPermissionDescriptor;
  */
 var SpeechSynthesisEventInit;
 /**
- * @typedef {{codec:!string,codedHeight:(!number|undefined),codedWidth:(!number|undefined),description:(!BufferSource|undefined),displayAspectHeight:(!number|undefined),displayAspectWidth:(!number|undefined),hardwareAcceleration:(!string|undefined)}}
+ * @typedef {{codec:!string,codedHeight:(!number|undefined),codedWidth:(!number|undefined),colorSpace:(!VideoColorSpaceInit|undefined),description:(!BufferSource|undefined),displayAspectHeight:(!number|undefined),displayAspectWidth:(!number|undefined),hardwareAcceleration:(!string|undefined),optimizeForLatency:(!boolean|undefined)}}
  */
 var VideoDecoderConfig;
 /**
- * @typedef {{codecs:!Array<!RTCRtpCodecParameters>,headerExtensions:!Array<!RTCRtpHeaderExtensionParameters>,rtcp:!RTCRtcpParameters}}
+ * @typedef {{headerExtensions:!Array<!RTCRtpHeaderExtensionParameters>,rtcp:!RTCRtcpParameters,codecs:!Array<!RTCRtpCodecParameters>}}
  */
 var RTCRtpParameters;
 /**
- * @typedef {{congestionWindow:(!number|undefined),mtu:(!number|undefined),receiverWindow:(!number|undefined),smoothedRoundTripTime:(!number|undefined),transportId:(!string|undefined),unackData:(!number|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{congestionWindow:(!number|undefined),mtu:(!number|undefined),receiverWindow:(!number|undefined),smoothedRoundTripTime:(!number|undefined),transportId:(!string|undefined),unackData:(!number|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCSctpTransportStats;
 /**
@@ -1648,7 +1648,7 @@ var CryptoKeyPair;
  */
 var ConstantSourceOptions;
 /**
- * @typedef {{layout:(!Array<!PlaneLayout>|undefined),rect:(!VideoFrameRect|undefined)}}
+ * @typedef {{layout:(!Array<!PlaneLayout>|undefined),rect:(!DOMRectInit|undefined)}}
  */
 var VideoFrameCopyToOptions;
 /**
@@ -1660,11 +1660,7 @@ var ExtendableMessageEventInit;
  */
 var HashChangeEventInit;
 /**
- * @typedef {{data:!BufferSource,offset:(!number|undefined),stride:!number}}
- */
-var PlaneInit;
-/**
- * @typedef {{data:!BufferSource,timestamp:!number,type:!string}}
+ * @typedef {{type:!string,timestamp:!number,data:!BufferSource,duration:(!number|undefined)}}
  */
 var EncodedAudioChunkInit;
 /**
@@ -1728,7 +1724,7 @@ var XRSessionInit;
  */
 var DOMQuadInit;
 /**
- * @typedef {{audioLevel:(!number|undefined),averageRtcpInterval:(!number|undefined),bytesReceived:(!number|undefined),concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),decoderImplementation:(!string|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),fecPacketsDiscarded:(!number|undefined),fecPacketsReceived:(!number|undefined),firCount:(!number|undefined),frameBitDepth:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesDecoded:(!number|undefined),framesPerSecond:(!number|undefined),framesReceived:(!number|undefined),headerBytesReceived:(!number|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),keyFramesDecoded:(!number|undefined),lastPacketReceivedTimestamp:(!DOMHighResTimeStamp|undefined),nackCount:(!number|undefined),packetsDuplicated:(!number|undefined),packetsFailedDecryption:(!number|undefined),perDscpPacketsReceived:(!Object<!string,!number>|undefined),pliCount:(!number|undefined),qpSum:(!number|undefined),receiverId:!string,remoteId:(!string|undefined),removedSamplesForAcceleration:(!number|undefined),samplesDecodedWithCelt:(!number|undefined),samplesDecodedWithSilk:(!number|undefined),silentConcealedSamples:(!number|undefined),sliCount:(!number|undefined),totalAudioEnergy:(!number|undefined),totalDecodeTime:(!number|undefined),totalInterFrameDelay:(!number|undefined),totalProcessingDelay:(!number|undefined),totalSamplesDecoded:(!number|undefined),totalSamplesDuration:(!number|undefined),totalSamplesReceived:(!number|undefined),totalSquaredInterFrameDelay:(!number|undefined),voiceActivityFlag:(!boolean|undefined),fractionLost:(!number|undefined),trackId:(!string|undefined),burstDiscardCount:(!number|undefined),burstDiscardRate:(!number|undefined),burstLossCount:(!number|undefined),burstLossRate:(!number|undefined),burstPacketsDiscarded:(!number|undefined),burstPacketsLost:(!number|undefined),framesDropped:(!number|undefined),fullFramesLost:(!number|undefined),gapDiscardRate:(!number|undefined),gapLossRate:(!number|undefined),jitter:(!number|undefined),packetsDiscarded:(!number|undefined),packetsLost:(!number|undefined),packetsReceived:(!number|undefined),packetsRepaired:(!number|undefined),partialFramesLost:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{audioLevel:(!number|undefined),averageRtcpInterval:(!number|undefined),bytesReceived:(!number|undefined),concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),decoderImplementation:(!string|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),fecPacketsDiscarded:(!number|undefined),fecPacketsReceived:(!number|undefined),firCount:(!number|undefined),frameBitDepth:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesDecoded:(!number|undefined),framesPerSecond:(!number|undefined),framesReceived:(!number|undefined),headerBytesReceived:(!number|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),keyFramesDecoded:(!number|undefined),lastPacketReceivedTimestamp:(!DOMHighResTimeStamp|undefined),nackCount:(!number|undefined),packetsDuplicated:(!number|undefined),packetsFailedDecryption:(!number|undefined),perDscpPacketsReceived:(!Object<!string,!number>|undefined),pliCount:(!number|undefined),qpSum:(!number|undefined),receiverId:!string,remoteId:(!string|undefined),removedSamplesForAcceleration:(!number|undefined),samplesDecodedWithCelt:(!number|undefined),samplesDecodedWithSilk:(!number|undefined),silentConcealedSamples:(!number|undefined),sliCount:(!number|undefined),totalAudioEnergy:(!number|undefined),totalDecodeTime:(!number|undefined),totalInterFrameDelay:(!number|undefined),totalProcessingDelay:(!number|undefined),totalSamplesDecoded:(!number|undefined),totalSamplesDuration:(!number|undefined),totalSamplesReceived:(!number|undefined),totalSquaredInterFrameDelay:(!number|undefined),voiceActivityFlag:(!boolean|undefined),fractionLost:(!number|undefined),trackId:(!string|undefined),burstDiscardCount:(!number|undefined),burstDiscardRate:(!number|undefined),burstLossCount:(!number|undefined),burstLossRate:(!number|undefined),burstPacketsDiscarded:(!number|undefined),burstPacketsLost:(!number|undefined),framesDropped:(!number|undefined),fullFramesLost:(!number|undefined),gapDiscardRate:(!number|undefined),gapLossRate:(!number|undefined),jitter:(!number|undefined),packetsDiscarded:(!number|undefined),packetsLost:(!number|undefined),packetsReceived:(!number|undefined),packetsRepaired:(!number|undefined),partialFramesLost:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCInboundRtpStreamStats;
 /**
@@ -1748,11 +1744,7 @@ var FederatedCredentialInit;
  */
 var GPUFragmentState;
 /**
- * @typedef {{descriptor:!PermissionDescriptor,oneRealm:(!boolean|undefined),state:!string}}
- */
-var PermissionSetParameters;
-/**
- * @typedef {{kind:!string,relayedSource:(!boolean|undefined),trackIdentifier:!string,id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{kind:!string,relayedSource:(!boolean|undefined),trackIdentifier:!string,timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCMediaSourceStats;
 /**
@@ -1804,7 +1796,7 @@ var GPUObjectDescriptorBase;
  */
 var CollectedClientData;
 /**
- * @typedef {{added:!Array<!XRInputSource>,removed:!Array<!XRInputSource>,session:!XRSession,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{session:!XRSession,added:!Array<!XRInputSource>,removed:!Array<!XRInputSource>,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var XRInputSourcesChangeEventInit;
 /**
@@ -1812,7 +1804,7 @@ var XRInputSourcesChangeEventInit;
  */
 var AudioBufferSourceOptions;
 /**
- * @typedef {{encrypted:(!boolean|undefined),id:!number,uri:!string}}
+ * @typedef {{uri:!string,id:!number,encrypted:(!boolean|undefined)}}
  */
 var RTCRtpHeaderExtensionParameters;
 /**
@@ -1868,7 +1860,7 @@ var GPURenderPassLayout;
  */
 var WebGLContextEventInit;
 /**
- * @typedef {{bitDepth:(!number|undefined),frames:(!number|undefined),framesPerSecond:(!number|undefined),height:(!number|undefined),width:(!number|undefined),kind:!string,relayedSource:(!boolean|undefined),trackIdentifier:!string,id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{bitDepth:(!number|undefined),frames:(!number|undefined),framesPerSecond:(!number|undefined),height:(!number|undefined),width:(!number|undefined),kind:!string,relayedSource:(!boolean|undefined),trackIdentifier:!string,timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCVideoSourceStats;
 /**
@@ -1880,15 +1872,15 @@ var SubmitEventInit;
  */
 var EcdhKeyDeriveParams;
 /**
- * @typedef {{data:!BufferSource,duration:(!number|undefined),timestamp:!number,type:!string}}
+ * @typedef {{type:!string,timestamp:!number,data:!BufferSource,duration:(!number|undefined)}}
  */
 var EncodedVideoChunkInit;
 /**
- * @typedef {{allowedManufacturerData:!Array<!number>,allowedServices:!StringOrUUIDArrayUnion,deviceId:!string,mayUseGATT:!boolean}}
+ * @typedef {{deviceId:!string,mayUseGATT:!boolean,allowedServices:!StringOrUUIDArrayUnion,allowedManufacturerData:!Array<!number>}}
  */
 var AllowedBluetoothDevice;
 /**
- * @typedef {{automationRate:(!string|undefined),defaultValue:(!number|undefined),maxValue:(!number|undefined),minValue:(!number|undefined),name:!string}}
+ * @typedef {{name:!string,automationRate:(!string|undefined),defaultValue:(!number|undefined),maxValue:(!number|undefined),minValue:(!number|undefined)}}
  */
 var AudioParamDescriptor;
 /**
@@ -1896,7 +1888,7 @@ var AudioParamDescriptor;
  */
 var BaseKeyframe;
 /**
- * @typedef {{frameCount:(!number|undefined),frameOffset:(!number|undefined),planeIndex:!number}}
+ * @typedef {{planeIndex:!number,format:(!string|undefined),frameCount:(!number|undefined),frameOffset:(!number|undefined)}}
  */
 var AudioDataCopyToOptions;
 /**
@@ -1916,7 +1908,7 @@ var GPUBindGroupLayoutDescriptor;
  */
 var RTCIdentityProviderDetails;
 /**
- * @typedef {{blockedURI:(!string|undefined),columnNumber:(!number|undefined),disposition:!string,documentURI:!string,effectiveDirective:!string,lineNumber:(!number|undefined),originalPolicy:!string,referrer:(!string|undefined),sample:(!string|undefined),sourceFile:(!string|undefined),statusCode:!number,violatedDirective:!string,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{documentURI:!string,violatedDirective:!string,effectiveDirective:!string,originalPolicy:!string,disposition:!string,statusCode:!number,blockedURI:(!string|undefined),columnNumber:(!number|undefined),lineNumber:(!number|undefined),referrer:(!string|undefined),sample:(!string|undefined),sourceFile:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var SecurityPolicyViolationEventInit;
 /**
@@ -1932,7 +1924,7 @@ var SpeechRecognitionEventInit;
  */
 var GetAnimationsOptions;
 /**
- * @typedef {{complete:!boolean,image:!VideoFrame}}
+ * @typedef {{image:!VideoFrame,complete:!boolean}}
  */
 var ImageDecodeResult;
 /**
@@ -1944,7 +1936,7 @@ var GPUColorDict;
  */
 var MediaElementAudioSourceOptions;
 /**
- * @typedef {{fractionLost:(!number|undefined),localId:(!string|undefined),reportsReceived:(!number|undefined),roundTripTime:(!number|undefined),roundTripTimeMeasurements:(!number|undefined),totalRoundTripTime:(!number|undefined),burstDiscardCount:(!number|undefined),burstDiscardRate:(!number|undefined),burstLossCount:(!number|undefined),burstLossRate:(!number|undefined),burstPacketsDiscarded:(!number|undefined),burstPacketsLost:(!number|undefined),framesDropped:(!number|undefined),fullFramesLost:(!number|undefined),gapDiscardRate:(!number|undefined),gapLossRate:(!number|undefined),jitter:(!number|undefined),packetsDiscarded:(!number|undefined),packetsLost:(!number|undefined),packetsReceived:(!number|undefined),packetsRepaired:(!number|undefined),partialFramesLost:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{fractionLost:(!number|undefined),localId:(!string|undefined),reportsReceived:(!number|undefined),roundTripTime:(!number|undefined),roundTripTimeMeasurements:(!number|undefined),totalRoundTripTime:(!number|undefined),burstDiscardCount:(!number|undefined),burstDiscardRate:(!number|undefined),burstLossCount:(!number|undefined),burstLossRate:(!number|undefined),burstPacketsDiscarded:(!number|undefined),burstPacketsLost:(!number|undefined),framesDropped:(!number|undefined),fullFramesLost:(!number|undefined),gapDiscardRate:(!number|undefined),gapLossRate:(!number|undefined),jitter:(!number|undefined),packetsDiscarded:(!number|undefined),packetsLost:(!number|undefined),packetsReceived:(!number|undefined),packetsRepaired:(!number|undefined),partialFramesLost:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCRemoteInboundRtpStreamStats;
 /**
@@ -1964,7 +1956,7 @@ var GPUCommandBufferDescriptor;
  */
 var AuthenticationExtensionsLargeBlobOutputs;
 /**
- * @typedef {{decoderConfig:(!VideoDecoderConfig|undefined),svc:(!SvcOutputMetadata|undefined)}}
+ * @typedef {{alphaSideData:(!BufferSource|undefined),decoderConfig:(!VideoDecoderConfig|undefined),svc:(!SvcOutputMetadata|undefined)}}
  */
 var EncodedVideoChunkMetadata;
 /**
@@ -1980,7 +1972,7 @@ var BluetoothDataFilterInit;
  */
 var RTCIceParameters;
 /**
- * @typedef {{lastChance:(!boolean|undefined),tag:!string,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{tag:!string,lastChance:(!boolean|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var SyncEventInit;
 /**
@@ -2004,7 +1996,7 @@ var TouchEventInit;
  */
 var PublicKeyCredentialDescriptor;
 /**
- * @typedef {{clientId:(!string|undefined),handled:(!Promise<undefined>|undefined),preloadResponse:(!Promise<*>|undefined),replacesClientId:(!string|undefined),request:!Request,resultingClientId:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{request:!Request,clientId:(!string|undefined),handled:(!Promise<undefined>|undefined),preloadResponse:(!Promise<*>|undefined),replacesClientId:(!string|undefined),resultingClientId:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var FetchEventInit;
 /**
@@ -2016,11 +2008,11 @@ var AuthenticationExtensionsClientOutputs;
  */
 var ClipboardPermissionDescriptor;
 /**
- * @typedef {{localId:(!string|undefined),remoteTimestamp:(!DOMHighResTimeStamp|undefined),reportsSent:(!number|undefined),roundTripTime:(!number|undefined),roundTripTimeMeasurements:(!number|undefined),totalRoundTripTime:(!number|undefined),bytesSent:(!number|undefined),packetsSent:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{localId:(!string|undefined),remoteTimestamp:(!DOMHighResTimeStamp|undefined),reportsSent:(!number|undefined),roundTripTime:(!number|undefined),roundTripTimeMeasurements:(!number|undefined),totalRoundTripTime:(!number|undefined),bytesSent:(!number|undefined),packetsSent:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCRemoteOutboundRtpStreamStats;
 /**
- * @typedef {{audioLevel:(!number|undefined),rtpTimestamp:!number,source:!number,timestamp:!DOMHighResTimeStamp}}
+ * @typedef {{timestamp:!DOMHighResTimeStamp,source:!number,rtpTimestamp:!number,audioLevel:(!number|undefined)}}
  */
 var RTCRtpSynchronizationSource;
 /**
@@ -2048,7 +2040,7 @@ var ChannelSplitterOptions;
  */
 var GPUTextureBindingLayout;
 /**
- * @typedef {{mediaSourceId:(!string|undefined),echoReturnLoss:(!number|undefined),echoReturnLossEnhancement:(!number|undefined),totalSamplesSent:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{mediaSourceId:(!string|undefined),echoReturnLoss:(!number|undefined),echoReturnLossEnhancement:(!number|undefined),totalSamplesSent:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCAudioSenderStats;
 /**
@@ -2064,15 +2056,11 @@ var CredentialPropertiesOutput;
  */
 var GPUSamplerBindingLayout;
 /**
- * @typedef {{transfer:(!Array<!Transferable>|undefined)}}
- */
-var PostMessageOptions;
-/**
  * @typedef {{label:(!string|undefined)}}
  */
 var GPURenderBundleDescriptor;
 /**
- * @typedef {{audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCAudioHandlerStats;
 /**
@@ -2091,10 +2079,6 @@ var GPUMultisampleState;
  * @typedef {{mediaStreamTrack:!MediaStreamTrack}}
  */
 var MediaStreamTrackAudioSourceOptions;
-/**
- * @typedef {{height:!number,left:!number,top:!number,width:!number}}
- */
-var VideoFrameRect;
 /**
  * @typedef {{aspectRatio:(!boolean|undefined),autoGainControl:(!boolean|undefined),channelCount:(!boolean|undefined),deviceId:(!boolean|undefined),echoCancellation:(!boolean|undefined),facingMode:(!boolean|undefined),frameRate:(!boolean|undefined),groupId:(!boolean|undefined),height:(!boolean|undefined),latency:(!boolean|undefined),noiseSuppression:(!boolean|undefined),resizeMode:(!boolean|undefined),sampleRate:(!boolean|undefined),sampleSize:(!boolean|undefined),width:(!boolean|undefined),cursor:(!boolean|undefined),displaySurface:(!boolean|undefined),logicalSurface:(!boolean|undefined),restrictOwnAudio:(!boolean|undefined),suppressLocalAudioPlayback:(!boolean|undefined)}}
  */
@@ -2148,7 +2132,7 @@ var MediaTrackConstraintSet;
  */
 var MediaStreamAudioSourceOptions;
 /**
- * @typedef {{duration:(!number|undefined),timestamp:(!number|undefined)}}
+ * @typedef {{alpha:(!string|undefined),displayHeight:(!number|undefined),displayWidth:(!number|undefined),duration:(!number|undefined),timestamp:(!number|undefined),visibleRect:(!DOMRectInit|undefined)}}
  */
 var VideoFrameInit;
 /**
@@ -2160,7 +2144,7 @@ var GPUComputePassDescriptor;
  */
 var TextDecodeOptions;
 /**
- * @typedef {{frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCVideoHandlerStats;
 /**
@@ -2176,11 +2160,11 @@ var BluetoothLEScanFilterInit;
  */
 var PerformanceObserverInit;
 /**
- * @typedef {{audioLevel:(!number|undefined),echoReturnLoss:(!number|undefined),echoReturnLossEnhancement:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),kind:!string,relayedSource:(!boolean|undefined),trackIdentifier:!string,id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{audioLevel:(!number|undefined),echoReturnLoss:(!number|undefined),echoReturnLossEnhancement:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),kind:!string,relayedSource:(!boolean|undefined),trackIdentifier:!string,timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCAudioSourceStats;
 /**
- * @typedef {{forceSoftware:(!boolean|undefined),powerPreference:(!string|undefined)}}
+ * @typedef {{forceFallbackAdapter:(!boolean|undefined),powerPreference:(!string|undefined)}}
  */
 var GPURequestAdapterOptions;
 /**
@@ -2188,11 +2172,11 @@ var GPURequestAdapterOptions;
  */
 var PlaneLayout;
 /**
- * @typedef {{averageRtcpInterval:(!number|undefined),bytesDiscardedOnSend:(!number|undefined),encoderImplementation:(!string|undefined),fecPacketsSent:(!number|undefined),firCount:(!number|undefined),frameBitDepth:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesDiscardedOnSend:(!number|undefined),framesEncoded:(!number|undefined),framesPerSecond:(!number|undefined),framesSent:(!number|undefined),headerBytesSent:(!number|undefined),hugeFramesSent:(!number|undefined),keyFramesEncoded:(!number|undefined),lastPacketSentTimestamp:(!DOMHighResTimeStamp|undefined),mediaSourceId:(!string|undefined),nackCount:(!number|undefined),packetsDiscardedOnSend:(!number|undefined),perDscpPacketsSent:(!Object<!string,!number>|undefined),pliCount:(!number|undefined),qpSum:(!number|undefined),qualityLimitationDurations:(!Object<!string,!number>|undefined),qualityLimitationReason:(!string|undefined),qualityLimitationResolutionChanges:(!number|undefined),remoteId:(!string|undefined),retransmittedBytesSent:(!number|undefined),retransmittedPacketsSent:(!number|undefined),rid:(!string|undefined),rtxSsrc:(!number|undefined),samplesEncodedWithCelt:(!number|undefined),samplesEncodedWithSilk:(!number|undefined),senderId:(!string|undefined),sliCount:(!number|undefined),targetBitrate:(!number|undefined),totalEncodeTime:(!number|undefined),totalEncodedBytesTarget:(!number|undefined),totalPacketSendDelay:(!number|undefined),totalSamplesSent:(!number|undefined),voiceActivityFlag:(!boolean|undefined),trackId:(!string|undefined),bytesSent:(!number|undefined),packetsSent:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{averageRtcpInterval:(!number|undefined),bytesDiscardedOnSend:(!number|undefined),encoderImplementation:(!string|undefined),fecPacketsSent:(!number|undefined),firCount:(!number|undefined),frameBitDepth:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesDiscardedOnSend:(!number|undefined),framesEncoded:(!number|undefined),framesPerSecond:(!number|undefined),framesSent:(!number|undefined),headerBytesSent:(!number|undefined),hugeFramesSent:(!number|undefined),keyFramesEncoded:(!number|undefined),lastPacketSentTimestamp:(!DOMHighResTimeStamp|undefined),mediaSourceId:(!string|undefined),nackCount:(!number|undefined),packetsDiscardedOnSend:(!number|undefined),perDscpPacketsSent:(!Object<!string,!number>|undefined),pliCount:(!number|undefined),qpSum:(!number|undefined),qualityLimitationDurations:(!Object<!string,!number>|undefined),qualityLimitationReason:(!string|undefined),qualityLimitationResolutionChanges:(!number|undefined),remoteId:(!string|undefined),retransmittedBytesSent:(!number|undefined),retransmittedPacketsSent:(!number|undefined),rid:(!string|undefined),rtxSsrc:(!number|undefined),samplesEncodedWithCelt:(!number|undefined),samplesEncodedWithSilk:(!number|undefined),senderId:(!string|undefined),sliCount:(!number|undefined),targetBitrate:(!number|undefined),totalEncodeTime:(!number|undefined),totalEncodedBytesTarget:(!number|undefined),totalPacketSendDelay:(!number|undefined),totalSamplesSent:(!number|undefined),voiceActivityFlag:(!boolean|undefined),trackId:(!string|undefined),bytesSent:(!number|undefined),packetsSent:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCOutboundRtpStreamStats;
 /**
- * @typedef {{audioLevel:(!number|undefined),rtpTimestamp:!number,source:!number,timestamp:!DOMHighResTimeStamp}}
+ * @typedef {{timestamp:!DOMHighResTimeStamp,source:!number,rtpTimestamp:!number,audioLevel:(!number|undefined)}}
  */
 var RTCRtpContributingSource;
 /**
@@ -2208,13 +2192,17 @@ var GlobalDescriptor;
  */
 var ModuleExportDescriptor;
 /**
- * @typedef {{hash:!HashAlgorithmIdentifier,info:!BufferSource,salt:!BufferSource,name:!string}}
+ * @typedef {{hash:!HashAlgorithmIdentifier,salt:!BufferSource,info:!BufferSource,name:!string}}
  */
 var HkdfParams;
 /**
  * @typedef {{errorDetail:!string,receivedAlert:(!number|undefined),sctpCauseCode:(!number|undefined),sdpLineNumber:(!number|undefined),sentAlert:(!number|undefined),httpRequestStatusCode:(!number|undefined)}}
  */
 var RTCErrorInit;
+/**
+ * @typedef {{format:!string,codedWidth:!number,codedHeight:!number,timestamp:!number,colorSpace:(!VideoColorSpaceInit|undefined),displayHeight:(!number|undefined),displayWidth:(!number|undefined),duration:(!number|undefined),layout:(!Array<!PlaneLayout>|undefined),visibleRect:(!DOMRectInit|undefined)}}
+ */
+var VideoFrameBufferInit;
 /**
  * @typedef {{alpha:(?number|undefined),beta:(?number|undefined),gamma:(?number|undefined)}}
  */
@@ -2236,13 +2224,17 @@ var CameraDevicePermissionDescriptor;
  */
 var GPUStorageTextureBindingLayout;
 /**
- * @typedef {{channels:(!number|undefined),clockRate:!number,mimeType:!string,payloadType:!number,sdpFmtpLine:(!string|undefined)}}
+ * @typedef {{payloadType:!number,mimeType:!string,clockRate:!number,channels:(!number|undefined),sdpFmtpLine:(!string|undefined)}}
  */
 var RTCRtpCodecParameters;
 /**
  * @typedef {{detail:(*|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var CustomEventInit;
+/**
+ * @typedef {{transfer:(!Array<!Transferable>|undefined)}}
+ */
+var StructuredSerializeOptions;
 /**
  * @typedef {{contents:!string,identity:!string}}
  */
@@ -2308,7 +2300,7 @@ var AuthenticationExtensionsClientInputs;
  */
 var ULongRange;
 /**
- * @typedef {{estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),framesDecoded:(!number|undefined),framesDropped:(!number|undefined),framesReceived:(!number|undefined),fullFramesLost:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),keyFramesReceived:(!number|undefined),partialFramesLost:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),framesDecoded:(!number|undefined),framesDropped:(!number|undefined),framesReceived:(!number|undefined),fullFramesLost:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),keyFramesReceived:(!number|undefined),partialFramesLost:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCReceiverVideoTrackAttachmentStats;
 /**
@@ -2316,7 +2308,7 @@ var RTCReceiverVideoTrackAttachmentStats;
  */
 var AudioWorkletNodeOptions;
 /**
- * @typedef {{action:!string,icon:(!string|undefined),title:!string}}
+ * @typedef {{action:!string,title:!string,icon:(!string|undefined)}}
  */
 var NotificationAction;
 /**
@@ -2336,7 +2328,7 @@ var FormDataEventInit;
  */
 var EcKeyGenParams;
 /**
- * @typedef {{port:(!number|undefined),relayProtocol:(!string|undefined),totalRequestsSent:(!number|undefined),totalResponsesReceived:(!number|undefined),totalRoundTripTime:(!number|undefined),url:!string,id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{port:(!number|undefined),relayProtocol:(!string|undefined),totalRequestsSent:(!number|undefined),totalResponsesReceived:(!number|undefined),totalRoundTripTime:(!number|undefined),url:!string,timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCIceServerStats;
 /**
@@ -2372,7 +2364,7 @@ var SvcOutputMetadata;
  */
 var RTCRtpDecodingParameters;
 /**
- * @typedef {{id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCStats;
 /**
@@ -2380,7 +2372,7 @@ var RTCStats;
  */
 var NavigationPreloadState;
 /**
- * @typedef {{mediaSourceId:(!string|undefined),echoReturnLoss:(!number|undefined),echoReturnLossEnhancement:(!number|undefined),totalSamplesSent:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{mediaSourceId:(!string|undefined),echoReturnLoss:(!number|undefined),echoReturnLossEnhancement:(!number|undefined),totalSamplesSent:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCSenderAudioTrackAttachmentStats;
 /**
@@ -2392,7 +2384,7 @@ var IdleRequestOptions;
  */
 var RTCRtpCapabilities;
 /**
- * @typedef {{hash:!HashAlgorithmIdentifier,iterations:!number,salt:!BufferSource,name:!string}}
+ * @typedef {{salt:!BufferSource,iterations:!number,hash:!HashAlgorithmIdentifier,name:!string}}
  */
 var Pbkdf2Params;
 /**
@@ -2432,7 +2424,7 @@ var GPUBufferBindingLayout;
  */
 var ImageDecodeOptions;
 /**
- * @typedef {{dataChannelsAccepted:(!number|undefined),dataChannelsClosed:(!number|undefined),dataChannelsOpened:(!number|undefined),dataChannelsRequested:(!number|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{dataChannelsAccepted:(!number|undefined),dataChannelsClosed:(!number|undefined),dataChannelsOpened:(!number|undefined),dataChannelsRequested:(!number|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCPeerConnectionStats;
 /**
@@ -2448,7 +2440,7 @@ var WebGLContextAttributes;
  */
 var PushSubscriptionChangeEventInit;
 /**
- * @typedef {{sdp:(!string|undefined),type:!string}}
+ * @typedef {{type:!string,sdp:(!string|undefined)}}
  */
 var RTCSessionDescriptionInit;
 /**
@@ -2484,7 +2476,7 @@ var GPUDepthStencilState;
  */
 var GPUBlendComponent;
 /**
- * @typedef {{address:(?string|undefined),candidateType:!string,port:(!number|undefined),priority:(!number|undefined),protocol:(!string|undefined),relayProtocol:(!string|undefined),transportId:!string,url:(!string|undefined),deleted:(!boolean|undefined),isRemote:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{address:(?string|undefined),candidateType:!string,port:(!number|undefined),priority:(!number|undefined),protocol:(!string|undefined),relayProtocol:(!string|undefined),transportId:!string,url:(!string|undefined),deleted:(!boolean|undefined),isRemote:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCIceCandidateStats;
 /**
@@ -2492,7 +2484,7 @@ var RTCIceCandidateStats;
  */
 var AnimationEventInit;
 /**
- * @typedef {{colorSpaceConversion:(!string|undefined),data:!ImageBufferSource,desiredHeight:(!number|undefined),desiredWidth:(!number|undefined),preferAnimation:(!boolean|undefined),premultiplyAlpha:(!string|undefined),type:!string}}
+ * @typedef {{type:!string,data:!ImageBufferSource,colorSpaceConversion:(!string|undefined),desiredHeight:(!number|undefined),desiredWidth:(!number|undefined),preferAnimation:(!boolean|undefined),premultiplyAlpha:(!string|undefined)}}
  */
 var ImageDecoderInit;
 /**
@@ -2524,7 +2516,7 @@ var ComputedEffectTiming;
  */
 var TransitionEventInit;
 /**
- * @typedef {{availableIncomingBitrate:(!number|undefined),availableOutgoingBitrate:(!number|undefined),bytesDiscardedOnSend:(!number|undefined),bytesReceived:(!number|undefined),bytesSent:(!number|undefined),circuitBreakerTriggerCount:(!number|undefined),consentExpiredTimestamp:(!DOMHighResTimeStamp|undefined),consentRequestBytesSent:(!number|undefined),consentRequestsSent:(!number|undefined),currentRoundTripTime:(!number|undefined),firstRequestTimestamp:(!DOMHighResTimeStamp|undefined),lastPacketReceivedTimestamp:(!DOMHighResTimeStamp|undefined),lastPacketSentTimestamp:(!DOMHighResTimeStamp|undefined),lastRequestTimestamp:(!DOMHighResTimeStamp|undefined),lastResponseTimestamp:(!DOMHighResTimeStamp|undefined),localCandidateId:!string,nominated:(!boolean|undefined),packetsDiscardedOnSend:(!number|undefined),packetsReceived:(!number|undefined),packetsSent:(!number|undefined),remoteCandidateId:!string,requestBytesSent:(!number|undefined),requestsReceived:(!number|undefined),requestsSent:(!number|undefined),responseBytesSent:(!number|undefined),responsesReceived:(!number|undefined),responsesSent:(!number|undefined),retransmissionsReceived:(!number|undefined),retransmissionsSent:(!number|undefined),state:!string,totalRoundTripTime:(!number|undefined),transportId:!string,currentRtt:(!number|undefined),priority:(!number|undefined),totalRtt:(!number|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{availableIncomingBitrate:(!number|undefined),availableOutgoingBitrate:(!number|undefined),bytesDiscardedOnSend:(!number|undefined),bytesReceived:(!number|undefined),bytesSent:(!number|undefined),circuitBreakerTriggerCount:(!number|undefined),consentExpiredTimestamp:(!DOMHighResTimeStamp|undefined),consentRequestBytesSent:(!number|undefined),consentRequestsSent:(!number|undefined),currentRoundTripTime:(!number|undefined),firstRequestTimestamp:(!DOMHighResTimeStamp|undefined),lastPacketReceivedTimestamp:(!DOMHighResTimeStamp|undefined),lastPacketSentTimestamp:(!DOMHighResTimeStamp|undefined),lastRequestTimestamp:(!DOMHighResTimeStamp|undefined),lastResponseTimestamp:(!DOMHighResTimeStamp|undefined),localCandidateId:!string,nominated:(!boolean|undefined),packetsDiscardedOnSend:(!number|undefined),packetsReceived:(!number|undefined),packetsSent:(!number|undefined),remoteCandidateId:!string,requestBytesSent:(!number|undefined),requestsReceived:(!number|undefined),requestsSent:(!number|undefined),responseBytesSent:(!number|undefined),responsesReceived:(!number|undefined),responsesSent:(!number|undefined),retransmissionsReceived:(!number|undefined),retransmissionsSent:(!number|undefined),state:!string,totalRoundTripTime:(!number|undefined),transportId:!string,currentRtt:(!number|undefined),priority:(!number|undefined),totalRtt:(!number|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCIceCandidatePairStats;
 /**
@@ -2532,7 +2524,7 @@ var RTCIceCandidatePairStats;
  */
 var GPUImageCopyBuffer;
 /**
- * @typedef {{mid:(!string|undefined),receiverId:!string,senderId:!string,id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{mid:(!string|undefined),receiverId:!string,senderId:!string,timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCRtpTransceiverStats;
 /**
@@ -2548,7 +2540,7 @@ var SpeechSynthesisErrorEventInit;
  */
 var ImageBitmapRenderingContextSettings;
 /**
- * @typedef {{additionalData:(!BufferSource|undefined),iv:!BufferSource,tagLength:(!number|undefined),name:!string}}
+ * @typedef {{iv:!BufferSource,additionalData:(!BufferSource|undefined),tagLength:(!number|undefined),name:!string}}
  */
 var AesGcmParams;
 /**
@@ -2568,7 +2560,7 @@ var PositionOptions;
  */
 var RTCIdentityAssertionResult;
 /**
- * @typedef {{bytesSent:(!number|undefined),packetsSent:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{bytesSent:(!number|undefined),packetsSent:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCSentRtpStreamStats;
 /**
@@ -2604,7 +2596,7 @@ var PageTransitionEventInit;
  */
 var DocumentTimelineOptions;
 /**
- * @typedef {{action:(!string|undefined),notification:!Notification,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{notification:!Notification,action:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var NotificationEventInit;
 /**
@@ -2620,7 +2612,7 @@ var ScrollOptions;
  */
 var EcKeyImportParams;
 /**
- * @typedef {{length:!number,numberOfChannels:(!number|undefined),sampleRate:!number}}
+ * @typedef {{length:!number,sampleRate:!number,numberOfChannels:(!number|undefined)}}
  */
 var OfflineAudioContextOptions;
 /**
@@ -2628,7 +2620,7 @@ var OfflineAudioContextOptions;
  */
 var RTCCertificateExpiration;
 /**
- * @typedef {{credential:(!string|undefined),credentialType:(!string|undefined),urls:!StringOrStringArrayUnion,username:(!string|undefined)}}
+ * @typedef {{urls:!StringOrStringArrayUnion,credential:(!string|undefined),credentialType:(!string|undefined),username:(!string|undefined)}}
  */
 var RTCIceServer;
 /**
@@ -2648,7 +2640,7 @@ var ResponseInit;
  */
 var OfflineAudioCompletionEventInit;
 /**
- * @typedef {{bytesReceived:(!number|undefined),bytesSent:(!number|undefined),dtlsCipher:(!string|undefined),dtlsState:!string,iceLocalUsernameFragment:(!string|undefined),iceRole:(!string|undefined),iceState:(!string|undefined),localCertificateId:(!string|undefined),packetsReceived:(!number|undefined),packetsSent:(!number|undefined),remoteCertificateId:(!string|undefined),rtcpTransportStatsId:(!string|undefined),selectedCandidatePairChanges:(!number|undefined),selectedCandidatePairId:(!string|undefined),srtpCipher:(!string|undefined),tlsGroup:(!string|undefined),tlsVersion:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{bytesReceived:(!number|undefined),bytesSent:(!number|undefined),dtlsCipher:(!string|undefined),dtlsState:!string,iceLocalUsernameFragment:(!string|undefined),iceRole:(!string|undefined),iceState:(!string|undefined),localCertificateId:(!string|undefined),packetsReceived:(!number|undefined),packetsSent:(!number|undefined),remoteCertificateId:(!string|undefined),rtcpTransportStatsId:(!string|undefined),selectedCandidatePairChanges:(!number|undefined),selectedCandidatePairId:(!string|undefined),srtpCipher:(!string|undefined),tlsGroup:(!string|undefined),tlsVersion:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCTransportStats;
 /**
@@ -2659,6 +2651,10 @@ var AudioContextOptions;
  * @typedef {{delay:(!number|undefined),direction:(!string|undefined),duration:(!UnrestrictedDoubleOrStringUnion|undefined),easing:(!string|undefined),endDelay:(!number|undefined),fill:(!string|undefined),iterationStart:(!number|undefined),iterations:(!number|undefined)}}
  */
 var EffectTiming;
+/**
+ * @typedef {{mode:(!string|undefined),name:!string}}
+ */
+var XRSessionSupportedPermissionDescriptor;
 /**
  * @typedef {{hash:!HashAlgorithmIdentifier,modulusLength:!number,publicExponent:!BigInteger,name:!string}}
  */
@@ -2672,7 +2668,7 @@ var GPURenderBundleEncoderDescriptor;
  */
 var PushSubscriptionOptionsInit;
 /**
- * @typedef {{base64Certificate:!string,fingerprint:!string,fingerprintAlgorithm:!string,issuerCertificateId:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{base64Certificate:!string,fingerprint:!string,fingerprintAlgorithm:!string,issuerCertificateId:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCCertificateStats;
 /**
@@ -2692,11 +2688,11 @@ var DragEventInit;
  */
 var CanvasRenderingContext2DSettings;
 /**
- * @typedef {{data:!BufferSource,format:!string,numberOfChannels:!number,numberOfFrames:!number,sampleRate:!number,timestamp:!number}}
+ * @typedef {{format:!string,sampleRate:!number,numberOfFrames:!number,numberOfChannels:!number,timestamp:!number,data:!BufferSource}}
  */
 var AudioDataInit;
 /**
- * @typedef {{bytesReceived:(!number|undefined),bytesSent:(!number|undefined),dataChannelIdentifier:(!number|undefined),label:(!string|undefined),messagesReceived:(!number|undefined),messagesSent:(!number|undefined),protocol:(!string|undefined),state:!string,id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{bytesReceived:(!number|undefined),bytesSent:(!number|undefined),dataChannelIdentifier:(!number|undefined),label:(!string|undefined),messagesReceived:(!number|undefined),messagesSent:(!number|undefined),protocol:(!string|undefined),state:!string,timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCDataChannelStats;
 /**
@@ -2712,11 +2708,11 @@ var BlobEventInit;
  */
 var WaveShaperOptions;
 /**
- * @typedef {{appearance:(!number|undefined),device:!BluetoothDevice,manufacturerData:(!BluetoothManufacturerDataMap|undefined),name:(!string|undefined),rssi:(!number|undefined),serviceData:(!BluetoothServiceDataMap|undefined),txPower:(!number|undefined),uuids:(!Array<StringOrUnsignedLongUnion>|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{device:!BluetoothDevice,appearance:(!number|undefined),manufacturerData:(!BluetoothManufacturerDataMap|undefined),name:(!string|undefined),rssi:(!number|undefined),serviceData:(!BluetoothServiceDataMap|undefined),txPower:(!number|undefined),uuids:(!Array<StringOrUnsignedLongUnion>|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var BluetoothAdvertisingEventInit;
 /**
- * @typedef {{codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCRtpStreamStats;
 /**
@@ -2728,7 +2724,7 @@ var PublicKeyCredentialUserEntity;
  */
 var ReadableWritablePair;
 /**
- * @typedef {{channels:(!number|undefined),clockRate:(!number|undefined),codecType:(!string|undefined),mimeType:!string,payloadType:!number,sdpFmtpLine:(!string|undefined),transportId:!string,implementation:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{channels:(!number|undefined),clockRate:(!number|undefined),codecType:(!string|undefined),mimeType:!string,payloadType:!number,sdpFmtpLine:(!string|undefined),transportId:!string,implementation:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCCodecStats;
 /**
@@ -2756,7 +2752,7 @@ var BiquadFilterOptions;
  */
 var VideoEncoderSupport;
 /**
- * @typedef {{error:!WebCodecsErrorCallback,output:!AudioDataOutputCallback}}
+ * @typedef {{output:!AudioDataOutputCallback,error:!WebCodecsErrorCallback}}
  */
 var AudioDecoderInit;
 /**
@@ -2776,7 +2772,7 @@ var ConstrainULongRange;
  */
 var XRPermissionDescriptor;
 /**
- * @typedef {{bitrate:(!number|undefined),bitrateMode:(!string|undefined),codec:!string,displayHeight:(!number|undefined),displayWidth:(!number|undefined),hardwareAcceleration:(!string|undefined),height:!number,scalabilityMode:(!string|undefined),width:!number}}
+ * @typedef {{codec:!string,width:!number,height:!number,alpha:(!string|undefined),bitrate:(!number|undefined),bitrateMode:(!string|undefined),displayHeight:(!number|undefined),displayWidth:(!number|undefined),framerate:(!number|undefined),hardwareAcceleration:(!string|undefined),latencyMode:(!string|undefined),scalabilityMode:(!string|undefined)}}
  */
 var VideoEncoderConfig;
 /**
@@ -2788,7 +2784,7 @@ var GPUQuerySetDescriptor;
  */
 var AnimationPlaybackEventInit;
 /**
- * @typedef {{receiver:!RTCRtpReceiver,streams:(!Array<!MediaStream>|undefined),track:!MediaStreamTrack,transceiver:!RTCRtpTransceiver,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{receiver:!RTCRtpReceiver,track:!MediaStreamTrack,transceiver:!RTCRtpTransceiver,streams:(!Array<!MediaStream>|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var RTCTrackEventInit;
 /**
@@ -2820,15 +2816,15 @@ var ReportingObserverOptions;
  */
 var ConvolverOptions;
 /**
- * @typedef {{codedHeight:!number,codedWidth:!number,displayHeight:(!number|undefined),displayWidth:(!number|undefined),duration:(!number|undefined),format:!string,timestamp:(!number|undefined),visibleRect:(!VideoFrameRect|undefined)}}
- */
-var VideoFramePlaneInit;
-/**
- * @typedef {{audioLevel:(!number|undefined),contributorSsrc:!number,inboundRtpStreamId:!string,packetsContributedTo:(!number|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{audioLevel:(!number|undefined),contributorSsrc:!number,inboundRtpStreamId:!string,packetsContributedTo:(!number|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCRtpContributingSourceStats;
 /**
- * @typedef {{streamIdentifier:(!string|undefined),trackIds:(!Array<!string>|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{fullRange:(!boolean|undefined),matrix:(!string|undefined),primaries:(!string|undefined),transfer:(!string|undefined)}}
+ */
+var VideoColorSpaceInit;
+/**
+ * @typedef {{streamIdentifier:(!string|undefined),trackIds:(!Array<!string>|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCMediaStreamStats;
 /**
@@ -2860,7 +2856,7 @@ var InputEventInit;
  */
 var AuthenticationExtensionsLargeBlobInputs;
 /**
- * @typedef {{delegatesFocus:(!boolean|undefined),mode:!string,slotAssignment:(!string|undefined)}}
+ * @typedef {{mode:!string,delegatesFocus:(!boolean|undefined),slotAssignment:(!string|undefined)}}
  */
 var ShadowRootInit;
 /**
@@ -2868,7 +2864,7 @@ var ShadowRootInit;
  */
 var DeviceMotionEventAccelerationInit;
 /**
- * @typedef {{codec:!string,description:(!BufferSource|undefined),numberOfChannels:!number,sampleRate:!number}}
+ * @typedef {{codec:!string,sampleRate:!number,numberOfChannels:!number,description:(!BufferSource|undefined)}}
  */
 var AudioDecoderConfig;
 /**
@@ -2928,7 +2924,7 @@ var GPUUncapturedErrorEventInit;
  */
 var WorkletOptions;
 /**
- * @typedef {{feedback:!Array<!number>,feedforward:!Array<!number>,channelCount:(!number|undefined),channelCountMode:(!string|undefined),channelInterpretation:(!string|undefined)}}
+ * @typedef {{feedforward:!Array<!number>,feedback:!Array<!number>,channelCount:(!number|undefined),channelCountMode:(!string|undefined),channelInterpretation:(!string|undefined)}}
  */
 var IIRFilterOptions;
 /**
@@ -2944,7 +2940,7 @@ var EventListenerOptions;
  */
 var PasswordCredentialData;
 /**
- * @typedef {{endContainer:!Node,endOffset:!number,startContainer:!Node,startOffset:!number}}
+ * @typedef {{startContainer:!Node,startOffset:!number,endContainer:!Node,endOffset:!number}}
  */
 var StaticRangeInit;
 /**
@@ -2980,7 +2976,7 @@ var SVGBoundingBoxOptions;
  */
 var PromiseRejectionEventInit;
 /**
- * @typedef {{encodings:!Array<!RTCRtpEncodingParameters>,transactionId:!string,codecs:!Array<!RTCRtpCodecParameters>,headerExtensions:!Array<!RTCRtpHeaderExtensionParameters>,rtcp:!RTCRtcpParameters}}
+ * @typedef {{transactionId:!string,encodings:!Array<!RTCRtpEncodingParameters>,headerExtensions:!Array<!RTCRtpHeaderExtensionParameters>,rtcp:!RTCRtcpParameters,codecs:!Array<!RTCRtpCodecParameters>}}
  */
 var RTCRtpSendParameters;
 /**
@@ -3008,7 +3004,7 @@ var GamepadEventInit;
  */
 var ScrollToOptions;
 /**
- * @typedef {{mediaSourceId:(!string|undefined),framesCaptured:(!number|undefined),framesSent:(!number|undefined),hugeFramesSent:(!number|undefined),keyFramesSent:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{mediaSourceId:(!string|undefined),framesCaptured:(!number|undefined),framesSent:(!number|undefined),hugeFramesSent:(!number|undefined),keyFramesSent:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCSenderVideoTrackAttachmentStats;
 /**
@@ -3016,11 +3012,11 @@ var RTCSenderVideoTrackAttachmentStats;
  */
 var GPUBlendState;
 /**
- * @typedef {{burstDiscardCount:(!number|undefined),burstDiscardRate:(!number|undefined),burstLossCount:(!number|undefined),burstLossRate:(!number|undefined),burstPacketsDiscarded:(!number|undefined),burstPacketsLost:(!number|undefined),framesDropped:(!number|undefined),fullFramesLost:(!number|undefined),gapDiscardRate:(!number|undefined),gapLossRate:(!number|undefined),jitter:(!number|undefined),packetsDiscarded:(!number|undefined),packetsLost:(!number|undefined),packetsReceived:(!number|undefined),packetsRepaired:(!number|undefined),partialFramesLost:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{burstDiscardCount:(!number|undefined),burstDiscardRate:(!number|undefined),burstLossCount:(!number|undefined),burstLossRate:(!number|undefined),burstPacketsDiscarded:(!number|undefined),burstPacketsLost:(!number|undefined),framesDropped:(!number|undefined),fullFramesLost:(!number|undefined),gapDiscardRate:(!number|undefined),gapLossRate:(!number|undefined),jitter:(!number|undefined),packetsDiscarded:(!number|undefined),packetsLost:(!number|undefined),packetsReceived:(!number|undefined),packetsRepaired:(!number|undefined),partialFramesLost:(!number|undefined),codecId:(!string|undefined),kind:!string,ssrc:!number,transportId:(!string|undefined),averageRTCPInterval:(!number|undefined),mediaType:(!string|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCReceivedRtpStreamStats;
 /**
- * @typedef {{error:!WebCodecsErrorCallback,output:!EncodedVideoChunkOutputCallback}}
+ * @typedef {{output:!EncodedVideoChunkOutputCallback,error:!WebCodecsErrorCallback}}
  */
 var VideoEncoderInit;
 /**
@@ -3040,7 +3036,7 @@ var CredentialRequestOptions;
  */
 var PushEventInit;
 /**
- * @typedef {{mediaSourceId:(!string|undefined),framesCaptured:(!number|undefined),framesSent:(!number|undefined),hugeFramesSent:(!number|undefined),keyFramesSent:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{mediaSourceId:(!string|undefined),framesCaptured:(!number|undefined),framesSent:(!number|undefined),hugeFramesSent:(!number|undefined),keyFramesSent:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCVideoSenderStats;
 /**
@@ -3060,7 +3056,7 @@ var GPUBindGroupLayoutEntry;
  */
 var GPUDeviceDescriptor;
 /**
- * @typedef {{codecs:!Array<!RTCRtpCodecParameters>,headerExtensions:!Array<!RTCRtpHeaderExtensionParameters>,rtcp:!RTCRtcpParameters}}
+ * @typedef {{headerExtensions:!Array<!RTCRtpHeaderExtensionParameters>,rtcp:!RTCRtcpParameters,codecs:!Array<!RTCRtpCodecParameters>}}
  */
 var RTCRtpReceiveParameters;
 /**
@@ -3068,7 +3064,7 @@ var RTCRtpReceiveParameters;
  */
 var ElementDefinitionOptions;
 /**
- * @typedef {{error:!WebCodecsErrorCallback,output:!VideoFrameOutputCallback}}
+ * @typedef {{output:!VideoFrameOutputCallback,error:!WebCodecsErrorCallback}}
  */
 var VideoDecoderInit;
 /**
@@ -3076,11 +3072,11 @@ var VideoDecoderInit;
  */
 var MediaStreamTrackEventInit;
 /**
- * @typedef {{ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCMediaHandlerStats;
 /**
- * @typedef {{address:(?string|undefined),errorCode:!number,errorText:(!string|undefined),port:(?number|undefined),url:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{errorCode:!number,address:(?string|undefined),errorText:(!string|undefined),port:(?number|undefined),url:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var RTCPeerConnectionIceErrorEventInit;
 /**
@@ -3120,7 +3116,7 @@ var AddEventListenerOptions;
  */
 var SpeechRecognitionErrorEventInit;
 /**
- * @typedef {{estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),framesDecoded:(!number|undefined),framesDropped:(!number|undefined),framesReceived:(!number|undefined),fullFramesLost:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),keyFramesReceived:(!number|undefined),partialFramesLost:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),framesDecoded:(!number|undefined),framesDropped:(!number|undefined),framesReceived:(!number|undefined),fullFramesLost:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),keyFramesReceived:(!number|undefined),partialFramesLost:(!number|undefined),frameHeight:(!number|undefined),frameWidth:(!number|undefined),framesPerSecond:(!number|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCVideoReceiverStats;
 /**
@@ -3136,11 +3132,11 @@ var RTCIdentityProvider;
  */
 var DeviceMotionEventInit;
 /**
- * @typedef {{concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),removedSamplesForAcceleration:(!number|undefined),silentConcealedSamples:(!number|undefined),totalSamplesReceived:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),id:!string,timestamp:!DOMHighResTimeStamp,type:!string}}
+ * @typedef {{concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),removedSamplesForAcceleration:(!number|undefined),silentConcealedSamples:(!number|undefined),totalSamplesReceived:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
 var RTCReceiverAudioTrackAttachmentStats;
 /**
- * @typedef {{inputBuffer:!AudioBuffer,outputBuffer:!AudioBuffer,playbackTime:!number,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{playbackTime:!number,inputBuffer:!AudioBuffer,outputBuffer:!AudioBuffer,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var AudioProcessingEventInit;
 /**
@@ -3183,6 +3179,29 @@ var ElementCreationOptions;
  * @typedef {{channel:!RTCDataChannel,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var RTCDataChannelEventInit;
+/**
+ * @const
+ */
+var GPUBufferUsage;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.COPY_DST;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.COPY_SRC;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.INDEX;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.INDIRECT;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.MAP_READ;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.MAP_WRITE;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.QUERY_RESOLVE;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.STORAGE;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.UNIFORM;
+/** @const {!GPUFlagsConstant} */ GPUBufferUsage.VERTEX;
+/**
+ * @const
+ */
+var GPUColorWrite;
+/** @const {!GPUFlagsConstant} */ GPUColorWrite.ALL;
+/** @const {!GPUFlagsConstant} */ GPUColorWrite.ALPHA;
+/** @const {!GPUFlagsConstant} */ GPUColorWrite.BLUE;
+/** @const {!GPUFlagsConstant} */ GPUColorWrite.GREEN;
+/** @const {!GPUFlagsConstant} */ GPUColorWrite.RED;
 /**
  * @const
  */
@@ -3331,6 +3350,28 @@ WebAssembly.compileStreaming = function(source) {}
  * @nosideeffects
  */
 WebAssembly.validate = function(bytes) {}
+/**
+ * @const
+ */
+var GPUTextureUsage;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.COPY_DST;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.COPY_SRC;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.RENDER_ATTACHMENT;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.STORAGE_BINDING;
+/** @const {!GPUFlagsConstant} */ GPUTextureUsage.TEXTURE_BINDING;
+/**
+ * @const
+ */
+var GPUMapMode;
+/** @const {!GPUFlagsConstant} */ GPUMapMode.READ;
+/** @const {!GPUFlagsConstant} */ GPUMapMode.WRITE;
+/**
+ * @const
+ */
+var GPUShaderStage;
+/** @const {!GPUFlagsConstant} */ GPUShaderStage.COMPUTE;
+/** @const {!GPUFlagsConstant} */ GPUShaderStage.FRAGMENT;
+/** @const {!GPUFlagsConstant} */ GPUShaderStage.VERTEX;
 /**
  * @constructor
  * @private
@@ -3731,33 +3772,6 @@ SpeechRecognition.prototype.start = function() {}
 /**
  * @constructor
  * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUBufferUsage() {}
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.COPY_DST;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.COPY_DST;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.COPY_SRC;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.COPY_SRC;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.INDEX;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.INDEX;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.INDIRECT;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.INDIRECT;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.MAP_READ;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.MAP_READ;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.MAP_WRITE;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.MAP_WRITE;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.QUERY_RESOLVE;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.QUERY_RESOLVE;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.STORAGE;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.STORAGE;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.UNIFORM;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.UNIFORM;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.VERTEX;
-/** @const {!GPUFlagsConstant} */ GPUBufferUsage.prototype.VERTEX;
-/**
- * @constructor
- * @private
  * @extends {HTMLElement}
  * @nosideeffects
  */
@@ -4066,6 +4080,21 @@ OES_vertex_array_object.prototype.isVertexArrayOES = function(arrayObject) {}
  * @param {!StaticRangeInit} init
  */
 function StaticRange(init) {}
+/**
+ * @constructor
+ * @extends {Object}
+ * @param {!VideoColorSpaceInit=} init
+ */
+function VideoColorSpace(init) {}
+/** @type {?boolean} */ VideoColorSpace.prototype.fullRange;
+/** @type {?string} */ VideoColorSpace.prototype.matrix;
+/** @type {?string} */ VideoColorSpace.prototype.primaries;
+/** @type {?string} */ VideoColorSpace.prototype.transfer;
+/**
+ * @return {!VideoColorSpaceInit}
+ * @override
+ */
+VideoColorSpace.prototype.toJSON = function() {}
 /**
  * @constructor
  * @private
@@ -4498,6 +4527,10 @@ CanvasRenderingContext2D.prototype.restore = function() {}
  */
 CanvasRenderingContext2D.prototype.beginPath = function() {}
 /**
+ * @return {!boolean}
+ */
+CanvasRenderingContext2D.prototype.isContextLost = function() {}
+/**
  * @return {undefined}
  */
 CanvasRenderingContext2D.prototype.resetTransform = function() {}
@@ -4660,6 +4693,7 @@ function XRWebGLLayer(session,context,layerInit) {}
 /** @type {!number} */ XRWebGLLayer.prototype.framebufferHeight;
 /** @type {!number} */ XRWebGLLayer.prototype.framebufferWidth;
 /** @type {!boolean} */ XRWebGLLayer.prototype.ignoreDepthValues;
+/** @type {?number} */ XRWebGLLayer.prototype.fixedFoveation;
 /**
  * @param {!XRView} view
  * @return {?XRViewport}
@@ -5155,7 +5189,9 @@ AudioNode.prototype.connect = function(arg0,arg1,arg2) {}
  * @nosideeffects
  */
 function XRPose() {}
+/** @type {?DOMPointReadOnly} */ XRPose.prototype.angularVelocity;
 /** @type {!boolean} */ XRPose.prototype.emulatedPosition;
+/** @type {?DOMPointReadOnly} */ XRPose.prototype.linearVelocity;
 /** @type {!XRRigidTransform} */ XRPose.prototype.transform;
 /**
  * @constructor
@@ -5840,7 +5876,7 @@ function DedicatedWorkerGlobalScope() {}
 DedicatedWorkerGlobalScope.prototype.cancelAnimationFrame = function(handle) {}
 /**
  * @param {*} arg0
- * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
+ * @param {(!Array<!Transferable>|!StructuredSerializeOptions)=} arg1
  * @return {undefined}
  */
 DedicatedWorkerGlobalScope.prototype.postMessage = function(arg0,arg1) {}
@@ -6085,19 +6121,20 @@ BluetoothUUID.getService = function(name) {}
 /**
  * @constructor
  * @extends {Object}
- * @param {(!CanvasImageSource|!Array<!PlaneInit>)} arg0
- * @param {(!VideoFrameInit|!VideoFramePlaneInit)=} arg1
+ * @param {(!CanvasImageSource|!BufferSource)} arg0
+ * @param {(!VideoFrameInit|!VideoFrameBufferInit)=} arg1
  */
 function VideoFrame(arg0,arg1) {}
 /** @type {!number} */ VideoFrame.prototype.codedHeight;
-/** @type {!VideoFrameRect} */ VideoFrame.prototype.codedRect;
+/** @type {?DOMRectReadOnly} */ VideoFrame.prototype.codedRect;
 /** @type {!number} */ VideoFrame.prototype.codedWidth;
+/** @type {!VideoColorSpace} */ VideoFrame.prototype.colorSpace;
 /** @type {!number} */ VideoFrame.prototype.displayHeight;
 /** @type {!number} */ VideoFrame.prototype.displayWidth;
 /** @type {?number} */ VideoFrame.prototype.duration;
-/** @type {!string} */ VideoFrame.prototype.format;
+/** @type {?string} */ VideoFrame.prototype.format;
 /** @type {?number} */ VideoFrame.prototype.timestamp;
-/** @type {!VideoFrameRect} */ VideoFrame.prototype.visibleRect;
+/** @type {?DOMRectReadOnly} */ VideoFrame.prototype.visibleRect;
 /**
  * @param {!BufferSource} destination
  * @param {!VideoFrameCopyToOptions=} options
@@ -8839,10 +8876,13 @@ PerformanceResourceTiming.prototype.toJSON = function() {}
  * @nosideeffects
  */
 function XRSession() {}
+/** @type {?number} */ XRSession.prototype.frameRate;
 /** @type {!XRInputSourceArray} */ XRSession.prototype.inputSources;
 /** @type {!XRRenderState} */ XRSession.prototype.renderState;
+/** @type {?Float32Array} */ XRSession.prototype.supportedFrameRates;
 /** @type {!string} */ XRSession.prototype.visibilityState;
 /** @type {!NullableEventHandler} */ XRSession.prototype.onend;
+/** @type {!NullableEventHandler} */ XRSession.prototype.onframeratechange;
 /** @type {!NullableEventHandler} */ XRSession.prototype.oninputsourceschange;
 /** @type {!NullableEventHandler} */ XRSession.prototype.onselect;
 /** @type {!NullableEventHandler} */ XRSession.prototype.onselectend;
@@ -8866,6 +8906,11 @@ XRSession.prototype.requestReferenceSpace = function(type) {}
  * @return {undefined}
  */
 XRSession.prototype.updateRenderState = function(state) {}
+/**
+ * @param {!number} rate
+ * @return {!Promise<undefined>}
+ */
+XRSession.prototype.updateTargetFrameRate = function(rate) {}
 /**
  * @return {!Promise<undefined>}
  */
@@ -9609,7 +9654,7 @@ function VisualViewport() {}
 /** @type {!number} */ VisualViewport.prototype.pageLeft;
 /** @type {!number} */ VisualViewport.prototype.pageTop;
 /** @type {!number} */ VisualViewport.prototype.scale;
-/** @type {!Array<!DOMRect>} */ VisualViewport.prototype.segments;
+/** @type {?Array<!DOMRect>} */ VisualViewport.prototype.segments;
 /** @type {!number} */ VisualViewport.prototype.width;
 /** @type {?EventHandler} */ VisualViewport.prototype.onresize;
 /** @type {?EventHandler} */ VisualViewport.prototype.onscroll;
@@ -9675,7 +9720,7 @@ function Worker(scriptURL,options) {}
 /** @type {?ErrorEventHandler} */ Worker.prototype.onerror;
 /**
  * @param {*} arg0
- * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
+ * @param {(!Array<!Transferable>|!StructuredSerializeOptions)=} arg1
  * @return {undefined}
  */
 Worker.prototype.postMessage = function(arg0,arg1) {}
@@ -9950,6 +9995,10 @@ OffscreenCanvasRenderingContext2D.prototype.restore = function() {}
  * @return {undefined}
  */
 OffscreenCanvasRenderingContext2D.prototype.beginPath = function() {}
+/**
+ * @return {!boolean}
+ */
+OffscreenCanvasRenderingContext2D.prototype.isContextLost = function() {}
 /**
  * @return {undefined}
  */
@@ -10422,7 +10471,7 @@ function ServiceWorker() {}
 /** @type {?ErrorEventHandler} */ ServiceWorker.prototype.onerror;
 /**
  * @param {*} arg0
- * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
+ * @param {(!Array<!Transferable>|!StructuredSerializeOptions)=} arg1
  * @return {undefined}
  */
 ServiceWorker.prototype.postMessage = function(arg0,arg1) {}
@@ -11475,23 +11524,6 @@ function SVGFEMorphologyElement() {}
 /** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.width;
 /** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.x;
 /** @type {!SVGAnimatedLength} */ SVGFEMorphologyElement.prototype.y;
-/**
- * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUTextureUsage() {}
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.COPY_DST;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.COPY_DST;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.COPY_SRC;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.COPY_SRC;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.RENDER_ATTACHMENT;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.RENDER_ATTACHMENT;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.STORAGE_BINDING;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.STORAGE_BINDING;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.TEXTURE_BINDING;
-/** @const {!GPUFlagsConstant} */ GPUTextureUsage.prototype.TEXTURE_BINDING;
 /**
  * @constructor
  * @private
@@ -12888,7 +12920,9 @@ function Document() {}
 /** @type {!NullableEventHandler} */ Document.prototype.onchange;
 /** @type {!NullableEventHandler} */ Document.prototype.onclick;
 /** @type {!NullableEventHandler} */ Document.prototype.onclose;
+/** @type {!NullableEventHandler} */ Document.prototype.oncontextlost;
 /** @type {!NullableEventHandler} */ Document.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ Document.prototype.oncontextrestored;
 /** @type {!NullableEventHandler} */ Document.prototype.oncuechange;
 /** @type {!NullableEventHandler} */ Document.prototype.ondblclick;
 /** @type {?DragEventHandler} */ Document.prototype.ondrag;
@@ -13461,7 +13495,7 @@ function HTMLMenuElement() {}
  */
 function AudioData(init) {}
 /** @type {!number} */ AudioData.prototype.duration;
-/** @type {!string} */ AudioData.prototype.format;
+/** @type {?string} */ AudioData.prototype.format;
 /** @type {!number} */ AudioData.prototype.numberOfChannels;
 /** @type {!number} */ AudioData.prototype.numberOfFrames;
 /** @type {!number} */ AudioData.prototype.sampleRate;
@@ -13778,7 +13812,9 @@ function SVGElement() {}
 /** @type {!NullableEventHandler} */ SVGElement.prototype.onchange;
 /** @type {?PointerEventHandler} */ SVGElement.prototype.onclick;
 /** @type {!NullableEventHandler} */ SVGElement.prototype.onclose;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oncontextlost;
 /** @type {?PointerEventHandler} */ SVGElement.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ SVGElement.prototype.oncontextrestored;
 /** @type {!NullableEventHandler} */ SVGElement.prototype.oncuechange;
 /** @type {?MouseEventHandler} */ SVGElement.prototype.ondblclick;
 /** @type {?DragEventHandler} */ SVGElement.prototype.ondrag;
@@ -13967,7 +14003,7 @@ function MessagePort() {}
 /** @type {?MessageEventHandler} */ MessagePort.prototype.onmessageerror;
 /**
  * @param {*} arg0
- * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
+ * @param {(!Array<!Transferable>|!StructuredSerializeOptions)=} arg1
  * @return {undefined}
  */
 MessagePort.prototype.postMessage = function(arg0,arg1) {}
@@ -14134,7 +14170,9 @@ function Window() {}
 /** @type {!NullableEventHandler} */ Window.prototype.onchange;
 /** @type {!NullableEventHandler} */ Window.prototype.onclick;
 /** @type {!NullableEventHandler} */ Window.prototype.onclose;
+/** @type {!NullableEventHandler} */ Window.prototype.oncontextlost;
 /** @type {!NullableEventHandler} */ Window.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ Window.prototype.oncontextrestored;
 /** @type {!NullableEventHandler} */ Window.prototype.oncuechange;
 /** @type {!NullableEventHandler} */ Window.prototype.ondblclick;
 /** @type {?DragEventHandler} */ Window.prototype.ondrag;
@@ -14325,6 +14363,11 @@ Window.prototype.createImageBitmap = function(arg0,arg1,arg2,arg3,arg4,arg5) {}
  */
 Window.prototype.scroll = function(arg0,arg1) {}
 /**
+ * @param {*} e
+ * @return {undefined}
+ */
+Window.prototype.reportError = function(e) {}
+/**
  * @param {!string} data
  * @return {!string}
  * @nosideeffects
@@ -14377,6 +14420,12 @@ Window.prototype.cancelIdleCallback = function(handle) {}
  * @return {!Promise<!Response>}
  */
 Window.prototype.fetch = function(input,init) {}
+/**
+ * @param {*} value
+ * @param {!StructuredSerializeOptions=} options
+ * @return {*}
+ */
+Window.prototype.structuredClone = function(value,options) {}
 /**
  * @param {!CSSOMString} query
  * @return {!MediaQueryList}
@@ -14511,6 +14560,11 @@ Navigator.prototype.unregisterProtocolHandler = function(scheme,url) {}
  */
 Navigator.prototype.sendBeacon = function(url,data) {}
 /**
+ * @param {!ShareData=} data
+ * @return {!boolean}
+ */
+Navigator.prototype.canShare = function(data) {}
+/**
  * @param {!VibratePattern} pattern
  * @return {!boolean}
  */
@@ -14539,18 +14593,13 @@ Navigator.prototype.getGamepads = function() {}
 function XRView() {}
 /** @type {!string} */ XRView.prototype.eye;
 /** @type {!Float32Array} */ XRView.prototype.projectionMatrix;
+/** @type {?number} */ XRView.prototype.recommendedViewportScale;
 /** @type {!XRRigidTransform} */ XRView.prototype.transform;
 /**
- * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
+ * @param {?number} scale
+ * @return {undefined}
  */
-function GPUMapMode() {}
-/** @const {!GPUFlagsConstant} */ GPUMapMode.READ;
-/** @const {!GPUFlagsConstant} */ GPUMapMode.prototype.READ;
-/** @const {!GPUFlagsConstant} */ GPUMapMode.WRITE;
-/** @const {!GPUFlagsConstant} */ GPUMapMode.prototype.WRITE;
+XRView.prototype.requestViewportScale = function(scale) {}
 /**
  * @constructor
  * @private
@@ -15285,19 +15334,6 @@ Permissions.prototype.query = function(permissionDesc) {}
  */
 function MediaElementAudioSourceNode(context,options) {}
 /** @type {!HTMLMediaElement} */ MediaElementAudioSourceNode.prototype.mediaElement;
-/**
- * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUShaderStage() {}
-/** @const {!GPUFlagsConstant} */ GPUShaderStage.COMPUTE;
-/** @const {!GPUFlagsConstant} */ GPUShaderStage.prototype.COMPUTE;
-/** @const {!GPUFlagsConstant} */ GPUShaderStage.FRAGMENT;
-/** @const {!GPUFlagsConstant} */ GPUShaderStage.prototype.FRAGMENT;
-/** @const {!GPUFlagsConstant} */ GPUShaderStage.VERTEX;
-/** @const {!GPUFlagsConstant} */ GPUShaderStage.prototype.VERTEX;
 /**
  * @constructor
  * @extends {DOMException}
@@ -16807,23 +16843,6 @@ EventTarget.prototype.dispatchEvent = function(event) {}
  * @return {undefined}
  */
 EventTarget.prototype.addEventListener = function(type,callback,options) {}
-/**
- * @constructor
- * @private
- * @extends {Object}
- * @nosideeffects
- */
-function GPUColorWrite() {}
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.ALL;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.prototype.ALL;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.ALPHA;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.prototype.ALPHA;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.BLUE;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.prototype.BLUE;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.GREEN;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.prototype.GREEN;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.RED;
-/** @const {!GPUFlagsConstant} */ GPUColorWrite.prototype.RED;
 /**
  * @constructor
  * @private
@@ -20039,7 +20058,7 @@ function CryptoKey() {}
  */
 function GPUAdapter() {}
 /** @type {!GPUSupportedFeatures} */ GPUAdapter.prototype.features;
-/** @type {!boolean} */ GPUAdapter.prototype.isSoftware;
+/** @type {!boolean} */ GPUAdapter.prototype.isFallbackAdapter;
 /** @type {!GPUSupportedLimits} */ GPUAdapter.prototype.limits;
 /** @type {!string} */ GPUAdapter.prototype.name;
 /**
@@ -20470,7 +20489,9 @@ function HTMLElement() {}
 /** @type {?EventHandler} */ HTMLElement.prototype.onchange;
 /** @type {?PointerEventHandler} */ HTMLElement.prototype.onclick;
 /** @type {!NullableEventHandler} */ HTMLElement.prototype.onclose;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.oncontextlost;
 /** @type {?PointerEventHandler} */ HTMLElement.prototype.oncontextmenu;
+/** @type {!NullableEventHandler} */ HTMLElement.prototype.oncontextrestored;
 /** @type {!NullableEventHandler} */ HTMLElement.prototype.oncuechange;
 /** @type {?MouseEventHandler} */ HTMLElement.prototype.ondblclick;
 /** @type {?DragEventHandler} */ HTMLElement.prototype.ondrag;
@@ -21004,10 +21025,21 @@ WorkerGlobalScope.prototype.importScripts = function(urls) {}
  */
 WorkerGlobalScope.prototype.fetch = function(input,init) {}
 /**
+ * @param {*} value
+ * @param {!StructuredSerializeOptions=} options
+ * @return {*}
+ */
+WorkerGlobalScope.prototype.structuredClone = function(value,options) {}
+/**
  * @param {!number=} handle
  * @return {undefined}
  */
 WorkerGlobalScope.prototype.clearTimeout = function(handle) {}
+/**
+ * @param {*} e
+ * @return {undefined}
+ */
+WorkerGlobalScope.prototype.reportError = function(e) {}
 /**
  * @param {!VoidFunction} callback
  * @return {undefined}
@@ -21847,6 +21879,8 @@ function MediaStreamAudioDestinationNode(context,options) {}
  */
 function OffscreenCanvas(width,height) {}
 /** @type {!number} */ OffscreenCanvas.prototype.height;
+/** @type {?EventHandler} */ OffscreenCanvas.prototype.oncontextlost;
+/** @type {?EventHandler} */ OffscreenCanvas.prototype.oncontextrestored;
 /** @type {!number} */ OffscreenCanvas.prototype.width;
 /**
  * @param {!ImageEncodeOptions=} options
@@ -21905,7 +21939,7 @@ TimeRanges.prototype.end = function(index) {}
  */
 function EncodedAudioChunk(init) {}
 /** @type {!number} */ EncodedAudioChunk.prototype.byteLength;
-/** @type {!number} */ EncodedAudioChunk.prototype.duration;
+/** @type {?number} */ EncodedAudioChunk.prototype.duration;
 /** @type {!number} */ EncodedAudioChunk.prototype.timestamp;
 /** @type {!string} */ EncodedAudioChunk.prototype.type;
 /**
@@ -21932,6 +21966,11 @@ function HTMLScriptElement() {}
 /** @type {!string} */ HTMLScriptElement.prototype.charset;
 /** @type {!string} */ HTMLScriptElement.prototype.event;
 /** @type {!string} */ HTMLScriptElement.prototype.htmlFor;
+/**
+ * @param {!string} type
+ * @return {!boolean}
+ */
+HTMLScriptElement.supports = function(type) {}
 /**
  * @constructor
  * @private
@@ -22456,7 +22495,7 @@ function Client() {}
 /** @type {!string} */ Client.prototype.url;
 /**
  * @param {*} arg0
- * @param {(!Array<!Transferable>|!PostMessageOptions)=} arg1
+ * @param {(!Array<!Transferable>|!StructuredSerializeOptions)=} arg1
  * @return {undefined}
  */
 Client.prototype.postMessage = function(arg0,arg1) {}
@@ -23536,6 +23575,7 @@ function CSSCounterStyleRule() {}
  * @nosideeffects
  */
 function PermissionStatus() {}
+/** @type {!string} */ PermissionStatus.prototype.name;
 /** @type {!string} */ PermissionStatus.prototype.state;
 /** @type {?EventHandler} */ PermissionStatus.prototype.onchange;
 /**
@@ -24032,6 +24072,7 @@ HTMLCanvasElement.prototype.getContext = function(contextId,options) {}
 /** @type {!NullableEventHandler} */ var onselect;
 /** @type {!NullableEventHandler} */ var onauxclick;
 /** @type {!NullableEventHandler} */ var onscroll;
+/** @type {!NullableEventHandler} */ var oncontextlost;
 /** @type {!NullableEventHandler} */ var onkeydown;
 /** @type {?GamepadEventHandler} */ var ongamepadconnected;
 /** @type {!WindowProxy} */ var frames;
@@ -24049,6 +24090,7 @@ HTMLCanvasElement.prototype.getContext = function(contextId,options) {}
 /** @type {?DragEventHandler} */ var ondrag;
 /** @type {!number} */ var pageYOffset;
 /** @type {!number} */ var outerHeight;
+/** @type {!NullableEventHandler} */ var oncontextrestored;
 /** @type {!NullableOnBeforeUnloadEventHandler} */ var onbeforeunload;
 /** @type {!ServiceWorkerRegistration} */ var registration;
 /** @type {!NullableEventHandler} */ var onseeked;
@@ -24269,7 +24311,7 @@ function resizeTo(width,height) {}
 function clearTimeout(arg0) {}
 /**
  * @param {*} arg0
- * @param {(!string|!WindowPostMessageOptions|!Array<!Transferable>|!PostMessageOptions)=} arg1
+ * @param {(!string|!WindowPostMessageOptions|!Array<!Transferable>|!StructuredSerializeOptions)=} arg1
  * @param {!Array<!Transferable>=} arg2
  * @return {undefined}
  */
@@ -24337,6 +24379,12 @@ function entries(arg0) {}
  * @return {undefined}
  */
 function stop() {}
+/**
+ * @param {*} arg0
+ * @param {!StructuredSerializeOptions=} arg1
+ * @return {*}
+ */
+function structuredClone(arg0,arg1) {}
 /**
  * @param {!CSSOMString} query
  * @return {!MediaQueryList}
@@ -24474,6 +24522,11 @@ function createImageBitmap(arg0,arg1,arg2,arg3,arg4,arg5) {}
  * @override
  */
 function valueOf() {}
+/**
+ * @param {*} arg0
+ * @return {undefined}
+ */
+function reportError(arg0) {}
 /**
  * @param {!string} arg0
  * @return {!string}

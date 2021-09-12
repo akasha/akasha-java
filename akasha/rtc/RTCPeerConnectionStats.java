@@ -18,9 +18,9 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCPeerConnectionStats extends RTCStats {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String id, final double timestamp,
-      @RTCStatsType @Nonnull final String type) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
+  static Builder create(final double timestamp, @RTCStatsType @Nonnull final String type,
+      @Nonnull final String id) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).timestamp( timestamp ).type( type ).id( id );
   }
 
   @JsProperty(
@@ -91,19 +91,6 @@ public interface RTCPeerConnectionStats extends RTCStats {
     }
 
     /**
-     * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder id(@Nonnull final String id) {
-      setId( id );
-      return this;
-    }
-
-    /**
      * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
@@ -126,6 +113,19 @@ public interface RTCPeerConnectionStats extends RTCStats {
     @Nonnull
     default Builder type(@RTCStatsType @Nonnull final String type) {
       setType( type );
+      return this;
+    }
+
+    /**
+     * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder id(@Nonnull final String id) {
+      setId( id );
       return this;
     }
   }

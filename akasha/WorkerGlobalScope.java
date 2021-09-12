@@ -4,15 +4,18 @@ import akasha.crypto.Crypto;
 import akasha.idb.IDBFactory;
 import akasha.perf.Performance;
 import akasha.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 /**
@@ -298,6 +301,15 @@ public class WorkerGlobalScope extends EventTarget {
    * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">self.queueMicrotask() - HTML Living Standard</a>
    */
   public native void queueMicrotask(@Nonnull VoidFunction callback);
+
+  public native void reportError(@DoNotAutobox @Nullable Object e);
+
+  @JsNullable
+  public native Any structuredClone(@DoNotAutobox @Nullable Object value,
+      @Nonnull StructuredSerializeOptions options);
+
+  @JsNullable
+  public native Any structuredClone(@DoNotAutobox @Nullable Object value);
 
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.

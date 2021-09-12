@@ -27,6 +27,14 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   }
 
   @JsProperty(
+      name = "errorCode"
+  )
+  int errorCode();
+
+  @JsProperty
+  void setErrorCode(int errorCode);
+
+  @JsProperty(
       name = "address"
   )
   @JsNullable
@@ -34,14 +42,6 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
 
   @JsProperty
   void setAddress(@JsNullable String address);
-
-  @JsProperty(
-      name = "errorCode"
-  )
-  int errorCode();
-
-  @JsProperty
-  void setErrorCode(int errorCode);
 
   @JsProperty(
       name = "errorText"
@@ -77,15 +77,15 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   interface Builder extends RTCPeerConnectionIceErrorEventInit {
     @JsOverlay
     @Nonnull
-    default Builder address(@Nullable final String address) {
-      setAddress( address );
+    default Builder errorCode(final int errorCode) {
+      setErrorCode( errorCode );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder errorCode(final int errorCode) {
-      setErrorCode( errorCode );
+    default Builder address(@Nullable final String address) {
+      setAddress( address );
       return this;
     }
 

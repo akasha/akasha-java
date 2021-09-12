@@ -78,7 +78,7 @@ public class MessagePort extends EventTarget implements ExtendableMessageEventSo
    * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-messageport-postmessage">postMessage() - HTML Living Standard</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull PostMessageOptions options);
+      @Nonnull StructuredSerializeOptions options);
 
   /**
    * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.

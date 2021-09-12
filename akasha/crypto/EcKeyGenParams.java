@@ -14,7 +14,6 @@ import jsinterop.base.JsPropertyMap;
  * The EcKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of ECDSA or ECDH.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-EcKeyGenParams">SubtleCrypto.EcKeyGenParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -42,7 +41,6 @@ public interface EcKeyGenParams extends Algorithm {
    * The EcKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of ECDSA or ECDH.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-EcKeyGenParams">SubtleCrypto.EcKeyGenParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

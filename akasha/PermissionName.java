@@ -30,13 +30,7 @@ public @interface PermissionName {
   String camera = "camera";
 
   @Nonnull
-  String device_info = "device-info";
-
-  @Nonnull
   String display_capture = "display-capture";
-
-  @Nonnull
-  String gamepad = "gamepad";
 
   @Nonnull
   String geolocation = "geolocation";
@@ -71,6 +65,9 @@ public @interface PermissionName {
   @Nonnull
   String speaker_selection = "speaker-selection";
 
+  @Nonnull
+  String xr_spatial_tracking = "xr-spatial-tracking";
+
   final class Util {
     private Util() {
     }
@@ -86,7 +83,7 @@ public @interface PermissionName {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return PermissionName.accelerometer.equals( value ) || PermissionName.ambient_light_sensor.equals( value ) || PermissionName.background_fetch.equals( value ) || PermissionName.background_sync.equals( value ) || PermissionName.bluetooth.equals( value ) || PermissionName.camera.equals( value ) || PermissionName.device_info.equals( value ) || PermissionName.display_capture.equals( value ) || PermissionName.gamepad.equals( value ) || PermissionName.geolocation.equals( value ) || PermissionName.gyroscope.equals( value ) || PermissionName.magnetometer.equals( value ) || PermissionName.microphone.equals( value ) || PermissionName.midi.equals( value ) || PermissionName.nfc.equals( value ) || PermissionName.notifications.equals( value ) || PermissionName.persistent_storage.equals( value ) || PermissionName.push.equals( value ) || PermissionName.screen_wake_lock.equals( value ) || PermissionName.speaker_selection.equals( value );
+      return PermissionName.accelerometer.equals( value ) || PermissionName.ambient_light_sensor.equals( value ) || PermissionName.background_fetch.equals( value ) || PermissionName.background_sync.equals( value ) || PermissionName.bluetooth.equals( value ) || PermissionName.camera.equals( value ) || PermissionName.display_capture.equals( value ) || PermissionName.geolocation.equals( value ) || PermissionName.gyroscope.equals( value ) || PermissionName.magnetometer.equals( value ) || PermissionName.microphone.equals( value ) || PermissionName.midi.equals( value ) || PermissionName.nfc.equals( value ) || PermissionName.notifications.equals( value ) || PermissionName.persistent_storage.equals( value ) || PermissionName.push.equals( value ) || PermissionName.screen_wake_lock.equals( value ) || PermissionName.speaker_selection.equals( value ) || PermissionName.xr_spatial_tracking.equals( value );
     }
   }
 }

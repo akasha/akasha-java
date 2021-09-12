@@ -24,14 +24,6 @@ public interface SyncEventInit extends ExtendableEventInit {
   }
 
   @JsProperty(
-      name = "lastChance"
-  )
-  boolean lastChance();
-
-  @JsProperty
-  void setLastChance(boolean lastChance);
-
-  @JsProperty(
       name = "tag"
   )
   @JsNonNull
@@ -39,6 +31,14 @@ public interface SyncEventInit extends ExtendableEventInit {
 
   @JsProperty
   void setTag(@JsNonNull String tag);
+
+  @JsProperty(
+      name = "lastChance"
+  )
+  boolean lastChance();
+
+  @JsProperty
+  void setLastChance(boolean lastChance);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -49,15 +49,15 @@ public interface SyncEventInit extends ExtendableEventInit {
   interface Builder extends SyncEventInit {
     @JsOverlay
     @Nonnull
-    default Builder lastChance(final boolean lastChance) {
-      setLastChance( lastChance );
+    default Builder tag(@Nonnull final String tag) {
+      setTag( tag );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder tag(@Nonnull final String tag) {
-      setTag( tag );
+    default Builder lastChance(final boolean lastChance) {
+      setLastChance( lastChance );
       return this;
     }
 

@@ -1,6 +1,6 @@
 package akasha.core;
 
-import akasha.ImageBufferSource;
+import akasha.codecs.ImageBufferSource;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;

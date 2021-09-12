@@ -156,7 +156,7 @@ public final class DedicatedWorkerGlobal {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-dedicatedworkerglobalscope-postmessage">DedicatedWorkerGlobalScope.postMessage() - HTML Living Standard</a>
    */
   public static native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull PostMessageOptions options);
+      @Nonnull StructuredSerializeOptions options);
 
   /**
    * The postMessage() method of the DedicatedWorkerGlobalScope interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.
@@ -478,6 +478,15 @@ public final class DedicatedWorkerGlobal {
    * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">self.queueMicrotask() - HTML Living Standard</a>
    */
   public static native void queueMicrotask(@Nonnull VoidFunction callback);
+
+  public static native void reportError(@DoNotAutobox @Nullable Object e);
+
+  @JsNullable
+  public static native Any structuredClone(@DoNotAutobox @Nullable Object value,
+      @Nonnull StructuredSerializeOptions options);
+
+  @JsNullable
+  public static native Any structuredClone(@DoNotAutobox @Nullable Object value);
 
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.

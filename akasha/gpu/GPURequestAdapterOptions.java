@@ -26,12 +26,12 @@ public interface GPURequestAdapterOptions {
   }
 
   @JsProperty(
-      name = "forceSoftware"
+      name = "forceFallbackAdapter"
   )
-  boolean forceSoftware();
+  boolean forceFallbackAdapter();
 
   @JsProperty
-  void setForceSoftware(boolean forceSoftware);
+  void setForceFallbackAdapter(boolean forceFallbackAdapter);
 
   @JsProperty(
       name = "powerPreference"
@@ -52,8 +52,8 @@ public interface GPURequestAdapterOptions {
   interface Builder extends GPURequestAdapterOptions {
     @JsOverlay
     @Nonnull
-    default Builder forceSoftware(final boolean forceSoftware) {
-      setForceSoftware( forceSoftware );
+    default Builder forceFallbackAdapter(final boolean forceFallbackAdapter) {
+      setForceFallbackAdapter( forceFallbackAdapter );
       return this;
     }
 

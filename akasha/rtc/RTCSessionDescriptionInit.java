@@ -24,14 +24,6 @@ public interface RTCSessionDescriptionInit {
   }
 
   @JsProperty(
-      name = "sdp"
-  )
-  String sdp();
-
-  @JsProperty
-  void setSdp(@JsNonNull String sdp);
-
-  @JsProperty(
       name = "type"
   )
   @RTCSdpType
@@ -40,6 +32,14 @@ public interface RTCSessionDescriptionInit {
 
   @JsProperty
   void setType(@RTCSdpType @JsNonNull String type);
+
+  @JsProperty(
+      name = "sdp"
+  )
+  String sdp();
+
+  @JsProperty
+  void setSdp(@JsNonNull String sdp);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -50,15 +50,15 @@ public interface RTCSessionDescriptionInit {
   interface Builder extends RTCSessionDescriptionInit {
     @JsOverlay
     @Nonnull
-    default Builder sdp(@Nonnull final String sdp) {
-      setSdp( sdp );
+    default Builder type(@RTCSdpType @Nonnull final String type) {
+      setType( type );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder type(@RTCSdpType @Nonnull final String type) {
-      setType( type );
+    default Builder sdp(@Nonnull final String sdp) {
+      setSdp( sdp );
       return this;
     }
   }

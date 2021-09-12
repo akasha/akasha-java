@@ -28,9 +28,9 @@ public class GPUAdapter extends JsObject {
   public native GPUSupportedFeatures features();
 
   @JsProperty(
-      name = "isSoftware"
+      name = "isFallbackAdapter"
   )
-  public native boolean isSoftware();
+  public native boolean isFallbackAdapter();
 
   @JsProperty(
       name = "limits"

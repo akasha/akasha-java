@@ -25,14 +25,6 @@ public interface NotificationEventInit extends ExtendableEventInit {
   }
 
   @JsProperty(
-      name = "action"
-  )
-  String action();
-
-  @JsProperty
-  void setAction(@JsNonNull String action);
-
-  @JsProperty(
       name = "notification"
   )
   @JsNonNull
@@ -40,6 +32,14 @@ public interface NotificationEventInit extends ExtendableEventInit {
 
   @JsProperty
   void setNotification(@JsNonNull Notification notification);
+
+  @JsProperty(
+      name = "action"
+  )
+  String action();
+
+  @JsProperty
+  void setAction(@JsNonNull String action);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -50,15 +50,15 @@ public interface NotificationEventInit extends ExtendableEventInit {
   interface Builder extends NotificationEventInit {
     @JsOverlay
     @Nonnull
-    default Builder action(@Nonnull final String action) {
-      setAction( action );
+    default Builder notification(@Nonnull final Notification notification) {
+      setNotification( notification );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder notification(@Nonnull final Notification notification) {
-      setNotification( notification );
+    default Builder action(@Nonnull final String action) {
+      setAction( action );
       return this;
     }
 

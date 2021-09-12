@@ -206,6 +206,9 @@ public class HTMLElement extends Element {
   @JsNullable
   public EventHandler onclose;
 
+  @JsNullable
+  public EventHandler oncontextlost;
+
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
@@ -214,6 +217,9 @@ public class HTMLElement extends Element {
    */
   @JsNullable
   public PointerEventHandler oncontextmenu;
+
+  @JsNullable
+  public EventHandler oncontextrestored;
 
   /**
    * The oncopy property of the HTMLElement interface is an EventHandler that processes copy events.

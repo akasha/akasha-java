@@ -23,8 +23,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
   @JsOverlay
   @Nonnull
-  static Builder create(final int rtpTimestamp, final int source, final double timestamp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).rtpTimestamp( rtpTimestamp ).source( source ).timestamp( timestamp );
+  static Builder create(final double timestamp, final int source, final int rtpTimestamp) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).timestamp( timestamp ).source( source ).rtpTimestamp( rtpTimestamp );
   }
 
   /**
@@ -41,28 +41,15 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
   )
   interface Builder extends RTCRtpSynchronizationSource {
     /**
-     * The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source.
+     * The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.
      *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel">RTCRtpContributingSource.audioLevel - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource-audiolevel">audioLevel - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp">RTCRtpContributingSource.timestamp - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource-timestamp">timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
      */
     @JsOverlay
     @Nonnull
-    default Builder audioLevel(final double audioLevel) {
-      setAudioLevel( audioLevel );
-      return this;
-    }
-
-    /**
-     * The read-only rtpTimestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the source-generated time at which the media contained int he packet was first sampled or obtained.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp">RTCRtpContributingSource.rtpTimestamp - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource-rtptimestamp">rtpTimestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder rtpTimestamp(final int rtpTimestamp) {
-      setRtpTimestamp( rtpTimestamp );
+    default Builder timestamp(final double timestamp) {
+      setTimestamp( timestamp );
       return this;
     }
 
@@ -80,15 +67,28 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     }
 
     /**
-     * The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.
+     * The read-only rtpTimestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the source-generated time at which the media contained int he packet was first sampled or obtained.
      *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp">RTCRtpContributingSource.timestamp - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource-timestamp">timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp">RTCRtpContributingSource.rtpTimestamp - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource-rtptimestamp">rtpTimestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
      */
     @JsOverlay
     @Nonnull
-    default Builder timestamp(final double timestamp) {
-      setTimestamp( timestamp );
+    default Builder rtpTimestamp(final int rtpTimestamp) {
+      setRtpTimestamp( rtpTimestamp );
+      return this;
+    }
+
+    /**
+     * The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source.
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel">RTCRtpContributingSource.audioLevel - MDN</a>
+     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource-audiolevel">audioLevel - WebRTC 1.0: Real-time Communication Between Browsers</a>
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder audioLevel(final double audioLevel) {
+      setAudioLevel( audioLevel );
       return this;
     }
   }

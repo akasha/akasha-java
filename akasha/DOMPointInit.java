@@ -10,10 +10,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The DOMPointInit dictionary is used to provide the values of the coordinates and perspective when creating and JSONifying a DOMPoint or DOMPointReadOnly object.
+ * The static DOMPoint method fromPoint() creates and returns a new mutable DOMPoint object given a source point.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit">DOMPointInit - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#dictdef-dompointinit">(Geometry Interfaces 1) # dictdef-dompointinit</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-frompoint">(Geometry Interfaces 1) # dom-dompoint-frompoint</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -109,10 +109,10 @@ public interface DOMPointInit {
   void setZ(double z);
 
   /**
-   * The DOMPointInit dictionary is used to provide the values of the coordinates and perspective when creating and JSONifying a DOMPoint or DOMPointReadOnly object.
+   * The static DOMPoint method fromPoint() creates and returns a new mutable DOMPoint object given a source point.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit">DOMPointInit - MDN</a>
-   * @see <a href="https://drafts.fxtf.org/geometry/#dictdef-dompointinit">(Geometry Interfaces 1) # dictdef-dompointinit</a>
+   * @see <a href="https://drafts.fxtf.org/geometry/#dom-dompoint-frompoint">(Geometry Interfaces 1) # dom-dompoint-frompoint</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

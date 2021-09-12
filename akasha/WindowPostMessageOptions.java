@@ -17,7 +17,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "WindowPostMessageOptions"
 )
-public interface WindowPostMessageOptions extends PostMessageOptions {
+public interface WindowPostMessageOptions extends StructuredSerializeOptions {
   @JsOverlay
   @Nonnull
   static Builder create() {

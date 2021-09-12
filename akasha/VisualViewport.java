@@ -3,6 +3,7 @@ package akasha;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -113,7 +114,7 @@ public class VisualViewport extends EventTarget {
   @JsProperty(
       name = "segments"
   )
-  @Nonnull
+  @Nullable
   public native JsArray<DOMRect> segments();
 
   /**

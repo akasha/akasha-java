@@ -586,6 +586,20 @@ public class Navigator extends JsObject {
    */
   public native boolean vibrate(@Nonnull double[] pattern);
 
+  /**
+   * The Navigator.canShare() method of the Web Share API returns true if a call to navigator.share() would succeed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/canShare">Navigator.canShare - MDN</a>
+   */
+  public native boolean canShare(@Nonnull ShareData data);
+
+  /**
+   * The Navigator.canShare() method of the Web Share API returns true if a call to navigator.share() would succeed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/canShare">Navigator.canShare - MDN</a>
+   */
+  public native boolean canShare();
+
   @JsOverlay
   public final boolean isShareSupported() {
     return "true".equals( System.getProperty( "akasha.is__Navigator_share__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_share__supported" ) ) ? false : Js.asPropertyMap( this ).has( "share" );

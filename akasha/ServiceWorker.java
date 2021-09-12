@@ -78,7 +78,7 @@ public class ServiceWorker extends EventTarget implements ExtendableMessageEvent
       @Nonnull Transferable[] transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull PostMessageOptions options);
+      @Nonnull StructuredSerializeOptions options);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message);
 

@@ -35,6 +35,12 @@ public class OffscreenCanvas extends EventTarget implements TexImageSource, GPUI
    */
   public int height;
 
+  @JsNullable
+  public EventHandler oncontextlost;
+
+  @JsNullable
+  public EventHandler oncontextrestored;
+
   /**
    * The width property returns and sets the width of an OffscreenCanvas object.
    *

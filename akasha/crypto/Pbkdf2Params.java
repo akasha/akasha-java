@@ -16,7 +16,6 @@ import jsinterop.base.JsPropertyMap;
  * The Pbkdf2Params dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the PBKDF2 algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params">SubtleCrypto.Pbkdf2Params - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -27,24 +26,41 @@ import jsinterop.base.JsPropertyMap;
 public interface Pbkdf2Params extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
-      final int iterations, @Nonnull final BufferSource salt) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
+  static Builder create(@Nonnull final String name, @Nonnull final BufferSource salt,
+      final int iterations, @Nonnull final AlgorithmIdentifier hash) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).salt( salt ).iterations( iterations ).hash( hash );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final JsObject hash,
-      final int iterations, @Nonnull final BufferSource salt) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
+  static Builder create(@Nonnull final String name, @Nonnull final BufferSource salt,
+      final int iterations, @Nonnull final JsObject hash) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).salt( salt ).iterations( iterations ).hash( hash );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final String hash,
-      final int iterations, @Nonnull final BufferSource salt) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
+  static Builder create(@Nonnull final String name, @Nonnull final BufferSource salt,
+      final int iterations, @Nonnull final String hash) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).salt( salt ).iterations( iterations ).hash( hash );
   }
+
+  @JsProperty(
+      name = "salt"
+  )
+  @JsNonNull
+  BufferSource salt();
+
+  @JsProperty
+  void setSalt(@JsNonNull BufferSource salt);
+
+  @JsProperty(
+      name = "iterations"
+  )
+  int iterations();
+
+  @JsProperty
+  void setIterations(int iterations);
 
   @JsProperty(
       name = "hash"
@@ -65,28 +81,10 @@ public interface Pbkdf2Params extends Algorithm {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
-  @JsProperty(
-      name = "iterations"
-  )
-  int iterations();
-
-  @JsProperty
-  void setIterations(int iterations);
-
-  @JsProperty(
-      name = "salt"
-  )
-  @JsNonNull
-  BufferSource salt();
-
-  @JsProperty
-  void setSalt(@JsNonNull BufferSource salt);
-
   /**
    * The Pbkdf2Params dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the PBKDF2 algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params">SubtleCrypto.Pbkdf2Params - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -95,6 +93,20 @@ public interface Pbkdf2Params extends Algorithm {
       name = "Pbkdf2Params"
   )
   interface Builder extends Pbkdf2Params {
+    @JsOverlay
+    @Nonnull
+    default Builder salt(@Nonnull final BufferSource salt) {
+      setSalt( salt );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder iterations(final int iterations) {
+      setIterations( iterations );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder hash(@Nonnull final AlgorithmIdentifier hash) {
@@ -113,20 +125,6 @@ public interface Pbkdf2Params extends Algorithm {
     @Nonnull
     default Builder hash(@Nonnull final String hash) {
       setHash( hash );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder iterations(final int iterations) {
-      setIterations( iterations );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder salt(@Nonnull final BufferSource salt) {
-      setSalt( salt );
       return this;
     }
 

@@ -38,14 +38,6 @@ public interface NotificationAction {
   void setAction(@JsNonNull String action);
 
   @JsProperty(
-      name = "icon"
-  )
-  String icon();
-
-  @JsProperty
-  void setIcon(@JsNonNull String icon);
-
-  @JsProperty(
       name = "title"
   )
   @JsNonNull
@@ -53,6 +45,14 @@ public interface NotificationAction {
 
   @JsProperty
   void setTitle(@JsNonNull String title);
+
+  @JsProperty(
+      name = "icon"
+  )
+  String icon();
+
+  @JsProperty
+  void setIcon(@JsNonNull String icon);
 
   /**
    * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
@@ -75,15 +75,15 @@ public interface NotificationAction {
 
     @JsOverlay
     @Nonnull
-    default Builder icon(@Nonnull final String icon) {
-      setIcon( icon );
+    default Builder title(@Nonnull final String title) {
+      setTitle( title );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder title(@Nonnull final String title) {
-      setTitle( title );
+    default Builder icon(@Nonnull final String icon) {
+      setIcon( icon );
       return this;
     }
   }

@@ -26,79 +26,80 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpSendParameters extends RTCRtpParameters {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp,
-      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs,
+      @Nonnull final String transactionId,
+      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp,
-      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs,
+      @Nonnull final String transactionId,
+      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp,
-      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs,
+      @Nonnull final String transactionId,
+      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp,
-      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs,
+      @Nonnull final String transactionId,
+      @Nonnull final JsArray<RTCRtpEncodingParameters> encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpEncodingParameters[] encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs,
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpEncodingParameters[] encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs,
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpEncodingParameters[] encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs,
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpEncodingParameters[] encodings,
-      @Nonnull final String transactionId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
+  static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs,
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
+
+  @JsProperty(
+      name = "transactionId"
+  )
+  @JsNonNull
+  String transactionId();
+
+  @JsProperty
+  void setTransactionId(@JsNonNull String transactionId);
 
   @JsProperty(
       name = "encodings"
@@ -113,15 +114,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   default void setEncodings(@Nonnull final RTCRtpEncodingParameters... encodings) {
     setEncodings( Js.<JsArray<RTCRtpEncodingParameters>>uncheckedCast( encodings ) );
   }
-
-  @JsProperty(
-      name = "transactionId"
-  )
-  @JsNonNull
-  String transactionId();
-
-  @JsProperty
-  void setTransactionId(@JsNonNull String transactionId);
 
   /**
    * The WebRTC API's RTCRtpSendParameters dictionary is used to specify the parameters for an RTCRtpSender when calling its setParameters() method.
@@ -138,6 +130,13 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   interface Builder extends RTCRtpSendParameters {
     @JsOverlay
     @Nonnull
+    default Builder transactionId(@Nonnull final String transactionId) {
+      setTransactionId( transactionId );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder encodings(@Nonnull final JsArray<RTCRtpEncodingParameters> encodings) {
       setEncodings( encodings );
       return this;
@@ -147,27 +146,6 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
     @Nonnull
     default Builder encodings(@Nonnull final RTCRtpEncodingParameters... encodings) {
       setEncodings( encodings );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder transactionId(@Nonnull final String transactionId) {
-      setTransactionId( transactionId );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder codecs(@Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
-      setCodecs( codecs );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder codecs(@Nonnull final RTCRtpCodecParameters... codecs) {
-      setCodecs( codecs );
       return this;
     }
 
@@ -191,6 +169,20 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
     @Nonnull
     default Builder rtcp(@Nonnull final RTCRtcpParameters rtcp) {
       setRtcp( rtcp );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder codecs(@Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
+      setCodecs( codecs );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder codecs(@Nonnull final RTCRtpCodecParameters... codecs) {
+      setCodecs( codecs );
       return this;
     }
   }

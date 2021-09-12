@@ -23,34 +23,30 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpReceiveParameters extends RTCRtpParameters {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp );
+  static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp );
+  static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp );
+  static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp );
+  static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs );
   }
 
   /**
@@ -65,20 +61,6 @@ public interface RTCRtpReceiveParameters extends RTCRtpParameters {
       name = "RTCRtpReceiveParameters"
   )
   interface Builder extends RTCRtpReceiveParameters {
-    @JsOverlay
-    @Nonnull
-    default Builder codecs(@Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
-      setCodecs( codecs );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder codecs(@Nonnull final RTCRtpCodecParameters... codecs) {
-      setCodecs( codecs );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder headerExtensions(
@@ -99,6 +81,20 @@ public interface RTCRtpReceiveParameters extends RTCRtpParameters {
     @Nonnull
     default Builder rtcp(@Nonnull final RTCRtcpParameters rtcp) {
       setRtcp( rtcp );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder codecs(@Nonnull final JsArray<RTCRtpCodecParameters> codecs) {
+      setCodecs( codecs );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder codecs(@Nonnull final RTCRtpCodecParameters... codecs) {
+      setCodecs( codecs );
       return this;
     }
   }

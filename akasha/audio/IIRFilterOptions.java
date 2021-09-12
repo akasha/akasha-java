@@ -20,43 +20,29 @@ import jsinterop.base.JsPropertyMap;
 public interface IIRFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> feedback,
-      @Nonnull final JsArray<Double> feedforward) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
+  static Builder create(@Nonnull final JsArray<Double> feedforward,
+      @Nonnull final JsArray<Double> feedback) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] feedback,
-      @Nonnull final JsArray<Double> feedforward) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
+  static Builder create(@Nonnull final double[] feedforward,
+      @Nonnull final JsArray<Double> feedback) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> feedback,
-      @Nonnull final double[] feedforward) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
+  static Builder create(@Nonnull final JsArray<Double> feedforward,
+      @Nonnull final double[] feedback) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] feedback, @Nonnull final double[] feedforward) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
-  }
-
-  @JsProperty(
-      name = "feedback"
-  )
-  @JsNonNull
-  JsArray<Double> feedback();
-
-  @JsProperty
-  void setFeedback(@JsNonNull JsArray<Double> feedback);
-
-  @JsOverlay
-  default void setFeedback(@Nonnull final double... feedback) {
-    setFeedback( Js.<JsArray<Double>>uncheckedCast( feedback ) );
+  static Builder create(@Nonnull final double[] feedforward, @Nonnull final double[] feedback) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
   }
 
   @JsProperty(
@@ -73,6 +59,20 @@ public interface IIRFilterOptions extends AudioNodeOptions {
     setFeedforward( Js.<JsArray<Double>>uncheckedCast( feedforward ) );
   }
 
+  @JsProperty(
+      name = "feedback"
+  )
+  @JsNonNull
+  JsArray<Double> feedback();
+
+  @JsProperty
+  void setFeedback(@JsNonNull JsArray<Double> feedback);
+
+  @JsOverlay
+  default void setFeedback(@Nonnull final double... feedback) {
+    setFeedback( Js.<JsArray<Double>>uncheckedCast( feedback ) );
+  }
+
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -80,20 +80,6 @@ public interface IIRFilterOptions extends AudioNodeOptions {
       name = "IIRFilterOptions"
   )
   interface Builder extends IIRFilterOptions {
-    @JsOverlay
-    @Nonnull
-    default Builder feedback(@Nonnull final JsArray<Double> feedback) {
-      setFeedback( feedback );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder feedback(@Nonnull final double... feedback) {
-      setFeedback( feedback );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder feedforward(@Nonnull final JsArray<Double> feedforward) {
@@ -105,6 +91,20 @@ public interface IIRFilterOptions extends AudioNodeOptions {
     @Nonnull
     default Builder feedforward(@Nonnull final double... feedforward) {
       setFeedforward( feedforward );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder feedback(@Nonnull final JsArray<Double> feedback) {
+      setFeedback( feedback );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder feedback(@Nonnull final double... feedback) {
+      setFeedback( feedback );
       return this;
     }
 

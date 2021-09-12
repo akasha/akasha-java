@@ -16,7 +16,6 @@ import jsinterop.base.JsPropertyMap;
  * A DOMString representing the digest algorithm to use. This may be one of:
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams">SubtleCrypto.HkdfParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -28,22 +27,22 @@ public interface HkdfParams extends Algorithm {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
-      @Nonnull final BufferSource info, @Nonnull final BufferSource salt) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
+      @Nonnull final BufferSource salt, @Nonnull final BufferSource info) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).salt( salt ).info( info );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String name, @Nonnull final JsObject hash,
-      @Nonnull final BufferSource info, @Nonnull final BufferSource salt) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
+      @Nonnull final BufferSource salt, @Nonnull final BufferSource info) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).salt( salt ).info( info );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String name, @Nonnull final String hash,
-      @Nonnull final BufferSource info, @Nonnull final BufferSource salt) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
+      @Nonnull final BufferSource salt, @Nonnull final BufferSource info) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).salt( salt ).info( info );
   }
 
   @JsProperty(
@@ -66,15 +65,6 @@ public interface HkdfParams extends Algorithm {
   }
 
   @JsProperty(
-      name = "info"
-  )
-  @JsNonNull
-  BufferSource info();
-
-  @JsProperty
-  void setInfo(@JsNonNull BufferSource info);
-
-  @JsProperty(
       name = "salt"
   )
   @JsNonNull
@@ -83,11 +73,19 @@ public interface HkdfParams extends Algorithm {
   @JsProperty
   void setSalt(@JsNonNull BufferSource salt);
 
+  @JsProperty(
+      name = "info"
+  )
+  @JsNonNull
+  BufferSource info();
+
+  @JsProperty
+  void setInfo(@JsNonNull BufferSource info);
+
   /**
    * A DOMString representing the digest algorithm to use. This may be one of:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams">SubtleCrypto.HkdfParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -119,15 +117,15 @@ public interface HkdfParams extends Algorithm {
 
     @JsOverlay
     @Nonnull
-    default Builder info(@Nonnull final BufferSource info) {
-      setInfo( info );
+    default Builder salt(@Nonnull final BufferSource salt) {
+      setSalt( salt );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder salt(@Nonnull final BufferSource salt) {
-      setSalt( salt );
+    default Builder info(@Nonnull final BufferSource info) {
+      setInfo( info );
       return this;
     }
 

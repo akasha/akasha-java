@@ -238,6 +238,8 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   public native void putImageData(@Nonnull ImageData imagedata, int dx, int dy, int dirtyX,
       int dirtyY, int dirtyWidth, int dirtyHeight);
 
+  public native boolean isContextLost();
+
   public native void reset();
 
   public native void restore();

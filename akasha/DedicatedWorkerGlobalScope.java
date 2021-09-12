@@ -91,7 +91,7 @@ public class DedicatedWorkerGlobalScope extends WorkerGlobalScope {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-dedicatedworkerglobalscope-postmessage">DedicatedWorkerGlobalScope.postMessage() - HTML Living Standard</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull PostMessageOptions options);
+      @Nonnull StructuredSerializeOptions options);
 
   /**
    * The postMessage() method of the DedicatedWorkerGlobalScope interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.

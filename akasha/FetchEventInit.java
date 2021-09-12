@@ -26,6 +26,15 @@ public interface FetchEventInit extends ExtendableEventInit {
   }
 
   @JsProperty(
+      name = "request"
+  )
+  @JsNonNull
+  Request request();
+
+  @JsProperty
+  void setRequest(@JsNonNull Request request);
+
+  @JsProperty(
       name = "clientId"
   )
   String clientId();
@@ -58,15 +67,6 @@ public interface FetchEventInit extends ExtendableEventInit {
   void setReplacesClientId(@JsNonNull String replacesClientId);
 
   @JsProperty(
-      name = "request"
-  )
-  @JsNonNull
-  Request request();
-
-  @JsProperty
-  void setRequest(@JsNonNull Request request);
-
-  @JsProperty(
       name = "resultingClientId"
   )
   String resultingClientId();
@@ -81,6 +81,13 @@ public interface FetchEventInit extends ExtendableEventInit {
       name = "FetchEventInit"
   )
   interface Builder extends FetchEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder request(@Nonnull final Request request) {
+      setRequest( request );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder clientId(@Nonnull final String clientId) {
@@ -106,13 +113,6 @@ public interface FetchEventInit extends ExtendableEventInit {
     @Nonnull
     default Builder replacesClientId(@Nonnull final String replacesClientId) {
       setReplacesClientId( replacesClientId );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder request(@Nonnull final Request request) {
-      setRequest( request );
       return this;
     }
 

@@ -2,9 +2,11 @@ package akasha.xr;
 
 import akasha.EventHandler;
 import akasha.EventTarget;
+import akasha.core.Float32Array;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
@@ -26,6 +28,9 @@ import jsinterop.annotations.JsType;
 public class XRSession extends EventTarget {
   @JsNullable
   public EventHandler onend;
+
+  @JsNullable
+  public EventHandler onframeratechange;
 
   @JsNullable
   public EventHandler oninputsourceschange;
@@ -54,6 +59,12 @@ public class XRSession extends EventTarget {
   protected XRSession() {
   }
 
+  @JsProperty(
+      name = "frameRate"
+  )
+  @Nullable
+  public native Double frameRate();
+
   /**
    * The read-only inputSources property of the XRSession interface returns an XRInputSourceArray object which lists all controllers and input devices which are expressly associated with the XR device and are currently available.
    *
@@ -77,6 +88,12 @@ public class XRSession extends EventTarget {
   )
   @Nonnull
   public native XRRenderState renderState();
+
+  @JsProperty(
+      name = "supportedFrameRates"
+  )
+  @Nullable
+  public native Float32Array supportedFrameRates();
 
   /**
    * The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus.
@@ -141,4 +158,7 @@ public class XRSession extends EventTarget {
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate">XRSession.updateRenderState() - WebXR Device API</a>
    */
   public native void updateRenderState();
+
+  @JsNonNull
+  public native Promise<Void> updateTargetFrameRate(float rate);
 }

@@ -24,14 +24,6 @@ public interface ShadowRootInit {
   }
 
   @JsProperty(
-      name = "delegatesFocus"
-  )
-  boolean delegatesFocus();
-
-  @JsProperty
-  void setDelegatesFocus(boolean delegatesFocus);
-
-  @JsProperty(
       name = "mode"
   )
   @ShadowRootMode
@@ -40,6 +32,14 @@ public interface ShadowRootInit {
 
   @JsProperty
   void setMode(@ShadowRootMode @JsNonNull String mode);
+
+  @JsProperty(
+      name = "delegatesFocus"
+  )
+  boolean delegatesFocus();
+
+  @JsProperty
+  void setDelegatesFocus(boolean delegatesFocus);
 
   @JsProperty(
       name = "slotAssignment"
@@ -59,15 +59,15 @@ public interface ShadowRootInit {
   interface Builder extends ShadowRootInit {
     @JsOverlay
     @Nonnull
-    default Builder delegatesFocus(final boolean delegatesFocus) {
-      setDelegatesFocus( delegatesFocus );
+    default Builder mode(@ShadowRootMode @Nonnull final String mode) {
+      setMode( mode );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder mode(@ShadowRootMode @Nonnull final String mode) {
-      setMode( mode );
+    default Builder delegatesFocus(final boolean delegatesFocus) {
+      setDelegatesFocus( delegatesFocus );
       return this;
     }
 

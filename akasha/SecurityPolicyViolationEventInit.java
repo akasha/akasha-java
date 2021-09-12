@@ -19,12 +19,66 @@ import jsinterop.base.JsPropertyMap;
 public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@SecurityPolicyViolationEventDisposition @Nonnull final String disposition,
-      @Nonnull final String documentURI, @Nonnull final String effectiveDirective,
-      @Nonnull final String originalPolicy, final int statusCode,
-      @Nonnull final String violatedDirective) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).disposition( disposition ).documentURI( documentURI ).effectiveDirective( effectiveDirective ).originalPolicy( originalPolicy ).statusCode( statusCode ).violatedDirective( violatedDirective );
+  static Builder create(@Nonnull final String documentURI, @Nonnull final String violatedDirective,
+      @Nonnull final String effectiveDirective, @Nonnull final String originalPolicy,
+      @SecurityPolicyViolationEventDisposition @Nonnull final String disposition,
+      final int statusCode) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).documentURI( documentURI ).violatedDirective( violatedDirective ).effectiveDirective( effectiveDirective ).originalPolicy( originalPolicy ).disposition( disposition ).statusCode( statusCode );
   }
+
+  @JsProperty(
+      name = "documentURI"
+  )
+  @JsNonNull
+  String documentURI();
+
+  @JsProperty
+  void setDocumentURI(@JsNonNull String documentURI);
+
+  @JsProperty(
+      name = "violatedDirective"
+  )
+  @JsNonNull
+  String violatedDirective();
+
+  @JsProperty
+  void setViolatedDirective(@JsNonNull String violatedDirective);
+
+  @JsProperty(
+      name = "effectiveDirective"
+  )
+  @JsNonNull
+  String effectiveDirective();
+
+  @JsProperty
+  void setEffectiveDirective(@JsNonNull String effectiveDirective);
+
+  @JsProperty(
+      name = "originalPolicy"
+  )
+  @JsNonNull
+  String originalPolicy();
+
+  @JsProperty
+  void setOriginalPolicy(@JsNonNull String originalPolicy);
+
+  @JsProperty(
+      name = "disposition"
+  )
+  @SecurityPolicyViolationEventDisposition
+  @JsNonNull
+  String disposition();
+
+  @JsProperty
+  void setDisposition(@SecurityPolicyViolationEventDisposition @JsNonNull String disposition);
+
+  @JsProperty(
+      name = "statusCode"
+  )
+  int statusCode();
+
+  @JsProperty
+  void setStatusCode(int statusCode);
 
   @JsProperty(
       name = "blockedURI"
@@ -43,49 +97,12 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   void setColumnNumber(int columnNumber);
 
   @JsProperty(
-      name = "disposition"
-  )
-  @SecurityPolicyViolationEventDisposition
-  @JsNonNull
-  String disposition();
-
-  @JsProperty
-  void setDisposition(@SecurityPolicyViolationEventDisposition @JsNonNull String disposition);
-
-  @JsProperty(
-      name = "documentURI"
-  )
-  @JsNonNull
-  String documentURI();
-
-  @JsProperty
-  void setDocumentURI(@JsNonNull String documentURI);
-
-  @JsProperty(
-      name = "effectiveDirective"
-  )
-  @JsNonNull
-  String effectiveDirective();
-
-  @JsProperty
-  void setEffectiveDirective(@JsNonNull String effectiveDirective);
-
-  @JsProperty(
       name = "lineNumber"
   )
   int lineNumber();
 
   @JsProperty
   void setLineNumber(int lineNumber);
-
-  @JsProperty(
-      name = "originalPolicy"
-  )
-  @JsNonNull
-  String originalPolicy();
-
-  @JsProperty
-  void setOriginalPolicy(@JsNonNull String originalPolicy);
 
   @JsProperty(
       name = "referrer"
@@ -111,23 +128,6 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsProperty
   void setSourceFile(@JsNonNull String sourceFile);
 
-  @JsProperty(
-      name = "statusCode"
-  )
-  int statusCode();
-
-  @JsProperty
-  void setStatusCode(int statusCode);
-
-  @JsProperty(
-      name = "violatedDirective"
-  )
-  @JsNonNull
-  String violatedDirective();
-
-  @JsProperty
-  void setViolatedDirective(@JsNonNull String violatedDirective);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -135,6 +135,49 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
       name = "SecurityPolicyViolationEventInit"
   )
   interface Builder extends SecurityPolicyViolationEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder documentURI(@Nonnull final String documentURI) {
+      setDocumentURI( documentURI );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder violatedDirective(@Nonnull final String violatedDirective) {
+      setViolatedDirective( violatedDirective );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder effectiveDirective(@Nonnull final String effectiveDirective) {
+      setEffectiveDirective( effectiveDirective );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder originalPolicy(@Nonnull final String originalPolicy) {
+      setOriginalPolicy( originalPolicy );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder disposition(
+        @SecurityPolicyViolationEventDisposition @Nonnull final String disposition) {
+      setDisposition( disposition );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder statusCode(final int statusCode) {
+      setStatusCode( statusCode );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder blockedURI(@Nonnull final String blockedURI) {
@@ -151,37 +194,8 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
 
     @JsOverlay
     @Nonnull
-    default Builder disposition(
-        @SecurityPolicyViolationEventDisposition @Nonnull final String disposition) {
-      setDisposition( disposition );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder documentURI(@Nonnull final String documentURI) {
-      setDocumentURI( documentURI );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder effectiveDirective(@Nonnull final String effectiveDirective) {
-      setEffectiveDirective( effectiveDirective );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder lineNumber(final int lineNumber) {
       setLineNumber( lineNumber );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder originalPolicy(@Nonnull final String originalPolicy) {
-      setOriginalPolicy( originalPolicy );
       return this;
     }
 
@@ -203,20 +217,6 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
     @Nonnull
     default Builder sourceFile(@Nonnull final String sourceFile) {
       setSourceFile( sourceFile );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder statusCode(final int statusCode) {
-      setStatusCode( statusCode );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder violatedDirective(@Nonnull final String violatedDirective) {
-      setViolatedDirective( violatedDirective );
       return this;
     }
 

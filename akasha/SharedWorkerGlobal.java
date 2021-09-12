@@ -6,6 +6,7 @@ import akasha.crypto.Crypto;
 import akasha.idb.IDBFactory;
 import akasha.perf.Performance;
 import akasha.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -381,6 +382,15 @@ public final class SharedWorkerGlobal {
    * @see <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">self.queueMicrotask() - HTML Living Standard</a>
    */
   public static native void queueMicrotask(@Nonnull VoidFunction callback);
+
+  public static native void reportError(@DoNotAutobox @Nullable Object e);
+
+  @JsNullable
+  public static native Any structuredClone(@DoNotAutobox @Nullable Object value,
+      @Nonnull StructuredSerializeOptions options);
+
+  @JsNullable
+  public static native Any structuredClone(@DoNotAutobox @Nullable Object value);
 
   /**
    * The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.

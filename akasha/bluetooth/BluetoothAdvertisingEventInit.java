@@ -27,14 +27,6 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   }
 
   @JsProperty(
-      name = "appearance"
-  )
-  int appearance();
-
-  @JsProperty
-  void setAppearance(int appearance);
-
-  @JsProperty(
       name = "device"
   )
   @JsNonNull
@@ -42,6 +34,14 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsProperty
   void setDevice(@JsNonNull BluetoothDevice device);
+
+  @JsProperty(
+      name = "appearance"
+  )
+  int appearance();
+
+  @JsProperty
+  void setAppearance(int appearance);
 
   @JsProperty(
       name = "manufacturerData"
@@ -105,15 +105,15 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   interface Builder extends BluetoothAdvertisingEventInit {
     @JsOverlay
     @Nonnull
-    default Builder appearance(final int appearance) {
-      setAppearance( appearance );
+    default Builder device(@Nonnull final BluetoothDevice device) {
+      setDevice( device );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder device(@Nonnull final BluetoothDevice device) {
-      setDevice( device );
+    default Builder appearance(final int appearance) {
+      setAppearance( appearance );
       return this;
     }
 

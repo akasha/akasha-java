@@ -11,7 +11,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
+ * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
  * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>
@@ -214,7 +214,7 @@ public interface EffectTiming {
   void setIterations(double iterations);
 
   /**
-   * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
+   * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>

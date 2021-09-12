@@ -29,6 +29,15 @@ public interface AudioParamDescriptor {
   }
 
   @JsProperty(
+      name = "name"
+  )
+  @JsNonNull
+  String name();
+
+  @JsProperty
+  void setName(@JsNonNull String name);
+
+  @JsProperty(
       name = "automationRate"
   )
   @AutomationRate
@@ -61,15 +70,6 @@ public interface AudioParamDescriptor {
   @JsProperty
   void setMinValue(float minValue);
 
-  @JsProperty(
-      name = "name"
-  )
-  @JsNonNull
-  String name();
-
-  @JsProperty
-  void setName(@JsNonNull String name);
-
   /**
    * The AudioParamDescriptor dictionary of the Web Audio API specifies properties for AudioParam objects.
    *
@@ -82,6 +82,13 @@ public interface AudioParamDescriptor {
       name = "AudioParamDescriptor"
   )
   interface Builder extends AudioParamDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder automationRate(@AutomationRate @Nonnull final String automationRate) {
@@ -107,13 +114,6 @@ public interface AudioParamDescriptor {
     @Nonnull
     default Builder minValue(final float minValue) {
       setMinValue( minValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

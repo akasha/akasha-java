@@ -13,7 +13,6 @@ import jsinterop.base.JsPropertyMap;
  * The RsaPssParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify(), when using the RSA-PSS algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RsaPssParams">RsaPssParams - MDN</a>
- * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaPssParams">SubtleCrypto.RsaPssParams - Web Cryptography API</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,7 +39,6 @@ public interface RsaPssParams extends Algorithm {
    * The RsaPssParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify(), when using the RSA-PSS algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RsaPssParams">RsaPssParams - MDN</a>
-   * @see <a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaPssParams">SubtleCrypto.RsaPssParams - Web Cryptography API</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -1,20 +1,19 @@
 package akasha.gpu;
 
-import akasha.core.JsObject;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
 
-@Generated("org.realityforge.webtack")
-@ApiStatus.Experimental
 @JsType(
     isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "GPUShaderStage"
+    name = "GPUShaderStage",
+    namespace = JsPackage.GLOBAL
 )
-public class GPUShaderStage extends JsObject {
+@Generated("org.realityforge.webtack")
+@ApiStatus.Experimental
+public final class GPUShaderStage {
   @JsOverlay
   public static final int COMPUTE = 0x4;
 
@@ -24,6 +23,6 @@ public class GPUShaderStage extends JsObject {
   @JsOverlay
   public static final int VERTEX = 0x1;
 
-  protected GPUShaderStage() {
+  private GPUShaderStage() {
   }
 }

@@ -216,6 +216,9 @@ public class Document extends Node implements IntersectionRoot {
   @JsNullable
   public EventHandler onclose;
 
+  @JsNullable
+  public EventHandler oncontextlost;
+
   /**
    * The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events.
    *
@@ -224,6 +227,9 @@ public class Document extends Node implements IntersectionRoot {
    */
   @JsNullable
   public EventHandler oncontextmenu;
+
+  @JsNullable
+  public EventHandler oncontextrestored;
 
   @JsNullable
   public ClipboardEventHandler oncopy;

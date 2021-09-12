@@ -4,12 +4,13 @@ import akasha.core.Float32Array;
 import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
+ * The WebXR Device API's XRView interface describes a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRView">XRView - MDN</a>
  * @see <a href="https://immersive-web.github.io/webxr/#xrview-interface"># xrview-interface</a>
@@ -49,6 +50,12 @@ public class XRView extends JsObject {
   @Nonnull
   public native Float32Array projectionMatrix();
 
+  @JsProperty(
+      name = "recommendedViewportScale"
+  )
+  @Nullable
+  public native Double recommendedViewportScale();
+
   /**
    * The read-only transform property of the XRView interface is an XRRigidTransform object which provides the position and orientation of the viewpoint relative to the XRReferenceSpace specified when the XRFrame.getViewerPose() method was called to obtain the view object.
    *
@@ -60,4 +67,6 @@ public class XRView extends JsObject {
   )
   @Nonnull
   public native XRRigidTransform transform();
+
+  public native void requestViewportScale(@Nullable Double scale);
 }

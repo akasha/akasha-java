@@ -24,17 +24,18 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodecCapability {
   @JsOverlay
   @Nonnull
-  static Builder create(final int clockRate, @Nonnull final String mimeType) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType );
+  static Builder create(@Nonnull final String mimeType, final int clockRate) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mimeType( mimeType ).clockRate( clockRate );
   }
 
   @JsProperty(
-      name = "channels"
+      name = "mimeType"
   )
-  int channels();
+  @JsNonNull
+  String mimeType();
 
   @JsProperty
-  void setChannels(int channels);
+  void setMimeType(@JsNonNull String mimeType);
 
   @JsProperty(
       name = "clockRate"
@@ -45,13 +46,12 @@ public interface RTCRtpCodecCapability {
   void setClockRate(int clockRate);
 
   @JsProperty(
-      name = "mimeType"
+      name = "channels"
   )
-  @JsNonNull
-  String mimeType();
+  int channels();
 
   @JsProperty
-  void setMimeType(@JsNonNull String mimeType);
+  void setChannels(int channels);
 
   @JsProperty(
       name = "sdpFmtpLine"
@@ -75,8 +75,8 @@ public interface RTCRtpCodecCapability {
   interface Builder extends RTCRtpCodecCapability {
     @JsOverlay
     @Nonnull
-    default Builder channels(final int channels) {
-      setChannels( channels );
+    default Builder mimeType(@Nonnull final String mimeType) {
+      setMimeType( mimeType );
       return this;
     }
 
@@ -89,8 +89,8 @@ public interface RTCRtpCodecCapability {
 
     @JsOverlay
     @Nonnull
-    default Builder mimeType(@Nonnull final String mimeType) {
-      setMimeType( mimeType );
+    default Builder channels(final int channels) {
+      setChannels( channels );
       return this;
     }
 

@@ -20,81 +20,82 @@ import jsinterop.base.JsPropertyMap;
 public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> allowedManufacturerData,
-      @Nonnull final StringOrUUIDArrayUnion allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final StringOrUUIDArrayUnion allowedServices,
+      @Nonnull final JsArray<Double> allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] allowedManufacturerData,
-      @Nonnull final StringOrUUIDArrayUnion allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final String allowedServices,
+      @Nonnull final JsArray<Double> allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> allowedManufacturerData,
-      @Nonnull final String allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final JsArray<String> allowedServices,
+      @Nonnull final JsArray<Double> allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] allowedManufacturerData,
-      @Nonnull final String allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final String[] allowedServices,
+      @Nonnull final JsArray<Double> allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> allowedManufacturerData,
-      @Nonnull final JsArray<String> allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final StringOrUUIDArrayUnion allowedServices,
+      @Nonnull final double[] allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] allowedManufacturerData,
-      @Nonnull final JsArray<String> allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final String allowedServices, @Nonnull final double[] allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> allowedManufacturerData,
-      @Nonnull final String[] allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final JsArray<String> allowedServices,
+      @Nonnull final double[] allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] allowedManufacturerData,
-      @Nonnull final String[] allowedServices, @Nonnull final String deviceId,
-      final boolean mayUseGATT) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedManufacturerData( allowedManufacturerData ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
+      @Nonnull final String[] allowedServices, @Nonnull final double[] allowedManufacturerData) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsProperty(
-      name = "allowedManufacturerData"
+      name = "deviceId"
   )
   @JsNonNull
-  JsArray<Double> allowedManufacturerData();
+  String deviceId();
 
   @JsProperty
-  void setAllowedManufacturerData(@JsNonNull JsArray<Double> allowedManufacturerData);
+  void setDeviceId(@JsNonNull String deviceId);
 
-  @JsOverlay
-  default void setAllowedManufacturerData(@Nonnull final double... allowedManufacturerData) {
-    setAllowedManufacturerData( Js.<JsArray<Double>>uncheckedCast( allowedManufacturerData ) );
-  }
+  @JsProperty(
+      name = "mayUseGATT"
+  )
+  boolean mayUseGATT();
+
+  @JsProperty
+  void setMayUseGATT(boolean mayUseGATT);
 
   @JsProperty(
       name = "allowedServices"
@@ -121,21 +122,18 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsProperty(
-      name = "deviceId"
+      name = "allowedManufacturerData"
   )
   @JsNonNull
-  String deviceId();
+  JsArray<Double> allowedManufacturerData();
 
   @JsProperty
-  void setDeviceId(@JsNonNull String deviceId);
+  void setAllowedManufacturerData(@JsNonNull JsArray<Double> allowedManufacturerData);
 
-  @JsProperty(
-      name = "mayUseGATT"
-  )
-  boolean mayUseGATT();
-
-  @JsProperty
-  void setMayUseGATT(boolean mayUseGATT);
+  @JsOverlay
+  default void setAllowedManufacturerData(@Nonnull final double... allowedManufacturerData) {
+    setAllowedManufacturerData( Js.<JsArray<Double>>uncheckedCast( allowedManufacturerData ) );
+  }
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -146,16 +144,15 @@ public interface AllowedBluetoothDevice {
   interface Builder extends AllowedBluetoothDevice {
     @JsOverlay
     @Nonnull
-    default Builder allowedManufacturerData(
-        @Nonnull final JsArray<Double> allowedManufacturerData) {
-      setAllowedManufacturerData( allowedManufacturerData );
+    default Builder deviceId(@Nonnull final String deviceId) {
+      setDeviceId( deviceId );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder allowedManufacturerData(@Nonnull final double... allowedManufacturerData) {
-      setAllowedManufacturerData( allowedManufacturerData );
+    default Builder mayUseGATT(final boolean mayUseGATT) {
+      setMayUseGATT( mayUseGATT );
       return this;
     }
 
@@ -189,15 +186,16 @@ public interface AllowedBluetoothDevice {
 
     @JsOverlay
     @Nonnull
-    default Builder deviceId(@Nonnull final String deviceId) {
-      setDeviceId( deviceId );
+    default Builder allowedManufacturerData(
+        @Nonnull final JsArray<Double> allowedManufacturerData) {
+      setAllowedManufacturerData( allowedManufacturerData );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder mayUseGATT(final boolean mayUseGATT) {
-      setMayUseGATT( mayUseGATT );
+    default Builder allowedManufacturerData(@Nonnull final double... allowedManufacturerData) {
+      setAllowedManufacturerData( allowedManufacturerData );
       return this;
     }
   }

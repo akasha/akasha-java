@@ -13,7 +13,7 @@ import jsinterop.base.Js;
  * The PermissionStatus interface of the Permissions API provides the state of an object and an event handler for monitoring changes to said state.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus">PermissionStatus - MDN</a>
- * @see <a href="https://w3c.github.io/permissions/#status-of-a-permission"># status-of-a-permission</a>
+ * @see <a href="https://w3c.github.io/permissions/#permissionstatus-interface"># permissionstatus-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,6 +32,13 @@ public class PermissionStatus extends EventTarget {
 
   protected PermissionStatus() {
   }
+
+  @JsProperty(
+      name = "name"
+  )
+  @Nonnull
+  @PermissionName
+  public native String name();
 
   /**
    * The state read-only property of the PermissionStatus interface returns the state of a requested permission. This property returns one of 'granted', 'denied', or 'prompt'.

@@ -31,20 +31,20 @@ public interface OfflineAudioContextOptions {
   void setLength(int length);
 
   @JsProperty(
-      name = "numberOfChannels"
-  )
-  int numberOfChannels();
-
-  @JsProperty
-  void setNumberOfChannels(int numberOfChannels);
-
-  @JsProperty(
       name = "sampleRate"
   )
   float sampleRate();
 
   @JsProperty
   void setSampleRate(float sampleRate);
+
+  @JsProperty(
+      name = "numberOfChannels"
+  )
+  int numberOfChannels();
+
+  @JsProperty
+  void setNumberOfChannels(int numberOfChannels);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -62,15 +62,15 @@ public interface OfflineAudioContextOptions {
 
     @JsOverlay
     @Nonnull
-    default Builder numberOfChannels(final int numberOfChannels) {
-      setNumberOfChannels( numberOfChannels );
+    default Builder sampleRate(final float sampleRate) {
+      setSampleRate( sampleRate );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder sampleRate(final float sampleRate) {
-      setSampleRate( sampleRate );
+    default Builder numberOfChannels(final int numberOfChannels) {
+      setNumberOfChannels( numberOfChannels );
       return this;
     }
   }
