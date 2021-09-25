@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCDataChannelEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCDataChannel channel) {
+  static Builder channel(@Nonnull final RTCDataChannel channel) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).channel( channel );
   }
 

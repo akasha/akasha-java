@@ -13,7 +13,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * A DOMString representing the digest algorithm to use. This may be one of:
+ * A DOMString. This should be set to HKDF.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
  */
@@ -83,7 +83,7 @@ public interface HkdfParams extends Algorithm {
   void setInfo(@JsNonNull BufferSource info);
 
   /**
-   * A DOMString representing the digest algorithm to use. This may be one of:
+   * A DOMString. This should be set to HKDF.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
    */

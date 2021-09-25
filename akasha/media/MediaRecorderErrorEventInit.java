@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaRecorderErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final DOMException error) {
+  static Builder error(@Nonnull final DOMException error) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 

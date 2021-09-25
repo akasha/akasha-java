@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ShadowRootInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@ShadowRootMode @Nonnull final String mode) {
+  static Builder mode(@ShadowRootMode @Nonnull final String mode) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mode( mode );
   }
 

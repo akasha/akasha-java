@@ -11,10 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.
+ * The AudioNode interface is a generic interface for representing an audio processing module.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions">AudioNodeOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNodeOptions"># AudioNodeOptions</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNode"># AudioNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -56,10 +56,10 @@ public interface AudioNodeOptions {
   void setChannelInterpretation(@ChannelInterpretation @JsNonNull String channelInterpretation);
 
   /**
-   * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.
+   * The AudioNode interface is a generic interface for representing an audio processing module.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions">AudioNodeOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNodeOptions"># AudioNodeOptions</a>
+   * @see <a href="https://webaudio.github.io/web-audio-api/#AudioNode"># AudioNode</a>
    */
   @Generated("org.realityforge.webtack")
   @JsType(

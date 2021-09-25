@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BluetoothDevice device) {
+  static Builder device(@Nonnull final BluetoothDevice device) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).device( device );
   }
 

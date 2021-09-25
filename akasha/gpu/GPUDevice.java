@@ -1,15 +1,18 @@
 package akasha.gpu;
 
-import akasha.EventHandler;
+import akasha.AddEventListenerOptions;
+import akasha.EventListenerOptions;
 import akasha.EventTarget;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 import org.jetbrains.annotations.ApiStatus;
 
 @Generated("org.realityforge.webtack")
@@ -24,7 +27,7 @@ public class GPUDevice extends EventTarget {
   public String label;
 
   @JsNullable
-  public EventHandler onuncapturederror;
+  public GPUUncapturedErrorEventHandler onuncapturederror;
 
   protected GPUDevice() {
   }
@@ -119,4 +122,42 @@ public class GPUDevice extends EventTarget {
   public native Promise<GPUError> popErrorScope();
 
   public native void pushErrorScope(@GPUErrorFilter @Nonnull String filter);
+
+  @JsOverlay
+  public final void addUncapturederrorListener(
+      @Nonnull final GPUUncapturedErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "uncapturederror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUncapturederrorListener(
+      @Nonnull final GPUUncapturedErrorEventListener callback, final boolean useCapture) {
+    addEventListener( "uncapturederror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addUncapturederrorListener(
+      @Nonnull final GPUUncapturedErrorEventListener callback) {
+    addEventListener( "uncapturederror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUncapturederrorListener(
+      @Nonnull final GPUUncapturedErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "uncapturederror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUncapturederrorListener(
+      @Nonnull final GPUUncapturedErrorEventListener callback, final boolean useCapture) {
+    removeEventListener( "uncapturederror", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeUncapturederrorListener(
+      @Nonnull final GPUUncapturedErrorEventListener callback) {
+    removeEventListener( "uncapturederror", Js.cast( callback ) );
+  }
 }

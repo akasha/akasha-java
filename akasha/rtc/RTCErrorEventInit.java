@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCError error) {
+  static Builder error(@Nonnull final RTCError error) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 

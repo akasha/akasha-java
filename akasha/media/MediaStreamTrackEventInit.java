@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaStreamTrackEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final MediaStreamTrack track) {
+  static Builder track(@Nonnull final MediaStreamTrack track) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).track( track );
   }
 

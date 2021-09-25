@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCSessionDescriptionInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@RTCSdpType @Nonnull final String type) {
+  static Builder type(@RTCSdpType @Nonnull final String type) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).type( type );
   }
 

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@SpeechRecognitionErrorCode @Nonnull final String error) {
+  static Builder error(@SpeechRecognitionErrorCode @Nonnull final String error) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 

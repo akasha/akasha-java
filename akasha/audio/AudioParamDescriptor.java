@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioParamDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name) {
+  static Builder name(@Nonnull final String name) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 

@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBufferBinding extends GPUBindingResource {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUBuffer buffer) {
+  static Builder buffer(@Nonnull final GPUBuffer buffer) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).buffer( buffer );
   }
 

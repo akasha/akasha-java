@@ -10,7 +10,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.
+ * The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Interactive Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate - MDN</a>
  * @see <a href="https://w3c.github.io/webrtc-pc/#rtcicecandidate-interface">(WebRTC 1.0) # rtcicecandidate-interface</a>

@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRSessionSupportedPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@PermissionName @Nonnull final String name) {
+  static Builder name(@PermissionName @Nonnull final String name) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 

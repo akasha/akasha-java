@@ -22,7 +22,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUUncapturedErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUError error) {
+  static Builder error(@Nonnull final GPUError error) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 

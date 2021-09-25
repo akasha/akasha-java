@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechSynthesisEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final SpeechSynthesisUtterance utterance) {
+  static Builder utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).utterance( utterance );
   }
 

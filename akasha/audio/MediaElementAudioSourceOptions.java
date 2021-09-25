@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaElementAudioSourceOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final HTMLMediaElement mediaElement) {
+  static Builder mediaElement(@Nonnull final HTMLMediaElement mediaElement) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mediaElement( mediaElement );
   }
 

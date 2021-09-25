@@ -22,13 +22,13 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUPipelineLayoutDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<GPUBindGroupLayout> bindGroupLayouts) {
+  static Builder bindGroupLayouts(@Nonnull final JsArray<GPUBindGroupLayout> bindGroupLayouts) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bindGroupLayouts( bindGroupLayouts );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUBindGroupLayout[] bindGroupLayouts) {
+  static Builder bindGroupLayouts(@Nonnull final GPUBindGroupLayout[] bindGroupLayouts) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bindGroupLayouts( bindGroupLayouts );
   }
 

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface NotificationEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Notification notification) {
+  static Builder notification(@Nonnull final Notification notification) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).notification( notification );
   }
 

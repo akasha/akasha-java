@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothManufacturerDataFilterInit extends BluetoothDataFilterInit {
   @JsOverlay
   @Nonnull
-  static Builder create(final int companyIdentifier) {
+  static Builder companyIdentifier(final int companyIdentifier) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).companyIdentifier( companyIdentifier );
   }
 

@@ -10,7 +10,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * A Number &mdash; the length in bits of the key to generate. This must be one of: 128, 192, or 256.
+ * A DOMString. This should be set to AES-CBC, AES-CTR, AES-GCM, or AES-KW, depending on the algorithm you want to use.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams - MDN</a>
  */
@@ -36,7 +36,7 @@ public interface AesKeyGenParams extends Algorithm {
   void setLength(int length);
 
   /**
-   * A Number &mdash; the length in bits of the key to generate. This must be one of: 128, 192, or 256.
+   * A DOMString. This should be set to AES-CBC, AES-CTR, AES-GCM, or AES-KW, depending on the algorithm you want to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams - MDN</a>
    */

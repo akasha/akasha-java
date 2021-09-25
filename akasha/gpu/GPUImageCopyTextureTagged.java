@@ -22,7 +22,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUTexture texture) {
+  static Builder texture(@Nonnull final GPUTexture texture) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).texture( texture );
   }
 

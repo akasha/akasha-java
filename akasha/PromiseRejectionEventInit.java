@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Promise<Any> promise) {
+  static Builder promise(@Nonnull final Promise<Any> promise) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).promise( promise );
   }
 

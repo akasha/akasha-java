@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GenerateTestReportParameters {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String message) {
+  static Builder message(@Nonnull final String message) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).message( message );
   }
 

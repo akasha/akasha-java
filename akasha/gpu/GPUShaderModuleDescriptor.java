@@ -22,7 +22,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@WGSL @Nonnull final String code) {
+  static Builder code(@WGSL @Nonnull final String code) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).code( code );
   }
 

@@ -22,7 +22,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUImageCopyExternalImage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUImageCopyExternalImageSource source) {
+  static Builder source(@Nonnull final GPUImageCopyExternalImageSource source) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
   }
 

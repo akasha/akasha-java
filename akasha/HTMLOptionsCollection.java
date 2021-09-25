@@ -12,7 +12,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsArrayLike;
 
 /**
- * This interface inherits the methods of its parent, HTMLCollection.
+ * unsigned long. As optionally allowed by the spec, this property isn't read-only. You can either remove options from the end by lowering the value, or add blank options at the end by raising the value. Mozilla allows this, while other implementations could potentially throw a DOMException.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionsCollection">HTMLOptionsCollection - MDN</a>
  * @see <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmloptionscollection-interface">(HTML) # the-htmloptionscollection-interface</a>

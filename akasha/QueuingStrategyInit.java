@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface QueuingStrategyInit {
   @JsOverlay
   @Nonnull
-  static Builder create(final double highWaterMark) {
+  static Builder highWaterMark(final double highWaterMark) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).highWaterMark( highWaterMark );
   }
 

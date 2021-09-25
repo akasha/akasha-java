@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaStreamAudioSourceOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final MediaStream mediaStream) {
+  static Builder mediaStream(@Nonnull final MediaStream mediaStream) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mediaStream( mediaStream );
   }
 

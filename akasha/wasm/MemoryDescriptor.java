@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MemoryDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(final int initial) {
+  static Builder initial(final int initial) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).initial( initial );
   }
 

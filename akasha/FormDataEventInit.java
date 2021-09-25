@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FormDataEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final FormData formData) {
+  static Builder formData(@Nonnull final FormData formData) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).formData( formData );
   }
 

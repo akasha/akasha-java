@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCErrorInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@RTCErrorDetailType @Nonnull final String errorDetail) {
+  static Builder errorDetail(@RTCErrorDetailType @Nonnull final String errorDetail) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).errorDetail( errorDetail );
   }
 

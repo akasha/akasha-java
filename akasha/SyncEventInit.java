@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface SyncEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String tag) {
+  static Builder tag(@Nonnull final String tag) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).tag( tag );
   }
 

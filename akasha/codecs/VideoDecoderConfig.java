@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface VideoDecoderConfig {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String codec) {
+  static Builder codec(@Nonnull final String codec) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codec( codec );
   }
 

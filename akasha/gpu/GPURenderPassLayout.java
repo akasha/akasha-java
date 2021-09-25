@@ -22,13 +22,13 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<String> colorFormats) {
+  static Builder colorFormats(@Nonnull final JsArray<String> colorFormats) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String[] colorFormats) {
+  static Builder colorFormats(@Nonnull final String[] colorFormats) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
   }
 

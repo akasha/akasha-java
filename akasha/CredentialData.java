@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CredentialData {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String id) {
+  static Builder id(@Nonnull final String id) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id );
   }
 

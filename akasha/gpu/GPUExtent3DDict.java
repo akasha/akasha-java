@@ -20,7 +20,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUExtent3DDict {
   @JsOverlay
   @Nonnull
-  static Builder create(final int width) {
+  static Builder width(final int width) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).width( width );
   }
 

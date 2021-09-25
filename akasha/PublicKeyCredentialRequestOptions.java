@@ -27,7 +27,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialRequestOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BufferSource challenge) {
+  static Builder challenge(@Nonnull final BufferSource challenge) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).challenge( challenge );
   }
 

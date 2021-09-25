@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(final int errorCode) {
+  static Builder errorCode(final int errorCode) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).errorCode( errorCode );
   }
 

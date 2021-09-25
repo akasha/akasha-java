@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TokenBinding {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String status) {
+  static Builder status(@Nonnull final String status) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).status( status );
   }
 

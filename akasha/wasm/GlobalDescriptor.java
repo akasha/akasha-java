@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@ValueType @Nonnull final String value) {
+  static Builder value(@ValueType @Nonnull final String value) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).value( value );
   }
 

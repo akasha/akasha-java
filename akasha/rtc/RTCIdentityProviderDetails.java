@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityProviderDetails {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String domain) {
+  static Builder domain(@Nonnull final String domain) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).domain( domain );
   }
 

@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUColorTargetState {
   @JsOverlay
   @Nonnull
-  static Builder create(@GPUTextureFormat @Nonnull final String format) {
+  static Builder format(@GPUTextureFormat @Nonnull final String format) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format );
   }
 

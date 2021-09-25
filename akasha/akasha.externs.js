@@ -899,6 +899,10 @@ var CloseEventHandler;
  */
 var TransitionEventHandler;
 /**
+ * @typedef {function(!GPUUncapturedErrorEvent): undefined}
+ */
+var GPUUncapturedErrorEventHandler;
+/**
  * @typedef {function(!RTCDataChannelEvent): undefined}
  */
 var RTCDataChannelEventHandler;
@@ -982,6 +986,15 @@ function PointerEventListener() {}
  * @return {undefined}
  */
 PointerEventListener.prototype.handleEvent = function(event) {}
+/**
+ * @interface
+ */
+function GPUUncapturedErrorEventListener() {}
+/**
+ * @param {!GPUUncapturedErrorEvent} event
+ * @return {undefined}
+ */
+GPUUncapturedErrorEventListener.prototype.handleEvent = function(event) {}
 /**
  * @interface
  */
@@ -11006,7 +11019,7 @@ function GPUDevice() {}
 /** @type {!GPUSupportedLimits} */ GPUDevice.prototype.limits;
 /** @type {!GPUQueue} */ GPUDevice.prototype.queue;
 /** @type {!Promise<!GPUDeviceLostInfo>} */ GPUDevice.prototype.lost;
-/** @type {!NullableEventHandler} */ GPUDevice.prototype.onuncapturederror;
+/** @type {?GPUUncapturedErrorEventHandler} */ GPUDevice.prototype.onuncapturederror;
 /** @type {?string} */ GPUDevice.prototype.label;
 /**
  * @param {!string} filter

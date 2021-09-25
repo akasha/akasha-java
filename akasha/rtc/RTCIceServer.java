@@ -28,25 +28,25 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIceServer {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final StringOrStringArrayUnion urls) {
+  static Builder urls(@Nullable final StringOrStringArrayUnion urls) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String urls) {
+  static Builder urls(@Nonnull final String urls) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<String> urls) {
+  static Builder urls(@Nonnull final JsArray<String> urls) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String[] urls) {
+  static Builder urls(@Nonnull final String[] urls) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
   }
 

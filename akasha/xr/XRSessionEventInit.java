@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRSessionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final XRSession session) {
+  static Builder session(@Nonnull final XRSession session) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).session( session );
   }
 

@@ -20,19 +20,19 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothServiceDataFilterInit extends BluetoothDataFilterInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BluetoothServiceUUID service) {
+  static Builder service(@Nonnull final BluetoothServiceUUID service) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).service( service );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String service) {
+  static Builder service(@Nonnull final String service) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).service( service );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(final int service) {
+  static Builder service(final int service) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).service( service );
   }
 

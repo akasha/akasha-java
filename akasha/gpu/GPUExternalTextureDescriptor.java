@@ -22,7 +22,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUExternalTextureDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final HTMLVideoElement source) {
+  static Builder source(@Nonnull final HTMLVideoElement source) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
   }
 

@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUProgrammableStage compute) {
+  static Builder compute(@Nonnull final GPUProgrammableStage compute) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).compute( compute );
   }
 

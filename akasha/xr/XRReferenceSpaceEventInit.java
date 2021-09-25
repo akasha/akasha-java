@@ -28,7 +28,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRReferenceSpaceEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final XRReferenceSpace referenceSpace) {
+  static Builder referenceSpace(@Nonnull final XRReferenceSpace referenceSpace) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).referenceSpace( referenceSpace );
   }
 

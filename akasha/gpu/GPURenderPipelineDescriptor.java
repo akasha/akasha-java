@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUVertexState vertex) {
+  static Builder vertex(@Nonnull final GPUVertexState vertex) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).vertex( vertex );
   }
 

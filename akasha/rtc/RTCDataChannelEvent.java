@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * Also inherits properties from Event.
+ * The RTCDataChannelEvent interface represents an event related to a specific RTCDataChannel.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent">RTCDataChannelEvent - MDN</a>
  * @see <a href="https://w3c.github.io/webrtc-pc/#rtcdatachannelevent">(WebRTC 1.0) # rtcdatachannelevent</a>

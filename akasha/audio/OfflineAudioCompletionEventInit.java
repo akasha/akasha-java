@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface OfflineAudioCompletionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final AudioBuffer renderedBuffer) {
+  static Builder renderedBuffer(@Nonnull final AudioBuffer renderedBuffer) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).renderedBuffer( renderedBuffer );
   }
 

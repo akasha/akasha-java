@@ -11,7 +11,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * A DOMString representing the name of the elliptic curve to use. This may be any of the following names for NIST-approved curves:
+ * A DOMString. This should be set to ECDSA or ECDH, depending on the algorithm you want to use.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams - MDN</a>
  */
@@ -38,7 +38,7 @@ public interface EcKeyImportParams extends Algorithm {
   void setNamedCurve(@JsNonNull String namedCurve);
 
   /**
-   * A DOMString representing the name of the elliptic curve to use. This may be any of the following names for NIST-approved curves:
+   * A DOMString. This should be set to ECDSA or ECDH, depending on the algorithm you want to use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams - MDN</a>
    */

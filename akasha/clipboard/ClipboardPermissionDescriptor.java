@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@PermissionName @Nonnull final String name) {
+  static Builder name(@PermissionName @Nonnull final String name) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 

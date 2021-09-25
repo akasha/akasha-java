@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioDataCopyToOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(final int planeIndex) {
+  static Builder planeIndex(final int planeIndex) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).planeIndex( planeIndex );
   }
 

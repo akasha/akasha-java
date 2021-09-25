@@ -1,8 +1,12 @@
 package akasha.core;
 
 import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
+import akasha.lang.JsIterator;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
@@ -29,7 +33,7 @@ import jsinterop.base.JsArrayLike;
     namespace = JsPackage.GLOBAL,
     name = "Uint16Array"
 )
-public class Uint16Array extends JsObject implements IntegerTypedArray {
+public class Uint16Array extends JsObject implements IntegerTypedArray, JsIterable<Uint16Array.Entry> {
   /**
    * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
    *
@@ -249,6 +253,99 @@ public class Uint16Array extends JsObject implements IntegerTypedArray {
   public native Uint16Array subarray(int start, int end);
 
   /**
+   * The fill() method fills all the elements of a typed array from a start index to an end index with a static value. This method has the same algorithm as Array.prototype.fill(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill">TypedArray.fill - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill">(ECMAScript) # sec-%typedarray%.prototype.fill</a>
+   */
+  @JsNonNull
+  public native Uint16Array fill(int value, int start, int end);
+
+  /**
+   * The fill() method fills all the elements of a typed array from a start index to an end index with a static value. This method has the same algorithm as Array.prototype.fill(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill">TypedArray.fill - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill">(ECMAScript) # sec-%typedarray%.prototype.fill</a>
+   */
+  @JsNonNull
+  public native Uint16Array fill(int value, int start);
+
+  /**
+   * The fill() method fills all the elements of a typed array from a start index to an end index with a static value. This method has the same algorithm as Array.prototype.fill(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill">TypedArray.fill - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill">(ECMAScript) # sec-%typedarray%.prototype.fill</a>
+   */
+  @JsNonNull
+  public native Uint16Array fill(int value);
+
+  /**
+   * The includes() method determines whether a typed array includes a certain element, returning true or false as appropriate. This method has the same algorithm as Array.prototype.includes(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes">TypedArray.includes - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.includes">(ECMAScript) # sec-%typedarray%.prototype.includes</a>
+   */
+  public native boolean includes(int searchElement, int fromIndex);
+
+  /**
+   * The includes() method determines whether a typed array includes a certain element, returning true or false as appropriate. This method has the same algorithm as Array.prototype.includes(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes">TypedArray.includes - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.includes">(ECMAScript) # sec-%typedarray%.prototype.includes</a>
+   */
+  public native boolean includes(int searchElement);
+
+  /**
+   * The indexOf() method returns the first index at which a given element can be found in the typed array, or -1 if it is not present. This method has the same algorithm as Array.prototype.indexOf(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf">TypedArray.indexOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.indexof">(ECMAScript) # sec-%typedarray%.prototype.indexof</a>
+   */
+  public native int indexOf(int searchElement, int fromIndex);
+
+  /**
+   * The indexOf() method returns the first index at which a given element can be found in the typed array, or -1 if it is not present. This method has the same algorithm as Array.prototype.indexOf(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf">TypedArray.indexOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.indexof">(ECMAScript) # sec-%typedarray%.prototype.indexof</a>
+   */
+  public native int indexOf(int searchElement);
+
+  /**
+   * The lastIndexOf() method returns the last index at which a given element can be found in the typed array, or -1 if it is not present. The typed array is searched backwards, starting at fromIndex. This method has the same algorithm as Array.prototype.lastIndexOf(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf">TypedArray.lastIndexOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.lastindexof">(ECMAScript) # sec-%typedarray%.prototype.lastindexof</a>
+   */
+  public native int lastIndexOf(int searchElement, int fromIndex);
+
+  /**
+   * The lastIndexOf() method returns the last index at which a given element can be found in the typed array, or -1 if it is not present. The typed array is searched backwards, starting at fromIndex. This method has the same algorithm as Array.prototype.lastIndexOf(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf">TypedArray.lastIndexOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.lastindexof">(ECMAScript) # sec-%typedarray%.prototype.lastindexof</a>
+   */
+  public native int lastIndexOf(int searchElement);
+
+  /**
+   * The join() method joins all elements of an array into a string. This method has the same algorithm as Array.prototype.join(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join">TypedArray.join - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.join">(ECMAScript) # sec-%typedarray%.prototype.join</a>
+   */
+  @JsNonNull
+  public native String join(@Nonnull String separator);
+
+  /**
+   * The join() method joins all elements of an array into a string. This method has the same algorithm as Array.prototype.join(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join">TypedArray.join - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.join">(ECMAScript) # sec-%typedarray%.prototype.join</a>
+   */
+  @JsNonNull
+  public native String join();
+
+  /**
    * The toString() method returns a string representing the specified array and its elements. This method has the same algorithm as Array.prototype.toString(). TypedArray is one of the typed array types here.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString">TypedArray.toString - MDN</a>
@@ -259,4 +356,93 @@ public class Uint16Array extends JsObject implements IntegerTypedArray {
   )
   @JsNonNull
   public native String toString_();
+
+  /**
+   * The keys() method returns a new array iterator object that contains the keys for each index in the array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys">TypedArray.keys - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.keys">(ECMAScript) # sec-%typedarray%.prototype.keys</a>
+   */
+  @HasNoSideEffects
+  @JsNonNull
+  public native JsIterator<Double> keys();
+
+  /**
+   * The values() method returns a new array iterator object that contains the values for each index in the array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values">TypedArray.values - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.values">(ECMAScript) # sec-%typedarray%.prototype.values</a>
+   */
+  @HasNoSideEffects
+  @JsNonNull
+  public native JsIterator<Double> values();
+
+  /**
+   * The entries() method returns a new Array iterator object that contains the key/value pairs for each index in the array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries">TypedArray.entries - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.entries">(ECMAScript) # sec-%typedarray%.prototype.entries</a>
+   */
+  @HasNoSideEffects
+  @JsNonNull
+  public native JsIterator<Entry> entries();
+
+  /**
+   * The forEach() method executes a provided function once per array element. This method has the same algorithm as Array.prototype.forEach(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach">TypedArray.forEach - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.foreach">(ECMAScript) # sec-%typedarray%.prototype.foreach</a>
+   */
+  public native void forEach(@JsNonNull ForEachCallback callback);
+
+  /**
+   * The forEach() method executes a provided function once per array element. This method has the same algorithm as Array.prototype.forEach(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach">TypedArray.forEach - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.foreach">(ECMAScript) # sec-%typedarray%.prototype.foreach</a>
+   */
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
+
+  /**
+   * The forEach() method executes a provided function once per array element. This method has the same algorithm as Array.prototype.forEach(). TypedArray is one of the typed array types here.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach">TypedArray.forEach - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.foreach">(ECMAScript) # sec-%typedarray%.prototype.foreach</a>
+   */
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    public int index() {
+      return getAtAsAny( 0 ).asInt();
+    }
+
+    @JsOverlay
+    public int value() {
+      return getAtAsAny( 1 ).asInt();
+    }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(int value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(int value, int index);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(int value, int index, @JsNonNull Uint16Array iterable);
+  }
 }

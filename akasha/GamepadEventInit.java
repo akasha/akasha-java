@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GamepadEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Gamepad gamepad) {
+  static Builder gamepad(@Nonnull final Gamepad gamepad) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).gamepad( gamepad );
   }
 

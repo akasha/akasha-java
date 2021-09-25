@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BlobEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Blob data) {
+  static Builder data(@Nonnull final Blob data) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).data( data );
   }
 

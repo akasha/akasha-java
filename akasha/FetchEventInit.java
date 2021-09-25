@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FetchEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Request request) {
+  static Builder request(@Nonnull final Request request) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).request( request );
   }
 

@@ -20,13 +20,13 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothPermissionStorage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
+  static Builder allowedDevices(@Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+  static Builder allowedDevices(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 

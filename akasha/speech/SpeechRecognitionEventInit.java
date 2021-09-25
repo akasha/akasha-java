@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechRecognitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final SpeechRecognitionResultList results) {
+  static Builder results(@Nonnull final SpeechRecognitionResultList results) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).results( results );
   }
 
