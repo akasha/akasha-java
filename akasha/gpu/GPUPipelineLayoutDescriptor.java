@@ -28,7 +28,7 @@ public interface GPUPipelineLayoutDescriptor extends GPUObjectDescriptorBase {
 
   @JsOverlay
   @Nonnull
-  static Builder bindGroupLayouts(@Nonnull final GPUBindGroupLayout[] bindGroupLayouts) {
+  static Builder bindGroupLayouts(@Nonnull final GPUBindGroupLayout... bindGroupLayouts) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bindGroupLayouts( bindGroupLayouts );
   }
 

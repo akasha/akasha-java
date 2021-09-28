@@ -28,7 +28,7 @@ public interface GPUBindGroupLayoutDescriptor extends GPUObjectDescriptorBase {
 
   @JsOverlay
   @Nonnull
-  static Builder entries(@Nonnull final GPUBindGroupLayoutEntry[] entries) {
+  static Builder entries(@Nonnull final GPUBindGroupLayoutEntry... entries) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).entries( entries );
   }
 

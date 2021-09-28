@@ -26,7 +26,7 @@ public interface GPUColor {
 
   @JsOverlay
   @Nonnull
-  static GPUColor of(@Nonnull final double[] value) {
+  static GPUColor of(@Nonnull final double... value) {
     return Js.cast( value );
   }
 

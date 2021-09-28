@@ -25,7 +25,8 @@ public interface HeadersInit {
 
   @JsOverlay
   @Nonnull
-  static HeadersInit of(@Nonnull final JsArray<String>[] value) {
+  @SuppressWarnings("unchecked")
+  static HeadersInit of(@Nonnull final JsArray<String>... value) {
     return Js.cast( value );
   }
 

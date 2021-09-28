@@ -40,14 +40,14 @@ public interface RTCRtpParameters {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs) {
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters... codecs) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
-      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs) {
+      @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters... codecs) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs );
   }
 

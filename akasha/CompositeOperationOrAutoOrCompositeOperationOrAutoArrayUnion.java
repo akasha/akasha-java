@@ -32,7 +32,7 @@ public interface CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion {
   @JsOverlay
   @Nonnull
   static CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion of(
-      @Nonnull final String[] value) {
+      @Nonnull final String... value) {
     return Js.cast( value );
   }
 

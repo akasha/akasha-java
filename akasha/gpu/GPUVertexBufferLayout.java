@@ -29,7 +29,7 @@ public interface GPUVertexBufferLayout {
 
   @JsOverlay
   @Nonnull
-  static Builder create(final int arrayStride, @Nonnull final GPUVertexAttribute[] attributes) {
+  static Builder create(final int arrayStride, @Nonnull final GPUVertexAttribute... attributes) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).arrayStride( arrayStride ).attributes( attributes );
   }
 

@@ -30,7 +30,7 @@ public interface ConstrainDOMString {
 
   @JsOverlay
   @Nonnull
-  static ConstrainDOMString of(@Nonnull final String[] value) {
+  static ConstrainDOMString of(@Nonnull final String... value) {
     return Js.cast( value );
   }
 

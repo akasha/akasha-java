@@ -38,7 +38,7 @@ public interface GPULoadOpOrGPUColorUnion {
 
   @JsOverlay
   @Nonnull
-  static GPULoadOpOrGPUColorUnion of(@Nonnull final double[] value) {
+  static GPULoadOpOrGPUColorUnion of(@Nonnull final double... value) {
     return Js.cast( value );
   }
 

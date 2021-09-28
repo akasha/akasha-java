@@ -30,7 +30,7 @@ public interface GPUFragmentState extends GPUProgrammableStage {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint,
-      @Nonnull final GPUColorTargetState[] targets) {
+      @Nonnull final GPUColorTargetState... targets) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint ).targets( targets );
   }
 

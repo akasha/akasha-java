@@ -26,7 +26,7 @@ public interface BluetoothPermissionStorage {
 
   @JsOverlay
   @Nonnull
-  static Builder allowedDevices(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+  static Builder allowedDevices(@Nonnull final AllowedBluetoothDevice... allowedDevices) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 

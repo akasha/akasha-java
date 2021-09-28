@@ -29,7 +29,7 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
 
   @JsOverlay
   @Nonnull
-  static Builder colorAttachments(@Nonnull final GPURenderPassColorAttachment[] colorAttachments) {
+  static Builder colorAttachments(@Nonnull final GPURenderPassColorAttachment... colorAttachments) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorAttachments( colorAttachments );
   }
 

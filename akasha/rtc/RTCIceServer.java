@@ -46,7 +46,7 @@ public interface RTCIceServer {
 
   @JsOverlay
   @Nonnull
-  static Builder urls(@Nonnull final String[] urls) {
+  static Builder urls(@Nonnull final String... urls) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
   }
 

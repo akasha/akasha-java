@@ -26,7 +26,7 @@ public interface GPUExtent3D {
 
   @JsOverlay
   @Nonnull
-  static GPUExtent3D of(@Nonnull final double[] value) {
+  static GPUExtent3D of(@Nonnull final double... value) {
     return Js.cast( value );
   }
 

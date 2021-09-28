@@ -54,14 +54,14 @@ public interface AllowedBluetoothDevice {
   @Nonnull
   static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
       @Nonnull final StringOrUUIDArrayUnion allowedServices,
-      @Nonnull final double[] allowedManufacturerData) {
+      @Nonnull final double... allowedManufacturerData) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
-      @Nonnull final String allowedServices, @Nonnull final double[] allowedManufacturerData) {
+      @Nonnull final String allowedServices, @Nonnull final double... allowedManufacturerData) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
@@ -69,14 +69,14 @@ public interface AllowedBluetoothDevice {
   @Nonnull
   static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
       @Nonnull final JsArray<String> allowedServices,
-      @Nonnull final double[] allowedManufacturerData) {
+      @Nonnull final double... allowedManufacturerData) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final String deviceId, final boolean mayUseGATT,
-      @Nonnull final String[] allowedServices, @Nonnull final double[] allowedManufacturerData) {
+      @Nonnull final String[] allowedServices, @Nonnull final double... allowedManufacturerData) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).deviceId( deviceId ).mayUseGATT( mayUseGATT ).allowedServices( allowedServices ).allowedManufacturerData( allowedManufacturerData );
   }
 

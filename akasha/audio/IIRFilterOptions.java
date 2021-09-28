@@ -35,13 +35,13 @@ public interface IIRFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   static Builder create(@Nonnull final JsArray<Double> feedforward,
-      @Nonnull final double[] feedback) {
+      @Nonnull final double... feedback) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] feedforward, @Nonnull final double[] feedback) {
+  static Builder create(@Nonnull final double[] feedforward, @Nonnull final double... feedback) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
   }
 

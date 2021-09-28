@@ -64,7 +64,7 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   @Nonnull
   static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
       @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters... encodings) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
@@ -72,7 +72,7 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   @Nonnull
   static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
       @Nonnull final RTCRtcpParameters rtcp, @Nonnull final JsArray<RTCRtpCodecParameters> codecs,
-      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters... encodings) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
@@ -80,7 +80,7 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   @Nonnull
   static Builder create(@Nonnull final JsArray<RTCRtpHeaderExtensionParameters> headerExtensions,
       @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters... encodings) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 
@@ -88,7 +88,7 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
   @Nonnull
   static Builder create(@Nonnull final RTCRtpHeaderExtensionParameters[] headerExtensions,
       @Nonnull final RTCRtcpParameters rtcp, @Nonnull final RTCRtpCodecParameters[] codecs,
-      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters[] encodings) {
+      @Nonnull final String transactionId, @Nonnull final RTCRtpEncodingParameters... encodings) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).headerExtensions( headerExtensions ).rtcp( rtcp ).codecs( codecs ).transactionId( transactionId ).encodings( encodings );
   }
 

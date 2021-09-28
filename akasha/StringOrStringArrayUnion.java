@@ -29,7 +29,7 @@ public interface StringOrStringArrayUnion {
 
   @JsOverlay
   @Nonnull
-  static StringOrStringArrayUnion of(@Nonnull final String[] value) {
+  static StringOrStringArrayUnion of(@Nonnull final String... value) {
     return Js.cast( value );
   }
 

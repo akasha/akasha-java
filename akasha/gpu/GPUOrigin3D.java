@@ -26,7 +26,7 @@ public interface GPUOrigin3D {
 
   @JsOverlay
   @Nonnull
-  static GPUOrigin3D of(@Nonnull final double[] value) {
+  static GPUOrigin3D of(@Nonnull final double... value) {
     return Js.cast( value );
   }
 

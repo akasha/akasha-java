@@ -27,7 +27,7 @@ public interface GPURenderBundleEncoderDescriptor extends GPURenderPassLayout {
 
   @JsOverlay
   @Nonnull
-  static Builder colorFormats(@Nonnull final String[] colorFormats) {
+  static Builder colorFormats(@Nonnull final String... colorFormats) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
   }
 
