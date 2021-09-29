@@ -7,6 +7,7 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -231,8 +232,17 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.localecompare">(ECMAScript) # sec-string.prototype.localecompare</a>
    * @see <a href="https://tc39.es/ecma402/#sup-String.prototype.localeCompare">(ECMAScript Internationalization API) # sup-String.prototype.localeCompare</a>
    */
+  @JsOverlay
+  public final int localeCompare(@Nonnull final String compareString,
+      @Nonnull final String... locales) {
+    return _localeCompare( compareString, locales );
+  }
+
+  @JsMethod(
+      name = "localeCompare"
+  )
   @HasNoSideEffects
-  public native int localeCompare(@Nonnull String compareString, @Nonnull String[] locales);
+  private native int _localeCompare(@Nonnull String compareString, @Nonnull String[] locales);
 
   /**
    * The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.
@@ -510,9 +520,18 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.tolocalelowercase">(ECMAScript) # sec-string.prototype.tolocalelowercase</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocalelowercase</a>
    */
+  @JsOverlay
+  @JsNonNull
+  public final String toLocaleLowerCase(@Nonnull final String... locales) {
+    return _toLocaleLowerCase( locales );
+  }
+
+  @JsMethod(
+      name = "toLocaleLowerCase"
+  )
   @HasNoSideEffects
   @JsNonNull
-  public native String toLocaleLowerCase(@Nonnull String[] locales);
+  private native String _toLocaleLowerCase(@Nonnull String[] locales);
 
   /**
    * The toLocaleLowerCase() method returns the calling string value converted to lower case, according to any locale-specific case mappings.
@@ -543,9 +562,18 @@ public class JsString extends JsObject {
    * @see <a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.tolocaleuppercase">(ECMAScript) # sec-string.prototype.tolocaleuppercase</a>
    * @see <a href="https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase">(ECMAScript Internationalization API) # sup-string.prototype.tolocaleuppercase</a>
    */
+  @JsOverlay
+  @JsNonNull
+  public final String toLocaleUpperCase(@Nonnull final String... locales) {
+    return _toLocaleUpperCase( locales );
+  }
+
+  @JsMethod(
+      name = "toLocaleUpperCase"
+  )
   @HasNoSideEffects
   @JsNonNull
-  public native String toLocaleUpperCase(@Nonnull String[] locales);
+  private native String _toLocaleUpperCase(@Nonnull String[] locales);
 
   /**
    * The toLocaleUpperCase() method returns the calling string value converted to upper case, according to any locale-specific case mappings.

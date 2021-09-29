@@ -5,6 +5,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -81,7 +82,16 @@ public class DedicatedWorkerGlobalScope extends WorkerGlobalScope {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">DedicatedWorkerGlobalScope.postMessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-dedicatedworkerglobalscope-postmessage">DedicatedWorkerGlobalScope.postMessage() - HTML Living Standard</a>
    */
-  public native void postMessage(@DoNotAutobox @Nullable Object message,
+  @JsOverlay
+  public final void postMessage(@DoNotAutobox @Nullable final Object message,
+      @Nonnull final Transferable... transfer) {
+    _postMessage( message, transfer );
+  }
+
+  @JsMethod(
+      name = "postMessage"
+  )
+  private native void _postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull Transferable[] transfer);
 
   /**

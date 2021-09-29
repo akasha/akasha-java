@@ -5,7 +5,9 @@ import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -99,7 +101,15 @@ public class RTCRtpTransceiver extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences">RTCRtpTransceiver.setCodecPreferences - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-setcodecpreferences">RTCRtpTransceiver.setCodecPreferences() - WebRTC 1.0: Real-time Communication Between Browsers</a>
    */
-  public native void setCodecPreferences(@Nonnull RTCRtpCodecCapability[] codecs);
+  @JsOverlay
+  public final void setCodecPreferences(@Nonnull final RTCRtpCodecCapability... codecs) {
+    _setCodecPreferences( codecs );
+  }
+
+  @JsMethod(
+      name = "setCodecPreferences"
+  )
+  private native void _setCodecPreferences(@Nonnull RTCRtpCodecCapability[] codecs);
 
   /**
    * The stop() method in the RTCRtpTransceiver interface permanently stops the transceiver by stopping both the associated RTCRtpSender and RTCRtpReceiver.

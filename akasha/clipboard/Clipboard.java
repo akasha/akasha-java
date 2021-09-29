@@ -5,7 +5,9 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -58,8 +60,17 @@ public class Clipboard extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write">Clipboard.write - MDN</a>
    * @see <a href="https://w3c.github.io/clipboard-apis/#dom-clipboard-write">write() - Clipboard API and events</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native Promise<Void> write(@Nonnull ClipboardItem[] data);
+  public final Promise<Void> write(@Nonnull final ClipboardItem... data) {
+    return _write( data );
+  }
+
+  @JsMethod(
+      name = "write"
+  )
+  @JsNonNull
+  private native Promise<Void> _write(@Nonnull ClipboardItem[] data);
 
   /**
    * The Clipboard interface's writeText() property writes the specified text string to the system clipboard. Text may be read back using either read() or readText().

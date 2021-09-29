@@ -5,7 +5,9 @@ import akasha.core.Uint32Array;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -51,7 +53,16 @@ public class GPUComputePassEncoder extends JsObject {
   public native void setBindGroup(int index, @Nonnull GPUBindGroup bindGroup,
       @Nonnull JsArray<Double> dynamicOffsets);
 
-  public native void setBindGroup(int index, @Nonnull GPUBindGroup bindGroup,
+  @JsOverlay
+  public final void setBindGroup(final int index, @Nonnull final GPUBindGroup bindGroup,
+      @Nonnull final double... dynamicOffsets) {
+    _setBindGroup( index, bindGroup, dynamicOffsets );
+  }
+
+  @JsMethod(
+      name = "setBindGroup"
+  )
+  private native void _setBindGroup(int index, @Nonnull GPUBindGroup bindGroup,
       @Nonnull double[] dynamicOffsets);
 
   public native void setBindGroup(int index, @Nonnull GPUBindGroup bindGroup);

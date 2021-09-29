@@ -9,6 +9,7 @@ import akasha.EventTarget;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -216,8 +217,17 @@ public class IDBDatabase extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction">IDBDatabase.transaction - MDN</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native IDBTransaction transaction(@Nonnull String[] storeNames);
+  public final IDBTransaction transaction(@Nonnull final String... storeNames) {
+    return _transaction( storeNames );
+  }
+
+  @JsMethod(
+      name = "transaction"
+  )
+  @JsNonNull
+  private native IDBTransaction _transaction(@Nonnull String[] storeNames);
 
   @JsOverlay
   public final void addVersionchangeListener(@Nonnull final IDBVersionChangeEventListener callback,

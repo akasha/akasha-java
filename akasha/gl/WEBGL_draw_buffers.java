@@ -4,6 +4,7 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -145,5 +146,13 @@ public class WEBGL_draw_buffers extends JsObject implements WebGL1Extension {
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">WEBGL_draw_buffers - WEBGL_draw_buffers</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">glDrawBuffers - OpenGL ES 3.0</a>
    */
-  public native void drawBuffersWEBGL(@Nonnull double[] buffers);
+  @JsOverlay
+  public final void drawBuffersWEBGL(@Nonnull final double... buffers) {
+    _drawBuffersWEBGL( buffers );
+  }
+
+  @JsMethod(
+      name = "drawBuffersWEBGL"
+  )
+  private native void _drawBuffersWEBGL(@Nonnull double[] buffers);
 }

@@ -7,7 +7,9 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -181,8 +183,17 @@ public class IDBObjectStore extends JsObject implements IDBRequestSource, IDBCur
    * @see <a href="https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API 2.0</a>
    * @see <a href="https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex">createIndex() - Indexed Database API Draft</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
+  public final IDBIndex createIndex(@Nonnull final String name, @Nonnull final String... keyPath) {
+    return _createIndex( name, keyPath );
+  }
+
+  @JsMethod(
+      name = "createIndex"
+  )
+  @JsNonNull
+  private native IDBIndex _createIndex(@Nonnull String name, @Nonnull String[] keyPath);
 
   /**
    * An IDBRequest object on which subsequent events related to this operation are fired. The request.result attribute is set to undefined.

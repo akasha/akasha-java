@@ -1694,7 +1694,7 @@ public class Document extends Node implements IntersectionRoot {
    */
   @JsOverlay
   @JsNonNull
-  public final Document open(@Nonnull String unused1, @Nonnull String unused2) {
+  public final Document open(@Nonnull final String unused1, @Nonnull final String unused2) {
     return Js.uncheckedCast( _open( unused1, unused2 ) );
   }
 
@@ -1713,7 +1713,7 @@ public class Document extends Node implements IntersectionRoot {
    */
   @JsOverlay
   @JsNonNull
-  public final Document open(@Nonnull String unused1) {
+  public final Document open(@Nonnull final String unused1) {
     return Js.uncheckedCast( _open( unused1 ) );
   }
 
@@ -1751,7 +1751,8 @@ public class Document extends Node implements IntersectionRoot {
    */
   @JsOverlay
   @JsNullable
-  public final Window open(@Nonnull String url, @Nonnull String name, @Nonnull String features) {
+  public final Window open(@Nonnull final String url, @Nonnull final String name,
+      @Nonnull final String features) {
     return Js.uncheckedCast( _open( url, name, features ) );
   }
 

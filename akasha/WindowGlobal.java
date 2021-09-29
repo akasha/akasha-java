@@ -1621,7 +1621,16 @@ public final class WindowGlobal {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage">postMessage() - HTML Living Standard</a>
    */
-  public static native void postMessage(@DoNotAutobox @Nullable Object message,
+  @JsOverlay
+  public static final void postMessage(@DoNotAutobox @Nullable final Object message,
+      @Nonnull final String targetOrigin, @Nonnull final Transferable... transfer) {
+    _postMessage( message, targetOrigin, transfer );
+  }
+
+  @JsMethod(
+      name = "postMessage"
+  )
+  private static native void _postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
 
   /**

@@ -6,8 +6,10 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -32,7 +34,16 @@ public class GPUQueue extends JsObject {
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
       @Nonnull GPUImageCopyTextureTagged destination, @Nonnull JsArray<Double> copySize);
 
-  public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
+  @JsOverlay
+  public final void copyExternalImageToTexture(@Nonnull final GPUImageCopyExternalImage source,
+      @Nonnull final GPUImageCopyTextureTagged destination, @Nonnull final double... copySize) {
+    _copyExternalImageToTexture( source, destination, copySize );
+  }
+
+  @JsMethod(
+      name = "copyExternalImageToTexture"
+  )
+  private native void _copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
       @Nonnull GPUImageCopyTextureTagged destination, @Nonnull double[] copySize);
 
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
@@ -43,7 +54,15 @@ public class GPUQueue extends JsObject {
 
   public native void submit(@Nonnull JsArray<GPUCommandBuffer> commandBuffers);
 
-  public native void submit(@Nonnull GPUCommandBuffer[] commandBuffers);
+  @JsOverlay
+  public final void submit(@Nonnull final GPUCommandBuffer... commandBuffers) {
+    _submit( commandBuffers );
+  }
+
+  @JsMethod(
+      name = "submit"
+  )
+  private native void _submit(@Nonnull GPUCommandBuffer[] commandBuffers);
 
   public native void writeBuffer(@Nonnull GPUBuffer buffer, int bufferOffset,
       @Nonnull BufferSource data, int dataOffset, int size);
@@ -62,7 +81,17 @@ public class GPUQueue extends JsObject {
       @Nonnull BufferSource data, @Nonnull GPUImageDataLayout dataLayout,
       @Nonnull JsArray<Double> size);
 
-  public native void writeTexture(@Nonnull GPUImageCopyTexture destination,
+  @JsOverlay
+  public final void writeTexture(@Nonnull final GPUImageCopyTexture destination,
+      @Nonnull final BufferSource data, @Nonnull final GPUImageDataLayout dataLayout,
+      @Nonnull final double... size) {
+    _writeTexture( destination, data, dataLayout, size );
+  }
+
+  @JsMethod(
+      name = "writeTexture"
+  )
+  private native void _writeTexture(@Nonnull GPUImageCopyTexture destination,
       @Nonnull BufferSource data, @Nonnull GPUImageDataLayout dataLayout, @Nonnull double[] size);
 
   public native void writeTexture(@Nonnull GPUImageCopyTexture destination,

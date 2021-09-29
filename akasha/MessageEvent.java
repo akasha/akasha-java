@@ -5,6 +5,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -107,7 +109,18 @@ public class MessageEvent extends Event {
       @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source, @Nonnull JsArray<MessagePort> ports);
 
-  public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
+  @JsOverlay
+  public final void initMessageEvent(@Nonnull final String type, final boolean bubbles,
+      final boolean cancelable, @DoNotAutobox @Nullable final Object data,
+      @Nonnull final String origin, @Nonnull final String lastEventId,
+      @Nullable final MessageEventSource source, @Nonnull final MessagePort... ports) {
+    _initMessageEvent( type, bubbles, cancelable, data, origin, lastEventId, source, ports );
+  }
+
+  @JsMethod(
+      name = "initMessageEvent"
+  )
+  private native void _initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source, @Nonnull MessagePort[] ports);
 

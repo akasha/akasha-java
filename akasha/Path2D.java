@@ -4,6 +4,8 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -89,6 +91,15 @@ public class Path2D extends JsObject {
   public native void roundRect(double x, double y, double w, double h,
       @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);
 
-  public native void roundRect(double x, double y, double w, double h,
+  @JsOverlay
+  public final void roundRect(final double x, final double y, final double w, final double h,
+      @Nonnull final UnrestrictedDoubleOrDOMPointInitUnion... radii) {
+    _roundRect( x, y, w, h, radii );
+  }
+
+  @JsMethod(
+      name = "roundRect"
+  )
+  private native void _roundRect(double x, double y, double w, double h,
       @Nonnull UnrestrictedDoubleOrDOMPointInitUnion[] radii);
 }

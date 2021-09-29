@@ -4,8 +4,10 @@ import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.jetbrains.annotations.ApiStatus;
@@ -43,7 +45,16 @@ public class GPUCommandEncoder extends JsObject {
   public native void copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull JsArray<Double> copySize);
 
-  public native void copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
+  @JsOverlay
+  public final void copyBufferToTexture(@Nonnull final GPUImageCopyBuffer source,
+      @Nonnull final GPUImageCopyTexture destination, @Nonnull final double... copySize) {
+    _copyBufferToTexture( source, destination, copySize );
+  }
+
+  @JsMethod(
+      name = "copyBufferToTexture"
+  )
+  private native void _copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
 
   public native void copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
@@ -55,7 +66,16 @@ public class GPUCommandEncoder extends JsObject {
   public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyBuffer destination, @Nonnull JsArray<Double> copySize);
 
-  public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
+  @JsOverlay
+  public final void copyTextureToBuffer(@Nonnull final GPUImageCopyTexture source,
+      @Nonnull final GPUImageCopyBuffer destination, @Nonnull final double... copySize) {
+    _copyTextureToBuffer( source, destination, copySize );
+  }
+
+  @JsMethod(
+      name = "copyTextureToBuffer"
+  )
+  private native void _copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyBuffer destination, @Nonnull double[] copySize);
 
   public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
@@ -67,7 +87,16 @@ public class GPUCommandEncoder extends JsObject {
   public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull JsArray<Double> copySize);
 
-  public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
+  @JsOverlay
+  public final void copyTextureToTexture(@Nonnull final GPUImageCopyTexture source,
+      @Nonnull final GPUImageCopyTexture destination, @Nonnull final double... copySize) {
+    _copyTextureToTexture( source, destination, copySize );
+  }
+
+  @JsMethod(
+      name = "copyTextureToTexture"
+  )
+  private native void _copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
 
   public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,

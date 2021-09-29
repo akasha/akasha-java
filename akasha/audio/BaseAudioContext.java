@@ -11,6 +11,7 @@ import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -258,8 +259,18 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native IIRFilterNode createIIRFilter(@Nonnull JsArray<Double> feedforward,
+  public final IIRFilterNode createIIRFilter(@Nonnull final JsArray<Double> feedforward,
+      @Nonnull final double... feedback) {
+    return _createIIRFilter( feedforward, feedback );
+  }
+
+  @JsMethod(
+      name = "createIIRFilter"
+  )
+  @JsNonNull
+  private native IIRFilterNode _createIIRFilter(@Nonnull JsArray<Double> feedforward,
       @Nonnull double[] feedback);
 
   /**
@@ -267,8 +278,18 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native IIRFilterNode createIIRFilter(@Nonnull double[] feedforward,
+  public final IIRFilterNode createIIRFilter(@Nonnull final double[] feedforward,
+      @Nonnull final double... feedback) {
+    return _createIIRFilter( feedforward, feedback );
+  }
+
+  @JsMethod(
+      name = "createIIRFilter"
+  )
+  @JsNonNull
+  private native IIRFilterNode _createIIRFilter(@Nonnull double[] feedforward,
       @Nonnull double[] feedback);
 
   /**
@@ -355,8 +376,18 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
+  public final PeriodicWave createPeriodicWave(@Nonnull final JsArray<Double> real,
+      @Nonnull final double... imag) {
+    return _createPeriodicWave( real, imag );
+  }
+
+  @JsMethod(
+      name = "createPeriodicWave"
+  )
+  @JsNonNull
+  private native PeriodicWave _createPeriodicWave(@Nonnull JsArray<Double> real,
       @Nonnull double[] imag);
 
   /**
@@ -365,8 +396,18 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native PeriodicWave createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag);
+  public final PeriodicWave createPeriodicWave(@Nonnull final double[] real,
+      @Nonnull final double... imag) {
+    return _createPeriodicWave( real, imag );
+  }
+
+  @JsMethod(
+      name = "createPeriodicWave"
+  )
+  @JsNonNull
+  private native PeriodicWave _createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag);
 
   /**
    * A ScriptProcessorNode.

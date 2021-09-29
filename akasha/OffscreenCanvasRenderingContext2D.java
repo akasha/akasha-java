@@ -5,8 +5,10 @@ import akasha.lang.JsArray;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -173,7 +175,15 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
 
   public native void setLineDash(@Nonnull JsArray<Double> segments);
 
-  public native void setLineDash(@Nonnull double[] segments);
+  @JsOverlay
+  public final void setLineDash(@Nonnull final double... segments) {
+    _setLineDash( segments );
+  }
+
+  @JsMethod(
+      name = "setLineDash"
+  )
+  private native void _setLineDash(@Nonnull double[] segments);
 
   @JsNonNull
   public native DOMMatrix getTransform();
@@ -275,6 +285,15 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   public native void roundRect(double x, double y, double w, double h,
       @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);
 
-  public native void roundRect(double x, double y, double w, double h,
+  @JsOverlay
+  public final void roundRect(final double x, final double y, final double w, final double h,
+      @Nonnull final UnrestrictedDoubleOrDOMPointInitUnion... radii) {
+    _roundRect( x, y, w, h, radii );
+  }
+
+  @JsMethod(
+      name = "roundRect"
+  )
+  private native void _roundRect(double x, double y, double w, double h,
       @Nonnull UnrestrictedDoubleOrDOMPointInitUnion[] radii);
 }

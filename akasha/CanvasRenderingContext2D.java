@@ -5,8 +5,10 @@ import akasha.lang.JsArray;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -645,7 +647,16 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   public native void roundRect(double x, double y, double w, double h,
       @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);
 
-  public native void roundRect(double x, double y, double w, double h,
+  @JsOverlay
+  public final void roundRect(final double x, final double y, final double w, final double h,
+      @Nonnull final UnrestrictedDoubleOrDOMPointInitUnion... radii) {
+    _roundRect( x, y, w, h, radii );
+  }
+
+  @JsMethod(
+      name = "roundRect"
+  )
+  private native void _roundRect(double x, double y, double w, double h,
       @Nonnull UnrestrictedDoubleOrDOMPointInitUnion[] radii);
 
   /**
@@ -715,7 +726,15 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash">CanvasRenderingContext2D.setLineDash - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-setlinedash">CanvasRenderingContext2D.setLineDash - HTML Living Standard</a>
    */
-  public native void setLineDash(@Nonnull double[] segments);
+  @JsOverlay
+  public final void setLineDash(@Nonnull final double... segments) {
+    _setLineDash( segments );
+  }
+
+  @JsMethod(
+      name = "setLineDash"
+  )
+  private native void _setLineDash(@Nonnull double[] segments);
 
   /**
    * The CanvasRenderingContext2D.drawFocusIfNeeded() method of the Canvas 2D API draws a focus ring around the current or given path, if the specified element is focused.

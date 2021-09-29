@@ -241,7 +241,15 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
-  public native void set(@Nonnull double[] array);
+  @JsOverlay
+  public final void set(@Nonnull final double... array) {
+    _set( array );
+  }
+
+  @JsMethod(
+      name = "set"
+  )
+  private native void _set(@Nonnull double[] array);
 
   /**
    * The subarray() method returns a new TypedArray on the same ArrayBuffer store and with the same element types as for this TypedArray object. The begin offset is inclusive and the end offset is exclusive. TypedArray is one of the typed array types.

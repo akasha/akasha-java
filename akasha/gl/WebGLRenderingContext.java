@@ -15,6 +15,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -1070,7 +1071,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform1fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform1fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform1fv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform1fv"
+  )
+  private native void _uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1079,7 +1089,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform1iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform1iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform1iv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform1iv"
+  )
+  private native void _uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List v);
 
@@ -1088,7 +1107,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform2fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform2fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform2fv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform2fv"
+  )
+  private native void _uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1097,7 +1125,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform2iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform2iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform2iv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform2iv"
+  )
+  private native void _uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List v);
 
@@ -1106,7 +1143,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform3fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform3fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform3fv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform3fv"
+  )
+  private native void _uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1115,7 +1161,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform3iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform3iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform3iv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform3iv"
+  )
+  private native void _uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List v);
 
@@ -1124,7 +1179,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform4fv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform4fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform4fv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform4fv"
+  )
+  private native void _uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull Int32List v);
 
@@ -1133,7 +1197,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniform4iv(@Nullable WebGLUniformLocation location,
       @Nonnull JsArray<Double> v);
 
-  public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
+  @JsOverlay
+  public final void uniform4iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... v) {
+    _uniform4iv( location, v );
+  }
+
+  @JsMethod(
+      name = "uniform4iv"
+  )
+  private native void _uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] v);
 
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull Float32List value);
@@ -1144,7 +1217,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> value);
 
-  public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
+  @JsOverlay
+  public final void uniformMatrix2fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... value) {
+    _uniformMatrix2fv( location, transpose, value );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix2fv"
+  )
+  private native void _uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] value);
 
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
@@ -1156,7 +1238,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> value);
 
-  public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
+  @JsOverlay
+  public final void uniformMatrix3fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... value) {
+    _uniformMatrix3fv( location, transpose, value );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix3fv"
+  )
+  private native void _uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] value);
 
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
@@ -1168,7 +1259,16 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
   public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull JsArray<Double> value);
 
-  public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
+  @JsOverlay
+  public final void uniformMatrix4fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... value) {
+    _uniformMatrix4fv( location, transpose, value );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix4fv"
+  )
+  private native void _uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] value);
 
   /**
@@ -2185,7 +2285,15 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
 
   public native void vertexAttrib1fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib1fv(int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib1fv(final int index, @Nonnull final double... values) {
+    _vertexAttrib1fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib1fv"
+  )
+  private native void _vertexAttrib1fv(int index, @Nonnull double[] values);
 
   public native void vertexAttrib2f(int index, float x, float y);
 
@@ -2195,7 +2303,15 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
 
   public native void vertexAttrib2fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib2fv(int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib2fv(final int index, @Nonnull final double... values) {
+    _vertexAttrib2fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib2fv"
+  )
+  private native void _vertexAttrib2fv(int index, @Nonnull double[] values);
 
   public native void vertexAttrib3f(int index, float x, float y, float z);
 
@@ -2205,7 +2321,15 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
 
   public native void vertexAttrib3fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib3fv(int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib3fv(final int index, @Nonnull final double... values) {
+    _vertexAttrib3fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib3fv"
+  )
+  private native void _vertexAttrib3fv(int index, @Nonnull double[] values);
 
   public native void vertexAttrib4f(int index, float x, float y, float z, float w);
 
@@ -2215,7 +2339,15 @@ public class WebGLRenderingContext extends JsObject implements OffscreenRenderin
 
   public native void vertexAttrib4fv(int index, @Nonnull JsArray<Double> values);
 
-  public native void vertexAttrib4fv(int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib4fv(final int index, @Nonnull final double... values) {
+    _vertexAttrib4fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib4fv"
+  )
+  private native void _vertexAttrib4fv(int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.

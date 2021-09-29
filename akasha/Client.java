@@ -6,6 +6,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -91,7 +93,16 @@ public class Client extends JsObject implements ExtendableMessageEventSource {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage">Client.postMessage - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#dom-client-postmessage-message-options">postMessage() - Service Workers</a>
    */
-  public native void postMessage(@DoNotAutobox @Nullable Object message,
+  @JsOverlay
+  public final void postMessage(@DoNotAutobox @Nullable final Object message,
+      @Nonnull final Transferable... transfer) {
+    _postMessage( message, transfer );
+  }
+
+  @JsMethod(
+      name = "postMessage"
+  )
+  private native void _postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull Transferable[] transfer);
 
   /**

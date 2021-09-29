@@ -8,6 +8,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -29,7 +30,15 @@ public class CSSFontFeatureValuesMap extends JsObject implements JsIterable<CSSF
 
   public native void set(@Nonnull String featureValueName, @Nonnull JsArray<Double> values);
 
-  public native void set(@Nonnull String featureValueName, @Nonnull double[] values);
+  @JsOverlay
+  public final void set(@Nonnull final String featureValueName, @Nonnull final double... values) {
+    _set( featureValueName, values );
+  }
+
+  @JsMethod(
+      name = "set"
+  )
+  private native void _set(@Nonnull String featureValueName, @Nonnull double[] values);
 
   @JsProperty(
       name = "size"

@@ -7,6 +7,7 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -179,7 +180,16 @@ public final class Console {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
    * @see <a href="https://console.spec.whatwg.org/#table">console.table() - Console API</a>
    */
-  public static native void table(@DoNotAutobox @Nullable Object tabularData,
+  @JsOverlay
+  public static final void table(@DoNotAutobox @Nullable final Object tabularData,
+      @Nonnull final String... properties) {
+    _table( tabularData, properties );
+  }
+
+  @JsMethod(
+      name = "table"
+  )
+  private static native void _table(@DoNotAutobox @Nullable Object tabularData,
       @Nonnull String[] properties);
 
   /**

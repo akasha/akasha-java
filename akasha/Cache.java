@@ -5,7 +5,9 @@ import akasha.lang.JsArray;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -67,8 +69,17 @@ public class Cache extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll">Cache.addAll - MDN</a>
    * @see <a href="https://w3c.github.io/ServiceWorker/#cache-addAll">Cache: addAll - Service Workers</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native Promise<Void> addAll(@Nonnull RequestInfo[] requests);
+  public final Promise<Void> addAll(@Nonnull final RequestInfo... requests) {
+    return _addAll( requests );
+  }
+
+  @JsMethod(
+      name = "addAll"
+  )
+  @JsNonNull
+  private native Promise<Void> _addAll(@Nonnull RequestInfo[] requests);
 
   /**
    * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.

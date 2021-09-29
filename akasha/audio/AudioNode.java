@@ -98,7 +98,8 @@ public class AudioNode extends EventTarget {
    */
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input) {
+  public final AudioNode connect(@Nonnull final AudioNode destinationNode, final int output,
+      final int input) {
     return Js.uncheckedCast( _connect( destinationNode, output, input ) );
   }
 
@@ -118,7 +119,7 @@ public class AudioNode extends EventTarget {
    */
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull AudioNode destinationNode, int output) {
+  public final AudioNode connect(@Nonnull final AudioNode destinationNode, final int output) {
     return Js.uncheckedCast( _connect( destinationNode, output ) );
   }
 
@@ -137,7 +138,7 @@ public class AudioNode extends EventTarget {
    */
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull AudioNode destinationNode) {
+  public final AudioNode connect(@Nonnull final AudioNode destinationNode) {
     return Js.uncheckedCast( _connect( destinationNode ) );
   }
 
@@ -155,7 +156,7 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
   @JsOverlay
-  public final void connect(@Nonnull AudioParam destinationParam, int output) {
+  public final void connect(@Nonnull final AudioParam destinationParam, final int output) {
     _connect( destinationParam, output );
   }
 
@@ -174,7 +175,7 @@ public class AudioNode extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
   @JsOverlay
-  public final void connect(@Nonnull AudioParam destinationParam) {
+  public final void connect(@Nonnull final AudioParam destinationParam) {
     _connect( destinationParam );
   }
 

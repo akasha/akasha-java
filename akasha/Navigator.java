@@ -12,6 +12,7 @@ import akasha.xr.XRSystem;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -531,9 +532,20 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
    * @see <a href="https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess">requestMediaKeySystemAccess() - Encrypted Media Extensions</a>
    */
+  @JsOverlay
   @JsNonNull
-  public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
-      @Nonnull MediaKeySystemConfiguration[] supportedConfigurations);
+  public final Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(
+      @Nonnull final String keySystem,
+      @Nonnull final MediaKeySystemConfiguration... supportedConfigurations) {
+    return _requestMediaKeySystemAccess( keySystem, supportedConfigurations );
+  }
+
+  @JsMethod(
+      name = "requestMediaKeySystemAccess"
+  )
+  @JsNonNull
+  private native Promise<MediaKeySystemAccess> _requestMediaKeySystemAccess(
+      @Nonnull String keySystem, @Nonnull MediaKeySystemConfiguration[] supportedConfigurations);
 
   @JsOverlay
   public final boolean isGetGamepadsSupported() {
@@ -584,7 +596,15 @@ public class Navigator extends JsObject {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
    * @see <a href="https://dev.w3.org/2009/dap/vibration/">Vibration API</a>
    */
-  public native boolean vibrate(@Nonnull double[] pattern);
+  @JsOverlay
+  public final boolean vibrate(@Nonnull final double... pattern) {
+    return _vibrate( pattern );
+  }
+
+  @JsMethod(
+      name = "vibrate"
+  )
+  private native boolean _vibrate(@Nonnull double[] pattern);
 
   /**
    * The Navigator.canShare() method of the Web Share API returns true if a call to navigator.share() would succeed.

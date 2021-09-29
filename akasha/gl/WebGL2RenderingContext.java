@@ -16,6 +16,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -2163,7 +2164,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform1fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform1fv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform1fv"
+  )
+  private native void _uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2280,7 +2290,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform1iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform1iv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform1iv"
+  )
+  private native void _uniform1iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2398,7 +2417,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform2fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform2fv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform2fv"
+  )
+  private native void _uniform2fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2515,7 +2543,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform2iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform2iv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform2iv"
+  )
+  private native void _uniform2iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2633,7 +2670,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform3fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform3fv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform3fv"
+  )
+  private native void _uniform3fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2750,7 +2796,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform3iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform3iv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform3iv"
+  )
+  private native void _uniform3iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2868,7 +2923,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform4fv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform4fv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform4fv"
+  )
+  private native void _uniform4fv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -2985,7 +3049,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform4iv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform4iv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform4iv"
+  )
+  private native void _uniform4iv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
@@ -3104,7 +3177,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
+  @JsOverlay
+  public final void uniformMatrix2fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix2fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix2fv"
+  )
+  private native void _uniformMatrix2fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
 
   /**
@@ -3224,7 +3306,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
+  @JsOverlay
+  public final void uniformMatrix3fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix3fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix3fv"
+  )
+  private native void _uniformMatrix3fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
 
   /**
@@ -3344,7 +3435,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
+  @JsOverlay
+  public final void uniformMatrix4fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix4fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix4fv"
+  )
+  private native void _uniformMatrix4fv(@Nullable WebGLUniformLocation location, boolean transpose,
       @Nonnull double[] data);
 
   /**
@@ -4484,7 +4584,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
-  public native void vertexAttrib1fv(@AttributeIndex int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib1fv(@AttributeIndex final int index,
+      @Nonnull final double... values) {
+    _vertexAttrib1fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib1fv"
+  )
+  private native void _vertexAttrib1fv(@AttributeIndex int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
@@ -4529,7 +4638,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
-  public native void vertexAttrib2fv(@AttributeIndex int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib2fv(@AttributeIndex final int index,
+      @Nonnull final double... values) {
+    _vertexAttrib2fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib2fv"
+  )
+  private native void _vertexAttrib2fv(@AttributeIndex int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
@@ -4574,7 +4692,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
-  public native void vertexAttrib3fv(@AttributeIndex int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib3fv(@AttributeIndex final int index,
+      @Nonnull final double... values) {
+    _vertexAttrib3fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib3fv"
+  )
+  private native void _vertexAttrib3fv(@AttributeIndex int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
@@ -4619,7 +4746,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
-  public native void vertexAttrib4fv(@AttributeIndex int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttrib4fv(@AttributeIndex final int index,
+      @Nonnull final double... values) {
+    _vertexAttrib4fv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttrib4fv"
+  )
+  private native void _vertexAttrib4fv(@AttributeIndex int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.
@@ -4738,7 +4874,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
 
   public native void clearBufferfv(int buffer, int drawbuffer, @Nonnull JsArray<Double> values);
 
-  public native void clearBufferfv(int buffer, int drawbuffer, @Nonnull double[] values);
+  @JsOverlay
+  public final void clearBufferfv(final int buffer, final int drawbuffer,
+      @Nonnull final double... values) {
+    _clearBufferfv( buffer, drawbuffer, values );
+  }
+
+  @JsMethod(
+      name = "clearBufferfv"
+  )
+  private native void _clearBufferfv(int buffer, int drawbuffer, @Nonnull double[] values);
 
   public native void clearBufferiv(int buffer, int drawbuffer, @Nonnull Int32List values,
       int srcOffset);
@@ -4758,7 +4903,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
 
   public native void clearBufferiv(int buffer, int drawbuffer, @Nonnull JsArray<Double> values);
 
-  public native void clearBufferiv(int buffer, int drawbuffer, @Nonnull double[] values);
+  @JsOverlay
+  public final void clearBufferiv(final int buffer, final int drawbuffer,
+      @Nonnull final double... values) {
+    _clearBufferiv( buffer, drawbuffer, values );
+  }
+
+  @JsMethod(
+      name = "clearBufferiv"
+  )
+  private native void _clearBufferiv(int buffer, int drawbuffer, @Nonnull double[] values);
 
   public native void clearBufferuiv(int buffer, int drawbuffer, @Nonnull Uint32List values,
       int srcOffset);
@@ -4778,7 +4932,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
 
   public native void clearBufferuiv(int buffer, int drawbuffer, @Nonnull JsArray<Double> values);
 
-  public native void clearBufferuiv(int buffer, int drawbuffer, @Nonnull double[] values);
+  @JsOverlay
+  public final void clearBufferuiv(final int buffer, final int drawbuffer,
+      @Nonnull final double... values) {
+    _clearBufferuiv( buffer, drawbuffer, values );
+  }
+
+  @JsMethod(
+      name = "clearBufferuiv"
+  )
+  private native void _clearBufferuiv(int buffer, int drawbuffer, @Nonnull double[] values);
 
   /**
    * The WebGL2RenderingContext.clientWaitSync() method of the WebGL 2 API blocks and waits for a WebGLSync object to become signaled or a given timeout to be passed.
@@ -4979,7 +5142,15 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.11">drawBuffers - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">glDrawBuffers - OpenGL ES 3.0</a>
    */
-  public native void drawBuffers(@Nonnull double[] buffers);
+  @JsOverlay
+  public final void drawBuffers(@Nonnull final double... buffers) {
+    _drawBuffers( buffers );
+  }
+
+  @JsMethod(
+      name = "drawBuffers"
+  )
+  private native void _drawBuffers(@Nonnull double[] buffers);
 
   /**
    * The WebGL2RenderingContext.drawElementsInstanced() method of the WebGL 2 API renders primitives from array data like the gl.drawElements() method. In addition, it can execute multiple instances of a set of elements.
@@ -5225,8 +5396,18 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16">getUniformIndices - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformIndices.xhtml">glGetUniformIndices - OpenGL ES 3.0</a>
    */
+  @JsOverlay
   @JsNullable
-  public native JsArray<Double> getUniformIndices(@Nonnull WebGLProgram program,
+  public final JsArray<Double> getUniformIndices(@Nonnull final WebGLProgram program,
+      @Nonnull final String... uniformNames) {
+    return _getUniformIndices( program, uniformNames );
+  }
+
+  @JsMethod(
+      name = "getUniformIndices"
+  )
+  @JsNullable
+  private native JsArray<Double> _getUniformIndices(@Nonnull WebGLProgram program,
       @Nonnull String[] uniformNames);
 
   /**
@@ -5245,7 +5426,15 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4">invalidateFramebuffer - WebGL 2.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glInvalidateFramebuffer.xhtml">glInvalidateFramebuffer - OpenGL ES 3.0</a>
    */
-  public native void invalidateFramebuffer(int target, @Nonnull double[] attachments);
+  @JsOverlay
+  public final void invalidateFramebuffer(final int target, @Nonnull final double... attachments) {
+    _invalidateFramebuffer( target, attachments );
+  }
+
+  @JsMethod(
+      name = "invalidateFramebuffer"
+  )
+  private native void _invalidateFramebuffer(int target, @Nonnull double[] attachments);
 
   /**
    * The WebGL2RenderingContext.invalidateSubFramebuffer() method of the WebGL 2 API invalidates portions of the contents of attachments in a framebuffer.
@@ -5605,7 +5794,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform1uiv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform1uiv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform1uiv"
+  )
+  private native void _uniform1uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -5732,7 +5930,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform2uiv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform2uiv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform2uiv"
+  )
+  private native void _uniform2uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -5859,7 +6066,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform3uiv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform3uiv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform3uiv"
+  )
+  private native void _uniform3uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.
@@ -5987,7 +6203,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniform - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
+  @JsOverlay
+  public final void uniform4uiv(@Nullable final WebGLUniformLocation location,
+      @Nonnull final double... data) {
+    _uniform4uiv( location, data );
+  }
+
+  @JsMethod(
+      name = "uniform4uiv"
+  )
+  private native void _uniform4uiv(@Nullable WebGLUniformLocation location, @Nonnull double[] data);
 
   /**
    * The WebGL2RenderingContext.uniformBlockBinding() method of the WebGL 2 API assigns binding points for active uniform blocks.
@@ -6116,8 +6341,17 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix2x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull double[] data);
+  @JsOverlay
+  public final void uniformMatrix2x3fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix2x3fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix2x3fv"
+  )
+  private native void _uniformMatrix2x3fv(@Nullable WebGLUniformLocation location,
+      boolean transpose, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
@@ -6236,8 +6470,17 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix2x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull double[] data);
+  @JsOverlay
+  public final void uniformMatrix2x4fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix2x4fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix2x4fv"
+  )
+  private native void _uniformMatrix2x4fv(@Nullable WebGLUniformLocation location,
+      boolean transpose, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
@@ -6356,8 +6599,17 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix3x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull double[] data);
+  @JsOverlay
+  public final void uniformMatrix3x2fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix3x2fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix3x2fv"
+  )
+  private native void _uniformMatrix3x2fv(@Nullable WebGLUniformLocation location,
+      boolean transpose, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
@@ -6476,8 +6728,17 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix3x4fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull double[] data);
+  @JsOverlay
+  public final void uniformMatrix3x4fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix3x4fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix3x4fv"
+  )
+  private native void _uniformMatrix3x4fv(@Nullable WebGLUniformLocation location,
+      boolean transpose, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
@@ -6596,8 +6857,17 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix4x2fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull double[] data);
+  @JsOverlay
+  public final void uniformMatrix4x2fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix4x2fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix4x2fv"
+  )
+  private native void _uniformMatrix4x2fv(@Nullable WebGLUniformLocation location,
+      boolean transpose, @Nonnull double[] data);
 
   /**
    * The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables.
@@ -6716,8 +6986,17 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">uniformMatrix - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml">glUniform - OpenGL ES 2.0</a>
    */
-  public native void uniformMatrix4x3fv(@Nullable WebGLUniformLocation location, boolean transpose,
-      @Nonnull double[] data);
+  @JsOverlay
+  public final void uniformMatrix4x3fv(@Nullable final WebGLUniformLocation location,
+      final boolean transpose, @Nonnull final double... data) {
+    _uniformMatrix4x3fv( location, transpose, data );
+  }
+
+  @JsMethod(
+      name = "uniformMatrix4x3fv"
+  )
+  private native void _uniformMatrix4x3fv(@Nullable WebGLUniformLocation location,
+      boolean transpose, @Nonnull double[] data);
 
   /**
    * The WebGL2RenderingContext.vertexAttribDivisor() method of the WebGL 2 API modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with gl.drawArraysInstanced() and gl.drawElementsInstanced().
@@ -6771,7 +7050,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
-  public native void vertexAttribI4iv(@AttributeIndex int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttribI4iv(@AttributeIndex final int index,
+      @Nonnull final double... values) {
+    _vertexAttribI4iv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttribI4iv"
+  )
+  private native void _vertexAttribI4iv(@AttributeIndex int index, @Nonnull double[] values);
 
   /**
    * The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.
@@ -6816,7 +7104,16 @@ public class WebGL2RenderingContext extends JsObject implements OffscreenRenderi
    * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10">vertexAttrib - WebGL 1.0</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml">glVertexAttrib - OpenGL ES 2.0</a>
    */
-  public native void vertexAttribI4uiv(@AttributeIndex int index, @Nonnull double[] values);
+  @JsOverlay
+  public final void vertexAttribI4uiv(@AttributeIndex final int index,
+      @Nonnull final double... values) {
+    _vertexAttribI4uiv( index, values );
+  }
+
+  @JsMethod(
+      name = "vertexAttribI4uiv"
+  )
+  private native void _vertexAttribI4uiv(@AttributeIndex int index, @Nonnull double[] values);
 
   /**
    * The WebGL2RenderingContext.vertexAttribIPointer() method of the WebGL 2 API specifies integer data formats and locations of vertex attributes in a vertex attributes array.
