@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RequestDeviceOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -71,7 +71,6 @@ public interface RequestDeviceOptions {
     setOptionalServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( optionalServices ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -24,8 +24,10 @@ import jsinterop.base.JsPropertyMap;
 public interface EcdhKeyDeriveParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final CryptoKey public_) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).public_( public_ );
+  static Step1 name(@Nonnull final String name) {
+    final EcdhKeyDeriveParams $ecdhKeyDeriveParams = Js.<EcdhKeyDeriveParams>uncheckedCast( JsPropertyMap.of() );
+    $ecdhKeyDeriveParams.setName( name );
+    return Js.uncheckedCast( $ecdhKeyDeriveParams );
   }
 
   @JsProperty(
@@ -37,30 +39,17 @@ public interface EcdhKeyDeriveParams extends Algorithm {
   @JsProperty
   void setPublic(@JsNonNull CryptoKey public_);
 
-  /**
-   * The EcdhKeyDeriveParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the ECDH algorithm.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "EcdhKeyDeriveParams"
   )
-  interface Builder extends EcdhKeyDeriveParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder public_(@Nonnull final CryptoKey public_) {
-      setPublic( public_ );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default EcdhKeyDeriveParams public_(@Nonnull CryptoKey public_) {
+      Js.<EcdhKeyDeriveParams>uncheckedCast( this ).setPublic( public_ );
+      return Js.uncheckedCast( this );
     }
   }
 }

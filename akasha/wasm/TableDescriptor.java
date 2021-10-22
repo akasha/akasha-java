@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface TableDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@TableKind @Nonnull final String element, final int initial) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).element( element ).initial( initial );
+  static Step1 element(@TableKind @Nonnull final String element) {
+    final Builder $tableDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $tableDescriptor.setElement( element );
+    return Js.uncheckedCast( $tableDescriptor );
   }
 
   @JsProperty(
@@ -49,27 +51,26 @@ public interface TableDescriptor {
   @JsProperty
   void setMaximum(int maximum);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "TableDescriptor"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder initial(int initial) {
+      Js.<TableDescriptor>uncheckedCast( this ).setInitial( initial );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "TableDescriptor"
   )
   interface Builder extends TableDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder element(@TableKind @Nonnull final String element) {
-      setElement( element );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder initial(final int initial) {
-      setInitial( initial );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder maximum(final int maximum) {

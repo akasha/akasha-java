@@ -20,8 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface VideoEncoderConfig {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String codec, final int width, final int height) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codec( codec ).width( width ).height( height );
+  static Step1 codec(@Nonnull final String codec) {
+    final Builder $videoEncoderConfig = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $videoEncoderConfig.setCodec( codec );
+    return Js.uncheckedCast( $videoEncoderConfig );
   }
 
   @JsProperty(
@@ -125,34 +127,40 @@ public interface VideoEncoderConfig {
   @JsProperty
   void setScalabilityMode(@JsNonNull String scalabilityMode);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "VideoEncoderConfig"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 width(int width) {
+      Js.<VideoEncoderConfig>uncheckedCast( this ).setWidth( width );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "VideoEncoderConfig"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder height(int height) {
+      Js.<VideoEncoderConfig>uncheckedCast( this ).setHeight( height );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "VideoEncoderConfig"
   )
   interface Builder extends VideoEncoderConfig {
-    @JsOverlay
-    @Nonnull
-    default Builder codec(@Nonnull final String codec) {
-      setCodec( codec );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder width(final int width) {
-      setWidth( width );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder height(final int height) {
-      setHeight( height );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder alpha(@AlphaOption @Nonnull final String alpha) {

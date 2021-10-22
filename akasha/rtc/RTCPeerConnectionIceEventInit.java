@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCPeerConnectionIceEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -43,7 +43,6 @@ public interface RTCPeerConnectionIceEventInit extends EventInit {
   @JsProperty
   void setUrl(@JsNullable String url);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

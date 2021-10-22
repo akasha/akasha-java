@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WindowPostMessageOptions extends StructuredSerializeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,7 +32,6 @@ public interface WindowPostMessageOptions extends StructuredSerializeOptions {
   @JsProperty
   void setTargetOrigin(@JsNonNull String targetOrigin);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

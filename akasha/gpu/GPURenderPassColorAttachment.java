@@ -22,45 +22,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURenderPassColorAttachment {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUTextureView view,
-      @Nonnull final GPULoadOpOrGPUColorUnion loadValue,
-      @GPUStoreOp @Nonnull final String storeOp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final String loadValue,
-      @GPUStoreOp @Nonnull final String storeOp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final GPUColor loadValue,
-      @GPUStoreOp @Nonnull final String storeOp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUTextureView view,
-      @Nonnull final JsArray<Double> loadValue, @GPUStoreOp @Nonnull final String storeOp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final double[] loadValue,
-      @GPUStoreOp @Nonnull final String storeOp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUTextureView view, @Nonnull final GPUColorDict loadValue,
-      @GPUStoreOp @Nonnull final String storeOp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).view( view ).loadValue( loadValue ).storeOp( storeOp );
+  static Step1 view(@Nonnull final GPUTextureView view) {
+    final Builder $gpuRenderPassColorAttachment = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderPassColorAttachment.setView( view );
+    return Js.uncheckedCast( $gpuRenderPassColorAttachment );
   }
 
   @JsProperty(
@@ -105,12 +70,12 @@ public interface GPURenderPassColorAttachment {
   }
 
   @JsOverlay
-  default void setLoadValue(@Nonnull final double... loadValue) {
+  default void setLoadValue(@Nonnull final GPUColorDict loadValue) {
     setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
   }
 
   @JsOverlay
-  default void setLoadValue(@Nonnull final GPUColorDict loadValue) {
+  default void setLoadValue(@Nonnull final double... loadValue) {
     setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
   }
 
@@ -124,7 +89,69 @@ public interface GPURenderPassColorAttachment {
   @JsProperty
   void setStoreOp(@GPUStoreOp @JsNonNull String storeOp);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPURenderPassColorAttachment"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 loadValue(@Nonnull GPULoadOpOrGPUColorUnion loadValue) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Step2 loadValue(@Nonnull String loadValue) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Step2 loadValue(@Nonnull GPUColor loadValue) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Step2 loadValue(@Nonnull JsArray<Double> loadValue) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Step2 loadValue(@Nonnull GPUColorDict loadValue) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Step2 loadValue(@Nonnull double... loadValue) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPURenderPassColorAttachment"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder storeOp(@GPUStoreOp @Nonnull String storeOp) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setStoreOp( storeOp );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -134,64 +161,8 @@ public interface GPURenderPassColorAttachment {
   interface Builder extends GPURenderPassColorAttachment {
     @JsOverlay
     @Nonnull
-    default Builder view(@Nonnull final GPUTextureView view) {
-      setView( view );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder resolveTarget(@Nonnull final GPUTextureView resolveTarget) {
       setResolveTarget( resolveTarget );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loadValue(@Nonnull final GPULoadOpOrGPUColorUnion loadValue) {
-      setLoadValue( loadValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loadValue(@Nonnull final String loadValue) {
-      setLoadValue( loadValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loadValue(@Nonnull final GPUColor loadValue) {
-      setLoadValue( loadValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loadValue(@Nonnull final JsArray<Double> loadValue) {
-      setLoadValue( loadValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loadValue(@Nonnull final double... loadValue) {
-      setLoadValue( loadValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder loadValue(@Nonnull final GPUColorDict loadValue) {
-      setLoadValue( loadValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder storeOp(@GPUStoreOp @Nonnull final String storeOp) {
-      setStoreOp( storeOp );
       return this;
     }
   }

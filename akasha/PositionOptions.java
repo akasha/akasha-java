@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PositionOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -94,7 +94,6 @@ public interface PositionOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions">PositionOptions - MDN</a>
    * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface"># position_options_interface</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

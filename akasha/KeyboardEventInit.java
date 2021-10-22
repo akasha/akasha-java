@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface KeyboardEventInit extends EventModifierInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -64,7 +64,6 @@ public interface KeyboardEventInit extends EventModifierInit {
   @JsProperty
   void setRepeat(boolean repeat);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

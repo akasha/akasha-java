@@ -20,7 +20,9 @@ public interface GenerateTestReportParameters {
   @JsOverlay
   @Nonnull
   static Builder message(@Nonnull final String message) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).message( message );
+    final Builder $generateTestReportParameters = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $generateTestReportParameters.setMessage( message );
+    return Js.uncheckedCast( $generateTestReportParameters );
   }
 
   @JsProperty(
@@ -40,7 +42,6 @@ public interface GenerateTestReportParameters {
   @JsProperty
   void setMessage(@JsNonNull String message);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -51,13 +52,6 @@ public interface GenerateTestReportParameters {
     @Nonnull
     default Builder group(@Nonnull final String group) {
       setGroup( group );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder message(@Nonnull final String message) {
-      setMessage( message );
       return this;
     }
   }

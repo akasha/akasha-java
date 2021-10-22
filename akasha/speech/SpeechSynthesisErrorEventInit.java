@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final SpeechSynthesisUtterance utterance,
-      @SpeechSynthesisErrorCode @Nonnull final String error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).utterance( utterance ).error( error );
+  static Step1 utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
+    final Builder $speechSynthesisErrorEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $speechSynthesisErrorEventInit.setUtterance( utterance );
+    return Js.uncheckedCast( $speechSynthesisErrorEventInit );
   }
 
   @JsProperty(
@@ -34,20 +35,26 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
   @JsProperty
   void setError(@SpeechSynthesisErrorCode @JsNonNull String error);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "SpeechSynthesisErrorEventInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder error(@SpeechSynthesisErrorCode @Nonnull String error) {
+      Js.<SpeechSynthesisErrorEventInit>uncheckedCast( this ).setError( error );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "SpeechSynthesisErrorEventInit"
   )
   interface Builder extends SpeechSynthesisErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder error(@SpeechSynthesisErrorCode @Nonnull final String error) {
-      setError( error );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder charIndex(final int charIndex) {
@@ -73,13 +80,6 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
     @Nonnull
     default Builder name(@Nonnull final String name) {
       setName( name );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
-      setUtterance( utterance );
       return this;
     }
 

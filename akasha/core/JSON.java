@@ -61,18 +61,6 @@ public class JSON extends JsObject {
    */
   @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
-      @Nonnull StringOrLongLongUnion[] replacer, @Nullable StringifySpaceUnionType space);
-
-  /**
-   * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
-   * Throws a {@link akasha.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
-   *
-   * @return A JSON string representing the given value.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
-   */
-  @JsNonNull
-  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, @Nonnull String space);
 
   /**
@@ -97,18 +85,6 @@ public class JSON extends JsObject {
    */
   @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
-      @Nonnull StringOrLongLongUnion[] replacer, @Nonnull String space);
-
-  /**
-   * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
-   * Throws a {@link akasha.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
-   *
-   * @return A JSON string representing the given value.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
-   */
-  @JsNonNull
-  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, int space);
 
   /**
@@ -122,6 +98,30 @@ public class JSON extends JsObject {
   @JsNonNull
   public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, int space);
+
+  /**
+   * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link akasha.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
+   *
+   * @return A JSON string representing the given value.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
+   */
+  @JsNonNull
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
+      @Nonnull StringOrLongLongUnion[] replacer, @Nullable StringifySpaceUnionType space);
+
+  /**
+   * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+   * Throws a {@link akasha.core.TypeError} if a circular reference is found or an attempt is made to stringify a BigInt.
+   *
+   * @return A JSON string representing the given value.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
+   */
+  @JsNonNull
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
+      @Nonnull StringOrLongLongUnion[] replacer, @Nonnull String space);
 
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.

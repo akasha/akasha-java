@@ -25,12 +25,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIceCandidatePairStats extends RTCStats {
   @JsOverlay
   @Nonnull
-  static Builder create(final double timestamp, @RTCStatsType @Nonnull final String type,
-      @Nonnull final String id, @Nonnull final String localCandidateId,
-      @Nonnull final String remoteCandidateId,
-      @RTCStatsIceCandidatePairState @Nonnull final String state,
-      @Nonnull final String transportId) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).timestamp( timestamp ).type( type ).id( id ).localCandidateId( localCandidateId ).remoteCandidateId( remoteCandidateId ).state( state ).transportId( transportId );
+  static Step1 timestamp(final double timestamp) {
+    final Builder $rtcIceCandidatePairStats = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcIceCandidatePairStats.setTimestamp( timestamp );
+    return Js.uncheckedCast( $rtcIceCandidatePairStats );
   }
 
   /**
@@ -642,13 +640,96 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   @JsProperty
   void setTotalRtt(double totalRtt);
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCIceCandidatePairStats"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 type(@RTCStatsType @Nonnull String type) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setType( type );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCIceCandidatePairStats"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 id(@Nonnull String id) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setId( id );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCIceCandidatePairStats"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default Step4 localCandidateId(@Nonnull String localCandidateId) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setLocalCandidateId( localCandidateId );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCIceCandidatePairStats"
+  )
+  interface Step4 {
+    @JsOverlay
+    @Nonnull
+    default Step5 remoteCandidateId(@Nonnull String remoteCandidateId) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setRemoteCandidateId( remoteCandidateId );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCIceCandidatePairStats"
+  )
+  interface Step5 {
+    @JsOverlay
+    @Nonnull
+    default Step6 state(@RTCStatsIceCandidatePairState @Nonnull String state) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setState( state );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCIceCandidatePairStats"
+  )
+  interface Step6 {
+    @JsOverlay
+    @Nonnull
+    default Builder transportId(@Nonnull String transportId) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setTransportId( transportId );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">(WebRTC Statistics) # dom-rtcicecandidatepairstats</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -839,19 +920,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     }
 
     /**
-     * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder localCandidateId(@Nonnull final String localCandidateId) {
-      setLocalCandidateId( localCandidateId );
-      return this;
-    }
-
-    /**
      * The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated">RTCIceCandidatePairStats.nominated - MDN</a>
@@ -894,19 +962,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     @Nonnull
     default Builder packetsSent(final int packetsSent) {
       setPacketsSent( packetsSent );
-      return this;
-    }
-
-    /**
-     * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder remoteCandidateId(@Nonnull final String remoteCandidateId) {
-      setRemoteCandidateId( remoteCandidateId );
       return this;
     }
 
@@ -1003,19 +1058,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     }
 
     /**
-     * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder state(@RTCStatsIceCandidatePairState @Nonnull final String state) {
-      setState( state );
-      return this;
-    }
-
-    /**
      * The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime">RTCIceCandidatePairStats.totalRoundTripTime - MDN</a>
@@ -1025,19 +1067,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     @Nonnull
     default Builder totalRoundTripTime(final double totalRoundTripTime) {
       setTotalRoundTripTime( totalRoundTripTime );
-      return this;
-    }
-
-    /**
-     * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder transportId(@Nonnull final String transportId) {
-      setTransportId( transportId );
       return this;
     }
 
@@ -1059,45 +1088,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     @Nonnull
     default Builder totalRtt(final double totalRtt) {
       setTotalRtt( totalRtt );
-      return this;
-    }
-
-    /**
-     * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-timestamp">RTCStats.timestamp - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder timestamp(final double timestamp) {
-      setTimestamp( timestamp );
-      return this;
-    }
-
-    /**
-     * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-type">RTCStats.type - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder type(@RTCStatsType @Nonnull final String type) {
-      setType( type );
-      return this;
-    }
-
-    /**
-     * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcstats-id">RTCStats.id - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder id(@Nonnull final String id) {
-      setId( id );
       return this;
     }
   }

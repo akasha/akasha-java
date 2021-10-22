@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityProviderOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -47,7 +47,6 @@ public interface RTCIdentityProviderOptions {
   @JsProperty
   void setUsernameHint(@JsNonNull String usernameHint);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

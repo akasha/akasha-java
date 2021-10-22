@@ -23,8 +23,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AesKeyGenParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, final int length) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).length( length );
+  static Step1 name(@Nonnull final String name) {
+    final AesKeyGenParams $aesKeyGenParams = Js.<AesKeyGenParams>uncheckedCast( JsPropertyMap.of() );
+    $aesKeyGenParams.setName( name );
+    return Js.uncheckedCast( $aesKeyGenParams );
   }
 
   @JsProperty(
@@ -35,30 +37,17 @@ public interface AesKeyGenParams extends Algorithm {
   @JsProperty
   void setLength(int length);
 
-  /**
-   * A DOMString. This should be set to AES-CBC, AES-CTR, AES-GCM, or AES-KW, depending on the algorithm you want to use.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AesKeyGenParams"
   )
-  interface Builder extends AesKeyGenParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder length(final int length) {
-      setLength( length );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default AesKeyGenParams length(int length) {
+      Js.<AesKeyGenParams>uncheckedCast( this ).setLength( length );
+      return Js.uncheckedCast( this );
     }
   }
 }

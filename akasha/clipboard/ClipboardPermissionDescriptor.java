@@ -21,7 +21,9 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $clipboardPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $clipboardPermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $clipboardPermissionDescriptor );
   }
 
   @JsProperty(
@@ -32,7 +34,6 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setAllowWithoutGesture(boolean allowWithoutGesture);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -43,13 +44,6 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
     @Nonnull
     default Builder allowWithoutGesture(final boolean allowWithoutGesture) {
       setAllowWithoutGesture( allowWithoutGesture );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

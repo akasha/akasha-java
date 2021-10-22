@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaTrackConstraintSet {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -97,12 +97,12 @@ public interface MediaTrackConstraintSet {
   }
 
   @JsOverlay
-  default void setDeviceId(@Nonnull final String... deviceId) {
+  default void setDeviceId(@Nonnull final ConstrainDOMStringParameters deviceId) {
     setDeviceId( ConstrainDOMString.of( deviceId ) );
   }
 
   @JsOverlay
-  default void setDeviceId(@Nonnull final ConstrainDOMStringParameters deviceId) {
+  default void setDeviceId(@Nonnull final String... deviceId) {
     setDeviceId( ConstrainDOMString.of( deviceId ) );
   }
 
@@ -143,12 +143,12 @@ public interface MediaTrackConstraintSet {
   }
 
   @JsOverlay
-  default void setFacingMode(@Nonnull final String... facingMode) {
+  default void setFacingMode(@Nonnull final ConstrainDOMStringParameters facingMode) {
     setFacingMode( ConstrainDOMString.of( facingMode ) );
   }
 
   @JsOverlay
-  default void setFacingMode(@Nonnull final ConstrainDOMStringParameters facingMode) {
+  default void setFacingMode(@Nonnull final String... facingMode) {
     setFacingMode( ConstrainDOMString.of( facingMode ) );
   }
 
@@ -189,12 +189,12 @@ public interface MediaTrackConstraintSet {
   }
 
   @JsOverlay
-  default void setGroupId(@Nonnull final String... groupId) {
+  default void setGroupId(@Nonnull final ConstrainDOMStringParameters groupId) {
     setGroupId( ConstrainDOMString.of( groupId ) );
   }
 
   @JsOverlay
-  default void setGroupId(@Nonnull final ConstrainDOMStringParameters groupId) {
+  default void setGroupId(@Nonnull final String... groupId) {
     setGroupId( ConstrainDOMString.of( groupId ) );
   }
 
@@ -271,12 +271,12 @@ public interface MediaTrackConstraintSet {
   }
 
   @JsOverlay
-  default void setResizeMode(@Nonnull final String... resizeMode) {
+  default void setResizeMode(@Nonnull final ConstrainDOMStringParameters resizeMode) {
     setResizeMode( ConstrainDOMString.of( resizeMode ) );
   }
 
   @JsOverlay
-  default void setResizeMode(@Nonnull final ConstrainDOMStringParameters resizeMode) {
+  default void setResizeMode(@Nonnull final String... resizeMode) {
     setResizeMode( ConstrainDOMString.of( resizeMode ) );
   }
 
@@ -353,12 +353,12 @@ public interface MediaTrackConstraintSet {
   }
 
   @JsOverlay
-  default void setCursor(@Nonnull final String... cursor) {
+  default void setCursor(@Nonnull final ConstrainDOMStringParameters cursor) {
     setCursor( ConstrainDOMString.of( cursor ) );
   }
 
   @JsOverlay
-  default void setCursor(@Nonnull final ConstrainDOMStringParameters cursor) {
+  default void setCursor(@Nonnull final String... cursor) {
     setCursor( ConstrainDOMString.of( cursor ) );
   }
 
@@ -381,12 +381,12 @@ public interface MediaTrackConstraintSet {
   }
 
   @JsOverlay
-  default void setDisplaySurface(@Nonnull final String... displaySurface) {
+  default void setDisplaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
     setDisplaySurface( ConstrainDOMString.of( displaySurface ) );
   }
 
   @JsOverlay
-  default void setDisplaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
+  default void setDisplaySurface(@Nonnull final String... displaySurface) {
     setDisplaySurface( ConstrainDOMString.of( displaySurface ) );
   }
 
@@ -445,7 +445,6 @@ public interface MediaTrackConstraintSet {
     setSuppressLocalAudioPlayback( ConstrainBoolean.of( suppressLocalAudioPlayback ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -538,14 +537,14 @@ public interface MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder deviceId(@Nonnull final String... deviceId) {
+    default Builder deviceId(@Nonnull final ConstrainDOMStringParameters deviceId) {
       setDeviceId( deviceId );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder deviceId(@Nonnull final ConstrainDOMStringParameters deviceId) {
+    default Builder deviceId(@Nonnull final String... deviceId) {
       setDeviceId( deviceId );
       return this;
     }
@@ -594,14 +593,14 @@ public interface MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder facingMode(@Nonnull final String... facingMode) {
+    default Builder facingMode(@Nonnull final ConstrainDOMStringParameters facingMode) {
       setFacingMode( facingMode );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder facingMode(@Nonnull final ConstrainDOMStringParameters facingMode) {
+    default Builder facingMode(@Nonnull final String... facingMode) {
       setFacingMode( facingMode );
       return this;
     }
@@ -650,14 +649,14 @@ public interface MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder groupId(@Nonnull final String... groupId) {
+    default Builder groupId(@Nonnull final ConstrainDOMStringParameters groupId) {
       setGroupId( groupId );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder groupId(@Nonnull final ConstrainDOMStringParameters groupId) {
+    default Builder groupId(@Nonnull final String... groupId) {
       setGroupId( groupId );
       return this;
     }
@@ -748,14 +747,14 @@ public interface MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder resizeMode(@Nonnull final String... resizeMode) {
+    default Builder resizeMode(@Nonnull final ConstrainDOMStringParameters resizeMode) {
       setResizeMode( resizeMode );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder resizeMode(@Nonnull final ConstrainDOMStringParameters resizeMode) {
+    default Builder resizeMode(@Nonnull final String... resizeMode) {
       setResizeMode( resizeMode );
       return this;
     }
@@ -846,14 +845,14 @@ public interface MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder cursor(@Nonnull final String... cursor) {
+    default Builder cursor(@Nonnull final ConstrainDOMStringParameters cursor) {
       setCursor( cursor );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder cursor(@Nonnull final ConstrainDOMStringParameters cursor) {
+    default Builder cursor(@Nonnull final String... cursor) {
       setCursor( cursor );
       return this;
     }
@@ -881,14 +880,14 @@ public interface MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder displaySurface(@Nonnull final String... displaySurface) {
+    default Builder displaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
       setDisplaySurface( displaySurface );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder displaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
+    default Builder displaySurface(@Nonnull final String... displaySurface) {
       setDisplaySurface( displaySurface );
       return this;
     }

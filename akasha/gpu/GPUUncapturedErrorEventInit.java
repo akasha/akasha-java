@@ -23,7 +23,9 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder error(@Nonnull final GPUError error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
+    final Builder $gpuUncapturedErrorEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuUncapturedErrorEventInit.setError( error );
+    return Js.uncheckedCast( $gpuUncapturedErrorEventInit );
   }
 
   @JsProperty(
@@ -35,7 +37,6 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
   @JsProperty
   void setError(@JsNonNull GPUError error);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -43,13 +44,6 @@ public interface GPUUncapturedErrorEventInit extends EventInit {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUUncapturedErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final GPUError error) {
-      setError( error );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

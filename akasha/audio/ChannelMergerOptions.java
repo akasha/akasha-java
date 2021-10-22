@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ChannelMergerOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,7 +30,6 @@ public interface ChannelMergerOptions extends AudioNodeOptions {
   @JsProperty
   void setNumberOfInputs(int numberOfInputs);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

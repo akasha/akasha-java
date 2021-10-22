@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityAssertionResult {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String assertion,
-      @Nonnull final RTCIdentityProviderDetails idp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).assertion( assertion ).idp( idp );
+  static Step1 assertion(@Nonnull final String assertion) {
+    final RTCIdentityAssertionResult $rtcIdentityAssertionResult = Js.<RTCIdentityAssertionResult>uncheckedCast( JsPropertyMap.of() );
+    $rtcIdentityAssertionResult.setAssertion( assertion );
+    return Js.uncheckedCast( $rtcIdentityAssertionResult );
   }
 
   @JsProperty(
@@ -42,25 +43,17 @@ public interface RTCIdentityAssertionResult {
   @JsProperty
   void setIdp(@JsNonNull RTCIdentityProviderDetails idp);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCIdentityAssertionResult"
   )
-  interface Builder extends RTCIdentityAssertionResult {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder assertion(@Nonnull final String assertion) {
-      setAssertion( assertion );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder idp(@Nonnull final RTCIdentityProviderDetails idp) {
-      setIdp( idp );
-      return this;
+    default RTCIdentityAssertionResult idp(@Nonnull RTCIdentityProviderDetails idp) {
+      Js.<RTCIdentityAssertionResult>uncheckedCast( this ).setIdp( idp );
+      return Js.uncheckedCast( this );
     }
   }
 }

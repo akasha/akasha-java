@@ -25,8 +25,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AesGcmParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final BufferSource iv) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
+  static Step1 name(@Nonnull final String name) {
+    final Builder $aesGcmParams = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $aesGcmParams.setName( name );
+    return Js.uncheckedCast( $aesGcmParams );
   }
 
   @JsProperty(
@@ -54,25 +56,31 @@ public interface AesGcmParams extends Algorithm {
   @JsProperty
   void setTagLength(short tagLength);
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AesGcmParams"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder iv(@Nonnull BufferSource iv) {
+      Js.<AesGcmParams>uncheckedCast( this ).setIv( iv );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The AesGcmParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-GCM algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams">AesGcmParams - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AesGcmParams"
   )
   interface Builder extends AesGcmParams {
-    @JsOverlay
-    @Nonnull
-    default Builder iv(@Nonnull final BufferSource iv) {
-      setIv( iv );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder additionalData(@Nonnull final BufferSource additionalData) {
@@ -84,13 +92,6 @@ public interface AesGcmParams extends Algorithm {
     @Nonnull
     default Builder tagLength(final short tagLength) {
       setTagLength( tagLength );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

@@ -23,7 +23,9 @@ public interface GPUImageCopyTexture {
   @JsOverlay
   @Nonnull
   static Builder texture(@Nonnull final GPUTexture texture) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).texture( texture );
+    final Builder $gpuImageCopyTexture = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuImageCopyTexture.setTexture( texture );
+    return Js.uncheckedCast( $gpuImageCopyTexture );
   }
 
   @JsProperty(
@@ -66,16 +68,15 @@ public interface GPUImageCopyTexture {
   }
 
   @JsOverlay
-  default void setOrigin(@Nonnull final double... origin) {
-    setOrigin( GPUOrigin3D.of( origin ) );
-  }
-
-  @JsOverlay
   default void setOrigin(@Nonnull final GPUOrigin3DDict origin) {
     setOrigin( GPUOrigin3D.of( origin ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsOverlay
+  default void setOrigin(@Nonnull final double... origin) {
+    setOrigin( GPUOrigin3D.of( origin ) );
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -83,13 +84,6 @@ public interface GPUImageCopyTexture {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUImageCopyTexture {
-    @JsOverlay
-    @Nonnull
-    default Builder texture(@Nonnull final GPUTexture texture) {
-      setTexture( texture );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder aspect(@GPUTextureAspect @Nonnull final String aspect) {
@@ -120,14 +114,14 @@ public interface GPUImageCopyTexture {
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final double... origin) {
+    default Builder origin(@Nonnull final GPUOrigin3DDict origin) {
       setOrigin( origin );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final GPUOrigin3DDict origin) {
+    default Builder origin(@Nonnull final double... origin) {
       setOrigin( origin );
       return this;
     }

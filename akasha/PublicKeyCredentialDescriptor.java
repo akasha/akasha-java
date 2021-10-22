@@ -21,8 +21,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BufferSource id, @Nonnull final String type) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
+  static Step1 id(@Nonnull final BufferSource id) {
+    final Builder $publicKeyCredentialDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $publicKeyCredentialDescriptor.setId( id );
+    return Js.uncheckedCast( $publicKeyCredentialDescriptor );
   }
 
   @JsProperty(
@@ -56,20 +58,26 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty
   void setType(@JsNonNull String type);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PublicKeyCredentialDescriptor"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder type(@Nonnull String type) {
+      Js.<PublicKeyCredentialDescriptor>uncheckedCast( this ).setType( type );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "PublicKeyCredentialDescriptor"
   )
   interface Builder extends PublicKeyCredentialDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder id(@Nonnull final BufferSource id) {
-      setId( id );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder transports(@Nonnull final JsArray<String> transports) {
@@ -81,13 +89,6 @@ public interface PublicKeyCredentialDescriptor {
     @Nonnull
     default Builder transports(@Nonnull final String... transports) {
       setTransports( transports );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder type(@Nonnull final String type) {
-      setType( type );
       return this;
     }
   }

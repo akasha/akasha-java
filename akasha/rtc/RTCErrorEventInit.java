@@ -21,7 +21,9 @@ public interface RTCErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder error(@Nonnull final RTCError error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
+    final Builder $rtcErrorEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcErrorEventInit.setError( error );
+    return Js.uncheckedCast( $rtcErrorEventInit );
   }
 
   @JsProperty(
@@ -33,20 +35,12 @@ public interface RTCErrorEventInit extends EventInit {
   @JsProperty
   void setError(@JsNonNull RTCError error);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCErrorEventInit"
   )
   interface Builder extends RTCErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final RTCError error) {
-      setError( error );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

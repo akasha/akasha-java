@@ -52,6 +52,8 @@ public class GPURenderPassEncoder extends JsObject {
 
   public native void setBlendConstant(@Nonnull JsArray<Double> color);
 
+  public native void setBlendConstant(@Nonnull GPUColorDict color);
+
   @JsOverlay
   public final void setBlendConstant(@Nonnull final double... color) {
     _setBlendConstant( color );
@@ -61,8 +63,6 @@ public class GPURenderPassEncoder extends JsObject {
       name = "setBlendConstant"
   )
   private native void _setBlendConstant(@Nonnull double[] color);
-
-  public native void setBlendConstant(@Nonnull GPUColorDict color);
 
   public native void setScissorRect(int x, int y, int width, int height);
 

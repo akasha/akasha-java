@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GetNotificationOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,7 +31,6 @@ public interface GetNotificationOptions {
   @JsProperty
   void setTag(@JsNonNull String tag);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -21,8 +21,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(final int size, @GPUBufferUsageFlags final int usage) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).usage( usage );
+  static Step1 size(final int size) {
+    final Builder $gpuBufferDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuBufferDescriptor.setSize( size );
+    return Js.uncheckedCast( $gpuBufferDescriptor );
   }
 
   @JsProperty(
@@ -51,7 +53,20 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setMappedAtCreation(boolean mappedAtCreation);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUBufferDescriptor"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder usage(@GPUBufferUsageFlags int usage) {
+      Js.<GPUBufferDescriptor>uncheckedCast( this ).setUsage( usage );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -59,20 +74,6 @@ public interface GPUBufferDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUBufferDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder size(final int size) {
-      setSize( size );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder usage(@GPUBufferUsageFlags final int usage) {
-      setUsage( usage );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder mappedAtCreation(final boolean mappedAtCreation) {

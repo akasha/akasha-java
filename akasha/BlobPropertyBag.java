@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BlobPropertyBag {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -40,7 +40,6 @@ public interface BlobPropertyBag {
   @JsProperty
   void setType(@JsNonNull String type);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

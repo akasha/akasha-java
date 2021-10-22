@@ -20,7 +20,9 @@ public interface TokenBinding {
   @JsOverlay
   @Nonnull
   static Builder status(@Nonnull final String status) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).status( status );
+    final Builder $tokenBinding = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $tokenBinding.setStatus( status );
+    return Js.uncheckedCast( $tokenBinding );
   }
 
   @JsProperty(
@@ -40,7 +42,6 @@ public interface TokenBinding {
   @JsProperty
   void setStatus(@JsNonNull String status);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -51,13 +52,6 @@ public interface TokenBinding {
     @Nonnull
     default Builder id(@Nonnull final String id) {
       setId( id );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder status(@Nonnull final String status) {
-      setStatus( status );
       return this;
     }
   }

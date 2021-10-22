@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaTrackSettings {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -381,7 +381,6 @@ public interface MediaTrackSettings {
    * @see <a href="https://w3c.github.io/mediacapture-main/#media-track-settings"># media-track-settings</a>
    * @see <a href="https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings"># extensions-to-mediatracksettings</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -20,7 +20,9 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
   @JsOverlay
   @Nonnull
   static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $publicKeyCredentialRpEntity = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $publicKeyCredentialRpEntity.setName( name );
+    return Js.uncheckedCast( $publicKeyCredentialRpEntity );
   }
 
   @JsProperty(
@@ -31,7 +33,6 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
   @JsProperty
   void setId(@JsNonNull String id);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -42,13 +43,6 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
     @Nonnull
     default Builder id(@Nonnull final String id) {
       setId( id );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

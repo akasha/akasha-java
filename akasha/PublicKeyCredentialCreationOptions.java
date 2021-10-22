@@ -27,20 +27,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialCreationOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BufferSource challenge,
-      @Nonnull final JsArray<PublicKeyCredentialParameters> pubKeyCredParams,
-      @Nonnull final PublicKeyCredentialRpEntity rp,
-      @Nonnull final PublicKeyCredentialUserEntity user) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final BufferSource challenge,
-      @Nonnull final PublicKeyCredentialParameters[] pubKeyCredParams,
-      @Nonnull final PublicKeyCredentialRpEntity rp,
-      @Nonnull final PublicKeyCredentialUserEntity user) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
+  static Step1 challenge(@Nonnull final BufferSource challenge) {
+    final Builder $publicKeyCredentialCreationOptions = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $publicKeyCredentialCreationOptions.setChallenge( challenge );
+    return Js.uncheckedCast( $publicKeyCredentialCreationOptions );
   }
 
   /**
@@ -251,13 +241,62 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty
   void setUser(@JsNonNull PublicKeyCredentialUserEntity user);
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PublicKeyCredentialCreationOptions"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 pubKeyCredParams(
+        @Nonnull JsArray<PublicKeyCredentialParameters> pubKeyCredParams) {
+      Js.<PublicKeyCredentialCreationOptions>uncheckedCast( this ).setPubKeyCredParams( pubKeyCredParams );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Step2 pubKeyCredParams(@Nonnull PublicKeyCredentialParameters... pubKeyCredParams) {
+      Js.<PublicKeyCredentialCreationOptions>uncheckedCast( this ).setPubKeyCredParams( pubKeyCredParams );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PublicKeyCredentialCreationOptions"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 rp(@Nonnull PublicKeyCredentialRpEntity rp) {
+      Js.<PublicKeyCredentialCreationOptions>uncheckedCast( this ).setRp( rp );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PublicKeyCredentialCreationOptions"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default Builder user(@Nonnull PublicKeyCredentialUserEntity user) {
+      Js.<PublicKeyCredentialCreationOptions>uncheckedCast( this ).setUser( user );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions - MDN</a>
    * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">(Web Authentication) # dictdef-publickeycredentialcreationoptions</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -288,19 +327,6 @@ public interface PublicKeyCredentialCreationOptions {
     default Builder authenticatorSelection(
         @Nonnull final AuthenticatorSelectionCriteria authenticatorSelection) {
       setAuthenticatorSelection( authenticatorSelection );
-      return this;
-    }
-
-    /**
-     * The challenge property of the PublicKeyCredentialCreationOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator, using its private key, and must be sent back for verification to the server as part of AuthenticatorAttestationResponse.attestationObject.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/challenge">PublicKeyCredentialCreationOptions.challenge - MDN</a>
-     * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder challenge(@Nonnull final BufferSource challenge) {
-      setChallenge( challenge );
       return this;
     }
 
@@ -346,47 +372,6 @@ public interface PublicKeyCredentialCreationOptions {
     }
 
     /**
-     * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-     * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder pubKeyCredParams(
-        @Nonnull final JsArray<PublicKeyCredentialParameters> pubKeyCredParams) {
-      setPubKeyCredParams( pubKeyCredParams );
-      return this;
-    }
-
-    /**
-     * The pubKeyCredParams property of the PublicKeyCredentialCreationOptions dictionary is an Array whose elements are objects describing the desired features of the credential to be created. These objects define the type of public-key and the algorithm used for cryptographic signature operations.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams">PublicKeyCredentialCreationOptions.pubKeyCredParams - MDN</a>
-     * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams">pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder pubKeyCredParams(
-        @Nonnull final PublicKeyCredentialParameters... pubKeyCredParams) {
-      setPubKeyCredParams( pubKeyCredParams );
-      return this;
-    }
-
-    /**
-     * The rp property of the PublicKeyCredentialCreationOptions dictionary is an object describing the relying party which requested the credential creation (via navigator.credentials.create()).
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/rp">PublicKeyCredentialCreationOptions.rp - MDN</a>
-     * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp">rp - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder rp(@Nonnull final PublicKeyCredentialRpEntity rp) {
-      setRp( rp );
-      return this;
-    }
-
-    /**
      * The timeout property, of the PublicKeyCredentialCreationOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the creation operation.
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/timeout">PublicKeyCredentialCreationOptions.timeout - MDN</a>
@@ -396,19 +381,6 @@ public interface PublicKeyCredentialCreationOptions {
     @Nonnull
     default Builder timeout(final int timeout) {
       setTimeout( timeout );
-      return this;
-    }
-
-    /**
-     * The user property of the PublicKeyCredentialCreationOptions dictionary is an object describing the user account for which the credentials are generated (via navigator.credentials.create()).
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/user">PublicKeyCredentialCreationOptions.user - MDN</a>
-     * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user">user - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder user(@Nonnull final PublicKeyCredentialUserEntity user) {
-      setUser( user );
       return this;
     }
   }

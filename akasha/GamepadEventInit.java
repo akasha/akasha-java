@@ -20,7 +20,9 @@ public interface GamepadEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder gamepad(@Nonnull final Gamepad gamepad) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).gamepad( gamepad );
+    final Builder $gamepadEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gamepadEventInit.setGamepad( gamepad );
+    return Js.uncheckedCast( $gamepadEventInit );
   }
 
   @JsProperty(
@@ -32,20 +34,12 @@ public interface GamepadEventInit extends EventInit {
   @JsProperty
   void setGamepad(@JsNonNull Gamepad gamepad);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "GamepadEventInit"
   )
   interface Builder extends GamepadEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder gamepad(@Nonnull final Gamepad gamepad) {
-      setGamepad( gamepad );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

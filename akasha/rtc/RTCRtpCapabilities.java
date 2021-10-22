@@ -25,30 +25,18 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCapabilities {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecCapability> codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionCapability> headerExtensions) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions );
+  static Step1 codecs(@Nonnull final JsArray<RTCRtpCodecCapability> codecs) {
+    final RTCRtpCapabilities $rtcRtpCapabilities = Js.<RTCRtpCapabilities>uncheckedCast( JsPropertyMap.of() );
+    $rtcRtpCapabilities.setCodecs( codecs );
+    return Js.uncheckedCast( $rtcRtpCapabilities );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecCapability[] codecs,
-      @Nonnull final JsArray<RTCRtpHeaderExtensionCapability> headerExtensions) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final JsArray<RTCRtpCodecCapability> codecs,
-      @Nonnull final RTCRtpHeaderExtensionCapability... headerExtensions) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final RTCRtpCodecCapability[] codecs,
-      @Nonnull final RTCRtpHeaderExtensionCapability... headerExtensions) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions );
+  static Step1 codecs(@Nonnull final RTCRtpCodecCapability... codecs) {
+    final RTCRtpCapabilities $rtcRtpCapabilities = Js.<RTCRtpCapabilities>uncheckedCast( JsPropertyMap.of() );
+    $rtcRtpCapabilities.setCodecs( codecs );
+    return Js.uncheckedCast( $rtcRtpCapabilities );
   }
 
   @JsProperty(
@@ -80,46 +68,26 @@ public interface RTCRtpCapabilities {
     setHeaderExtensions( Js.<JsArray<RTCRtpHeaderExtensionCapability>>uncheckedCast( headerExtensions ) );
   }
 
-  /**
-   * The RTCRtpCapabilities dictionary is a data type used to describe the capabilities of an RTCRtpSender or RTCRtpReceiver in response to a call to the RTCRtpSender.getCapabilities() or RTCRtpReceiver.getCapabilities() static functions, both of which return an array of RTCRtpCapabilities objects.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCapabilities">RTCRtpCapabilities - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCRtpCapabilities"
   )
-  interface Builder extends RTCRtpCapabilities {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder codecs(@Nonnull final JsArray<RTCRtpCodecCapability> codecs) {
-      setCodecs( codecs );
-      return this;
+    default RTCRtpCapabilities headerExtensions(
+        @Nonnull JsArray<RTCRtpHeaderExtensionCapability> headerExtensions) {
+      Js.<RTCRtpCapabilities>uncheckedCast( this ).setHeaderExtensions( headerExtensions );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder codecs(@Nonnull final RTCRtpCodecCapability... codecs) {
-      setCodecs( codecs );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder headerExtensions(
-        @Nonnull final JsArray<RTCRtpHeaderExtensionCapability> headerExtensions) {
-      setHeaderExtensions( headerExtensions );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder headerExtensions(
-        @Nonnull final RTCRtpHeaderExtensionCapability... headerExtensions) {
-      setHeaderExtensions( headerExtensions );
-      return this;
+    default RTCRtpCapabilities headerExtensions(
+        @Nonnull RTCRtpHeaderExtensionCapability... headerExtensions) {
+      Js.<RTCRtpCapabilities>uncheckedCast( this ).setHeaderExtensions( headerExtensions );
+      return Js.uncheckedCast( this );
     }
   }
 }

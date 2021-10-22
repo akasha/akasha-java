@@ -20,7 +20,9 @@ public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
   static Builder value(@ValueType @Nonnull final String value) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).value( value );
+    final Builder $globalDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $globalDescriptor.setValue( value );
+    return Js.uncheckedCast( $globalDescriptor );
   }
 
   @JsProperty(
@@ -41,7 +43,6 @@ public interface GlobalDescriptor {
   @JsProperty
   void setValue(@ValueType @JsNonNull String value);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -52,13 +53,6 @@ public interface GlobalDescriptor {
     @Nonnull
     default Builder mutable(final boolean mutable) {
       setMutable( mutable );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder value(@ValueType @Nonnull final String value) {
-      setValue( value );
       return this;
     }
   }

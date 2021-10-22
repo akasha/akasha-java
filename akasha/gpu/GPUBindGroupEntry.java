@@ -21,8 +21,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBindGroupEntry {
   @JsOverlay
   @Nonnull
-  static Builder create(final int binding, @Nonnull final GPUBindingResource resource) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).binding( binding ).resource( resource );
+  static Step1 binding(final int binding) {
+    final GPUBindGroupEntry $gpuBindGroupEntry = Js.<GPUBindGroupEntry>uncheckedCast( JsPropertyMap.of() );
+    $gpuBindGroupEntry.setBinding( binding );
+    return Js.uncheckedCast( $gpuBindGroupEntry );
   }
 
   @JsProperty(
@@ -42,26 +44,17 @@ public interface GPUBindGroupEntry {
   @JsProperty
   void setResource(@JsNonNull GPUBindingResource resource);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "GPUBindGroupEntry"
   )
-  @ApiStatus.Experimental
-  interface Builder extends GPUBindGroupEntry {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder binding(final int binding) {
-      setBinding( binding );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder resource(@Nonnull final GPUBindingResource resource) {
-      setResource( resource );
-      return this;
+    default GPUBindGroupEntry resource(@Nonnull GPUBindingResource resource) {
+      Js.<GPUBindGroupEntry>uncheckedCast( this ).setResource( resource );
+      return Js.uncheckedCast( this );
     }
   }
 }

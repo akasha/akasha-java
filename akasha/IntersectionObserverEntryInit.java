@@ -21,11 +21,10 @@ import jsinterop.base.JsPropertyMap;
 public interface IntersectionObserverEntryInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final DOMRectInit boundingClientRect,
-      final double intersectionRatio, @Nonnull final DOMRectInit intersectionRect,
-      final boolean isIntersecting, @Nullable final DOMRectInit rootBounds,
-      @Nonnull final Element target, final double time) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).boundingClientRect( boundingClientRect ).intersectionRatio( intersectionRatio ).intersectionRect( intersectionRect ).isIntersecting( isIntersecting ).rootBounds( rootBounds ).target( target ).time( time );
+  static Step1 boundingClientRect(@Nonnull final DOMRectInit boundingClientRect) {
+    final IntersectionObserverEntryInit $intersectionObserverEntryInit = Js.<IntersectionObserverEntryInit>uncheckedCast( JsPropertyMap.of() );
+    $intersectionObserverEntryInit.setBoundingClientRect( boundingClientRect );
+    return Js.uncheckedCast( $intersectionObserverEntryInit );
   }
 
   @JsProperty(
@@ -88,60 +87,87 @@ public interface IntersectionObserverEntryInit {
   @JsProperty
   void setTime(double time);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "IntersectionObserverEntryInit"
   )
-  interface Builder extends IntersectionObserverEntryInit {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder boundingClientRect(@Nonnull final DOMRectInit boundingClientRect) {
-      setBoundingClientRect( boundingClientRect );
-      return this;
+    default Step2 intersectionRatio(double intersectionRatio) {
+      Js.<IntersectionObserverEntryInit>uncheckedCast( this ).setIntersectionRatio( intersectionRatio );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "IntersectionObserverEntryInit"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder intersectionRatio(final double intersectionRatio) {
-      setIntersectionRatio( intersectionRatio );
-      return this;
+    default Step3 intersectionRect(@Nonnull DOMRectInit intersectionRect) {
+      Js.<IntersectionObserverEntryInit>uncheckedCast( this ).setIntersectionRect( intersectionRect );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "IntersectionObserverEntryInit"
+  )
+  interface Step3 {
     @JsOverlay
     @Nonnull
-    default Builder intersectionRect(@Nonnull final DOMRectInit intersectionRect) {
-      setIntersectionRect( intersectionRect );
-      return this;
+    default Step4 isIntersecting(boolean isIntersecting) {
+      Js.<IntersectionObserverEntryInit>uncheckedCast( this ).setIsIntersecting( isIntersecting );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "IntersectionObserverEntryInit"
+  )
+  interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder isIntersecting(final boolean isIntersecting) {
-      setIsIntersecting( isIntersecting );
-      return this;
+    default Step5 rootBounds(@Nullable DOMRectInit rootBounds) {
+      Js.<IntersectionObserverEntryInit>uncheckedCast( this ).setRootBounds( rootBounds );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "IntersectionObserverEntryInit"
+  )
+  interface Step5 {
     @JsOverlay
     @Nonnull
-    default Builder rootBounds(@Nullable final DOMRectInit rootBounds) {
-      setRootBounds( rootBounds );
-      return this;
+    default Step6 target(@Nonnull Element target) {
+      Js.<IntersectionObserverEntryInit>uncheckedCast( this ).setTarget( target );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "IntersectionObserverEntryInit"
+  )
+  interface Step6 {
     @JsOverlay
     @Nonnull
-    default Builder target(@Nonnull final Element target) {
-      setTarget( target );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder time(final double time) {
-      setTime( time );
-      return this;
+    default IntersectionObserverEntryInit time(double time) {
+      Js.<IntersectionObserverEntryInit>uncheckedCast( this ).setTime( time );
+      return Js.uncheckedCast( this );
     }
   }
 }

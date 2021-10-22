@@ -22,7 +22,9 @@ public interface GPUStorageTextureBindingLayout {
   @JsOverlay
   @Nonnull
   static Builder format(@GPUTextureFormat @Nonnull final String format) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format );
+    final Builder $gpuStorageTextureBindingLayout = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuStorageTextureBindingLayout.setFormat( format );
+    return Js.uncheckedCast( $gpuStorageTextureBindingLayout );
   }
 
   @JsProperty(
@@ -53,7 +55,6 @@ public interface GPUStorageTextureBindingLayout {
   @JsProperty
   void setViewDimension(@GPUTextureViewDimension @JsNonNull String viewDimension);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -65,13 +66,6 @@ public interface GPUStorageTextureBindingLayout {
     @Nonnull
     default Builder access(@GPUStorageTextureAccess @Nonnull final String access) {
       setAccess( access );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
       return this;
     }
 

@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CanvasRenderingContext2DSettings {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -86,7 +86,6 @@ public interface CanvasRenderingContext2DSettings {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">CanvasRenderingContext2DSettings - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -25,7 +25,7 @@ import jsinterop.base.JsPropertyMap;
 public interface KeyframeEffectOptions extends EffectTiming {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -52,7 +52,6 @@ public interface KeyframeEffectOptions extends EffectTiming {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffectOptions">KeyframeEffectOptions - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

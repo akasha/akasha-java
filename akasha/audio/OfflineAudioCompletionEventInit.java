@@ -21,7 +21,9 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder renderedBuffer(@Nonnull final AudioBuffer renderedBuffer) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).renderedBuffer( renderedBuffer );
+    final Builder $offlineAudioCompletionEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $offlineAudioCompletionEventInit.setRenderedBuffer( renderedBuffer );
+    return Js.uncheckedCast( $offlineAudioCompletionEventInit );
   }
 
   @JsProperty(
@@ -33,20 +35,12 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
   @JsProperty
   void setRenderedBuffer(@JsNonNull AudioBuffer renderedBuffer);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "OfflineAudioCompletionEventInit"
   )
   interface Builder extends OfflineAudioCompletionEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder renderedBuffer(@Nonnull final AudioBuffer renderedBuffer) {
-      setRenderedBuffer( renderedBuffer );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioDecoderConfig {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String codec, final int sampleRate,
-      final int numberOfChannels) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codec( codec ).sampleRate( sampleRate ).numberOfChannels( numberOfChannels );
+  static Step1 codec(@Nonnull final String codec) {
+    final Builder $audioDecoderConfig = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $audioDecoderConfig.setCodec( codec );
+    return Js.uncheckedCast( $audioDecoderConfig );
   }
 
   @JsProperty(
@@ -58,34 +59,40 @@ public interface AudioDecoderConfig {
   @JsProperty
   void setDescription(@JsNonNull BufferSource description);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioDecoderConfig"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 sampleRate(int sampleRate) {
+      Js.<AudioDecoderConfig>uncheckedCast( this ).setSampleRate( sampleRate );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioDecoderConfig"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder numberOfChannels(int numberOfChannels) {
+      Js.<AudioDecoderConfig>uncheckedCast( this ).setNumberOfChannels( numberOfChannels );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioDecoderConfig"
   )
   interface Builder extends AudioDecoderConfig {
-    @JsOverlay
-    @Nonnull
-    default Builder codec(@Nonnull final String codec) {
-      setCodec( codec );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder sampleRate(final int sampleRate) {
-      setSampleRate( sampleRate );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder numberOfChannels(final int numberOfChannels) {
-      setNumberOfChannels( numberOfChannels );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder description(@Nonnull final BufferSource description) {

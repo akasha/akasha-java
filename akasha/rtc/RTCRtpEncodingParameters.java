@@ -25,7 +25,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -101,7 +101,6 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters">RTCRtpEncodingParameters - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters">(WebRTC 1.0) # dom-rtcrtpencodingparameters</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

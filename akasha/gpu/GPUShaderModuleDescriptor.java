@@ -23,7 +23,9 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder code(@WGSL @Nonnull final String code) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).code( code );
+    final Builder $gpuShaderModuleDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuShaderModuleDescriptor.setCode( code );
+    return Js.uncheckedCast( $gpuShaderModuleDescriptor );
   }
 
   @JsProperty(
@@ -44,7 +46,6 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setSourceMap(@JsNonNull JsObject sourceMap);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -52,13 +53,6 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUShaderModuleDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder code(@WGSL @Nonnull final String code) {
-      setCode( code );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder sourceMap(@Nonnull final JsObject sourceMap) {

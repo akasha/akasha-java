@@ -27,7 +27,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRSessionInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -63,7 +63,6 @@ public interface XRSessionInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit">XRSessionInit - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession"># dom-xrsystem-requestsession</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

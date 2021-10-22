@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PasswordCredentialData extends CredentialData, PasswordCredentialInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String id, @Nonnull final String origin,
-      @Nonnull final String password) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).origin( origin ).password( password );
+  static Step1 id(@Nonnull final String id) {
+    final Builder $passwordCredentialData = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $passwordCredentialData.setId( id );
+    return Js.uncheckedCast( $passwordCredentialData );
   }
 
   @JsProperty(
@@ -58,7 +59,34 @@ public interface PasswordCredentialData extends CredentialData, PasswordCredenti
   @JsProperty
   void setPassword(@JsNonNull String password);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PasswordCredentialData"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 origin(@Nonnull String origin) {
+      Js.<PasswordCredentialData>uncheckedCast( this ).setOrigin( origin );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PasswordCredentialData"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder password(@Nonnull String password) {
+      Js.<PasswordCredentialData>uncheckedCast( this ).setPassword( password );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -76,27 +104,6 @@ public interface PasswordCredentialData extends CredentialData, PasswordCredenti
     @Nonnull
     default Builder name(@Nonnull final String name) {
       setName( name );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder origin(@Nonnull final String origin) {
-      setOrigin( origin );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder password(@Nonnull final String password) {
-      setPassword( password );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder id(@Nonnull final String id) {
-      setId( id );
       return this;
     }
   }

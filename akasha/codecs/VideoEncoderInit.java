@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface VideoEncoderInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final EncodedVideoChunkOutputCallback output,
-      @Nonnull final WebCodecsErrorCallback error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).output( output ).error( error );
+  static Step1 output(@Nonnull final EncodedVideoChunkOutputCallback output) {
+    final VideoEncoderInit $videoEncoderInit = Js.<VideoEncoderInit>uncheckedCast( JsPropertyMap.of() );
+    $videoEncoderInit.setOutput( output );
+    return Js.uncheckedCast( $videoEncoderInit );
   }
 
   @JsProperty(
@@ -42,25 +43,17 @@ public interface VideoEncoderInit {
   @JsProperty
   void setError(@JsNonNull WebCodecsErrorCallback error);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "VideoEncoderInit"
   )
-  interface Builder extends VideoEncoderInit {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder output(@Nonnull final EncodedVideoChunkOutputCallback output) {
-      setOutput( output );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final WebCodecsErrorCallback error) {
-      setError( error );
-      return this;
+    default VideoEncoderInit error(@Nonnull WebCodecsErrorCallback error) {
+      Js.<VideoEncoderInit>uncheckedCast( this ).setError( error );
+      return Js.uncheckedCast( this );
     }
   }
 }

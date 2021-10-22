@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ReadableStreamBYOBReadResult {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -40,7 +40,6 @@ public interface ReadableStreamBYOBReadResult {
   @JsProperty
   void setDone(boolean done);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

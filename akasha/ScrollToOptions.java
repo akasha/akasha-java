@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ScrollToOptions extends ScrollOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -74,7 +74,6 @@ public interface ScrollToOptions extends ScrollOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
    * @see <a href="https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions">(CSSOM View) # dictdef-scrolltooptions</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

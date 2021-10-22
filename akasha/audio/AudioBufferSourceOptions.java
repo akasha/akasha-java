@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioBufferSourceOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -73,7 +73,6 @@ public interface AudioBufferSourceOptions {
   @JsProperty
   void setPlaybackRate(float playbackRate);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

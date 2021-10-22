@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface ModuleExportDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@ImportExportKind @Nonnull final String kind, @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).kind( kind ).name( name );
+  static Step1 kind(@ImportExportKind @Nonnull final String kind) {
+    final ModuleExportDescriptor $moduleExportDescriptor = Js.<ModuleExportDescriptor>uncheckedCast( JsPropertyMap.of() );
+    $moduleExportDescriptor.setKind( kind );
+    return Js.uncheckedCast( $moduleExportDescriptor );
   }
 
   @JsProperty(
@@ -42,25 +44,17 @@ public interface ModuleExportDescriptor {
   @JsProperty
   void setName(@JsNonNull String name);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "ModuleExportDescriptor"
   )
-  interface Builder extends ModuleExportDescriptor {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder kind(@ImportExportKind @Nonnull final String kind) {
-      setKind( kind );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default ModuleExportDescriptor name(@Nonnull String name) {
+      Js.<ModuleExportDescriptor>uncheckedCast( this ).setName( name );
+      return Js.uncheckedCast( this );
     }
   }
 }

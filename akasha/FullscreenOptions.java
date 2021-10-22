@@ -25,7 +25,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FullscreenOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -56,7 +56,6 @@ public interface FullscreenOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions">FullscreenOptions - MDN</a>
    * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0">(Fullscreen API) # ref-for-dom-element-requestfullscreen①</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

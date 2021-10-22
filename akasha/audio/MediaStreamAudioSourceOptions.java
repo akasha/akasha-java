@@ -26,8 +26,10 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaStreamAudioSourceOptions {
   @JsOverlay
   @Nonnull
-  static Builder mediaStream(@Nonnull final MediaStream mediaStream) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mediaStream( mediaStream );
+  static MediaStreamAudioSourceOptions mediaStream(@Nonnull final MediaStream mediaStream) {
+    final MediaStreamAudioSourceOptions $mediaStreamAudioSourceOptions = Js.<MediaStreamAudioSourceOptions>uncheckedCast( JsPropertyMap.of() );
+    $mediaStreamAudioSourceOptions.setMediaStream( mediaStream );
+    return Js.uncheckedCast( $mediaStreamAudioSourceOptions );
   }
 
   /**
@@ -50,31 +52,4 @@ public interface MediaStreamAudioSourceOptions {
    */
   @JsProperty
   void setMediaStream(@JsNonNull MediaStream mediaStream);
-
-  /**
-   * The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions">MediaStreamAudioSourceOptions - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamAudioSourceOptions"># MediaStreamAudioSourceOptions</a>
-   */
-  @Generated("org.realityforge.webtack")
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "MediaStreamAudioSourceOptions"
-  )
-  interface Builder extends MediaStreamAudioSourceOptions {
-    /**
-     * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
-     * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourceoptions-mediastream">MediaStreamAudioSourceOptions.mediaStream - Web Audio API</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder mediaStream(@Nonnull final MediaStream mediaStream) {
-      setMediaStream( mediaStream );
-      return this;
-    }
-  }
 }

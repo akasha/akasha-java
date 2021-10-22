@@ -23,7 +23,9 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
   @JsOverlay
   @Nonnull
   static Builder texture(@Nonnull final GPUTexture texture) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).texture( texture );
+    final Builder $gpuImageCopyTextureTagged = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuImageCopyTextureTagged.setTexture( texture );
+    return Js.uncheckedCast( $gpuImageCopyTextureTagged );
   }
 
   @JsProperty(
@@ -43,7 +45,6 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
   @JsProperty
   void setPremultipliedAlpha(boolean premultipliedAlpha);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -62,13 +63,6 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
     @Nonnull
     default Builder premultipliedAlpha(final boolean premultipliedAlpha) {
       setPremultipliedAlpha( premultipliedAlpha );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder texture(@Nonnull final GPUTexture texture) {
-      setTexture( texture );
       return this;
     }
 
@@ -102,14 +96,14 @@ public interface GPUImageCopyTextureTagged extends GPUImageCopyTexture {
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final double... origin) {
+    default Builder origin(@Nonnull final GPUOrigin3DDict origin) {
       setOrigin( origin );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final GPUOrigin3DDict origin) {
+    default Builder origin(@Nonnull final double... origin) {
       setOrigin( origin );
       return this;
     }

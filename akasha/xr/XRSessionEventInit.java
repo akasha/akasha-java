@@ -27,7 +27,9 @@ public interface XRSessionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder session(@Nonnull final XRSession session) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).session( session );
+    final Builder $xrSessionEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $xrSessionEventInit.setSession( session );
+    return Js.uncheckedCast( $xrSessionEventInit );
   }
 
   /**
@@ -57,26 +59,12 @@ public interface XRSessionEventInit extends EventInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit">XRSessionEventInit - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessionevent-xrsessionevent"># dom-xrsessionevent-xrsessionevent</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "XRSessionEventInit"
   )
   interface Builder extends XRSessionEventInit {
-    /**
-     * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
-     * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsessioneventinit-session">XRSessionEventInit.session - WebXR Device API</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder session(@Nonnull final XRSession session) {
-      setSession( session );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

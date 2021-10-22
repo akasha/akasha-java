@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IDBObjectStoreParameters {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -58,7 +58,6 @@ public interface IDBObjectStoreParameters {
     setKeyPath( StringOrStringArrayUnion.of( keyPath ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -20,7 +20,9 @@ public interface ShadowRootInit {
   @JsOverlay
   @Nonnull
   static Builder mode(@ShadowRootMode @Nonnull final String mode) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mode( mode );
+    final Builder $shadowRootInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $shadowRootInit.setMode( mode );
+    return Js.uncheckedCast( $shadowRootInit );
   }
 
   @JsProperty(
@@ -50,20 +52,12 @@ public interface ShadowRootInit {
   @JsProperty
   void setSlotAssignment(@SlotAssignmentMode @JsNonNull String slotAssignment);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "ShadowRootInit"
   )
   interface Builder extends ShadowRootInit {
-    @JsOverlay
-    @Nonnull
-    default Builder mode(@ShadowRootMode @Nonnull final String mode) {
-      setMode( mode );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder delegatesFocus(final boolean delegatesFocus) {

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ResizeObserverOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,7 +32,6 @@ public interface ResizeObserverOptions {
   @JsProperty
   void setBox(@ResizeObserverBoxOptions @JsNonNull String box);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

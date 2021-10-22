@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface StreamPipeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -55,7 +55,6 @@ public interface StreamPipeOptions {
   @JsProperty
   void setSignal(@JsNonNull AbortSignal signal);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

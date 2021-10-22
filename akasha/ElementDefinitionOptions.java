@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ElementDefinitionOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,7 +31,6 @@ public interface ElementDefinitionOptions {
   @JsProperty
   void setExtends(@JsNonNull String extends_);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

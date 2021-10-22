@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCDtlsFingerprint {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,7 +39,6 @@ public interface RTCDtlsFingerprint {
   @JsProperty
   void setValue(@JsNonNull String value);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

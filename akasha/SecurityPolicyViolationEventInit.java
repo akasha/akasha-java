@@ -19,11 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String documentURI, @Nonnull final String violatedDirective,
-      @Nonnull final String effectiveDirective, @Nonnull final String originalPolicy,
-      @SecurityPolicyViolationEventDisposition @Nonnull final String disposition,
-      final int statusCode) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).documentURI( documentURI ).violatedDirective( violatedDirective ).effectiveDirective( effectiveDirective ).originalPolicy( originalPolicy ).disposition( disposition ).statusCode( statusCode );
+  static Step1 documentURI(@Nonnull final String documentURI) {
+    final Builder $securityPolicyViolationEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $securityPolicyViolationEventInit.setDocumentURI( documentURI );
+    return Js.uncheckedCast( $securityPolicyViolationEventInit );
   }
 
   @JsProperty(
@@ -128,56 +127,83 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsProperty
   void setSourceFile(@JsNonNull String sourceFile);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "SecurityPolicyViolationEventInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 violatedDirective(@Nonnull String violatedDirective) {
+      Js.<SecurityPolicyViolationEventInit>uncheckedCast( this ).setViolatedDirective( violatedDirective );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "SecurityPolicyViolationEventInit"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 effectiveDirective(@Nonnull String effectiveDirective) {
+      Js.<SecurityPolicyViolationEventInit>uncheckedCast( this ).setEffectiveDirective( effectiveDirective );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "SecurityPolicyViolationEventInit"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default Step4 originalPolicy(@Nonnull String originalPolicy) {
+      Js.<SecurityPolicyViolationEventInit>uncheckedCast( this ).setOriginalPolicy( originalPolicy );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "SecurityPolicyViolationEventInit"
+  )
+  interface Step4 {
+    @JsOverlay
+    @Nonnull
+    default Step5 disposition(
+        @SecurityPolicyViolationEventDisposition @Nonnull String disposition) {
+      Js.<SecurityPolicyViolationEventInit>uncheckedCast( this ).setDisposition( disposition );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "SecurityPolicyViolationEventInit"
+  )
+  interface Step5 {
+    @JsOverlay
+    @Nonnull
+    default Builder statusCode(int statusCode) {
+      Js.<SecurityPolicyViolationEventInit>uncheckedCast( this ).setStatusCode( statusCode );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "SecurityPolicyViolationEventInit"
   )
   interface Builder extends SecurityPolicyViolationEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder documentURI(@Nonnull final String documentURI) {
-      setDocumentURI( documentURI );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder violatedDirective(@Nonnull final String violatedDirective) {
-      setViolatedDirective( violatedDirective );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder effectiveDirective(@Nonnull final String effectiveDirective) {
-      setEffectiveDirective( effectiveDirective );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder originalPolicy(@Nonnull final String originalPolicy) {
-      setOriginalPolicy( originalPolicy );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder disposition(
-        @SecurityPolicyViolationEventDisposition @Nonnull final String disposition) {
-      setDisposition( disposition );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder statusCode(final int statusCode) {
-      setStatusCode( statusCode );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder blockedURI(@Nonnull final String blockedURI) {

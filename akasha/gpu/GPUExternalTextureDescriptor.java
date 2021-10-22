@@ -23,7 +23,9 @@ public interface GPUExternalTextureDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder source(@Nonnull final HTMLVideoElement source) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
+    final Builder $gpuExternalTextureDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuExternalTextureDescriptor.setSource( source );
+    return Js.uncheckedCast( $gpuExternalTextureDescriptor );
   }
 
   @JsProperty(
@@ -44,7 +46,6 @@ public interface GPUExternalTextureDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setColorSpace(@GPUPredefinedColorSpace @JsNonNull String colorSpace);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -52,13 +53,6 @@ public interface GPUExternalTextureDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUExternalTextureDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final HTMLVideoElement source) {
-      setSource( source );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder colorSpace(@GPUPredefinedColorSpace @Nonnull final String colorSpace) {

@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioEncoderInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final EncodedAudioChunkOutputCallback output,
-      @Nonnull final WebCodecsErrorCallback error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).output( output ).error( error );
+  static Step1 output(@Nonnull final EncodedAudioChunkOutputCallback output) {
+    final AudioEncoderInit $audioEncoderInit = Js.<AudioEncoderInit>uncheckedCast( JsPropertyMap.of() );
+    $audioEncoderInit.setOutput( output );
+    return Js.uncheckedCast( $audioEncoderInit );
   }
 
   @JsProperty(
@@ -42,25 +43,17 @@ public interface AudioEncoderInit {
   @JsProperty
   void setError(@JsNonNull WebCodecsErrorCallback error);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioEncoderInit"
   )
-  interface Builder extends AudioEncoderInit {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder output(@Nonnull final EncodedAudioChunkOutputCallback output) {
-      setOutput( output );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final WebCodecsErrorCallback error) {
-      setError( error );
-      return this;
+    default AudioEncoderInit error(@Nonnull WebCodecsErrorCallback error) {
+      Js.<AudioEncoderInit>uncheckedCast( this ).setError( error );
+      return Js.uncheckedCast( this );
     }
   }
 }

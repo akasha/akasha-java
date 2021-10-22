@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ClipboardItemOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,7 +32,6 @@ public interface ClipboardItemOptions {
   @JsProperty
   void setPresentationStyle(@PresentationStyle @JsNonNull String presentationStyle);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

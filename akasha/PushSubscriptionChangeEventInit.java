@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,7 +39,6 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
   @JsProperty
   void setOldSubscription(@JsNonNull PushSubscription oldSubscription);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

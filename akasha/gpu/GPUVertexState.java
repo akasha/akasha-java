@@ -22,8 +22,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUVertexState extends GPUProgrammableStage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint );
+  static Step1 module(@Nonnull final GPUShaderModule module) {
+    final Builder $gpuVertexState = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuVertexState.setModule( module );
+    return Js.uncheckedCast( $gpuVertexState );
   }
 
   @JsProperty(
@@ -39,7 +41,20 @@ public interface GPUVertexState extends GPUProgrammableStage {
     setBuffers( Js.<JsArray<GPUVertexBufferLayout>>uncheckedCast( buffers ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUVertexState"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder entryPoint(@Nonnull String entryPoint) {
+      Js.<GPUVertexState>uncheckedCast( this ).setEntryPoint( entryPoint );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -58,20 +73,6 @@ public interface GPUVertexState extends GPUProgrammableStage {
     @Nonnull
     default Builder buffers(@Nonnull final GPUVertexBufferLayout... buffers) {
       setBuffers( buffers );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder module(@Nonnull final GPUShaderModule module) {
-      setModule( module );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder entryPoint(@Nonnull final String entryPoint) {
-      setEntryPoint( entryPoint );
       return this;
     }
 

@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -42,7 +42,6 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
   @JsProperty
   void setTimeline(@JsNullable AnimationTimeline timeline);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

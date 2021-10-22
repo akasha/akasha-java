@@ -26,23 +26,10 @@ import jsinterop.base.JsPropertyMap;
 public interface HkdfParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final AlgorithmIdentifier hash,
-      @Nonnull final BufferSource salt, @Nonnull final BufferSource info) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).salt( salt ).info( info );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final JsObject hash,
-      @Nonnull final BufferSource salt, @Nonnull final BufferSource info) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).salt( salt ).info( info );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final String hash,
-      @Nonnull final BufferSource salt, @Nonnull final BufferSource info) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).salt( salt ).info( info );
+  static Step1 name(@Nonnull final String name) {
+    final HkdfParams $hkdfParams = Js.<HkdfParams>uncheckedCast( JsPropertyMap.of() );
+    $hkdfParams.setName( name );
+    return Js.uncheckedCast( $hkdfParams );
   }
 
   @JsProperty(
@@ -82,58 +69,59 @@ public interface HkdfParams extends Algorithm {
   @JsProperty
   void setInfo(@JsNonNull BufferSource info);
 
-  /**
-   * A DOMString. This should be set to HKDF.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams">HkdfParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "HkdfParams"
   )
-  interface Builder extends HkdfParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final AlgorithmIdentifier hash) {
-      setHash( hash );
-      return this;
+    default Step2 hash(@Nonnull AlgorithmIdentifier hash) {
+      Js.<HkdfParams>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final JsObject hash) {
-      setHash( hash );
-      return this;
+    default Step2 hash(@Nonnull JsObject hash) {
+      Js.<HkdfParams>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final String hash) {
-      setHash( hash );
-      return this;
+    default Step2 hash(@Nonnull String hash) {
+      Js.<HkdfParams>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "HkdfParams"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder salt(@Nonnull final BufferSource salt) {
-      setSalt( salt );
-      return this;
+    default Step3 salt(@Nonnull BufferSource salt) {
+      Js.<HkdfParams>uncheckedCast( this ).setSalt( salt );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "HkdfParams"
+  )
+  interface Step3 {
     @JsOverlay
     @Nonnull
-    default Builder info(@Nonnull final BufferSource info) {
-      setInfo( info );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default HkdfParams info(@Nonnull BufferSource info) {
+      Js.<HkdfParams>uncheckedCast( this ).setInfo( info );
+      return Js.uncheckedCast( this );
     }
   }
 }

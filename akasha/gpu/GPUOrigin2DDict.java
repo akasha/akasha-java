@@ -20,7 +20,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUOrigin2DDict {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -40,7 +40,6 @@ public interface GPUOrigin2DDict {
   @JsProperty
   void setY(int y);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

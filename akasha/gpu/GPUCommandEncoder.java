@@ -45,6 +45,9 @@ public class GPUCommandEncoder extends JsObject {
   public native void copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull JsArray<Double> copySize);
 
+  public native void copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
+      @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3DDict copySize);
+
   @JsOverlay
   public final void copyBufferToTexture(@Nonnull final GPUImageCopyBuffer source,
       @Nonnull final GPUImageCopyTexture destination, @Nonnull final double... copySize) {
@@ -57,14 +60,14 @@ public class GPUCommandEncoder extends JsObject {
   private native void _copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
 
-  public native void copyBufferToTexture(@Nonnull GPUImageCopyBuffer source,
-      @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3DDict copySize);
-
   public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyBuffer destination, @Nonnull GPUExtent3D copySize);
 
   public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyBuffer destination, @Nonnull JsArray<Double> copySize);
+
+  public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
+      @Nonnull GPUImageCopyBuffer destination, @Nonnull GPUExtent3DDict copySize);
 
   @JsOverlay
   public final void copyTextureToBuffer(@Nonnull final GPUImageCopyTexture source,
@@ -78,14 +81,14 @@ public class GPUCommandEncoder extends JsObject {
   private native void _copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyBuffer destination, @Nonnull double[] copySize);
 
-  public native void copyTextureToBuffer(@Nonnull GPUImageCopyTexture source,
-      @Nonnull GPUImageCopyBuffer destination, @Nonnull GPUExtent3DDict copySize);
-
   public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3D copySize);
 
   public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull JsArray<Double> copySize);
+
+  public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
+      @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3DDict copySize);
 
   @JsOverlay
   public final void copyTextureToTexture(@Nonnull final GPUImageCopyTexture source,
@@ -98,9 +101,6 @@ public class GPUCommandEncoder extends JsObject {
   )
   private native void _copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
-
-  public native void copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
-      @Nonnull GPUImageCopyTexture destination, @Nonnull GPUExtent3DDict copySize);
 
   @JsNonNull
   public native GPUCommandBuffer finish(@Nonnull GPUCommandBufferDescriptor descriptor);

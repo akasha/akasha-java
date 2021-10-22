@@ -19,7 +19,9 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $pushPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $pushPermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $pushPermissionDescriptor );
   }
 
   @JsProperty(
@@ -30,7 +32,6 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -41,13 +42,6 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
     @Nonnull
     default Builder userVisibleOnly(final boolean userVisibleOnly) {
       setUserVisibleOnly( userVisibleOnly );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

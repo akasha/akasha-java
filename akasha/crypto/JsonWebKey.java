@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface JsonWebKey {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -178,7 +178,6 @@ public interface JsonWebKey {
   @JsProperty
   void setY(@JsNonNull String y);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

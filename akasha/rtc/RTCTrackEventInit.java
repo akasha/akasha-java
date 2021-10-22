@@ -29,9 +29,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCTrackEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final RTCRtpReceiver receiver,
-      @Nonnull final MediaStreamTrack track, @Nonnull final RTCRtpTransceiver transceiver) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).receiver( receiver ).track( track ).transceiver( transceiver );
+  static Step1 receiver(@Nonnull final RTCRtpReceiver receiver) {
+    final Builder $rtcTrackEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcTrackEventInit.setReceiver( receiver );
+    return Js.uncheckedCast( $rtcTrackEventInit );
   }
 
   /**
@@ -116,52 +117,46 @@ public interface RTCTrackEventInit extends EventInit {
     setStreams( Js.<JsArray<MediaStream>>uncheckedCast( streams ) );
   }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCTrackEventInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 track(@Nonnull MediaStreamTrack track) {
+      Js.<RTCTrackEventInit>uncheckedCast( this ).setTrack( track );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCTrackEventInit"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder transceiver(@Nonnull RTCRtpTransceiver transceiver) {
+      Js.<RTCTrackEventInit>uncheckedCast( this ).setTransceiver( transceiver );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit">RTCTrackEventInit - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">(WebRTC 1.0) # dom-rtctrackeventinit</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCTrackEventInit"
   )
   interface Builder extends RTCTrackEventInit {
-    /**
-     * The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver">RTCTrackEventInit.receiver - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-receiver">RTCTrackEventInit.receiver - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder receiver(@Nonnull final RTCRtpReceiver receiver) {
-      setReceiver( receiver );
-      return this;
-    }
-
-    /**
-     * The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track">RTCTrackEventInit.track - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track">RTCTrackEventInit.track - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder track(@Nonnull final MediaStreamTrack track) {
-      setTrack( track );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder transceiver(@Nonnull final RTCRtpTransceiver transceiver) {
-      setTransceiver( transceiver );
-      return this;
-    }
-
     /**
      * The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track.
      *

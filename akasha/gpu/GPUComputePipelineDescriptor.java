@@ -22,7 +22,9 @@ public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase 
   @JsOverlay
   @Nonnull
   static Builder compute(@Nonnull final GPUProgrammableStage compute) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).compute( compute );
+    final Builder $gpuComputePipelineDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuComputePipelineDescriptor.setCompute( compute );
+    return Js.uncheckedCast( $gpuComputePipelineDescriptor );
   }
 
   @JsProperty(
@@ -34,7 +36,6 @@ public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase 
   @JsProperty
   void setCompute(@JsNonNull GPUProgrammableStage compute);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -42,13 +43,6 @@ public interface GPUComputePipelineDescriptor extends GPUPipelineDescriptorBase 
   )
   @ApiStatus.Experimental
   interface Builder extends GPUComputePipelineDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder compute(@Nonnull final GPUProgrammableStage compute) {
-      setCompute( compute );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder layout(@Nonnull final GPUPipelineLayout layout) {

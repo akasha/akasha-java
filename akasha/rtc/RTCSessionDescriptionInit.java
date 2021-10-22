@@ -20,7 +20,9 @@ public interface RTCSessionDescriptionInit {
   @JsOverlay
   @Nonnull
   static Builder type(@RTCSdpType @Nonnull final String type) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).type( type );
+    final Builder $rtcSessionDescriptionInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcSessionDescriptionInit.setType( type );
+    return Js.uncheckedCast( $rtcSessionDescriptionInit );
   }
 
   @JsProperty(
@@ -41,20 +43,12 @@ public interface RTCSessionDescriptionInit {
   @JsProperty
   void setSdp(@JsNonNull String sdp);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCSessionDescriptionInit"
   )
   interface Builder extends RTCSessionDescriptionInit {
-    @JsOverlay
-    @Nonnull
-    default Builder type(@RTCSdpType @Nonnull final String type) {
-      setType( type );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder sdp(@Nonnull final String sdp) {

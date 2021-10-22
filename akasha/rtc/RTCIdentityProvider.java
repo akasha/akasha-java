@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityProvider {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GenerateAssertionCallback generateAssertion,
-      @Nonnull final ValidateAssertionCallback validateAssertion) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).generateAssertion( generateAssertion ).validateAssertion( validateAssertion );
+  static Step1 generateAssertion(@Nonnull final GenerateAssertionCallback generateAssertion) {
+    final RTCIdentityProvider $rtcIdentityProvider = Js.<RTCIdentityProvider>uncheckedCast( JsPropertyMap.of() );
+    $rtcIdentityProvider.setGenerateAssertion( generateAssertion );
+    return Js.uncheckedCast( $rtcIdentityProvider );
   }
 
   @JsProperty(
@@ -42,25 +43,18 @@ public interface RTCIdentityProvider {
   @JsProperty
   void setValidateAssertion(@JsNonNull ValidateAssertionCallback validateAssertion);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCIdentityProvider"
   )
-  interface Builder extends RTCIdentityProvider {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder generateAssertion(@Nonnull final GenerateAssertionCallback generateAssertion) {
-      setGenerateAssertion( generateAssertion );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder validateAssertion(@Nonnull final ValidateAssertionCallback validateAssertion) {
-      setValidateAssertion( validateAssertion );
-      return this;
+    default RTCIdentityProvider validateAssertion(
+        @Nonnull ValidateAssertionCallback validateAssertion) {
+      Js.<RTCIdentityProvider>uncheckedCast( this ).setValidateAssertion( validateAssertion );
+      return Js.uncheckedCast( this );
     }
   }
 }

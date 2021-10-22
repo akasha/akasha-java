@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaTrackConstraints extends MediaTrackConstraintSet {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -49,7 +49,6 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints">MediaTrackConstraints - MDN</a>
    * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints"># dom-mediatrackconstraints</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -156,14 +155,14 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder deviceId(@Nonnull final String... deviceId) {
+    default Builder deviceId(@Nonnull final ConstrainDOMStringParameters deviceId) {
       setDeviceId( deviceId );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder deviceId(@Nonnull final ConstrainDOMStringParameters deviceId) {
+    default Builder deviceId(@Nonnull final String... deviceId) {
       setDeviceId( deviceId );
       return this;
     }
@@ -212,14 +211,14 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder facingMode(@Nonnull final String... facingMode) {
+    default Builder facingMode(@Nonnull final ConstrainDOMStringParameters facingMode) {
       setFacingMode( facingMode );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder facingMode(@Nonnull final ConstrainDOMStringParameters facingMode) {
+    default Builder facingMode(@Nonnull final String... facingMode) {
       setFacingMode( facingMode );
       return this;
     }
@@ -268,14 +267,14 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder groupId(@Nonnull final String... groupId) {
+    default Builder groupId(@Nonnull final ConstrainDOMStringParameters groupId) {
       setGroupId( groupId );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder groupId(@Nonnull final ConstrainDOMStringParameters groupId) {
+    default Builder groupId(@Nonnull final String... groupId) {
       setGroupId( groupId );
       return this;
     }
@@ -366,14 +365,14 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder resizeMode(@Nonnull final String... resizeMode) {
+    default Builder resizeMode(@Nonnull final ConstrainDOMStringParameters resizeMode) {
       setResizeMode( resizeMode );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder resizeMode(@Nonnull final ConstrainDOMStringParameters resizeMode) {
+    default Builder resizeMode(@Nonnull final String... resizeMode) {
       setResizeMode( resizeMode );
       return this;
     }
@@ -464,14 +463,14 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder cursor(@Nonnull final String... cursor) {
+    default Builder cursor(@Nonnull final ConstrainDOMStringParameters cursor) {
       setCursor( cursor );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder cursor(@Nonnull final ConstrainDOMStringParameters cursor) {
+    default Builder cursor(@Nonnull final String... cursor) {
       setCursor( cursor );
       return this;
     }
@@ -499,14 +498,14 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
     @JsOverlay
     @Nonnull
-    default Builder displaySurface(@Nonnull final String... displaySurface) {
+    default Builder displaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
       setDisplaySurface( displaySurface );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder displaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
+    default Builder displaySurface(@Nonnull final String... displaySurface) {
       setDisplaySurface( displaySurface );
       return this;
     }

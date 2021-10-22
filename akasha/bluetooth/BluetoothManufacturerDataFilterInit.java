@@ -20,7 +20,9 @@ public interface BluetoothManufacturerDataFilterInit extends BluetoothDataFilter
   @JsOverlay
   @Nonnull
   static Builder companyIdentifier(final int companyIdentifier) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).companyIdentifier( companyIdentifier );
+    final Builder $bluetoothManufacturerDataFilterInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothManufacturerDataFilterInit.setCompanyIdentifier( companyIdentifier );
+    return Js.uncheckedCast( $bluetoothManufacturerDataFilterInit );
   }
 
   @JsProperty(
@@ -31,20 +33,12 @@ public interface BluetoothManufacturerDataFilterInit extends BluetoothDataFilter
   @JsProperty
   void setCompanyIdentifier(int companyIdentifier);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "BluetoothManufacturerDataFilterInit"
   )
   interface Builder extends BluetoothManufacturerDataFilterInit {
-    @JsOverlay
-    @Nonnull
-    default Builder companyIdentifier(final int companyIdentifier) {
-      setCompanyIdentifier( companyIdentifier );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder dataPrefix(@Nonnull final BufferSource dataPrefix) {

@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface ModuleImportDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@ImportExportKind @Nonnull final String kind, @Nonnull final String module,
-      @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).kind( kind ).module( module ).name( name );
+  static Step1 kind(@ImportExportKind @Nonnull final String kind) {
+    final ModuleImportDescriptor $moduleImportDescriptor = Js.<ModuleImportDescriptor>uncheckedCast( JsPropertyMap.of() );
+    $moduleImportDescriptor.setKind( kind );
+    return Js.uncheckedCast( $moduleImportDescriptor );
   }
 
   @JsProperty(
@@ -52,32 +53,31 @@ public interface ModuleImportDescriptor {
   @JsProperty
   void setName(@JsNonNull String name);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "ModuleImportDescriptor"
   )
-  interface Builder extends ModuleImportDescriptor {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder kind(@ImportExportKind @Nonnull final String kind) {
-      setKind( kind );
-      return this;
+    default Step2 module(@Nonnull String module) {
+      Js.<ModuleImportDescriptor>uncheckedCast( this ).setModule( module );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "ModuleImportDescriptor"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder module(@Nonnull final String module) {
-      setModule( module );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default ModuleImportDescriptor name(@Nonnull String name) {
+      Js.<ModuleImportDescriptor>uncheckedCast( this ).setName( name );
+      return Js.uncheckedCast( this );
     }
   }
 }

@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface ReadableWritablePair {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final ReadableStream readable,
-      @Nonnull final WritableStream writable) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).readable( readable ).writable( writable );
+  static Step1 readable(@Nonnull final ReadableStream readable) {
+    final ReadableWritablePair $readableWritablePair = Js.<ReadableWritablePair>uncheckedCast( JsPropertyMap.of() );
+    $readableWritablePair.setReadable( readable );
+    return Js.uncheckedCast( $readableWritablePair );
   }
 
   @JsProperty(
@@ -42,25 +43,17 @@ public interface ReadableWritablePair {
   @JsProperty
   void setWritable(@JsNonNull WritableStream writable);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "ReadableWritablePair"
   )
-  interface Builder extends ReadableWritablePair {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder readable(@Nonnull final ReadableStream readable) {
-      setReadable( readable );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder writable(@Nonnull final WritableStream writable) {
-      setWritable( writable );
-      return this;
+    default ReadableWritablePair writable(@Nonnull WritableStream writable) {
+      Js.<ReadableWritablePair>uncheckedCast( this ).setWritable( writable );
+      return Js.uncheckedCast( this );
     }
   }
 }

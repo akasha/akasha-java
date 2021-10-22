@@ -21,7 +21,9 @@ public interface BlobEventInit {
   @JsOverlay
   @Nonnull
   static Builder data(@Nonnull final Blob data) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).data( data );
+    final Builder $blobEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $blobEventInit.setData( data );
+    return Js.uncheckedCast( $blobEventInit );
   }
 
   @JsProperty(
@@ -41,20 +43,12 @@ public interface BlobEventInit {
   @JsProperty
   void setTimecode(double timecode);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "BlobEventInit"
   )
   interface Builder extends BlobEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder data(@Nonnull final Blob data) {
-      setData( data );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder timecode(final double timecode) {

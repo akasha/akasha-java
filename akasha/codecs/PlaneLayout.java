@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PlaneLayout {
   @JsOverlay
   @Nonnull
-  static Builder create(final int offset, final int stride) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).offset( offset ).stride( stride );
+  static Step1 offset(final int offset) {
+    final PlaneLayout $planeLayout = Js.<PlaneLayout>uncheckedCast( JsPropertyMap.of() );
+    $planeLayout.setOffset( offset );
+    return Js.uncheckedCast( $planeLayout );
   }
 
   @JsProperty(
@@ -38,25 +40,17 @@ public interface PlaneLayout {
   @JsProperty
   void setStride(int stride);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "PlaneLayout"
   )
-  interface Builder extends PlaneLayout {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder offset(final int offset) {
-      setOffset( offset );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder stride(final int stride) {
-      setStride( stride );
-      return this;
+    default PlaneLayout stride(int stride) {
+      Js.<PlaneLayout>uncheckedCast( this ).setStride( stride );
+      return Js.uncheckedCast( this );
     }
   }
 }

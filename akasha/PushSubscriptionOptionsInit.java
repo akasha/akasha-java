@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushSubscriptionOptionsInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -52,7 +52,6 @@ public interface PushSubscriptionOptionsInit {
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

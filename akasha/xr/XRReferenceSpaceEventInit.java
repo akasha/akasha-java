@@ -29,7 +29,9 @@ public interface XRReferenceSpaceEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder referenceSpace(@Nonnull final XRReferenceSpace referenceSpace) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).referenceSpace( referenceSpace );
+    final Builder $xrReferenceSpaceEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $xrReferenceSpaceEventInit.setReferenceSpace( referenceSpace );
+    return Js.uncheckedCast( $xrReferenceSpaceEventInit );
   }
 
   /**
@@ -80,26 +82,12 @@ public interface XRReferenceSpaceEventInit extends EventInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit">XRReferenceSpaceEventInit - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceevent-xrreferencespaceevent"># dom-xrreferencespaceevent-xrreferencespaceevent</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "XRReferenceSpaceEventInit"
   )
   interface Builder extends XRReferenceSpaceEventInit {
-    /**
-     * The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace">XRReferenceSpaceEventInit.referenceSpace - MDN</a>
-     * @see <a href="https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace">XRReferenceSpaceEventInit.referenceSpace - WebXR Device API</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder referenceSpace(@Nonnull final XRReferenceSpace referenceSpace) {
-      setReferenceSpace( referenceSpace );
-      return this;
-    }
-
     /**
      * The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.
      *

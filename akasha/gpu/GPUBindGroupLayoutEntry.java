@@ -21,8 +21,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBindGroupLayoutEntry {
   @JsOverlay
   @Nonnull
-  static Builder create(final int binding, @GPUShaderStageFlags final int visibility) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).binding( binding ).visibility( visibility );
+  static Step1 binding(final int binding) {
+    final Builder $gpuBindGroupLayoutEntry = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuBindGroupLayoutEntry.setBinding( binding );
+    return Js.uncheckedCast( $gpuBindGroupLayoutEntry );
   }
 
   @JsProperty(
@@ -83,7 +85,20 @@ public interface GPUBindGroupLayoutEntry {
   @JsProperty
   void setTexture(@JsNonNull GPUTextureBindingLayout texture);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUBindGroupLayoutEntry"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder visibility(@GPUShaderStageFlags int visibility) {
+      Js.<GPUBindGroupLayoutEntry>uncheckedCast( this ).setVisibility( visibility );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -91,20 +106,6 @@ public interface GPUBindGroupLayoutEntry {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUBindGroupLayoutEntry {
-    @JsOverlay
-    @Nonnull
-    default Builder binding(final int binding) {
-      setBinding( binding );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder visibility(@GPUShaderStageFlags final int visibility) {
-      setVisibility( visibility );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder buffer(@Nonnull final GPUBufferBindingLayout buffer) {

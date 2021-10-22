@@ -22,7 +22,9 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
   static Builder request(@Nonnull final Request request) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).request( request );
+    final Builder $fetchEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $fetchEventInit.setRequest( request );
+    return Js.uncheckedCast( $fetchEventInit );
   }
 
   @JsProperty(
@@ -74,20 +76,12 @@ public interface FetchEventInit extends ExtendableEventInit {
   @JsProperty
   void setResultingClientId(@JsNonNull String resultingClientId);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "FetchEventInit"
   )
   interface Builder extends FetchEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder request(@Nonnull final Request request) {
-      setRequest( request );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder clientId(@Nonnull final String clientId) {

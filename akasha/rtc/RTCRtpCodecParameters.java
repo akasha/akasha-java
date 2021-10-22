@@ -24,9 +24,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodecParameters {
   @JsOverlay
   @Nonnull
-  static Builder create(final short payloadType, @Nonnull final String mimeType,
-      final int clockRate) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).payloadType( payloadType ).mimeType( mimeType ).clockRate( clockRate );
+  static Step1 payloadType(final short payloadType) {
+    final Builder $rtcRtpCodecParameters = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcRtpCodecParameters.setPayloadType( payloadType );
+    return Js.uncheckedCast( $rtcRtpCodecParameters );
   }
 
   @JsProperty(
@@ -70,39 +71,45 @@ public interface RTCRtpCodecParameters {
   @JsProperty
   void setSdpFmtpLine(@JsNonNull String sdpFmtpLine);
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCRtpCodecParameters"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 mimeType(@Nonnull String mimeType) {
+      Js.<RTCRtpCodecParameters>uncheckedCast( this ).setMimeType( mimeType );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCRtpCodecParameters"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder clockRate(int clockRate) {
+      Js.<RTCRtpCodecParameters>uncheckedCast( this ).setClockRate( clockRate );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The RTCRtpCodecParameters dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media codec.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters">RTCRtpCodecParameters - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCRtpCodecParameters"
   )
   interface Builder extends RTCRtpCodecParameters {
-    @JsOverlay
-    @Nonnull
-    default Builder payloadType(final short payloadType) {
-      setPayloadType( payloadType );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder mimeType(@Nonnull final String mimeType) {
-      setMimeType( mimeType );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder clockRate(final int clockRate) {
-      setClockRate( clockRate );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder channels(final int channels) {

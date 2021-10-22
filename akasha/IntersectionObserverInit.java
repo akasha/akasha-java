@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IntersectionObserverInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -66,7 +66,6 @@ public interface IntersectionObserverInit {
     setThreshold( DoubleOrDoubleArrayUnion.of( threshold ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

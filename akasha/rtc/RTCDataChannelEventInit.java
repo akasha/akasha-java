@@ -21,7 +21,9 @@ public interface RTCDataChannelEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder channel(@Nonnull final RTCDataChannel channel) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).channel( channel );
+    final Builder $rtcDataChannelEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcDataChannelEventInit.setChannel( channel );
+    return Js.uncheckedCast( $rtcDataChannelEventInit );
   }
 
   @JsProperty(
@@ -33,20 +35,12 @@ public interface RTCDataChannelEventInit extends EventInit {
   @JsProperty
   void setChannel(@JsNonNull RTCDataChannel channel);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCDataChannelEventInit"
   )
   interface Builder extends RTCDataChannelEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder channel(@Nonnull final RTCDataChannel channel) {
-      setChannel( channel );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

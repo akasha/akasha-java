@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioTimestamp {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -38,7 +38,6 @@ public interface AudioTimestamp {
   @JsProperty
   void setPerformanceTime(double performanceTime);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

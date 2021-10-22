@@ -21,7 +21,9 @@ public interface SpeechRecognitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder results(@Nonnull final SpeechRecognitionResultList results) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).results( results );
+    final Builder $speechRecognitionEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $speechRecognitionEventInit.setResults( results );
+    return Js.uncheckedCast( $speechRecognitionEventInit );
   }
 
   @JsProperty(
@@ -41,7 +43,6 @@ public interface SpeechRecognitionEventInit extends EventInit {
   @JsProperty
   void setResults(@JsNonNull SpeechRecognitionResultList results);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -52,13 +53,6 @@ public interface SpeechRecognitionEventInit extends EventInit {
     @Nonnull
     default Builder resultIndex(final int resultIndex) {
       setResultIndex( resultIndex );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder results(@Nonnull final SpeechRecognitionResultList results) {
-      setResults( results );
       return this;
     }
 

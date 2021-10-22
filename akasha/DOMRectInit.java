@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DOMRectInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -54,7 +54,6 @@ public interface DOMRectInit {
   @JsProperty
   void setY(double y);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

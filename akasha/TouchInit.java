@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface TouchInit {
   @JsOverlay
   @Nonnull
-  static Builder create(final int identifier, @Nonnull final EventTarget target) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).identifier( identifier ).target( target );
+  static Step1 identifier(final int identifier) {
+    final Builder $touchInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $touchInit.setIdentifier( identifier );
+    return Js.uncheckedCast( $touchInit );
   }
 
   @JsProperty(
@@ -145,7 +147,20 @@ public interface TouchInit {
   @JsProperty
   void setTouchType(@TouchType @JsNonNull String touchType);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "TouchInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder target(@Nonnull EventTarget target) {
+      Js.<TouchInit>uncheckedCast( this ).setTarget( target );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -184,13 +199,6 @@ public interface TouchInit {
     @Nonnull
     default Builder force(final float force) {
       setForce( force );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder identifier(final int identifier) {
-      setIdentifier( identifier );
       return this;
     }
 
@@ -240,13 +248,6 @@ public interface TouchInit {
     @Nonnull
     default Builder screenY(final double screenY) {
       setScreenY( screenY );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder target(@Nonnull final EventTarget target) {
-      setTarget( target );
       return this;
     }
 

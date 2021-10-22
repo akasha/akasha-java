@@ -23,7 +23,9 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder errorCode(final int errorCode) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).errorCode( errorCode );
+    final Builder $rtcPeerConnectionIceErrorEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcPeerConnectionIceErrorEventInit.setErrorCode( errorCode );
+    return Js.uncheckedCast( $rtcPeerConnectionIceErrorEventInit );
   }
 
   @JsProperty(
@@ -68,20 +70,12 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
   @JsProperty
   void setUrl(@JsNonNull String url);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCPeerConnectionIceErrorEventInit"
   )
   interface Builder extends RTCPeerConnectionIceErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder errorCode(final int errorCode) {
-      setErrorCode( errorCode );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder address(@Nullable final String address) {

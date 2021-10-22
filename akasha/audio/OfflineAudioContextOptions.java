@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface OfflineAudioContextOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(final int length, final float sampleRate) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).length( length ).sampleRate( sampleRate );
+  static Step1 length(final int length) {
+    final Builder $offlineAudioContextOptions = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $offlineAudioContextOptions.setLength( length );
+    return Js.uncheckedCast( $offlineAudioContextOptions );
   }
 
   @JsProperty(
@@ -46,27 +48,26 @@ public interface OfflineAudioContextOptions {
   @JsProperty
   void setNumberOfChannels(int numberOfChannels);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "OfflineAudioContextOptions"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder sampleRate(float sampleRate) {
+      Js.<OfflineAudioContextOptions>uncheckedCast( this ).setSampleRate( sampleRate );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "OfflineAudioContextOptions"
   )
   interface Builder extends OfflineAudioContextOptions {
-    @JsOverlay
-    @Nonnull
-    default Builder length(final int length) {
-      setLength( length );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder sampleRate(final float sampleRate) {
-      setSampleRate( sampleRate );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder numberOfChannels(final int numberOfChannels) {

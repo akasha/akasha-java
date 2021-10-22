@@ -19,7 +19,9 @@ public interface MemoryDescriptor {
   @JsOverlay
   @Nonnull
   static Builder initial(final int initial) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).initial( initial );
+    final Builder $memoryDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $memoryDescriptor.setInitial( initial );
+    return Js.uncheckedCast( $memoryDescriptor );
   }
 
   @JsProperty(
@@ -38,20 +40,12 @@ public interface MemoryDescriptor {
   @JsProperty
   void setMaximum(int maximum);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "MemoryDescriptor"
   )
   interface Builder extends MemoryDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder initial(final int initial) {
-      setInitial( initial );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder maximum(final int maximum) {

@@ -250,34 +250,6 @@ public class BaseAudioContext extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
    */
-  @JsNonNull
-  public native IIRFilterNode createIIRFilter(@Nonnull double[] feedforward,
-      @Nonnull JsArray<Double> feedback);
-
-  /**
-   * The createIIRFilter() method of the BaseAudioContext interface creates an IIRFilterNode, which represents a general infinite impulse response (IIR) filter which can be configured to serve as various types of filter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
-   */
-  @JsOverlay
-  @JsNonNull
-  public final IIRFilterNode createIIRFilter(@Nonnull final JsArray<Double> feedforward,
-      @Nonnull final double... feedback) {
-    return _createIIRFilter( feedforward, feedback );
-  }
-
-  @JsMethod(
-      name = "createIIRFilter"
-  )
-  @JsNonNull
-  private native IIRFilterNode _createIIRFilter(@Nonnull JsArray<Double> feedforward,
-      @Nonnull double[] feedback);
-
-  /**
-   * The createIIRFilter() method of the BaseAudioContext interface creates an IIRFilterNode, which represents a general infinite impulse response (IIR) filter which can be configured to serve as various types of filter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter">BaseAudioContext.createIIRFilter - MDN</a>
-   */
   @JsOverlay
   @JsNonNull
   public final IIRFilterNode createIIRFilter(@Nonnull final double[] feedforward,
@@ -327,26 +299,6 @@ public class BaseAudioContext extends EventTarget {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
    */
   @JsNonNull
-  public native PeriodicWave createPeriodicWave(@Nonnull double[] real,
-      @Nonnull JsArray<Double> imag, @Nonnull PeriodicWaveConstraints constraints);
-
-  /**
-   * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
-   */
-  @JsNonNull
-  public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
-      @Nonnull double[] imag, @Nonnull PeriodicWaveConstraints constraints);
-
-  /**
-   * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
-   */
-  @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull double[] real, @Nonnull double[] imag,
       @Nonnull PeriodicWaveConstraints constraints);
 
@@ -359,36 +311,6 @@ public class BaseAudioContext extends EventTarget {
   @JsNonNull
   public native PeriodicWave createPeriodicWave(@Nonnull JsArray<Double> real,
       @Nonnull JsArray<Double> imag);
-
-  /**
-   * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
-   */
-  @JsNonNull
-  public native PeriodicWave createPeriodicWave(@Nonnull double[] real,
-      @Nonnull JsArray<Double> imag);
-
-  /**
-   * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">BaseAudioContext.createPeriodicWave - MDN</a>
-   * @see <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave">createPeriodicWave - Web Audio API</a>
-   */
-  @JsOverlay
-  @JsNonNull
-  public final PeriodicWave createPeriodicWave(@Nonnull final JsArray<Double> real,
-      @Nonnull final double... imag) {
-    return _createPeriodicWave( real, imag );
-  }
-
-  @JsMethod(
-      name = "createPeriodicWave"
-  )
-  @JsNonNull
-  private native PeriodicWave _createPeriodicWave(@Nonnull JsArray<Double> real,
-      @Nonnull double[] imag);
 
   /**
    * The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.

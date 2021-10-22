@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothLEScanFilterInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -81,7 +81,6 @@ public interface BluetoothLEScanFilterInit {
     setServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( services ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

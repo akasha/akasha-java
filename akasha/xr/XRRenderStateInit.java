@@ -27,7 +27,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRRenderStateInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -84,7 +84,6 @@ public interface XRRenderStateInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate"># dom-xrsession-updaterenderstate</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ResponseInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -38,13 +38,13 @@ public interface ResponseInit {
   }
 
   @JsOverlay
-  @SuppressWarnings("unchecked")
-  default void setHeaders(@Nonnull final JsArray<String>... headers) {
+  default void setHeaders(@Nonnull final JsPropertyMap<String> headers) {
     setHeaders( HeadersInit.of( headers ) );
   }
 
   @JsOverlay
-  default void setHeaders(@Nonnull final JsPropertyMap<String> headers) {
+  @SuppressWarnings("unchecked")
+  default void setHeaders(@Nonnull final JsArray<String>... headers) {
     setHeaders( HeadersInit.of( headers ) );
   }
 
@@ -64,7 +64,6 @@ public interface ResponseInit {
   @JsProperty
   void setStatusText(@JsNonNull String statusText);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -87,15 +86,15 @@ public interface ResponseInit {
 
     @JsOverlay
     @Nonnull
-    @SuppressWarnings("unchecked")
-    default Builder headers(@Nonnull final JsArray<String>... headers) {
+    default Builder headers(@Nonnull final JsPropertyMap<String> headers) {
       setHeaders( headers );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder headers(@Nonnull final JsPropertyMap<String> headers) {
+    @SuppressWarnings("unchecked")
+    default Builder headers(@Nonnull final JsArray<String>... headers) {
       setHeaders( headers );
       return this;
     }

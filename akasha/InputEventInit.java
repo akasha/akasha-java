@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface InputEventInit extends UIEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -50,7 +50,6 @@ public interface InputEventInit extends UIEventInit {
   @JsProperty
   void setIsComposing(boolean isComposing);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

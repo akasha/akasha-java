@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioProcessingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(final double playbackTime, @Nonnull final AudioBuffer inputBuffer,
-      @Nonnull final AudioBuffer outputBuffer) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).playbackTime( playbackTime ).inputBuffer( inputBuffer ).outputBuffer( outputBuffer );
+  static Step1 playbackTime(final double playbackTime) {
+    final Builder $audioProcessingEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $audioProcessingEventInit.setPlaybackTime( playbackTime );
+    return Js.uncheckedCast( $audioProcessingEventInit );
   }
 
   @JsProperty(
@@ -51,34 +52,40 @@ public interface AudioProcessingEventInit extends EventInit {
   @JsProperty
   void setOutputBuffer(@JsNonNull AudioBuffer outputBuffer);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioProcessingEventInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 inputBuffer(@Nonnull AudioBuffer inputBuffer) {
+      Js.<AudioProcessingEventInit>uncheckedCast( this ).setInputBuffer( inputBuffer );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioProcessingEventInit"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder outputBuffer(@Nonnull AudioBuffer outputBuffer) {
+      Js.<AudioProcessingEventInit>uncheckedCast( this ).setOutputBuffer( outputBuffer );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioProcessingEventInit"
   )
   interface Builder extends AudioProcessingEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder playbackTime(final double playbackTime) {
-      setPlaybackTime( playbackTime );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder inputBuffer(@Nonnull final AudioBuffer inputBuffer) {
-      setInputBuffer( inputBuffer );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder outputBuffer(@Nonnull final AudioBuffer outputBuffer) {
-      setOutputBuffer( outputBuffer );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

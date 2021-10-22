@@ -25,7 +25,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EffectTiming {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -219,7 +219,6 @@ public interface EffectTiming {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
    * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

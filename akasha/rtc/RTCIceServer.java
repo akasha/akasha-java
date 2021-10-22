@@ -29,25 +29,33 @@ public interface RTCIceServer {
   @JsOverlay
   @Nonnull
   static Builder urls(@Nullable final StringOrStringArrayUnion urls) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
+    final Builder $rtcIceServer = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcIceServer.setUrls( urls );
+    return Js.uncheckedCast( $rtcIceServer );
   }
 
   @JsOverlay
   @Nonnull
   static Builder urls(@Nonnull final String urls) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
+    final Builder $rtcIceServer = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcIceServer.setUrls( urls );
+    return Js.uncheckedCast( $rtcIceServer );
   }
 
   @JsOverlay
   @Nonnull
   static Builder urls(@Nonnull final JsArray<String> urls) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
+    final Builder $rtcIceServer = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcIceServer.setUrls( urls );
+    return Js.uncheckedCast( $rtcIceServer );
   }
 
   @JsOverlay
   @Nonnull
   static Builder urls(@Nonnull final String... urls) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).urls( urls );
+    final Builder $rtcIceServer = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcIceServer.setUrls( urls );
+    return Js.uncheckedCast( $rtcIceServer );
   }
 
   /**
@@ -170,65 +178,12 @@ public interface RTCIceServer {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer">RTCIceServer - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCIceServer"
   )
   interface Builder extends RTCIceServer {
-    /**
-     * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/urls">RTCIceServer.urls - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder urls(@Nullable final StringOrStringArrayUnion urls) {
-      setUrls( urls );
-      return this;
-    }
-
-    /**
-     * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/urls">RTCIceServer.urls - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder urls(@Nonnull final String urls) {
-      setUrls( urls );
-      return this;
-    }
-
-    /**
-     * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/urls">RTCIceServer.urls - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder urls(@Nonnull final JsArray<String> urls) {
-      setUrls( urls );
-      return this;
-    }
-
-    /**
-     * The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/urls">RTCIceServer.urls - MDN</a>
-     * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtciceserver-urls">RTCIceServer.urls - WebRTC 1.0: Real-time Communication Between Browsers</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder urls(@Nonnull final String... urls) {
-      setUrls( urls );
-      return this;
-    }
-
     /**
      * The RTCIceServer dictionary's credential property is a string providing the credential to use when connecting to the described server. This is typically a password, key, or other secret.
      *

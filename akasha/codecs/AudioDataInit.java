@@ -20,10 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioDataInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@AudioSampleFormat @Nonnull final String format, final float sampleRate,
-      final int numberOfFrames, final int numberOfChannels, final int timestamp,
-      @Nonnull final BufferSource data) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format ).sampleRate( sampleRate ).numberOfFrames( numberOfFrames ).numberOfChannels( numberOfChannels ).timestamp( timestamp ).data( data );
+  static Step1 format(@AudioSampleFormat @Nonnull final String format) {
+    final AudioDataInit $audioDataInit = Js.<AudioDataInit>uncheckedCast( JsPropertyMap.of() );
+    $audioDataInit.setFormat( format );
+    return Js.uncheckedCast( $audioDataInit );
   }
 
   @JsProperty(
@@ -77,53 +77,73 @@ public interface AudioDataInit {
   @JsProperty
   void setData(@JsNonNull BufferSource data);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioDataInit"
   )
-  interface Builder extends AudioDataInit {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder format(@AudioSampleFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
+    default Step2 sampleRate(float sampleRate) {
+      Js.<AudioDataInit>uncheckedCast( this ).setSampleRate( sampleRate );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioDataInit"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder sampleRate(final float sampleRate) {
-      setSampleRate( sampleRate );
-      return this;
+    default Step3 numberOfFrames(int numberOfFrames) {
+      Js.<AudioDataInit>uncheckedCast( this ).setNumberOfFrames( numberOfFrames );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioDataInit"
+  )
+  interface Step3 {
     @JsOverlay
     @Nonnull
-    default Builder numberOfFrames(final int numberOfFrames) {
-      setNumberOfFrames( numberOfFrames );
-      return this;
+    default Step4 numberOfChannels(int numberOfChannels) {
+      Js.<AudioDataInit>uncheckedCast( this ).setNumberOfChannels( numberOfChannels );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioDataInit"
+  )
+  interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder numberOfChannels(final int numberOfChannels) {
-      setNumberOfChannels( numberOfChannels );
-      return this;
+    default Step5 timestamp(int timestamp) {
+      Js.<AudioDataInit>uncheckedCast( this ).setTimestamp( timestamp );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AudioDataInit"
+  )
+  interface Step5 {
     @JsOverlay
     @Nonnull
-    default Builder timestamp(final int timestamp) {
-      setTimestamp( timestamp );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder data(@Nonnull final BufferSource data) {
-      setData( data );
-      return this;
+    default AudioDataInit data(@Nonnull BufferSource data) {
+      Js.<AudioDataInit>uncheckedCast( this ).setData( data );
+      return Js.uncheckedCast( this );
     }
   }
 }

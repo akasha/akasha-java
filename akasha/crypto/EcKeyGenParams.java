@@ -24,8 +24,10 @@ import jsinterop.base.JsPropertyMap;
 public interface EcKeyGenParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final String namedCurve) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).namedCurve( namedCurve );
+  static Step1 name(@Nonnull final String name) {
+    final EcKeyGenParams $ecKeyGenParams = Js.<EcKeyGenParams>uncheckedCast( JsPropertyMap.of() );
+    $ecKeyGenParams.setName( name );
+    return Js.uncheckedCast( $ecKeyGenParams );
   }
 
   @JsProperty(
@@ -37,30 +39,17 @@ public interface EcKeyGenParams extends Algorithm {
   @JsProperty
   void setNamedCurve(@JsNonNull String namedCurve);
 
-  /**
-   * The EcKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of ECDSA or ECDH.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "EcKeyGenParams"
   )
-  interface Builder extends EcKeyGenParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder namedCurve(@Nonnull final String namedCurve) {
-      setNamedCurve( namedCurve );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default EcKeyGenParams namedCurve(@Nonnull String namedCurve) {
+      Js.<EcKeyGenParams>uncheckedCast( this ).setNamedCurve( namedCurve );
+      return Js.uncheckedCast( this );
     }
   }
 }

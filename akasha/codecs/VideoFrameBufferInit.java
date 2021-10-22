@@ -21,9 +21,10 @@ import jsinterop.base.JsPropertyMap;
 public interface VideoFrameBufferInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@VideoPixelFormat @Nonnull final String format, final int codedWidth,
-      final int codedHeight, final int timestamp) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format ).codedWidth( codedWidth ).codedHeight( codedHeight ).timestamp( timestamp );
+  static Step1 format(@VideoPixelFormat @Nonnull final String format) {
+    final Builder $videoFrameBufferInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $videoFrameBufferInit.setFormat( format );
+    return Js.uncheckedCast( $videoFrameBufferInit );
   }
 
   @JsProperty(
@@ -113,41 +114,54 @@ public interface VideoFrameBufferInit {
   @JsProperty
   void setVisibleRect(@JsNonNull DOMRectInit visibleRect);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "VideoFrameBufferInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 codedWidth(int codedWidth) {
+      Js.<VideoFrameBufferInit>uncheckedCast( this ).setCodedWidth( codedWidth );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "VideoFrameBufferInit"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 codedHeight(int codedHeight) {
+      Js.<VideoFrameBufferInit>uncheckedCast( this ).setCodedHeight( codedHeight );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "VideoFrameBufferInit"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default Builder timestamp(int timestamp) {
+      Js.<VideoFrameBufferInit>uncheckedCast( this ).setTimestamp( timestamp );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "VideoFrameBufferInit"
   )
   interface Builder extends VideoFrameBufferInit {
-    @JsOverlay
-    @Nonnull
-    default Builder format(@VideoPixelFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder codedWidth(final int codedWidth) {
-      setCodedWidth( codedWidth );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder codedHeight(final int codedHeight) {
-      setCodedHeight( codedHeight );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder timestamp(final int timestamp) {
-      setTimestamp( timestamp );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder colorSpace(@Nonnull final VideoColorSpaceInit colorSpace) {

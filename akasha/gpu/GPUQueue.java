@@ -34,6 +34,9 @@ public class GPUQueue extends JsObject {
   public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
       @Nonnull GPUImageCopyTextureTagged destination, @Nonnull JsArray<Double> copySize);
 
+  public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
+      @Nonnull GPUImageCopyTextureTagged destination, @Nonnull GPUExtent3DDict copySize);
+
   @JsOverlay
   public final void copyExternalImageToTexture(@Nonnull final GPUImageCopyExternalImage source,
       @Nonnull final GPUImageCopyTextureTagged destination, @Nonnull final double... copySize) {
@@ -45,9 +48,6 @@ public class GPUQueue extends JsObject {
   )
   private native void _copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
       @Nonnull GPUImageCopyTextureTagged destination, @Nonnull double[] copySize);
-
-  public native void copyExternalImageToTexture(@Nonnull GPUImageCopyExternalImage source,
-      @Nonnull GPUImageCopyTextureTagged destination, @Nonnull GPUExtent3DDict copySize);
 
   @JsNonNull
   public native Promise<Void> onSubmittedWorkDone();
@@ -81,6 +81,10 @@ public class GPUQueue extends JsObject {
       @Nonnull BufferSource data, @Nonnull GPUImageDataLayout dataLayout,
       @Nonnull JsArray<Double> size);
 
+  public native void writeTexture(@Nonnull GPUImageCopyTexture destination,
+      @Nonnull BufferSource data, @Nonnull GPUImageDataLayout dataLayout,
+      @Nonnull GPUExtent3DDict size);
+
   @JsOverlay
   public final void writeTexture(@Nonnull final GPUImageCopyTexture destination,
       @Nonnull final BufferSource data, @Nonnull final GPUImageDataLayout dataLayout,
@@ -93,8 +97,4 @@ public class GPUQueue extends JsObject {
   )
   private native void _writeTexture(@Nonnull GPUImageCopyTexture destination,
       @Nonnull BufferSource data, @Nonnull GPUImageDataLayout dataLayout, @Nonnull double[] size);
-
-  public native void writeTexture(@Nonnull GPUImageCopyTexture destination,
-      @Nonnull BufferSource data, @Nonnull GPUImageDataLayout dataLayout,
-      @Nonnull GPUExtent3DDict size);
 }

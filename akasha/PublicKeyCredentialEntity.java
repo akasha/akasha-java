@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialEntity {
   @JsOverlay
   @Nonnull
-  static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static PublicKeyCredentialEntity name(@Nonnull final String name) {
+    final PublicKeyCredentialEntity $publicKeyCredentialEntity = Js.<PublicKeyCredentialEntity>uncheckedCast( JsPropertyMap.of() );
+    $publicKeyCredentialEntity.setName( name );
+    return Js.uncheckedCast( $publicKeyCredentialEntity );
   }
 
   @JsProperty(
@@ -31,19 +33,4 @@ public interface PublicKeyCredentialEntity {
 
   @JsProperty
   void setName(@JsNonNull String name);
-
-  @Generated("org.realityforge.webtack")
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "PublicKeyCredentialEntity"
-  )
-  interface Builder extends PublicKeyCredentialEntity {
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
-    }
-  }
 }

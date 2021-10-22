@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DeviceMotionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -56,7 +56,6 @@ public interface DeviceMotionEventInit extends EventInit {
   @JsProperty
   void setRotationRate(@JsNonNull DeviceMotionEventRotationRateInit rotationRate);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaKeyMessageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final ArrayBuffer message,
-      @MediaKeyMessageType @Nonnull final String messageType) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).message( message ).messageType( messageType );
+  static Step1 message(@Nonnull final ArrayBuffer message) {
+    final Builder $mediaKeyMessageEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $mediaKeyMessageEventInit.setMessage( message );
+    return Js.uncheckedCast( $mediaKeyMessageEventInit );
   }
 
   @JsProperty(
@@ -44,27 +45,26 @@ public interface MediaKeyMessageEventInit extends EventInit {
   @JsProperty
   void setMessageType(@MediaKeyMessageType @JsNonNull String messageType);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MediaKeyMessageEventInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder messageType(@MediaKeyMessageType @Nonnull String messageType) {
+      Js.<MediaKeyMessageEventInit>uncheckedCast( this ).setMessageType( messageType );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "MediaKeyMessageEventInit"
   )
   interface Builder extends MediaKeyMessageEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder message(@Nonnull final ArrayBuffer message) {
-      setMessage( message );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder messageType(@MediaKeyMessageType @Nonnull final String messageType) {
-      setMessageType( messageType );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

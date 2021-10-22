@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CustomEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -35,7 +35,6 @@ public interface CustomEventInit extends EventInit {
   @JsProperty
   void setDetail(@DoNotAutobox @JsNullable Object detail);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

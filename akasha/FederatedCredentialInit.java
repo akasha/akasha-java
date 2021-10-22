@@ -19,9 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface FederatedCredentialInit extends CredentialData {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String id, @Nonnull final String origin,
-      @Nonnull final String provider) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).id( id ).origin( origin ).provider( provider );
+  static Step1 id(@Nonnull final String id) {
+    final Builder $federatedCredentialInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $federatedCredentialInit.setId( id );
+    return Js.uncheckedCast( $federatedCredentialInit );
   }
 
   @JsProperty(
@@ -66,7 +67,34 @@ public interface FederatedCredentialInit extends CredentialData {
   @JsProperty
   void setProvider(@JsNonNull String provider);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "FederatedCredentialInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 origin(@Nonnull String origin) {
+      Js.<FederatedCredentialInit>uncheckedCast( this ).setOrigin( origin );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "FederatedCredentialInit"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder provider(@Nonnull String provider) {
+      Js.<FederatedCredentialInit>uncheckedCast( this ).setProvider( provider );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -89,29 +117,8 @@ public interface FederatedCredentialInit extends CredentialData {
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final String origin) {
-      setOrigin( origin );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder protocol(@Nonnull final String protocol) {
       setProtocol( protocol );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder provider(@Nonnull final String provider) {
-      setProvider( provider );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder id(@Nonnull final String id) {
-      setId( id );
       return this;
     }
   }

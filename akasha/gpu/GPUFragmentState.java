@@ -22,16 +22,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUFragmentState extends GPUProgrammableStage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint,
-      @Nonnull final JsArray<GPUColorTargetState> targets) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint ).targets( targets );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint,
-      @Nonnull final GPUColorTargetState... targets) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint ).targets( targets );
+  static Step1 module(@Nonnull final GPUShaderModule module) {
+    final Builder $gpuFragmentState = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuFragmentState.setModule( module );
+    return Js.uncheckedCast( $gpuFragmentState );
   }
 
   @JsProperty(
@@ -48,7 +42,41 @@ public interface GPUFragmentState extends GPUProgrammableStage {
     setTargets( Js.<JsArray<GPUColorTargetState>>uncheckedCast( targets ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUFragmentState"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 entryPoint(@Nonnull String entryPoint) {
+      Js.<GPUFragmentState>uncheckedCast( this ).setEntryPoint( entryPoint );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUFragmentState"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder targets(@Nonnull JsArray<GPUColorTargetState> targets) {
+      Js.<GPUFragmentState>uncheckedCast( this ).setTargets( targets );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder targets(@Nonnull GPUColorTargetState... targets) {
+      Js.<GPUFragmentState>uncheckedCast( this ).setTargets( targets );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -56,34 +84,6 @@ public interface GPUFragmentState extends GPUProgrammableStage {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUFragmentState {
-    @JsOverlay
-    @Nonnull
-    default Builder targets(@Nonnull final JsArray<GPUColorTargetState> targets) {
-      setTargets( targets );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder targets(@Nonnull final GPUColorTargetState... targets) {
-      setTargets( targets );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder module(@Nonnull final GPUShaderModule module) {
-      setModule( module );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder entryPoint(@Nonnull final String entryPoint) {
-      setEntryPoint( entryPoint );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {

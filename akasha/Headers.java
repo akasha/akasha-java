@@ -52,7 +52,7 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-headers">Headers() - Fetch</a>
    */
-  public Headers(@Nonnull final JsArray<String>[] init) {
+  public Headers(@Nonnull final JsPropertyMap<String> init) {
   }
 
   /**
@@ -61,7 +61,7 @@ public class Headers extends JsObject implements JsIterable<Headers.Entry> {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
    * @see <a href="https://fetch.spec.whatwg.org/#dom-headers">Headers() - Fetch</a>
    */
-  public Headers(@Nonnull final JsPropertyMap<String> init) {
+  public Headers(@Nonnull final JsArray<String>[] init) {
   }
 
   /**

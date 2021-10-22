@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface QueuingStrategyInit {
   @JsOverlay
   @Nonnull
-  static Builder highWaterMark(final double highWaterMark) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).highWaterMark( highWaterMark );
+  static QueuingStrategyInit highWaterMark(final double highWaterMark) {
+    final QueuingStrategyInit $queuingStrategyInit = Js.<QueuingStrategyInit>uncheckedCast( JsPropertyMap.of() );
+    $queuingStrategyInit.setHighWaterMark( highWaterMark );
+    return Js.uncheckedCast( $queuingStrategyInit );
   }
 
   @JsProperty(
@@ -29,19 +31,4 @@ public interface QueuingStrategyInit {
 
   @JsProperty
   void setHighWaterMark(double highWaterMark);
-
-  @Generated("org.realityforge.webtack")
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "QueuingStrategyInit"
-  )
-  interface Builder extends QueuingStrategyInit {
-    @JsOverlay
-    @Nonnull
-    default Builder highWaterMark(final double highWaterMark) {
-      setHighWaterMark( highWaterMark );
-      return this;
-    }
-  }
 }

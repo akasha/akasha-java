@@ -22,9 +22,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUCanvasConfiguration {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUDevice device,
-      @GPUTextureFormat @Nonnull final String format) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).device( device ).format( format );
+  static Step1 device(@Nonnull final GPUDevice device) {
+    final Builder $gpuCanvasConfiguration = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuCanvasConfiguration.setDevice( device );
+    return Js.uncheckedCast( $gpuCanvasConfiguration );
   }
 
   @JsProperty(
@@ -79,12 +80,12 @@ public interface GPUCanvasConfiguration {
   }
 
   @JsOverlay
-  default void setSize(@Nonnull final double... size) {
+  default void setSize(@Nonnull final GPUExtent3DDict size) {
     setSize( GPUExtent3D.of( size ) );
   }
 
   @JsOverlay
-  default void setSize(@Nonnull final GPUExtent3DDict size) {
+  default void setSize(@Nonnull final double... size) {
     setSize( GPUExtent3D.of( size ) );
   }
 
@@ -97,7 +98,20 @@ public interface GPUCanvasConfiguration {
   @JsProperty
   void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUCanvasConfiguration"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder format(@GPUTextureFormat @Nonnull String format) {
+      Js.<GPUCanvasConfiguration>uncheckedCast( this ).setFormat( format );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -105,20 +119,6 @@ public interface GPUCanvasConfiguration {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUCanvasConfiguration {
-    @JsOverlay
-    @Nonnull
-    default Builder device(@Nonnull final GPUDevice device) {
-      setDevice( device );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder colorSpace(@GPUPredefinedColorSpace @Nonnull final String colorSpace) {
@@ -150,14 +150,14 @@ public interface GPUCanvasConfiguration {
 
     @JsOverlay
     @Nonnull
-    default Builder size(@Nonnull final double... size) {
+    default Builder size(@Nonnull final GPUExtent3DDict size) {
       setSize( size );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder size(@Nonnull final GPUExtent3DDict size) {
+    default Builder size(@Nonnull final double... size) {
       setSize( size );
       return this;
     }

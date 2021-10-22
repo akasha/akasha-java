@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushSubscriptionJSON {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -49,7 +49,6 @@ public interface PushSubscriptionJSON {
   @JsProperty
   void setKeys(@JsNonNull JsPropertyMap<String> keys);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

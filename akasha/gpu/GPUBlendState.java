@@ -21,9 +21,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUBlendState {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUBlendComponent color,
-      @Nonnull final GPUBlendComponent alpha) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).color( color ).alpha( alpha );
+  static Step1 color(@Nonnull final GPUBlendComponent color) {
+    final GPUBlendState $gpuBlendState = Js.<GPUBlendState>uncheckedCast( JsPropertyMap.of() );
+    $gpuBlendState.setColor( color );
+    return Js.uncheckedCast( $gpuBlendState );
   }
 
   @JsProperty(
@@ -44,26 +45,17 @@ public interface GPUBlendState {
   @JsProperty
   void setAlpha(@JsNonNull GPUBlendComponent alpha);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "GPUBlendState"
   )
-  @ApiStatus.Experimental
-  interface Builder extends GPUBlendState {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder color(@Nonnull final GPUBlendComponent color) {
-      setColor( color );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder alpha(@Nonnull final GPUBlendComponent alpha) {
-      setAlpha( alpha );
-      return this;
+    default GPUBlendState alpha(@Nonnull GPUBlendComponent alpha) {
+      Js.<GPUBlendState>uncheckedCast( this ).setAlpha( alpha );
+      return Js.uncheckedCast( this );
     }
   }
 }

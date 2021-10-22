@@ -19,17 +19,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUExternalTextureBindingLayout {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static GPUExternalTextureBindingLayout of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
-  }
-
-  @Generated("org.realityforge.webtack")
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "GPUExternalTextureBindingLayout"
-  )
-  @ApiStatus.Experimental
-  interface Builder extends GPUExternalTextureBindingLayout {
   }
 }

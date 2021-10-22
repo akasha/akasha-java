@@ -23,7 +23,9 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder device(@Nonnull final BluetoothDevice device) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).device( device );
+    final Builder $bluetoothAdvertisingEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothAdvertisingEventInit.setDevice( device );
+    return Js.uncheckedCast( $bluetoothAdvertisingEventInit );
   }
 
   @JsProperty(
@@ -96,20 +98,12 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     setUuids( Js.<JsArray<StringOrUnsignedLongUnion>>uncheckedCast( uuids ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "BluetoothAdvertisingEventInit"
   )
   interface Builder extends BluetoothAdvertisingEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder device(@Nonnull final BluetoothDevice device) {
-      setDevice( device );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder appearance(final int appearance) {

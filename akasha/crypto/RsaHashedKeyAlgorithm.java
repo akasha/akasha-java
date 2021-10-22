@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, final int modulusLength,
-      @Nonnull final Uint8Array publicExponent, @Nonnull final KeyAlgorithm hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
+  static Step1 name(@Nonnull final String name) {
+    final RsaHashedKeyAlgorithm $rsaHashedKeyAlgorithm = Js.<RsaHashedKeyAlgorithm>uncheckedCast( JsPropertyMap.of() );
+    $rsaHashedKeyAlgorithm.setName( name );
+    return Js.uncheckedCast( $rsaHashedKeyAlgorithm );
   }
 
   @JsProperty(
@@ -34,39 +35,45 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
   @JsProperty
   void setHash(@JsNonNull KeyAlgorithm hash);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RsaHashedKeyAlgorithm"
   )
-  interface Builder extends RsaHashedKeyAlgorithm {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final KeyAlgorithm hash) {
-      setHash( hash );
-      return this;
+    default Step2 modulusLength(int modulusLength) {
+      Js.<RsaHashedKeyAlgorithm>uncheckedCast( this ).setModulusLength( modulusLength );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RsaHashedKeyAlgorithm"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder modulusLength(final int modulusLength) {
-      setModulusLength( modulusLength );
-      return this;
+    default Step3 publicExponent(@Nonnull Uint8Array publicExponent) {
+      Js.<RsaHashedKeyAlgorithm>uncheckedCast( this ).setPublicExponent( publicExponent );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RsaHashedKeyAlgorithm"
+  )
+  interface Step3 {
     @JsOverlay
     @Nonnull
-    default Builder publicExponent(@Nonnull final Uint8Array publicExponent) {
-      setPublicExponent( publicExponent );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default RsaHashedKeyAlgorithm hash(@Nonnull KeyAlgorithm hash) {
+      Js.<RsaHashedKeyAlgorithm>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
   }
 }

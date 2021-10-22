@@ -22,15 +22,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUVertexBufferLayout {
   @JsOverlay
   @Nonnull
-  static Builder create(final int arrayStride,
-      @Nonnull final JsArray<GPUVertexAttribute> attributes) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).arrayStride( arrayStride ).attributes( attributes );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(final int arrayStride, @Nonnull final GPUVertexAttribute... attributes) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).arrayStride( arrayStride ).attributes( attributes );
+  static Step1 arrayStride(final int arrayStride) {
+    final Builder $gpuVertexBufferLayout = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuVertexBufferLayout.setArrayStride( arrayStride );
+    return Js.uncheckedCast( $gpuVertexBufferLayout );
   }
 
   @JsProperty(
@@ -64,7 +59,27 @@ public interface GPUVertexBufferLayout {
     setAttributes( Js.<JsArray<GPUVertexAttribute>>uncheckedCast( attributes ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUVertexBufferLayout"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder attributes(@Nonnull JsArray<GPUVertexAttribute> attributes) {
+      Js.<GPUVertexBufferLayout>uncheckedCast( this ).setAttributes( attributes );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder attributes(@Nonnull GPUVertexAttribute... attributes) {
+      Js.<GPUVertexBufferLayout>uncheckedCast( this ).setAttributes( attributes );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -74,29 +89,8 @@ public interface GPUVertexBufferLayout {
   interface Builder extends GPUVertexBufferLayout {
     @JsOverlay
     @Nonnull
-    default Builder arrayStride(final int arrayStride) {
-      setArrayStride( arrayStride );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder stepMode(@GPUVertexStepMode @Nonnull final String stepMode) {
       setStepMode( stepMode );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder attributes(@Nonnull final JsArray<GPUVertexAttribute> attributes) {
-      setAttributes( attributes );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder attributes(@Nonnull final GPUVertexAttribute... attributes) {
-      setAttributes( attributes );
       return this;
     }
   }

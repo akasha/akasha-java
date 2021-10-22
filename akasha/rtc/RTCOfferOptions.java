@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCOfferOptions extends RTCOfferAnswerOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -70,7 +70,6 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">(WebRTC 1.0) # dom-rtcofferoptions</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

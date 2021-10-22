@@ -20,7 +20,9 @@ public interface SyncEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
   static Builder tag(@Nonnull final String tag) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).tag( tag );
+    final Builder $syncEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $syncEventInit.setTag( tag );
+    return Js.uncheckedCast( $syncEventInit );
   }
 
   @JsProperty(
@@ -40,20 +42,12 @@ public interface SyncEventInit extends ExtendableEventInit {
   @JsProperty
   void setLastChance(boolean lastChance);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "SyncEventInit"
   )
   interface Builder extends SyncEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder tag(@Nonnull final String tag) {
-      setTag( tag );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder lastChance(final boolean lastChance) {

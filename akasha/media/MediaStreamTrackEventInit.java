@@ -21,7 +21,9 @@ public interface MediaStreamTrackEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder track(@Nonnull final MediaStreamTrack track) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).track( track );
+    final Builder $mediaStreamTrackEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $mediaStreamTrackEventInit.setTrack( track );
+    return Js.uncheckedCast( $mediaStreamTrackEventInit );
   }
 
   @JsProperty(
@@ -33,20 +35,12 @@ public interface MediaStreamTrackEventInit extends EventInit {
   @JsProperty
   void setTrack(@JsNonNull MediaStreamTrack track);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "MediaStreamTrackEventInit"
   )
   interface Builder extends MediaStreamTrackEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder track(@Nonnull final MediaStreamTrack track) {
-      setTrack( track );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

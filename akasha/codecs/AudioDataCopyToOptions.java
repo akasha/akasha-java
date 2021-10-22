@@ -20,7 +20,9 @@ public interface AudioDataCopyToOptions {
   @JsOverlay
   @Nonnull
   static Builder planeIndex(final int planeIndex) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).planeIndex( planeIndex );
+    final Builder $audioDataCopyToOptions = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $audioDataCopyToOptions.setPlaneIndex( planeIndex );
+    return Js.uncheckedCast( $audioDataCopyToOptions );
   }
 
   @JsProperty(
@@ -56,20 +58,12 @@ public interface AudioDataCopyToOptions {
   @JsProperty
   void setFrameOffset(int frameOffset);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioDataCopyToOptions"
   )
   interface Builder extends AudioDataCopyToOptions {
-    @JsOverlay
-    @Nonnull
-    default Builder planeIndex(final int planeIndex) {
-      setPlaneIndex( planeIndex );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder format(@AudioSampleFormat @Nonnull final String format) {

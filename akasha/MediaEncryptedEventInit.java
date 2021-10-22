@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaEncryptedEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -43,7 +43,6 @@ public interface MediaEncryptedEventInit extends EventInit {
   @JsProperty
   void setInitDataType(@JsNonNull String initDataType);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

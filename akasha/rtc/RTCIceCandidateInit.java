@@ -27,7 +27,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIceCandidateInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -118,7 +118,6 @@ public interface RTCIceCandidateInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit">RTCIceCandidateInit - MDN</a>
    * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-constructor">(WebRTC 1.0) # dom-rtcicecandidate-constructor</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

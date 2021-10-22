@@ -20,7 +20,9 @@ public interface RTCIdentityProviderDetails {
   @JsOverlay
   @Nonnull
   static Builder domain(@Nonnull final String domain) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).domain( domain );
+    final Builder $rtcIdentityProviderDetails = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcIdentityProviderDetails.setDomain( domain );
+    return Js.uncheckedCast( $rtcIdentityProviderDetails );
   }
 
   @JsProperty(
@@ -40,20 +42,12 @@ public interface RTCIdentityProviderDetails {
   @JsProperty
   void setProtocol(@JsNonNull String protocol);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCIdentityProviderDetails"
   )
   interface Builder extends RTCIdentityProviderDetails {
-    @JsOverlay
-    @Nonnull
-    default Builder domain(@Nonnull final String domain) {
-      setDomain( domain );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder protocol(@Nonnull final String protocol) {

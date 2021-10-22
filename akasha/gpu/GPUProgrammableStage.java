@@ -21,8 +21,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUProgrammableStage {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUShaderModule module, @Nonnull final String entryPoint) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).module( module ).entryPoint( entryPoint );
+  static Step1 module(@Nonnull final GPUShaderModule module) {
+    final Builder $gpuProgrammableStage = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuProgrammableStage.setModule( module );
+    return Js.uncheckedCast( $gpuProgrammableStage );
   }
 
   @JsProperty(
@@ -51,7 +53,20 @@ public interface GPUProgrammableStage {
   @JsProperty
   void setConstants(@JsNonNull JsPropertyMap<Double> constants);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUProgrammableStage"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder entryPoint(@Nonnull String entryPoint) {
+      Js.<GPUProgrammableStage>uncheckedCast( this ).setEntryPoint( entryPoint );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -59,20 +74,6 @@ public interface GPUProgrammableStage {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUProgrammableStage {
-    @JsOverlay
-    @Nonnull
-    default Builder module(@Nonnull final GPUShaderModule module) {
-      setModule( module );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder entryPoint(@Nonnull final String entryPoint) {
-      setEntryPoint( entryPoint );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder constants(@Nonnull final JsPropertyMap<Double> constants) {

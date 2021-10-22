@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface VideoColorSpaceInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -58,7 +58,6 @@ public interface VideoColorSpaceInit {
   @JsProperty
   void setTransfer(@VideoTransferCharacteristics @JsNonNull String transfer);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

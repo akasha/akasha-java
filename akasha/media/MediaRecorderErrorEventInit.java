@@ -22,7 +22,9 @@ public interface MediaRecorderErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder error(@Nonnull final DOMException error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
+    final Builder $mediaRecorderErrorEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $mediaRecorderErrorEventInit.setError( error );
+    return Js.uncheckedCast( $mediaRecorderErrorEventInit );
   }
 
   @JsProperty(
@@ -34,20 +36,12 @@ public interface MediaRecorderErrorEventInit extends EventInit {
   @JsProperty
   void setError(@JsNonNull DOMException error);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "MediaRecorderErrorEventInit"
   )
   interface Builder extends MediaRecorderErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder error(@Nonnull final DOMException error) {
-      setError( error );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, final int modulusLength,
-      @Nonnull final Uint8Array publicExponent) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent );
+  static Step1 name(@Nonnull final String name) {
+    final RsaKeyAlgorithm $rsaKeyAlgorithm = Js.<RsaKeyAlgorithm>uncheckedCast( JsPropertyMap.of() );
+    $rsaKeyAlgorithm.setName( name );
+    return Js.uncheckedCast( $rsaKeyAlgorithm );
   }
 
   @JsProperty(
@@ -42,32 +43,31 @@ public interface RsaKeyAlgorithm extends KeyAlgorithm {
   @JsProperty
   void setPublicExponent(@JsNonNull Uint8Array publicExponent);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RsaKeyAlgorithm"
   )
-  interface Builder extends RsaKeyAlgorithm {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder modulusLength(final int modulusLength) {
-      setModulusLength( modulusLength );
-      return this;
+    default Step2 modulusLength(int modulusLength) {
+      Js.<RsaKeyAlgorithm>uncheckedCast( this ).setModulusLength( modulusLength );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RsaKeyAlgorithm"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder publicExponent(@Nonnull final Uint8Array publicExponent) {
-      setPublicExponent( publicExponent );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default RsaKeyAlgorithm publicExponent(@Nonnull Uint8Array publicExponent) {
+      Js.<RsaKeyAlgorithm>uncheckedCast( this ).setPublicExponent( publicExponent );
+      return Js.uncheckedCast( this );
     }
   }
 }

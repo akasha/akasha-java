@@ -4,7 +4,6 @@ import akasha.lang.JsArray;
 import akasha.lang.JsIterable;
 import akasha.lang.JsIterator;
 import javaemul.internal.annotations.HasNoSideEffects;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
@@ -27,13 +26,11 @@ import jsinterop.base.JsArrayLike;
  * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-Float32Array">Float32Array - WebIDL</a>
  */
-@Generated("org.realityforge.webtack")
-@JsType(
-    isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "Float32Array"
-)
-public class Float32Array extends JsObject implements TypedArray, JsIterable<Float32Array.Entry> {
+@JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "Float32Array" )
+public class Float32Array
+  extends JsObject
+  implements TypedArray, JsIterable<Float32Array.Entry>
+{
   /**
    * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
    *
@@ -41,7 +38,6 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    */
   @JsOverlay
   public static final int BYTES_PER_ELEMENT = 4;
-
   /**
    * The name property represents a string value of the typed array constructor name.
    *
@@ -56,7 +52,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(final int length) {
+  public Float32Array( final int length )
+  {
   }
 
   /**
@@ -65,7 +62,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(@Nonnull final Float32Array array) {
+  public Float32Array( @Nonnull final Float32Array array )
+  {
   }
 
   /**
@@ -74,7 +72,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(@Nonnull final JsArray<Double> array) {
+  public Float32Array( @Nonnull final JsArray<Double> array )
+  {
   }
 
   /**
@@ -83,7 +82,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(@Nonnull final double[] array) {
+  public Float32Array( @Nonnull final double[] array )
+  {
   }
 
   /**
@@ -92,7 +92,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(@Nonnull final ArrayBuffer buffer, final int byteOffset, final int length) {
+  public Float32Array( @Nonnull final ArrayBuffer buffer, final int byteOffset, final int length )
+  {
   }
 
   /**
@@ -101,7 +102,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(@Nonnull final ArrayBuffer buffer, final int byteOffset) {
+  public Float32Array( @Nonnull final ArrayBuffer buffer, final int byteOffset )
+  {
   }
 
   /**
@@ -110,7 +112,8 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array">Float32Array.Float32Array - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
-  public Float32Array(@Nonnull final ArrayBuffer buffer) {
+  public Float32Array( @Nonnull final ArrayBuffer buffer )
+  {
   }
 
   /**
@@ -119,9 +122,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/buffer">TypedArray.buffer - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.buffer">(ECMAScript) # sec-get-%typedarray%.prototype.buffer</a>
    */
-  @JsProperty(
-      name = "buffer"
-  )
+  @JsProperty( name = "buffer" )
   @Nonnull
   public native ArrayBuffer buffer();
 
@@ -131,9 +132,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength">TypedArray.byteLength - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.bytelength">(ECMAScript) # sec-get-%typedarray%.prototype.bytelength</a>
    */
-  @JsProperty(
-      name = "byteLength"
-  )
+  @JsProperty( name = "byteLength" )
   public native int byteLength();
 
   /**
@@ -142,9 +141,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset">TypedArray.byteOffset - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.byteoffset">(ECMAScript) # sec-get-%typedarray%.prototype.byteoffset</a>
    */
-  @JsProperty(
-      name = "byteOffset"
-  )
+  @JsProperty( name = "byteOffset" )
   public native int byteOffset();
 
   /**
@@ -153,9 +150,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length">TypedArray.length - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.length">(ECMAScript) # sec-get-%typedarray%.prototype.length</a>
    */
-  @JsProperty(
-      name = "length"
-  )
+  @JsProperty( name = "length" )
   public native int length();
 
   /**
@@ -165,7 +160,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.of">(ECMAScript) # sec-%typedarray%.of</a>
    */
   @JsNonNull
-  public static native Float32Array of(float... element);
+  public static native Float32Array of( float... element );
 
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
@@ -174,7 +169,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @JsNonNull
-  public native Float32Array copyWithin(int target, int start, int end);
+  public native Float32Array copyWithin( int target, int start, int end );
 
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
@@ -183,15 +178,17 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @JsNonNull
-  public native Float32Array copyWithin(int target, int start);
+  public native Float32Array copyWithin( int target, int start );
 
   @JsOverlay
-  public final float getAt(final int index) {
+  public final float getAt( final int index )
+  {
     return Js.<JsArrayLike<Any>>cast( this ).getAt( index ).asFloat();
   }
 
   @JsOverlay
-  public final void setAt(final int index, final float value) {
+  public final void setAt( final int index, final float value )
+  {
     Js.<JsArrayLike<Float>>cast( this ).setAt( index, value );
   }
 
@@ -201,7 +198,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
-  public native void set(@Nonnull Float32Array array, int offset);
+  public native void set( @Nonnull Float32Array array, int offset );
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.
@@ -209,7 +206,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
-  public native void set(@Nonnull Float32Array array);
+  public native void set( @Nonnull Float32Array array );
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.
@@ -217,7 +214,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
-  public native void set(@Nonnull JsArray<Double> array, int offset);
+  public native void set( @Nonnull JsArray<Double> array, int offset );
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.
@@ -225,7 +222,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
-  public native void set(@Nonnull double[] array, int offset);
+  public native void set( @Nonnull double[] array, int offset );
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.
@@ -233,7 +230,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set">TypedArray.set - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
-  public native void set(@Nonnull JsArray<Double> array);
+  public native void set( @Nonnull JsArray<Double> array );
 
   /**
    * The set() method stores multiple values in the typed array, reading input values from a specified array.
@@ -242,14 +239,13 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set-array-offset">(ECMAScript) # sec-%typedarray%.prototype.set-array-offset</a>
    */
   @JsOverlay
-  public final void set(@Nonnull final double... array) {
+  public final void set( @Nonnull final double... array )
+  {
     _set( array );
   }
 
-  @JsMethod(
-      name = "set"
-  )
-  private native void _set(@Nonnull double[] array);
+  @JsMethod( name = "set" )
+  private native void _set( @Nonnull double[] array );
 
   /**
    * The subarray() method returns a new TypedArray on the same ArrayBuffer store and with the same element types as for this TypedArray object. The begin offset is inclusive and the end offset is exclusive. TypedArray is one of the typed array types.
@@ -258,7 +254,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.subarray">(ECMAScript) # sec-%typedarray%.prototype.subarray</a>
    */
   @JsNonNull
-  public native Float32Array subarray(int start, int end);
+  public native Float32Array subarray( int start, int end );
 
   /**
    * The fill() method fills all the elements of a typed array from a start index to an end index with a static value. This method has the same algorithm as Array.prototype.fill(). TypedArray is one of the typed array types here.
@@ -267,7 +263,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill">(ECMAScript) # sec-%typedarray%.prototype.fill</a>
    */
   @JsNonNull
-  public native Float32Array fill(float value, int start, int end);
+  public native Float32Array fill( float value, int start, int end );
 
   /**
    * The fill() method fills all the elements of a typed array from a start index to an end index with a static value. This method has the same algorithm as Array.prototype.fill(). TypedArray is one of the typed array types here.
@@ -276,7 +272,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill">(ECMAScript) # sec-%typedarray%.prototype.fill</a>
    */
   @JsNonNull
-  public native Float32Array fill(float value, int start);
+  public native Float32Array fill( float value, int start );
 
   /**
    * The fill() method fills all the elements of a typed array from a start index to an end index with a static value. This method has the same algorithm as Array.prototype.fill(). TypedArray is one of the typed array types here.
@@ -285,7 +281,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill">(ECMAScript) # sec-%typedarray%.prototype.fill</a>
    */
   @JsNonNull
-  public native Float32Array fill(float value);
+  public native Float32Array fill( float value );
 
   /**
    * The includes() method determines whether a typed array includes a certain element, returning true or false as appropriate. This method has the same algorithm as Array.prototype.includes(). TypedArray is one of the typed array types here.
@@ -293,7 +289,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes">TypedArray.includes - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.includes">(ECMAScript) # sec-%typedarray%.prototype.includes</a>
    */
-  public native boolean includes(float searchElement, int fromIndex);
+  public native boolean includes( float searchElement, int fromIndex );
 
   /**
    * The includes() method determines whether a typed array includes a certain element, returning true or false as appropriate. This method has the same algorithm as Array.prototype.includes(). TypedArray is one of the typed array types here.
@@ -301,7 +297,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes">TypedArray.includes - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.includes">(ECMAScript) # sec-%typedarray%.prototype.includes</a>
    */
-  public native boolean includes(float searchElement);
+  public native boolean includes( float searchElement );
 
   /**
    * The indexOf() method returns the first index at which a given element can be found in the typed array, or -1 if it is not present. This method has the same algorithm as Array.prototype.indexOf(). TypedArray is one of the typed array types here.
@@ -309,7 +305,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf">TypedArray.indexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.indexof">(ECMAScript) # sec-%typedarray%.prototype.indexof</a>
    */
-  public native int indexOf(float searchElement, int fromIndex);
+  public native int indexOf( float searchElement, int fromIndex );
 
   /**
    * The indexOf() method returns the first index at which a given element can be found in the typed array, or -1 if it is not present. This method has the same algorithm as Array.prototype.indexOf(). TypedArray is one of the typed array types here.
@@ -317,7 +313,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf">TypedArray.indexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.indexof">(ECMAScript) # sec-%typedarray%.prototype.indexof</a>
    */
-  public native int indexOf(float searchElement);
+  public native int indexOf( float searchElement );
 
   /**
    * The lastIndexOf() method returns the last index at which a given element can be found in the typed array, or -1 if it is not present. The typed array is searched backwards, starting at fromIndex. This method has the same algorithm as Array.prototype.lastIndexOf(). TypedArray is one of the typed array types here.
@@ -325,7 +321,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf">TypedArray.lastIndexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.lastindexof">(ECMAScript) # sec-%typedarray%.prototype.lastindexof</a>
    */
-  public native int lastIndexOf(float searchElement, int fromIndex);
+  public native int lastIndexOf( float searchElement, int fromIndex );
 
   /**
    * The lastIndexOf() method returns the last index at which a given element can be found in the typed array, or -1 if it is not present. The typed array is searched backwards, starting at fromIndex. This method has the same algorithm as Array.prototype.lastIndexOf(). TypedArray is one of the typed array types here.
@@ -333,7 +329,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf">TypedArray.lastIndexOf - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.lastindexof">(ECMAScript) # sec-%typedarray%.prototype.lastindexof</a>
    */
-  public native int lastIndexOf(float searchElement);
+  public native int lastIndexOf( float searchElement );
 
   /**
    * The join() method joins all elements of an array into a string. This method has the same algorithm as Array.prototype.join(). TypedArray is one of the typed array types here.
@@ -342,7 +338,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.join">(ECMAScript) # sec-%typedarray%.prototype.join</a>
    */
   @JsNonNull
-  public native String join(@Nonnull String separator);
+  public native String join( @Nonnull String separator );
 
   /**
    * The join() method joins all elements of an array into a string. This method has the same algorithm as Array.prototype.join(). TypedArray is one of the typed array types here.
@@ -359,9 +355,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString">TypedArray.toString - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tostring">(ECMAScript) # sec-%typedarray%.prototype.tostring</a>
    */
-  @JsMethod(
-      name = "toString"
-  )
+  @JsMethod( name = "toString" )
   @JsNonNull
   public native String toString_();
 
@@ -401,7 +395,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach">TypedArray.forEach - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.foreach">(ECMAScript) # sec-%typedarray%.prototype.foreach</a>
    */
-  public native void forEach(@JsNonNull ForEachCallback callback);
+  public native void forEach( @JsNonNull ForEachCallback callback );
 
   /**
    * The forEach() method executes a provided function once per array element. This method has the same algorithm as Array.prototype.forEach(). TypedArray is one of the typed array types here.
@@ -409,7 +403,7 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach">TypedArray.forEach - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.foreach">(ECMAScript) # sec-%typedarray%.prototype.foreach</a>
    */
-  public native void forEach(@JsNonNull ForEachCallback2 callback);
+  public native void forEach( @JsNonNull ForEachCallback2 callback );
 
   /**
    * The forEach() method executes a provided function once per array element. This method has the same algorithm as Array.prototype.forEach(). TypedArray is one of the typed array types here.
@@ -417,40 +411,57 @@ public class Float32Array extends JsObject implements TypedArray, JsIterable<Flo
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach">TypedArray.forEach - MDN</a>
    * @see <a href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.foreach">(ECMAScript) # sec-%typedarray%.prototype.foreach</a>
    */
-  public native void forEach(@JsNonNull ForEachCallback3 callback);
+  @JsOverlay
+  public final void forEach( @Nonnull final ForEachCallback3 callback )
+  {
+    _forEach( Js.uncheckedCast( callback ) );
+  }
 
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Array"
-  )
-  public static final class Entry extends JsArray<Object> {
+  @JsMethod( name = "forEach" )
+  private native void _forEach( @JsNonNull ClosureForEachCallback3 callback );
+
+  @JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "Array" )
+  public static final class Entry
+    extends JsArray<Object>
+  {
     @JsOverlay
-    public int index() {
+    public int index()
+    {
       return getAtAsAny( 0 ).asInt();
     }
 
     @JsOverlay
-    public float value() {
+    public float value()
+    {
       return getAtAsAny( 1 ).asFloat();
     }
   }
 
   @JsFunction
   @FunctionalInterface
-  public interface ForEachCallback {
-    void item(float value);
+  public interface ForEachCallback
+  {
+    void item( float value );
   }
 
   @JsFunction
   @FunctionalInterface
-  public interface ForEachCallback2 {
-    void item(float value, int index);
+  public interface ForEachCallback2
+  {
+    void item( float value, int index );
   }
 
   @JsFunction
   @FunctionalInterface
-  public interface ForEachCallback3 {
-    void item(float value, int index, @JsNonNull Float32Array iterable);
+  public interface ForEachCallback3
+  {
+    void item( float value, int index, @JsNonNull Float32Array iterable );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  private interface ClosureForEachCallback3
+  {
+    void item( short value, int index, @JsNonNull TypedArray iterable );
   }
 }

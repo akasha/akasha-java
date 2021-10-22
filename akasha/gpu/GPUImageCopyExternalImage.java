@@ -23,7 +23,9 @@ public interface GPUImageCopyExternalImage {
   @JsOverlay
   @Nonnull
   static Builder source(@Nonnull final GPUImageCopyExternalImageSource source) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).source( source );
+    final Builder $gpuImageCopyExternalImage = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuImageCopyExternalImage.setSource( source );
+    return Js.uncheckedCast( $gpuImageCopyExternalImage );
   }
 
   @JsProperty(
@@ -49,16 +51,15 @@ public interface GPUImageCopyExternalImage {
   }
 
   @JsOverlay
-  default void setOrigin(@Nonnull final double... origin) {
-    setOrigin( GPUOrigin2D.of( origin ) );
-  }
-
-  @JsOverlay
   default void setOrigin(@Nonnull final GPUOrigin2DDict origin) {
     setOrigin( GPUOrigin2D.of( origin ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsOverlay
+  default void setOrigin(@Nonnull final double... origin) {
+    setOrigin( GPUOrigin2D.of( origin ) );
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -66,13 +67,6 @@ public interface GPUImageCopyExternalImage {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUImageCopyExternalImage {
-    @JsOverlay
-    @Nonnull
-    default Builder source(@Nonnull final GPUImageCopyExternalImageSource source) {
-      setSource( source );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder origin(@Nonnull final GPUOrigin2D origin) {
@@ -89,14 +83,14 @@ public interface GPUImageCopyExternalImage {
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final double... origin) {
+    default Builder origin(@Nonnull final GPUOrigin2DDict origin) {
       setOrigin( origin );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder origin(@Nonnull final GPUOrigin2DDict origin) {
+    default Builder origin(@Nonnull final double... origin) {
       setOrigin( origin );
       return this;
     }

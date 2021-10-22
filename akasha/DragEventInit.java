@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DragEventInit extends MouseEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,7 +33,6 @@ public interface DragEventInit extends MouseEventInit {
   @JsProperty
   void setDataTransfer(@JsNullable DataTransfer dataTransfer);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

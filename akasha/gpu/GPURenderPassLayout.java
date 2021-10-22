@@ -23,13 +23,17 @@ public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder colorFormats(@Nonnull final JsArray<String> colorFormats) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
+    final Builder $gpuRenderPassLayout = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderPassLayout.setColorFormats( colorFormats );
+    return Js.uncheckedCast( $gpuRenderPassLayout );
   }
 
   @JsOverlay
   @Nonnull
   static Builder colorFormats(@Nonnull final String... colorFormats) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
+    final Builder $gpuRenderPassLayout = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderPassLayout.setColorFormats( colorFormats );
+    return Js.uncheckedCast( $gpuRenderPassLayout );
   }
 
   @JsProperty(
@@ -63,7 +67,6 @@ public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   @JsProperty
   void setSampleCount(int sampleCount);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -71,20 +74,6 @@ public interface GPURenderPassLayout extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPURenderPassLayout {
-    @JsOverlay
-    @Nonnull
-    default Builder colorFormats(@Nonnull final JsArray<String> colorFormats) {
-      setColorFormats( colorFormats );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder colorFormats(@Nonnull final String... colorFormats) {
-      setColorFormats( colorFormats );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder depthStencilFormat(@GPUTextureFormat @Nonnull final String depthStencilFormat) {

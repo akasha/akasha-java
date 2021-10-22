@@ -22,8 +22,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@GPUQueryType @Nonnull final String type, final int count) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).type( type ).count( count );
+  static Step1 type(@GPUQueryType @Nonnull final String type) {
+    final Builder $gpuQuerySetDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuQuerySetDescriptor.setType( type );
+    return Js.uncheckedCast( $gpuQuerySetDescriptor );
   }
 
   @JsProperty(
@@ -57,7 +59,20 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
     setPipelineStatistics( Js.<JsArray<String>>uncheckedCast( pipelineStatistics ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUQuerySetDescriptor"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder count(int count) {
+      Js.<GPUQuerySetDescriptor>uncheckedCast( this ).setCount( count );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -65,20 +80,6 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUQuerySetDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder type(@GPUQueryType @Nonnull final String type) {
-      setType( type );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder count(final int count) {
-      setCount( count );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder pipelineStatistics(@Nonnull final JsArray<String> pipelineStatistics) {

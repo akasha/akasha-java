@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AesDerivedKeyParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, final int length) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).length( length );
+  static Step1 name(@Nonnull final String name) {
+    final AesDerivedKeyParams $aesDerivedKeyParams = Js.<AesDerivedKeyParams>uncheckedCast( JsPropertyMap.of() );
+    $aesDerivedKeyParams.setName( name );
+    return Js.uncheckedCast( $aesDerivedKeyParams );
   }
 
   @JsProperty(
@@ -30,25 +32,17 @@ public interface AesDerivedKeyParams extends Algorithm {
   @JsProperty
   void setLength(int length);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AesDerivedKeyParams"
   )
-  interface Builder extends AesDerivedKeyParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder length(final int length) {
-      setLength( length );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default AesDerivedKeyParams length(int length) {
+      Js.<AesDerivedKeyParams>uncheckedCast( this ).setLength( length );
+      return Js.uncheckedCast( this );
     }
   }
 }

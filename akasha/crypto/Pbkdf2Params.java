@@ -26,23 +26,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Pbkdf2Params extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final BufferSource salt,
-      final int iterations, @Nonnull final AlgorithmIdentifier hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).salt( salt ).iterations( iterations ).hash( hash );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final BufferSource salt,
-      final int iterations, @Nonnull final JsObject hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).salt( salt ).iterations( iterations ).hash( hash );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final BufferSource salt,
-      final int iterations, @Nonnull final String hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).salt( salt ).iterations( iterations ).hash( hash );
+  static Step1 name(@Nonnull final String name) {
+    final Pbkdf2Params $pbkdf2Params = Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() );
+    $pbkdf2Params.setName( name );
+    return Js.uncheckedCast( $pbkdf2Params );
   }
 
   @JsProperty(
@@ -81,58 +68,59 @@ public interface Pbkdf2Params extends Algorithm {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
-  /**
-   * The Pbkdf2Params dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(), when using the PBKDF2 algorithm.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "Pbkdf2Params"
   )
-  interface Builder extends Pbkdf2Params {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder salt(@Nonnull final BufferSource salt) {
-      setSalt( salt );
-      return this;
+    default Step2 salt(@Nonnull BufferSource salt) {
+      Js.<Pbkdf2Params>uncheckedCast( this ).setSalt( salt );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Pbkdf2Params"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 iterations(int iterations) {
+      Js.<Pbkdf2Params>uncheckedCast( this ).setIterations( iterations );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Pbkdf2Params"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default Pbkdf2Params hash(@Nonnull AlgorithmIdentifier hash) {
+      Js.<Pbkdf2Params>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder iterations(final int iterations) {
-      setIterations( iterations );
-      return this;
+    default Pbkdf2Params hash(@Nonnull JsObject hash) {
+      Js.<Pbkdf2Params>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final AlgorithmIdentifier hash) {
-      setHash( hash );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder hash(@Nonnull final JsObject hash) {
-      setHash( hash );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder hash(@Nonnull final String hash) {
-      setHash( hash );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default Pbkdf2Params hash(@Nonnull String hash) {
+      Js.<Pbkdf2Params>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
   }
 }

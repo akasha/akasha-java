@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface ImageDecodeResult {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final VideoFrame image, final boolean complete) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).image( image ).complete( complete );
+  static Step1 image(@Nonnull final VideoFrame image) {
+    final ImageDecodeResult $imageDecodeResult = Js.<ImageDecodeResult>uncheckedCast( JsPropertyMap.of() );
+    $imageDecodeResult.setImage( image );
+    return Js.uncheckedCast( $imageDecodeResult );
   }
 
   @JsProperty(
@@ -40,25 +42,17 @@ public interface ImageDecodeResult {
   @JsProperty
   void setComplete(boolean complete);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "ImageDecodeResult"
   )
-  interface Builder extends ImageDecodeResult {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder image(@Nonnull final VideoFrame image) {
-      setImage( image );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder complete(final boolean complete) {
-      setComplete( complete );
-      return this;
+    default ImageDecodeResult complete(boolean complete) {
+      Js.<ImageDecodeResult>uncheckedCast( this ).setComplete( complete );
+      return Js.uncheckedCast( this );
     }
   }
 }

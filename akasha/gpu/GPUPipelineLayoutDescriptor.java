@@ -23,13 +23,17 @@ public interface GPUPipelineLayoutDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder bindGroupLayouts(@Nonnull final JsArray<GPUBindGroupLayout> bindGroupLayouts) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bindGroupLayouts( bindGroupLayouts );
+    final Builder $gpuPipelineLayoutDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuPipelineLayoutDescriptor.setBindGroupLayouts( bindGroupLayouts );
+    return Js.uncheckedCast( $gpuPipelineLayoutDescriptor );
   }
 
   @JsOverlay
   @Nonnull
   static Builder bindGroupLayouts(@Nonnull final GPUBindGroupLayout... bindGroupLayouts) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bindGroupLayouts( bindGroupLayouts );
+    final Builder $gpuPipelineLayoutDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuPipelineLayoutDescriptor.setBindGroupLayouts( bindGroupLayouts );
+    return Js.uncheckedCast( $gpuPipelineLayoutDescriptor );
   }
 
   @JsProperty(
@@ -46,7 +50,6 @@ public interface GPUPipelineLayoutDescriptor extends GPUObjectDescriptorBase {
     setBindGroupLayouts( Js.<JsArray<GPUBindGroupLayout>>uncheckedCast( bindGroupLayouts ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -54,20 +57,6 @@ public interface GPUPipelineLayoutDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUPipelineLayoutDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder bindGroupLayouts(@Nonnull final JsArray<GPUBindGroupLayout> bindGroupLayouts) {
-      setBindGroupLayouts( bindGroupLayouts );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder bindGroupLayouts(@Nonnull final GPUBindGroupLayout... bindGroupLayouts) {
-      setBindGroupLayouts( bindGroupLayouts );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder label(@Nonnull final String label) {

@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpHeaderExtensionParameters {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String uri, final int id) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).uri( uri ).id( id );
+  static Step1 uri(@Nonnull final String uri) {
+    final Builder $rtcRtpHeaderExtensionParameters = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcRtpHeaderExtensionParameters.setUri( uri );
+    return Js.uncheckedCast( $rtcRtpHeaderExtensionParameters );
   }
 
   @JsProperty(
@@ -48,27 +50,26 @@ public interface RTCRtpHeaderExtensionParameters {
   @JsProperty
   void setEncrypted(boolean encrypted);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCRtpHeaderExtensionParameters"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder id(int id) {
+      Js.<RTCRtpHeaderExtensionParameters>uncheckedCast( this ).setId( id );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCRtpHeaderExtensionParameters"
   )
   interface Builder extends RTCRtpHeaderExtensionParameters {
-    @JsOverlay
-    @Nonnull
-    default Builder uri(@Nonnull final String uri) {
-      setUri( uri );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder id(final int id) {
-      setId( id );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder encrypted(final boolean encrypted) {

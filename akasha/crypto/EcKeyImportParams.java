@@ -24,8 +24,10 @@ import jsinterop.base.JsPropertyMap;
 public interface EcKeyImportParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final String namedCurve) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).namedCurve( namedCurve );
+  static Step1 name(@Nonnull final String name) {
+    final EcKeyImportParams $ecKeyImportParams = Js.<EcKeyImportParams>uncheckedCast( JsPropertyMap.of() );
+    $ecKeyImportParams.setName( name );
+    return Js.uncheckedCast( $ecKeyImportParams );
   }
 
   @JsProperty(
@@ -37,30 +39,17 @@ public interface EcKeyImportParams extends Algorithm {
   @JsProperty
   void setNamedCurve(@JsNonNull String namedCurve);
 
-  /**
-   * A DOMString. This should be set to ECDSA or ECDH, depending on the algorithm you want to use.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "EcKeyImportParams"
   )
-  interface Builder extends EcKeyImportParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder namedCurve(@Nonnull final String namedCurve) {
-      setNamedCurve( namedCurve );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default EcKeyImportParams namedCurve(@Nonnull String namedCurve) {
+      Js.<EcKeyImportParams>uncheckedCast( this ).setNamedCurve( namedCurve );
+      return Js.uncheckedCast( this );
     }
   }
 }

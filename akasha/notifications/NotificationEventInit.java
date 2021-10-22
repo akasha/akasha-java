@@ -21,7 +21,9 @@ public interface NotificationEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
   static Builder notification(@Nonnull final Notification notification) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).notification( notification );
+    final Builder $notificationEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $notificationEventInit.setNotification( notification );
+    return Js.uncheckedCast( $notificationEventInit );
   }
 
   @JsProperty(
@@ -41,20 +43,12 @@ public interface NotificationEventInit extends ExtendableEventInit {
   @JsProperty
   void setAction(@JsNonNull String action);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "NotificationEventInit"
   )
   interface Builder extends NotificationEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder notification(@Nonnull final Notification notification) {
-      setNotification( notification );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder action(@Nonnull final String action) {

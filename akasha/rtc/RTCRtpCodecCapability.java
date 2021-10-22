@@ -24,8 +24,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCRtpCodecCapability {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String mimeType, final int clockRate) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mimeType( mimeType ).clockRate( clockRate );
+  static Step1 mimeType(@Nonnull final String mimeType) {
+    final Builder $rtcRtpCodecCapability = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcRtpCodecCapability.setMimeType( mimeType );
+    return Js.uncheckedCast( $rtcRtpCodecCapability );
   }
 
   @JsProperty(
@@ -61,32 +63,31 @@ public interface RTCRtpCodecCapability {
   @JsProperty
   void setSdpFmtpLine(@JsNonNull String sdpFmtpLine);
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RTCRtpCodecCapability"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder clockRate(int clockRate) {
+      Js.<RTCRtpCodecCapability>uncheckedCast( this ).setClockRate( clockRate );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The WebRTC API's RTCRtpCodecCapability dictionary provides information describing the capabilities of a single media codec.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecCapability">RTCRtpCodecCapability - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCRtpCodecCapability"
   )
   interface Builder extends RTCRtpCodecCapability {
-    @JsOverlay
-    @Nonnull
-    default Builder mimeType(@Nonnull final String mimeType) {
-      setMimeType( mimeType );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder clockRate(final int clockRate) {
-      setClockRate( clockRate );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder channels(final int channels) {

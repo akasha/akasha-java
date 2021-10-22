@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ExtendableMessageEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -75,7 +75,6 @@ public interface ExtendableMessageEventInit extends ExtendableEventInit {
   @JsProperty
   void setSource(@JsNullable ExtendableMessageEventSource source);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

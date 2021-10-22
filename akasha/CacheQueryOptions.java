@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface CacheQueryOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -46,7 +46,6 @@ public interface CacheQueryOptions {
   @JsProperty
   void setIgnoreVary(boolean ignoreVary);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Transformer {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -69,7 +69,6 @@ public interface Transformer {
   @JsProperty
   void setWritableType(@DoNotAutobox @JsNullable Object writableType);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -25,7 +25,9 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder promise(@Nonnull final Promise<Any> promise) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).promise( promise );
+    final Builder $promiseRejectionEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $promiseRejectionEventInit.setPromise( promise );
+    return Js.uncheckedCast( $promiseRejectionEventInit );
   }
 
   @JsProperty(
@@ -46,20 +48,12 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsProperty
   void setReason(@DoNotAutobox @JsNullable Object reason);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "PromiseRejectionEventInit"
   )
   interface Builder extends PromiseRejectionEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder promise(@Nonnull final Promise<Any> promise) {
-      setPromise( promise );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder reason(@DoNotAutobox @Nullable final Object reason) {

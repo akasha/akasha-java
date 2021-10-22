@@ -19,7 +19,9 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $midiPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $midiPermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $midiPermissionDescriptor );
   }
 
   @JsProperty(
@@ -30,7 +32,6 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setSysex(boolean sysex);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -41,13 +42,6 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
     @Nonnull
     default Builder sysex(final boolean sysex) {
       setSysex( sysex );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

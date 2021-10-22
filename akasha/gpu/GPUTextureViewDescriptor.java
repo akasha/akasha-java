@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -84,7 +84,6 @@ public interface GPUTextureViewDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setMipLevelCount(int mipLevelCount);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

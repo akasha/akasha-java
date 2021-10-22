@@ -20,8 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface MediaElementAudioSourceOptions {
   @JsOverlay
   @Nonnull
-  static Builder mediaElement(@Nonnull final HTMLMediaElement mediaElement) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).mediaElement( mediaElement );
+  static MediaElementAudioSourceOptions mediaElement(@Nonnull final HTMLMediaElement mediaElement) {
+    final MediaElementAudioSourceOptions $mediaElementAudioSourceOptions = Js.<MediaElementAudioSourceOptions>uncheckedCast( JsPropertyMap.of() );
+    $mediaElementAudioSourceOptions.setMediaElement( mediaElement );
+    return Js.uncheckedCast( $mediaElementAudioSourceOptions );
   }
 
   @JsProperty(
@@ -32,19 +34,4 @@ public interface MediaElementAudioSourceOptions {
 
   @JsProperty
   void setMediaElement(@JsNonNull HTMLMediaElement mediaElement);
-
-  @Generated("org.realityforge.webtack")
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "MediaElementAudioSourceOptions"
-  )
-  interface Builder extends MediaElementAudioSourceOptions {
-    @JsOverlay
-    @Nonnull
-    default Builder mediaElement(@Nonnull final HTMLMediaElement mediaElement) {
-      setMediaElement( mediaElement );
-      return this;
-    }
-  }
 }

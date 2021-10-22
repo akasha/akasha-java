@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface EcKeyAlgorithm extends KeyAlgorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final String namedCurve) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).namedCurve( namedCurve );
+  static Step1 name(@Nonnull final String name) {
+    final EcKeyAlgorithm $ecKeyAlgorithm = Js.<EcKeyAlgorithm>uncheckedCast( JsPropertyMap.of() );
+    $ecKeyAlgorithm.setName( name );
+    return Js.uncheckedCast( $ecKeyAlgorithm );
   }
 
   @JsProperty(
@@ -32,25 +34,17 @@ public interface EcKeyAlgorithm extends KeyAlgorithm {
   @JsProperty
   void setNamedCurve(@JsNonNull String namedCurve);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "EcKeyAlgorithm"
   )
-  interface Builder extends EcKeyAlgorithm {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder namedCurve(@Nonnull final String namedCurve) {
-      setNamedCurve( namedCurve );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default EcKeyAlgorithm namedCurve(@Nonnull String namedCurve) {
+      Js.<EcKeyAlgorithm>uncheckedCast( this ).setNamedCurve( namedCurve );
+      return Js.uncheckedCast( this );
     }
   }
 }

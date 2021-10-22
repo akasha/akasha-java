@@ -25,8 +25,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AesCbcParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final BufferSource iv) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
+  static Step1 name(@Nonnull final String name) {
+    final AesCbcParams $aesCbcParams = Js.<AesCbcParams>uncheckedCast( JsPropertyMap.of() );
+    $aesCbcParams.setName( name );
+    return Js.uncheckedCast( $aesCbcParams );
   }
 
   @JsProperty(
@@ -38,30 +40,17 @@ public interface AesCbcParams extends Algorithm {
   @JsProperty
   void setIv(@JsNonNull BufferSource iv);
 
-  /**
-   * The AesCbcParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCbcParams">AesCbcParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AesCbcParams"
   )
-  interface Builder extends AesCbcParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder iv(@Nonnull final BufferSource iv) {
-      setIv( iv );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default AesCbcParams iv(@Nonnull BufferSource iv) {
+      Js.<AesCbcParams>uncheckedCast( this ).setIv( iv );
+      return Js.uncheckedCast( this );
     }
   }
 }

@@ -20,29 +20,18 @@ import jsinterop.base.JsPropertyMap;
 public interface IIRFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> feedforward,
-      @Nonnull final JsArray<Double> feedback) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
+  static Step1 feedforward(@Nonnull final JsArray<Double> feedforward) {
+    final Builder $iirFilterOptions = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $iirFilterOptions.setFeedforward( feedforward );
+    return Js.uncheckedCast( $iirFilterOptions );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] feedforward,
-      @Nonnull final JsArray<Double> feedback) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> feedforward,
-      @Nonnull final double... feedback) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final double[] feedforward, @Nonnull final double... feedback) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).feedforward( feedforward ).feedback( feedback );
+  static Step1 feedforward(@Nonnull final double... feedforward) {
+    final Builder $iirFilterOptions = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $iirFilterOptions.setFeedforward( feedforward );
+    return Js.uncheckedCast( $iirFilterOptions );
   }
 
   @JsProperty(
@@ -73,41 +62,33 @@ public interface IIRFilterOptions extends AudioNodeOptions {
     setFeedback( Js.<JsArray<Double>>uncheckedCast( feedback ) );
   }
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "IIRFilterOptions"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder feedback(@Nonnull JsArray<Double> feedback) {
+      Js.<IIRFilterOptions>uncheckedCast( this ).setFeedback( feedback );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder feedback(@Nonnull double... feedback) {
+      Js.<IIRFilterOptions>uncheckedCast( this ).setFeedback( feedback );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "IIRFilterOptions"
   )
   interface Builder extends IIRFilterOptions {
-    @JsOverlay
-    @Nonnull
-    default Builder feedforward(@Nonnull final JsArray<Double> feedforward) {
-      setFeedforward( feedforward );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder feedforward(@Nonnull final double... feedforward) {
-      setFeedforward( feedforward );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder feedback(@Nonnull final JsArray<Double> feedback) {
-      setFeedback( feedback );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder feedback(@Nonnull final double... feedback) {
-      setFeedback( feedback );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder channelCount(final int channelCount) {

@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityValidationResult {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String contents, @Nonnull final String identity) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).contents( contents ).identity( identity );
+  static Step1 contents(@Nonnull final String contents) {
+    final RTCIdentityValidationResult $rtcIdentityValidationResult = Js.<RTCIdentityValidationResult>uncheckedCast( JsPropertyMap.of() );
+    $rtcIdentityValidationResult.setContents( contents );
+    return Js.uncheckedCast( $rtcIdentityValidationResult );
   }
 
   @JsProperty(
@@ -41,25 +43,17 @@ public interface RTCIdentityValidationResult {
   @JsProperty
   void setIdentity(@JsNonNull String identity);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCIdentityValidationResult"
   )
-  interface Builder extends RTCIdentityValidationResult {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder contents(@Nonnull final String contents) {
-      setContents( contents );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder identity(@Nonnull final String identity) {
-      setIdentity( identity );
-      return this;
+    default RTCIdentityValidationResult identity(@Nonnull String identity) {
+      Js.<RTCIdentityValidationResult>uncheckedCast( this ).setIdentity( identity );
+      return Js.uncheckedCast( this );
     }
   }
 }

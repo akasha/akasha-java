@@ -22,30 +22,34 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUExtent3D size,
-      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
+  static Step1 size(@Nonnull final GPUExtent3D size) {
+    final Builder $gpuTextureDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuTextureDescriptor.setSize( size );
+    return Js.uncheckedCast( $gpuTextureDescriptor );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> size,
-      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
+  static Step1 size(@Nonnull final JsArray<Double> size) {
+    final Builder $gpuTextureDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuTextureDescriptor.setSize( size );
+    return Js.uncheckedCast( $gpuTextureDescriptor );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] size,
-      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
+  static Step1 size(@Nonnull final GPUExtent3DDict size) {
+    final Builder $gpuTextureDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuTextureDescriptor.setSize( size );
+    return Js.uncheckedCast( $gpuTextureDescriptor );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final GPUExtent3DDict size,
-      @GPUTextureFormat @Nonnull final String format, @GPUTextureUsageFlags final int usage) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).size( size ).format( format ).usage( usage );
+  static Step1 size(@Nonnull final double... size) {
+    final Builder $gpuTextureDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuTextureDescriptor.setSize( size );
+    return Js.uncheckedCast( $gpuTextureDescriptor );
   }
 
   @JsProperty(
@@ -63,12 +67,12 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   }
 
   @JsOverlay
-  default void setSize(@Nonnull final double... size) {
+  default void setSize(@Nonnull final GPUExtent3DDict size) {
     setSize( GPUExtent3D.of( size ) );
   }
 
   @JsOverlay
-  default void setSize(@Nonnull final GPUExtent3DDict size) {
+  default void setSize(@Nonnull final double... size) {
     setSize( GPUExtent3D.of( size ) );
   }
 
@@ -117,7 +121,34 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUTextureDescriptor"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 format(@GPUTextureFormat @Nonnull String format) {
+      Js.<GPUTextureDescriptor>uncheckedCast( this ).setFormat( format );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUTextureDescriptor"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder usage(@GPUTextureUsageFlags int usage) {
+      Js.<GPUTextureDescriptor>uncheckedCast( this ).setUsage( usage );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -125,34 +156,6 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUTextureDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder size(@Nonnull final GPUExtent3D size) {
-      setSize( size );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder size(@Nonnull final JsArray<Double> size) {
-      setSize( size );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder size(@Nonnull final double... size) {
-      setSize( size );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder size(@Nonnull final GPUExtent3DDict size) {
-      setSize( size );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder dimension(@GPUTextureDimension @Nonnull final String dimension) {
@@ -171,20 +174,6 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
     @Nonnull
     default Builder sampleCount(final int sampleCount) {
       setSampleCount( sampleCount );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder usage(@GPUTextureUsageFlags final int usage) {
-      setUsage( usage );
       return this;
     }
 

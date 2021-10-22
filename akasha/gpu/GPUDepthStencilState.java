@@ -22,7 +22,9 @@ public interface GPUDepthStencilState {
   @JsOverlay
   @Nonnull
   static Builder format(@GPUTextureFormat @Nonnull final String format) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format );
+    final Builder $gpuDepthStencilState = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuDepthStencilState.setFormat( format );
+    return Js.uncheckedCast( $gpuDepthStencilState );
   }
 
   @JsProperty(
@@ -108,7 +110,6 @@ public interface GPUDepthStencilState {
   @JsProperty
   void setStencilWriteMask(int stencilWriteMask);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -116,13 +117,6 @@ public interface GPUDepthStencilState {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUDepthStencilState {
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder depthBias(final int depthBias) {

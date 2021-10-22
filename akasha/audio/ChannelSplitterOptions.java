@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,7 +30,6 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsProperty
   void setNumberOfOutputs(int numberOfOutputs);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

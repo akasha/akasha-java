@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface FilePropertyBag extends BlobPropertyBag {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,7 +30,6 @@ public interface FilePropertyBag extends BlobPropertyBag {
   @JsProperty
   void setLastModified(int lastModified);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

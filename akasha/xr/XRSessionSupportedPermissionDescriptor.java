@@ -22,7 +22,9 @@ public interface XRSessionSupportedPermissionDescriptor extends PermissionDescri
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $xrSessionSupportedPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $xrSessionSupportedPermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $xrSessionSupportedPermissionDescriptor );
   }
 
   @JsProperty(
@@ -34,7 +36,6 @@ public interface XRSessionSupportedPermissionDescriptor extends PermissionDescri
   @JsProperty
   void setMode(@XRSessionMode @JsNonNull String mode);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -45,13 +46,6 @@ public interface XRSessionSupportedPermissionDescriptor extends PermissionDescri
     @Nonnull
     default Builder mode(@XRSessionMode @Nonnull final String mode) {
       setMode( mode );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AuthenticationExtensionsLargeBlobInputs {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -48,7 +48,6 @@ public interface AuthenticationExtensionsLargeBlobInputs {
   @JsProperty
   void setWrite(@JsNonNull BufferSource write);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

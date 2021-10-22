@@ -22,7 +22,9 @@ public interface GPUImageCopyBuffer extends GPUImageDataLayout {
   @JsOverlay
   @Nonnull
   static Builder buffer(@Nonnull final GPUBuffer buffer) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).buffer( buffer );
+    final Builder $gpuImageCopyBuffer = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuImageCopyBuffer.setBuffer( buffer );
+    return Js.uncheckedCast( $gpuImageCopyBuffer );
   }
 
   @JsProperty(
@@ -34,7 +36,6 @@ public interface GPUImageCopyBuffer extends GPUImageDataLayout {
   @JsProperty
   void setBuffer(@JsNonNull GPUBuffer buffer);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -42,13 +43,6 @@ public interface GPUImageCopyBuffer extends GPUImageDataLayout {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUImageCopyBuffer {
-    @JsOverlay
-    @Nonnull
-    default Builder buffer(@Nonnull final GPUBuffer buffer) {
-      setBuffer( buffer );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bytesPerRow(final int bytesPerRow) {

@@ -21,7 +21,9 @@ public interface SpeechSynthesisEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).utterance( utterance );
+    final Builder $speechSynthesisEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $speechSynthesisEventInit.setUtterance( utterance );
+    return Js.uncheckedCast( $speechSynthesisEventInit );
   }
 
   @JsProperty(
@@ -65,7 +67,6 @@ public interface SpeechSynthesisEventInit extends EventInit {
   @JsProperty
   void setUtterance(@JsNonNull SpeechSynthesisUtterance utterance);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -97,13 +98,6 @@ public interface SpeechSynthesisEventInit extends EventInit {
     @Nonnull
     default Builder name(@Nonnull final String name) {
       setName( name );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder utterance(@Nonnull final SpeechSynthesisUtterance utterance) {
-      setUtterance( utterance );
       return this;
     }
 

@@ -22,7 +22,9 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder vertex(@Nonnull final GPUVertexState vertex) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).vertex( vertex );
+    final Builder $gpuRenderPipelineDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderPipelineDescriptor.setVertex( vertex );
+    return Js.uncheckedCast( $gpuRenderPipelineDescriptor );
   }
 
   @JsProperty(
@@ -66,7 +68,6 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   @JsProperty
   void setPrimitive(@JsNonNull GPUPrimitiveState primitive);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -74,13 +75,6 @@ public interface GPURenderPipelineDescriptor extends GPUPipelineDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPURenderPipelineDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder vertex(@Nonnull final GPUVertexState vertex) {
-      setVertex( vertex );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder depthStencil(@Nonnull final GPUDepthStencilState depthStencil) {

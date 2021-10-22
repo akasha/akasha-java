@@ -21,9 +21,10 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPUVertexAttribute {
   @JsOverlay
   @Nonnull
-  static Builder create(@GPUVertexFormat @Nonnull final String format, final int offset,
-      final int shaderLocation) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format ).offset( offset ).shaderLocation( shaderLocation );
+  static Step1 format(@GPUVertexFormat @Nonnull final String format) {
+    final GPUVertexAttribute $gpuVertexAttribute = Js.<GPUVertexAttribute>uncheckedCast( JsPropertyMap.of() );
+    $gpuVertexAttribute.setFormat( format );
+    return Js.uncheckedCast( $gpuVertexAttribute );
   }
 
   @JsProperty(
@@ -52,33 +53,31 @@ public interface GPUVertexAttribute {
   @JsProperty
   void setShaderLocation(int shaderLocation);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "GPUVertexAttribute"
   )
-  @ApiStatus.Experimental
-  interface Builder extends GPUVertexAttribute {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder format(@GPUVertexFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
+    default Step2 offset(int offset) {
+      Js.<GPUVertexAttribute>uncheckedCast( this ).setOffset( offset );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUVertexAttribute"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder offset(final int offset) {
-      setOffset( offset );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder shaderLocation(final int shaderLocation) {
-      setShaderLocation( shaderLocation );
-      return this;
+    default GPUVertexAttribute shaderLocation(int shaderLocation) {
+      Js.<GPUVertexAttribute>uncheckedCast( this ).setShaderLocation( shaderLocation );
+      return Js.uncheckedCast( this );
     }
   }
 }

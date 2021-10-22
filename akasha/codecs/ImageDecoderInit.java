@@ -21,8 +21,10 @@ import jsinterop.base.JsPropertyMap;
 public interface ImageDecoderInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String type, @Nonnull final ImageBufferSource data) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).type( type ).data( data );
+  static Step1 type(@Nonnull final String type) {
+    final Builder $imageDecoderInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $imageDecoderInit.setType( type );
+    return Js.uncheckedCast( $imageDecoderInit );
   }
 
   @JsProperty(
@@ -85,27 +87,26 @@ public interface ImageDecoderInit {
   @JsProperty
   void setPremultiplyAlpha(@PremultiplyAlpha @JsNonNull String premultiplyAlpha);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "ImageDecoderInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull ImageBufferSource data) {
+      Js.<ImageDecoderInit>uncheckedCast( this ).setData( data );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "ImageDecoderInit"
   )
   interface Builder extends ImageDecoderInit {
-    @JsOverlay
-    @Nonnull
-    default Builder type(@Nonnull final String type) {
-      setType( type );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder data(@Nonnull final ImageBufferSource data) {
-      setData( data );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder colorSpaceConversion(

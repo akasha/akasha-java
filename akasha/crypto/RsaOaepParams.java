@@ -26,7 +26,9 @@ public interface RsaOaepParams extends Algorithm {
   @JsOverlay
   @Nonnull
   static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $rsaOaepParams = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rsaOaepParams.setName( name );
+    return Js.uncheckedCast( $rsaOaepParams );
   }
 
   @JsProperty(
@@ -42,7 +44,6 @@ public interface RsaOaepParams extends Algorithm {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RsaOaepParams">RsaOaepParams - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -53,13 +54,6 @@ public interface RsaOaepParams extends Algorithm {
     @Nonnull
     default Builder label(@Nonnull final BufferSource label) {
       setLabel( label );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

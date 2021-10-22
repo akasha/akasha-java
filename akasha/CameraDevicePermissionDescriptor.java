@@ -19,7 +19,9 @@ public interface CameraDevicePermissionDescriptor extends DevicePermissionDescri
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $cameraDevicePermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $cameraDevicePermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $cameraDevicePermissionDescriptor );
   }
 
   @JsProperty(
@@ -30,7 +32,6 @@ public interface CameraDevicePermissionDescriptor extends DevicePermissionDescri
   @JsProperty
   void setPanTiltZoom(boolean panTiltZoom);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -48,13 +49,6 @@ public interface CameraDevicePermissionDescriptor extends DevicePermissionDescri
     @Nonnull
     default Builder deviceId(@Nonnull final String deviceId) {
       setDeviceId( deviceId );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

@@ -21,7 +21,9 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder error(@SpeechRecognitionErrorCode @Nonnull final String error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
+    final Builder $speechRecognitionErrorEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $speechRecognitionErrorEventInit.setError( error );
+    return Js.uncheckedCast( $speechRecognitionErrorEventInit );
   }
 
   @JsProperty(
@@ -42,20 +44,12 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
   @JsProperty
   void setMessage(@JsNonNull String message);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "SpeechRecognitionErrorEventInit"
   )
   interface Builder extends SpeechRecognitionErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder error(@SpeechRecognitionErrorCode @Nonnull final String error) {
-      setError( error );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder message(@Nonnull final String message) {

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushEventInit extends ExtendableEventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -42,7 +42,6 @@ public interface PushEventInit extends ExtendableEventInit {
     setData( PushMessageDataInit.of( data ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

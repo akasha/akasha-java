@@ -23,7 +23,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ImageBitmapRenderingContextSettings {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -50,7 +50,6 @@ public interface ImageBitmapRenderingContextSettings {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">ImageBitmapRenderingContextSettings - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

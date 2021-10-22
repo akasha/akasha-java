@@ -22,7 +22,9 @@ public interface GPUColorTargetState {
   @JsOverlay
   @Nonnull
   static Builder format(@GPUTextureFormat @Nonnull final String format) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).format( format );
+    final Builder $gpuColorTargetState = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuColorTargetState.setFormat( format );
+    return Js.uncheckedCast( $gpuColorTargetState );
   }
 
   @JsProperty(
@@ -52,7 +54,6 @@ public interface GPUColorTargetState {
   @JsProperty
   void setWriteMask(@GPUColorWriteFlags @JsNonNull int writeMask);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -60,13 +61,6 @@ public interface GPUColorTargetState {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUColorTargetState {
-    @JsOverlay
-    @Nonnull
-    default Builder format(@GPUTextureFormat @Nonnull final String format) {
-      setFormat( format );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder blend(@Nonnull final GPUBlendState blend) {

@@ -43,15 +43,6 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-urlsearchparams">URLSearchParams() - URL</a>
    */
-  public URLSearchParams(@Nonnull final JsArray<String>[] init) {
-  }
-
-  /**
-   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
-   * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-urlsearchparams">URLSearchParams() - URL</a>
-   */
   public URLSearchParams(@Nonnull final JsPropertyMap<String> init) {
   }
 
@@ -62,6 +53,15 @@ public class URLSearchParams extends JsObject implements JsIterable<URLSearchPar
    * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-urlsearchparams">URLSearchParams() - URL</a>
    */
   public URLSearchParams(@Nonnull final String init) {
+  }
+
+  /**
+   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
+   * @see <a href="https://url.spec.whatwg.org/#dom-urlsearchparams-urlsearchparams">URLSearchParams() - URL</a>
+   */
+  public URLSearchParams(@Nonnull final JsArray<String>[] init) {
   }
 
   /**

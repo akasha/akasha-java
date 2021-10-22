@@ -20,7 +20,9 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $devicePermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $devicePermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $devicePermissionDescriptor );
   }
 
   @JsProperty(
@@ -31,7 +33,6 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setDeviceId(@JsNonNull String deviceId);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -42,13 +43,6 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
     @Nonnull
     default Builder deviceId(@Nonnull final String deviceId) {
       setDeviceId( deviceId );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

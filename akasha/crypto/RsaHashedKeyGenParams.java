@@ -26,23 +26,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, final int modulusLength,
-      @Nonnull final Uint8Array publicExponent, @Nonnull final AlgorithmIdentifier hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String name, final int modulusLength,
-      @Nonnull final Uint8Array publicExponent, @Nonnull final JsObject hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String name, final int modulusLength,
-      @Nonnull final Uint8Array publicExponent, @Nonnull final String hash) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
+  static Step1 name(@Nonnull final String name) {
+    final RsaHashedKeyGenParams $rsaHashedKeyGenParams = Js.<RsaHashedKeyGenParams>uncheckedCast( JsPropertyMap.of() );
+    $rsaHashedKeyGenParams.setName( name );
+    return Js.uncheckedCast( $rsaHashedKeyGenParams );
   }
 
   @JsProperty(
@@ -64,58 +51,59 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
     setHash( AlgorithmIdentifier.of( hash ) );
   }
 
-  /**
-   * The RsaHashedKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating any RSA-based key pair: that is, when the algorithm is identified as any of RSASSA-PKCS1-v1_5, RSA-PSS, or RSA-OAEP.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RsaHashedKeyGenParams">RsaHashedKeyGenParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RsaHashedKeyGenParams"
   )
-  interface Builder extends RsaHashedKeyGenParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final AlgorithmIdentifier hash) {
-      setHash( hash );
-      return this;
+    default Step2 modulusLength(int modulusLength) {
+      Js.<RsaHashedKeyGenParams>uncheckedCast( this ).setModulusLength( modulusLength );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RsaHashedKeyGenParams"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 publicExponent(@Nonnull Uint8Array publicExponent) {
+      Js.<RsaHashedKeyGenParams>uncheckedCast( this ).setPublicExponent( publicExponent );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "RsaHashedKeyGenParams"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default RsaHashedKeyGenParams hash(@Nonnull AlgorithmIdentifier hash) {
+      Js.<RsaHashedKeyGenParams>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final JsObject hash) {
-      setHash( hash );
-      return this;
+    default RsaHashedKeyGenParams hash(@Nonnull JsObject hash) {
+      Js.<RsaHashedKeyGenParams>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder hash(@Nonnull final String hash) {
-      setHash( hash );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder modulusLength(final int modulusLength) {
-      setModulusLength( modulusLength );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder publicExponent(@Nonnull final Uint8Array publicExponent) {
-      setPublicExponent( publicExponent );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default RsaHashedKeyGenParams hash(@Nonnull String hash) {
+      Js.<RsaHashedKeyGenParams>uncheckedCast( this ).setHash( hash );
+      return Js.uncheckedCast( this );
     }
   }
 }

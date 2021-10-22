@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TransitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -47,7 +47,6 @@ public interface TransitionEventInit extends EventInit {
   @JsProperty
   void setPseudoElement(@JsNonNull String pseudoElement);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

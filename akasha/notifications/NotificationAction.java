@@ -24,8 +24,10 @@ import jsinterop.base.JsPropertyMap;
 public interface NotificationAction {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String action, @Nonnull final String title) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).action( action ).title( title );
+  static Step1 action(@Nonnull final String action) {
+    final Builder $notificationAction = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $notificationAction.setAction( action );
+    return Js.uncheckedCast( $notificationAction );
   }
 
   @JsProperty(
@@ -54,32 +56,31 @@ public interface NotificationAction {
   @JsProperty
   void setIcon(@JsNonNull String icon);
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "NotificationAction"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder title(@Nonnull String title) {
+      Js.<NotificationAction>uncheckedCast( this ).setTitle( title );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   /**
    * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction">NotificationAction - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "NotificationAction"
   )
   interface Builder extends NotificationAction {
-    @JsOverlay
-    @Nonnull
-    default Builder action(@Nonnull final String action) {
-      setAction( action );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder title(@Nonnull final String title) {
-      setTitle( title );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder icon(@Nonnull final String icon) {

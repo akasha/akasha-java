@@ -24,7 +24,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRWebGLLayerInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -154,7 +154,6 @@ public interface XRWebGLLayerInit {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit">XRWebGLLayerInit - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer"># dom-xrwebgllayer-xrwebgllayer</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

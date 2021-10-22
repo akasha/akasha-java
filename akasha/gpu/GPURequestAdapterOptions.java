@@ -21,7 +21,7 @@ import org.jetbrains.annotations.ApiStatus;
 public interface GPURequestAdapterOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -42,7 +42,6 @@ public interface GPURequestAdapterOptions {
   @JsProperty
   void setPowerPreference(@GPUPowerPreference @JsNonNull String powerPreference);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

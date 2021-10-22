@@ -23,13 +23,17 @@ public interface GPUBindGroupLayoutDescriptor extends GPUObjectDescriptorBase {
   @JsOverlay
   @Nonnull
   static Builder entries(@Nonnull final JsArray<GPUBindGroupLayoutEntry> entries) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).entries( entries );
+    final Builder $gpuBindGroupLayoutDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuBindGroupLayoutDescriptor.setEntries( entries );
+    return Js.uncheckedCast( $gpuBindGroupLayoutDescriptor );
   }
 
   @JsOverlay
   @Nonnull
   static Builder entries(@Nonnull final GPUBindGroupLayoutEntry... entries) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).entries( entries );
+    final Builder $gpuBindGroupLayoutDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuBindGroupLayoutDescriptor.setEntries( entries );
+    return Js.uncheckedCast( $gpuBindGroupLayoutDescriptor );
   }
 
   @JsProperty(
@@ -46,7 +50,6 @@ public interface GPUBindGroupLayoutDescriptor extends GPUObjectDescriptorBase {
     setEntries( Js.<JsArray<GPUBindGroupLayoutEntry>>uncheckedCast( entries ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -54,20 +57,6 @@ public interface GPUBindGroupLayoutDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUBindGroupLayoutDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder entries(@Nonnull final JsArray<GPUBindGroupLayoutEntry> entries) {
-      setEntries( entries );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder entries(@Nonnull final GPUBindGroupLayoutEntry... entries) {
-      setEntries( entries );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder label(@Nonnull final String label) {

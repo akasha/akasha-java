@@ -20,7 +20,9 @@ public interface FormDataEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder formData(@Nonnull final FormData formData) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).formData( formData );
+    final Builder $formDataEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $formDataEventInit.setFormData( formData );
+    return Js.uncheckedCast( $formDataEventInit );
   }
 
   @JsProperty(
@@ -32,20 +34,12 @@ public interface FormDataEventInit extends EventInit {
   @JsProperty
   void setFormData(@JsNonNull FormData formData);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "FormDataEventInit"
   )
   interface Builder extends FormDataEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder formData(@Nonnull final FormData formData) {
-      setFormData( formData );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bubbles(final boolean bubbles) {

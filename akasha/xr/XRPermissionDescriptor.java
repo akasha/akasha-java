@@ -24,7 +24,9 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static Builder name(@PermissionName @Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $xrPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $xrPermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $xrPermissionDescriptor );
   }
 
   /**
@@ -110,7 +112,6 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
     setRequiredFeatures( Js.<JsArray<Any>>uncheckedCast( requiredFeatures ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -179,13 +180,6 @@ public interface XRPermissionDescriptor extends PermissionDescriptor {
     @Nonnull
     default Builder requiredFeatures(@Nonnull final Any... requiredFeatures) {
       setRequiredFeatures( requiredFeatures );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@PermissionName @Nonnull final String name) {
-      setName( name );
       return this;
     }
   }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ValidityStateFlags {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -102,7 +102,6 @@ public interface ValidityStateFlags {
   @JsProperty
   void setValueMissing(boolean valueMissing);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

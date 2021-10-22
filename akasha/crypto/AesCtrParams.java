@@ -25,9 +25,10 @@ import jsinterop.base.JsPropertyMap;
 public interface AesCtrParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final BufferSource counter,
-      final short length) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
+  static Step1 name(@Nonnull final String name) {
+    final AesCtrParams $aesCtrParams = Js.<AesCtrParams>uncheckedCast( JsPropertyMap.of() );
+    $aesCtrParams.setName( name );
+    return Js.uncheckedCast( $aesCtrParams );
   }
 
   @JsProperty(
@@ -47,37 +48,31 @@ public interface AesCtrParams extends Algorithm {
   @JsProperty
   void setLength(short length);
 
-  /**
-   * The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams">AesCtrParams - MDN</a>
-   */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AesCtrParams"
   )
-  interface Builder extends AesCtrParams {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder counter(@Nonnull final BufferSource counter) {
-      setCounter( counter );
-      return this;
+    default Step2 counter(@Nonnull BufferSource counter) {
+      Js.<AesCtrParams>uncheckedCast( this ).setCounter( counter );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "AesCtrParams"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder length(final short length) {
-      setLength( length );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default AesCtrParams length(short length) {
+      Js.<AesCtrParams>uncheckedCast( this ).setLength( length );
+      return Js.uncheckedCast( this );
     }
   }
 }

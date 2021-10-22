@@ -22,7 +22,9 @@ public interface GPUBufferBinding extends GPUBindingResource {
   @JsOverlay
   @Nonnull
   static Builder buffer(@Nonnull final GPUBuffer buffer) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).buffer( buffer );
+    final Builder $gpuBufferBinding = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuBufferBinding.setBuffer( buffer );
+    return Js.uncheckedCast( $gpuBufferBinding );
   }
 
   @JsProperty(
@@ -50,7 +52,6 @@ public interface GPUBufferBinding extends GPUBindingResource {
   @JsProperty
   void setSize(int size);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -58,13 +59,6 @@ public interface GPUBufferBinding extends GPUBindingResource {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUBufferBinding {
-    @JsOverlay
-    @Nonnull
-    default Builder buffer(@Nonnull final GPUBuffer buffer) {
-      setBuffer( buffer );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder offset(final int offset) {

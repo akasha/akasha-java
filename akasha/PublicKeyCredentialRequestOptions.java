@@ -28,7 +28,9 @@ public interface PublicKeyCredentialRequestOptions {
   @JsOverlay
   @Nonnull
   static Builder challenge(@Nonnull final BufferSource challenge) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).challenge( challenge );
+    final Builder $publicKeyCredentialRequestOptions = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $publicKeyCredentialRequestOptions.setChallenge( challenge );
+    return Js.uncheckedCast( $publicKeyCredentialRequestOptions );
   }
 
   /**
@@ -170,7 +172,6 @@ public interface PublicKeyCredentialRequestOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions">PublicKeyCredentialRequestOptions - MDN</a>
    * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions">(Web Authentication) # dictdef-publickeycredentialrequestoptions</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -202,19 +203,6 @@ public interface PublicKeyCredentialRequestOptions {
     default Builder allowCredentials(
         @Nonnull final PublicKeyCredentialDescriptor... allowCredentials) {
       setAllowCredentials( allowCredentials );
-      return this;
-    }
-
-    /**
-     * The challenge property of the PublicKeyCredentialRequestOptions dictionary is a BufferSource used as a cryptographic challenge. This is randomly generated then sent from the relying party's server. This value (among other client data) will be signed by the authenticator's private key and produce AuthenticatorAssertionResponse.signature which should be sent back to the server as part of the response.
-     *
-     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/challenge">PublicKeyCredentialRequestOptions.challenge - MDN</a>
-     * @see <a href="https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge">challenge - Web Authentication: An API for accessing Public Key Credentials Level 1</a>
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder challenge(@Nonnull final BufferSource challenge) {
-      setChallenge( challenge );
       return this;
     }
 

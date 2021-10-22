@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PerformanceObserverInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -53,7 +53,6 @@ public interface PerformanceObserverInit {
   @JsProperty
   void setType(@JsNonNull String type);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

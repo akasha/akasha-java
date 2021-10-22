@@ -22,13 +22,17 @@ public interface GPURenderBundleEncoderDescriptor extends GPURenderPassLayout {
   @JsOverlay
   @Nonnull
   static Builder colorFormats(@Nonnull final JsArray<String> colorFormats) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
+    final Builder $gpuRenderBundleEncoderDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderBundleEncoderDescriptor.setColorFormats( colorFormats );
+    return Js.uncheckedCast( $gpuRenderBundleEncoderDescriptor );
   }
 
   @JsOverlay
   @Nonnull
   static Builder colorFormats(@Nonnull final String... colorFormats) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorFormats( colorFormats );
+    final Builder $gpuRenderBundleEncoderDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderBundleEncoderDescriptor.setColorFormats( colorFormats );
+    return Js.uncheckedCast( $gpuRenderBundleEncoderDescriptor );
   }
 
   @JsProperty(
@@ -47,7 +51,6 @@ public interface GPURenderBundleEncoderDescriptor extends GPURenderPassLayout {
   @JsProperty
   void setStencilReadOnly(boolean stencilReadOnly);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -66,20 +69,6 @@ public interface GPURenderBundleEncoderDescriptor extends GPURenderPassLayout {
     @Nonnull
     default Builder stencilReadOnly(final boolean stencilReadOnly) {
       setStencilReadOnly( stencilReadOnly );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder colorFormats(@Nonnull final JsArray<String> colorFormats) {
-      setColorFormats( colorFormats );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder colorFormats(@Nonnull final String... colorFormats) {
-      setColorFormats( colorFormats );
       return this;
     }
 

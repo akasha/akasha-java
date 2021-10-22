@@ -20,7 +20,9 @@ public interface AudioEncoderConfig {
   @JsOverlay
   @Nonnull
   static Builder codec(@Nonnull final String codec) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codec( codec );
+    final Builder $audioEncoderConfig = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $audioEncoderConfig.setCodec( codec );
+    return Js.uncheckedCast( $audioEncoderConfig );
   }
 
   @JsProperty(
@@ -56,20 +58,12 @@ public interface AudioEncoderConfig {
   @JsProperty
   void setSampleRate(int sampleRate);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioEncoderConfig"
   )
   interface Builder extends AudioEncoderConfig {
-    @JsOverlay
-    @Nonnull
-    default Builder codec(@Nonnull final String codec) {
-      setCodec( codec );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder bitrate(final int bitrate) {

@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface EncodedVideoChunkInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@EncodedVideoChunkType @Nonnull final String type, final int timestamp,
-      @Nonnull final BufferSource data) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).type( type ).timestamp( timestamp ).data( data );
+  static Step1 type(@EncodedVideoChunkType @Nonnull final String type) {
+    final Builder $encodedVideoChunkInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $encodedVideoChunkInit.setType( type );
+    return Js.uncheckedCast( $encodedVideoChunkInit );
   }
 
   @JsProperty(
@@ -60,34 +61,40 @@ public interface EncodedVideoChunkInit {
   @JsProperty
   void setDuration(int duration);
 
-  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "EncodedVideoChunkInit"
+  )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Step2 timestamp(int timestamp) {
+      Js.<EncodedVideoChunkInit>uncheckedCast( this ).setTimestamp( timestamp );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "EncodedVideoChunkInit"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Builder data(@Nonnull BufferSource data) {
+      Js.<EncodedVideoChunkInit>uncheckedCast( this ).setData( data );
+      return Js.uncheckedCast( this );
+    }
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "EncodedVideoChunkInit"
   )
   interface Builder extends EncodedVideoChunkInit {
-    @JsOverlay
-    @Nonnull
-    default Builder type(@EncodedVideoChunkType @Nonnull final String type) {
-      setType( type );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder timestamp(final int timestamp) {
-      setTimestamp( timestamp );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder data(@Nonnull final BufferSource data) {
-      setData( data );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder duration(final int duration) {

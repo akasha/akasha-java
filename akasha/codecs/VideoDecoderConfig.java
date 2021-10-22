@@ -21,7 +21,9 @@ public interface VideoDecoderConfig {
   @JsOverlay
   @Nonnull
   static Builder codec(@Nonnull final String codec) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).codec( codec );
+    final Builder $videoDecoderConfig = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $videoDecoderConfig.setCodec( codec );
+    return Js.uncheckedCast( $videoDecoderConfig );
   }
 
   @JsProperty(
@@ -98,20 +100,12 @@ public interface VideoDecoderConfig {
   @JsProperty
   void setOptimizeForLatency(boolean optimizeForLatency);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "VideoDecoderConfig"
   )
   interface Builder extends VideoDecoderConfig {
-    @JsOverlay
-    @Nonnull
-    default Builder codec(@Nonnull final String codec) {
-      setCodec( codec );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder codedHeight(final int codedHeight) {

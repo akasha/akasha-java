@@ -25,7 +25,9 @@ public interface AudioParamDescriptor {
   @JsOverlay
   @Nonnull
   static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $audioParamDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $audioParamDescriptor.setName( name );
+    return Js.uncheckedCast( $audioParamDescriptor );
   }
 
   @JsProperty(
@@ -75,20 +77,12 @@ public interface AudioParamDescriptor {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamDescriptor">AudioParamDescriptor - MDN</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "AudioParamDescriptor"
   )
   interface Builder extends AudioParamDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder automationRate(@AutomationRate @Nonnull final String automationRate) {

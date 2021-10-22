@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface DeviceOrientationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -59,7 +59,6 @@ public interface DeviceOrientationEventInit extends EventInit {
   @JsProperty
   void setGamma(@JsNullable Double gamma);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

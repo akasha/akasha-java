@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface KeyAlgorithm {
   @JsOverlay
   @Nonnull
-  static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static KeyAlgorithm name(@Nonnull final String name) {
+    final KeyAlgorithm $keyAlgorithm = Js.<KeyAlgorithm>uncheckedCast( JsPropertyMap.of() );
+    $keyAlgorithm.setName( name );
+    return Js.uncheckedCast( $keyAlgorithm );
   }
 
   @JsProperty(
@@ -31,19 +33,4 @@ public interface KeyAlgorithm {
 
   @JsProperty
   void setName(@JsNonNull String name);
-
-  @Generated("org.realityforge.webtack")
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "KeyAlgorithm"
-  )
-  interface Builder extends KeyAlgorithm {
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
-    }
-  }
 }

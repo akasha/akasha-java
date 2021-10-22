@@ -20,9 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, @Nonnull final String displayName,
-      @Nonnull final BufferSource id) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
+  static Step1 name(@Nonnull final String name) {
+    final PublicKeyCredentialUserEntity $publicKeyCredentialUserEntity = Js.<PublicKeyCredentialUserEntity>uncheckedCast( JsPropertyMap.of() );
+    $publicKeyCredentialUserEntity.setName( name );
+    return Js.uncheckedCast( $publicKeyCredentialUserEntity );
   }
 
   @JsProperty(
@@ -43,32 +44,31 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
   @JsProperty
   void setId(@JsNonNull BufferSource id);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "PublicKeyCredentialUserEntity"
   )
-  interface Builder extends PublicKeyCredentialUserEntity {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder displayName(@Nonnull final String displayName) {
-      setDisplayName( displayName );
-      return this;
+    default Step2 displayName(@Nonnull String displayName) {
+      Js.<PublicKeyCredentialUserEntity>uncheckedCast( this ).setDisplayName( displayName );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PublicKeyCredentialUserEntity"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder id(@Nonnull final BufferSource id) {
-      setId( id );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
+    default PublicKeyCredentialUserEntity id(@Nonnull BufferSource id) {
+      Js.<PublicKeyCredentialUserEntity>uncheckedCast( this ).setId( id );
+      return Js.uncheckedCast( this );
     }
   }
 }

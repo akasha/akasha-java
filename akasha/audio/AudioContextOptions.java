@@ -25,7 +25,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AudioContextOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -97,7 +97,6 @@ public interface AudioContextOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions">AudioContextOptions - MDN</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audiocontext-audiocontext"># dom-audiocontext-audiocontext</a>
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

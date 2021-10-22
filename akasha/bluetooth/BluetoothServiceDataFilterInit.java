@@ -21,19 +21,25 @@ public interface BluetoothServiceDataFilterInit extends BluetoothDataFilterInit 
   @JsOverlay
   @Nonnull
   static Builder service(@Nonnull final BluetoothServiceUUID service) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).service( service );
+    final Builder $bluetoothServiceDataFilterInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothServiceDataFilterInit.setService( service );
+    return Js.uncheckedCast( $bluetoothServiceDataFilterInit );
   }
 
   @JsOverlay
   @Nonnull
   static Builder service(@Nonnull final String service) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).service( service );
+    final Builder $bluetoothServiceDataFilterInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothServiceDataFilterInit.setService( service );
+    return Js.uncheckedCast( $bluetoothServiceDataFilterInit );
   }
 
   @JsOverlay
   @Nonnull
   static Builder service(final int service) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).service( service );
+    final Builder $bluetoothServiceDataFilterInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothServiceDataFilterInit.setService( service );
+    return Js.uncheckedCast( $bluetoothServiceDataFilterInit );
   }
 
   @JsProperty(
@@ -55,34 +61,12 @@ public interface BluetoothServiceDataFilterInit extends BluetoothDataFilterInit 
     setService( BluetoothServiceUUID.of( service ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "BluetoothServiceDataFilterInit"
   )
   interface Builder extends BluetoothServiceDataFilterInit {
-    @JsOverlay
-    @Nonnull
-    default Builder service(@Nonnull final BluetoothServiceUUID service) {
-      setService( service );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder service(@Nonnull final String service) {
-      setService( service );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder service(final int service) {
-      setService( service );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder dataPrefix(@Nonnull final BufferSource dataPrefix) {

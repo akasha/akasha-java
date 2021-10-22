@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PannerOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -137,7 +137,6 @@ public interface PannerOptions extends AudioNodeOptions {
   @JsProperty
   void setRolloffFactor(double rolloffFactor);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

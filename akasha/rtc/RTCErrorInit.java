@@ -20,7 +20,9 @@ public interface RTCErrorInit {
   @JsOverlay
   @Nonnull
   static Builder errorDetail(@RTCErrorDetailType @Nonnull final String errorDetail) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).errorDetail( errorDetail );
+    final Builder $rtcErrorInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $rtcErrorInit.setErrorDetail( errorDetail );
+    return Js.uncheckedCast( $rtcErrorInit );
   }
 
   @JsProperty(
@@ -73,20 +75,12 @@ public interface RTCErrorInit {
   @JsProperty
   void setHttpRequestStatusCode(int httpRequestStatusCode);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "RTCErrorInit"
   )
   interface Builder extends RTCErrorInit {
-    @JsOverlay
-    @Nonnull
-    default Builder errorDetail(@RTCErrorDetailType @Nonnull final String errorDetail) {
-      setErrorDetail( errorDetail );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder receivedAlert(final int receivedAlert) {
