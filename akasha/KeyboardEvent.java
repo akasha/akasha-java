@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -184,4 +185,86 @@ public class KeyboardEvent extends UIEvent {
    * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-KeyboardEvent-getModifierState">getModifierState() - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   public native boolean getModifierState(@Nonnull String keyArg);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, @Nonnull String keyArg, int locationArg,
+      boolean ctrlKey, boolean altKey, boolean shiftKey, boolean metaKey);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, @Nonnull String keyArg, int locationArg,
+      boolean ctrlKey, boolean altKey, boolean shiftKey);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, @Nonnull String keyArg, int locationArg,
+      boolean ctrlKey, boolean altKey);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, @Nonnull String keyArg, int locationArg,
+      boolean ctrlKey);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, @Nonnull String keyArg, int locationArg);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, @Nonnull String keyArg);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg, boolean bubblesArg);
+
+  /**
+   * The KeyboardEvent.initKeyboardEvent() method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see bug 999645). Web applications should use constructor instead of this if it's available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent">KeyboardEvent.initKeyboardEvent - MDN</a>
+   */
+  public native void initKeyboardEvent(@Nonnull String typeArg);
 }

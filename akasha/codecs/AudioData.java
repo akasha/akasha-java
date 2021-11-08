@@ -12,6 +12,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The AudioData interface of the WebCodecs API represents an audio sample.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioData">AudioData - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#audiodata-interface"># audiodata-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -24,6 +24,11 @@ public class XRFrame extends JsObject {
   protected XRFrame() {
   }
 
+  @JsProperty(
+      name = "predictedDisplayTime"
+  )
+  public native double predictedDisplayTime();
+
   /**
    * An XRFrame object's read-only session property returns the XRSession object that generated the frame.
    *

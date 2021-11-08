@@ -14,7 +14,7 @@ import org.jetbrains.annotations.ApiStatus;
 )
 public @interface GPUFeatureName {
   @Nonnull
-  String depth_clamping = "depth-clamping";
+  String depth_clip_control = "depth-clip-control";
 
   @Nonnull
   String depth24unorm_stencil8 = "depth24unorm-stencil8";
@@ -26,7 +26,13 @@ public @interface GPUFeatureName {
   String pipeline_statistics_query = "pipeline-statistics-query";
 
   @Nonnull
+  String texture_compression_astc = "texture-compression-astc";
+
+  @Nonnull
   String texture_compression_bc = "texture-compression-bc";
+
+  @Nonnull
+  String texture_compression_etc2 = "texture-compression-etc2";
 
   @Nonnull
   String timestamp_query = "timestamp-query";
@@ -46,7 +52,7 @@ public @interface GPUFeatureName {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUFeatureName.depth_clamping.equals( value ) || GPUFeatureName.depth24unorm_stencil8.equals( value ) || GPUFeatureName.depth32float_stencil8.equals( value ) || GPUFeatureName.pipeline_statistics_query.equals( value ) || GPUFeatureName.texture_compression_bc.equals( value ) || GPUFeatureName.timestamp_query.equals( value );
+      return GPUFeatureName.depth_clip_control.equals( value ) || GPUFeatureName.depth24unorm_stencil8.equals( value ) || GPUFeatureName.depth32float_stencil8.equals( value ) || GPUFeatureName.pipeline_statistics_query.equals( value ) || GPUFeatureName.texture_compression_astc.equals( value ) || GPUFeatureName.texture_compression_bc.equals( value ) || GPUFeatureName.texture_compression_etc2.equals( value ) || GPUFeatureName.timestamp_query.equals( value );
     }
   }
 }

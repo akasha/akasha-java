@@ -51,4 +51,47 @@ public class CompositionEvent extends UIEvent {
   )
   @Nonnull
   public native String data();
+
+  /**
+   * The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent">CompositionEvent.initCompositionEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-CompositionEvent-initializers">initCompositionEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   */
+  public native void initCompositionEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nonnull Window viewArg, @Nonnull String dataArg);
+
+  /**
+   * The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent">CompositionEvent.initCompositionEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-CompositionEvent-initializers">initCompositionEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   */
+  public native void initCompositionEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nonnull Window viewArg);
+
+  /**
+   * The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent">CompositionEvent.initCompositionEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-CompositionEvent-initializers">initCompositionEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   */
+  public native void initCompositionEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg);
+
+  /**
+   * The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent">CompositionEvent.initCompositionEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-CompositionEvent-initializers">initCompositionEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   */
+  public native void initCompositionEvent(@Nonnull String typeArg, boolean bubblesArg);
+
+  /**
+   * The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent">CompositionEvent.initCompositionEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-CompositionEvent-initializers">initCompositionEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   */
+  public native void initCompositionEvent(@Nonnull String typeArg);
 }

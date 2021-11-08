@@ -28,15 +28,6 @@ public interface GPUStorageTextureBindingLayout {
   }
 
   @JsProperty(
-      name = "access"
-  )
-  @GPUStorageTextureAccess
-  String access();
-
-  @JsProperty
-  void setAccess(@GPUStorageTextureAccess @JsNonNull String access);
-
-  @JsProperty(
       name = "format"
   )
   @GPUTextureFormat
@@ -45,6 +36,15 @@ public interface GPUStorageTextureBindingLayout {
 
   @JsProperty
   void setFormat(@GPUTextureFormat @JsNonNull String format);
+
+  @JsProperty(
+      name = "access"
+  )
+  @GPUStorageTextureAccess
+  String access();
+
+  @JsProperty
+  void setAccess(@GPUStorageTextureAccess @JsNonNull String access);
 
   @JsProperty(
       name = "viewDimension"

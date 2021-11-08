@@ -42,8 +42,6 @@ public class GPUComputePassEncoder extends JsObject {
 
   public native void setPipeline(@Nonnull GPUComputePipeline pipeline);
 
-  public native void writeTimestamp(@Nonnull GPUQuerySet querySet, int queryIndex);
-
   public native void insertDebugMarker(@Nonnull String markerLabel);
 
   public native void popDebugGroup();

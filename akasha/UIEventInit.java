@@ -41,6 +41,14 @@ public interface UIEventInit extends EventInit {
   @JsProperty
   void setView(@JsNullable Window view);
 
+  @JsProperty(
+      name = "which"
+  )
+  int which();
+
+  @JsProperty
+  void setWhich(int which);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -58,6 +66,13 @@ public interface UIEventInit extends EventInit {
     @Nonnull
     default Builder view(@Nullable final Window view) {
       setView( view );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder which(final int which) {
+      setWhich( which );
       return this;
     }
 

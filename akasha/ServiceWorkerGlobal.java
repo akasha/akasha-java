@@ -6,7 +6,6 @@ import akasha.crypto.Crypto;
 import akasha.idb.IDBFactory;
 import akasha.notifications.NotificationEventHandler;
 import akasha.notifications.NotificationEventListener;
-import akasha.perf.Performance;
 import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;

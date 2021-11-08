@@ -14,6 +14,90 @@ import org.jetbrains.annotations.ApiStatus;
 )
 public @interface GPUTextureFormat {
   @Nonnull
+  String astc_10x10_unorm = "astc-10x10-unorm";
+
+  @Nonnull
+  String astc_10x10_unorm_srgb = "astc-10x10-unorm-srgb";
+
+  @Nonnull
+  String astc_10x5_unorm = "astc-10x5-unorm";
+
+  @Nonnull
+  String astc_10x5_unorm_srgb = "astc-10x5-unorm-srgb";
+
+  @Nonnull
+  String astc_10x6_unorm = "astc-10x6-unorm";
+
+  @Nonnull
+  String astc_10x6_unorm_srgb = "astc-10x6-unorm-srgb";
+
+  @Nonnull
+  String astc_10x8_unorm = "astc-10x8-unorm";
+
+  @Nonnull
+  String astc_10x8_unorm_srgb = "astc-10x8-unorm-srgb";
+
+  @Nonnull
+  String astc_12x10_unorm = "astc-12x10-unorm";
+
+  @Nonnull
+  String astc_12x10_unorm_srgb = "astc-12x10-unorm-srgb";
+
+  @Nonnull
+  String astc_12x12_unorm = "astc-12x12-unorm";
+
+  @Nonnull
+  String astc_12x12_unorm_srgb = "astc-12x12-unorm-srgb";
+
+  @Nonnull
+  String astc_4x4_unorm = "astc-4x4-unorm";
+
+  @Nonnull
+  String astc_4x4_unorm_srgb = "astc-4x4-unorm-srgb";
+
+  @Nonnull
+  String astc_5x4_unorm = "astc-5x4-unorm";
+
+  @Nonnull
+  String astc_5x4_unorm_srgb = "astc-5x4-unorm-srgb";
+
+  @Nonnull
+  String astc_5x5_unorm = "astc-5x5-unorm";
+
+  @Nonnull
+  String astc_5x5_unorm_srgb = "astc-5x5-unorm-srgb";
+
+  @Nonnull
+  String astc_6x5_unorm = "astc-6x5-unorm";
+
+  @Nonnull
+  String astc_6x5_unorm_srgb = "astc-6x5-unorm-srgb";
+
+  @Nonnull
+  String astc_6x6_unorm = "astc-6x6-unorm";
+
+  @Nonnull
+  String astc_6x6_unorm_srgb = "astc-6x6-unorm-srgb";
+
+  @Nonnull
+  String astc_8x5_unorm = "astc-8x5-unorm";
+
+  @Nonnull
+  String astc_8x5_unorm_srgb = "astc-8x5-unorm-srgb";
+
+  @Nonnull
+  String astc_8x6_unorm = "astc-8x6-unorm";
+
+  @Nonnull
+  String astc_8x6_unorm_srgb = "astc-8x6-unorm-srgb";
+
+  @Nonnull
+  String astc_8x8_unorm = "astc-8x8-unorm";
+
+  @Nonnull
+  String astc_8x8_unorm_srgb = "astc-8x8-unorm-srgb";
+
+  @Nonnull
   String bc1_rgba_unorm = "bc1-rgba-unorm";
 
   @Nonnull
@@ -78,6 +162,36 @@ public @interface GPUTextureFormat {
 
   @Nonnull
   String depth32float_stencil8 = "depth32float-stencil8";
+
+  @Nonnull
+  String eac_r11snorm = "eac-r11snorm";
+
+  @Nonnull
+  String eac_r11unorm = "eac-r11unorm";
+
+  @Nonnull
+  String eac_rg11snorm = "eac-rg11snorm";
+
+  @Nonnull
+  String eac_rg11unorm = "eac-rg11unorm";
+
+  @Nonnull
+  String etc2_rgb8a1unorm = "etc2-rgb8a1unorm";
+
+  @Nonnull
+  String etc2_rgb8a1unorm_srgb = "etc2-rgb8a1unorm-srgb";
+
+  @Nonnull
+  String etc2_rgb8unorm = "etc2-rgb8unorm";
+
+  @Nonnull
+  String etc2_rgb8unorm_srgb = "etc2-rgb8unorm-srgb";
+
+  @Nonnull
+  String etc2_rgba8unorm = "etc2-rgba8unorm";
+
+  @Nonnull
+  String etc2_rgba8unorm_srgb = "etc2-rgba8unorm-srgb";
 
   @Nonnull
   String r16float = "r16float";
@@ -199,7 +313,7 @@ public @interface GPUTextureFormat {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUTextureFormat.bc1_rgba_unorm.equals( value ) || GPUTextureFormat.bc1_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bc2_rgba_unorm.equals( value ) || GPUTextureFormat.bc2_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bc3_rgba_unorm.equals( value ) || GPUTextureFormat.bc3_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bc4_r_snorm.equals( value ) || GPUTextureFormat.bc4_r_unorm.equals( value ) || GPUTextureFormat.bc5_rg_snorm.equals( value ) || GPUTextureFormat.bc5_rg_unorm.equals( value ) || GPUTextureFormat.bc6h_rgb_float.equals( value ) || GPUTextureFormat.bc6h_rgb_ufloat.equals( value ) || GPUTextureFormat.bc7_rgba_unorm.equals( value ) || GPUTextureFormat.bc7_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bgra8unorm.equals( value ) || GPUTextureFormat.bgra8unorm_srgb.equals( value ) || GPUTextureFormat.depth16unorm.equals( value ) || GPUTextureFormat.depth24plus.equals( value ) || GPUTextureFormat.depth24plus_stencil8.equals( value ) || GPUTextureFormat.depth24unorm_stencil8.equals( value ) || GPUTextureFormat.depth32float.equals( value ) || GPUTextureFormat.depth32float_stencil8.equals( value ) || GPUTextureFormat.r16float.equals( value ) || GPUTextureFormat.r16sint.equals( value ) || GPUTextureFormat.r16uint.equals( value ) || GPUTextureFormat.r32float.equals( value ) || GPUTextureFormat.r32sint.equals( value ) || GPUTextureFormat.r32uint.equals( value ) || GPUTextureFormat.r8sint.equals( value ) || GPUTextureFormat.r8snorm.equals( value ) || GPUTextureFormat.r8uint.equals( value ) || GPUTextureFormat.r8unorm.equals( value ) || GPUTextureFormat.rg11b10ufloat.equals( value ) || GPUTextureFormat.rg16float.equals( value ) || GPUTextureFormat.rg16sint.equals( value ) || GPUTextureFormat.rg16uint.equals( value ) || GPUTextureFormat.rg32float.equals( value ) || GPUTextureFormat.rg32sint.equals( value ) || GPUTextureFormat.rg32uint.equals( value ) || GPUTextureFormat.rg8sint.equals( value ) || GPUTextureFormat.rg8snorm.equals( value ) || GPUTextureFormat.rg8uint.equals( value ) || GPUTextureFormat.rg8unorm.equals( value ) || GPUTextureFormat.rgb10a2unorm.equals( value ) || GPUTextureFormat.rgb9e5ufloat.equals( value ) || GPUTextureFormat.rgba16float.equals( value ) || GPUTextureFormat.rgba16sint.equals( value ) || GPUTextureFormat.rgba16uint.equals( value ) || GPUTextureFormat.rgba32float.equals( value ) || GPUTextureFormat.rgba32sint.equals( value ) || GPUTextureFormat.rgba32uint.equals( value ) || GPUTextureFormat.rgba8sint.equals( value ) || GPUTextureFormat.rgba8snorm.equals( value ) || GPUTextureFormat.rgba8uint.equals( value ) || GPUTextureFormat.rgba8unorm.equals( value ) || GPUTextureFormat.rgba8unorm_srgb.equals( value ) || GPUTextureFormat.stencil8.equals( value );
+      return GPUTextureFormat.astc_10x10_unorm.equals( value ) || GPUTextureFormat.astc_10x10_unorm_srgb.equals( value ) || GPUTextureFormat.astc_10x5_unorm.equals( value ) || GPUTextureFormat.astc_10x5_unorm_srgb.equals( value ) || GPUTextureFormat.astc_10x6_unorm.equals( value ) || GPUTextureFormat.astc_10x6_unorm_srgb.equals( value ) || GPUTextureFormat.astc_10x8_unorm.equals( value ) || GPUTextureFormat.astc_10x8_unorm_srgb.equals( value ) || GPUTextureFormat.astc_12x10_unorm.equals( value ) || GPUTextureFormat.astc_12x10_unorm_srgb.equals( value ) || GPUTextureFormat.astc_12x12_unorm.equals( value ) || GPUTextureFormat.astc_12x12_unorm_srgb.equals( value ) || GPUTextureFormat.astc_4x4_unorm.equals( value ) || GPUTextureFormat.astc_4x4_unorm_srgb.equals( value ) || GPUTextureFormat.astc_5x4_unorm.equals( value ) || GPUTextureFormat.astc_5x4_unorm_srgb.equals( value ) || GPUTextureFormat.astc_5x5_unorm.equals( value ) || GPUTextureFormat.astc_5x5_unorm_srgb.equals( value ) || GPUTextureFormat.astc_6x5_unorm.equals( value ) || GPUTextureFormat.astc_6x5_unorm_srgb.equals( value ) || GPUTextureFormat.astc_6x6_unorm.equals( value ) || GPUTextureFormat.astc_6x6_unorm_srgb.equals( value ) || GPUTextureFormat.astc_8x5_unorm.equals( value ) || GPUTextureFormat.astc_8x5_unorm_srgb.equals( value ) || GPUTextureFormat.astc_8x6_unorm.equals( value ) || GPUTextureFormat.astc_8x6_unorm_srgb.equals( value ) || GPUTextureFormat.astc_8x8_unorm.equals( value ) || GPUTextureFormat.astc_8x8_unorm_srgb.equals( value ) || GPUTextureFormat.bc1_rgba_unorm.equals( value ) || GPUTextureFormat.bc1_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bc2_rgba_unorm.equals( value ) || GPUTextureFormat.bc2_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bc3_rgba_unorm.equals( value ) || GPUTextureFormat.bc3_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bc4_r_snorm.equals( value ) || GPUTextureFormat.bc4_r_unorm.equals( value ) || GPUTextureFormat.bc5_rg_snorm.equals( value ) || GPUTextureFormat.bc5_rg_unorm.equals( value ) || GPUTextureFormat.bc6h_rgb_float.equals( value ) || GPUTextureFormat.bc6h_rgb_ufloat.equals( value ) || GPUTextureFormat.bc7_rgba_unorm.equals( value ) || GPUTextureFormat.bc7_rgba_unorm_srgb.equals( value ) || GPUTextureFormat.bgra8unorm.equals( value ) || GPUTextureFormat.bgra8unorm_srgb.equals( value ) || GPUTextureFormat.depth16unorm.equals( value ) || GPUTextureFormat.depth24plus.equals( value ) || GPUTextureFormat.depth24plus_stencil8.equals( value ) || GPUTextureFormat.depth24unorm_stencil8.equals( value ) || GPUTextureFormat.depth32float.equals( value ) || GPUTextureFormat.depth32float_stencil8.equals( value ) || GPUTextureFormat.eac_r11snorm.equals( value ) || GPUTextureFormat.eac_r11unorm.equals( value ) || GPUTextureFormat.eac_rg11snorm.equals( value ) || GPUTextureFormat.eac_rg11unorm.equals( value ) || GPUTextureFormat.etc2_rgb8a1unorm.equals( value ) || GPUTextureFormat.etc2_rgb8a1unorm_srgb.equals( value ) || GPUTextureFormat.etc2_rgb8unorm.equals( value ) || GPUTextureFormat.etc2_rgb8unorm_srgb.equals( value ) || GPUTextureFormat.etc2_rgba8unorm.equals( value ) || GPUTextureFormat.etc2_rgba8unorm_srgb.equals( value ) || GPUTextureFormat.r16float.equals( value ) || GPUTextureFormat.r16sint.equals( value ) || GPUTextureFormat.r16uint.equals( value ) || GPUTextureFormat.r32float.equals( value ) || GPUTextureFormat.r32sint.equals( value ) || GPUTextureFormat.r32uint.equals( value ) || GPUTextureFormat.r8sint.equals( value ) || GPUTextureFormat.r8snorm.equals( value ) || GPUTextureFormat.r8uint.equals( value ) || GPUTextureFormat.r8unorm.equals( value ) || GPUTextureFormat.rg11b10ufloat.equals( value ) || GPUTextureFormat.rg16float.equals( value ) || GPUTextureFormat.rg16sint.equals( value ) || GPUTextureFormat.rg16uint.equals( value ) || GPUTextureFormat.rg32float.equals( value ) || GPUTextureFormat.rg32sint.equals( value ) || GPUTextureFormat.rg32uint.equals( value ) || GPUTextureFormat.rg8sint.equals( value ) || GPUTextureFormat.rg8snorm.equals( value ) || GPUTextureFormat.rg8uint.equals( value ) || GPUTextureFormat.rg8unorm.equals( value ) || GPUTextureFormat.rgb10a2unorm.equals( value ) || GPUTextureFormat.rgb9e5ufloat.equals( value ) || GPUTextureFormat.rgba16float.equals( value ) || GPUTextureFormat.rgba16sint.equals( value ) || GPUTextureFormat.rgba16uint.equals( value ) || GPUTextureFormat.rgba32float.equals( value ) || GPUTextureFormat.rgba32sint.equals( value ) || GPUTextureFormat.rgba32uint.equals( value ) || GPUTextureFormat.rgba8sint.equals( value ) || GPUTextureFormat.rgba8snorm.equals( value ) || GPUTextureFormat.rgba8uint.equals( value ) || GPUTextureFormat.rgba8unorm.equals( value ) || GPUTextureFormat.rgba8unorm_srgb.equals( value ) || GPUTextureFormat.stencil8.equals( value );
     }
   }
 }

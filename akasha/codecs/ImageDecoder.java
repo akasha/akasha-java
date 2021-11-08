@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ImageDecoder interface of the WebCodecs API provides a way to unpack and decode encoded image data.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageDecoder">ImageDecoder - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#imagedecoder-interface"># imagedecoder-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

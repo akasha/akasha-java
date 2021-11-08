@@ -13,7 +13,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
+ * The updateRenderState() method of the XRSession interface of the WebXR API schedules changes to be applied to the active render state (XRRenderState) prior to rendering of the next frame.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
  * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate"># dom-xrsession-updaterenderstate</a>
@@ -79,7 +79,7 @@ public interface XRRenderStateInit {
   }
 
   /**
-   * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
+   * The updateRenderState() method of the XRSession interface of the WebXR API schedules changes to be applied to the active render state (XRRenderState) prior to rendering of the next frame.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit">XRRenderStateInit - MDN</a>
    * @see <a href="https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate"># dom-xrsession-updaterenderstate</a>

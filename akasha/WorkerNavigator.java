@@ -3,6 +3,7 @@ package akasha;
 import akasha.core.JsObject;
 import akasha.gpu.GPU;
 import akasha.lang.JsArray;
+import akasha.usb.USB;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -185,6 +186,17 @@ public class WorkerNavigator extends JsObject {
   )
   @Nonnull
   public native StorageManager storage();
+
+  @JsOverlay
+  public final boolean isUsbSupported() {
+    return "true".equals( System.getProperty( "akasha.is__WorkerNavigator_usb__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__WorkerNavigator_usb__supported" ) ) ? false : Js.asPropertyMap( this ).has( "usb" );
+  }
+
+  @JsProperty(
+      name = "usb"
+  )
+  @Nonnull
+  public native USB usb();
 
   /**
    * The NavigatorID.userAgent read-only property returns the user agent string for the current browser.

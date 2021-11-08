@@ -56,6 +56,8 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
+  public double letterSpacing;
+
   @JsNonNull
   @CanvasLineCap
   public String lineCap;
@@ -90,13 +92,11 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   @CanvasTextBaseline
   public String textBaseline;
 
-  public double textLetterSpacing;
-
   @JsNonNull
   @CanvasTextRendering
   public String textRendering;
 
-  public double textWordSpacing;
+  public double wordSpacing;
 
   protected OffscreenCanvasRenderingContext2D() {
   }

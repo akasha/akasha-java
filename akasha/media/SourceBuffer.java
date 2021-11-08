@@ -161,6 +161,13 @@ public class SourceBuffer extends EventTarget {
   public native void appendBuffer(@Nonnull BufferSource data);
 
   /**
+   * The changeType() method of the SourceBuffer interface sets the MIME type that future calls to appendBuffer() should expect the new media data to conform to.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/changeType">SourceBuffer.changeType - MDN</a>
+   */
+  public native void changeType(@Nonnull String type);
+
+  /**
    * The remove() method of the SourceBuffer interface removes media segments within a specific time range from the SourceBuffer. This method can only be called when SourceBuffer.updating equals false. If SourceBuffer.updating is not equal to false, call SourceBuffer.abort().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/remove">SourceBuffer.remove - MDN</a>

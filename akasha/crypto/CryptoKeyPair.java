@@ -14,7 +14,6 @@ import jsinterop.base.JsPropertyMap;
  * The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair - MDN</a>
- * @see <a href="https://w3c.github.io/webcrypto/#keypair"># keypair</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -49,7 +48,6 @@ public interface CryptoKeyPair {
    * The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair">CryptoKeyPair - MDN</a>
-   * @see <a href="https://w3c.github.io/webcrypto/#keypair"># keypair</a>
    */
   @JsType(
       isNative = true,

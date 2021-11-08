@@ -37,15 +37,6 @@ public interface GPUVertexBufferLayout {
   void setArrayStride(int arrayStride);
 
   @JsProperty(
-      name = "stepMode"
-  )
-  @GPUVertexStepMode
-  String stepMode();
-
-  @JsProperty
-  void setStepMode(@GPUVertexStepMode @JsNonNull String stepMode);
-
-  @JsProperty(
       name = "attributes"
   )
   @JsNonNull
@@ -58,6 +49,15 @@ public interface GPUVertexBufferLayout {
   default void setAttributes(@Nonnull final GPUVertexAttribute... attributes) {
     setAttributes( Js.<JsArray<GPUVertexAttribute>>uncheckedCast( attributes ) );
   }
+
+  @JsProperty(
+      name = "stepMode"
+  )
+  @GPUVertexStepMode
+  String stepMode();
+
+  @JsProperty
+  void setStepMode(@GPUVertexStepMode @JsNonNull String stepMode);
 
   @JsType(
       isNative = true,

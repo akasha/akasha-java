@@ -26,14 +26,6 @@ public interface GPUPrimitiveState {
   }
 
   @JsProperty(
-      name = "clampDepth"
-  )
-  boolean clampDepth();
-
-  @JsProperty
-  void setClampDepth(boolean clampDepth);
-
-  @JsProperty(
       name = "cullMode"
   )
   @GPUCullMode
@@ -69,6 +61,14 @@ public interface GPUPrimitiveState {
   @JsProperty
   void setTopology(@GPUPrimitiveTopology @JsNonNull String topology);
 
+  @JsProperty(
+      name = "unclippedDepth"
+  )
+  boolean unclippedDepth();
+
+  @JsProperty
+  void setUnclippedDepth(boolean unclippedDepth);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -76,13 +76,6 @@ public interface GPUPrimitiveState {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUPrimitiveState {
-    @JsOverlay
-    @Nonnull
-    default Builder clampDepth(final boolean clampDepth) {
-      setClampDepth( clampDepth );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder cullMode(@GPUCullMode @Nonnull final String cullMode) {
@@ -108,6 +101,13 @@ public interface GPUPrimitiveState {
     @Nonnull
     default Builder topology(@GPUPrimitiveTopology @Nonnull final String topology) {
       setTopology( topology );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unclippedDepth(final boolean unclippedDepth) {
+      setUnclippedDepth( unclippedDepth );
       return this;
     }
   }

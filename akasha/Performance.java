@@ -1,12 +1,10 @@
-package akasha.perf;
+package akasha;
 
-import akasha.AddEventListenerOptions;
-import akasha.EventHandler;
-import akasha.EventListener;
-import akasha.EventListenerOptions;
-import akasha.EventTarget;
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
+import akasha.perf.PerformanceEntry;
+import akasha.perf.PerformanceNavigation;
+import akasha.perf.PerformanceTiming;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

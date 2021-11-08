@@ -1,15 +1,7 @@
 package akasha;
 
-import akasha.lang.JsArray;
-import akasha.lang.JsIterable;
-import akasha.lang.JsIterator;
-import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsFunction;
-import jsinterop.annotations.JsNonNull;
-import jsinterop.annotations.JsNullable;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -20,85 +12,31 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CSSFontPaletteValuesRule"
 )
-public class CSSFontPaletteValuesRule extends CSSRule implements JsIterable<CSSFontPaletteValuesRule.Entry> {
-  @JsNonNull
-  public String basePalette;
-
-  @JsNonNull
-  public String fontFamily;
-
+public class CSSFontPaletteValuesRule extends CSSRule {
   protected CSSFontPaletteValuesRule() {
   }
 
   @JsProperty(
-      name = "size"
+      name = "basePalette"
   )
-  public native int size();
+  @Nonnull
+  public native String basePalette();
 
-  @HasNoSideEffects
-  public native boolean has(int key);
-
-  @HasNoSideEffects
-  @JsNullable
-  public native String get(int key);
-
-  @HasNoSideEffects
-  @JsNonNull
-  public native JsIterator<Double> keys();
-
-  @HasNoSideEffects
-  @JsNonNull
-  public native JsIterator<String> values();
-
-  @HasNoSideEffects
-  @JsNonNull
-  public native JsIterator<Entry> entries();
-
-  public native void forEach(@JsNonNull ForEachCallback callback);
-
-  public native void forEach(@JsNonNull ForEachCallback2 callback);
-
-  public native void forEach(@JsNonNull ForEachCallback3 callback);
-
-  public native void set(int key, @JsNonNull String value);
-
-  public native boolean delete(int key);
-
-  public native void clear();
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Array"
+  @JsProperty(
+      name = "fontFamily"
   )
-  public static final class Entry extends JsArray<Object> {
-    @JsOverlay
-    public int key() {
-      return getAtAsAny( 0 ).asInt();
-    }
+  @Nonnull
+  public native String fontFamily();
 
-    @JsOverlay
-    @Nonnull
-    public String value() {
-      return getAtAsAny( 1 ).asString();
-    }
-  }
+  @JsProperty(
+      name = "name"
+  )
+  @Nonnull
+  public native String name();
 
-  @JsFunction
-  @FunctionalInterface
-  public interface ForEachCallback {
-    void item(@JsNonNull String value);
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface ForEachCallback2 {
-    void item(@JsNonNull String value, int key);
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface ForEachCallback3 {
-    void item(@JsNonNull String value, int key, @JsNonNull CSSFontPaletteValuesRule map);
-  }
+  @JsProperty(
+      name = "overrideColors"
+  )
+  @Nonnull
+  public native String overrideColors();
 }

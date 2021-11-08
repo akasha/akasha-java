@@ -13,10 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.
+ * The RTCPeerConnection method addTransceiver() creates a new RTCRtpTransceiver and adds it to the set of transceivers associated with the RTCPeerConnection. Each transceiver represents a bidirectional stream, with both an RTCRtpSender and an RTCRtpReceiver associated with it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit">RTCRtpTransceiverInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">(WebRTC 1.0) # dom-rtcrtptransceiverinit</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-addtransceiver">(WebRTC 1.0) # dom-rtcpeerconnection-addtransceiver</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -67,10 +67,10 @@ public interface RTCRtpTransceiverInit {
   }
 
   /**
-   * The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.
+   * The RTCPeerConnection method addTransceiver() creates a new RTCRtpTransceiver and adds it to the set of transceivers associated with the RTCPeerConnection. Each transceiver represents a bidirectional stream, with both an RTCRtpSender and an RTCRtpReceiver associated with it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit">RTCRtpTransceiverInit - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit">(WebRTC 1.0) # dom-rtcrtptransceiverinit</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-addtransceiver">(WebRTC 1.0) # dom-rtcpeerconnection-addtransceiver</a>
    */
   @JsType(
       isNative = true,

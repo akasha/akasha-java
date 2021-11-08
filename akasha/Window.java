@@ -5,7 +5,6 @@ import akasha.core.JsObject;
 import akasha.crypto.Crypto;
 import akasha.idb.IDBFactory;
 import akasha.lang.JsArray;
-import akasha.perf.Performance;
 import akasha.promise.Promise;
 import akasha.speech.SpeechSynthesis;
 import javaemul.internal.annotations.DoNotAutobox;

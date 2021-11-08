@@ -69,6 +69,19 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setOcclusionQuerySet(@JsNonNull GPUQuerySet occlusionQuerySet);
 
+  @JsProperty(
+      name = "timestampWrites"
+  )
+  JsArray<GPURenderPassTimestampWrite> timestampWrites();
+
+  @JsProperty
+  void setTimestampWrites(@JsNonNull JsArray<GPURenderPassTimestampWrite> timestampWrites);
+
+  @JsOverlay
+  default void setTimestampWrites(@Nonnull final GPURenderPassTimestampWrite... timestampWrites) {
+    setTimestampWrites( Js.<JsArray<GPURenderPassTimestampWrite>>uncheckedCast( timestampWrites ) );
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -88,6 +101,21 @@ public interface GPURenderPassDescriptor extends GPUObjectDescriptorBase {
     @Nonnull
     default Builder occlusionQuerySet(@Nonnull final GPUQuerySet occlusionQuerySet) {
       setOcclusionQuerySet( occlusionQuerySet );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder timestampWrites(
+        @Nonnull final JsArray<GPURenderPassTimestampWrite> timestampWrites) {
+      setTimestampWrites( timestampWrites );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder timestampWrites(@Nonnull final GPURenderPassTimestampWrite... timestampWrites) {
+      setTimestampWrites( timestampWrites );
       return this;
     }
 

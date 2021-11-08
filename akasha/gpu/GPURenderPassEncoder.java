@@ -71,8 +71,6 @@ public class GPURenderPassEncoder extends JsObject {
   public native void setViewport(float x, float y, float width, float height, float minDepth,
       float maxDepth);
 
-  public native void writeTimestamp(@Nonnull GPUQuerySet querySet, int queryIndex);
-
   public native void insertDebugMarker(@Nonnull String markerLabel);
 
   public native void popDebugGroup();

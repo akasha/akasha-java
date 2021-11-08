@@ -1,5 +1,7 @@
-package akasha;
+package akasha.midi;
 
+import akasha.PermissionDescriptor;
+import akasha.PermissionName;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

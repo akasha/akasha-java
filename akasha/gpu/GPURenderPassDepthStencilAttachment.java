@@ -66,14 +66,6 @@ public interface GPURenderPassDepthStencilAttachment {
   void setDepthStoreOp(@GPUStoreOp @JsNonNull String depthStoreOp);
 
   @JsProperty(
-      name = "depthReadOnly"
-  )
-  boolean depthReadOnly();
-
-  @JsProperty
-  void setDepthReadOnly(boolean depthReadOnly);
-
-  @JsProperty(
       name = "stencilLoadValue"
   )
   @JsNonNull
@@ -101,6 +93,14 @@ public interface GPURenderPassDepthStencilAttachment {
 
   @JsProperty
   void setStencilStoreOp(@GPUStoreOp @JsNonNull String stencilStoreOp);
+
+  @JsProperty(
+      name = "depthReadOnly"
+  )
+  boolean depthReadOnly();
+
+  @JsProperty
+  void setDepthReadOnly(boolean depthReadOnly);
 
   @JsProperty(
       name = "stencilReadOnly"

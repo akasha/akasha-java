@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The EncodedAudioChunk interface of the WebCodecs API represents a chunk of encoded audio data.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk">EncodedAudioChunk - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#encodedaudiochunk-interface"># encodedaudiochunk-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The VideoEncoder interface of the WebCodecs API encodes VideoFrame objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder">VideoEncoder - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#videoencoder-interface"># videoencoder-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

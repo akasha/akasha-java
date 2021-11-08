@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The AudioDecoder interface of the WebCodecs API decodes chunks of audio.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder">AudioDecoder - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#audiodecoder-interface"># audiodecoder-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -7,7 +7,10 @@ import akasha.core.JsObject;
 import akasha.gpu.GPU;
 import akasha.lang.JsArray;
 import akasha.media.MediaDevices;
+import akasha.midi.MIDIAccess;
+import akasha.midi.MIDIOptions;
 import akasha.promise.Promise;
+import akasha.usb.USB;
 import akasha.xr.XRSystem;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -354,6 +357,17 @@ public class Navigator extends JsObject {
   @Nonnull
   public native StorageManager storage();
 
+  @JsOverlay
+  public final boolean isUsbSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_usb__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_usb__supported" ) ) ? false : Js.asPropertyMap( this ).has( "usb" );
+  }
+
+  @JsProperty(
+      name = "usb"
+  )
+  @Nonnull
+  public native USB usb();
+
   /**
    * The NavigatorID.userAgent read-only property returns the user agent string for the current browser.
    *
@@ -605,6 +619,17 @@ public class Navigator extends JsObject {
       name = "vibrate"
   )
   private native boolean _vibrate(@Nonnull double[] pattern);
+
+  @JsOverlay
+  public final boolean isRequestMIDIAccessSupported() {
+    return "true".equals( System.getProperty( "akasha.is__Navigator_requestMIDIAccess__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__Navigator_requestMIDIAccess__supported" ) ) ? false : Js.asPropertyMap( this ).has( "requestMIDIAccess" );
+  }
+
+  @JsNonNull
+  public native Promise<MIDIAccess> requestMIDIAccess(@Nonnull MIDIOptions options);
+
+  @JsNonNull
+  public native Promise<MIDIAccess> requestMIDIAccess();
 
   /**
    * The Navigator.canShare() method of the Web Share API returns true if a call to navigator.share() would succeed.

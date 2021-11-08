@@ -64,6 +64,22 @@ public interface KeyboardEventInit extends EventModifierInit {
   @JsProperty
   void setRepeat(boolean repeat);
 
+  @JsProperty(
+      name = "charCode"
+  )
+  int charCode();
+
+  @JsProperty
+  void setCharCode(int charCode);
+
+  @JsProperty(
+      name = "keyCode"
+  )
+  int keyCode();
+
+  @JsProperty
+  void setKeyCode(int keyCode);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -102,6 +118,20 @@ public interface KeyboardEventInit extends EventModifierInit {
     @Nonnull
     default Builder repeat(final boolean repeat) {
       setRepeat( repeat );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder charCode(final int charCode) {
+      setCharCode( charCode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder keyCode(final int keyCode) {
+      setKeyCode( keyCode );
       return this;
     }
 
@@ -214,6 +244,13 @@ public interface KeyboardEventInit extends EventModifierInit {
     @Nonnull
     default Builder view(@Nullable final Window view) {
       setView( view );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder which(final int which) {
+      setWhich( which );
       return this;
     }
 

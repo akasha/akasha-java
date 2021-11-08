@@ -10,10 +10,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition().
+ * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions">PositionOptions - MDN</a>
- * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface"># position_options_interface</a>
+ * @see <a href="https://w3c.github.io/geolocation-api/#getcurrentposition-method"># getcurrentposition-method</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -89,10 +89,10 @@ public interface PositionOptions {
   void setTimeout(int timeout);
 
   /**
-   * The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition().
+   * The Geolocation.getCurrentPosition() method is used to get the current position of the device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions">PositionOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/geolocation-api/#position_options_interface"># position_options_interface</a>
+   * @see <a href="https://w3c.github.io/geolocation-api/#getcurrentposition-method"># getcurrentposition-method</a>
    */
   @JsType(
       isNative = true,

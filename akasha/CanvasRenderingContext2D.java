@@ -111,6 +111,8 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
+  public double letterSpacing;
+
   /**
    * The CanvasRenderingContext2D.lineCap property of the Canvas 2D API determines the shape used to draw the end points of lines.
    *
@@ -217,13 +219,11 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @CanvasTextBaseline
   public String textBaseline;
 
-  public double textLetterSpacing;
-
   @JsNonNull
   @CanvasTextRendering
   public String textRendering;
 
-  public double textWordSpacing;
+  public double wordSpacing;
 
   protected CanvasRenderingContext2D() {
   }

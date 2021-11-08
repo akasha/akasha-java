@@ -255,6 +255,13 @@ public interface EventModifierInit extends UIEventInit {
 
     @JsOverlay
     @Nonnull
+    default Builder which(final int which) {
+      setWhich( which );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder bubbles(final boolean bubbles) {
       setBubbles( bubbles );
       return this;

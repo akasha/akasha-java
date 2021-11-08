@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The AudioEncoder interface of the WebCodecs API encodes AudioData objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder">AudioEncoder - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#audioencoder-interface"># audioencoder-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

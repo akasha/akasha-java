@@ -162,29 +162,29 @@ public class URL extends JsObject {
   public native String toJSON();
 
   /**
+   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">createObjectURL() - File API</a>
+   * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">URL - Media Source Extensions</a>
+   */
+  @JsNonNull
+  public static native String createObjectURL(@Nonnull Blob obj);
+
+  /**
+   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
+   * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">createObjectURL() - File API</a>
+   * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">URL - Media Source Extensions</a>
+   */
+  @JsNonNull
+  public static native String createObjectURL(@Nonnull MediaSource obj);
+
+  /**
    * The URL.revokeObjectURL() static method releases an existing object URL which was previously created by calling URL.createObjectURL().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL">URL.revokeObjectURL - MDN</a>
    */
   public static native void revokeObjectURL(@Nonnull String url);
-
-  /**
-   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
-   * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">createObjectURL() - File API</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">URL - Media Source Extensions</a>
-   */
-  @JsNonNull
-  public static native String createObjectURL(@Nonnull Blob blob);
-
-  /**
-   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
-   * @see <a href="https://w3c.github.io/FileAPI/#dfn-createObjectURL">createObjectURL() - File API</a>
-   * @see <a href="https://w3c.github.io/media-source/#dom-url-createobjecturl">URL - Media Source Extensions</a>
-   */
-  @JsNonNull
-  public static native String createObjectURL(@Nonnull MediaSource mediaSource);
 }

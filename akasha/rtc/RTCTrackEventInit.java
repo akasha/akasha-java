@@ -15,10 +15,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().
+ * The RTCTrackEvent() constructor creates and returns a new RTCTrackEvent object, configured to describe the track which has been added to the RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit">RTCTrackEventInit - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">(WebRTC 1.0) # dom-rtctrackeventinit</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackevent-constructor">(WebRTC 1.0) # dom-rtctrackevent-constructor</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -146,10 +146,10 @@ public interface RTCTrackEventInit extends EventInit {
   }
 
   /**
-   * The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent().
+   * The RTCTrackEvent() constructor creates and returns a new RTCTrackEvent object, configured to describe the track which has been added to the RTCPeerConnection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit">RTCTrackEventInit - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">(WebRTC 1.0) # dom-rtctrackeventinit</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackevent-constructor">(WebRTC 1.0) # dom-rtctrackevent-constructor</a>
    */
   @JsType(
       isNative = true,

@@ -46,7 +46,12 @@ public class MediaSource extends EventTarget implements MediaProvider {
   @JsNullable
   public EventHandler onsourceopen;
 
-  protected MediaSource() {
+  /**
+   * The MediaSource() constructor of the MediaSource interface constructs and returns a new MediaSource object with no associated source buffers.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/MediaSource">MediaSource.MediaSource - MDN</a>
+   */
+  public MediaSource() {
   }
 
   /**
@@ -60,6 +65,11 @@ public class MediaSource extends EventTarget implements MediaProvider {
   )
   @Nonnull
   public native SourceBufferList activeSourceBuffers();
+
+  @JsProperty(
+      name = "canConstructInDedicatedWorker"
+  )
+  public static native boolean canConstructInDedicatedWorker();
 
   /**
    * The readyState read-only property of the MediaSource interface returns an enum representing the state of the current MediaSource. The three possible values are:

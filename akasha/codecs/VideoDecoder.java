@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The VideoDecoder interface of the WebCodecs API decodes chunks of video.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoDecoder">VideoDecoder - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#videodecoder-interface"># videodecoder-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

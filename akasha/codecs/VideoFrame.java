@@ -17,6 +17,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The VideoFrame interface of the Web Codecs API represents a frame of a video.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame">VideoFrame - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#videoframe-interface"># videoframe-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

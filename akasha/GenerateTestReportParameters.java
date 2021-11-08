@@ -26,14 +26,6 @@ public interface GenerateTestReportParameters {
   }
 
   @JsProperty(
-      name = "group"
-  )
-  String group();
-
-  @JsProperty
-  void setGroup(@JsNonNull String group);
-
-  @JsProperty(
       name = "message"
   )
   @JsNonNull
@@ -41,6 +33,14 @@ public interface GenerateTestReportParameters {
 
   @JsProperty
   void setMessage(@JsNonNull String message);
+
+  @JsProperty(
+      name = "group"
+  )
+  String group();
+
+  @JsProperty
+  void setGroup(@JsNonNull String group);
 
   @JsType(
       isNative = true,

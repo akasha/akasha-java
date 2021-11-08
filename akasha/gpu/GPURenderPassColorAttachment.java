@@ -38,14 +38,6 @@ public interface GPURenderPassColorAttachment {
   void setView(@JsNonNull GPUTextureView view);
 
   @JsProperty(
-      name = "resolveTarget"
-  )
-  GPUTextureView resolveTarget();
-
-  @JsProperty
-  void setResolveTarget(@JsNonNull GPUTextureView resolveTarget);
-
-  @JsProperty(
       name = "loadValue"
   )
   @JsNonNull
@@ -88,6 +80,14 @@ public interface GPURenderPassColorAttachment {
 
   @JsProperty
   void setStoreOp(@GPUStoreOp @JsNonNull String storeOp);
+
+  @JsProperty(
+      name = "resolveTarget"
+  )
+  GPUTextureView resolveTarget();
+
+  @JsProperty
+  void setResolveTarget(@JsNonNull GPUTextureView resolveTarget);
 
   @JsType(
       isNative = true,

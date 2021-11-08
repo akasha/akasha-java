@@ -279,4 +279,166 @@ public class MouseEvent extends UIEvent {
    * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-getModifierState">getModifierState() - Document Object Model (DOM) Level 3 Events Specification</a>
    */
   public native boolean getModifierState(@Nonnull String keyArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg, boolean ctrlKeyArg, boolean altKeyArg,
+      boolean shiftKeyArg, boolean metaKeyArg, short buttonArg,
+      @Nullable EventTarget relatedTargetArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg, boolean ctrlKeyArg, boolean altKeyArg,
+      boolean shiftKeyArg, boolean metaKeyArg, short buttonArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg, boolean ctrlKeyArg, boolean altKeyArg,
+      boolean shiftKeyArg, boolean metaKeyArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg, boolean ctrlKeyArg, boolean altKeyArg,
+      boolean shiftKeyArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg, boolean ctrlKeyArg, boolean altKeyArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg, boolean ctrlKeyArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg, int clientYArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg, int clientXArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg,
+      int screenYArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg, int screenXArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg, int detailArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg, @Nullable Window viewArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg, boolean bubblesArg);
+
+  /**
+   * The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent">MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initMouseEvent(@Nonnull String typeArg);
 }

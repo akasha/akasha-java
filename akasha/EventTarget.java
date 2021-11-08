@@ -8,7 +8,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * EventTarget is a DOM interface implemented by objects that can receive events and may have listeners for them.
+ * The EventTarget interface is implemented by objects that can receive events and may have listeners for them. In other words, any target of events implements the three methods associated with this interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget - MDN</a>
  * @see <a href="https://dom.spec.whatwg.org/#interface-eventtarget">(DOM) # interface-eventtarget</a>

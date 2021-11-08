@@ -34,124 +34,124 @@ import jsinterop.base.Js;
     name = "Element"
 )
 public class Element extends Node implements HTMLFormControl, IntersectionRoot, StyleSheetOwnerNode, HTMLAllCollectionItem {
-  @JsNonNull
+  @JsNullable
   public String ariaAtomic;
 
-  @JsNonNull
+  @JsNullable
   public String ariaAutoComplete;
 
-  @JsNonNull
+  @JsNullable
   public String ariaBusy;
 
-  @JsNonNull
+  @JsNullable
   public String ariaChecked;
 
-  @JsNonNull
+  @JsNullable
   public String ariaColCount;
 
-  @JsNonNull
+  @JsNullable
   public String ariaColIndex;
 
-  @JsNonNull
+  @JsNullable
   public String ariaColIndexText;
 
-  @JsNonNull
+  @JsNullable
   public String ariaColSpan;
 
-  @JsNonNull
+  @JsNullable
   public String ariaCurrent;
 
-  @JsNonNull
+  @JsNullable
   public String ariaDescription;
 
-  @JsNonNull
+  @JsNullable
   public String ariaDisabled;
 
-  @JsNonNull
+  @JsNullable
   public String ariaExpanded;
 
-  @JsNonNull
+  @JsNullable
   public String ariaHasPopup;
 
-  @JsNonNull
+  @JsNullable
   public String ariaHidden;
 
-  @JsNonNull
+  @JsNullable
   public String ariaInvalid;
 
-  @JsNonNull
+  @JsNullable
   public String ariaKeyShortcuts;
 
-  @JsNonNull
+  @JsNullable
   public String ariaLabel;
 
-  @JsNonNull
+  @JsNullable
   public String ariaLevel;
 
-  @JsNonNull
+  @JsNullable
   public String ariaLive;
 
-  @JsNonNull
+  @JsNullable
   public String ariaModal;
 
-  @JsNonNull
+  @JsNullable
   public String ariaMultiLine;
 
-  @JsNonNull
+  @JsNullable
   public String ariaMultiSelectable;
 
-  @JsNonNull
+  @JsNullable
   public String ariaOrientation;
 
-  @JsNonNull
+  @JsNullable
   public String ariaPlaceholder;
 
-  @JsNonNull
+  @JsNullable
   public String ariaPosInSet;
 
-  @JsNonNull
+  @JsNullable
   public String ariaPressed;
 
-  @JsNonNull
+  @JsNullable
   public String ariaReadOnly;
 
-  @JsNonNull
+  @JsNullable
   public String ariaRequired;
 
-  @JsNonNull
+  @JsNullable
   public String ariaRoleDescription;
 
-  @JsNonNull
+  @JsNullable
   public String ariaRowCount;
 
-  @JsNonNull
+  @JsNullable
   public String ariaRowIndex;
 
-  @JsNonNull
+  @JsNullable
   public String ariaRowIndexText;
 
-  @JsNonNull
+  @JsNullable
   public String ariaRowSpan;
 
-  @JsNonNull
+  @JsNullable
   public String ariaSelected;
 
-  @JsNonNull
+  @JsNullable
   public String ariaSetSize;
 
-  @JsNonNull
+  @JsNullable
   public String ariaSort;
 
-  @JsNonNull
+  @JsNullable
   public String ariaValueMax;
 
-  @JsNonNull
+  @JsNullable
   public String ariaValueMin;
 
-  @JsNonNull
+  @JsNullable
   public String ariaValueNow;
 
-  @JsNonNull
+  @JsNullable
   public String ariaValueText;
 
   /**

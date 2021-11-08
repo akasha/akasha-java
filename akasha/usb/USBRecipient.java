@@ -1,4 +1,4 @@
-package akasha;
+package akasha.usb;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
@@ -8,23 +8,26 @@ import org.intellij.lang.annotations.MagicConstant;
 @Generated("org.realityforge.webtack")
 @Documented
 @MagicConstant(
-    valuesFromClass = PushPermissionState.class
+    valuesFromClass = USBRecipient.class
 )
-public @interface PushPermissionState {
+public @interface USBRecipient {
   @Nonnull
-  String denied = "denied";
+  String device = "device";
 
   @Nonnull
-  String granted = "granted";
+  String endpoint = "endpoint";
 
   @Nonnull
-  String prompt = "prompt";
+  String interface_ = "interface";
+
+  @Nonnull
+  String other = "other";
 
   final class Util {
     private Util() {
     }
 
-    @PushPermissionState
+    @USBRecipient
     public static String requireValid(final String value) {
       assertValid( value );
       return value;
@@ -35,7 +38,7 @@ public @interface PushPermissionState {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return PushPermissionState.denied.equals( value ) || PushPermissionState.granted.equals( value ) || PushPermissionState.prompt.equals( value );
+      return USBRecipient.device.equals( value ) || USBRecipient.endpoint.equals( value ) || USBRecipient.interface_.equals( value ) || USBRecipient.other.equals( value );
     }
   }
 }

@@ -77,6 +77,26 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   }
 
   @JsProperty(
+      name = "format"
+  )
+  @GPUTextureFormat
+  @JsNonNull
+  String format();
+
+  @JsProperty
+  void setFormat(@GPUTextureFormat @JsNonNull String format);
+
+  @JsProperty(
+      name = "usage"
+  )
+  @GPUTextureUsageFlags
+  @JsNonNull
+  int usage();
+
+  @JsProperty
+  void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
+
+  @JsProperty(
       name = "dimension"
   )
   @GPUTextureDimension
@@ -100,26 +120,6 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
 
   @JsProperty
   void setSampleCount(int sampleCount);
-
-  @JsProperty(
-      name = "format"
-  )
-  @GPUTextureFormat
-  @JsNonNull
-  String format();
-
-  @JsProperty
-  void setFormat(@GPUTextureFormat @JsNonNull String format);
-
-  @JsProperty(
-      name = "usage"
-  )
-  @GPUTextureUsageFlags
-  @JsNonNull
-  int usage();
-
-  @JsProperty
-  void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
   @JsType(
       isNative = true,

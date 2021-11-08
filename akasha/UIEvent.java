@@ -71,4 +71,52 @@ public class UIEvent extends Event {
       name = "which"
   )
   public native int which();
+
+  /**
+   * The UIEvent.initUIEvent() method initializes a UI event once it's been created.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent">UIEvent.initUIEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-initUIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initUIEvent(@Nonnull String typeArg, boolean bubblesArg, boolean cancelableArg,
+      @Nullable Window viewArg, int detailArg);
+
+  /**
+   * The UIEvent.initUIEvent() method initializes a UI event once it's been created.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent">UIEvent.initUIEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-initUIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initUIEvent(@Nonnull String typeArg, boolean bubblesArg, boolean cancelableArg,
+      @Nullable Window viewArg);
+
+  /**
+   * The UIEvent.initUIEvent() method initializes a UI event once it's been created.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent">UIEvent.initUIEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-initUIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initUIEvent(@Nonnull String typeArg, boolean bubblesArg,
+      boolean cancelableArg);
+
+  /**
+   * The UIEvent.initUIEvent() method initializes a UI event once it's been created.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent">UIEvent.initUIEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-initUIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initUIEvent(@Nonnull String typeArg, boolean bubblesArg);
+
+  /**
+   * The UIEvent.initUIEvent() method initializes a UI event once it's been created.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent">UIEvent.initUIEvent - MDN</a>
+   * @see <a href="https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-initUIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 3 Events Specification</a>
+   * @see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent">UIEvent.initUIEvent() - Document Object Model (DOM) Level 2 Events Specification</a>
+   */
+  public native void initUIEvent(@Nonnull String typeArg);
 }

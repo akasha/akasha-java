@@ -51,6 +51,10 @@ var COSEAlgorithmIdentifier;
  */
 var Float32List;
 /**
+ * @typedef {!Array<!GPURenderPassTimestampWrite>}
+ */
+var GPURenderPassTimestampWrites;
+/**
  * @typedef {(!GPUSampler|!GPUTextureView|!GPUBufferBinding|!GPUExternalTexture)}
  */
 var GPUBindingResource;
@@ -70,10 +74,6 @@ var WindowOrWorkerGlobalScopeUnion;
  * @typedef {(!Int8Array|!Int16Array|!Int32Array|!Uint8Array|!Uint16Array|!Uint32Array|!Uint8ClampedArray)}
  */
 var IntegerTypedArray;
-/**
- * @typedef {!number}
- */
-var DOMTimeStamp;
 /**
  * @typedef {(!ReadableStreamDefaultController|!ReadableByteStreamController)}
  */
@@ -138,6 +138,10 @@ var GPUSize64;
  * @typedef {(!string|undefined)}
  */
 var GPUDeviceLostReasonOrUndefinedUnion;
+/**
+ * @typedef {!Array<!GPUComputePassTimestampWrite>}
+ */
+var GPUComputePassTimestampWrites;
 /**
  * @typedef {(!IDBObjectStore|!IDBIndex|!IDBCursor)}
  */
@@ -478,6 +482,10 @@ var GPUPipelineConstantValue;
  * @typedef {!number}
  */
 var GLclampf;
+/**
+ * @typedef {!number}
+ */
+var EpochTimeStamp;
 /**
  * @typedef {(!string|!Array<!UUID>)}
  */
@@ -1565,7 +1573,7 @@ var GPUCanvasConfiguration;
  */
 var FilePropertyBag;
 /**
- * @typedef {{endpoint:(!string|undefined),expirationTime:(?DOMTimeStamp|undefined),keys:(!Object<!string,!string>|undefined)}}
+ * @typedef {{endpoint:(!string|undefined),expirationTime:(?EpochTimeStamp|undefined),keys:(!Object<!string,!string>|undefined)}}
  */
 var PushSubscriptionJSON;
 /**
@@ -1581,7 +1589,7 @@ var ProgressEventInit;
  */
 var PublicKeyCredentialRpEntity;
 /**
- * @typedef {{colorAttachments:!Array<!GPURenderPassColorAttachment>,depthStencilAttachment:(!GPURenderPassDepthStencilAttachment|undefined),occlusionQuerySet:(!GPUQuerySet|undefined),label:(!string|undefined)}}
+ * @typedef {{colorAttachments:!Array<!GPURenderPassColorAttachment>,depthStencilAttachment:(!GPURenderPassDepthStencilAttachment|undefined),occlusionQuerySet:(!GPUQuerySet|undefined),timestampWrites:(!GPURenderPassTimestampWrites|undefined),label:(!string|undefined)}}
  */
 var GPURenderPassDescriptor;
 /**
@@ -1693,11 +1701,15 @@ var ConstrainDoubleRange;
  */
 var GPUExternalTextureDescriptor;
 /**
+ * @typedef {{requestType:!string,recipient:!string,request:!number,value:!number,index:!number}}
+ */
+var USBControlTransferParameters;
+/**
  * @typedef {{length:!number,name:!string}}
  */
 var AesKeyGenParams;
 /**
- * @typedef {{button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var MouseEventInit;
 /**
@@ -1785,7 +1797,7 @@ var RTCConfiguration;
  */
 var ErrorEventInit;
 /**
- * @typedef {{altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var EventModifierInit;
 /**
@@ -1805,6 +1817,10 @@ var Algorithm;
  */
 var GPUObjectDescriptorBase;
 /**
+ * @typedef {{allowedDevices:(!Array<!AllowedUSBDevice>|undefined)}}
+ */
+var USBPermissionStorage;
+/**
  * @typedef {{challenge:!string,crossOrigin:(!boolean|undefined),origin:!string,tokenBinding:(!TokenBinding|undefined),type:!string}}
  */
 var CollectedClientData;
@@ -1821,7 +1837,7 @@ var AudioBufferSourceOptions;
  */
 var RTCRtpHeaderExtensionParameters;
 /**
- * @typedef {{clampDepth:(!boolean|undefined),cullMode:(!string|undefined),frontFace:(!string|undefined),stripIndexFormat:(!string|undefined),topology:(!string|undefined)}}
+ * @typedef {{cullMode:(!string|undefined),frontFace:(!string|undefined),stripIndexFormat:(!string|undefined),topology:(!string|undefined),unclippedDepth:(!boolean|undefined)}}
  */
 var GPUPrimitiveState;
 /**
@@ -1829,13 +1845,17 @@ var GPUPrimitiveState;
  */
 var GPURenderPipelineDescriptor;
 /**
- * @typedef {{detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var UIEventInit;
 /**
  * @typedef {{config:(!AudioEncoderConfig|undefined),supported:(!boolean|undefined)}}
  */
 var AudioEncoderSupport;
+/**
+ * @typedef {{filters:(!Array<!USBDeviceFilter>|undefined),name:!string}}
+ */
+var USBPermissionDescriptor;
 /**
  * @typedef {{endings:(!string|undefined),type:(!string|undefined)}}
  */
@@ -1925,13 +1945,17 @@ var RTCIdentityProviderDetails;
  */
 var SecurityPolicyViolationEventInit;
 /**
- * @typedef {{relatedTarget:(?EventTarget|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{relatedTarget:(?EventTarget|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var FocusEventInit;
 /**
  * @typedef {{resultIndex:(!number|undefined),results:!SpeechRecognitionResultList,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var SpeechRecognitionEventInit;
+/**
+ * @typedef {{filters:!Array<!USBDeviceFilter>}}
+ */
+var USBDeviceRequestOptions;
 /**
  * @typedef {{subtree:(!boolean|undefined)}}
  */
@@ -2001,7 +2025,7 @@ var VideoEncoderEncodeOptions;
  */
 var GPUExternalTextureBindingLayout;
 /**
- * @typedef {{changedTouches:(!Array<!Touch>|undefined),targetTouches:(!Array<!Touch>|undefined),touches:(!Array<!Touch>|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{changedTouches:(!Array<!Touch>|undefined),targetTouches:(!Array<!Touch>|undefined),touches:(!Array<!Touch>|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var TouchEventInit;
 /**
@@ -2041,7 +2065,7 @@ var MediaRecorderOptions;
  */
 var DisplayMediaStreamConstraints;
 /**
- * @typedef {{actions:(!Array<!NotificationAction>|undefined),badge:(!string|undefined),body:(!string|undefined),data:(*|undefined),dir:(!string|undefined),icon:(!string|undefined),image:(!string|undefined),lang:(!string|undefined),renotify:(!boolean|undefined),requireInteraction:(!boolean|undefined),silent:(!boolean|undefined),tag:(!string|undefined),timestamp:(!DOMTimeStamp|undefined),vibrate:(!VibratePattern|undefined)}}
+ * @typedef {{actions:(!Array<!NotificationAction>|undefined),badge:(!string|undefined),body:(!string|undefined),data:(*|undefined),dir:(!string|undefined),icon:(!string|undefined),image:(!string|undefined),lang:(!string|undefined),renotify:(!boolean|undefined),requireInteraction:(!boolean|undefined),silent:(!boolean|undefined),tag:(!string|undefined),timestamp:(!EpochTimeStamp|undefined),vibrate:(!VibratePattern|undefined)}}
  */
 var NotificationOptions;
 /**
@@ -2117,7 +2141,7 @@ var XRWebGLLayerInit;
  */
 var HmacImportParams;
 /**
- * @typedef {{view:!GPUTextureView,resolveTarget:(!GPUTextureView|undefined),loadValue:!GPULoadOpOrGPUColorUnion,storeOp:!string}}
+ * @typedef {{view:!GPUTextureView,loadValue:!GPULoadOpOrGPUColorUnion,storeOp:!string,resolveTarget:(!GPUTextureView|undefined)}}
  */
 var GPURenderPassColorAttachment;
 /**
@@ -2125,7 +2149,7 @@ var GPURenderPassColorAttachment;
  */
 var WebAssemblyInstantiatedSource;
 /**
- * @typedef {{height:(!number|undefined),isPrimary:(!boolean|undefined),pointerId:(!number|undefined),pointerType:(!string|undefined),pressure:(!number|undefined),tangentialPressure:(!number|undefined),tiltX:(!number|undefined),tiltY:(!number|undefined),twist:(!number|undefined),width:(!number|undefined),button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{height:(!number|undefined),isPrimary:(!boolean|undefined),pointerId:(!number|undefined),pointerType:(!string|undefined),pressure:(!number|undefined),tangentialPressure:(!number|undefined),tiltX:(!number|undefined),tiltY:(!number|undefined),twist:(!number|undefined),width:(!number|undefined),button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var PointerEventInit;
 /**
@@ -2133,7 +2157,7 @@ var PointerEventInit;
  */
 var ValueEventInit;
 /**
- * @typedef {{arrayStride:!GPUSize64,stepMode:(!string|undefined),attributes:!Array<!GPUVertexAttribute>}}
+ * @typedef {{arrayStride:!GPUSize64,attributes:!Array<!GPUVertexAttribute>,stepMode:(!string|undefined)}}
  */
 var GPUVertexBufferLayout;
 /**
@@ -2149,7 +2173,7 @@ var MediaStreamAudioSourceOptions;
  */
 var VideoFrameInit;
 /**
- * @typedef {{label:(!string|undefined)}}
+ * @typedef {{timestampWrites:(!GPUComputePassTimestampWrites|undefined),label:(!string|undefined)}}
  */
 var GPUComputePassDescriptor;
 /**
@@ -2233,7 +2257,7 @@ var ValidityStateFlags;
  */
 var CameraDevicePermissionDescriptor;
 /**
- * @typedef {{access:(!string|undefined),format:!string,viewDimension:(!string|undefined)}}
+ * @typedef {{format:!string,access:(!string|undefined),viewDimension:(!string|undefined)}}
  */
 var GPUStorageTextureBindingLayout;
 /**
@@ -2293,7 +2317,7 @@ var MediaRecorderErrorEventInit;
  */
 var BluetoothPermissionDescriptor;
 /**
- * @typedef {{measureExecutionTime:(!boolean|undefined),label:(!string|undefined)}}
+ * @typedef {{label:(!string|undefined)}}
  */
 var GPUCommandEncoderDescriptor;
 /**
@@ -2473,6 +2497,10 @@ var WorkerOptions;
  */
 var FederatedCredentialRequestOptions;
 /**
+ * @typedef {{port:(!MIDIPort|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var MIDIConnectionEventInit;
+/**
  * @typedef {{composite:(!string|undefined),pseudoElement:(?CSSOMString|undefined),delay:(!number|undefined),direction:(!string|undefined),duration:(!UnrestrictedDoubleOrStringUnion|undefined),easing:(!string|undefined),endDelay:(!number|undefined),fill:(!string|undefined),iterationStart:(!number|undefined),iterations:(!number|undefined)}}
  */
 var KeyframeEffectOptions;
@@ -2501,6 +2529,10 @@ var AnimationEventInit;
  */
 var ImageDecoderInit;
 /**
+ * @typedef {{device:!USBDevice,bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var USBConnectionEventInit;
+/**
  * @typedef {{sysex:(!boolean|undefined),name:!string}}
  */
 var MidiPermissionDescriptor;
@@ -2517,7 +2549,7 @@ var FullscreenOptions;
  */
 var IDBDatabaseInfo;
 /**
- * @typedef {{code:(!string|undefined),isComposing:(!boolean|undefined),key:(!string|undefined),location:(!number|undefined),repeat:(!boolean|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{code:(!string|undefined),isComposing:(!boolean|undefined),key:(!string|undefined),location:(!number|undefined),repeat:(!boolean|undefined),charCode:(!number|undefined),keyCode:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var KeyboardEventInit;
 /**
@@ -2609,11 +2641,15 @@ var PageTransitionEventInit;
  */
 var DocumentTimelineOptions;
 /**
+ * @typedef {{querySet:!GPUQuerySet,queryIndex:!GPUSize32,location:!string}}
+ */
+var GPUComputePassTimestampWrite;
+/**
  * @typedef {{notification:!Notification,action:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var NotificationEventInit;
 /**
- * @typedef {{group:(!string|undefined),message:!string}}
+ * @typedef {{message:!string,group:(!string|undefined)}}
  */
 var GenerateTestReportParameters;
 /**
@@ -2629,7 +2665,7 @@ var EcKeyImportParams;
  */
 var OfflineAudioContextOptions;
 /**
- * @typedef {{expires:(!DOMTimeStamp|undefined)}}
+ * @typedef {{expires:(!EpochTimeStamp|undefined)}}
  */
 var RTCCertificateExpiration;
 /**
@@ -2693,7 +2729,7 @@ var IDBVersionChangeEventInit;
  */
 var TextDecoderOptions;
 /**
- * @typedef {{dataTransfer:(?DataTransfer|undefined),button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{dataTransfer:(?DataTransfer|undefined),button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var DragEventInit;
 /**
@@ -2729,6 +2765,10 @@ var BluetoothAdvertisingEventInit;
  */
 var RTCRtpStreamStats;
 /**
+ * @typedef {{classCode:(!number|undefined),productId:(!number|undefined),protocolCode:(!number|undefined),serialNumber:(!string|undefined),subclassCode:(!number|undefined),vendorId:(!number|undefined)}}
+ */
+var USBDeviceFilter;
+/**
  * @typedef {{displayName:!string,id:!BufferSource,name:!string}}
  */
 var PublicKeyCredentialUserEntity;
@@ -2745,7 +2785,7 @@ var RTCCodecStats;
  */
 var ImageDataSettings;
 /**
- * @typedef {{view:!GPUTextureView,depthLoadValue:!GPULoadOpOrFloatUnion,depthStoreOp:!string,depthReadOnly:(!boolean|undefined),stencilLoadValue:!GPULoadOpOrGPUStencilValueUnion,stencilStoreOp:!string,stencilReadOnly:(!boolean|undefined)}}
+ * @typedef {{view:!GPUTextureView,depthLoadValue:!GPULoadOpOrFloatUnion,depthStoreOp:!string,stencilLoadValue:!GPULoadOpOrGPUStencilValueUnion,stencilStoreOp:!string,depthReadOnly:(!boolean|undefined),stencilReadOnly:(!boolean|undefined)}}
  */
 var GPURenderPassDepthStencilAttachment;
 /**
@@ -2781,6 +2821,10 @@ var RsaHashedImportParams;
  */
 var ConstrainULongRange;
 /**
+ * @typedef {{querySet:!GPUQuerySet,queryIndex:!GPUSize32,location:!string}}
+ */
+var GPURenderPassTimestampWrite;
+/**
  * @typedef {{mode:(!string|undefined),optionalFeatures:(!Array<*>|undefined),requiredFeatures:(!Array<*>|undefined),name:!string}}
  */
 var XRPermissionDescriptor;
@@ -2809,7 +2853,7 @@ var AudioTimestamp;
  */
 var QueuingStrategy;
 /**
- * @typedef {{deltaMode:(!number|undefined),deltaX:(!number|undefined),deltaY:(!number|undefined),deltaZ:(!number|undefined),button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{deltaMode:(!number|undefined),deltaX:(!number|undefined),deltaY:(!number|undefined),deltaZ:(!number|undefined),button:(!number|undefined),buttons:(!number|undefined),relatedTarget:(?EventTarget|undefined),clientX:(!number|undefined),clientY:(!number|undefined),screenX:(!number|undefined),screenY:(!number|undefined),movementX:(!number|undefined),movementY:(!number|undefined),altKey:(!boolean|undefined),ctrlKey:(!boolean|undefined),metaKey:(!boolean|undefined),modifierAltGraph:(!boolean|undefined),modifierCapsLock:(!boolean|undefined),modifierFn:(!boolean|undefined),modifierFnLock:(!boolean|undefined),modifierHyper:(!boolean|undefined),modifierNumLock:(!boolean|undefined),modifierScrollLock:(!boolean|undefined),modifierSuper:(!boolean|undefined),modifierSymbol:(!boolean|undefined),modifierSymbolLock:(!boolean|undefined),shiftKey:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var WheelEventInit;
 /**
@@ -2820,6 +2864,10 @@ var GPUVertexState;
  * @typedef {{x:(!GPUIntegerCoordinate|undefined),y:(!GPUIntegerCoordinate|undefined)}}
  */
 var GPUOrigin2DDict;
+/**
+ * @typedef {{vendorId:!number,productId:!number,serialNumber:(!string|undefined)}}
+ */
+var AllowedUSBDevice;
 /**
  * @typedef {{buffered:(!boolean|undefined),types:(!Array<!string>|undefined)}}
  */
@@ -2857,11 +2905,11 @@ var ImageEncodeOptions;
  */
 var GPUExtent3DDict;
 /**
- * @typedef {{size:!GPUExtent3D,dimension:(!string|undefined),mipLevelCount:(!GPUIntegerCoordinate|undefined),sampleCount:(!GPUSize32|undefined),format:!string,usage:!GPUFlagsConstant,label:(!string|undefined)}}
+ * @typedef {{size:!GPUExtent3D,format:!string,usage:!GPUFlagsConstant,dimension:(!string|undefined),mipLevelCount:(!GPUIntegerCoordinate|undefined),sampleCount:(!GPUSize32|undefined),label:(!string|undefined)}}
  */
 var GPUTextureDescriptor;
 /**
- * @typedef {{data:(?string|undefined),inputType:(!string|undefined),isComposing:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{data:(?string|undefined),inputType:(!string|undefined),isComposing:(!boolean|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var InputEventInit;
 /**
@@ -2904,6 +2952,10 @@ var DOMPointInit;
  * @typedef {{delayTime:(!number|undefined),maxDelayTime:(!number|undefined),channelCount:(!number|undefined),channelCountMode:(!string|undefined),channelInterpretation:(!string|undefined)}}
  */
 var DelayOptions;
+/**
+ * @typedef {{data:(!Uint8Array|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var MIDIMessageEventInit;
 /**
  * @typedef {{colorSpaceConversion:(!string|undefined),imageOrientation:(!string|undefined),premultiplyAlpha:(!string|undefined),resizeHeight:(!number|undefined),resizeQuality:(!string|undefined),resizeWidth:(!number|undefined)}}
  */
@@ -3109,7 +3161,7 @@ var MediaKeySystemConfiguration;
  */
 var GPUImageCopyExternalImage;
 /**
- * @typedef {{data:(!string|undefined),detail:(!number|undefined),view:(?Window|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @typedef {{data:(!string|undefined),detail:(!number|undefined),view:(?Window|undefined),which:(!number|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var CompositionEventInit;
 /**
@@ -3144,6 +3196,10 @@ var RTCIdentityProvider;
  * @typedef {{acceleration:(!DeviceMotionEventAccelerationInit|undefined),accelerationIncludingGravity:(!DeviceMotionEventAccelerationInit|undefined),interval:(!number|undefined),rotationRate:(!DeviceMotionEventRotationRateInit|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var DeviceMotionEventInit;
+/**
+ * @typedef {{software:(!boolean|undefined),sysex:(!boolean|undefined)}}
+ */
+var MIDIOptions;
 /**
  * @typedef {{concealedSamples:(!number|undefined),concealmentEvents:(!number|undefined),estimatedPlayoutTimestamp:(!DOMHighResTimeStamp|undefined),insertedSamplesForDeceleration:(!number|undefined),jitterBufferDelay:(!number|undefined),jitterBufferEmittedCount:(!number|undefined),removedSamplesForAcceleration:(!number|undefined),silentConcealedSamples:(!number|undefined),totalSamplesReceived:(!number|undefined),audioLevel:(!number|undefined),totalAudioEnergy:(!number|undefined),totalSamplesDuration:(!number|undefined),voiceActivityFlag:(!boolean|undefined),ended:(!boolean|undefined),kind:!string,trackIdentifier:(!string|undefined),priority:(!string|undefined),remoteSource:(!boolean|undefined),timestamp:!DOMHighResTimeStamp,type:!string,id:!string}}
  */
@@ -4301,6 +4357,17 @@ function GPUQuerySet() {}
 GPUQuerySet.prototype.destroy = function() {}
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!USBConfiguration} configuration
+ * @param {!number} interfaceNumber
+ */
+function USBInterface(configuration,interfaceNumber) {}
+/** @type {!USBAlternateInterface} */ USBInterface.prototype.alternate;
+/** @type {!Array<!USBAlternateInterface>} */ USBInterface.prototype.alternates;
+/** @type {!boolean} */ USBInterface.prototype.claimed;
+/** @type {!number} */ USBInterface.prototype.interfaceNumber;
+/**
+ * @constructor
  * @private
  * @extends {Object}
  * @nosideeffects
@@ -4328,11 +4395,11 @@ function CanvasRenderingContext2D() {}
 /** @type {!string} */ CanvasRenderingContext2D.prototype.fontKerning;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.fontStretch;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.fontVariantCaps;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.letterSpacing;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.textAlign;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.textBaseline;
-/** @type {!number} */ CanvasRenderingContext2D.prototype.textLetterSpacing;
 /** @type {!string} */ CanvasRenderingContext2D.prototype.textRendering;
-/** @type {!number} */ CanvasRenderingContext2D.prototype.textWordSpacing;
+/** @type {!number} */ CanvasRenderingContext2D.prototype.wordSpacing;
 /**
  * @param {!number} angle
  * @return {undefined}
@@ -4677,7 +4744,7 @@ function Notification(title,options) {}
 /** @type {!boolean} */ Notification.prototype.requireInteraction;
 /** @type {!boolean} */ Notification.prototype.silent;
 /** @type {!string} */ Notification.prototype.tag;
-/** @type {!DOMTimeStamp} */ Notification.prototype.timestamp;
+/** @type {!EpochTimeStamp} */ Notification.prototype.timestamp;
 /** @type {!string} */ Notification.prototype.title;
 /** @type {!Array<!number>} */ Notification.prototype.vibrate;
 /** @type {?EventHandler} */ Notification.prototype.onclick;
@@ -4769,6 +4836,16 @@ function HTMLMapElement() {}
 /** @type {!string} */ HTMLMapElement.prototype.name;
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!USBDevice} device
+ * @param {!number} configurationValue
+ */
+function USBConfiguration(device,configurationValue) {}
+/** @type {?string} */ USBConfiguration.prototype.configurationName;
+/** @type {!number} */ USBConfiguration.prototype.configurationValue;
+/** @type {!Array<!USBInterface>} */ USBConfiguration.prototype.interfaces;
+/**
+ * @constructor
  * @private
  * @extends {Object}
  * @implements {Iterable<!Array<!number|!XRInputSource>>}
@@ -4847,6 +4924,25 @@ function MouseEvent(type,eventInitDict) {}
 /** @type {!number} */ MouseEvent.prototype.y;
 /** @type {!number} */ MouseEvent.prototype.movementX;
 /** @type {!number} */ MouseEvent.prototype.movementY;
+/**
+ * @param {!string} typeArg
+ * @param {!boolean=} bubblesArg
+ * @param {!boolean=} cancelableArg
+ * @param {?Window=} viewArg
+ * @param {!number=} detailArg
+ * @param {!number=} screenXArg
+ * @param {!number=} screenYArg
+ * @param {!number=} clientXArg
+ * @param {!number=} clientYArg
+ * @param {!boolean=} ctrlKeyArg
+ * @param {!boolean=} altKeyArg
+ * @param {!boolean=} shiftKeyArg
+ * @param {!boolean=} metaKeyArg
+ * @param {!number=} buttonArg
+ * @param {?EventTarget=} relatedTargetArg
+ * @return {undefined}
+ */
+MouseEvent.prototype.initMouseEvent = function(typeArg,bubblesArg,cancelableArg,viewArg,detailArg,screenXArg,screenYArg,clientXArg,clientYArg,ctrlKeyArg,altKeyArg,shiftKeyArg,metaKeyArg,buttonArg,relatedTargetArg) {}
 /**
  * @param {!string} keyArg
  * @return {!boolean}
@@ -5147,6 +5243,17 @@ function CSSFontFaceRule() {}
  * @nosideeffects
  */
 function WebGLVertexArrayObject() {}
+/**
+ * @constructor
+ * @private
+ * @extends {EventTarget}
+ * @nosideeffects
+ */
+function MIDIAccess() {}
+/** @type {!MIDIInputMap} */ MIDIAccess.prototype.inputs;
+/** @type {!MIDIOutputMap} */ MIDIAccess.prototype.outputs;
+/** @type {!boolean} */ MIDIAccess.prototype.sysexEnabled;
+/** @type {!NullableEventHandler} */ MIDIAccess.prototype.onstatechange;
 /**
  * @constructor
  * @private
@@ -5473,6 +5580,14 @@ OCULUS_multiview.prototype.framebufferTextureMultiviewOVR = function(target,atta
 OCULUS_multiview.prototype.framebufferTextureMultisampleMultiviewOVR = function(target,attachment,texture,level,samples,baseViewIndex,numViews) {}
 /**
  * @constructor
+ * @private
+ * @extends {MIDIPort}
+ * @nosideeffects
+ */
+function MIDIInput() {}
+/** @type {!NullableEventHandler} */ MIDIInput.prototype.onmidimessage;
+/**
+ * @constructor
  * @extends {Object}
  */
 function DataTransfer() {}
@@ -5701,6 +5816,13 @@ function WEBGL_debug_renderer_info() {}
 /** @const {!GLenum} */ WEBGL_debug_renderer_info.prototype.UNMASKED_VENDOR_WEBGL;
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!Array<!USBIsochronousOutTransferPacket>} packets
+ */
+function USBIsochronousOutTransferResult(packets) {}
+/** @type {!Array<!USBIsochronousOutTransferPacket>} */ USBIsochronousOutTransferResult.prototype.packets;
+/**
+ * @constructor
  * @private
  * @extends {Object}
  * @nosideeffects
@@ -5746,7 +5868,7 @@ function SVGFEFuncAElement() {}
  */
 function GeolocationPosition() {}
 /** @type {!GeolocationCoordinates} */ GeolocationPosition.prototype.coords;
-/** @type {!DOMTimeStamp} */ GeolocationPosition.prototype.timestamp;
+/** @type {!EpochTimeStamp} */ GeolocationPosition.prototype.timestamp;
 /**
  * @constructor
  * @extends {Object}
@@ -5827,6 +5949,14 @@ URLSearchParams.prototype.forEach = function(callback) {};
  */
 function GPUUncapturedErrorEvent(type,gpuUncapturedErrorEventInitDict) {}
 /** @type {!GPUError} */ GPUUncapturedErrorEvent.prototype.error;
+/**
+ * @constructor
+ * @extends {Event}
+ * @param {!string} type
+ * @param {!MIDIConnectionEventInit=} eventInitDict
+ */
+function MIDIConnectionEvent(type,eventInitDict) {}
+/** @type {!MIDIPort} */ MIDIConnectionEvent.prototype.port;
 /**
  * @constructor
  * @private
@@ -6440,46 +6570,46 @@ function ElementInternals() {}
 /** @type {!string} */ ElementInternals.prototype.validationMessage;
 /** @type {!ValidityState} */ ElementInternals.prototype.validity;
 /** @type {!boolean} */ ElementInternals.prototype.willValidate;
-/** @type {!string} */ ElementInternals.prototype.ariaAtomic;
-/** @type {!string} */ ElementInternals.prototype.ariaAutoComplete;
-/** @type {!string} */ ElementInternals.prototype.ariaBusy;
-/** @type {!string} */ ElementInternals.prototype.ariaChecked;
-/** @type {!string} */ ElementInternals.prototype.ariaColCount;
-/** @type {!string} */ ElementInternals.prototype.ariaColIndex;
-/** @type {!string} */ ElementInternals.prototype.ariaColIndexText;
-/** @type {!string} */ ElementInternals.prototype.ariaColSpan;
-/** @type {!string} */ ElementInternals.prototype.ariaCurrent;
-/** @type {!string} */ ElementInternals.prototype.ariaDescription;
-/** @type {!string} */ ElementInternals.prototype.ariaDisabled;
-/** @type {!string} */ ElementInternals.prototype.ariaExpanded;
-/** @type {!string} */ ElementInternals.prototype.ariaHasPopup;
-/** @type {!string} */ ElementInternals.prototype.ariaHidden;
-/** @type {!string} */ ElementInternals.prototype.ariaInvalid;
-/** @type {!string} */ ElementInternals.prototype.ariaKeyShortcuts;
-/** @type {!string} */ ElementInternals.prototype.ariaLabel;
-/** @type {!string} */ ElementInternals.prototype.ariaLevel;
-/** @type {!string} */ ElementInternals.prototype.ariaLive;
-/** @type {!string} */ ElementInternals.prototype.ariaModal;
-/** @type {!string} */ ElementInternals.prototype.ariaMultiLine;
-/** @type {!string} */ ElementInternals.prototype.ariaMultiSelectable;
-/** @type {!string} */ ElementInternals.prototype.ariaOrientation;
-/** @type {!string} */ ElementInternals.prototype.ariaPlaceholder;
-/** @type {!string} */ ElementInternals.prototype.ariaPosInSet;
-/** @type {!string} */ ElementInternals.prototype.ariaPressed;
-/** @type {!string} */ ElementInternals.prototype.ariaReadOnly;
-/** @type {!string} */ ElementInternals.prototype.ariaRequired;
-/** @type {!string} */ ElementInternals.prototype.ariaRoleDescription;
-/** @type {!string} */ ElementInternals.prototype.ariaRowCount;
-/** @type {!string} */ ElementInternals.prototype.ariaRowIndex;
-/** @type {!string} */ ElementInternals.prototype.ariaRowIndexText;
-/** @type {!string} */ ElementInternals.prototype.ariaRowSpan;
-/** @type {!string} */ ElementInternals.prototype.ariaSelected;
-/** @type {!string} */ ElementInternals.prototype.ariaSetSize;
-/** @type {!string} */ ElementInternals.prototype.ariaSort;
-/** @type {!string} */ ElementInternals.prototype.ariaValueMax;
-/** @type {!string} */ ElementInternals.prototype.ariaValueMin;
-/** @type {!string} */ ElementInternals.prototype.ariaValueNow;
-/** @type {!string} */ ElementInternals.prototype.ariaValueText;
+/** @type {?string} */ ElementInternals.prototype.ariaAtomic;
+/** @type {?string} */ ElementInternals.prototype.ariaAutoComplete;
+/** @type {?string} */ ElementInternals.prototype.ariaBusy;
+/** @type {?string} */ ElementInternals.prototype.ariaChecked;
+/** @type {?string} */ ElementInternals.prototype.ariaColCount;
+/** @type {?string} */ ElementInternals.prototype.ariaColIndex;
+/** @type {?string} */ ElementInternals.prototype.ariaColIndexText;
+/** @type {?string} */ ElementInternals.prototype.ariaColSpan;
+/** @type {?string} */ ElementInternals.prototype.ariaCurrent;
+/** @type {?string} */ ElementInternals.prototype.ariaDescription;
+/** @type {?string} */ ElementInternals.prototype.ariaDisabled;
+/** @type {?string} */ ElementInternals.prototype.ariaExpanded;
+/** @type {?string} */ ElementInternals.prototype.ariaHasPopup;
+/** @type {?string} */ ElementInternals.prototype.ariaHidden;
+/** @type {?string} */ ElementInternals.prototype.ariaInvalid;
+/** @type {?string} */ ElementInternals.prototype.ariaKeyShortcuts;
+/** @type {?string} */ ElementInternals.prototype.ariaLabel;
+/** @type {?string} */ ElementInternals.prototype.ariaLevel;
+/** @type {?string} */ ElementInternals.prototype.ariaLive;
+/** @type {?string} */ ElementInternals.prototype.ariaModal;
+/** @type {?string} */ ElementInternals.prototype.ariaMultiLine;
+/** @type {?string} */ ElementInternals.prototype.ariaMultiSelectable;
+/** @type {?string} */ ElementInternals.prototype.ariaOrientation;
+/** @type {?string} */ ElementInternals.prototype.ariaPlaceholder;
+/** @type {?string} */ ElementInternals.prototype.ariaPosInSet;
+/** @type {?string} */ ElementInternals.prototype.ariaPressed;
+/** @type {?string} */ ElementInternals.prototype.ariaReadOnly;
+/** @type {?string} */ ElementInternals.prototype.ariaRequired;
+/** @type {?string} */ ElementInternals.prototype.ariaRoleDescription;
+/** @type {?string} */ ElementInternals.prototype.ariaRowCount;
+/** @type {?string} */ ElementInternals.prototype.ariaRowIndex;
+/** @type {?string} */ ElementInternals.prototype.ariaRowIndexText;
+/** @type {?string} */ ElementInternals.prototype.ariaRowSpan;
+/** @type {?string} */ ElementInternals.prototype.ariaSelected;
+/** @type {?string} */ ElementInternals.prototype.ariaSetSize;
+/** @type {?string} */ ElementInternals.prototype.ariaSort;
+/** @type {?string} */ ElementInternals.prototype.ariaValueMax;
+/** @type {?string} */ ElementInternals.prototype.ariaValueMin;
+/** @type {?string} */ ElementInternals.prototype.ariaValueNow;
+/** @type {?string} */ ElementInternals.prototype.ariaValueText;
 /** @type {?string} */ ElementInternals.prototype.role;
 /**
  * @param {(!File|!string|!FormData)} value
@@ -6817,12 +6947,6 @@ GPURenderPassEncoder.prototype.setViewport = function(x,y,width,height,minDepth,
  * @return {undefined}
  */
 GPURenderPassEncoder.prototype.setStencilReference = function(reference) {}
-/**
- * @param {!GPUQuerySet} querySet
- * @param {!GPUSize32} queryIndex
- * @return {undefined}
- */
-GPURenderPassEncoder.prototype.writeTimestamp = function(querySet,queryIndex) {}
 /**
  * @return {undefined}
  */
@@ -9224,66 +9348,13 @@ function SpeechRecognitionAlternative() {}
  * @constructor
  * @private
  * @extends {CSSRule}
- * @implements {Iterable<!Array<!number|!CSSOMString>>}
  * @nosideeffects
  */
 function CSSFontPaletteValuesRule() {}
 /** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.basePalette;
 /** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.fontFamily;
-/** @const {number} */ CSSFontPaletteValuesRule.prototype.size;
-/**
- * @param {!number} key
- * @return {!boolean}
- * @nosideeffects
- */
-CSSFontPaletteValuesRule.prototype.has = function(key) {}
-/**
- * @param {!number} key
- * @return {!CSSOMString}
- * @nosideeffects
- */
-CSSFontPaletteValuesRule.prototype.get = function(key) {}
-/**
- * @return {!Iterator<!number>}
- * @nosideeffects
- */
-CSSFontPaletteValuesRule.prototype.keys = function() {}
-/**
- * @return {!Iterator<!CSSOMString>}
- * @nosideeffects
- */
-CSSFontPaletteValuesRule.prototype.values = function() {}
-/**
- * @return {!Iterator<!Array<!number|!CSSOMString>>}
- * @nosideeffects
- */
-CSSFontPaletteValuesRule.prototype.entries = function() {};
-/**
- * @return {!Iterator<!Array<!number|!CSSOMString>>}
- * @nosideeffects
- */
-CSSFontPaletteValuesRule.prototype[Symbol.iterator] = function() {};
-/**
- * @param {function(!CSSOMString, !number, MAP)} callback
- * @this {MAP}
- * @template MAP
- */
-CSSFontPaletteValuesRule.prototype.forEach = function(callback) {};
-/**
- * @param {!number} key
- * @param {!CSSOMString} value
- * @return {undefined}
- */
-CSSFontPaletteValuesRule.prototype.set = function(key,value) {}
-/**
- * @param {!number} key
- * @return {!boolean}
- */
-CSSFontPaletteValuesRule.prototype.delete = function(key) {}
-/**
- * @return {undefined}
- */
-CSSFontPaletteValuesRule.prototype.clear = function() {}
+/** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.name;
+/** @type {!CSSOMString} */ CSSFontPaletteValuesRule.prototype.overrideColors;
 /**
  * @constructor
  * @extends {Event}
@@ -9373,6 +9444,106 @@ function GPUTextureView() {}
  * @extends {Object}
  * @nosideeffects
  */
+function USBDevice() {}
+/** @type {?USBConfiguration} */ USBDevice.prototype.configuration;
+/** @type {!Array<!USBConfiguration>} */ USBDevice.prototype.configurations;
+/** @type {!number} */ USBDevice.prototype.deviceClass;
+/** @type {!number} */ USBDevice.prototype.deviceProtocol;
+/** @type {!number} */ USBDevice.prototype.deviceSubclass;
+/** @type {!number} */ USBDevice.prototype.deviceVersionMajor;
+/** @type {!number} */ USBDevice.prototype.deviceVersionMinor;
+/** @type {!number} */ USBDevice.prototype.deviceVersionSubminor;
+/** @type {?string} */ USBDevice.prototype.manufacturerName;
+/** @type {!boolean} */ USBDevice.prototype.opened;
+/** @type {!number} */ USBDevice.prototype.productId;
+/** @type {?string} */ USBDevice.prototype.productName;
+/** @type {?string} */ USBDevice.prototype.serialNumber;
+/** @type {!number} */ USBDevice.prototype.usbVersionMajor;
+/** @type {!number} */ USBDevice.prototype.usbVersionMinor;
+/** @type {!number} */ USBDevice.prototype.usbVersionSubminor;
+/** @type {!number} */ USBDevice.prototype.vendorId;
+/**
+ * @param {!number} endpointNumber
+ * @param {!BufferSource} data
+ * @return {!Promise<!USBOutTransferResult>}
+ */
+USBDevice.prototype.transferOut = function(endpointNumber,data) {}
+/**
+ * @param {!number} configurationValue
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.selectConfiguration = function(configurationValue) {}
+/**
+ * @param {!USBControlTransferParameters} setup
+ * @param {!number} length
+ * @return {!Promise<!USBInTransferResult>}
+ */
+USBDevice.prototype.controlTransferIn = function(setup,length) {}
+/**
+ * @param {!number} interfaceNumber
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.releaseInterface = function(interfaceNumber) {}
+/**
+ * @param {!number} interfaceNumber
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.claimInterface = function(interfaceNumber) {}
+/**
+ * @param {!number} interfaceNumber
+ * @param {!number} alternateSetting
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.selectAlternateInterface = function(interfaceNumber,alternateSetting) {}
+/**
+ * @param {!number} endpointNumber
+ * @param {!BufferSource} data
+ * @param {!Array<!number>} packetLengths
+ * @return {!Promise<!USBIsochronousOutTransferResult>}
+ */
+USBDevice.prototype.isochronousTransferOut = function(endpointNumber,data,packetLengths) {}
+/**
+ * @param {!number} endpointNumber
+ * @param {!Array<!number>} packetLengths
+ * @return {!Promise<!USBIsochronousInTransferResult>}
+ */
+USBDevice.prototype.isochronousTransferIn = function(endpointNumber,packetLengths) {}
+/**
+ * @param {!string} direction
+ * @param {!number} endpointNumber
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.clearHalt = function(direction,endpointNumber) {}
+/**
+ * @param {!USBControlTransferParameters} setup
+ * @param {!BufferSource=} data
+ * @return {!Promise<!USBOutTransferResult>}
+ */
+USBDevice.prototype.controlTransferOut = function(setup,data) {}
+/**
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.reset = function() {}
+/**
+ * @param {!number} endpointNumber
+ * @param {!number} length
+ * @return {!Promise<!USBInTransferResult>}
+ */
+USBDevice.prototype.transferIn = function(endpointNumber,length) {}
+/**
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.close = function() {}
+/**
+ * @return {!Promise<undefined>}
+ */
+USBDevice.prototype.open = function() {}
+/**
+ * @constructor
+ * @private
+ * @extends {Object}
+ * @nosideeffects
+ */
 function TouchList() {}
 /** @type {!number} */ TouchList.prototype.length;
 /**
@@ -9387,7 +9558,6 @@ TouchList.prototype.item = function(index) {}
  * @nosideeffects
  */
 function GPUCommandBuffer() {}
-/** @type {!Promise<!number>} */ GPUCommandBuffer.prototype.executionTime;
 /** @type {?string} */ GPUCommandBuffer.prototype.label;
 /**
  * @constructor
@@ -9560,10 +9730,10 @@ URL.revokeObjectURL = function(url) {}
  */
 URL.prototype.toJSON = function() {}
 /**
- * @param {(!Blob|!MediaSource)} arg0
+ * @param {(!Blob|!MediaSource)} obj
  * @return {!string}
  */
-URL.createObjectURL = function(arg0) {}
+URL.createObjectURL = function(obj) {}
 /**
  * @constructor
  * @private
@@ -9794,11 +9964,11 @@ function OffscreenCanvasRenderingContext2D() {}
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.fontKerning;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.fontStretch;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.fontVariantCaps;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.letterSpacing;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.textAlign;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.textBaseline;
-/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.textLetterSpacing;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.textRendering;
-/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.textWordSpacing;
+/** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.wordSpacing;
 /** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.shadowBlur;
 /** @type {!string} */ OffscreenCanvasRenderingContext2D.prototype.shadowColor;
 /** @type {!number} */ OffscreenCanvasRenderingContext2D.prototype.shadowOffsetX;
@@ -10257,6 +10427,15 @@ function UIEvent(type,eventInitDict) {}
 /** @type {?Window} */ UIEvent.prototype.view;
 /** @type {!number} */ UIEvent.prototype.which;
 /**
+ * @param {!string} typeArg
+ * @param {!boolean=} bubblesArg
+ * @param {!boolean=} cancelableArg
+ * @param {?Window=} viewArg
+ * @param {!number=} detailArg
+ * @return {undefined}
+ */
+UIEvent.prototype.initUIEvent = function(typeArg,bubblesArg,cancelableArg,viewArg,detailArg) {}
+/**
  * @constructor
  * @private
  * @extends {Object}
@@ -10289,6 +10468,24 @@ GPUCanvasContext.prototype.configure = function(configuration) {}
  * @return {undefined}
  */
 GPUCanvasContext.prototype.unconfigure = function() {}
+/**
+ * @constructor
+ * @private
+ * @extends {EventTarget}
+ * @nosideeffects
+ */
+function USB() {}
+/** @type {!NullableEventHandler} */ USB.prototype.onconnect;
+/** @type {!NullableEventHandler} */ USB.prototype.ondisconnect;
+/**
+ * @return {!Promise<!Array<!USBDevice>>}
+ */
+USB.prototype.getDevices = function() {}
+/**
+ * @param {!USBDeviceRequestOptions} options
+ * @return {!Promise<!USBDevice>}
+ */
+USB.prototype.requestDevice = function(options) {}
 /**
  * @constructor
  * @extends {Object}
@@ -11443,7 +11640,7 @@ Range.prototype.collapse = function(toStart) {}
  */
 function PushSubscription() {}
 /** @type {!string} */ PushSubscription.prototype.endpoint;
-/** @type {?DOMTimeStamp} */ PushSubscription.prototype.expirationTime;
+/** @type {?EpochTimeStamp} */ PushSubscription.prototype.expirationTime;
 /** @type {!PushSubscriptionOptions} */ PushSubscription.prototype.options;
 /**
  * @param {!string} name
@@ -11492,6 +11689,7 @@ HTMLMarqueeElement.prototype.start = function() {}
  * @nosideeffects
  */
 function XRFrame() {}
+/** @type {!DOMHighResTimeStamp} */ XRFrame.prototype.predictedDisplayTime;
 /** @type {!XRSession} */ XRFrame.prototype.session;
 /**
  * @param {!XRSpace} space
@@ -11584,6 +11782,14 @@ RTCStatsReport.prototype[Symbol.iterator] = function() {};
  * @template MAP
  */
 RTCStatsReport.prototype.forEach = function(callback) {};
+/**
+ * @constructor
+ * @extends {Event}
+ * @param {!string} type
+ * @param {!USBConnectionEventInit} eventInitDict
+ */
+function USBConnectionEvent(type,eventInitDict) {}
+/** @type {!USBDevice} */ USBConnectionEvent.prototype.device;
 /**
  * @constructor
  * @private
@@ -11898,6 +12104,7 @@ ReadableStreamBYOBReader.prototype.releaseLock = function() {}
 function WorkerNavigator() {}
 /** @type {!Permissions} */ WorkerNavigator.prototype.permissions;
 /** @type {!ServiceWorkerContainer} */ WorkerNavigator.prototype.serviceWorker;
+/** @type {!USB} */ WorkerNavigator.prototype.usb;
 /** @type {!GPU} */ WorkerNavigator.prototype.gpu;
 /** @type {!boolean} */ WorkerNavigator.prototype.onLine;
 /** @type {!string} */ WorkerNavigator.prototype.appCodeName;
@@ -11925,6 +12132,15 @@ WorkerNavigator.prototype.taintEnabled = function() {}
  * @nosideeffects
  */
 function WebGLFramebuffer() {}
+/**
+ * @constructor
+ * @extends {Object}
+ * @param {!string} status
+ * @param {!number=} bytesWritten
+ */
+function USBOutTransferResult(status,bytesWritten) {}
+/** @type {!number} */ USBOutTransferResult.prototype.bytesWritten;
+/** @type {!string} */ USBOutTransferResult.prototype.status;
 /**
  * @constructor
  * @extends {Object}
@@ -12237,8 +12453,6 @@ function CSSRule() {}
 /** @const {!number} */ CSSRule.prototype.COUNTER_STYLE_RULE;
 /** @const {!number} */ CSSRule.FONT_FEATURE_VALUES_RULE;
 /** @const {!number} */ CSSRule.prototype.FONT_FEATURE_VALUES_RULE;
-/** @const {!number} */ CSSRule.FONT_PALETTE_VALUES_RULE;
-/** @const {!number} */ CSSRule.prototype.FONT_PALETTE_VALUES_RULE;
 /** @type {?CSSRule} */ CSSRule.prototype.parentRule;
 /** @type {?CSSStyleSheet} */ CSSRule.prototype.parentStyleSheet;
 /** @type {!number} */ CSSRule.prototype.type;
@@ -12383,6 +12597,15 @@ function XRInputSource() {}
 /** @type {!XRSpace} */ XRInputSource.prototype.targetRaySpace;
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!string} status
+ * @param {!number=} bytesWritten
+ */
+function USBIsochronousOutTransferPacket(status,bytesWritten) {}
+/** @type {!number} */ USBIsochronousOutTransferPacket.prototype.bytesWritten;
+/** @type {!string} */ USBIsochronousOutTransferPacket.prototype.status;
+/**
+ * @constructor
  * @private
  * @extends {SVGTextPositioningElement}
  * @nosideeffects
@@ -12465,6 +12688,13 @@ GPUCommandEncoder.prototype.copyBufferToTexture = function(source,destination,co
  * @return {!GPURenderPassEncoder}
  */
 GPUCommandEncoder.prototype.beginRenderPass = function(descriptor) {}
+/**
+ * @param {!GPUBuffer} destination
+ * @param {!GPUSize64} destinationOffset
+ * @param {!GPUSize64} size
+ * @return {undefined}
+ */
+GPUCommandEncoder.prototype.fillBuffer = function(destination,destinationOffset,size) {}
 /**
  * @param {!GPUQuerySet} querySet
  * @param {!GPUSize32} firstQuery
@@ -12821,6 +13051,20 @@ function KeyboardEvent(type,eventInitDict) {}
 /** @type {!number} */ KeyboardEvent.prototype.charCode;
 /** @type {!number} */ KeyboardEvent.prototype.keyCode;
 /**
+ * @param {!string} typeArg
+ * @param {!boolean=} bubblesArg
+ * @param {!boolean=} cancelableArg
+ * @param {?Window=} viewArg
+ * @param {!string=} keyArg
+ * @param {!number=} locationArg
+ * @param {!boolean=} ctrlKey
+ * @param {!boolean=} altKey
+ * @param {!boolean=} shiftKey
+ * @param {!boolean=} metaKey
+ * @return {undefined}
+ */
+KeyboardEvent.prototype.initKeyboardEvent = function(typeArg,bubblesArg,cancelableArg,viewArg,keyArg,locationArg,ctrlKey,altKey,shiftKey,metaKey) {}
+/**
  * @param {!string} keyArg
  * @return {!boolean}
  */
@@ -12879,9 +13123,6 @@ function Document() {}
 /** @type {!DOMImplementation} */ Document.prototype.implementation;
 /** @type {!string} */ Document.prototype.inputEncoding;
 /** @type {?Element} */ Document.prototype.scrollingElement;
-/** @type {!boolean} */ Document.prototype.hidden;
-/** @type {!string} */ Document.prototype.visibilityState;
-/** @type {?EventHandler} */ Document.prototype.onvisibilitychange;
 /** @type {?EventHandler} */ Document.prototype.onpointerlockchange;
 /** @type {?EventHandler} */ Document.prototype.onpointerlockerror;
 /** @type {?SVGSVGElement} */ Document.prototype.rootElement;
@@ -12895,6 +13136,7 @@ function Document() {}
 /** @type {!HTMLCollection} */ Document.prototype.embeds;
 /** @type {!HTMLCollection} */ Document.prototype.forms;
 /** @type {?HTMLHeadElement} */ Document.prototype.head;
+/** @type {!boolean} */ Document.prototype.hidden;
 /** @type {!HTMLCollection} */ Document.prototype.images;
 /** @type {!string} */ Document.prototype.lastModified;
 /** @type {!HTMLCollection} */ Document.prototype.links;
@@ -12903,12 +13145,14 @@ function Document() {}
 /** @type {!string} */ Document.prototype.readyState;
 /** @type {!string} */ Document.prototype.referrer;
 /** @type {!HTMLCollection} */ Document.prototype.scripts;
+/** @type {!string} */ Document.prototype.visibilityState;
 /** @type {?HTMLElement} */ Document.prototype.body;
 /** @type {!string} */ Document.prototype.cookie;
 /** @type {!string} */ Document.prototype.designMode;
 /** @type {!string} */ Document.prototype.dir;
 /** @type {!string} */ Document.prototype.domain;
 /** @type {?EventHandler} */ Document.prototype.onreadystatechange;
+/** @type {?EventHandler} */ Document.prototype.onvisibilitychange;
 /** @type {!string} */ Document.prototype.title;
 /** @type {!HTMLAllCollection} */ Document.prototype.all;
 /** @type {!HTMLCollection} */ Document.prototype.anchors;
@@ -13467,6 +13711,18 @@ KeyframeEffect.prototype.setKeyframes = function(keyframes) {}
 KeyframeEffect.prototype.getKeyframes = function() {}
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!USBAlternateInterface} alternate
+ * @param {!number} endpointNumber
+ * @param {!string} direction
+ */
+function USBEndpoint(alternate,endpointNumber,direction) {}
+/** @type {!string} */ USBEndpoint.prototype.direction;
+/** @type {!number} */ USBEndpoint.prototype.endpointNumber;
+/** @type {!number} */ USBEndpoint.prototype.packetSize;
+/** @type {!string} */ USBEndpoint.prototype.type;
+/**
+ * @constructor
  * @private
  * @extends {HTMLElement}
  * @nosideeffects
@@ -13657,6 +13913,15 @@ function HTMLStyleElement() {}
 /** @type {!string} */ HTMLStyleElement.prototype.media;
 /** @type {!string} */ HTMLStyleElement.prototype.type;
 /** @type {?CSSStyleSheet} */ HTMLStyleElement.prototype.sheet;
+/**
+ * @constructor
+ * @extends {Object}
+ * @param {!Array<!USBIsochronousInTransferPacket>} packets
+ * @param {?DataView=} data
+ */
+function USBIsochronousInTransferResult(packets,data) {}
+/** @type {?DataView} */ USBIsochronousInTransferResult.prototype.data;
+/** @type {!Array<!USBIsochronousInTransferPacket>} */ USBIsochronousInTransferResult.prototype.packets;
 /**
  * @constructor
  * @extends {Event}
@@ -14524,6 +14789,7 @@ function Navigator() {}
 /** @type {!WakeLock} */ Navigator.prototype.wakeLock;
 /** @type {!ServiceWorkerContainer} */ Navigator.prototype.serviceWorker;
 /** @type {!Bluetooth} */ Navigator.prototype.bluetooth;
+/** @type {!USB} */ Navigator.prototype.usb;
 /** @type {!XRSystem} */ Navigator.prototype.xr;
 /** @type {!string} */ Navigator.prototype.language;
 /** @type {!Array<!string>} */ Navigator.prototype.languages;
@@ -14550,6 +14816,11 @@ function Navigator() {}
  * @return {!boolean}
  */
 Navigator.prototype.taintEnabled = function() {}
+/**
+ * @param {!MIDIOptions=} options
+ * @return {!Promise<!MIDIAccess>}
+ */
+Navigator.prototype.requestMIDIAccess = function(options) {}
 /**
  * @return {!boolean}
  */
@@ -14885,6 +15156,15 @@ function DOMRect(x,y,width,height) {}
  * @return {!DOMRect}
  */
 DOMRect.fromRect = function(other) {}
+/**
+ * @constructor
+ * @extends {Object}
+ * @param {!string} status
+ * @param {?DataView=} data
+ */
+function USBInTransferResult(status,data) {}
+/** @type {?DataView} */ USBInTransferResult.prototype.data;
+/** @type {!string} */ USBInTransferResult.prototype.status;
 /**
  * @constructor
  * @private
@@ -16268,46 +16548,46 @@ function Element() {}
 /** @type {?HTMLSlotElement} */ Element.prototype.assignedSlot;
 /** @type {?Element} */ Element.prototype.nextElementSibling;
 /** @type {?Element} */ Element.prototype.previousElementSibling;
-/** @type {!string} */ Element.prototype.ariaAtomic;
-/** @type {!string} */ Element.prototype.ariaAutoComplete;
-/** @type {!string} */ Element.prototype.ariaBusy;
-/** @type {!string} */ Element.prototype.ariaChecked;
-/** @type {!string} */ Element.prototype.ariaColCount;
-/** @type {!string} */ Element.prototype.ariaColIndex;
-/** @type {!string} */ Element.prototype.ariaColIndexText;
-/** @type {!string} */ Element.prototype.ariaColSpan;
-/** @type {!string} */ Element.prototype.ariaCurrent;
-/** @type {!string} */ Element.prototype.ariaDescription;
-/** @type {!string} */ Element.prototype.ariaDisabled;
-/** @type {!string} */ Element.prototype.ariaExpanded;
-/** @type {!string} */ Element.prototype.ariaHasPopup;
-/** @type {!string} */ Element.prototype.ariaHidden;
-/** @type {!string} */ Element.prototype.ariaInvalid;
-/** @type {!string} */ Element.prototype.ariaKeyShortcuts;
-/** @type {!string} */ Element.prototype.ariaLabel;
-/** @type {!string} */ Element.prototype.ariaLevel;
-/** @type {!string} */ Element.prototype.ariaLive;
-/** @type {!string} */ Element.prototype.ariaModal;
-/** @type {!string} */ Element.prototype.ariaMultiLine;
-/** @type {!string} */ Element.prototype.ariaMultiSelectable;
-/** @type {!string} */ Element.prototype.ariaOrientation;
-/** @type {!string} */ Element.prototype.ariaPlaceholder;
-/** @type {!string} */ Element.prototype.ariaPosInSet;
-/** @type {!string} */ Element.prototype.ariaPressed;
-/** @type {!string} */ Element.prototype.ariaReadOnly;
-/** @type {!string} */ Element.prototype.ariaRequired;
-/** @type {!string} */ Element.prototype.ariaRoleDescription;
-/** @type {!string} */ Element.prototype.ariaRowCount;
-/** @type {!string} */ Element.prototype.ariaRowIndex;
-/** @type {!string} */ Element.prototype.ariaRowIndexText;
-/** @type {!string} */ Element.prototype.ariaRowSpan;
-/** @type {!string} */ Element.prototype.ariaSelected;
-/** @type {!string} */ Element.prototype.ariaSetSize;
-/** @type {!string} */ Element.prototype.ariaSort;
-/** @type {!string} */ Element.prototype.ariaValueMax;
-/** @type {!string} */ Element.prototype.ariaValueMin;
-/** @type {!string} */ Element.prototype.ariaValueNow;
-/** @type {!string} */ Element.prototype.ariaValueText;
+/** @type {?string} */ Element.prototype.ariaAtomic;
+/** @type {?string} */ Element.prototype.ariaAutoComplete;
+/** @type {?string} */ Element.prototype.ariaBusy;
+/** @type {?string} */ Element.prototype.ariaChecked;
+/** @type {?string} */ Element.prototype.ariaColCount;
+/** @type {?string} */ Element.prototype.ariaColIndex;
+/** @type {?string} */ Element.prototype.ariaColIndexText;
+/** @type {?string} */ Element.prototype.ariaColSpan;
+/** @type {?string} */ Element.prototype.ariaCurrent;
+/** @type {?string} */ Element.prototype.ariaDescription;
+/** @type {?string} */ Element.prototype.ariaDisabled;
+/** @type {?string} */ Element.prototype.ariaExpanded;
+/** @type {?string} */ Element.prototype.ariaHasPopup;
+/** @type {?string} */ Element.prototype.ariaHidden;
+/** @type {?string} */ Element.prototype.ariaInvalid;
+/** @type {?string} */ Element.prototype.ariaKeyShortcuts;
+/** @type {?string} */ Element.prototype.ariaLabel;
+/** @type {?string} */ Element.prototype.ariaLevel;
+/** @type {?string} */ Element.prototype.ariaLive;
+/** @type {?string} */ Element.prototype.ariaModal;
+/** @type {?string} */ Element.prototype.ariaMultiLine;
+/** @type {?string} */ Element.prototype.ariaMultiSelectable;
+/** @type {?string} */ Element.prototype.ariaOrientation;
+/** @type {?string} */ Element.prototype.ariaPlaceholder;
+/** @type {?string} */ Element.prototype.ariaPosInSet;
+/** @type {?string} */ Element.prototype.ariaPressed;
+/** @type {?string} */ Element.prototype.ariaReadOnly;
+/** @type {?string} */ Element.prototype.ariaRequired;
+/** @type {?string} */ Element.prototype.ariaRoleDescription;
+/** @type {?string} */ Element.prototype.ariaRowCount;
+/** @type {?string} */ Element.prototype.ariaRowIndex;
+/** @type {?string} */ Element.prototype.ariaRowIndexText;
+/** @type {?string} */ Element.prototype.ariaRowSpan;
+/** @type {?string} */ Element.prototype.ariaSelected;
+/** @type {?string} */ Element.prototype.ariaSetSize;
+/** @type {?string} */ Element.prototype.ariaSort;
+/** @type {?string} */ Element.prototype.ariaValueMax;
+/** @type {?string} */ Element.prototype.ariaValueMin;
+/** @type {?string} */ Element.prototype.ariaValueNow;
+/** @type {?string} */ Element.prototype.ariaValueText;
 /** @type {?string} */ Element.prototype.role;
 /**
  * @param {!FullscreenOptions=} options
@@ -19882,6 +20162,14 @@ BroadcastChannel.prototype.close = function() {}
 function SVGSwitchElement() {}
 /**
  * @constructor
+ * @extends {Event}
+ * @param {!string} type
+ * @param {!MIDIMessageEventInit=} eventInitDict
+ */
+function MIDIMessageEvent(type,eventInitDict) {}
+/** @type {!Uint8Array} */ MIDIMessageEvent.prototype.data;
+/**
+ * @constructor
  * @private
  * @extends {Object}
  * @nosideeffects
@@ -20025,6 +20313,23 @@ TextTrack.prototype.removeCue = function(cue) {}
  * @return {undefined}
  */
 TextTrack.prototype.addCue = function(cue) {}
+/**
+ * @constructor
+ * @private
+ * @extends {MIDIPort}
+ * @nosideeffects
+ */
+function MIDIOutput() {}
+/**
+ * @return {undefined}
+ */
+MIDIOutput.prototype.clear = function() {}
+/**
+ * @param {!Array<!number>} data
+ * @param {!DOMHighResTimeStamp=} timestamp
+ * @return {undefined}
+ */
+MIDIOutput.prototype.send = function(data,timestamp) {}
 /**
  * @constructor
  * @private
@@ -20330,6 +20635,14 @@ function SVGFEGaussianBlurElement() {}
  * @return {undefined}
  */
 SVGFEGaussianBlurElement.prototype.setStdDeviation = function(stdDeviationX,stdDeviationY) {}
+/**
+ * @constructor
+ * @private
+ * @extends {PermissionStatus}
+ * @nosideeffects
+ */
+function USBPermissionResult() {}
+/** @type {!Array<!USBDevice>} */ USBPermissionResult.prototype.devices;
 /**
  * @constructor
  * @private
@@ -20925,12 +21238,6 @@ function GPUComputePassEncoder() {}
  * @return {undefined}
  */
 GPUComputePassEncoder.prototype.setPipeline = function(pipeline) {}
-/**
- * @param {!GPUQuerySet} querySet
- * @param {!GPUSize32} queryIndex
- * @return {undefined}
- */
-GPUComputePassEncoder.prototype.writeTimestamp = function(querySet,queryIndex) {}
 /**
  * @param {!GPUSize32} x
  * @param {!GPUSize32=} y
@@ -22247,6 +22554,19 @@ CSSKeyframesRule.prototype.deleteRule = function(select) {}
 CSSKeyframesRule.prototype.appendRule = function(rule) {}
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!USBInterface} deviceInterface
+ * @param {!number} alternateSetting
+ */
+function USBAlternateInterface(deviceInterface,alternateSetting) {}
+/** @type {!number} */ USBAlternateInterface.prototype.alternateSetting;
+/** @type {!Array<!USBEndpoint>} */ USBAlternateInterface.prototype.endpoints;
+/** @type {!number} */ USBAlternateInterface.prototype.interfaceClass;
+/** @type {?string} */ USBAlternateInterface.prototype.interfaceName;
+/** @type {!number} */ USBAlternateInterface.prototype.interfaceProtocol;
+/** @type {!number} */ USBAlternateInterface.prototype.interfaceSubclass;
+/**
+ * @constructor
  * @private
  * @extends {SVGComponentTransferFunctionElement}
  * @nosideeffects
@@ -22495,6 +22815,53 @@ function HTMLTableCellElement() {}
 /** @type {!boolean} */ HTMLTableCellElement.prototype.noWrap;
 /** @type {!string} */ HTMLTableCellElement.prototype.vAlign;
 /** @type {!string} */ HTMLTableCellElement.prototype.width;
+/**
+ * @constructor
+ * @private
+ * @extends {Object}
+ * @implements {Iterable<!Array<!string|!MIDIOutput>>}
+ * @nosideeffects
+ */
+function MIDIOutputMap() {}
+/** @const {number} */ MIDIOutputMap.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+MIDIOutputMap.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {!MIDIOutput}
+ * @nosideeffects
+ */
+MIDIOutputMap.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+MIDIOutputMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!MIDIOutput>}
+ * @nosideeffects
+ */
+MIDIOutputMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!MIDIOutput>>}
+ * @nosideeffects
+ */
+MIDIOutputMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!MIDIOutput>>}
+ * @nosideeffects
+ */
+MIDIOutputMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!MIDIOutput, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+MIDIOutputMap.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -22784,6 +23151,36 @@ MediaStreamTrack.prototype.getCapabilities = function() {}
 /**
  * @constructor
  * @private
+ * @extends {Event}
+ * @nosideeffects
+ */
+function MutationEvent() {}
+/** @const {!number} */ MutationEvent.ADDITION;
+/** @const {!number} */ MutationEvent.prototype.ADDITION;
+/** @const {!number} */ MutationEvent.MODIFICATION;
+/** @const {!number} */ MutationEvent.prototype.MODIFICATION;
+/** @const {!number} */ MutationEvent.REMOVAL;
+/** @const {!number} */ MutationEvent.prototype.REMOVAL;
+/** @type {!number} */ MutationEvent.prototype.attrChange;
+/** @type {!string} */ MutationEvent.prototype.attrName;
+/** @type {!string} */ MutationEvent.prototype.newValue;
+/** @type {!string} */ MutationEvent.prototype.prevValue;
+/** @type {?Node} */ MutationEvent.prototype.relatedNode;
+/**
+ * @param {!string} typeArg
+ * @param {!boolean=} bubblesArg
+ * @param {!boolean=} cancelableArg
+ * @param {?Node=} relatedNodeArg
+ * @param {!string=} prevValueArg
+ * @param {!string=} newValueArg
+ * @param {!string=} attrNameArg
+ * @param {!number=} attrChangeArg
+ * @return {undefined}
+ */
+MutationEvent.prototype.initMutationEvent = function(typeArg,bubblesArg,cancelableArg,relatedNodeArg,prevValueArg,newValueArg,attrNameArg,attrChangeArg) {}
+/**
+ * @constructor
+ * @private
  * @extends {Object}
  * @nosideeffects
  */
@@ -22843,6 +23240,11 @@ function SourceBuffer() {}
  * @return {undefined}
  */
 SourceBuffer.prototype.abort = function() {}
+/**
+ * @param {!string} type
+ * @return {undefined}
+ */
+SourceBuffer.prototype.changeType = function(type) {}
 /**
  * @param {!BufferSource} data
  * @return {undefined}
@@ -23435,6 +23837,29 @@ AbortSignal.abort = function() {}
 /**
  * @constructor
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
+ */
+function MIDIPort() {}
+/** @type {!string} */ MIDIPort.prototype.connection;
+/** @type {!string} */ MIDIPort.prototype.id;
+/** @type {?string} */ MIDIPort.prototype.manufacturer;
+/** @type {?string} */ MIDIPort.prototype.name;
+/** @type {!string} */ MIDIPort.prototype.state;
+/** @type {!string} */ MIDIPort.prototype.type;
+/** @type {?string} */ MIDIPort.prototype.version;
+/** @type {!NullableEventHandler} */ MIDIPort.prototype.onstatechange;
+/**
+ * @return {!Promise<!MIDIPort>}
+ */
+MIDIPort.prototype.close = function() {}
+/**
+ * @return {!Promise<!MIDIPort>}
+ */
+MIDIPort.prototype.open = function() {}
+/**
+ * @constructor
+ * @private
  * @extends {Object}
  * @nosideeffects
  */
@@ -23451,7 +23876,7 @@ RTCIdentityProviderRegistrar.prototype.register = function(idp) {}
  * @nosideeffects
  */
 function RTCCertificate() {}
-/** @type {!DOMTimeStamp} */ RTCCertificate.prototype.expires;
+/** @type {!EpochTimeStamp} */ RTCCertificate.prototype.expires;
 /**
  * @return {!Array<!RTCDtlsFingerprint>}
  */
@@ -23682,6 +24107,53 @@ function HTMLDataElement() {}
 function PerformanceMeasure() {}
 /**
  * @constructor
+ * @private
+ * @extends {Object}
+ * @implements {Iterable<!Array<!string|!MIDIInput>>}
+ * @nosideeffects
+ */
+function MIDIInputMap() {}
+/** @const {number} */ MIDIInputMap.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+MIDIInputMap.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {!MIDIInput}
+ * @nosideeffects
+ */
+MIDIInputMap.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+MIDIInputMap.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!MIDIInput>}
+ * @nosideeffects
+ */
+MIDIInputMap.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!MIDIInput>>}
+ * @nosideeffects
+ */
+MIDIInputMap.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!MIDIInput>>}
+ * @nosideeffects
+ */
+MIDIInputMap.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!MIDIInput, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+MIDIInputMap.prototype.forEach = function(callback) {};
+/**
+ * @constructor
  * @extends {Event}
  * @param {!string} type
  * @param {!XRInputSourceEventInit} eventInitDict
@@ -23769,6 +24241,15 @@ ImageDecoder.prototype.decode = function(options) {}
 ImageDecoder.prototype.close = function() {}
 /**
  * @constructor
+ * @extends {Object}
+ * @param {!string} status
+ * @param {?DataView=} data
+ */
+function USBIsochronousInTransferPacket(status,data) {}
+/** @type {?DataView} */ USBIsochronousInTransferPacket.prototype.data;
+/** @type {!string} */ USBIsochronousInTransferPacket.prototype.status;
+/**
+ * @constructor
  * @extends {ExtendableEvent}
  * @param {!string} type
  * @param {!NotificationEventInit} eventInitDict
@@ -23784,6 +24265,15 @@ function NotificationEvent(type,eventInitDict) {}
  */
 function CompositionEvent(type,eventInitDict) {}
 /** @type {!string} */ CompositionEvent.prototype.data;
+/**
+ * @param {!string} typeArg
+ * @param {!boolean=} bubblesArg
+ * @param {!boolean=} cancelableArg
+ * @param {?WindowProxy=} viewArg
+ * @param {!string=} dataArg
+ * @return {undefined}
+ */
+CompositionEvent.prototype.initCompositionEvent = function(typeArg,bubblesArg,cancelableArg,viewArg,dataArg) {}
 /**
  * @constructor
  * @extends {Object}
@@ -23862,11 +24352,10 @@ CredentialsContainer.prototype.create = function(options) {}
 CredentialsContainer.prototype.store = function(credential) {}
 /**
  * @constructor
- * @private
  * @extends {EventTarget}
- * @nosideeffects
  */
 function MediaSource() {}
+/** @type {!boolean} */ MediaSource.canConstructInDedicatedWorker;
 /** @type {!SourceBufferList} */ MediaSource.prototype.activeSourceBuffers;
 /** @type {!string} */ MediaSource.prototype.readyState;
 /** @type {!SourceBufferList} */ MediaSource.prototype.sourceBuffers;

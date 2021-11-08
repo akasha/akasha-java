@@ -10,6 +10,9 @@ var goog = goog || {};
 goog.provide('akasha.Akasha');
 
 /** @define {string} */
+akasha.is__WorkerNavigator_usb__supported = goog.define('akasha.is__WorkerNavigator_usb__supported', 'detect');
+
+/** @define {string} */
 akasha.is__WorkerNavigator_gpu__supported = goog.define('akasha.is__WorkerNavigator_gpu__supported', 'detect');
 
 /** @define {string} */
@@ -49,6 +52,9 @@ akasha.is__Navigator_serviceWorker__supported = goog.define('akasha.is__Navigato
 akasha.is__Navigator_bluetooth__supported = goog.define('akasha.is__Navigator_bluetooth__supported', 'detect');
 
 /** @define {string} */
+akasha.is__Navigator_usb__supported = goog.define('akasha.is__Navigator_usb__supported', 'detect');
+
+/** @define {string} */
 akasha.is__Navigator_xr__supported = goog.define('akasha.is__Navigator_xr__supported', 'detect');
 
 /** @define {string} */
@@ -65,6 +71,9 @@ akasha.is__Navigator_getGamepads__supported = goog.define('akasha.is__Navigator_
 
 /** @define {string} */
 akasha.is__Navigator_vibrate__supported = goog.define('akasha.is__Navigator_vibrate__supported', 'detect');
+
+/** @define {string} */
+akasha.is__Navigator_requestMIDIAccess__supported = goog.define('akasha.is__Navigator_requestMIDIAccess__supported', 'detect');
 
 /** @define {string} */
 akasha.is__Navigator_share__supported = goog.define('akasha.is__Navigator_share__supported', 'detect');

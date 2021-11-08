@@ -13,6 +13,12 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsArrayLike;
 
+/**
+ * The ImageTrackList interface of the WebCodecs API represents a list of image tracks.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageTrackList">ImageTrackList - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#imagetracklist-interface"># imagetracklist-interface</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

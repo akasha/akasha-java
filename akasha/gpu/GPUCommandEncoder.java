@@ -102,6 +102,8 @@ public class GPUCommandEncoder extends JsObject {
   private native void _copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
 
+  public native void fillBuffer(@Nonnull GPUBuffer destination, int destinationOffset, int size);
+
   @JsNonNull
   public native GPUCommandBuffer finish(@Nonnull GPUCommandBufferDescriptor descriptor);
 

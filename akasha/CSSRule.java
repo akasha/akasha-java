@@ -35,9 +35,6 @@ public class CSSRule extends JsObject {
   public static final int FONT_FEATURE_VALUES_RULE = 14;
 
   @JsOverlay
-  public static final int FONT_PALETTE_VALUES_RULE = 15;
-
-  @JsOverlay
   public static final int IMPORT_RULE = 3;
 
   @JsOverlay

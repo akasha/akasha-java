@@ -9,6 +9,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The VideoColorSpace interface of the WebCodecs API represents the color space of a video.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace">VideoColorSpace - MDN</a>
+ * @see <a href="https://w3c.github.io/webcodecs/#videocolorspace"># videocolorspace</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
