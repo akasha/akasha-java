@@ -19,20 +19,11 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityAssertionResult {
   @JsOverlay
   @Nonnull
-  static Step1 assertion(@Nonnull final String assertion) {
+  static Step1 idp(@Nonnull final RTCIdentityProviderDetails idp) {
     final RTCIdentityAssertionResult $rtcIdentityAssertionResult = Js.<RTCIdentityAssertionResult>uncheckedCast( JsPropertyMap.of() );
-    $rtcIdentityAssertionResult.setAssertion( assertion );
+    $rtcIdentityAssertionResult.setIdp( idp );
     return Js.uncheckedCast( $rtcIdentityAssertionResult );
   }
-
-  @JsProperty(
-      name = "assertion"
-  )
-  @JsNonNull
-  String assertion();
-
-  @JsProperty
-  void setAssertion(@JsNonNull String assertion);
 
   @JsProperty(
       name = "idp"
@@ -43,6 +34,15 @@ public interface RTCIdentityAssertionResult {
   @JsProperty
   void setIdp(@JsNonNull RTCIdentityProviderDetails idp);
 
+  @JsProperty(
+      name = "assertion"
+  )
+  @JsNonNull
+  String assertion();
+
+  @JsProperty
+  void setAssertion(@JsNonNull String assertion);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -51,8 +51,8 @@ public interface RTCIdentityAssertionResult {
   interface Step1 {
     @JsOverlay
     @Nonnull
-    default RTCIdentityAssertionResult idp(@Nonnull RTCIdentityProviderDetails idp) {
-      Js.<RTCIdentityAssertionResult>uncheckedCast( this ).setIdp( idp );
+    default RTCIdentityAssertionResult assertion(@Nonnull String assertion) {
+      Js.<RTCIdentityAssertionResult>uncheckedCast( this ).setAssertion( assertion );
       return Js.uncheckedCast( this );
     }
   }

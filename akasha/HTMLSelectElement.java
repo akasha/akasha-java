@@ -17,7 +17,7 @@ import jsinterop.base.JsArrayLike;
  * The HTMLSelectElement interface represents a &lt;select&gt; HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlselectelement">(HTML) # htmlselectelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlselectelement"># htmlselectelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

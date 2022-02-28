@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The DataTransferItem object represents one drag data item. During a drag operation, each drag event has a dataTransfer property which contains a list of drag data items. Each item in the list is a DataTransferItem object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem">DataTransferItem - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitem-interface">(HTML) # the-datatransferitem-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitem-interface"># the-datatransferitem-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

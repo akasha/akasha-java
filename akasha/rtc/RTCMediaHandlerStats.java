@@ -26,14 +26,6 @@ public interface RTCMediaHandlerStats extends RTCStats {
   }
 
   @JsProperty(
-      name = "ended"
-  )
-  boolean ended();
-
-  @JsProperty
-  void setEnded(boolean ended);
-
-  @JsProperty(
       name = "kind"
   )
   @JsNonNull
@@ -41,6 +33,14 @@ public interface RTCMediaHandlerStats extends RTCStats {
 
   @JsProperty
   void setKind(@JsNonNull String kind);
+
+  @JsProperty(
+      name = "ended"
+  )
+  boolean ended();
+
+  @JsProperty
+  void setEnded(boolean ended);
 
   @JsProperty(
       name = "trackIdentifier"

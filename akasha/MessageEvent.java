@@ -16,7 +16,7 @@ import jsinterop.base.Any;
  * The MessageEvent interface represents a message received by a target object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent">MessageEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface">(HTML) # the-messageevent-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface"># the-messageevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

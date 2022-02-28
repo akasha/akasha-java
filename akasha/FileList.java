@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileList">FileList - MDN</a>
  * @see <a href="https://w3c.github.io/FileAPI/#filelist-section"># filelist-section</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-files-dev">(HTML) # dom-input-files-dev</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/input.html#dom-input-files-dev"># dom-input-files-dev</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

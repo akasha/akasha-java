@@ -29,7 +29,7 @@ import jsinterop.base.Any;
  * The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML &lt;canvas&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2RenderingContext - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7">(WebGL 2.0) # 3.7</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7"># 3.7</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

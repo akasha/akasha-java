@@ -13,9 +13,9 @@ import jsinterop.annotations.JsType;
  * The Range interface represents a fragment of a document that can contain nodes and parts of text nodes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range">Range - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-range">(DOM) # interface-range</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-range"># interface-range</a>
  * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-range-interface"># extensions-to-the-range-interface</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface">(CSSOM View) # extensions-to-the-range-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface"># extensions-to-the-range-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

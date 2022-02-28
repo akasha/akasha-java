@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFilterElement interface provides access to the properties of &lt;filter&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement">SVGFilterElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFilterElement">(Filter Effects 2) # InterfaceSVGFilterElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFilterElement"># InterfaceSVGFilterElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

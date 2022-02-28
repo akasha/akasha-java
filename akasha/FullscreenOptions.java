@@ -11,10 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.
+ * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in fullscreen mode.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions">FullscreenOptions - MDN</a>
- * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0">(Fullscreen API) # ref-for-dom-element-requestfullscreen①</a>
+ * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0"># ref-for-dom-element-requestfullscreen①</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -51,10 +51,10 @@ public interface FullscreenOptions {
   void setNavigationUI(@FullscreenNavigationUI @JsNonNull String navigationUI);
 
   /**
-   * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.
+   * The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in fullscreen mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions">FullscreenOptions - MDN</a>
-   * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0">(Fullscreen API) # ref-for-dom-element-requestfullscreen①</a>
+   * @see <a href="https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0"># ref-for-dom-element-requestfullscreen①</a>
    */
   @JsType(
       isNative = true,

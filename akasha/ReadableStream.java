@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
  * The ReadableStream interface of the Streams API represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">ReadableStream - MDN</a>
- * @see <a href="https://streams.spec.whatwg.org/#rs-class">(Streams) # rs-class</a>
+ * @see <a href="https://streams.spec.whatwg.org/#rs-class"># rs-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

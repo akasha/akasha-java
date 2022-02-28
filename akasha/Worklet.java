@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The Worklet interface is a lightweight version of Web Workers and gives developers access to low-level parts of the rendering pipeline.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worklet">Worklet - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/worklets.html#worklets-worklet">(HTML) # worklets-worklet</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/worklets.html#worklets-worklet"># worklets-worklet</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

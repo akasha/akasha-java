@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFECompositeElement interface corresponds to the &lt;feComposite&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement">SVGFECompositeElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFECompositeElement">(Filter Effects 2) # InterfaceSVGFECompositeElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFECompositeElement"># InterfaceSVGFECompositeElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

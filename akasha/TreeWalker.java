@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The TreeWalker object represents the nodes of a document subtree and a position within them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker">TreeWalker - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-treewalker">(DOM) # interface-treewalker</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-treewalker"># interface-treewalker</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

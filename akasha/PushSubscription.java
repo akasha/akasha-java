@@ -13,7 +13,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The PushSubscription interface of the Push API provides a subcription's URL endpoint and allows unsubscription from a push service.
+ * The PushSubscription interface of the Push API provides a subscription's URL endpoint and allows unsubscribing from a push service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription">PushSubscription - MDN</a>
  * @see <a href="https://w3c.github.io/push-api/#pushsubscription-interface"># pushsubscription-interface</a>

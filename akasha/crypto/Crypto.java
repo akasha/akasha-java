@@ -44,4 +44,7 @@ public class Crypto extends JsObject {
    */
   @JsNonNull
   public native ArrayBufferView getRandomValues(@Nonnull ArrayBufferView array);
+
+  @JsNonNull
+  public native String randomUUID();
 }

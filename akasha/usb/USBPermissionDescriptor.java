@@ -1,7 +1,6 @@
 package akasha.usb;
 
 import akasha.PermissionDescriptor;
-import akasha.PermissionName;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface USBPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder name(@PermissionName @Nonnull final String name) {
+  static Builder name(@Nonnull final String name) {
     final Builder $usbPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
     $usbPermissionDescriptor.setName( name );
     return Js.uncheckedCast( $usbPermissionDescriptor );

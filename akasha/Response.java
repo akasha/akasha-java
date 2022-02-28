@@ -18,7 +18,7 @@ import jsinterop.base.Any;
  * The Response interface of the Fetch API represents the response to a request.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response - MDN</a>
- * @see <a href="https://fetch.spec.whatwg.org/#response-class">(Fetch) # response-class</a>
+ * @see <a href="https://fetch.spec.whatwg.org/#response-class"># response-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

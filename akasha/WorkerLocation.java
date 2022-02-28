@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The WorkerLocation interface defines the absolute location of the script executed by the Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.location property obtained by calling self.location.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation">WorkerLocation - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#worker-locations">(HTML) # worker-locations</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#worker-locations"># worker-locations</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

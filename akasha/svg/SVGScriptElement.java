@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The SVGScriptElement interface corresponds to the SVG &lt;script&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement">SVGScriptElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/interact.html#InterfaceSVGScriptElement">(SVG) # InterfaceSVGScriptElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/interact.html#InterfaceSVGScriptElement"># InterfaceSVGScriptElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

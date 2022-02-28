@@ -9,10 +9,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection.
+ * The RTCPeerConnectionIceEvent interface represents events that occur in relation to ICE candidates with the target, usually an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceevent">(WebRTC 1.0) # rtcpeerconnectioniceevent</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceevent"># rtcpeerconnectioniceevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

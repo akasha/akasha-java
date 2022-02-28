@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The WebGLQuery interface is part of the WebGL 2 API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLTimerQueryEXT">WebGLTimerQueryEXT - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.2">(WebGL 2.0) # 3.2</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.2"># 3.2</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

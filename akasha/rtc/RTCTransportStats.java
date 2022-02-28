@@ -26,6 +26,16 @@ public interface RTCTransportStats extends RTCStats {
   }
 
   @JsProperty(
+      name = "dtlsState"
+  )
+  @RTCDtlsTransportState
+  @JsNonNull
+  String dtlsState();
+
+  @JsProperty
+  void setDtlsState(@RTCDtlsTransportState @JsNonNull String dtlsState);
+
+  @JsProperty(
       name = "bytesReceived"
   )
   int bytesReceived();
@@ -48,16 +58,6 @@ public interface RTCTransportStats extends RTCStats {
 
   @JsProperty
   void setDtlsCipher(@JsNonNull String dtlsCipher);
-
-  @JsProperty(
-      name = "dtlsState"
-  )
-  @RTCDtlsTransportState
-  @JsNonNull
-  String dtlsState();
-
-  @JsProperty
-  void setDtlsState(@RTCDtlsTransportState @JsNonNull String dtlsState);
 
   @JsProperty(
       name = "iceLocalUsernameFragment"

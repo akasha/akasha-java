@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * A DOMPoint object represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value. DOMPoint is based on DOMPointReadOnly but allows its properties' values to be changed.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint">DOMPoint - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMPoint">(Geometry Interfaces 1) # DOMPoint</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMPoint"># DOMPoint</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

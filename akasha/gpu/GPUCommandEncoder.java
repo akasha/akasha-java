@@ -1,12 +1,12 @@
 package akasha.gpu;
 
+import akasha.StringOrUndefinedUnion;
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
-import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -20,8 +20,8 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUCommandEncoder"
 )
 public class GPUCommandEncoder extends JsObject {
-  @JsNullable
-  public String label;
+  @JsNonNull
+  public StringOrUndefinedUnion label;
 
   protected GPUCommandEncoder() {
   }
@@ -35,6 +35,12 @@ public class GPUCommandEncoder extends JsObject {
 
   @JsNonNull
   public native GPURenderPassEncoder beginRenderPass(@Nonnull GPURenderPassDescriptor descriptor);
+
+  public native void clearBuffer(@Nonnull GPUBuffer buffer, int offset, int size);
+
+  public native void clearBuffer(@Nonnull GPUBuffer buffer, int offset);
+
+  public native void clearBuffer(@Nonnull GPUBuffer buffer);
 
   public native void copyBufferToBuffer(@Nonnull GPUBuffer source, int sourceOffset,
       @Nonnull GPUBuffer destination, int destinationOffset, int size);
@@ -102,22 +108,20 @@ public class GPUCommandEncoder extends JsObject {
   private native void _copyTextureToTexture(@Nonnull GPUImageCopyTexture source,
       @Nonnull GPUImageCopyTexture destination, @Nonnull double[] copySize);
 
-  public native void fillBuffer(@Nonnull GPUBuffer destination, int destinationOffset, int size);
-
   @JsNonNull
   public native GPUCommandBuffer finish(@Nonnull GPUCommandBufferDescriptor descriptor);
 
   @JsNonNull
   public native GPUCommandBuffer finish();
 
+  public native void resolveQuerySet(@Nonnull GPUQuerySet querySet, int firstQuery, int queryCount,
+      @Nonnull GPUBuffer destination, int destinationOffset);
+
+  public native void writeTimestamp(@Nonnull GPUQuerySet querySet, int queryIndex);
+
   public native void insertDebugMarker(@Nonnull String markerLabel);
 
   public native void popDebugGroup();
 
   public native void pushDebugGroup(@Nonnull String groupLabel);
-
-  public native void resolveQuerySet(@Nonnull GPUQuerySet querySet, int firstQuery, int queryCount,
-      @Nonnull GPUBuffer destination, int destinationOffset);
-
-  public native void writeTimestamp(@Nonnull GPUQuerySet querySet, int queryIndex);
 }

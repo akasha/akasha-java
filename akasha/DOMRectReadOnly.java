@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly">DOMRectReadOnly - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect">(Geometry Interfaces 1) # DOMRect</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMRect"># DOMRect</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

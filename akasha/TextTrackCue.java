@@ -15,7 +15,7 @@ import jsinterop.base.Js;
  * TextTrackCue is an abstract class which is used as the basis for the various derived cue types, such as VTTCue; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a TextTrack. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue">TextTrackCue - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#texttrackcue">(HTML) # texttrackcue</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#texttrackcue"># texttrackcue</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

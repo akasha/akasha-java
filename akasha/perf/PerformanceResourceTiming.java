@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The PerformanceResourceTiming interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an XMLHttpRequest, &lt;SVG&gt;, image, or script.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming">PerformanceResourceTiming - MDN</a>
- * @see <a href="https://w3c.github.io/resource-timing/#resources-included-in-the-performanceresourcetiming-interface">(Resource Timing 2) # resources-included-in-the-performanceresourcetiming-interface</a>
+ * @see <a href="https://w3c.github.io/resource-timing/#resources-included-in-the-performanceresourcetiming-interface"># resources-included-in-the-performanceresourcetiming-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

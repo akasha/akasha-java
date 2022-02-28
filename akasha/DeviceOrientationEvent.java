@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The DeviceOrientationEvent provides web developers with information from the physical orientation of the device running the web page.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent">DeviceOrientationEvent - MDN</a>
- * @see <a href="https://w3c.github.io/deviceorientation/#deviceorientation">(DeviceOrientation Event) # deviceorientation</a>
+ * @see <a href="https://w3c.github.io/deviceorientation/#deviceorientation"># deviceorientation</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

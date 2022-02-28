@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The RTCSessionDescription interface describes one end of a connection&mdash;or potential connection&mdash;and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription">RTCSessionDescription - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcsessiondescription-class">(WebRTC 1.0) # rtcsessiondescription-class</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcsessiondescription-class"># rtcsessiondescription-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

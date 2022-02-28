@@ -15,7 +15,7 @@ import jsinterop.base.JsArrayLike;
  * The TextTrackList interface is used to represent a list of the text tracks defined by the &lt;track&gt; element, with each track represented by a separate textTrack object in the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList">TextTrackList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-api">(HTML) # text-track-api</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-api"># text-track-api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

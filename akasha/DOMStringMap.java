@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The DOMStringMap interface is used for the HTMLElement.dataset/SVGElement.dataset attribute, to represent data for custom attributes added to elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap">DOMStringMap - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes:domstringmap-3">(HTML) # embedding-custom-non-visible-data-with-the-data-*-attributes:domstringmap-3</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes:domstringmap-3"># embedding-custom-non-visible-data-with-the-data-*-attributes:domstringmap-3</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

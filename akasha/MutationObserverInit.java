@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The MutationObserver method observe() configures the MutationObserver callback to begin receiving notifications of changes to the DOM that match the given options.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-observe%E2%91%A1">(DOM) # ref-for-dom-mutationobserver-observe②</a>
+ * @see <a href="https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-observe%E2%91%A1"># ref-for-dom-mutationobserver-observe②</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -185,7 +185,7 @@ public interface MutationObserverInit {
    * The MutationObserver method observe() configures the MutationObserver callback to begin receiving notifications of changes to the DOM that match the given options.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit - MDN</a>
-   * @see <a href="https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-observe%E2%91%A1">(DOM) # ref-for-dom-mutationobserver-observe②</a>
+   * @see <a href="https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-observe%E2%91%A1"># ref-for-dom-mutationobserver-observe②</a>
    */
   @JsType(
       isNative = true,

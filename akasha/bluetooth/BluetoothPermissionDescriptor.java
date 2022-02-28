@@ -1,7 +1,6 @@
 package akasha.bluetooth;
 
 import akasha.PermissionDescriptor;
-import akasha.PermissionName;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder name(@PermissionName @Nonnull final String name) {
+  static Builder name(@Nonnull final String name) {
     final Builder $bluetoothPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
     $bluetoothPermissionDescriptor.setName( name );
     return Js.uncheckedCast( $bluetoothPermissionDescriptor );

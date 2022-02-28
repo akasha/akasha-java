@@ -26,6 +26,15 @@ public interface RTCMediaSourceStats extends RTCStats {
   }
 
   @JsProperty(
+      name = "trackIdentifier"
+  )
+  @JsNonNull
+  String trackIdentifier();
+
+  @JsProperty
+  void setTrackIdentifier(@JsNonNull String trackIdentifier);
+
+  @JsProperty(
       name = "kind"
   )
   @JsNonNull
@@ -41,15 +50,6 @@ public interface RTCMediaSourceStats extends RTCStats {
 
   @JsProperty
   void setRelayedSource(boolean relayedSource);
-
-  @JsProperty(
-      name = "trackIdentifier"
-  )
-  @JsNonNull
-  String trackIdentifier();
-
-  @JsProperty
-  void setTrackIdentifier(@JsNonNull String trackIdentifier);
 
   @JsType(
       isNative = true,
@@ -87,8 +87,8 @@ public interface RTCMediaSourceStats extends RTCStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCMediaSourceStats>uncheckedCast( this ).setKind( kind );
+    default Step4 trackIdentifier(@Nonnull String trackIdentifier) {
+      Js.<RTCMediaSourceStats>uncheckedCast( this ).setTrackIdentifier( trackIdentifier );
       return Js.uncheckedCast( this );
     }
   }
@@ -101,8 +101,8 @@ public interface RTCMediaSourceStats extends RTCStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder trackIdentifier(@Nonnull String trackIdentifier) {
-      Js.<RTCMediaSourceStats>uncheckedCast( this ).setTrackIdentifier( trackIdentifier );
+    default Builder kind(@Nonnull String kind) {
+      Js.<RTCMediaSourceStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }

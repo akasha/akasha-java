@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The CredentialsContainer interface of the Credential Management API exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from Navigator.credentials.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer">CredentialsContainer - MDN</a>
- * @see <a href="https://w3c.github.io/webappsec-credential-management/#credentialscontainer">(Credential Management 1) # credentialscontainer</a>
+ * @see <a href="https://w3c.github.io/webappsec-credential-management/#credentialscontainer"># credentialscontainer</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

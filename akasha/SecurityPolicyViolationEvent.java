@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent">SecurityPolicyViolationEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webappsec-csp/#report-violation">(Content Security Policy 3) # report-violation</a>
+ * @see <a href="https://w3c.github.io/webappsec-csp/#report-violation"># report-violation</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

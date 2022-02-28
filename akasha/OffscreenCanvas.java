@@ -18,7 +18,7 @@ import jsinterop.base.Js;
  * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">OffscreenCanvas - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface">(HTML) # the-offscreencanvas-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface"># the-offscreencanvas-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

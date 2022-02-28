@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The WebRTC API interface RTCTrackEvent represents the track event, which is sent when a new MediaStreamTrack is added to an RTCRtpReceiver which is part of the RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent">RTCTrackEvent - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackevent">(WebRTC 1.0) # dom-rtctrackevent</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackevent"># dom-rtctrackevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

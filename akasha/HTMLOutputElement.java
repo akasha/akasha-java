@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of &lt;output&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmloutputelement">(HTML) # htmloutputelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmloutputelement"># htmloutputelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

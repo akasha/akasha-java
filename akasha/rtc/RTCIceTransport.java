@@ -20,7 +20,7 @@ import jsinterop.base.Js;
  * The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received. This is particularly useful if you need to access state information about the connection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport">RTCIceTransport - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport">(WebRTC 1.0) # dom-rtcicetransport</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport"># dom-rtcicetransport</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

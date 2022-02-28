@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * When loading a media resource for use by an &lt;audio&gt; or &lt;video&gt; element, the TimeRanges interface is used for representing the time ranges of the media resource that have been buffered, the time ranges that have been played, and the time ranges that are seekable.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">TimeRanges - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#time-ranges">(HTML) # time-ranges</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#time-ranges"># time-ranges</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

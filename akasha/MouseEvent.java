@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">MouseEvent - MDN</a>
  * @see <a href="https://w3c.github.io/uievents/#interface-mouseevent"># interface-mouseevent</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface">(CSSOM View) # extensions-to-the-mouseevent-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface"># extensions-to-the-mouseevent-interface</a>
  * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-mouseevent-interface"># extensions-to-the-mouseevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
@@ -139,7 +139,7 @@ public class MouseEvent extends UIEvent {
   @JsProperty(
       name = "movementX"
   )
-  public native int movementX();
+  public native double movementX();
 
   /**
    * The movementY read-only property of the MouseEvent interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementY = currentEvent.screenY - previousEvent.screenY.
@@ -150,7 +150,7 @@ public class MouseEvent extends UIEvent {
   @JsProperty(
       name = "movementY"
   )
-  public native int movementY();
+  public native double movementY();
 
   /**
    * The offsetX read-only property of the MouseEvent interface provides the offset in the X coordinate of the mouse pointer between that event and the padding edge of the target node.

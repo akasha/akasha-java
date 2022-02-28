@@ -9,9 +9,11 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The WebXR Device API's XRSession interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the XRSystem interface's requestSession() method.
@@ -59,6 +61,59 @@ public class XRSession extends EventTarget {
   protected XRSession() {
   }
 
+  @JsOverlay
+  public final boolean isDepthDataFormatSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_depthDataFormat__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_depthDataFormat__supported" ) ) ? false : Js.asPropertyMap( this ).has( "depthDataFormat" );
+  }
+
+  @JsProperty(
+      name = "depthDataFormat"
+  )
+  @Nonnull
+  @XRDepthDataFormat
+  public native String depthDataFormat();
+
+  @JsOverlay
+  public final boolean isDepthUsageSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_depthUsage__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_depthUsage__supported" ) ) ? false : Js.asPropertyMap( this ).has( "depthUsage" );
+  }
+
+  @JsProperty(
+      name = "depthUsage"
+  )
+  @Nonnull
+  @XRDepthUsage
+  public native String depthUsage();
+
+  @JsOverlay
+  public final boolean isDomOverlayStateSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_domOverlayState__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_domOverlayState__supported" ) ) ? false : Js.asPropertyMap( this ).has( "domOverlayState" );
+  }
+
+  @JsProperty(
+      name = "domOverlayState"
+  )
+  @Nullable
+  public native XRDOMOverlayState domOverlayState();
+
+  @JsOverlay
+  public final boolean isEnvironmentBlendModeSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_environmentBlendMode__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_environmentBlendMode__supported" ) ) ? false : Js.asPropertyMap( this ).has( "environmentBlendMode" );
+  }
+
+  /**
+   * The XRSession interface's read-only environmentBlendMode property identifies if&mdash;and to  what degree&mdash;the computer-generated imagery is overlaid atop the real world.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode">XRSession.environmentBlendMode - MDN</a>
+   * @see <a href="https://immersive-web.github.io/webxr-ar-module/#xrenvironmentblendmode-enum">XRSession.environmentBlendMode - WebXR Augmented Reality Module</a>
+   */
+  @JsProperty(
+      name = "environmentBlendMode"
+  )
+  @Nonnull
+  @XREnvironmentBlendMode
+  public native String environmentBlendMode();
+
   @JsProperty(
       name = "frameRate"
   )
@@ -76,6 +131,30 @@ public class XRSession extends EventTarget {
   )
   @Nonnull
   public native XRInputSourceArray inputSources();
+
+  @JsOverlay
+  public final boolean isInteractionModeSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_interactionMode__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_interactionMode__supported" ) ) ? false : Js.asPropertyMap( this ).has( "interactionMode" );
+  }
+
+  @JsProperty(
+      name = "interactionMode"
+  )
+  @Nonnull
+  @XRInteractionMode
+  public native String interactionMode();
+
+  @JsOverlay
+  public final boolean isPreferredReflectionFormatSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_preferredReflectionFormat__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_preferredReflectionFormat__supported" ) ) ? false : Js.asPropertyMap( this ).has( "preferredReflectionFormat" );
+  }
+
+  @JsProperty(
+      name = "preferredReflectionFormat"
+  )
+  @Nonnull
+  @XRReflectionFormat
+  public native String preferredReflectionFormat();
 
   /**
    * The read-only renderState property of an XRSession object indicates the returns a XRRenderState object describing how the user's environment which should be rendered.
@@ -161,4 +240,33 @@ public class XRSession extends EventTarget {
 
   @JsNonNull
   public native Promise<Void> updateTargetFrameRate(float rate);
+
+  @JsOverlay
+  public final boolean isRequestHitTestSourceSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_requestHitTestSource__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_requestHitTestSource__supported" ) ) ? false : Js.asPropertyMap( this ).has( "requestHitTestSource" );
+  }
+
+  @JsNonNull
+  public native Promise<XRHitTestSource> requestHitTestSource(
+      @Nonnull XRHitTestOptionsInit options);
+
+  @JsOverlay
+  public final boolean isRequestHitTestSourceForTransientInputSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_requestHitTestSourceForTransientInput__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_requestHitTestSourceForTransientInput__supported" ) ) ? false : Js.asPropertyMap( this ).has( "requestHitTestSourceForTransientInput" );
+  }
+
+  @JsNonNull
+  public native Promise<XRTransientInputHitTestSource> requestHitTestSourceForTransientInput(
+      @Nonnull XRTransientInputHitTestOptionsInit options);
+
+  @JsOverlay
+  public final boolean isRequestLightProbeSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRSession_requestLightProbe__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRSession_requestLightProbe__supported" ) ) ? false : Js.asPropertyMap( this ).has( "requestLightProbe" );
+  }
+
+  @JsNonNull
+  public native Promise<XRLightProbe> requestLightProbe(@Nonnull XRLightProbeInit options);
+
+  @JsNonNull
+  public native Promise<XRLightProbe> requestLightProbe();
 }

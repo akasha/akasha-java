@@ -16,7 +16,6 @@ import jsinterop.base.JsPropertyMap;
  * The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions">PublicKeyCredentialRequestOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions">(Web Authentication) # dictdef-publickeycredentialrequestoptions</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -170,7 +169,6 @@ public interface PublicKeyCredentialRequestOptions {
    * The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions">PublicKeyCredentialRequestOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions">(Web Authentication) # dictdef-publickeycredentialrequestoptions</a>
    */
   @JsType(
       isNative = true,

@@ -100,8 +100,8 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCAudioSourceStats>uncheckedCast( this ).setKind( kind );
+    default Step4 trackIdentifier(@Nonnull String trackIdentifier) {
+      Js.<RTCAudioSourceStats>uncheckedCast( this ).setTrackIdentifier( trackIdentifier );
       return Js.uncheckedCast( this );
     }
   }
@@ -114,8 +114,8 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder trackIdentifier(@Nonnull String trackIdentifier) {
-      Js.<RTCAudioSourceStats>uncheckedCast( this ).setTrackIdentifier( trackIdentifier );
+    default Builder kind(@Nonnull String kind) {
+      Js.<RTCAudioSourceStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }

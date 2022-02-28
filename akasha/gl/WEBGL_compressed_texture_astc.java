@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_compressed_texture_astc extension is part of the WebGL API and exposes Adaptive Scalable Texture Compression (ASTC) compressed texture formats to WebGL.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc">WEBGL_compressed_texture_astc - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/">(WebGL WEBGL_compressed_texture_astc Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/">WebGL WEBGL_compressed_texture_astc Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -140,14 +140,14 @@ public interface WheelEventInit extends MouseEventInit {
 
     @JsOverlay
     @Nonnull
-    default Builder movementX(final int movementX) {
+    default Builder movementX(final double movementX) {
       setMovementX( movementX );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder movementY(final int movementY) {
+    default Builder movementY(final double movementY) {
       setMovementY( movementY );
       return this;
     }

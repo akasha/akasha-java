@@ -9,10 +9,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGAElement interface provides access to the properties of &lt;a&gt; element, as well as methods to manipulate them.
+ * The SVGAElement interface provides access to the properties of an &lt;a&gt; element, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement">SVGAElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGAElement">(SVG) # InterfaceSVGAElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGAElement"># InterfaceSVGAElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

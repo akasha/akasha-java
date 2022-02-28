@@ -26,6 +26,32 @@ public interface RTCCodecStats extends RTCStats {
   }
 
   @JsProperty(
+      name = "payloadType"
+  )
+  int payloadType();
+
+  @JsProperty
+  void setPayloadType(int payloadType);
+
+  @JsProperty(
+      name = "transportId"
+  )
+  @JsNonNull
+  String transportId();
+
+  @JsProperty
+  void setTransportId(@JsNonNull String transportId);
+
+  @JsProperty(
+      name = "mimeType"
+  )
+  @JsNonNull
+  String mimeType();
+
+  @JsProperty
+  void setMimeType(@JsNonNull String mimeType);
+
+  @JsProperty(
       name = "channels"
   )
   int channels();
@@ -51,38 +77,12 @@ public interface RTCCodecStats extends RTCStats {
   void setCodecType(@RTCCodecType @JsNonNull String codecType);
 
   @JsProperty(
-      name = "mimeType"
-  )
-  @JsNonNull
-  String mimeType();
-
-  @JsProperty
-  void setMimeType(@JsNonNull String mimeType);
-
-  @JsProperty(
-      name = "payloadType"
-  )
-  int payloadType();
-
-  @JsProperty
-  void setPayloadType(int payloadType);
-
-  @JsProperty(
       name = "sdpFmtpLine"
   )
   String sdpFmtpLine();
 
   @JsProperty
   void setSdpFmtpLine(@JsNonNull String sdpFmtpLine);
-
-  @JsProperty(
-      name = "transportId"
-  )
-  @JsNonNull
-  String transportId();
-
-  @JsProperty
-  void setTransportId(@JsNonNull String transportId);
 
   @JsProperty(
       name = "implementation"
@@ -128,8 +128,8 @@ public interface RTCCodecStats extends RTCStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 mimeType(@Nonnull String mimeType) {
-      Js.<RTCCodecStats>uncheckedCast( this ).setMimeType( mimeType );
+    default Step4 payloadType(int payloadType) {
+      Js.<RTCCodecStats>uncheckedCast( this ).setPayloadType( payloadType );
       return Js.uncheckedCast( this );
     }
   }
@@ -142,8 +142,8 @@ public interface RTCCodecStats extends RTCStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Step5 payloadType(int payloadType) {
-      Js.<RTCCodecStats>uncheckedCast( this ).setPayloadType( payloadType );
+    default Step5 transportId(@Nonnull String transportId) {
+      Js.<RTCCodecStats>uncheckedCast( this ).setTransportId( transportId );
       return Js.uncheckedCast( this );
     }
   }
@@ -156,8 +156,8 @@ public interface RTCCodecStats extends RTCStats {
   interface Step5 {
     @JsOverlay
     @Nonnull
-    default Builder transportId(@Nonnull String transportId) {
-      Js.<RTCCodecStats>uncheckedCast( this ).setTransportId( transportId );
+    default Builder mimeType(@Nonnull String mimeType) {
+      Js.<RTCCodecStats>uncheckedCast( this ).setMimeType( mimeType );
       return Js.uncheckedCast( this );
     }
   }

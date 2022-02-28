@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The SVGTextElement interface corresponds to the &lt;text&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextElement">SVGTextElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextElement">(SVG) # InterfaceSVGTextElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextElement"># InterfaceSVGTextElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

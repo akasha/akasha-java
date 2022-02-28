@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The AuthenticatorResponse interface of the Web Authentication API is the base interface for interfaces that provide a cryptographic root of trust for a key pair. The child interfaces include information from the browser such as the challenge origin and either may be returned from PublicKeyCredential.response.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse">AuthenticatorResponse - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#authenticatorresponse">(Web Authentication) # authenticatorresponse</a>
+ * @see <a href="https://w3c.github.io/webauthn/#authenticatorresponse"># authenticatorresponse</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

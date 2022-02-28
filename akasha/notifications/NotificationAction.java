@@ -10,11 +10,6 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
-/**
- * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
- *
- * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction">NotificationAction - MDN</a>
- */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -70,11 +65,6 @@ public interface NotificationAction {
     }
   }
 
-  /**
-   * The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction">NotificationAction - MDN</a>
-   */
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

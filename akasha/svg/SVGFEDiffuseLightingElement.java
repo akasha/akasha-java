@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEDiffuseLightingElement interface corresponds to the &lt;feDiffuseLighting&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement">SVGFEDiffuseLightingElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDiffuseLightingElement">(Filter Effects 2) # InterfaceSVGFEDiffuseLightingElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDiffuseLightingElement"># InterfaceSVGFEDiffuseLightingElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

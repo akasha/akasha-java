@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration">RTCConfiguration - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection">(WebRTC 1.0) # dom-peerconnection</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection"># dom-peerconnection</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -163,7 +163,7 @@ public interface RTCConfiguration {
    * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration">RTCConfiguration - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection">(WebRTC 1.0) # dom-peerconnection</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-peerconnection"># dom-peerconnection</a>
    */
   @JsType(
       isNative = true,

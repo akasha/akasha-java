@@ -37,7 +37,6 @@ public class PermissionStatus extends EventTarget {
       name = "name"
   )
   @Nonnull
-  @PermissionName
   public native String name();
 
   /**

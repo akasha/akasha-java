@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEDisplacementMapElement interface corresponds to the &lt;feDisplacementMap&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement">SVGFEDisplacementMapElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDisplacementMapElement">(Filter Effects 2) # InterfaceSVGFEDisplacementMapElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDisplacementMapElement"># InterfaceSVGFEDisplacementMapElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

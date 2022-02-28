@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The SVGMetadataElement interface corresponds to the &lt;metadata&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMetadataElement">SVGMetadataElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGMetadataElement">(SVG) # InterfaceSVGMetadataElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGMetadataElement"># InterfaceSVGMetadataElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

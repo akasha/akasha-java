@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGClipPathElement interface provides access to the properties of &lt;clipPath&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement">SVGClipPathElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/css-masking/#InterfaceSVGClipPathElement">(CSS Masking 1) # InterfaceSVGClipPathElement</a>
+ * @see <a href="https://drafts.fxtf.org/css-masking/#InterfaceSVGClipPathElement"># InterfaceSVGClipPathElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

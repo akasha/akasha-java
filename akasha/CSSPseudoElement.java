@@ -2,6 +2,7 @@ package akasha;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -10,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement">CSSPseudoElement - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-pseudo/#CSSPseudoElement-interface">(CSS Pseudo-Elements 4) # CSSPseudoElement-interface</a>
+ * @see <a href="https://drafts.csswg.org/css-pseudo/#CSSPseudoElement-interface"># CSSPseudoElement-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,6 +35,12 @@ public class CSSPseudoElement extends EventTarget {
   @Nonnull
   public native Element element();
 
+  @JsProperty(
+      name = "parent"
+  )
+  @Nonnull
+  public native ElementOrCSSPseudoElementUnion parent();
+
   /**
    * The type read-only property of the CSSPseudoElement interface returns the type of the pseudo-element as a string, represented in the form of a CSS selector.
    *
@@ -45,4 +52,7 @@ public class CSSPseudoElement extends EventTarget {
   )
   @Nonnull
   public native String type();
+
+  @JsNullable
+  public native CSSPseudoElement pseudo(@Nonnull String type);
 }

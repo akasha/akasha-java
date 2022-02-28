@@ -1,20 +1,23 @@
 package akasha;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 /**
  * The AbortSignal interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an AbortController object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal">AbortSignal - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-AbortSignal">(DOM) # interface-AbortSignal</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-AbortSignal"># interface-AbortSignal</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,8 +49,22 @@ public class AbortSignal extends EventTarget {
   )
   public native boolean aborted();
 
+  @JsProperty(
+      name = "reason"
+  )
+  @Nullable
+  public native Any reason();
+
+  @JsNonNull
+  public static native AbortSignal abort(@DoNotAutobox @Nullable Object reason);
+
   @JsNonNull
   public static native AbortSignal abort();
+
+  @JsNonNull
+  public static native AbortSignal timeout(int milliseconds);
+
+  public native void throwIfAborted();
 
   @JsOverlay
   public final void addAbortListener(@Nonnull final EventListener callback,

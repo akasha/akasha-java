@@ -1,8 +1,10 @@
 package akasha;
 
 import akasha.core.JsObject;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -11,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController">AbortController - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-abortcontroller">(DOM) # interface-abortcontroller</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-abortcontroller"># interface-abortcontroller</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,6 +42,14 @@ public class AbortController extends JsObject {
   )
   @Nonnull
   public native AbortSignal signal();
+
+  /**
+   * The abort() method of the AbortController interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort fetch requests, consumption of any response Body, and streams.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort">AbortController.abort - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#dom-abortcontroller-abort">abort() - DOM</a>
+   */
+  public native void abort(@DoNotAutobox @Nullable Object reason);
 
   /**
    * The abort() method of the AbortController interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort fetch requests, consumption of any response Body, and streams.

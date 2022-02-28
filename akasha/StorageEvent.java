@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The StorageEvent interface is implemented by the storage event, which is sent to a window when a storage area the window has access to is changed within the context of another document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent">StorageEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#the-storageevent-interface">(HTML) # the-storageevent-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#the-storageevent-interface"># the-storageevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

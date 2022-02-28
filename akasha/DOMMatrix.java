@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The DOMMatrix interface represents 4&times;4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the DOMMatrixReadOnly interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix">DOMMatrix - MDN</a>
- * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix">(Geometry Interfaces 1) # DOMMatrix</a>
+ * @see <a href="https://drafts.fxtf.org/geometry/#DOMMatrix"># DOMMatrix</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

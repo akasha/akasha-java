@@ -12,10 +12,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
+ * The MediaKeySystemAccess.getConfiguration() method returns an object with the supported combination of the following configuration options:
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration">MediaKeySystemConfiguration - MDN</a>
- * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary"># mediakeysystemconfiguration-dictionary</a>
+ * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-getconfiguration"># dom-mediakeysystemaccess-getconfiguration</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -189,10 +189,10 @@ public interface MediaKeySystemConfiguration {
   }
 
   /**
-   * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
+   * The MediaKeySystemAccess.getConfiguration() method returns an object with the supported combination of the following configuration options:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration">MediaKeySystemConfiguration - MDN</a>
-   * @see <a href="https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary"># mediakeysystemconfiguration-dictionary</a>
+   * @see <a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-getconfiguration"># dom-mediakeysystemaccess-getconfiguration</a>
    */
   @JsType(
       isNative = true,

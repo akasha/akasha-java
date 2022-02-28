@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
  * The URLSearchParams interface defines utility methods to work with the query string of a URL.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams">URLSearchParams - MDN</a>
- * @see <a href="https://url.spec.whatwg.org/#urlsearchparams">(URL) # urlsearchparams</a>
+ * @see <a href="https://url.spec.whatwg.org/#urlsearchparams"># urlsearchparams</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

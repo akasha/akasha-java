@@ -19,20 +19,11 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCIdentityValidationResult {
   @JsOverlay
   @Nonnull
-  static Step1 contents(@Nonnull final String contents) {
+  static Step1 identity(@Nonnull final String identity) {
     final RTCIdentityValidationResult $rtcIdentityValidationResult = Js.<RTCIdentityValidationResult>uncheckedCast( JsPropertyMap.of() );
-    $rtcIdentityValidationResult.setContents( contents );
+    $rtcIdentityValidationResult.setIdentity( identity );
     return Js.uncheckedCast( $rtcIdentityValidationResult );
   }
-
-  @JsProperty(
-      name = "contents"
-  )
-  @JsNonNull
-  String contents();
-
-  @JsProperty
-  void setContents(@JsNonNull String contents);
 
   @JsProperty(
       name = "identity"
@@ -43,6 +34,15 @@ public interface RTCIdentityValidationResult {
   @JsProperty
   void setIdentity(@JsNonNull String identity);
 
+  @JsProperty(
+      name = "contents"
+  )
+  @JsNonNull
+  String contents();
+
+  @JsProperty
+  void setContents(@JsNonNull String contents);
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -51,8 +51,8 @@ public interface RTCIdentityValidationResult {
   interface Step1 {
     @JsOverlay
     @Nonnull
-    default RTCIdentityValidationResult identity(@Nonnull String identity) {
-      Js.<RTCIdentityValidationResult>uncheckedCast( this ).setIdentity( identity );
+    default RTCIdentityValidationResult contents(@Nonnull String contents) {
+      Js.<RTCIdentityValidationResult>uncheckedCast( this ).setContents( contents );
       return Js.uncheckedCast( this );
     }
   }

@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEPointLightElement interface corresponds to the &lt;fePointLight&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEPointLightElement">SVGFEPointLightElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEPointLightElement">(Filter Effects 2) # InterfaceSVGFEPointLightElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEPointLightElement"># InterfaceSVGFEPointLightElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

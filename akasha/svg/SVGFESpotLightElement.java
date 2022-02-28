@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFESpotLightElement interface corresponds to the &lt;feSpotLight&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement">SVGFESpotLightElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpotLightElement">(Filter Effects 2) # InterfaceSVGFESpotLightElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpotLightElement"># InterfaceSVGFESpotLightElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

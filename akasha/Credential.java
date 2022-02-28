@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The Credential interface of the Credential Management API provides information about an entity (usually a user) as a prerequisite to a trust decision.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Credential">Credential - MDN</a>
- * @see <a href="https://w3c.github.io/webappsec-credential-management/#the-credential-interface">(Credential Management 1) # the-credential-interface</a>
+ * @see <a href="https://w3c.github.io/webappsec-credential-management/#the-credential-interface"># the-credential-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

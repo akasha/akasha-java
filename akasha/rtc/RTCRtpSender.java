@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
  * The RTCRtpSender interface provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender">RTCRtpSender - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpsender-interface">(WebRTC 1.0) # rtcrtpsender-interface</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpsender-interface"># rtcrtpsender-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

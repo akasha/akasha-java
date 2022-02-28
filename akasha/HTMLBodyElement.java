@@ -13,7 +13,7 @@ import jsinterop.base.Js;
  * The HTMLBodyElement interface provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating &lt;body&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement">HTMLBodyElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/sections.html#htmlbodyelement">(HTML) # htmlbodyelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/sections.html#htmlbodyelement"># htmlbodyelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

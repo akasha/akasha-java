@@ -38,7 +38,8 @@ public class VideoEncoder extends JsObject {
   public native String state();
 
   @JsNonNull
-  public static native Promise<Boolean> isConfigSupported(@Nonnull VideoEncoderConfig config);
+  public static native Promise<VideoEncoderSupport> isConfigSupported(
+      @Nonnull VideoEncoderConfig config);
 
   public native void close();
 

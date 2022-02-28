@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
  * The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a &lt;canvas&gt; element. It is used for drawing shapes, text, images, and other objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#2dcontext">(HTML) # 2dcontext</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#2dcontext"># 2dcontext</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -52,7 +52,7 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#filters">CanvasRenderingContext2D.filter - HTML Living Standard</a>
    */
   @JsNonNull
-  public String filter;
+  public StringOrCanvasFilterUnion filter;
 
   /**
    * The CanvasRenderingContext2D.font property of the Canvas 2D API specifies the current text style to use when drawing text. This string uses the same syntax as the CSS font specifier.
@@ -111,7 +111,8 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
-  public double letterSpacing;
+  @JsNonNull
+  public String letterSpacing;
 
   /**
    * The CanvasRenderingContext2D.lineCap property of the Canvas 2D API determines the shape used to draw the end points of lines.
@@ -223,7 +224,8 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
   @CanvasTextRendering
   public String textRendering;
 
-  public double wordSpacing;
+  @JsNonNull
+  public String wordSpacing;
 
   protected CanvasRenderingContext2D() {
   }
@@ -643,6 +645,10 @@ public class CanvasRenderingContext2D extends JsObject implements RenderingConte
    * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-rect">CanvasRenderingContext2D.rect - HTML Living Standard</a>
    */
   public native void rect(double x, double y, double w, double h);
+
+  public native void roundRect(double x, double y, double w, double h, double radii);
+
+  public native void roundRect(double x, double y, double w, double h, @Nonnull DOMPointInit radii);
 
   public native void roundRect(double x, double y, double w, double h,
       @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);

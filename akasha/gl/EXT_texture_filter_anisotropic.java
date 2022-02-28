@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The EXT_texture_filter_anisotropic extension is part of the WebGL API and exposes two constants for anisotropic filtering (AF).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_filter_anisotropic">EXT_texture_filter_anisotropic - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_texture_filter_anisotropic/">(WebGL EXT_texture_filter_anisotropic Khronos Ratified Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_texture_filter_anisotropic/">WebGL EXT_texture_filter_anisotropic Khronos Ratified Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

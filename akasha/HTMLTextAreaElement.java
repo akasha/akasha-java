@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of &lt;textarea&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmltextareaelement">(HTML) # htmltextareaelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmltextareaelement"># htmltextareaelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

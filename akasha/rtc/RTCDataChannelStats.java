@@ -26,6 +26,16 @@ public interface RTCDataChannelStats extends RTCStats {
   }
 
   @JsProperty(
+      name = "state"
+  )
+  @RTCDataChannelState
+  @JsNonNull
+  String state();
+
+  @JsProperty
+  void setState(@RTCDataChannelState @JsNonNull String state);
+
+  @JsProperty(
       name = "bytesReceived"
   )
   int bytesReceived();
@@ -80,16 +90,6 @@ public interface RTCDataChannelStats extends RTCStats {
 
   @JsProperty
   void setProtocol(@JsNonNull String protocol);
-
-  @JsProperty(
-      name = "state"
-  )
-  @RTCDataChannelState
-  @JsNonNull
-  String state();
-
-  @JsProperty
-  void setState(@RTCDataChannelState @JsNonNull String state);
 
   @JsType(
       isNative = true,

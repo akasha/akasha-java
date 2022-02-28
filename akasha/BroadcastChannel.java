@@ -15,7 +15,7 @@ import jsinterop.base.Js;
  * The BroadcastChannel interface represents a named channel that any browsing context of a given origin can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a message event fired at all BroadcastChannel objects listening to the channel.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel">BroadcastChannel - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts">(HTML) # broadcasting-to-other-browsing-contexts</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts"># broadcasting-to-other-browsing-contexts</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -16,7 +16,7 @@ import jsinterop.base.Any;
  * XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest - MDN</a>
- * @see <a href="https://xhr.spec.whatwg.org/#interface-xmlhttprequest">(XMLHttpRequest) # interface-xmlhttprequest</a>
+ * @see <a href="https://xhr.spec.whatwg.org/#interface-xmlhttprequest"># interface-xmlhttprequest</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

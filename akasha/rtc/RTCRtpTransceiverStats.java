@@ -26,12 +26,13 @@ public interface RTCRtpTransceiverStats extends RTCStats {
   }
 
   @JsProperty(
-      name = "mid"
+      name = "senderId"
   )
-  String mid();
+  @JsNonNull
+  String senderId();
 
   @JsProperty
-  void setMid(@JsNonNull String mid);
+  void setSenderId(@JsNonNull String senderId);
 
   @JsProperty(
       name = "receiverId"
@@ -43,13 +44,12 @@ public interface RTCRtpTransceiverStats extends RTCStats {
   void setReceiverId(@JsNonNull String receiverId);
 
   @JsProperty(
-      name = "senderId"
+      name = "mid"
   )
-  @JsNonNull
-  String senderId();
+  String mid();
 
   @JsProperty
-  void setSenderId(@JsNonNull String senderId);
+  void setMid(@JsNonNull String mid);
 
   @JsType(
       isNative = true,
@@ -87,8 +87,8 @@ public interface RTCRtpTransceiverStats extends RTCStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 receiverId(@Nonnull String receiverId) {
-      Js.<RTCRtpTransceiverStats>uncheckedCast( this ).setReceiverId( receiverId );
+    default Step4 senderId(@Nonnull String senderId) {
+      Js.<RTCRtpTransceiverStats>uncheckedCast( this ).setSenderId( senderId );
       return Js.uncheckedCast( this );
     }
   }
@@ -101,8 +101,8 @@ public interface RTCRtpTransceiverStats extends RTCStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder senderId(@Nonnull String senderId) {
-      Js.<RTCRtpTransceiverStats>uncheckedCast( this ).setSenderId( senderId );
+    default Builder receiverId(@Nonnull String receiverId) {
+      Js.<RTCRtpTransceiverStats>uncheckedCast( this ).setReceiverId( receiverId );
       return Js.uncheckedCast( this );
     }
   }

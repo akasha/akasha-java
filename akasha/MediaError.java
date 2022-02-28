@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as &lt;audio&gt; or &lt;video&gt;.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError">MediaError - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#error-codes">(HTML) # error-codes</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#error-codes"># error-codes</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

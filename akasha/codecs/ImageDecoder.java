@@ -42,6 +42,12 @@ public class ImageDecoder extends JsObject {
   @Nonnull
   public native ImageTrackList tracks();
 
+  @JsProperty(
+      name = "type"
+  )
+  @Nonnull
+  public native String type();
+
   @JsNonNull
   public static native Promise<Boolean> isTypeSupported(@Nonnull String type);
 

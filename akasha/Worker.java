@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-worker-interface">(HTML) # dedicated-workers-and-the-worker-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-worker-interface"># dedicated-workers-and-the-worker-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

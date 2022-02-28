@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WebGLShaderPrecisionFormat interface is part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getShaderPrecisionFormat() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShaderPrecisionFormat">WebGLShaderPrecisionFormat - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.12">(WebGL) # 5.12</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.12"># 5.12</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

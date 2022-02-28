@@ -13,10 +13,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
+ * The create() method of the CredentialsContainer interface returns a Promise that resolves with a new Credential instance based on the provided options, or null if no Credential object can be created.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">(Web Authentication) # dictdef-publickeycredentialcreationoptions</a>
+ * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-create"># dom-credentialscontainer-create</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -292,10 +292,10 @@ public interface PublicKeyCredentialCreationOptions {
   }
 
   /**
-   * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
+   * The create() method of the CredentialsContainer interface returns a Promise that resolves with a new Credential instance based on the provided options, or null if no Credential object can be created.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions">PublicKeyCredentialCreationOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions">(Web Authentication) # dictdef-publickeycredentialcreationoptions</a>
+   * @see <a href="https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-create"># dom-credentialscontainer-create</a>
    */
   @JsType(
       isNative = true,

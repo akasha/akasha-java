@@ -8,9 +8,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated.
+ * The SVGAnimatedLength interface represents attributes of type &lt;length&gt; which can be animated.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLength">SVGAnimatedLength - MDN</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAnimatedLength"># InterfaceSVGAnimatedLength</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

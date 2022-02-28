@@ -1,7 +1,6 @@
 package akasha.clipboard;
 
 import akasha.PermissionDescriptor;
-import akasha.PermissionName;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -20,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder name(@PermissionName @Nonnull final String name) {
+  static Builder name(@Nonnull final String name) {
     final Builder $clipboardPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
     $clipboardPermissionDescriptor.setName( name );
     return Js.uncheckedCast( $clipboardPermissionDescriptor );

@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The AnimationEvent interface represents events providing information related to animations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent">AnimationEvent - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-animations/#interface-animationevent">(CSS Animations 2) # interface-animationevent</a>
+ * @see <a href="https://drafts.csswg.org/css-animations/#interface-animationevent"># interface-animationevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

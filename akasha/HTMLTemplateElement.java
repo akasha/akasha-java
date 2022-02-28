@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTemplateElement interface enables access to the contents of an HTML &lt;template&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement">HTMLTemplateElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmltemplateelement">(HTML) # htmltemplateelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmltemplateelement"># htmltemplateelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

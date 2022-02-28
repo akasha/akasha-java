@@ -27,7 +27,7 @@ import jsinterop.base.JsPropertyMap;
  * The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/window-object.html#the-window-object">(HTML) # the-window-object</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/window-object.html#the-window-object"># the-window-object</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -118,6 +118,9 @@ public class Window extends EventTarget {
    */
   @JsNullable
   public OnBeforeUnloadEventHandler onbeforeunload;
+
+  @JsNullable
+  public EventHandler onbeforexrselect;
 
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
@@ -1864,7 +1867,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval">Window.clearInterval - MDN</a>
    */
-  public native void clearInterval(int handle);
+  public native void clearInterval(int id);
 
   /**
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
@@ -1878,7 +1881,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout">Window.clearTimeout - MDN</a>
    */
-  public native void clearTimeout(int handle);
+  public native void clearTimeout(int id);
 
   /**
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().

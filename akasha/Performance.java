@@ -21,9 +21,9 @@ import jsinterop.base.Js;
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance">Performance - MDN</a>
  * @see <a href="https://w3c.github.io/hr-time/#sec-performance"># sec-performance</a>
- * @see <a href="https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface">(Performance Timeline 2) # extensions-to-the-performance-interface</a>
- * @see <a href="https://w3c.github.io/resource-timing/#sec-extensions-performance-interface">(Resource Timing 2) # sec-extensions-performance-interface</a>
- * @see <a href="https://w3c.github.io/user-timing/#extensions-performance-interface">(User Timing 2) # extensions-performance-interface</a>
+ * @see <a href="https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface"># extensions-to-the-performance-interface</a>
+ * @see <a href="https://w3c.github.io/resource-timing/#sec-extensions-performance-interface"># sec-extensions-performance-interface</a>
+ * @see <a href="https://w3c.github.io/user-timing/#extensions-performance-interface"># extensions-performance-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

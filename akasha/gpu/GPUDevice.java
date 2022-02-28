@@ -3,6 +3,7 @@ package akasha.gpu;
 import akasha.AddEventListenerOptions;
 import akasha.EventListenerOptions;
 import akasha.EventTarget;
+import akasha.StringOrUndefinedUnion;
 import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -23,8 +24,8 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUDevice"
 )
 public class GPUDevice extends EventTarget {
-  @JsNullable
-  public String label;
+  @JsNonNull
+  public StringOrUndefinedUnion label;
 
   @JsNullable
   public GPUUncapturedErrorEventHandler onuncapturederror;

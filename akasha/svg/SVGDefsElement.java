@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The SVGDefsElement interface corresponds to the &lt;defs&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGDefsElement">SVGDefsElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGDefsElement">(SVG) # InterfaceSVGDefsElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGDefsElement"># InterfaceSVGDefsElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

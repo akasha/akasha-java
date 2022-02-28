@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEColorMatrixElement interface corresponds to the &lt;feColorMatrix&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement">SVGFEColorMatrixElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEColorMatrixElement">(Filter Effects 2) # InterfaceSVGFEColorMatrixElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEColorMatrixElement"># InterfaceSVGFEColorMatrixElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

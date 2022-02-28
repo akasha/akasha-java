@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort">MessagePort - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports">(HTML) # message-ports</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports"># message-ports</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

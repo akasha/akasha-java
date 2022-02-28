@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTableRowElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablerowelement">(HTML) # htmltablerowelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablerowelement"># htmltablerowelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

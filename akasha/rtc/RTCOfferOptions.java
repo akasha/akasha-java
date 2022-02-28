@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer. The SDP offer includes information about any MediaStreamTrack objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">(WebRTC 1.0) # dom-rtcpeerconnection-createoffer</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer"># dom-rtcpeerconnection-createoffer</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -68,7 +68,7 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
    * The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer. The SDP offer includes information about any MediaStreamTrack objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer">(WebRTC 1.0) # dom-rtcpeerconnection-createoffer</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer"># dom-rtcpeerconnection-createoffer</a>
    */
   @JsType(
       isNative = true,

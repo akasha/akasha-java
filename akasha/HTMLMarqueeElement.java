@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The HTMLMarqueeElement interface provides methods to manipulate &lt;marquee&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMarqueeElement">HTMLMarqueeElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement">(HTML) # htmlmarqueeelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement"># htmlmarqueeelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

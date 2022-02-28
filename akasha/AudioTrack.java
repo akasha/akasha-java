@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The AudioTrack interface represents a single audio track from one of the HTML media elements, &lt;audio&gt; or &lt;video&gt;.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack">AudioTrack - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotrack">(HTML) # audiotrack</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotrack"># audiotrack</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

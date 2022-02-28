@@ -20,12 +20,12 @@ import jsinterop.base.Js;
  * Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-element">(DOM) # interface-element</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-element"># interface-element</a>
  * @see <a href="https://w3c.github.io/pointerevents/#extensions-to-the-element-interface"># extensions-to-the-element-interface</a>
  * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface"># extensions-to-the-element-interface</a>
- * @see <a href="https://fullscreen.spec.whatwg.org/#api">(Fullscreen API) # api</a>
+ * @see <a href="https://fullscreen.spec.whatwg.org/#api"># api</a>
  * @see <a href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface"># extensions-to-the-element-interface</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface">(CSSOM View) # extension-to-the-element-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface"># extension-to-the-element-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

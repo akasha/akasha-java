@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">(WebRTC Statistics) # dom-rtcicecandidatepairstats</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats"># dom-rtcicecandidatepairstats</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -30,6 +30,91 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     $rtcIceCandidatePairStats.setTimestamp( timestamp );
     return Js.uncheckedCast( $rtcIceCandidatePairStats );
   }
+
+  /**
+   * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
+   */
+  @JsProperty(
+      name = "transportId"
+  )
+  @JsNonNull
+  String transportId();
+
+  /**
+   * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
+   */
+  @JsProperty
+  void setTransportId(@JsNonNull String transportId);
+
+  /**
+   * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
+   */
+  @JsProperty(
+      name = "localCandidateId"
+  )
+  @JsNonNull
+  String localCandidateId();
+
+  /**
+   * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
+   */
+  @JsProperty
+  void setLocalCandidateId(@JsNonNull String localCandidateId);
+
+  /**
+   * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
+   */
+  @JsProperty(
+      name = "remoteCandidateId"
+  )
+  @JsNonNull
+  String remoteCandidateId();
+
+  /**
+   * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
+   */
+  @JsProperty
+  void setRemoteCandidateId(@JsNonNull String remoteCandidateId);
+
+  /**
+   * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
+   */
+  @JsProperty(
+      name = "state"
+  )
+  @RTCStatsIceCandidatePairState
+  @JsNonNull
+  String state();
+
+  /**
+   * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
+   */
+  @JsProperty
+  void setState(@RTCStatsIceCandidatePairState @JsNonNull String state);
 
   /**
    * The RTCIceCandidatePairStats property availableIncomingBitrate returns a value indicative of the available inbound capacity of the network connection represented by the candidate pair.
@@ -308,27 +393,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   void setLastResponseTimestamp(double lastResponseTimestamp);
 
   /**
-   * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsProperty(
-      name = "localCandidateId"
-  )
-  @JsNonNull
-  String localCandidateId();
-
-  /**
-   * The RTCIceCandidatePairStats property localCandidateId is a string that uniquely identifies the local ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/localCandidateId">RTCIceCandidatePairStats.localCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-localcandidateid">RTCIceCandidatePairStats.localCandidateId - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsProperty
-  void setLocalCandidateId(@JsNonNull String localCandidateId);
-
-  /**
    * The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated">RTCIceCandidatePairStats.nominated - MDN</a>
@@ -395,27 +459,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    */
   @JsProperty
   void setPacketsSent(int packetsSent);
-
-  /**
-   * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
-   */
-  @JsProperty(
-      name = "remoteCandidateId"
-  )
-  @JsNonNull
-  String remoteCandidateId();
-
-  /**
-   * The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId">RTCIceCandidatePairStats.remoteCandidateId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid">The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API.</a>
-   */
-  @JsProperty
-  void setRemoteCandidateId(@JsNonNull String remoteCandidateId);
 
   @JsProperty(
       name = "requestBytesSent"
@@ -554,28 +597,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   void setRetransmissionsSent(int retransmissionsSent);
 
   /**
-   * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
-   */
-  @JsProperty(
-      name = "state"
-  )
-  @RTCStatsIceCandidatePairState
-  @JsNonNull
-  String state();
-
-  /**
-   * The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state">RTCIceCandidatePairStats.state - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state">The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API.</a>
-   */
-  @JsProperty
-  void setState(@RTCStatsIceCandidatePairState @JsNonNull String state);
-
-  /**
    * The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime">RTCIceCandidatePairStats.totalRoundTripTime - MDN</a>
@@ -594,27 +615,6 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    */
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);
-
-  /**
-   * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
-   */
-  @JsProperty(
-      name = "transportId"
-  )
-  @JsNonNull
-  String transportId();
-
-  /**
-   * The transportId property uniquely identifies the RTCIceTransport that was inspected to obtain the transport-related statistics contained in the RTCIceCandidatePairStats object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/transportId">RTCIceCandidatePairStats.transportId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-transportid">The definition of 'RTCIceCandidatePairStats.transportId' in Identifiers for WebRTC's Statistics API.</a>
-   */
-  @JsProperty
-  void setTransportId(@JsNonNull String transportId);
 
   @JsProperty(
       name = "currentRtt"
@@ -676,8 +676,8 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 localCandidateId(@Nonnull String localCandidateId) {
-      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setLocalCandidateId( localCandidateId );
+    default Step4 transportId(@Nonnull String transportId) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setTransportId( transportId );
       return Js.uncheckedCast( this );
     }
   }
@@ -690,8 +690,8 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Step5 remoteCandidateId(@Nonnull String remoteCandidateId) {
-      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setRemoteCandidateId( remoteCandidateId );
+    default Step5 localCandidateId(@Nonnull String localCandidateId) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setLocalCandidateId( localCandidateId );
       return Js.uncheckedCast( this );
     }
   }
@@ -704,8 +704,8 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   interface Step5 {
     @JsOverlay
     @Nonnull
-    default Step6 state(@RTCStatsIceCandidatePairState @Nonnull String state) {
-      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setState( state );
+    default Step6 remoteCandidateId(@Nonnull String remoteCandidateId) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setRemoteCandidateId( remoteCandidateId );
       return Js.uncheckedCast( this );
     }
   }
@@ -718,8 +718,8 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   interface Step6 {
     @JsOverlay
     @Nonnull
-    default Builder transportId(@Nonnull String transportId) {
-      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setTransportId( transportId );
+    default Builder state(@RTCStatsIceCandidatePairState @Nonnull String state) {
+      Js.<RTCIceCandidatePairStats>uncheckedCast( this ).setState( state );
       return Js.uncheckedCast( this );
     }
   }
@@ -728,7 +728,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
    * The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats">RTCIceCandidatePairStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats">(WebRTC Statistics) # dom-rtcicecandidatepairstats</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats"># dom-rtcicecandidatepairstats</a>
    */
   @JsType(
       isNative = true,

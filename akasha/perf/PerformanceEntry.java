@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry">PerformanceEntry - MDN</a>
- * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceentry">(Performance Timeline 2) # dom-performanceentry</a>
+ * @see <a href="https://w3c.github.io/performance-timeline/#dom-performanceentry"># dom-performanceentry</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

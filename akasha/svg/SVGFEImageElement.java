@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEImageElement interface corresponds to the &lt;feImage&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement">SVGFEImageElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEImageElement">(Filter Effects 2) # InterfaceSVGFEImageElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEImageElement"># InterfaceSVGFEImageElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

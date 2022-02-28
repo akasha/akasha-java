@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The TextMetrics interface represents the dimensions of a piece of text in the canvas; a TextMetrics instance can be retrieved using the CanvasRenderingContext2D.measureText() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics">TextMetrics - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#textmetrics">(HTML) # textmetrics</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#textmetrics"># textmetrics</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

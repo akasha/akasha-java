@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The StyleSheetList interface represents a list of CSSStyleSheet objects. An instance of this object can be returned by Document.styleSheets.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList">StyleSheetList - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-stylesheetlist-interface">(CSSOM) # the-stylesheetlist-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-stylesheetlist-interface"># the-stylesheetlist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

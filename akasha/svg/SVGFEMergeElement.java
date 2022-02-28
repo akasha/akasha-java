@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEMergeElement interface corresponds to the &lt;feMerge&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement">SVGFEMergeElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEMergeElement">(Filter Effects 2) # InterfaceSVGFEMergeElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEMergeElement"># InterfaceSVGFEMergeElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

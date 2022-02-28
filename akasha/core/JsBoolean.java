@@ -3,8 +3,6 @@ package akasha.core;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -12,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The Boolean object is an object wrapper for a boolean value.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean - MDN</a>
- * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-boolean-objects">(ECMAScript) # sec-boolean-objects</a>
+ * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-boolean-objects"># sec-boolean-objects</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -43,19 +41,7 @@ public class JsBoolean extends JsObject {
    * The valueOf() method returns the primitive value of a Boolean object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf">Boolean.valueOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-boolean.prototype.valueof">(ECMAScript) # sec-boolean.prototype.valueof</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-boolean.prototype.valueof"># sec-boolean.prototype.valueof</a>
    */
   public native boolean valueOf();
-
-  /**
-   * The toString() method returns a string representing the specified Boolean object.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString">Boolean.toString - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-boolean.prototype.tostring">(ECMAScript) # sec-boolean.prototype.tostring</a>
-   */
-  @JsMethod(
-      name = "toString"
-  )
-  @JsNonNull
-  public native String toString_();
 }

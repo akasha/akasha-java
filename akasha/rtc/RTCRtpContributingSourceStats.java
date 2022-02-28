@@ -26,14 +26,6 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
   }
 
   @JsProperty(
-      name = "audioLevel"
-  )
-  double audioLevel();
-
-  @JsProperty
-  void setAudioLevel(double audioLevel);
-
-  @JsProperty(
       name = "contributorSsrc"
   )
   int contributorSsrc();
@@ -49,6 +41,14 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
 
   @JsProperty
   void setInboundRtpStreamId(@JsNonNull String inboundRtpStreamId);
+
+  @JsProperty(
+      name = "audioLevel"
+  )
+  double audioLevel();
+
+  @JsProperty
+  void setAudioLevel(double audioLevel);
 
   @JsProperty(
       name = "packetsContributedTo"

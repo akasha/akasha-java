@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The HTMLImageElement interface represents an HTML &lt;img&gt; element, providing the properties and methods used to manipulate image elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement">HTMLImageElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement">(HTML) # htmlimageelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement"># htmlimageelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

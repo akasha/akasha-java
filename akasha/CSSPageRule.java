@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * CSSPageRule represents a single CSS @page rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule">CSSPageRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-csspagerule-interface">(CSSOM) # the-csspagerule-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-csspagerule-interface"># the-csspagerule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

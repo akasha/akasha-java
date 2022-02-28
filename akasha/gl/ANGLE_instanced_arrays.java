@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The ANGLE_instanced_arrays extension is part of the WebGL API and allows to draw the same object, or groups of similar objects multiple times, if they share the same vertex data, primitive count and type.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays">ANGLE_instanced_arrays - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/">(WebGL ANGLE_instanced_arrays Khronos Ratified Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/">WebGL ANGLE_instanced_arrays Khronos Ratified Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

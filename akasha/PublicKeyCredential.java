@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The PublicKeyCredential interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from Credential, and was created by the Web Authentication API extension to the Credential Management API. Other interfaces that inherit from Credential are PasswordCredential and FederatedCredential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential">PublicKeyCredential - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#iface-pkcredential">(Web Authentication) # iface-pkcredential</a>
+ * @see <a href="https://w3c.github.io/webauthn/#iface-pkcredential"># iface-pkcredential</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

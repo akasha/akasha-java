@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The StorageManager interface of the Storage API provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either navigator.storage or WorkerNavigator.storage.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageManager">StorageManager - MDN</a>
- * @see <a href="https://storage.spec.whatwg.org/#storagemanager">(Storage) # storagemanager</a>
+ * @see <a href="https://storage.spec.whatwg.org/#storagemanager"># storagemanager</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -49,4 +49,7 @@ public class StorageManager extends JsObject {
    */
   @JsNonNull
   public native Promise<Boolean> persisted();
+
+  @JsNonNull
+  public native Promise<FileSystemDirectoryHandle> getDirectory();
 }

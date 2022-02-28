@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
  * The HTMLFormElement interface represents a &lt;form&gt; element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">(HTML) # htmlformelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement"># htmlformelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

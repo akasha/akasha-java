@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the Animation() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect">KeyframeEffect - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations/#the-keyframeeffect-interface">(Web Animations 2) # the-keyframeeffect-interface</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface"># the-keyframeeffect-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

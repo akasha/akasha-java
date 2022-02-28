@@ -1,12 +1,13 @@
 package akasha.gpu;
 
+import akasha.StringOrUndefinedUnion;
 import akasha.core.JsObject;
 import akasha.core.Uint32Array;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -20,25 +21,21 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPUComputePassEncoder"
 )
 public class GPUComputePassEncoder extends JsObject {
-  @JsNullable
-  public String label;
+  @JsNonNull
+  public StringOrUndefinedUnion label;
 
   protected GPUComputePassEncoder() {
   }
 
-  public native void beginPipelineStatisticsQuery(@Nonnull GPUQuerySet querySet, int queryIndex);
+  public native void dispatch(int workgroupCountX, int workgroupCountY, int workgroupCountZ);
 
-  public native void dispatch(int x, int y, int z);
+  public native void dispatch(int workgroupCountX, int workgroupCountY);
 
-  public native void dispatch(int x, int y);
-
-  public native void dispatch(int x);
+  public native void dispatch(int workgroupCountX);
 
   public native void dispatchIndirect(@Nonnull GPUBuffer indirectBuffer, int indirectOffset);
 
-  public native void endPass();
-
-  public native void endPipelineStatisticsQuery();
+  public native void end();
 
   public native void setPipeline(@Nonnull GPUComputePipeline pipeline);
 

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * An object implementing the StyleSheet interface represents a single style sheet. CSS style sheets will further implement the more specialized CSSStyleSheet interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet">StyleSheet - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-stylesheet-interface">(CSSOM) # the-stylesheet-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-stylesheet-interface"># the-stylesheet-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

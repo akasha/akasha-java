@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSSImportRule interface represents an @import at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSImportRule">CSSImportRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssimportrule-interface">(CSSOM) # the-cssimportrule-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssimportrule-interface"># the-cssimportrule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

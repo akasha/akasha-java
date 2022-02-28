@@ -27,10 +27,15 @@ public interface ReadableStreamBYOBReadResult {
   @JsProperty(
       name = "value"
   )
-  ArrayBufferView value();
+  ArrayBufferViewOrUndefinedUnion value();
 
   @JsProperty
-  void setValue(@JsNonNull ArrayBufferView value);
+  void setValue(@JsNonNull ArrayBufferViewOrUndefinedUnion value);
+
+  @JsOverlay
+  default void setValue(@Nonnull final ArrayBufferView value) {
+    setValue( ArrayBufferViewOrUndefinedUnion.of( value ) );
+  }
 
   @JsProperty(
       name = "done"
@@ -46,6 +51,13 @@ public interface ReadableStreamBYOBReadResult {
       name = "ReadableStreamBYOBReadResult"
   )
   interface Builder extends ReadableStreamBYOBReadResult {
+    @JsOverlay
+    @Nonnull
+    default Builder value(@Nonnull final ArrayBufferViewOrUndefinedUnion value) {
+      setValue( value );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder value(@Nonnull final ArrayBufferView value) {

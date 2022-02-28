@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The DocumentType interface represents a Node containing a doctype.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentType">DocumentType - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-documenttype">(DOM) # interface-documenttype</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-documenttype"># interface-documenttype</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

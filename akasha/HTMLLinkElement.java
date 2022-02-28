@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The HTMLLinkElement interface represents reference information for external resources and the relationship of those resources to a document and vice-versa (corresponds to &lt;link&gt; element; not to be confused with &lt;a&gt;, which is represented by HTMLAnchorElement). This object inherits all of the properties and methods of the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement">HTMLLinkElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmllinkelement">(HTML) # htmllinkelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmllinkelement"># htmllinkelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -90,6 +90,12 @@ public class HTMLLinkElement extends HTMLElement {
 
   protected HTMLLinkElement() {
   }
+
+  @JsProperty(
+      name = "blocking"
+  )
+  @Nonnull
+  public native DOMTokenList blocking();
 
   /**
    * The HTMLLinkElement.relList read-only property reflects the rel attribute. It is a live DOMTokenList containing the set of link types indicating the relationship between the resource represented by the link element and the current document.

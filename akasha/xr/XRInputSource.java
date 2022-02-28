@@ -1,13 +1,16 @@
 package akasha.xr;
 
+import akasha.Gamepad;
 import akasha.core.JsObject;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system. The device is specific to the platform being used, but provides the direction in which it is being aimed and optionally may generate events if the user triggers performs actions using the device.
@@ -25,6 +28,17 @@ public class XRInputSource extends JsObject {
   protected XRInputSource() {
   }
 
+  @JsOverlay
+  public final boolean isGamepadSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRInputSource_gamepad__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRInputSource_gamepad__supported" ) ) ? false : Js.asPropertyMap( this ).has( "gamepad" );
+  }
+
+  @JsProperty(
+      name = "gamepad"
+  )
+  @Nullable
+  public native Gamepad gamepad();
+
   /**
    * The read-only XRInputSource property gripSpace returns an XRSpace whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand.
    *
@@ -36,6 +50,17 @@ public class XRInputSource extends JsObject {
   )
   @Nullable
   public native XRSpace gripSpace();
+
+  @JsOverlay
+  public final boolean isHandSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRInputSource_hand__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRInputSource_hand__supported" ) ) ? false : Js.asPropertyMap( this ).has( "hand" );
+  }
+
+  @JsProperty(
+      name = "hand"
+  )
+  @Nullable
+  public native XRHand hand();
 
   /**
    * The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.

@@ -22,7 +22,7 @@ import jsinterop.base.Js;
  * The IDBDatabase interface of the IndexedDB API provides a connection to a database; you can use an IDBDatabase object to open a transaction on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase">IDBDatabase - MDN</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#database-interface">(Indexed DB 3.0) # database-interface</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#database-interface"># database-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

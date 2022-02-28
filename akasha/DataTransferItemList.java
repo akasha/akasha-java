@@ -16,7 +16,7 @@ import jsinterop.base.JsArrayLike;
  * The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList">DataTransferItemList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitemlist-interface">(HTML) # the-datatransferitemlist-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitemlist-interface"># the-datatransferitemlist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

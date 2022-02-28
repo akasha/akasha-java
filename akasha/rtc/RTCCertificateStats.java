@@ -26,15 +26,6 @@ public interface RTCCertificateStats extends RTCStats {
   }
 
   @JsProperty(
-      name = "base64Certificate"
-  )
-  @JsNonNull
-  String base64Certificate();
-
-  @JsProperty
-  void setBase64Certificate(@JsNonNull String base64Certificate);
-
-  @JsProperty(
       name = "fingerprint"
   )
   @JsNonNull
@@ -51,6 +42,15 @@ public interface RTCCertificateStats extends RTCStats {
 
   @JsProperty
   void setFingerprintAlgorithm(@JsNonNull String fingerprintAlgorithm);
+
+  @JsProperty(
+      name = "base64Certificate"
+  )
+  @JsNonNull
+  String base64Certificate();
+
+  @JsProperty
+  void setBase64Certificate(@JsNonNull String base64Certificate);
 
   @JsProperty(
       name = "issuerCertificateId"
@@ -96,8 +96,8 @@ public interface RTCCertificateStats extends RTCStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 base64Certificate(@Nonnull String base64Certificate) {
-      Js.<RTCCertificateStats>uncheckedCast( this ).setBase64Certificate( base64Certificate );
+    default Step4 fingerprint(@Nonnull String fingerprint) {
+      Js.<RTCCertificateStats>uncheckedCast( this ).setFingerprint( fingerprint );
       return Js.uncheckedCast( this );
     }
   }
@@ -110,8 +110,8 @@ public interface RTCCertificateStats extends RTCStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Step5 fingerprint(@Nonnull String fingerprint) {
-      Js.<RTCCertificateStats>uncheckedCast( this ).setFingerprint( fingerprint );
+    default Step5 fingerprintAlgorithm(@Nonnull String fingerprintAlgorithm) {
+      Js.<RTCCertificateStats>uncheckedCast( this ).setFingerprintAlgorithm( fingerprintAlgorithm );
       return Js.uncheckedCast( this );
     }
   }
@@ -124,8 +124,8 @@ public interface RTCCertificateStats extends RTCStats {
   interface Step5 {
     @JsOverlay
     @Nonnull
-    default Builder fingerprintAlgorithm(@Nonnull String fingerprintAlgorithm) {
-      Js.<RTCCertificateStats>uncheckedCast( this ).setFingerprintAlgorithm( fingerprintAlgorithm );
+    default Builder base64Certificate(@Nonnull String base64Certificate) {
+      Js.<RTCCertificateStats>uncheckedCast( this ).setBase64Certificate( base64Certificate );
       return Js.uncheckedCast( this );
     }
   }

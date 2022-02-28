@@ -23,7 +23,7 @@ import jsinterop.base.Js;
  * The Notification interface of the Notifications API is used to configure and display desktop notifications to the user.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification">Notification - MDN</a>
- * @see <a href="https://notifications.spec.whatwg.org/#api">(Notifications API) # api</a>
+ * @see <a href="https://notifications.spec.whatwg.org/#api"># api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -9,10 +9,10 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * XMLHttpRequestEventTarget is the interface that describes the event handlers you can implement in an object that will handle events for an XMLHttpRequest.
+ * XMLHttpRequestEventTarget is the interface that describes the event handlers shared on XMLHttpRequest and XMLHttpRequestUpload.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget">XMLHttpRequestEventTarget - MDN</a>
- * @see <a href="https://xhr.spec.whatwg.org/#xmlhttprequesteventtarget">(XMLHttpRequest) # xmlhttprequesteventtarget</a>
+ * @see <a href="https://xhr.spec.whatwg.org/#xmlhttprequesteventtarget"># xmlhttprequesteventtarget</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

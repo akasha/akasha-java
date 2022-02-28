@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * A DeviceMotionEventRotationRate object provides information about the rate at which the device is rotating around all three axes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate">DeviceMotionEventRotationRate - MDN</a>
- * @see <a href="https://w3c.github.io/deviceorientation/#devicemotioneventrotationrate">(DeviceOrientation Event) # devicemotioneventrotationrate</a>
+ * @see <a href="https://w3c.github.io/deviceorientation/#devicemotioneventrotationrate"># devicemotioneventrotationrate</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

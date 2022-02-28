@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The DocumentTimeline interface of the Web Animations API represents animation timelines, including the default document timeline (accessed via Document.timeline).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentTimeline">DocumentTimeline - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations/#the-documenttimeline-interface">(Web Animations 2) # the-documenttimeline-interface</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/#the-documenttimeline-interface"># the-documenttimeline-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

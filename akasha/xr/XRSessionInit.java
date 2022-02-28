@@ -3,7 +3,9 @@ package akasha.xr;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -57,6 +59,23 @@ public interface XRSessionInit {
     setRequiredFeatures( Js.<JsArray<Any>>uncheckedCast( requiredFeatures ) );
   }
 
+  @JsProperty(
+      name = "depthSensing"
+  )
+  XRDepthStateInit depthSensing();
+
+  @JsProperty
+  void setDepthSensing(@JsNonNull XRDepthStateInit depthSensing);
+
+  @JsProperty(
+      name = "domOverlay"
+  )
+  @JsNullable
+  XRDOMOverlayInit domOverlay();
+
+  @JsProperty
+  void setDomOverlay(@JsNullable XRDOMOverlayInit domOverlay);
+
   /**
    * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
    *
@@ -94,6 +113,20 @@ public interface XRSessionInit {
     @Nonnull
     default Builder requiredFeatures(@Nonnull final Any... requiredFeatures) {
       setRequiredFeatures( requiredFeatures );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder depthSensing(@Nonnull final XRDepthStateInit depthSensing) {
+      setDepthSensing( depthSensing );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder domOverlay(@Nullable final XRDOMOverlayInit domOverlay) {
+      setDomOverlay( domOverlay );
       return this;
     }
   }

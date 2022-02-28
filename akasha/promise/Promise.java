@@ -36,9 +36,55 @@ import jsinterop.annotations.JsType;
 public class Promise<T>
 {
   /**
+   * The Promise.allSettled() method returns a promise that resolves after all of the given promises
+   * have either fulfilled or rejected, with an array of objects that each describes the outcome of
+   * each promise.
+   *
+   * <p>It is typically used when you have multiple asynchronous tasks that are not dependent on one
+   * another to complete successfully, or you'd always like to know the result of each promise.</p>
+   *
+   * <p>In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are
+   * dependent on each other / if you'd like to immediately reject upon any of them rejecting.</p>
+   *
+   * @param promises the promises.
+   * @param <V>      the component type of the promise returned.
+   * @return the result promise.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-promise.allsettled">Promise.allSettled() - ECMA</a>
+   */
+  @SafeVarargs
+  @Nonnull
+  @JsOverlay
+  @SuppressWarnings( "varargs" )
+  public static <V> Promise<JsArray<AllSettledResult<V>>> allSettled( @Nonnull final Promise<? extends V>... promises )
+  {
+    return allSettled( JsArray.of( promises ) );
+  }
+
+  /**
+   * The Promise.allSettled() method returns a promise that resolves after all of the given promises
+   * have either fulfilled or rejected, with an array of objects that each describes the outcome of
+   * each promise.
+   *
+   * <p>It is typically used when you have multiple asynchronous tasks that are not dependent on one
+   * another to complete successfully, or you'd always like to know the result of each promise.</p>
+   *
+   * <p>In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are
+   * dependent on each other / if you'd like to immediately reject upon any of them rejecting.</p>
+   *
+   * @param promises the promises.
+   * @param <V>      the component type of the promise results.
+   * @return the result promise.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-promise.allsettled">Promise.allSettled() - ECMA</a>
+   */
+  @Nonnull
+  public static native <V> Promise<JsArray<AllSettledResult<V>>> allSettled( @Nonnull JsIterable<Promise<? extends V>> promises );
+
+  /**
    * The Promise.all() method takes an iterable of promises as an input, and returns a single Promise
    * that resolves to an array of the results of the input promises. This returned promise will resolve
-   * when all of the input's promises have resolved, or if the input iterable contains no promises. It
+   * when all of the input promises have resolved, or if the input iterable contains no promises. It
    * rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and
    * will reject with this first rejection message / error.
    *
@@ -59,7 +105,7 @@ public class Promise<T>
   /**
    * The Promise.all() method takes an iterable of promises as an input, and returns a single Promise
    * that resolves to an array of the results of the input promises. This returned promise will resolve
-   * when all of the input's promises have resolved, or if the input iterable contains no promises. It
+   * when all of the input promises have resolved, or if the input iterable contains no promises. It
    * rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and
    * will reject with this first rejection message / error.
    *
@@ -108,7 +154,7 @@ public class Promise<T>
   public static native <V> Promise<V> any( @Nonnull JsIterable<Promise<? extends V>> promises );
 
   /**
-   * The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+   * The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in the iterable fulfills or rejects, with the value or reason from that promise.
    *
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
@@ -125,7 +171,7 @@ public class Promise<T>
   }
 
   /**
-   * The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+   * The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in the iterable fulfills or rejects, with the value or reason from that promise.
    *
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
@@ -198,7 +244,7 @@ public class Promise<T>
 
   /**
    * Appends the fulfillment handler to the promise, and returns a new promise resolving to a void value.
-   * This is an affordance added to simplify integration with a java-esque library and is equivalent to a
+   * This is an affordance added to simplify integration with a java-like library and is equivalent to a
    * javascript then method that returns undefined.
    *
    * @param onAccept the callback function called when the promise is fulfilled.
@@ -239,12 +285,12 @@ public class Promise<T>
                                      @Nullable OnRejectedCallback<? extends V> onRejected );
 
   /**
-   * The finally() method returns a Promise. When the promise is settled, i.e either fulfilled or rejected,
+   * The finally() method returns a Promise. When the promise is settled, i.e. either fulfilled or rejected,
    * the specified callback function is executed. This provides a way for code to be run whether the promise
    * was fulfilled successfully or rejected once the Promise has been dealt with.
    *
    * @param onSettle a callback function called when the Promise is settled.
-   * @return a Promise with the finally handler set to the specified callback.
+   * @return a Promise with the "finally" handler set to the specified callback.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">Promise.finally - MDN</a>
    */
   @JsMethod( name = "finally" )

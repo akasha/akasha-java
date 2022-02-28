@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The NodeIterator interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator">NodeIterator - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-nodeiterator">(DOM) # interface-nodeiterator</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-nodeiterator"># interface-nodeiterator</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

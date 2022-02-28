@@ -12,10 +12,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The MediaStreamTrackAudioSourceOptions dictionary is used when specifying options to the MediaStreamTrackAudioSourceNode() constructor.
+ * The MediaStreamTrackAudioSourceNode interface is a type of AudioNode which represents a source of audio data taken from a specific MediaStreamTrack obtained through the WebRTC or Media Capture and Streams APIs.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions">MediaStreamTrackAudioSourceOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamTrackAudioSourceOptions"># MediaStreamTrackAudioSourceOptions</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamTrackAudioSourceNode"># MediaStreamTrackAudioSourceNode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

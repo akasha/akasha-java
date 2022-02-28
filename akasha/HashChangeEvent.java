@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The HashChangeEvent interface represents events that fire when the fragment identifier of the URL has changed.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent">HashChangeEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-hashchangeevent-interface">(HTML) # the-hashchangeevent-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-hashchangeevent-interface"># the-hashchangeevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

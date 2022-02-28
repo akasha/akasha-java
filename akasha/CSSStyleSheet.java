@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The CSSStyleSheet interface represents a single CSS stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, StyleSheet.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">CSSStyleSheet - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssstylesheet-interface">(CSSOM) # the-cssstylesheet-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssstylesheet-interface"># the-cssstylesheet-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

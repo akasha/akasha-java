@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLMapElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMapElement">HTMLMapElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/image-maps.html#htmlmapelement">(HTML) # htmlmapelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/image-maps.html#htmlmapelement"># htmlmapelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

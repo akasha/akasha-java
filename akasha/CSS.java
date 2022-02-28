@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The CSS interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS">CSS - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-conditional/#the-css-interface">(CSS Conditional 3) # the-css-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#namespacedef-css"># namespacedef-css</a>
  */
 @JsType(
     isNative = true,

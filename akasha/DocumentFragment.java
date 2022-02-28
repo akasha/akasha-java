@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The DocumentFragment interface represents a minimal document object that has no parent.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment">DocumentFragment - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment">(DOM) # interface-documentfragment</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-documentfragment"># interface-documentfragment</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

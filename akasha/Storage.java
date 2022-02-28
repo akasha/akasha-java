@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">Storage - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#storage">(HTML) # storage</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/webstorage.html#storage"># storage</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

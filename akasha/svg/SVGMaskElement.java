@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGMaskElement interface provides access to the properties of &lt;mask&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement">SVGMaskElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/css-masking/#InterfaceSVGMaskElement">(CSS Masking 1) # InterfaceSVGMaskElement</a>
+ * @see <a href="https://drafts.fxtf.org/css-masking/#InterfaceSVGMaskElement"># InterfaceSVGMaskElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

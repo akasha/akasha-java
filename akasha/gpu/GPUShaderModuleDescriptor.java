@@ -39,6 +39,14 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   void setCode(@WGSL @JsNonNull String code);
 
   @JsProperty(
+      name = "hints"
+  )
+  JsPropertyMap<GPUShaderModuleCompilationHint> hints();
+
+  @JsProperty
+  void setHints(@JsNonNull JsPropertyMap<GPUShaderModuleCompilationHint> hints);
+
+  @JsProperty(
       name = "sourceMap"
   )
   JsObject sourceMap();
@@ -53,6 +61,13 @@ public interface GPUShaderModuleDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUShaderModuleDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder hints(@Nonnull final JsPropertyMap<GPUShaderModuleCompilationHint> hints) {
+      setHints( hints );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder sourceMap(@Nonnull final JsObject sourceMap) {

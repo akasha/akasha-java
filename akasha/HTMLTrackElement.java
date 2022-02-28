@@ -13,7 +13,7 @@ import jsinterop.base.Js;
  * The HTMLTrackElement interface represents an HTML &lt;track&gt; element within the DOM. This element can be used as a child of either &lt;audio&gt; or &lt;video&gt; to specify a text track containing information such as closed captions or subtitles.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement">HTMLTrackElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#htmltrackelement">(HTML) # htmltrackelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#htmltrackelement"># htmltrackelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

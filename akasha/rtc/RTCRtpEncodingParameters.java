@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters">RTCRtpEncodingParameters - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters">(WebRTC 1.0) # dom-rtcrtpencodingparameters</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters"># dom-rtcrtpencodingparameters</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -99,7 +99,7 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
    * An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters">RTCRtpEncodingParameters - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters">(WebRTC 1.0) # dom-rtcrtpencodingparameters</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters"># dom-rtcrtpencodingparameters</a>
    */
   @JsType(
       isNative = true,

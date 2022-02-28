@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGLineElement interface provides access to the properties of &lt;line&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement">SVGLineElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGLineElement">(SVG) # InterfaceSVGLineElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGLineElement"># InterfaceSVGLineElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

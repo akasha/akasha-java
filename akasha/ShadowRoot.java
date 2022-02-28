@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot">ShadowRoot - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-shadowroot">(DOM) # interface-shadowroot</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-shadowroot"># interface-shadowroot</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#htmlelement">(HTML) # htmlelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#htmlelement"># htmlelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -146,6 +146,9 @@ public class HTMLElement extends Element {
    */
   @JsNullable
   public MouseEventHandler onauxclick;
+
+  @JsNullable
+  public EventHandler onbeforexrselect;
 
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.

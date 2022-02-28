@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
  * The Window.scroll() method scrolls the window to a particular place in the document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">(CSSOM View) # dom-window-scroll</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll"># dom-window-scroll</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -72,7 +72,7 @@ public interface ScrollToOptions extends ScrollOptions {
    * The Window.scroll() method scrolls the window to a particular place in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions">ScrollToOptions - MDN</a>
-   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">(CSSOM View) # dom-window-scroll</a>
+   * @see <a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll"># dom-window-scroll</a>
    */
   @JsType(
       isNative = true,

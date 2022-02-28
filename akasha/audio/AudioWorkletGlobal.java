@@ -57,7 +57,7 @@ public final class AudioWorkletGlobal {
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty">(ECMAScript) # sec-object.prototype.hasownproperty</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty"># sec-object.prototype.hasownproperty</a>
    */
   @HasNoSideEffects
   public static native boolean hasOwnProperty(@Nonnull Symbol prop);
@@ -66,7 +66,7 @@ public final class AudioWorkletGlobal {
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty">(ECMAScript) # sec-object.prototype.hasownproperty</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty"># sec-object.prototype.hasownproperty</a>
    */
   @HasNoSideEffects
   public static native boolean hasOwnProperty(@Nonnull String prop);
@@ -75,7 +75,7 @@ public final class AudioWorkletGlobal {
    * The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable and is the object's own property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">Object.propertyIsEnumerable - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable">(ECMAScript) # sec-object.prototype.propertyisenumerable</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable"># sec-object.prototype.propertyisenumerable</a>
    */
   @HasNoSideEffects
   public static native boolean propertyIsEnumerable(@Nonnull String prop);
@@ -84,7 +84,7 @@ public final class AudioWorkletGlobal {
    * The isPrototypeOf() method checks if an object exists in another object's prototype chain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf">Object.isPrototypeOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.isprototypeof">(ECMAScript) # sec-object.prototype.isprototypeof</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.isprototypeof"># sec-object.prototype.isprototypeof</a>
    */
   @HasNoSideEffects
   public static native boolean isPrototypeOf(@Nonnull JsObject obj);
@@ -93,7 +93,7 @@ public final class AudioWorkletGlobal {
    * The valueOf() method returns the primitive value of the specified object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.valueof">(ECMAScript) # sec-object.prototype.valueof</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.valueof"># sec-object.prototype.valueof</a>
    */
   @JsMethod(
       name = "valueOf"
@@ -105,7 +105,7 @@ public final class AudioWorkletGlobal {
    * The toString() method returns a string representing the object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.toString - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.tostring">(ECMAScript) # sec-object.prototype.tostring</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.tostring"># sec-object.prototype.tostring</a>
    */
   @JsMethod(
       name = "toString"

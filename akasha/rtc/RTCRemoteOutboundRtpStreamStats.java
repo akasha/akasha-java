@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats">RTCRemoteOutboundRtpStreamStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*">(WebRTC Statistics) # remoteoutboundrtpstats-dict*</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*"># remoteoutboundrtpstats-dict*</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -149,8 +149,8 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCRemoteOutboundRtpStreamStats>uncheckedCast( this ).setKind( kind );
+    default Step4 ssrc(int ssrc) {
+      Js.<RTCRemoteOutboundRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
       return Js.uncheckedCast( this );
     }
   }
@@ -163,8 +163,8 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder ssrc(int ssrc) {
-      Js.<RTCRemoteOutboundRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
+    default Builder kind(@Nonnull String kind) {
+      Js.<RTCRemoteOutboundRtpStreamStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }
@@ -173,7 +173,7 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats">RTCRemoteOutboundRtpStreamStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*">(WebRTC Statistics) # remoteoutboundrtpstats-dict*</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*"># remoteoutboundrtpstats-dict*</a>
    */
   @JsType(
       isNative = true,

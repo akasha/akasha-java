@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEBlendElement interface corresponds to the &lt;feBlend&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEBlendElement">SVGFEBlendElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEBlendElement">(Filter Effects 2) # InterfaceSVGFEBlendElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEBlendElement"># InterfaceSVGFEBlendElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

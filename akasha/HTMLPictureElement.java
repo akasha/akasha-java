@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The HTMLPictureElement interface represents a &lt;picture&gt; HTML element. It doesn't implement specific properties or methods.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLPictureElement">HTMLPictureElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlpictureelement">(HTML) # htmlpictureelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlpictureelement"># htmlpictureelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

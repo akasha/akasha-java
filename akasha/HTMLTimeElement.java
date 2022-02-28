@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;time&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement">HTMLTimeElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmltimeelement">(HTML) # htmltimeelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmltimeelement"># htmltimeelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

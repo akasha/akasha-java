@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The EvalError object indicates an error regarding the global eval() function. This exception is not thrown by JavaScript anymore, however the EvalError object remains for compatibility.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError">EvalError - MDN</a>
- * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-evalerror">(ECMAScript) # sec-native-error-types-used-in-this-standard-evalerror</a>
+ * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-evalerror"># sec-native-error-types-used-in-this-standard-evalerror</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

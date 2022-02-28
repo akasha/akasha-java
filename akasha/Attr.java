@@ -9,10 +9,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The Attr interface represents one of a DOM element's attributes as an object. In most DOM methods, you will directly retrieve the attribute as a string (e.g., Element.getAttribute()), but certain functions (e.g., Element.getAttributeNode()) or means of iterating return Attr types.
+ * The Attr interface represents one of an element's attributes as an object. In most situations, you will directly retrieve the attribute value as a string (e.g., Element.getAttribute()), but certain functions (e.g., Element.getAttributeNode()) or means of iterating return Attr instances.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr">Attr - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-attr">(DOM) # interface-attr</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-attr"># interface-attr</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

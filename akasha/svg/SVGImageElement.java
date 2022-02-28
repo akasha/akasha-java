@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The SVGImageElement interface corresponds to the &lt;image&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement">SVGImageElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/embedded.html#InterfaceSVGImageElement">(SVG) # InterfaceSVGImageElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/embedded.html#InterfaceSVGImageElement"># InterfaceSVGImageElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
  * The Event interface represents an event which takes place in the DOM.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-event">(DOM) # interface-event</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-event"># interface-event</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

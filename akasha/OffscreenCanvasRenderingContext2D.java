@@ -28,7 +28,7 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   public StringOrCanvasGradientOrCanvasPatternUnion fillStyle;
 
   @JsNonNull
-  public String filter;
+  public StringOrCanvasFilterUnion filter;
 
   @JsNonNull
   public String font;
@@ -56,7 +56,8 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
-  public double letterSpacing;
+  @JsNonNull
+  public String letterSpacing;
 
   @JsNonNull
   @CanvasLineCap
@@ -96,7 +97,8 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   @CanvasTextRendering
   public String textRendering;
 
-  public double wordSpacing;
+  @JsNonNull
+  public String wordSpacing;
 
   protected OffscreenCanvasRenderingContext2D() {
   }
@@ -281,6 +283,10 @@ public class OffscreenCanvasRenderingContext2D extends JsObject implements Offsc
   public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
 
   public native void rect(double x, double y, double w, double h);
+
+  public native void roundRect(double x, double y, double w, double h, double radii);
+
+  public native void roundRect(double x, double y, double w, double h, @Nonnull DOMPointInit radii);
 
   public native void roundRect(double x, double y, double w, double h,
       @Nonnull JsArray<UnrestrictedDoubleOrDOMPointInitUnion> radii);

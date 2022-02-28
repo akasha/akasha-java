@@ -23,7 +23,7 @@ public @interface GPUFeatureName {
   String depth32float_stencil8 = "depth32float-stencil8";
 
   @Nonnull
-  String pipeline_statistics_query = "pipeline-statistics-query";
+  String indirect_first_instance = "indirect-first-instance";
 
   @Nonnull
   String texture_compression_astc = "texture-compression-astc";
@@ -52,7 +52,7 @@ public @interface GPUFeatureName {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUFeatureName.depth_clip_control.equals( value ) || GPUFeatureName.depth24unorm_stencil8.equals( value ) || GPUFeatureName.depth32float_stencil8.equals( value ) || GPUFeatureName.pipeline_statistics_query.equals( value ) || GPUFeatureName.texture_compression_astc.equals( value ) || GPUFeatureName.texture_compression_bc.equals( value ) || GPUFeatureName.texture_compression_etc2.equals( value ) || GPUFeatureName.timestamp_query.equals( value );
+      return GPUFeatureName.depth_clip_control.equals( value ) || GPUFeatureName.depth24unorm_stencil8.equals( value ) || GPUFeatureName.depth32float_stencil8.equals( value ) || GPUFeatureName.indirect_first_instance.equals( value ) || GPUFeatureName.texture_compression_astc.equals( value ) || GPUFeatureName.texture_compression_bc.equals( value ) || GPUFeatureName.texture_compression_etc2.equals( value ) || GPUFeatureName.timestamp_query.equals( value );
     }
   }
 }

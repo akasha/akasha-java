@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGLinearGradientElement interface corresponds to the &lt;linearGradient&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement">SVGLinearGradientElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGLinearGradientElement">(SVG) # InterfaceSVGLinearGradientElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGLinearGradientElement"># InterfaceSVGLinearGradientElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

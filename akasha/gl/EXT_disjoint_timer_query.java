@@ -14,7 +14,7 @@ import jsinterop.base.Any;
  * The EXT_disjoint_timer_query extension is part of the WebGL API and provides a way to measure the duration of a set of GL commands, without stalling the rendering pipeline.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_disjoint_timer_query">EXT_disjoint_timer_query - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/">(WebGL EXT_disjoint_timer_query Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/">WebGL EXT_disjoint_timer_query Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

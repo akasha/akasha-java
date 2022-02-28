@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement">(HTML) # htmlvideoelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement"># htmlvideoelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

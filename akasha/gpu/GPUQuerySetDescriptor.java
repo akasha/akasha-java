@@ -1,6 +1,5 @@
 package akasha.gpu;
 
-import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsNonNull;
@@ -46,19 +45,6 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setCount(int count);
 
-  @JsProperty(
-      name = "pipelineStatistics"
-  )
-  JsArray<String> pipelineStatistics();
-
-  @JsProperty
-  void setPipelineStatistics(@JsNonNull JsArray<String> pipelineStatistics);
-
-  @JsOverlay
-  default void setPipelineStatistics(@Nonnull final String... pipelineStatistics) {
-    setPipelineStatistics( Js.<JsArray<String>>uncheckedCast( pipelineStatistics ) );
-  }
-
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -80,20 +66,6 @@ public interface GPUQuerySetDescriptor extends GPUObjectDescriptorBase {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUQuerySetDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder pipelineStatistics(@Nonnull final JsArray<String> pipelineStatistics) {
-      setPipelineStatistics( pipelineStatistics );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder pipelineStatistics(@Nonnull final String... pipelineStatistics) {
-      setPipelineStatistics( pipelineStatistics );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder label(@Nonnull final String label) {

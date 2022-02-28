@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The ProgressEvent interface represents events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an &lt;img&gt;, &lt;audio&gt;, &lt;video&gt;, &lt;style&gt; or &lt;link&gt;).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent">ProgressEvent - MDN</a>
- * @see <a href="https://xhr.spec.whatwg.org/#interface-progressevent">(XMLHttpRequest) # interface-progressevent</a>
+ * @see <a href="https://xhr.spec.whatwg.org/#interface-progressevent"># interface-progressevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

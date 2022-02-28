@@ -30,6 +30,27 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return Js.uncheckedCast( $rtcInboundRtpStreamStats );
   }
 
+  /**
+   * The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId">RTCInboundRtpStreamStats.receiverId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-receiverid">RTCInboundRtpStreamStats.receiverId - Identifiers for WebRTC's Statistics API</a>
+   */
+  @JsProperty(
+      name = "receiverId"
+  )
+  @JsNonNull
+  String receiverId();
+
+  /**
+   * The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId">RTCInboundRtpStreamStats.receiverId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-receiverid">RTCInboundRtpStreamStats.receiverId - Identifiers for WebRTC's Statistics API</a>
+   */
+  @JsProperty
+  void setReceiverId(@JsNonNull String receiverId);
+
   @JsProperty(
       name = "audioLevel"
   )
@@ -411,27 +432,6 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   void setQpSum(int qpSum);
 
   /**
-   * The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId">RTCInboundRtpStreamStats.receiverId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-receiverid">RTCInboundRtpStreamStats.receiverId - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsProperty(
-      name = "receiverId"
-  )
-  @JsNonNull
-  String receiverId();
-
-  /**
-   * The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId">RTCInboundRtpStreamStats.receiverId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-receiverid">RTCInboundRtpStreamStats.receiverId - Identifiers for WebRTC's Statistics API</a>
-   */
-  @JsProperty
-  void setReceiverId(@JsNonNull String receiverId);
-
-  /**
    * The remoteId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCRemoteOutboundRtpStreamStats object representing the remote peer's RTCRtpSender which is sending the media to the local peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/remoteId">RTCInboundRtpStreamStats.remoteId - MDN</a>
@@ -639,8 +639,8 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCInboundRtpStreamStats>uncheckedCast( this ).setKind( kind );
+    default Step4 ssrc(int ssrc) {
+      Js.<RTCInboundRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
       return Js.uncheckedCast( this );
     }
   }
@@ -653,8 +653,8 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Step5 ssrc(int ssrc) {
-      Js.<RTCInboundRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
+    default Step5 kind(@Nonnull String kind) {
+      Js.<RTCInboundRtpStreamStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }

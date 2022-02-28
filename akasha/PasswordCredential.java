@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The interface of the Credential Management API provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the credential member of the init object for global fetch().
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential">PasswordCredential - MDN</a>
- * @see <a href="https://w3c.github.io/webappsec-credential-management/#passwordcredential-interface">(Credential Management 1) # passwordcredential-interface</a>
+ * @see <a href="https://w3c.github.io/webappsec-credential-management/#passwordcredential-interface"># passwordcredential-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

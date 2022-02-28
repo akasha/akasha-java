@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
  * The RTCRtpReceiver interface of the WebRTC API manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver">RTCRtpReceiver - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpreceiver-interface">(WebRTC 1.0) # rtcrtpreceiver-interface</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#rtcrtpreceiver-interface"># rtcrtpreceiver-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

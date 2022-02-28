@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The Plugin interface provides information about a browser plugin.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Plugin">Plugin - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#dom-plugin">(HTML) # dom-plugin</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#dom-plugin"># dom-plugin</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

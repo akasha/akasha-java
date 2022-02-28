@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder name(@PermissionName @Nonnull final String name) {
+  static Builder name(@Nonnull final String name) {
     final Builder $pushPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
     $pushPermissionDescriptor.setName( name );
     return Js.uncheckedCast( $pushPermissionDescriptor );

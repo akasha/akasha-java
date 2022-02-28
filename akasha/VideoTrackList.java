@@ -15,7 +15,7 @@ import jsinterop.base.JsArrayLike;
  * The VideoTrackList interface is used to represent a list of the video tracks contained within a &lt;video&gt; element, with each track represented by a separate VideoTrack object in the list.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList">VideoTrackList - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects">(HTML) # audiotracklist-and-videotracklist-objects</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects"># audiotracklist-and-videotracklist-objects</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

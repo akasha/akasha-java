@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation">Animation - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations/#the-animation-interface">(Web Animations 2) # the-animation-interface</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/#the-animation-interface"># the-animation-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

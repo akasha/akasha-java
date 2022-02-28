@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The CaretPosition interface represents the caret position, an indicator for the text insertion point. You can get a CaretPosition using the Document.caretPositionFromPoint() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition">CaretPosition - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#caret-position">(CSSOM View) # caret-position</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#caret-position"># caret-position</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The AnimationPlaybackEvent interface of the Web Animations API represents animation events.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent">AnimationPlaybackEvent - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations/#the-animationplaybackevent-interface">(Web Animations 2) # the-animationplaybackevent-interface</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/#the-animationplaybackevent-interface"># the-animationplaybackevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

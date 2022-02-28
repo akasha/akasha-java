@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTableCellElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement">HTMLTableCellElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablecellelement">(HTML) # htmltablecellelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablecellelement"># htmltablecellelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent">NotificationEvent - MDN</a>
- * @see <a href="https://notifications.spec.whatwg.org/#notificationevent">(Notifications API) # notificationevent</a>
+ * @see <a href="https://notifications.spec.whatwg.org/#notificationevent"># notificationevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -14,6 +14,9 @@ import org.jetbrains.annotations.ApiStatus;
 )
 public @interface GPULoadOp {
   @Nonnull
+  String clear = "clear";
+
+  @Nonnull
   String load = "load";
 
   final class Util {
@@ -31,7 +34,7 @@ public @interface GPULoadOp {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPULoadOp.load.equals( value );
+      return GPULoadOp.clear.equals( value ) || GPULoadOp.load.equals( value );
     }
   }
 }

@@ -17,9 +17,6 @@ public @interface GPUQueryType {
   String occlusion = "occlusion";
 
   @Nonnull
-  String pipeline_statistics = "pipeline-statistics";
-
-  @Nonnull
   String timestamp = "timestamp";
 
   final class Util {
@@ -37,7 +34,7 @@ public @interface GPUQueryType {
     }
 
     public static boolean isValid(@Nonnull final String value) {
-      return GPUQueryType.occlusion.equals( value ) || GPUQueryType.pipeline_statistics.equals( value ) || GPUQueryType.timestamp.equals( value );
+      return GPUQueryType.occlusion.equals( value ) || GPUQueryType.timestamp.equals( value );
     }
   }
 }

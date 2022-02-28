@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEDistantLightElement interface corresponds to the &lt;feDistantLight&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDistantLightElement">SVGFEDistantLightElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDistantLightElement">(Filter Effects 2) # InterfaceSVGFEDistantLightElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDistantLightElement"># InterfaceSVGFEDistantLightElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,9 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The MediaStreamConstraints dictionary is used when calling getUserMedia() to specify what kinds of tracks should be included in the returned MediaStream, and, optionally, to establish constraints for those tracks' settings.
+ * The MediaDevices.getUserMedia() method prompts the user for permission to use a media input which produces a MediaStream with tracks containing the requested types of media.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamConstraints">MediaStreamConstraints - MDN</a>
+ * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia"># dom-mediadevices-getusermedia</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -73,9 +74,10 @@ public interface MediaStreamConstraints {
   void setPeerIdentity(@JsNonNull String peerIdentity);
 
   /**
-   * The MediaStreamConstraints dictionary is used when calling getUserMedia() to specify what kinds of tracks should be included in the returned MediaStream, and, optionally, to establish constraints for those tracks' settings.
+   * The MediaDevices.getUserMedia() method prompts the user for permission to use a media input which produces a MediaStream with tracks containing the requested types of media.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamConstraints">MediaStreamConstraints - MDN</a>
+   * @see <a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia"># dom-mediadevices-getusermedia</a>
    */
   @JsType(
       isNative = true,

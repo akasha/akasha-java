@@ -121,6 +121,19 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
   @JsProperty
   void setSampleCount(int sampleCount);
 
+  @JsProperty(
+      name = "viewFormats"
+  )
+  JsArray<String> viewFormats();
+
+  @JsProperty
+  void setViewFormats(@JsNonNull JsArray<String> viewFormats);
+
+  @JsOverlay
+  default void setViewFormats(@Nonnull final String... viewFormats) {
+    setViewFormats( Js.<JsArray<String>>uncheckedCast( viewFormats ) );
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -174,6 +187,20 @@ public interface GPUTextureDescriptor extends GPUObjectDescriptorBase {
     @Nonnull
     default Builder sampleCount(final int sampleCount) {
       setSampleCount( sampleCount );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder viewFormats(@Nonnull final JsArray<String> viewFormats) {
+      setViewFormats( viewFormats );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder viewFormats(@Nonnull final String... viewFormats) {
+      setViewFormats( viewFormats );
       return this;
     }
 

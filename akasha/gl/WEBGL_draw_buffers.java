@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_draw_buffers extension is part of the WebGL API and enables a fragment shader to write to several textures, which is useful for deferred shading, for example.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_draw_buffers">WEBGL_draw_buffers - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">(WebGL WEBGL_draw_buffers Khronos Ratified Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">WebGL WEBGL_draw_buffers Khronos Ratified Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

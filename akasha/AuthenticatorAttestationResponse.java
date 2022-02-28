@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The AuthenticatorAttestationResponse interface of the Web Authentication API is returned by CredentialsContainer.create() when a PublicKeyCredential is passed, and provides a cryptographic root of trust for the new key pair that has been generated. This response should be sent to the relying party's server to complete the creation of the credential.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#authenticatorattestationresponse">(Web Authentication) # authenticatorattestationresponse</a>
+ * @see <a href="https://w3c.github.io/webauthn/#authenticatorattestationresponse"># authenticatorattestationresponse</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

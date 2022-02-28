@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTableElement interface provides special properties and methods (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement">HTMLTableElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltableelement">(HTML) # htmltableelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltableelement"># htmltableelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

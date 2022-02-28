@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement">(HTML) # htmliframeelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement"># htmliframeelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The VideoTrack interface represents a single video track from a &lt;video&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack">VideoTrack - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#videotrack">(HTML) # videotrack</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#videotrack"># videotrack</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

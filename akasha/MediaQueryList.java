@@ -14,7 +14,7 @@ import jsinterop.base.Js;
  * A MediaQueryList object stores information on a media query applied to a document, with support for both immediate and event-driven matching against the state of the document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList">MediaQueryList - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface">(CSSOM View) # the-mediaquerylist-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface"># the-mediaquerylist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

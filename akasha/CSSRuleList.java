@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * A CSSRuleList represents an ordered collection of read-only CSSRule objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList">CSSRuleList - MDN</a>
- * @see <a href="https://drafts.csswg.org/cssom/#the-cssrulelist-interface">(CSSOM) # the-cssrulelist-interface</a>
+ * @see <a href="https://drafts.csswg.org/cssom/#the-cssrulelist-interface"># the-cssrulelist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

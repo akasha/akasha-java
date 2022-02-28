@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFESpecularLightingElement interface corresponds to the &lt;feSpecularLighting&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement">SVGFESpecularLightingElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpecularLightingElement">(Filter Effects 2) # InterfaceSVGFESpecularLightingElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpecularLightingElement"># InterfaceSVGFESpecularLightingElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

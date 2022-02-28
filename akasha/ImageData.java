@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">ImageData - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">(HTML) # imagedata</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata"># imagedata</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
  * The Headers interface of the Fetch API allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers">Headers - MDN</a>
- * @see <a href="https://fetch.spec.whatwg.org/#headers-class">(Fetch) # headers-class</a>
+ * @see <a href="https://fetch.spec.whatwg.org/#headers-class"># headers-class</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

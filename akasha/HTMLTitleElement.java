@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The HTMLTitleElement interface contains the title for a document. This element inherits all of the properties and methods of the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTitleElement">HTMLTitleElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmltitleelement">(HTML) # htmltitleelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmltitleelement"># htmltitleelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

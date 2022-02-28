@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
  * The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to &quot;multipart/form-data&quot;.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData - MDN</a>
- * @see <a href="https://xhr.spec.whatwg.org/#interface-formdata">(XMLHttpRequest) # interface-formdata</a>
+ * @see <a href="https://xhr.spec.whatwg.org/#interface-formdata"># interface-formdata</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

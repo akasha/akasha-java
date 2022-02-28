@@ -25,7 +25,7 @@ import jsinterop.base.Js;
  * The DedicatedWorkerGlobalScope object (the Worker global scope) is accessible through the self keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the JavaScript Reference. See also: Functions available to workers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope">DedicatedWorkerGlobalScope - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-dedicatedworkerglobalscope-interface">(HTML) # dedicated-workers-and-the-dedicatedworkerglobalscope-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-dedicatedworkerglobalscope-interface"># dedicated-workers-and-the-dedicatedworkerglobalscope-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -417,7 +417,7 @@ public final class DedicatedWorkerGlobal {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearInterval">WorkerGlobalScope.clearInterval - MDN</a>
    */
-  public static native void clearInterval(int handle);
+  public static native void clearInterval(int id);
 
   /**
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
@@ -431,7 +431,7 @@ public final class DedicatedWorkerGlobal {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearTimeout">WorkerGlobalScope.clearTimeout - MDN</a>
    */
-  public static native void clearTimeout(int handle);
+  public static native void clearTimeout(int id);
 
   /**
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().
@@ -854,7 +854,7 @@ public final class DedicatedWorkerGlobal {
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty">(ECMAScript) # sec-object.prototype.hasownproperty</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty"># sec-object.prototype.hasownproperty</a>
    */
   @HasNoSideEffects
   public static native boolean hasOwnProperty(@Nonnull Symbol prop);
@@ -863,7 +863,7 @@ public final class DedicatedWorkerGlobal {
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty">(ECMAScript) # sec-object.prototype.hasownproperty</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.hasownproperty"># sec-object.prototype.hasownproperty</a>
    */
   @HasNoSideEffects
   public static native boolean hasOwnProperty(@Nonnull String prop);
@@ -872,7 +872,7 @@ public final class DedicatedWorkerGlobal {
    * The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable and is the object's own property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">Object.propertyIsEnumerable - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable">(ECMAScript) # sec-object.prototype.propertyisenumerable</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable"># sec-object.prototype.propertyisenumerable</a>
    */
   @HasNoSideEffects
   public static native boolean propertyIsEnumerable(@Nonnull String prop);
@@ -881,7 +881,7 @@ public final class DedicatedWorkerGlobal {
    * The isPrototypeOf() method checks if an object exists in another object's prototype chain.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf">Object.isPrototypeOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.isprototypeof">(ECMAScript) # sec-object.prototype.isprototypeof</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.isprototypeof"># sec-object.prototype.isprototypeof</a>
    */
   @HasNoSideEffects
   public static native boolean isPrototypeOf(@Nonnull JsObject obj);
@@ -890,7 +890,7 @@ public final class DedicatedWorkerGlobal {
    * The valueOf() method returns the primitive value of the specified object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.valueof">(ECMAScript) # sec-object.prototype.valueof</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.valueof"># sec-object.prototype.valueof</a>
    */
   @JsMethod(
       name = "valueOf"
@@ -902,7 +902,7 @@ public final class DedicatedWorkerGlobal {
    * The toString() method returns a string representing the object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.toString - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.tostring">(ECMAScript) # sec-object.prototype.tostring</a>
+   * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.tostring"># sec-object.prototype.tostring</a>
    */
   @JsMethod(
       name = "toString"

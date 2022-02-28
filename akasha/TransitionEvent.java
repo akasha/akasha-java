@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The TransitionEvent interface represents events providing information related to transitions.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent">TransitionEvent - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-transitions/#interface-transitionevent">(CSS Transitions 2) # interface-transitionevent</a>
+ * @see <a href="https://drafts.csswg.org/css-transitions/#interface-transitionevent"># interface-transitionevent</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

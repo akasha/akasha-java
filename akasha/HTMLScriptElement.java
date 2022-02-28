@@ -5,13 +5,14 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
  * HTML &lt;script&gt; elements expose the HTMLScriptElement interface, which provides special properties and methods for manipulating the behavior and execution of &lt;script&gt; elements (beyond the inherited HTMLElement interface).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlscriptelement">(HTML) # htmlscriptelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlscriptelement"># htmlscriptelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -64,6 +65,12 @@ public class HTMLScriptElement extends HTMLElement implements HTMLOrSVGScriptEle
 
   protected HTMLScriptElement() {
   }
+
+  @JsProperty(
+      name = "blocking"
+  )
+  @Nonnull
+  public native DOMTokenList blocking();
 
   public static native boolean supports(@Nonnull String type);
 }

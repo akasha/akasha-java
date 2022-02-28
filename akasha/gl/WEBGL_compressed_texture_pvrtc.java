@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_compressed_texture_pvrtc extension is part of the WebGL API and exposes four PVRTC compressed texture formats.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_pvrtc">WEBGL_compressed_texture_pvrtc - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/">(WebGL WEBGL_compressed_texture_pvrtc Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/">WebGL WEBGL_compressed_texture_pvrtc Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

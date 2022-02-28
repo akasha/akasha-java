@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WebGL API's EXT_float_blend extension allows blending and draw buffers with 32-bit floating-point components.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_float_blend">EXT_float_blend - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/">(WebGL EXT_float_blend Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/">WebGL EXT_float_blend Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The BluetoothRemoteGattCharacteristic interface of the Web Bluetooth API represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral&rsquo;s service.
+ * The BluetoothRemoteGattCharacteristic interface of the Web Bluetooth API represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral's service.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic">BluetoothRemoteGATTCharacteristic - MDN</a>
  * @see <a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothgattcharacteristic-interface"># bluetoothgattcharacteristic-interface</a>

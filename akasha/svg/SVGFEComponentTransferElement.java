@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEComponentTransferElement interface corresponds to the &lt;feComponentTransfer&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEComponentTransferElement">SVGFEComponentTransferElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEComponentTransferElement">(Filter Effects 2) # InterfaceSVGFEComponentTransferElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEComponentTransferElement"># InterfaceSVGFEComponentTransferElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

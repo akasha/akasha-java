@@ -11,10 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
+ * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect"># dom-keyframeeffect-keyframeeffect</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -214,10 +214,10 @@ public interface EffectTiming {
   void setIterations(double iterations);
 
   /**
-   * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming">EffectTiming - MDN</a>
-   * @see <a href="https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries">(Web Animations 2) # the-effecttiming-dictionaries</a>
+   * @see <a href="https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect"># dom-keyframeeffect-keyframeeffect</a>
    */
   @JsType(
       isNative = true,

@@ -109,8 +109,8 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCRemoteInboundRtpStreamStats>uncheckedCast( this ).setKind( kind );
+    default Step4 ssrc(int ssrc) {
+      Js.<RTCRemoteInboundRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
       return Js.uncheckedCast( this );
     }
   }
@@ -123,8 +123,8 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder ssrc(int ssrc) {
-      Js.<RTCRemoteInboundRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
+    default Builder kind(@Nonnull String kind) {
+      Js.<RTCRemoteInboundRtpStreamStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }

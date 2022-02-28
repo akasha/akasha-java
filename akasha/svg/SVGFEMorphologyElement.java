@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEMorphologyElement interface corresponds to the &lt;feMorphology&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMorphologyElement">SVGFEMorphologyElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEMorphologyElement">(Filter Effects 2) # InterfaceSVGFEMorphologyElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEMorphologyElement"># InterfaceSVGFEMorphologyElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -38,38 +38,14 @@ public interface GPURenderPassColorAttachment {
   void setView(@JsNonNull GPUTextureView view);
 
   @JsProperty(
-      name = "loadValue"
+      name = "loadOp"
   )
+  @GPULoadOp
   @JsNonNull
-  GPULoadOpOrGPUColorUnion loadValue();
+  String loadOp();
 
   @JsProperty
-  void setLoadValue(@JsNonNull GPULoadOpOrGPUColorUnion loadValue);
-
-  @JsOverlay
-  default void setLoadValue(@Nonnull final String loadValue) {
-    setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
-  }
-
-  @JsOverlay
-  default void setLoadValue(@Nonnull final GPUColor loadValue) {
-    setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
-  }
-
-  @JsOverlay
-  default void setLoadValue(@Nonnull final JsArray<Double> loadValue) {
-    setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
-  }
-
-  @JsOverlay
-  default void setLoadValue(@Nonnull final GPUColorDict loadValue) {
-    setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
-  }
-
-  @JsOverlay
-  default void setLoadValue(@Nonnull final double... loadValue) {
-    setLoadValue( GPULoadOpOrGPUColorUnion.of( loadValue ) );
-  }
+  void setLoadOp(@GPULoadOp @JsNonNull String loadOp);
 
   @JsProperty(
       name = "storeOp"
@@ -80,6 +56,29 @@ public interface GPURenderPassColorAttachment {
 
   @JsProperty
   void setStoreOp(@GPUStoreOp @JsNonNull String storeOp);
+
+  @JsProperty(
+      name = "clearValue"
+  )
+  GPUColor clearValue();
+
+  @JsProperty
+  void setClearValue(@JsNonNull GPUColor clearValue);
+
+  @JsOverlay
+  default void setClearValue(@Nonnull final JsArray<Double> clearValue) {
+    setClearValue( GPUColor.of( clearValue ) );
+  }
+
+  @JsOverlay
+  default void setClearValue(@Nonnull final GPUColorDict clearValue) {
+    setClearValue( GPUColor.of( clearValue ) );
+  }
+
+  @JsOverlay
+  default void setClearValue(@Nonnull final double... clearValue) {
+    setClearValue( GPUColor.of( clearValue ) );
+  }
 
   @JsProperty(
       name = "resolveTarget"
@@ -97,43 +96,8 @@ public interface GPURenderPassColorAttachment {
   interface Step1 {
     @JsOverlay
     @Nonnull
-    default Step2 loadValue(@Nonnull GPULoadOpOrGPUColorUnion loadValue) {
-      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
-      return Js.uncheckedCast( this );
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Step2 loadValue(@Nonnull String loadValue) {
-      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
-      return Js.uncheckedCast( this );
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Step2 loadValue(@Nonnull GPUColor loadValue) {
-      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
-      return Js.uncheckedCast( this );
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Step2 loadValue(@Nonnull JsArray<Double> loadValue) {
-      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
-      return Js.uncheckedCast( this );
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Step2 loadValue(@Nonnull GPUColorDict loadValue) {
-      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
-      return Js.uncheckedCast( this );
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Step2 loadValue(@Nonnull double... loadValue) {
-      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadValue( loadValue );
+    default Step2 loadOp(@GPULoadOp @Nonnull String loadOp) {
+      Js.<GPURenderPassColorAttachment>uncheckedCast( this ).setLoadOp( loadOp );
       return Js.uncheckedCast( this );
     }
   }
@@ -159,6 +123,34 @@ public interface GPURenderPassColorAttachment {
   )
   @ApiStatus.Experimental
   interface Builder extends GPURenderPassColorAttachment {
+    @JsOverlay
+    @Nonnull
+    default Builder clearValue(@Nonnull final GPUColor clearValue) {
+      setClearValue( clearValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clearValue(@Nonnull final JsArray<Double> clearValue) {
+      setClearValue( clearValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clearValue(@Nonnull final GPUColorDict clearValue) {
+      setClearValue( clearValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder clearValue(@Nonnull final double... clearValue) {
+      setClearValue( clearValue );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder resolveTarget(@Nonnull final GPUTextureView resolveTarget) {

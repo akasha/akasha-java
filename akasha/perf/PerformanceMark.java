@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of &quot;mark&quot;. Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark">PerformanceMark - MDN</a>
- * @see <a href="https://w3c.github.io/user-timing/#performancemark">(User Timing 2) # performancemark</a>
+ * @see <a href="https://w3c.github.io/user-timing/#performancemark"># performancemark</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

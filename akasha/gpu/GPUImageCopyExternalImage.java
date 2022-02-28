@@ -38,6 +38,14 @@ public interface GPUImageCopyExternalImage {
   void setSource(@JsNonNull GPUImageCopyExternalImageSource source);
 
   @JsProperty(
+      name = "flipY"
+  )
+  boolean flipY();
+
+  @JsProperty
+  void setFlipY(boolean flipY);
+
+  @JsProperty(
       name = "origin"
   )
   GPUOrigin2D origin();
@@ -67,6 +75,13 @@ public interface GPUImageCopyExternalImage {
   )
   @ApiStatus.Experimental
   interface Builder extends GPUImageCopyExternalImage {
+    @JsOverlay
+    @Nonnull
+    default Builder flipY(final boolean flipY) {
+      setFlipY( flipY );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder origin(@Nonnull final GPUOrigin2D origin) {

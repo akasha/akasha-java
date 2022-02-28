@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The AuthenticatorAssertionResponse interface of the Web Authentication API is returned by CredentialsContainer.get() when a PublicKeyCredential is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse">AuthenticatorAssertionResponse - MDN</a>
- * @see <a href="https://w3c.github.io/webauthn/#iface-authenticatorassertionresponse">(Web Authentication) # iface-authenticatorassertionresponse</a>
+ * @see <a href="https://w3c.github.io/webauthn/#iface-authenticatorassertionresponse"># iface-authenticatorassertionresponse</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

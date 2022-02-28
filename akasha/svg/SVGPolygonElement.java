@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGPolygonElement interface provides access to the properties of &lt;polygon&gt; elements, as well as methods to manipulate them.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPolygonElement">SVGPolygonElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGPolygonElement">(SVG) # InterfaceSVGPolygonElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGPolygonElement"># InterfaceSVGPolygonElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

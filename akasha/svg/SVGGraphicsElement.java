@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
  * The SVGGraphicsElement interface represents SVG elements whose primary purpose is to directly render graphics into a group.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement">SVGGraphicsElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGraphicsElement">(SVG) # InterfaceSVGGraphicsElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGraphicsElement"># InterfaceSVGGraphicsElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

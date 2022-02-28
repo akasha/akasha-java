@@ -1,7 +1,6 @@
 package akasha;
 
-import akasha.core.ArrayBuffer;
-import akasha.core.ArrayBufferView;
+import akasha.core.BufferSource;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -17,7 +16,7 @@ import jsinterop.base.Js;
  * The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface">(HTML) # the-websocket-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface"># the-websocket-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -209,7 +208,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">WebSocket: send - HTML Living Standard</a>
    */
-  public native void send(@Nonnull String data);
+  public native void send(@Nonnull BufferSource data);
 
   /**
    * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
@@ -225,15 +224,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">WebSocket: send - HTML Living Standard</a>
    */
-  public native void send(@Nonnull ArrayBuffer data);
-
-  /**
-   * The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
-   * @see <a href="https://html.spec.whatwg.org/multipage/#dom-websocket-send">WebSocket: send - HTML Living Standard</a>
-   */
-  public native void send(@Nonnull ArrayBufferView data);
+  public native void send(@Nonnull String data);
 
   @JsOverlay
   public final void addCloseListener(@Nonnull final CloseEventListener callback,
@@ -270,40 +261,6 @@ public class WebSocket extends EventTarget {
   }
 
   @JsOverlay
-  public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "message", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean useCapture) {
-    addEventListener( "message", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
-    addEventListener( "message", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "message", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
-      final boolean useCapture) {
-    removeEventListener( "message", Js.cast( callback ), useCapture );
-  }
-
-  @JsOverlay
-  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
-    removeEventListener( "message", Js.cast( callback ) );
-  }
-
-  @JsOverlay
   public final void addErrorListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "error", Js.cast( callback ), options );
@@ -335,6 +292,40 @@ public class WebSocket extends EventTarget {
   @JsOverlay
   public final void removeErrorListener(@Nonnull final EventListener callback) {
     removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "message", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "message", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
   }
 
   @JsOverlay

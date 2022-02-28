@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError">WebAssembly.RuntimeError - MDN</a>
  * @see <a href="https://webassembly.github.io/spec/js-api/#exceptiondef-runtimeerror"># exceptiondef-runtimeerror</a>
- * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard">(ECMAScript) # sec-native-error-types-used-in-this-standard</a>
+ * @see <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard"># sec-native-error-types-used-in-this-standard</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

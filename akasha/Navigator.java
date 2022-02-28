@@ -28,7 +28,7 @@ import org.jetbrains.annotations.ApiStatus;
  * The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object">(HTML) # the-navigator-object</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object"># the-navigator-object</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

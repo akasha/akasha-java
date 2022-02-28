@@ -12,10 +12,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor.
+ * The Web Audio API's MediaStreamAudioSourceNode() constructor creates and returns a new MediaStreamAudioSourceNode object which uses the first audio track of a given MediaStream as its source.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions">MediaStreamAudioSourceOptions - MDN</a>
- * @see <a href="https://webaudio.github.io/web-audio-api/#MediaStreamAudioSourceOptions"># MediaStreamAudioSourceOptions</a>
+ * @see <a href="https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourcenode-mediastreamaudiosourcenode"># dom-mediastreamaudiosourcenode-mediastreamaudiosourcenode</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

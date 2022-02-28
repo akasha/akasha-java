@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SubmitEvent interface defines the object used to represent an HTML form's submit event. This event is fired at the &lt;form&gt; when the form's submit action is invoked.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent">SubmitEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-submitevent-interface">(HTML) # the-submitevent-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-submitevent-interface"># the-submitevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

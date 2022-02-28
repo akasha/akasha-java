@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The AnimationEffect interface of the Web Animations API defines current and future animation effects like KeyframeEffect, which can be passed to Animation objects for playing, and KeyframeEffect (which is used by CSS Animations and Transitions).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect">AnimationEffect - MDN</a>
- * @see <a href="https://drafts.csswg.org/web-animations/#the-animationeffect-interface">(Web Animations 2) # the-animationeffect-interface</a>
+ * @see <a href="https://drafts.csswg.org/web-animations-1/#the-animationeffect-interface"># the-animationeffect-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

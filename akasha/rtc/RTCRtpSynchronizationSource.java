@@ -12,7 +12,7 @@ import jsinterop.base.JsPropertyMap;
  * The getSynchronizationSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one SSRC (synchronization source) identifier received by the current RTCRtpReceiver in the last ten seconds.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource">RTCRtpSynchronizationSource - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getsynchronizationsources">(WebRTC 1.0) # dom-rtcrtpreceiver-getsynchronizationsources</a>
+ * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getsynchronizationsources"># dom-rtcrtpreceiver-getsynchronizationsources</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -61,7 +61,7 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
    * The getSynchronizationSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one SSRC (synchronization source) identifier received by the current RTCRtpReceiver in the last ten seconds.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource">RTCRtpSynchronizationSource - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getsynchronizationsources">(WebRTC 1.0) # dom-rtcrtpreceiver-getsynchronizationsources</a>
+   * @see <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getsynchronizationsources"># dom-rtcrtpreceiver-getsynchronizationsources</a>
    */
   @JsType(
       isNative = true,

@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The OES_texture_half_float extension is part of the WebGL API and adds texture formats with 16- (aka half float) and 32-bit floating-point components.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_half_float">OES_texture_half_float - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_texture_half_float/">(WebGL OES_texture_half_float Khronos Ratified Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/OES_texture_half_float/">WebGL OES_texture_half_float Khronos Ratified Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

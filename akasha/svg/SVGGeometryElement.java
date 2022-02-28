@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement">SVGGeometryElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement">(SVG) # InterfaceSVGGeometryElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement"># InterfaceSVGGeometryElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

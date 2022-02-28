@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
  * The DOMImplementation interface represents an object providing methods which are not dependent on any particular document. Such an object is returned by the Document.implementation property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation">DOMImplementation - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-domimplementation">(DOM) # interface-domimplementation</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-domimplementation"># interface-domimplementation</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

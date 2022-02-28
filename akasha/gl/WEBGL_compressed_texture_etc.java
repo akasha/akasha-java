@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The WEBGL_compressed_texture_etc extension is part of the WebGL API and exposes 10 ETC/EAC compressed texture formats.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_etc">WEBGL_compressed_texture_etc - MDN</a>
- * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/">(WebGL WEBGL_compressed_texture_etc Extension)</a>
+ * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/">WebGL WEBGL_compressed_texture_etc Extension Specification</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

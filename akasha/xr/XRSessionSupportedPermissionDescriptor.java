@@ -1,7 +1,6 @@
 package akasha.xr;
 
 import akasha.PermissionDescriptor;
-import akasha.PermissionName;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsNonNull;
@@ -21,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface XRSessionSupportedPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder name(@PermissionName @Nonnull final String name) {
+  static Builder name(@Nonnull final String name) {
     final Builder $xrSessionSupportedPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
     $xrSessionSupportedPermissionDescriptor.setName( name );
     return Js.uncheckedCast( $xrSessionSupportedPermissionDescriptor );

@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-api">(HTML) # custom-elements-api</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-api"># custom-elements-api</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

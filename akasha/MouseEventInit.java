@@ -84,18 +84,18 @@ public interface MouseEventInit extends EventModifierInit {
   @JsProperty(
       name = "movementX"
   )
-  int movementX();
+  double movementX();
 
   @JsProperty
-  void setMovementX(int movementX);
+  void setMovementX(double movementX);
 
   @JsProperty(
       name = "movementY"
   )
-  int movementY();
+  double movementY();
 
   @JsProperty
-  void setMovementY(int movementY);
+  void setMovementY(double movementY);
 
   @JsType(
       isNative = true,
@@ -154,14 +154,14 @@ public interface MouseEventInit extends EventModifierInit {
 
     @JsOverlay
     @Nonnull
-    default Builder movementX(final int movementX) {
+    default Builder movementX(final double movementX) {
       setMovementX( movementX );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder movementY(final int movementY) {
+    default Builder movementY(final double movementY) {
       setMovementY( movementY );
       return this;
     }

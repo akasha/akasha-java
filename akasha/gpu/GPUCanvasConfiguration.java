@@ -98,6 +98,19 @@ public interface GPUCanvasConfiguration {
   @JsProperty
   void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
+  @JsProperty(
+      name = "viewFormats"
+  )
+  JsArray<String> viewFormats();
+
+  @JsProperty
+  void setViewFormats(@JsNonNull JsArray<String> viewFormats);
+
+  @JsOverlay
+  default void setViewFormats(@Nonnull final String... viewFormats) {
+    setViewFormats( Js.<JsArray<String>>uncheckedCast( viewFormats ) );
+  }
+
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
@@ -166,6 +179,20 @@ public interface GPUCanvasConfiguration {
     @Nonnull
     default Builder usage(@GPUTextureUsageFlags final int usage) {
       setUsage( usage );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder viewFormats(@Nonnull final JsArray<String> viewFormats) {
+      setViewFormats( viewFormats );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder viewFormats(@Nonnull final String... viewFormats) {
+      setViewFormats( viewFormats );
       return this;
     }
   }

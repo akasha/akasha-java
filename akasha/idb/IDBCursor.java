@@ -16,7 +16,7 @@ import jsinterop.base.Any;
  * The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor">IDBCursor - MDN</a>
- * @see <a href="https://w3c.github.io/IndexedDB/#cursor-interface">(Indexed DB 3.0) # cursor-interface</a>
+ * @see <a href="https://w3c.github.io/IndexedDB/#cursor-interface"># cursor-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

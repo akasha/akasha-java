@@ -11,9 +11,10 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The DisplayMediaStreamConstraints dictionary is used to specify whether or not to include video and/or audio tracks in the MediaStream to be returned by getDisplayMedia(), as well as what type of processing must be applied to the tracks.
+ * The MediaDevices interface's getDisplayMedia() method prompts the user to select and grant permission to capture the contents of a display or portion thereof (such as a window) as a MediaStream.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints">DisplayMediaStreamConstraints - MDN</a>
+ * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediadevices-getdisplaymedia"># dom-mediadevices-getdisplaymedia</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -113,9 +114,10 @@ public interface DisplayMediaStreamConstraints {
   }
 
   /**
-   * The DisplayMediaStreamConstraints dictionary is used to specify whether or not to include video and/or audio tracks in the MediaStream to be returned by getDisplayMedia(), as well as what type of processing must be applied to the tracks.
+   * The MediaDevices interface's getDisplayMedia() method prompts the user to select and grant permission to capture the contents of a display or portion thereof (such as a window) as a MediaStream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints">DisplayMediaStreamConstraints - MDN</a>
+   * @see <a href="https://w3c.github.io/mediacapture-screen-share/#dom-mediadevices-getdisplaymedia"># dom-mediadevices-getdisplaymedia</a>
    */
   @JsType(
       isNative = true,

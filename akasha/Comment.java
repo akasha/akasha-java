@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
  * The Comment interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment">Comment - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-comment">(DOM) # interface-comment</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-comment"># interface-comment</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEGaussianBlurElement interface corresponds to the &lt;feGaussianBlur&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement">SVGFEGaussianBlurElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEGaussianBlurElement">(Filter Effects 2) # InterfaceSVGFEGaussianBlurElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEGaussianBlurElement"># InterfaceSVGFEGaussianBlurElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

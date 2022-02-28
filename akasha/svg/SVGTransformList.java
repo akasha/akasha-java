@@ -18,7 +18,7 @@ import jsinterop.base.JsArrayLike;
  * The SVGTransformList defines a list of SVGTransform objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList">SVGTransformList - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransformList">(SVG) # InterfaceSVGTransformList</a>
+ * @see <a href="https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransformList"># InterfaceSVGTransformList</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

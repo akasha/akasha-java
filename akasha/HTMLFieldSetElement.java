@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The HTMLFieldSetElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;fieldset&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement">HTMLFieldSetElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlfieldsetelement">(HTML) # htmlfieldsetelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlfieldsetelement"># htmlfieldsetelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

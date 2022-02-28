@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGGradient interface is a base interface used by SVGLinearGradientElement and SVGRadialGradientElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement">SVGGradientElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGGradientElement">(SVG) # InterfaceSVGGradientElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGGradientElement"># InterfaceSVGGradientElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The TrackEvent interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are addtrack and removetrack.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent">TrackEvent - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/media.html#the-trackevent-interface">(HTML) # the-trackevent-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/media.html#the-trackevent-interface"># the-trackevent-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

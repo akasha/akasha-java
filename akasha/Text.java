@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The Text interface represents a text node in a DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">Text - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-text">(DOM) # interface-text</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-text"># interface-text</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

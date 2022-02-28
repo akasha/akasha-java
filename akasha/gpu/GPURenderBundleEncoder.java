@@ -1,5 +1,6 @@
 package akasha.gpu;
 
+import akasha.StringOrUndefinedUnion;
 import akasha.core.JsObject;
 import akasha.core.Uint32Array;
 import akasha.lang.JsArray;
@@ -7,7 +8,6 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
-import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -21,8 +21,8 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPURenderBundleEncoder"
 )
 public class GPURenderBundleEncoder extends JsObject {
-  @JsNullable
-  public String label;
+  @JsNonNull
+  public StringOrUndefinedUnion label;
 
   protected GPURenderBundleEncoder() {
   }

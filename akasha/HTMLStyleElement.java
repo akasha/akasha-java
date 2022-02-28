@@ -1,6 +1,7 @@
 package akasha;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -11,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The HTMLStyleElement interface represents a &lt;style&gt; element. It inherits properties and methods from its parent, HTMLElement.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement">HTMLStyleElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmlstyleelement">(HTML) # htmlstyleelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/semantics.html#htmlstyleelement"># htmlstyleelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -43,6 +44,12 @@ public class HTMLStyleElement extends HTMLElement {
 
   protected HTMLStyleElement() {
   }
+
+  @JsProperty(
+      name = "blocking"
+  )
+  @Nonnull
+  public native DOMTokenList blocking();
 
   @JsProperty(
       name = "sheet"

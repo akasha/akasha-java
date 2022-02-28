@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
  * The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;button&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlbuttonelement">(HTML) # htmlbuttonelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlbuttonelement"># htmlbuttonelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

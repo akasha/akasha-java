@@ -13,7 +13,7 @@ import jsinterop.base.Js;
  * The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating &lt;frameset&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement">HTMLFrameSetElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlframesetelement">(HTML) # htmlframesetelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlframesetelement"># htmlframesetelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

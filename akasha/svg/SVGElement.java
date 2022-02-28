@@ -37,7 +37,7 @@ import jsinterop.base.Js;
  * All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement">SVGElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement">(SVG) # InterfaceSVGElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement"># InterfaceSVGElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -99,6 +99,9 @@ public class SVGElement extends Element {
    */
   @JsNullable
   public MouseEventHandler onauxclick;
+
+  @JsNullable
+  public EventHandler onbeforexrselect;
 
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.

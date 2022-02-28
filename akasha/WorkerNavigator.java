@@ -17,7 +17,7 @@ import org.jetbrains.annotations.ApiStatus;
  * The WorkerNavigator interface represents a subset of the Navigator interface allowed to be accessed from a Worker. Such an object is initialized for each worker and is available via the self.navigator property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator">WorkerNavigator - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#the-workernavigator-object">(HTML) # the-workernavigator-object</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#the-workernavigator-object"># the-workernavigator-object</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

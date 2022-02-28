@@ -26,6 +26,15 @@ public interface RTCIceServerStats extends RTCStats {
   }
 
   @JsProperty(
+      name = "url"
+  )
+  @JsNonNull
+  String url();
+
+  @JsProperty
+  void setUrl(@JsNonNull String url);
+
+  @JsProperty(
       name = "port"
   )
   int port();
@@ -64,15 +73,6 @@ public interface RTCIceServerStats extends RTCStats {
 
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);
-
-  @JsProperty(
-      name = "url"
-  )
-  @JsNonNull
-  String url();
-
-  @JsProperty
-  void setUrl(@JsNonNull String url);
 
   @JsType(
       isNative = true,

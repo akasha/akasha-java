@@ -76,8 +76,8 @@ public interface RTCSentRtpStreamStats extends RTCRtpStreamStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCSentRtpStreamStats>uncheckedCast( this ).setKind( kind );
+    default Step4 ssrc(int ssrc) {
+      Js.<RTCSentRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
       return Js.uncheckedCast( this );
     }
   }
@@ -90,8 +90,8 @@ public interface RTCSentRtpStreamStats extends RTCRtpStreamStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder ssrc(int ssrc) {
-      Js.<RTCSentRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
+    default Builder kind(@Nonnull String kind) {
+      Js.<RTCSentRtpStreamStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }

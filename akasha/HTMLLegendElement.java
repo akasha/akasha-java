@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLLegendElement is an interface allowing to access properties of the &lt;legend&gt; elements. It inherits properties and methods from the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLegendElement">HTMLLegendElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmllegendelement">(HTML) # htmllegendelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmllegendelement"># htmllegendelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

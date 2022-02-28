@@ -1,12 +1,13 @@
 package akasha.gpu;
 
+import akasha.StringOrUndefinedUnion;
 import akasha.core.JsObject;
 import akasha.core.Uint32Array;
 import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -20,21 +21,17 @@ import org.jetbrains.annotations.ApiStatus;
     name = "GPURenderPassEncoder"
 )
 public class GPURenderPassEncoder extends JsObject {
-  @JsNullable
-  public String label;
+  @JsNonNull
+  public StringOrUndefinedUnion label;
 
   protected GPURenderPassEncoder() {
   }
 
   public native void beginOcclusionQuery(int queryIndex);
 
-  public native void beginPipelineStatisticsQuery(@Nonnull GPUQuerySet querySet, int queryIndex);
+  public native void end();
 
   public native void endOcclusionQuery();
-
-  public native void endPass();
-
-  public native void endPipelineStatisticsQuery();
 
   public native void executeBundles(@Nonnull JsArray<GPURenderBundle> bundles);
 

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
  * The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats">RTCRtpStreamStats - MDN</a>
- * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*">(WebRTC Statistics) # streamstats-dict*</a>
+ * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*"># streamstats-dict*</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -32,24 +32,24 @@ public interface RTCRtpStreamStats extends RTCStats {
   }
 
   /**
-   * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
+   * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc">RTCRtpStreamStats.ssrc - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty(
-      name = "codecId"
+      name = "ssrc"
   )
-  String codecId();
+  int ssrc();
 
   /**
-   * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
+   * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc">RTCRtpStreamStats.ssrc - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setCodecId(@JsNonNull String codecId);
+  void setSsrc(int ssrc);
 
   /**
    * The kind property of the RTCRtpStreamStats dictionary is a string indicating whether the described RTP stream contains audio or video media.
@@ -73,24 +73,24 @@ public interface RTCRtpStreamStats extends RTCStats {
   void setKind(@JsNonNull String kind);
 
   /**
-   * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
+   * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc">RTCRtpStreamStats.ssrc - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty(
-      name = "ssrc"
+      name = "codecId"
   )
-  int ssrc();
+  String codecId();
 
   /**
-   * The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.
+   * The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc">RTCRtpStreamStats.ssrc - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc">RTCRtpStreamStats.ssrc - Identifiers for WebRTC's Statistics API</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId">RTCRtpStreamStats.codecId - MDN</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid">RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API</a>
    */
   @JsProperty
-  void setSsrc(int ssrc);
+  void setCodecId(@JsNonNull String codecId);
 
   /**
    * The RTCRtpStreamStats dictionary's transportId property is a string which uniquely identifies the object from which the statistics contained in the RTCTransportStats properties in the RTCStatsReport.
@@ -164,8 +164,8 @@ public interface RTCRtpStreamStats extends RTCStats {
   interface Step3 {
     @JsOverlay
     @Nonnull
-    default Step4 kind(@Nonnull String kind) {
-      Js.<RTCRtpStreamStats>uncheckedCast( this ).setKind( kind );
+    default Step4 ssrc(int ssrc) {
+      Js.<RTCRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
       return Js.uncheckedCast( this );
     }
   }
@@ -178,8 +178,8 @@ public interface RTCRtpStreamStats extends RTCStats {
   interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder ssrc(int ssrc) {
-      Js.<RTCRtpStreamStats>uncheckedCast( this ).setSsrc( ssrc );
+    default Builder kind(@Nonnull String kind) {
+      Js.<RTCRtpStreamStats>uncheckedCast( this ).setKind( kind );
       return Js.uncheckedCast( this );
     }
   }
@@ -188,7 +188,7 @@ public interface RTCRtpStreamStats extends RTCStats {
    * The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats">RTCRtpStreamStats - MDN</a>
-   * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*">(WebRTC Statistics) # streamstats-dict*</a>
+   * @see <a href="https://w3c.github.io/webrtc-stats/#streamstats-dict*"># streamstats-dict*</a>
    */
   @JsType(
       isNative = true,

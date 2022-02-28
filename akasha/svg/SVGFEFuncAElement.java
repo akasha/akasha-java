@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The SVGFEFuncAElement interface corresponds to the &lt;feFuncA&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFuncAElement">SVGFEFuncAElement - MDN</a>
- * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEFuncAElement">(Filter Effects 2) # InterfaceSVGFEFuncAElement</a>
+ * @see <a href="https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEFuncAElement"># InterfaceSVGFEFuncAElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

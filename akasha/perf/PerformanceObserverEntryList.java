@@ -9,10 +9,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method.
+ * The PerformanceObserverEntryList interface is a list of performance events that were explicitly observed via the observe() method.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList">PerformanceObserverEntryList - MDN</a>
- * @see <a href="https://w3c.github.io/performance-timeline/#performanceobserverentrylist-interface">(Performance Timeline 2) # performanceobserverentrylist-interface</a>
+ * @see <a href="https://w3c.github.io/performance-timeline/#performanceobserverentrylist-interface"># performanceobserverentrylist-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

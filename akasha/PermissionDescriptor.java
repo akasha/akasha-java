@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static PermissionDescriptor name(@PermissionName @Nonnull final String name) {
+  static PermissionDescriptor name(@Nonnull final String name) {
     final PermissionDescriptor $permissionDescriptor = Js.<PermissionDescriptor>uncheckedCast( JsPropertyMap.of() );
     $permissionDescriptor.setName( name );
     return Js.uncheckedCast( $permissionDescriptor );
@@ -28,10 +28,9 @@ public interface PermissionDescriptor {
   @JsProperty(
       name = "name"
   )
-  @PermissionName
   @JsNonNull
   String name();
 
   @JsProperty
-  void setName(@PermissionName @JsNonNull String name);
+  void setName(@JsNonNull String name);
 }

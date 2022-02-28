@@ -21,7 +21,7 @@ import jsinterop.base.Js;
  * The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects &mdash; in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope">WorkerGlobalScope - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#the-workerglobalscope-common-interface">(HTML) # the-workerglobalscope-common-interface</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/workers.html#the-workerglobalscope-common-interface"># the-workerglobalscope-common-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -231,7 +231,7 @@ public class WorkerGlobalScope extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearInterval">WorkerGlobalScope.clearInterval - MDN</a>
    */
-  public native void clearInterval(int handle);
+  public native void clearInterval(int id);
 
   /**
    * The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
@@ -245,7 +245,7 @@ public class WorkerGlobalScope extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/clearTimeout">WorkerGlobalScope.clearTimeout - MDN</a>
    */
-  public native void clearTimeout(int handle);
+  public native void clearTimeout(int id);
 
   /**
    * The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().

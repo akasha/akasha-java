@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The DOMParser interface provides the ability to parse XML or HTML source code from a string into a DOM Document.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOMParser - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization">(HTML) # dom-parsing-and-serialization</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization"># dom-parsing-and-serialization</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

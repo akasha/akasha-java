@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
  * The SVGCircleElement interface is an interface for the &lt;circle&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGCircleElement">SVGCircleElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGCircleElement">(SVG) # InterfaceSVGCircleElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGCircleElement"># InterfaceSVGCircleElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

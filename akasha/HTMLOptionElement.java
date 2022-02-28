@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The HTMLOptionElement interface represents &lt;option&gt; elements and inherits all properties and methods of the HTMLElement interface.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement">HTMLOptionElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmloptionelement">(HTML) # htmloptionelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmloptionelement"># htmloptionelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

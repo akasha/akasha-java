@@ -16,7 +16,7 @@ import jsinterop.base.Js;
  * The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of &lt;input&gt; elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/input.html#htmlinputelement">(HTML) # htmlinputelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/input.html#htmlinputelement"># htmlinputelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -244,6 +244,8 @@ public class HTMLInputElement extends HTMLElement {
    * @see <a href="https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange">HTMLInputElement.setSelectionRange() - HTML5</a>
    */
   public native void setSelectionRange(int start, int end);
+
+  public native void showPicker();
 
   /**
    * The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter.

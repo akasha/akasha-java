@@ -8,7 +8,7 @@ import jsinterop.annotations.JsType;
  * The CSSSupportsRule interface represents a single CSS @supports at-rule.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSSupportsRule">CSSSupportsRule - MDN</a>
- * @see <a href="https://drafts.csswg.org/css-conditional/#the-csssupportsrule-interface">(CSS Conditional 3) # the-csssupportsrule-interface</a>
+ * @see <a href="https://drafts.csswg.org/css-conditional-3/#the-csssupportsrule-interface"># the-csssupportsrule-interface</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

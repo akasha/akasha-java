@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
  * The SVGTextPathElement interface corresponds to the &lt;textPath&gt; element.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement">SVGTextPathElement - MDN</a>
- * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPathElement">(SVG) # InterfaceSVGTextPathElement</a>
+ * @see <a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPathElement"># InterfaceSVGTextPathElement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

@@ -24,11 +24,10 @@ import jsinterop.base.JsPropertyMap;
  * The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document - MDN</a>
- * @see <a href="https://dom.spec.whatwg.org/#interface-document">(DOM) # interface-document</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-document-object">(HTML) # the-document-object</a>
- * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface">(CSSOM View) # extensions-to-the-document-interface</a>
+ * @see <a href="https://dom.spec.whatwg.org/#interface-document"># interface-document</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/dom.html#the-document-object"># the-document-object</a>
+ * @see <a href="https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface"># extensions-to-the-document-interface</a>
  * @see <a href="https://w3c.github.io/pointerlock/#extensions-to-the-document-interface"># extensions-to-the-document-interface</a>
- * @see <a href="https://w3c.github.io/page-visibility/#extensions-to-the-document-interface">(Page Visibility 2) # extensions-to-the-document-interface</a>
  * @see <a href="https://w3c.github.io/selection-api/#extensions-to-document-interface"># extensions-to-document-interface</a>
  */
 @Generated("org.realityforge.webtack")
@@ -156,6 +155,9 @@ public class Document extends Node implements IntersectionRoot {
    */
   @JsNullable
   public EventHandler onauxclick;
+
+  @JsNullable
+  public EventHandler onbeforexrselect;
 
   /**
    * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.

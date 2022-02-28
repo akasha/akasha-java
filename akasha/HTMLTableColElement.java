@@ -6,10 +6,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The HTMLTableColElement interface provides special properties (beyond the HTMLElement interface it also has available to it inheritance) for manipulating single or grouped table column elements.
+ * The HTMLTableColElement interface provides properties for manipulating single or grouped table column elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableColElement">HTMLTableColElement - MDN</a>
- * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablecolelement">(HTML) # htmltablecolelement</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablecolelement"># htmltablecolelement</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(

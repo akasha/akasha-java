@@ -5,9 +5,11 @@ import akasha.core.JsObject;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The WebXR Device API's XRView interface describes a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
@@ -37,6 +39,16 @@ public class XRView extends JsObject {
   @Nonnull
   @XREye
   public native String eye();
+
+  @JsOverlay
+  public final boolean isIsFirstPersonObserverSupported() {
+    return "true".equals( System.getProperty( "akasha.is__XRView_isFirstPersonObserver__supported" ) ) ? true : "false".equals( System.getProperty( "akasha.is__XRView_isFirstPersonObserver__supported" ) ) ? false : Js.asPropertyMap( this ).has( "isFirstPersonObserver" );
+  }
+
+  @JsProperty(
+      name = "isFirstPersonObserver"
+  )
+  public native boolean isFirstPersonObserver();
 
   /**
    * The XRView interface's read-only projectionMatrix property specifies the projection matrix to apply to the underlying view. This should be used to integrate perspective to everything in the scene, in order to ensure the result is consistent with what the eye expects to see.
